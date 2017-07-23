@@ -55,6 +55,39 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+      "spec": false,
+      "inlineStyle": false,
+      "inlineTemplate": false,
+      "flat": false,
+      "changeDetection": "Default",
+      "viewEncapsulation": "Emulated"
+    },
+    "class": {
+      "spec": false
+    },
+    "directive": {
+      "flat": true,
+      "spec": false
+    },
+    "guard": {
+      "flat": true,
+      "spec": false
+    },
+    "interface": {
+      "prefix": ""
+    },
+    "module": {
+      "flat": true,
+      "spec": false
+    },
+    "pipe": {
+      "flat": true,
+      "spec": false
+    },
+    "service": {
+      "flat": true,
+      "spec": false
+    }
   }
 }
