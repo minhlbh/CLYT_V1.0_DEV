@@ -1,5 +1,5 @@
 {
-  "name": "ngtruong-khoa",
+  "name": "truongkhoa",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy-github":"ng build --prod --base-href \"https://mrox.github.io/TruongKhoa/\" && angular-cli-ghpages"
   },
   "private": true,
   "dependencies": {
