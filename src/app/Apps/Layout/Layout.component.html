@@ -1,3 +1,15 @@
-<app-Nav></app-Nav>
-<app-left-menu></app-left-menu>
-<router-outlet></router-outlet>
+<div  class="fxs-portal" fxLayoutAlign="start stretch" fxLayout="column">
+
+    <app-Nav></app-Nav>
+
+
+    <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+
+        <div >
+            <app-left-menu ></app-left-menu>
+        </div>
+        <main class="fxs-panorama">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

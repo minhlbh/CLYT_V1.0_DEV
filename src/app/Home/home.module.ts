@@ -1,6 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 import { HomeComponent } from './home.component';
 
 //Định nghĩa router riêng cho module này
@@ -15,7 +18,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 @NgModule({
   imports: [
     CommonModule,
-    Routing
+    Routing,
+    FlexLayoutModule
   ],
   declarations: [HomeComponent]
 })

@@ -1,3 +1,25 @@
-<p>
-  home works!
-</p>
+<div fxLayout="column">
+
+  <div class="header" fxLayout="row" fxLayoutAlign="start stretch">
+
+    <h1>
+      {{title}}
+    </h1>
+    <h1>
+      <a [routerLink]="['/apps/tracuubenh']"> {{title}}</a>
+    </h1>
+
+  </div>
+
+  <div fxLayout="row">
+
+    <div class="left" fxFlex="20">
+      LEFT: 20% wide
+    </div>
+
+    <div class="right" fxFlex>
+      RIGHT: 80% wide
+    </div>
+
+  </div>
+</div>
