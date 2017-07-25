@@ -1,25 +1,8 @@
-<div fxLayout="column">
 
-  <div class="header" fxLayout="row" fxLayoutAlign="start stretch">
+  <md-grid-list cols="3" rowHeight="100px">
+    <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+      {{tile.text}}
+    </md-grid-tile>
+  </md-grid-list>
 
-    <h1>
-      {{title}}
-    </h1>
-    <h1>
-      <a [routerLink]="['/apps/tracuubenh']"> {{title}}</a>
-    </h1>
 
-  </div>
-
-  <div fxLayout="row">
-
-    <div class="left" fxFlex="20">
-      LEFT: 20% wide
-    </div>
-
-    <div class="right" fxFlex>
-      RIGHT: 80% wide
-    </div>
-
-  </div>
-</div>

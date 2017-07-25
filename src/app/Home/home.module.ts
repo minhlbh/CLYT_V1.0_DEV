@@ -2,6 +2,8 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MdGridListModule} from '@angular/material';
+
 
 
 import { HomeComponent } from './home.component';
@@ -19,7 +21,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
   imports: [
     CommonModule,
     Routing,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdGridListModule
   ],
   declarations: [HomeComponent]
 })
