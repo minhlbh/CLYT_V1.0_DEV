@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+
 import { LayoutComponent } from './Layout/Layout.component';
 import { NavComponent } from './Layout/nav/nav.component';
 import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
+
 
 const routing: Routes = [
   {

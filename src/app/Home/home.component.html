@@ -1,8 +1,36 @@
+<div style="display:flex; flex-direction: row; overflow:scroll">
+  <div style=" margin:10px">
+    <md-grid-list cols="3" rowHeight="100px" gutterSize="20px">
+      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        {{tile.text}}
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
 
-  <md-grid-list cols="3" rowHeight="100px">
-    <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-      {{tile.text}}
-    </md-grid-tile>
-  </md-grid-list>
+
+  <div style="width: 300px; margin:10px">
+    <md-grid-list cols="3" rowHeight="100px">
+      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        {{tile.text}}
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+
+  <div style="width: 300px; margin:10px">
+    <md-grid-list cols="3" rowHeight="100px">
+      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        {{tile.text}}
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+  <div style=" margin:10px">
+    <md-grid-list cols="3" rowHeight="100px" gutterSize="20px">
+      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        {{tile.text}}
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
 
 
+
+</div>

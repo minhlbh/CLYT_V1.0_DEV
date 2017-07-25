@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
 ];
 
-const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules });
+const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, useHash: true });
 
 
 @NgModule({
