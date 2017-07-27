@@ -1,36 +1,15 @@
-<div style="display:flex; flex-direction: row; overflow:scroll">
-  <div style=" margin:10px">
-    <md-grid-list cols="3" rowHeight="100px" gutterSize="20px">
-      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        {{tile.text}}
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
+<div class="screen">
+    <div class="header">
+        <div class="brand">
 
+            <div class="brand-logo">
+                <img class="brand-logo-img" src="assets/images/logo-startscreen.png">
+            </div>
+            <div class="brand-title">Trưởng Khoa</div>
 
-  <div style="width: 300px; margin:10px">
-    <md-grid-list cols="3" rowHeight="100px">
-      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        {{tile.text}}
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
-
-  <div style="width: 300px; margin:10px">
-    <md-grid-list cols="3" rowHeight="100px">
-      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        {{tile.text}}
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
-  <div style=" margin:10px">
-    <md-grid-list cols="3" rowHeight="100px" gutterSize="20px">
-      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        {{tile.text}}
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
-
-
-
+        </div>
+        <div class="controls">
+            <button></button>
+        </div>
+    </div>
 </div>

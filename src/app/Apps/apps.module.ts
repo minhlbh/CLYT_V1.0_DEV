@@ -10,26 +10,26 @@ import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
 
 
 const routing: Routes = [
-  {
-    path: '',component: LayoutComponent,
-    children: [
-      { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' }
-    ]
-  }
+    {
+        path: '', component: LayoutComponent,
+        children: [
+            { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' }
+        ]
+    }
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 
 @NgModule({
-  imports: [
-    CommonModule,
-    Routing,
-    FlexLayoutModule
-  ],
-  declarations: [
-    LayoutComponent,
-    NavComponent,
-    LeftMenuComponent
-  ]
+    imports: [
+        CommonModule,
+        Routing,
+        FlexLayoutModule
+    ],
+    declarations: [
+        LayoutComponent,
+        NavComponent,
+        LeftMenuComponent
+    ]
 })
 export class AppsModule { }
