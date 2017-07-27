@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutComponent } from './Layout/Layout.component';
 import { NavComponent } from './Layout/nav/nav.component';
 import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
+import { SettingService } from '../Share/Services/setting.service';
 
 
 const routing: Routes = [
@@ -30,6 +31,9 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         LayoutComponent,
         NavComponent,
         LeftMenuComponent
+    ],
+    providers: [
+        SettingService
     ]
 })
 export class AppsModule { }
