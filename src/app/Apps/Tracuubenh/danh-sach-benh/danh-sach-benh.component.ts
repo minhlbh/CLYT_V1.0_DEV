@@ -33,23 +33,12 @@ export class DanhSachBenhComponent implements OnInit {
     constructor(
         private benhService: BenhService
     ) {
-        // this.searchChangeEmitter = <any>this.searchUpdate
-        //     // .asObservable()
-        //     .debounceTime(1000)
-        //     .distinctUntilChanged()// accept only relevant chars
-        //     ;
-        // this.searchUpdate
-        //     .debounceTime(300)
-        //     .distinctUntilChanged()
-        //     .subscribe(searchKey => this.searchKey = searchKey);
-
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
                 this.doSearch(event);
                 // this.clickBenh(null);
             });
-
     }
 
     ngOnInit() {
@@ -58,11 +47,10 @@ export class DanhSachBenhComponent implements OnInit {
             this.TongSoLuong = data.TongSoLuong;
             this.startBenh = 0;
             this.endBenh = 50;
-
         });
     }
-    doSearch(text: string) {
 
+    doSearch(text: string) {
         if (text === '') {
             this.isSearch = false;
             this.benhService.getBenh(1).subscribe(data => {
@@ -70,7 +58,6 @@ export class DanhSachBenhComponent implements OnInit {
                 this.TongSoLuong = data.TongSoLuong;
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
-
             });
         } else {
             this.isSearch = true;
@@ -88,37 +75,17 @@ export class DanhSachBenhComponent implements OnInit {
                         this.empty = false;
                     }
                     this.loading = false;
-
                 });
             }, 1500);
-
         }
     }
 
-    // clickBenh(id: number) {
-    //     if (id == null) {
-    //         this.showChiTiet = false;
-    //     }
-    //     if (id != null) {
-    //         this.showChiTiet = true;
-    //         if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
-    //             this.benhService.getChiTietBenh(id.toString()).subscribe(data => {
-    //                 this.ChiTietBenh = data;
-
-    //             });
-    //         }
-    //     }
-
-    // }
-
     onScroll() {
-        console.log('phep chia: ' + this.TongSoLuong / 50);
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
-        }else {
+        } else {
             this.loadMore = true;
             this.page++;
-            console.log(this.page);
             this.benhService.getBenh(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsBenh.length; i++) {
                     this.DsBenh.push(data.DsBenh[i]);
@@ -127,7 +94,6 @@ export class DanhSachBenhComponent implements OnInit {
                 this.endBenh = this.page * 50;
                 this.loadMore = false;
             });
-
         }
     }
 }
