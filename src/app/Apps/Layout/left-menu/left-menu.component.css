@@ -34,7 +34,7 @@
     width: 100%;
     float: left;
     position: relative;
-    padding: 12px 10px 12px 45px;
+    padding: 12px 10px 12px 50px;
     min-height: 42px;
 }
 
@@ -47,8 +47,8 @@
     font-size: 20px;
     margin-right: 5px;
     position: absolute;
-    top: 9px;
-    left: 15px;
+    top: 11px;
+    left: 13px;
 }
 
 .col-left-fixed .glyphicon {
@@ -56,4 +56,14 @@
   top: 13px;
   left: 18px;
   font-size: 16px;
+}
+
+.list-services {
+    height: 100%;
+    overflow: auto;
+    float: left;
+}
+
+.col-left-fixed .list-services ul {
+    border-bottom:none;
 }

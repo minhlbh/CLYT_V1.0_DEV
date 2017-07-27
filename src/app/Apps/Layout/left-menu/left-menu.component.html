@@ -7,8 +7,8 @@
                         </a>
                   </li>
             </ul>
-
-            <ul *ngFor="let element of menuElements">
+         <div class="list-services">
+            <ul  *ngFor="let element of menuElements">
                   <li *ngFor="let item of element?.items">
                         <a href="{{item?.url}}" style="cursor: pointer">
                               <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
@@ -16,5 +16,6 @@
                         </a>
                   </li>
             </ul>
+          </div>  
       </div>
 </div>
