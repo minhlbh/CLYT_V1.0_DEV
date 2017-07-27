@@ -1,4 +1,20 @@
 <div class="left" class="fxs-sidebar">
-      cot trai ben trai
-</div>
+      <div class="col-left-fixed">
+            <ul>
+                  <li>
+                        <a id="menu-toggle">
+                              <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                        </a>
+                  </li>
+            </ul>
 
+            <ul *ngFor="let element of elements">
+                  <li>
+                        <a href="{{element?.url}}" style="cursor: pointer">
+                              <span class="fa fa-fw {{element.IconText}} icon" aria-hidden="true"></span>
+                              <span class="title">{{element.Ten}}</span>
+                        </a>
+                  </li>
+            </ul>
+      </div>
+</div>

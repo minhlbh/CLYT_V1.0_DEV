@@ -1,0 +1,59 @@
+
+.col-left-fixed {
+    width: 230px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 40px;
+    background: #0f9cb3;
+    font-size: 13px;
+    border-top: rgba(255,255,255,.3) 1px solid;
+    border-right: rgba(255,255,255,.3) 1px solid;
+    z-index: 10;
+}
+
+.col-left-fixed ul:first-child {
+    border-bottom: rgba(255,255,255,.3) 1px solid;
+    float: left;
+    width: 100%;
+}
+
+
+.col-left-fixed ul {
+    padding: 0;
+    margin: 0;
+}
+
+.col-left-fixed ul li {
+    display: list-item;
+    list-style-type: none;
+}
+
+.col-left-fixed ul li a {
+    color: #fff;
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 12px 10px 12px 45px;
+    min-height: 42px;
+}
+
+.col-left-fixed ul li a:hover, .col-left-fixed ul li a:focus, .col-left-fixed ul li.active a {
+  text-decoration: none;
+  background: #11a8c1;
+}
+
+.col-left-fixed ul li a .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    position: absolute;
+    top: 9px;
+    left: 15px;
+}
+
+.col-left-fixed .glyphicon {
+  position: absolute;
+  top: 13px;
+  left: 18px;
+  font-size: 16px;
+}
