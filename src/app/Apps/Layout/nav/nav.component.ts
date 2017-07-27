@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
     public logo: string ;
   constructor(private settingService: SettingService) {
       this.logo = this.settingService.getConfig().Logo;
-      console.log(this.logo);
+
   }
 
   ngOnInit() {

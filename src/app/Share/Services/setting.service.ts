@@ -35,3 +35,15 @@ export class SettingService {
         return JSON.parse(localStorage.getItem('app_config'));
     }
 }
+
+// tslint:disable-next-line:class-name
+export class MenuElement {
+
+    constructor(
+        public Ten: string,
+        public IconText: string,
+        public url: string
+
+    ) { }
+
+}
