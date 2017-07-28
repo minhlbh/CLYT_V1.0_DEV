@@ -1,3 +1,23 @@
+.scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    height: 600px;
+    flex-direction: row;
+}
+/* .content {
+    flex-direction: row;
+} */
+
+.block {
+    flex: 0 0 auto;
+    height: 100%;
+    overflow-y: hidden;
+    width: 435px;
+}
+
 .header {
     background-color: transparent;
     display: flex;
@@ -10,39 +30,34 @@
     flex-direction: row;
 }
 
-.brick {
-    background-color: #ccc;
-    margin: 5px;
-}
-
-.brick-c1 {
-    height: 100px;
-}
-
-.brick-c2 {
-    height: 200px;
-}
-.brick-c3 {
-    height: 300px;
-}
-
-.brick-r1 {
-    width: 100px;
-}
-
-.brick-r2 {
-    width: 200px;
-}
-
-.brick-r3 {
-    width: 300px;
-}
 .body {
-     width: 440px;
-     height: calc(100vh-80);
+     height: 100%;
+     width: 100%;
+     display: flex;
+    flex-direction: row;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
+
+.grid {
+    height: 100%;
+}
+.grid-item {
+    width: 145px;
+    height: 145px;
+    padding: 5px;
+}
+
+.grid-item-w2 {
+    width: 290px
+}
+
+.grid-item-w3 {
+    width: 435px;
+}
+
+.child {
+    padding: 5px;
+    background-color: gold;
+    width: 100%;
+    height: 100%;
 }
