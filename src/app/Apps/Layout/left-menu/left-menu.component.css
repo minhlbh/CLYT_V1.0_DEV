@@ -10,6 +10,7 @@
     border-top: rgba(255,255,255,.3) 1px solid;
     border-right: rgba(255,255,255,.3) 1px solid;
     z-index: 10;
+    padding: 43px 0 50px 0;
 }
 
 .col-left-fixed ul:first-child {
@@ -78,4 +79,11 @@
     float: left;
     width: 170px;
     white-space: nowrap;
+}
+
+.bt-collapsed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
