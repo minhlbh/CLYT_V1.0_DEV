@@ -1,5 +1,5 @@
 <div class="fxs-sidebar">
-    <div class="col-left-fixed" style="background: '{{menuElements.MauNhat}}'">
+    <div class="col-left-fixed" [ngClass]="{'toggled': isToggled}" style="background: '{{menuElements.MauNhat}}'">
         <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="isToggled = !isToggled">

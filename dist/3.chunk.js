@@ -82,7 +82,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Layout/left-menu/left-menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fxs-sidebar\">\r\n    <div class=\"col-left-fixed\" style=\"background: '{{menuElements.MauNhat}}'\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"isToggled = !isToggled\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"fa fa-fw {{item.IconText}} icon\" aria-hidden=\"true\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"fxs-sidebar\">\r\n    <div class=\"col-left-fixed\" [ngClass]=\"{'toggled': isToggled}\" style=\"background: '{{menuElements.MauNhat}}'\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"isToggled = !isToggled\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"fa fa-fw {{item.IconText}} icon\" aria-hidden=\"true\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -105,10 +105,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LeftMenuComponent = (function () {
-    function LeftMenuComponent(settingService, renderer) {
+    function LeftMenuComponent(settingService) {
         this.settingService = settingService;
-        this.renderer = renderer;
         this.isToggled = false;
+        console.log(this.isToggled);
     }
     LeftMenuComponent.prototype.ngOnInit = function () {
         this.menuElements = this.settingService.getMenu();
@@ -123,10 +123,10 @@ LeftMenuComponent = __decorate([
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].Emulated,
         changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectionStrategy"].Default
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
 ], LeftMenuComponent);
 
-var _a, _b;
+var _a;
 //# sourceMappingURL=left-menu.component.js.map
 
 /***/ }),

@@ -13,10 +13,10 @@ export class LeftMenuComponent implements OnInit {
     isToggled = false;
     constructor(
         private settingService: SettingService,
-        private renderer: Renderer
-    ) { }
+    ) { console.log(this.isToggled); }
 
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
+
     }
 }
