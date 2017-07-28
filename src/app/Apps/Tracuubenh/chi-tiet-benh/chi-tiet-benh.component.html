@@ -1,74 +1,80 @@
-<!-- Start content left -->
-<div class="content-left">
+<app-window [name]="ChiTietBenh?.TenBenh">
+    <!-- loading -->
+    <div class="content-wr">
+        <p class="lead" *ngIf="loading">
+            <img src="assets/66.gif">
+        </p>
+        <!-- Start content left -->
+        <div class="content-left" *ngIf="!loading">
 
-    <div class="content-header">
-        <div class="bt-bar">
-            <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o "></span>Đặt lịch khám</a>
-            <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md "></span>Phương pháp điều trị</a>
-        </div>
-        <!--<h1 class="text-light title-top">Sốt Dengue</h1>
-      <button class="button alert bt-booking"><span class="glyphicon glyphicon-calendar"></span> Đặt lịch khám</button>-->
-        <hr class="thin bg-grayLighter">
-    </div>
-    <!-- load mô tả chi tiết bệnh -->
-    <div class="content-box-main scrollbar-custom">
-        <dl class="dl-horizontal">
-            <dt>
-                Chuyên khoa
-            </dt>
-            <dd>
-                {{chiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}
-            </dd>
-            <dt>
-                Tóm tắt
-            </dt>
-            <dd [innerHTML]="chiTietBenh?.TomTat"></dd>
-        </dl>
-        <button type="button" class="btn btn-default btn-xs">
-                <i class="glyphicon glyphicon-share"></i> Chia sẻ
-            </button>
-        <hr class="thin bg-grayLighter">
-        <!-- load phần tử danh mục trong chi tiết bệnh -->
-        <div *ngFor="let phantu of chiTietBenh?.DsPhanTu">
-            <h2 class="text-light">
-                {{phantu?.Ten}}
-            </h2>
-            <hr class="thin bg-grayLighter">
-
-            <!-- load dữ liệu chi tiết bệnh -->
-            <div *ngFor="let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung">
-
-                <!-- load dữ liệu text -->
-                <div *ngIf="dulieu?.LoaiDuLieu == 1">
-                    <app-load-du-lieu-text [dulieuText]="dulieu?.Dulieu">
-                    </app-load-du-lieu-text>
+            <div class="content-header">
+                <div class="bt-bar">
+                    <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o icon "></span>Đặt lịch khám</a>
+                    <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md icon"></span>Phương pháp điều trị</a>
                 </div>
 
-                <!-- load dữ liệu ảnh -->
-                <div *ngIf="dulieu?.LoaiDuLieu == 2">
-                    <app-load-du-lieu-img [dulieuImg]="dulieu?.Dulieu" [duLieuLinkAnh]="ChiTietBenh?.LinkAnh" [dulieuImgTieuDe]="dulieu?.TieuDe">
-                    </app-load-du-lieu-img>
-                    <br/>
-                    <br/>
-                </div>
+                <hr class="thin bg-grayLighter">
+            </div>
+            <!-- load mô tả chi tiết bệnh -->
+            <div class="content-box-main scrollbar-custom">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Chuyên khoa
+                    </dt>
+                    <dd>
+                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}
+                    </dd>
+                    <dt>
+                        Tóm tắt
+                    </dt>
+                    <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
+                </dl>
+                <hr class="thin bg-grayLighter">
+                <!-- <share-button class="bt-social facebook" [button]="fbButton"></share-button>
+                <share-button class="bt-social google" [button]="gPlusButton"></share-button> -->
+                <!-- load phần tử danh mục trong chi tiết bệnh -->
+                <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
+                    <h2 class="text-light">
+                        {{phantu?.Ten}}
+                    </h2>
+                    <hr class="thin bg-grayLighter">
+                    <!-- load dữ liệu chi tiết bệnh -->
+                    <div *ngFor="let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung">
 
-                <!-- load dữ liệu clip Youtube -->
-                <div *ngIf="dulieu?.LoaiDuLieu == 5">
-                    <app-load-du-lieu-youtube [dulieuYoutube]="dulieu?.Dulieu" [dulieuYoutubeTieuDe]="dulieu?.TieuDe">
-                    </app-load-du-lieu-youtube>
-                    <br/>
-                    <br/>
-                    <br/>
-                </div>
+                        <!-- load dữ liệu text -->
+                        <div *ngIf="dulieu?.LoaiDuLieu == 1">
+                            <app-load-du-lieu-text [dulieuText]="dulieu?.Dulieu">
+                            </app-load-du-lieu-text>
+                        </div>
 
-                <!-- load dữ liệu link -->
-                <div *ngIf="dulieu?.LoaiDuLieu == 10">
-                    <app-load-du-lieu-link [dulieuLink]="dulieu?.Dulieu" [dulieuLinkTieuDe]="dulieu?.TieuDe">
-                    </app-load-du-lieu-link>
+                        <!-- load dữ liệu ảnh -->
+                        <div *ngIf="dulieu?.LoaiDuLieu == 2">
+                            <app-load-du-lieu-img [dulieuImg]="dulieu?.Dulieu" [duLieuLinkAnh]="ChiTietBenh?.LinkAnh" [dulieuImgTieuDe]="dulieu?.TieuDe">
+                            </app-load-du-lieu-img>
+                            <br/>
+                            <br/>
+                        </div>
+
+                        <!-- load dữ liệu clip Youtube -->
+                        <div *ngIf="dulieu?.LoaiDuLieu == 5">
+                            <app-load-du-lieu-youtube [dulieuYoutube]="dulieu?.Dulieu" [dulieuYoutubeTieuDe]="dulieu?.TieuDe">
+                            </app-load-du-lieu-youtube>
+                            <br/>
+                            <br/>
+                            <br/>
+                        </div>
+
+                        <!-- load dữ liệu link -->
+                        <div *ngIf="dulieu?.LoaiDuLieu == 10">
+                            <app-load-du-lieu-link [dulieuLink]="dulieu?.Dulieu" [dulieuLinkTieuDe]="dulieu?.TieuDe">
+                            </app-load-du-lieu-link>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
+        <!-- end content left -->
+        <app-forum-bar></app-forum-bar>
     </div>
-</div>
-<!-- end content left -->
-<app-forum-bar></app-forum-bar>
+</app-window>

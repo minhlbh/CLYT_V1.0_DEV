@@ -1,0 +1,10 @@
+p {
+    padding: 20px 0;
+    line-height: 22px;
+    font-size: 16 px;
+    margin: 0;
+}
+
+p p {
+    margin: 0;
+}

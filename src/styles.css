@@ -1,35 +1,34 @@
 @font-face {
-  font-family: 'Segoe UI Web (Vietnamese)';
-  src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-light.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-light.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
+    font-family: 'Segoe UI Web (Vietnamese)';
+    src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-light.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-light.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Segoe UI Web (Vietnamese)';
-  src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semilight.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semilight.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Segoe UI Web (Vietnamese)';
+    src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semilight.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Segoe UI Web (Vietnamese)';
-  src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-regular.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Segoe UI Web (Vietnamese)';
+    src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-regular.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Segoe UI Web (Vietnamese)';
-  src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semibold.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Segoe UI Web (Vietnamese)';
+    src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semibold.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
 }
-
 
 body {
     height: 100%;
-    font-family: 'Segoe UI Web (Vietnamese)',"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-family: 'Segoe UI Web (Vietnamese)', "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-weight: 600;
 }
 
@@ -56,6 +55,7 @@ body {
     background-color: #1c1c1c;
     color: #fff;
 }
+
 .fxs-portal-main {
     display: flex;
     flex-flow: row nowrap;
@@ -75,13 +75,17 @@ body {
     border-right-style: solid;
     height: 100%;
     box-sizing: border-box;
-
     overflow: hidden;
     width: 230px;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
+}
+
+.fxs-sidebar.toggled {
+    width: 50px;
+    left: 0;
 }
 
 .fxs-panorama {
@@ -117,5 +121,4 @@ body {
     flex: 0 0 auto;
     background-color: #eee;
     width: 1020px;
-
 }

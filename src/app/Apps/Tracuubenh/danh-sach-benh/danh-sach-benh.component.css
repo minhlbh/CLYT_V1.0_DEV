@@ -2,15 +2,21 @@
 
 .search-box-top {
     position: absolute;
-    top: 43px;
+    top: 0;
     left: 0;
-    padding: 25px;
+    padding: 25px 25px 0 25px ;
     width: 100%;
+    background: #fff;
+    z-index: 100;
 }
 
 .search-box-top .text-light {
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+.search-box-top hr {
+    margin-bottom: 0;
 }
 
 .text-light {
@@ -115,7 +121,6 @@ padding: 12px 10px 12px 40px;
     overflow: auto;
     padding: 0;
     margin: 0 25px;
-    position: absolute;
 }
 
 .list li {
@@ -139,4 +144,16 @@ padding: 12px 10px 12px 40px;
 .list li a:hover, .list li a:focus {
     background: #f5f5f5;
     text-decoration:none;
+}
+
+.list-left-wr {
+    width: 320px;
+    padding: 78px 0 25px 0;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    position: relative !important;
+    display: block;
+    height: 100%;
+    float: left;
+    overflow: hidden;;
 }

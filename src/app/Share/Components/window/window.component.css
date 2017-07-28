@@ -1,10 +1,9 @@
 .window {
     width: 100%;
-    padding:0 0 25px 0;
+    padding:45px 0 0 0;
     background: #fff;
     border-right: 1px solid #ccc;
     position: relative !important;
-    padding-top: 136px;
     display: block;
     height: 100%;
     float: left;
@@ -19,7 +18,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding:0 30px;
+  padding:0 25px 0 55px;
 }
 
 
@@ -27,11 +26,26 @@
   font-size: 16px;
   margin: 0;
   font-weight: 600;
-  padding: 9px 0 0 0;
+  padding: 0;
   line-height: 13px;
+  line-height: 43px;
 }
 
 .title-window .sub-title {
   font-size: 11px;
   color: #ccc;
 }
+
+.title-window .icon {
+  font-size: 20px;
+  padding: 0;
+  position: absolute;
+  top:10px;
+  left: 25px;
+}
+
+.body {
+  position: relative;
+  height: 100%;
+}
+

@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { Routes, RouterModule } from '@angular/router';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+
 
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
@@ -19,6 +21,7 @@ import { LoadDuLieuYoutubeComponent } from '../Tracuubenh/chi-tiet-benh/Load-ite
 
 // services
 import { BenhService } from '../../Share/Services/benh.service';
+import { ForumService } from '../../Share/Services/forum.service';
 
 
 const routing: Routes = [
@@ -34,6 +37,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         FormsModule,
         ReactiveFormsModule,
         HttpModule,
+        ShareButtonsModule.forRoot(),
         Routing
     ],
     declarations: [
@@ -48,7 +52,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ForumBarComponent
     ],
     providers: [
-        BenhService
+        BenhService,
+        ForumService
     ]
 })
 export class TracuubenhModule { }

@@ -43,6 +43,17 @@
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
+.content-wr {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 1020px;
+    float: left;
+    border-right: 1px solid #ccc;
+    padding-right: 370px;
+    background: #fff;
+}
+
 .content-left {
   float: left;
   width: 100%;
@@ -51,8 +62,6 @@
   height: 100%;
   overflow: auto;
   border-right: 1px solid #ccc;
-  margin-top:45px;
-
 }
 
 
@@ -114,6 +123,24 @@
 .content-box .img-wr {
     padding: 20px 0;
 }
+
+.bt-bar {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    float: left;
+    padding: 0 25px;
+}
+
+.bt-bar .bt-features:hover {
+    text-decoration: none;
+}
+
+.bt-bar .bt-features .icon {
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
@@ -164,4 +191,33 @@
   position: absolute;
   top: 7px;
   left: 10px;
+}
+
+/* share button */
+/* share button */
+.bt-social {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    float: left;
+    border-radius: 50%;
+    color: #fff;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.bt-social button {
+   background: none;
+}
+
+.bt-social.facebook  {
+  background: #3b5998;
+
+}
+.bt-social.google  {
+    background: #DC4E41;
+}
+share-button button:active {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }

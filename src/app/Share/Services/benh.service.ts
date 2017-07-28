@@ -27,7 +27,7 @@ constructor(private http: Http) { }
 
     }
 
-    getChiTietBenh(id: string): Observable<any> {
+    getChiTietBenh(id: number): Observable<any> {
         const chiTietBenhUrl = `${environment.apiUrl}benh/${id}`;
         // ...using get request
         return this.http.get(chiTietBenhUrl)

@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer } from '@angular/core';
 import { SettingService } from '../../../Share/Services/setting.service';
-
+import { CommonModule } from '@angular/common';
 @Component({
     selector: 'app-left-menu',
     templateUrl: './left-menu.component.html',
@@ -10,10 +10,13 @@ import { SettingService } from '../../../Share/Services/setting.service';
 })
 export class LeftMenuComponent implements OnInit {
     menuElements: any;
-    constructor(private settingService: SettingService) { }
+    isToggled = false;
+    constructor(
+        private settingService: SettingService,
+    ) { console.log(this.isToggled); }
 
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
-    }
 
+    }
 }
