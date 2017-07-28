@@ -76,8 +76,8 @@
 /* toggled */
 /* toggled */
 /* toggled */
-.col-left-fixed.toggled ul li a .title {
-  display: block
+/* .col-left-fixed.toggled ul li a .title {
+  display: none;
 }
 
 .col-left-fixed.toggled ul li a {
@@ -87,7 +87,7 @@ padding: 12px 10px 12px 40px;
 .col-left-fixed.toggled {
   width: 50px;
   left: 0;
-}
+} */
 
 .main.toggled {
   padding-left: 50px;
@@ -105,4 +105,16 @@ padding: 12px 10px 12px 40px;
     top: 0;
     left: 0;
     cursor: pointer;
+}
+
+.fxs-sidebar.toggled .col-left-fixed {
+    width: 50px;
+}
+
+.fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
+    display: none;
+}
+
+.fxs-sidebar.toggled .col-left-fixed ul li a {
+  padding: 12px 10px 12px 40px;
 }
