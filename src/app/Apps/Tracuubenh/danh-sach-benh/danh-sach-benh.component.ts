@@ -24,7 +24,7 @@ export class DanhSachBenhComponent implements OnInit {
     startBenh: number;
     endBenh: number;
     searchUpdate: Subject<string> = new Subject<string>();
-    searchKey = new FormControl();
+    searchKey = new FormControl('');
     public id: any;
     public loading = false;
     public empty = false;
