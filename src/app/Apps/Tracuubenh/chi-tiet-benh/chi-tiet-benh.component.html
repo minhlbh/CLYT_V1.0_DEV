@@ -11,8 +11,6 @@
                 <div class="bt-bar">
                     <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o icon "></span>Đặt lịch khám</a>
                     <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md icon"></span>Phương pháp điều trị</a>
-                    <share-button class="facebook" [button]="fbButton"></share-button>
-                    <share-button class="google" [button]="gPlusButton"></share-button>
                 </div>
 
                 <hr class="thin bg-grayLighter">
@@ -32,6 +30,8 @@
                     <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
                 </dl>
                 <hr class="thin bg-grayLighter">
+                <!-- <share-button class="bt-social facebook" [button]="fbButton"></share-button>
+                <share-button class="bt-social google" [button]="gPlusButton"></share-button> -->
                 <!-- load phần tử danh mục trong chi tiết bệnh -->
                 <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
                     <h2 class="text-light">
@@ -72,9 +72,9 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <!-- end content left -->
-            <app-forum-bar></app-forum-bar>
+        <app-forum-bar></app-forum-bar>
     </div>
 </app-window>

@@ -195,22 +195,28 @@
 
 /* share button */
 /* share button */
-share-button button {
-  font-size: 18px;
-  width: 80px;
-  background-color: transparent;
-  padding: 0.4em 1em;
-  margin: 1em;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-  transition: all linear 200ms;
+.bt-social {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    float: left;
+    border-radius: 50%;
+    color: #fff;
+    -webkit-transition: .25s;
+    transition: .25s;
 }
-.facebook button {
-  color: #35528E;
+
+.bt-social button {
+   background: none;
+}
+
+.bt-social.facebook  {
+  background: #3b5998;
 
 }
-.google button {
-    color: red;
+.bt-social.google  {
+    background: #DC4E41;
 }
 share-button button:active {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);

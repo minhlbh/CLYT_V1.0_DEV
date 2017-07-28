@@ -71,3 +71,11 @@
 .list-services .title.big {
     text-transform: uppercase;
 }
+
+.col-left-fixed  ul li a span.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    width: 170px;
+    white-space: nowrap;
+}
