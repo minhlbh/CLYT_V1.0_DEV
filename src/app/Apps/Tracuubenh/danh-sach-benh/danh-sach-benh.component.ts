@@ -5,6 +5,7 @@ import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { FormControl } from '@angular/forms';
+import { SettingService } from '../../../Share/Services/setting.service';
 
 
 @Component({
@@ -16,7 +17,9 @@ export class DanhSachBenhComponent implements OnInit {
 
     @Output() showBenh = new EventEmitter<number>();
 
+    menu: any;
     iconText: any;
+    name: any;
     elements: any;
 
     DsBenh: Benh[];
@@ -33,7 +36,8 @@ export class DanhSachBenhComponent implements OnInit {
     public isSearch = false;
     public page = 1;
     constructor(
-        private benhService: BenhService
+        private benhService: BenhService,
+        private settingService: SettingService
     ) {
         this.searchKey.valueChanges
             .debounceTime(1000)
@@ -51,6 +55,9 @@ export class DanhSachBenhComponent implements OnInit {
             this.startBenh = 0;
             this.endBenh = 50;
         });
+        this.menu = this.settingService.getMenu();
+        this.iconText = this.menu[0].items[0].IconText;
+        this.name = this.menu[0].items[0].Ten;
     }
 
     doSearch(text: string) {
@@ -84,7 +91,6 @@ export class DanhSachBenhComponent implements OnInit {
     }
 
      clickBenh(id: number) {
-         console.log(id);
         this.showBenh.emit(id);
     }
 

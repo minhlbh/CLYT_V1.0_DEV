@@ -1,21 +1,11 @@
 <div class="fxs-blade-content-container">
     <div class="fxs-block">
-        <app-window [icon]="iconText" [name]="name">
-            <app-danh-sach-benh
-                (showBenh) = "showChiTietBenh($event)">
-            </app-danh-sach-benh>
-        </app-window>
+        <app-danh-sach-benh (showBenh)="idBenh($event)">
+        </app-danh-sach-benh>
     </div>
 
     <div *ngIf="showChiTiet" class="fxs-block large">
-        <app-window  [name]="ChiTietBenh?.TenBenh">
-            <app-chi-tiet-benh [chiTietBenh] = "ChiTietBenh"></app-chi-tiet-benh>
-        </app-window>
+        <app-chi-tiet-benh [idBenh]="detailBenhId"></app-chi-tiet-benh>
     </div>
-    <!-- <div class="fxs-block"></div>
-    <div class="fxs-block"></div>
-    <div class="fxs-block"></div>
-    <div class="fxs-block"></div>
-    <div class="fxs-block"></div> -->
 
 </div>
