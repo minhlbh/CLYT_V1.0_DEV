@@ -1,8 +1,8 @@
 <div class="left" class="fxs-sidebar">
-    <div class="col-left-fixed">
+    <div class="col-left-fixed" style="background: '{{menuElements.MauNhat}}'">
         <ul>
             <li>
-                <a id="menu-toggle">
+                <a id="menu-toggle" (click)="isToggled = !isToggled">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </a>
             </li>
@@ -12,7 +12,7 @@
                 <li *ngFor="let item of element?.items">
                     <a href="{{item?.url}}" style="cursor: pointer">
                               <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
-                              <span class="title">{{item.Ten}}</span>
+                              <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
                         </a>
                 </li>
             </ul>
