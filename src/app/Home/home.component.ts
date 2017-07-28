@@ -1,22 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularMasonry, MasonryOptions } from 'angular2-masonry';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    options: MasonryOptions = {
+        transitionDuration: '0.3s'
+    };
+    bricks = [
+        { title: 'Brick 1', col: 1, row: 2 },
+        { title: 'Brick 2', col: 1, row: 1 },
+        { title: 'Brick 3', col: 2, row: 2 },
+        { title: 'Brick 4', col: 1, row: 1 },
+        { title: 'Brick 5', col: 1, row: 1 },
+        { title: 'Brick 6', col: 1, row: 1 }
+    ];
+    constructor() { }
 
-  tiles = [
-    { text: 'One', cols: 1, rows: 2, color: 'lightblue' },
-    { text: 'Two', cols: 1, rows: 2, color: 'lightgreen' },
-    { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
-    { text: 'Four', cols: 1, rows: 1, color: '#DDBDF1' },
-    { text: 'Five', cols: 2, rows: 1, color: '#DDBDF1' },
-  ];
-  constructor() { }
-
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
