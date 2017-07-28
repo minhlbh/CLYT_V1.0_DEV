@@ -68,3 +68,6 @@
     border-bottom:none;
 }
 
+.list-services .title.big {
+    text-transform: uppercase;
+}

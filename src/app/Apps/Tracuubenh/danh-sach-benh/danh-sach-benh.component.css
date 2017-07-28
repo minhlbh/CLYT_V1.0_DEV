@@ -2,7 +2,7 @@
 
 .search-box-top {
     position: absolute;
-    top: 43px;
+    top: 0;
     left: 0;
     padding: 25px;
     width: 100%;
@@ -113,9 +113,10 @@ padding: 12px 10px 12px 40px;
 .list {
     height: 100%;
     overflow: auto;
-    padding: 0;
+    padding: 0 0 55px 0;
     margin: 0 25px;
     position: absolute;
+    top:79px;
 }
 
 .list li {
