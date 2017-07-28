@@ -71,3 +71,23 @@
 .list-services .title.big {
     text-transform: uppercase;
 }
+
+/* toggled */
+/* toggled */
+/* toggled */
+.col-left-fixed.toggled ul li a .title {
+  display: block
+}
+
+.col-left-fixed.toggled ul li a {
+padding: 12px 10px 12px 40px;
+}
+
+.col-left-fixed.toggled {
+  width: 50px;
+  left: 0;
+}
+
+.main.toggled {
+  padding-left: 50px;
+}

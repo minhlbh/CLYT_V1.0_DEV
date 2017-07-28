@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer } from '@angular/core';
 import { SettingService } from '../../../Share/Services/setting.service';
-
+import { CommonModule } from '@angular/common';
 @Component({
     selector: 'app-left-menu',
     templateUrl: './left-menu.component.html',
@@ -19,8 +19,4 @@ export class LeftMenuComponent implements OnInit {
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
     }
-
-    setWidth(el, width) {
-    this.renderer.setElementStyle(el, 'width', width + 'px');
-  }
 }
