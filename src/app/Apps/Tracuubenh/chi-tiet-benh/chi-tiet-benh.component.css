@@ -51,8 +51,6 @@
   height: 100%;
   overflow: auto;
   border-right: 1px solid #ccc;
-  margin-top:45px;
-
 }
 
 
@@ -114,6 +112,24 @@
 .content-box .img-wr {
     padding: 20px 0;
 }
+
+.bt-bar {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    float: left;
+    padding: 0 25px;
+}
+
+.bt-bar .bt-features:hover {
+    text-decoration: none;
+}
+
+.bt-bar .bt-features .icon {
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
@@ -165,3 +181,4 @@
   top: 7px;
   left: 10px;
 }
+
