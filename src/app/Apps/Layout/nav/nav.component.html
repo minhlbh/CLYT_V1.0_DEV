@@ -2,14 +2,14 @@
     <!-- <div>
     <a [routerLink]="['/']">header</a>
   </div> -->
-    <nav  class="navbar navbar-default navbar-fixed-top nav-top">
+    <nav  class="navbar navbar-default navbar-fixed-top nav-top" style="background: '{{settings.MauDam}}'">
         <div class="navbar-header">
             <a class="navbar-brand logo" [routerLink]="['/']">
-              <img src="{{logo}}">
+              <img src="{{settings.Logo}}">
               <span class="app-bar-divider">
-                Trưởng khoa
+                {{settings.ThuongHieu}}
               </span>
-            </a>         
+            </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
@@ -26,7 +26,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a routerLink="/login">Đăng nhập
+                    <a routerLink="/login">Sign In
                 </a>
                 </li>
                 <li>
