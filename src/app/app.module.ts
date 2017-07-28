@@ -25,6 +25,7 @@ const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingSt
     imports: [
         BrowserModule,
         Routing,
+        FormsModule,
         HttpModule,
         BrowserAnimationsModule,
     ],

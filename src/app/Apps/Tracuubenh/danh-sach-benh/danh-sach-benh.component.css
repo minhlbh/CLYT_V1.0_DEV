@@ -56,6 +56,7 @@
 .ul li {
     display: list-item;
     list-style-type: none;
+
 }
 
 .ul li a {
@@ -68,10 +69,12 @@
     min-height: 40px;
     line-height: 25px;
     border-bottom:1px solid #eee;
+
 }
 
 .ul li a .title {
     display: block;
+
 }
 
 .ul li a:hover, .ul li a:focus {
@@ -118,6 +121,7 @@ padding: 12px 10px 12px 40px;
 .list li {
     display: list-item;
     list-style-type: none;
+    cursor: pointer;
 }
 
 .list li a {

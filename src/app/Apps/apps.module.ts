@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 
 import { LayoutComponent } from './Layout/Layout.component';
@@ -25,6 +26,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     imports: [
         CommonModule,
         Routing,
+        FormsModule,
         FlexLayoutModule
     ],
     declarations: [
