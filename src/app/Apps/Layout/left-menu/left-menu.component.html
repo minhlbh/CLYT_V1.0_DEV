@@ -7,18 +7,15 @@
                         </a>
             </li>
         </ul>
-        <div (collapsed)="setWidth(el, 0)" (expanded)="setWidth(el, 0);setWidth(el, el.scrollWidth)" [collapse]="isCollapsed"
-            class="card card-block card-header block" #el>
-            <div class="list-services">
-                <ul *ngFor="let element of menuElements">
-                    <li *ngFor="let item of element?.items">
-                        <a href="{{item?.url}}" style="cursor: pointer">
+        <div class="list-services">
+            <ul *ngFor="let element of menuElements">
+                <li *ngFor="let item of element?.items">
+                    <a href="{{item?.url}}" style="cursor: pointer">
                               <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
                               <span class="title">{{item.Ten}}</span>
                         </a>
-                    </li>
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
