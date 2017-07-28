@@ -14,31 +14,21 @@ export class TracuubenhComponent implements OnInit {
     name: any;
     showChiTiet = false;
     ChiTietBenh: any;
+    detailBenhId = 0;
     constructor(
         private settingService: SettingService,
         private benhService: BenhService
     ) { }
 
     ngOnInit() {
-        this.menu = this.settingService.getMenu();
-        this.iconText = this.menu[0].items[0].IconText;
-        this.name = this.menu[0].items[0].Ten;
-
     }
 
-    showChiTietBenh(id: number) {
-        console.log(id);
-        if (id === null) {
+    idBenh(id: number) {
+        this.detailBenhId = id;
+        if (id == null) {
             this.showChiTiet = false;
-        }
-        if (id != null) {
+        }else {
             this.showChiTiet = true;
-            if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
-                this.benhService.getChiTietBenh(id.toString()).subscribe(data => {
-                    this.ChiTietBenh = data;
-                    console.log(this.ChiTietBenh);
-                });
-            }
         }
     }
 
