@@ -43,6 +43,17 @@
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
 /* nội dung chi tiết bệnh */
+.content-wr {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 1020px;
+    float: left;
+    border-right: 1px solid #ccc;
+    padding-right: 370px;
+    background: #fff;
+}
+
 .content-left {
   float: left;
   width: 100%;

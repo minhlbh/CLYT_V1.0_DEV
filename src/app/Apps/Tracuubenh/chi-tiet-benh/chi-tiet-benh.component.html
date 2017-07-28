@@ -1,44 +1,36 @@
 <app-window [name]="ChiTietBenh?.TenBenh">
     <!-- loading -->
-    <p class="lead" *ngIf="loading">
-        <img src="assets/66.gif">
-    </p>
-    <!-- Start content left -->
-    <div class="content-left" *ngIf="!loading">
+    <div class="content-wr">
+        <p class="lead" *ngIf="loading">
+            <img src="assets/66.gif">
+        </p>
+        <!-- Start content left -->
+        <div class="content-left" *ngIf="!loading">
 
+            <div class="content-header">
+                <div class="bt-bar">
+                    <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o icon "></span>Đặt lịch khám</a>
+                    <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md icon"></span>Phương pháp điều trị</a>
+                    <share-button class="facebook" [button]="fbButton"></share-button>
+                    <share-button class="google" [button]="gPlusButton"></share-button>
+                </div>
 
-        <div class="content-header">
-            <div class="bt-bar">
-                <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o icon "></span>Đặt lịch khám</a>
-                <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md icon"></span>Phương pháp điều trị</a>
-                <a href="#" class="bt-features"><span class="glyphicon glyphicon-share icon"></span>Chia sẻ</a>
-                <share-button class="facebook" [button]="fbButton"></share-button>
-                <share-button class="google" [button]="gPlusButton"></share-button>
+                <hr class="thin bg-grayLighter">
             </div>
-            <!--<h1 class="text-light title-top">Sốt Dengue</h1>
-       <button class="button alert bt-booking"><span class="glyphicon glyphicon-calendar"></span> Đặt lịch khám</button>-->
-            <hr class="thin bg-grayLighter">
-        </div>
-        <!-- load mô tả chi tiết bệnh -->
-        <div class="content-box-main scrollbar-custom">
-            <dl class="dl-horizontal">
-                <dt>
-                    Chuyên khoa
-                </dt>
-                <dd>
-                    {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}
-                </dd>
-                <dt>
-                    Tóm tắt
-                </dt>
-                <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
-            </dl>
-            <hr class="thin bg-grayLighter">
-            <!-- load phần tử danh mục trong chi tiết bệnh -->
-            <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
-                <h2 class="text-light">
-                    {{phantu?.Ten}}
-                </h2>
+            <!-- load mô tả chi tiết bệnh -->
+            <div class="content-box-main scrollbar-custom">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Chuyên khoa
+                    </dt>
+                    <dd>
+                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}
+                    </dd>
+                    <dt>
+                        Tóm tắt
+                    </dt>
+                    <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
+                </dl>
                 <hr class="thin bg-grayLighter">
                 <!-- load phần tử danh mục trong chi tiết bệnh -->
                 <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
@@ -46,7 +38,6 @@
                         {{phantu?.Ten}}
                     </h2>
                     <hr class="thin bg-grayLighter">
-
                     <!-- load dữ liệu chi tiết bệnh -->
                     <div *ngFor="let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung">
 
@@ -81,8 +72,9 @@
                     </div>
                 </div>
             </div>
+            
         </div>
         <!-- end content left -->
-        <app-forum-bar></app-forum-bar>
+            <app-forum-bar></app-forum-bar>
     </div>
 </app-window>
