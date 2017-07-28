@@ -2,9 +2,46 @@
     background-color: transparent;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .brand {
+    display: flex;
+    flex-direction: row;
+}
+
+.brick {
+    background-color: #ccc;
+    margin: 5px;
+}
+
+.brick-c1 {
+    height: 100px;
+}
+
+.brick-c2 {
+    height: 200px;
+}
+.brick-c3 {
+    height: 300px;
+}
+
+.brick-r1 {
+    width: 100px;
+}
+
+.brick-r2 {
+    width: 200px;
+}
+
+.brick-r3 {
+    width: 300px;
+}
+.body {
+     width: 450px;
+}
+
+.content {
     display: flex;
     flex-direction: row;
 }
