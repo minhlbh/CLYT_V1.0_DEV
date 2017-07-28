@@ -12,6 +12,8 @@ export class TracuubenhComponent implements OnInit {
     menu: any;
     iconText: any;
     name: any;
+    showChiTiet = false;
+    ChiTietBenh: any;
     constructor(
         private settingService: SettingService,
         private benhService: BenhService
@@ -24,18 +26,20 @@ export class TracuubenhComponent implements OnInit {
 
     }
 
-    // clickBenh(id: number) {
-    //     if (id == null) {
-    //         this.showChiTiet = false;
-    //     }
-    //     if (id != null) {
-    //         this.showChiTiet = true;
-    //         if (this.ChiTietBenh == null || this.ChiTietBenh.id != id) {
-    //             this.benhService.getChiTietBenh(id.toString()).subscribe(data => {
-    //                 this.ChiTietBenh = data;
-    //             });
-    //         }
-    //     }
-    // }
+    showChiTietBenh(id: number) {
+        console.log(id);
+        if (id === null) {
+            this.showChiTiet = false;
+        }
+        if (id != null) {
+            this.showChiTiet = true;
+            if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
+                this.benhService.getChiTietBenh(id.toString()).subscribe(data => {
+                    this.ChiTietBenh = data;
+                    console.log(this.ChiTietBenh);
+                });
+            }
+        }
+    }
 
 }

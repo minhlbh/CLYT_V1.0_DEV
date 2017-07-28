@@ -14,6 +14,8 @@ import { FormControl } from '@angular/forms';
 })
 export class DanhSachBenhComponent implements OnInit {
 
+    @Output() showBenh = new EventEmitter<number>();
+
     iconText: any;
     elements: any;
 
@@ -37,6 +39,7 @@ export class DanhSachBenhComponent implements OnInit {
             .debounceTime(1000)
             .subscribe((event) => {
                 this.doSearch(event);
+                console.log(event);
                 // this.clickBenh(null);
             });
     }
@@ -78,6 +81,11 @@ export class DanhSachBenhComponent implements OnInit {
                 });
             }, 1500);
         }
+    }
+
+     clickBenh(id: number) {
+         console.log(id);
+        this.showBenh.emit(id);
     }
 
     onScroll() {
