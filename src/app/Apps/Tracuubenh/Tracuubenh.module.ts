@@ -19,6 +19,7 @@ import { LoadDuLieuYoutubeComponent } from '../Tracuubenh/chi-tiet-benh/Load-ite
 
 // services
 import { BenhService } from '../../Share/Services/benh.service';
+import { ForumService } from '../../Share/Services/forum.service';
 
 
 const routing: Routes = [
@@ -48,7 +49,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ForumBarComponent
     ],
     providers: [
-        BenhService
+        BenhService,
+        ForumService
     ]
 })
 export class TracuubenhModule { }

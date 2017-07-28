@@ -1,34 +1,34 @@
 <!-- Start content right -->
-    <div class="col-right">
-      <div class="col-right-main scrollbar-custom">
-        <div class="box-2 ">
-          <div class="box-header with-border" >
-            <div class="user-block">
-              <img class="img-circle" src="assets/images/user1-128x128.jpg" alt="User Image">
-              <span class="username">
+<div class="col-right">
+    <div class="col-right-main scrollbar-custom">
+        <div class="box-2 " *ngFor="let baiviet of forumBarContent">
+            <div class="box-header with-border">
+                <div class="user-block">
+                    <img class="img-circle" src="assets/images/user1-128x128.jpg" alt="User Image">
+                    <span class="username">
                   <a href="#">{{baiviet.TieuDe}}</a>
                 </span>
-              <span class="description">Tác giả: {{baiviet.NguoiViet.Name}}
+                    <span class="description">Tác giả: {{baiviet.NguoiViet.Name}}
                 </span>
+                </div>
             </div>
-          </div>
-          <div class="box-body">
-            <p class="t-13px"> {{baiviet.TomTat}}
-            </p>
+            <div class="box-body">
+                <p class="t-13px"> {{baiviet.TomTat}}
+                </p>
 
-            <button type="button" class="btn btn-default btn-xs">
+                <button type="button" class="btn btn-default btn-xs">
                 <i class="glyphicon glyphicon-share">
                 </i> Chia sẻ
               </button>
-            <button type="button" class="btn btn-default btn-xs">
+                <button type="button" class="btn btn-default btn-xs">
                 <i class="glyphicon glyphicon-thumbs-up">
                 </i> Thích
               </button>
-            <span class="pull-right text-muted">45 thích - 2 bình luận
+                <span class="pull-right text-muted">45 thích - 2 bình luận
               </span>
-          </div>
+            </div>
 
         </div>
-      </div>
     </div>
-    <!-- End content right -->
+</div>
+<!-- End content right -->

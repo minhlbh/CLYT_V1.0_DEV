@@ -1,21 +1,26 @@
 <div class="left" class="fxs-sidebar">
-      <div class="col-left-fixed">
-            <ul>
-                  <li>
-                        <a id="menu-toggle">
+    <div class="col-left-fixed">
+        <ul>
+            <li>
+                <a id="menu-toggle">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </a>
-                  </li>
-            </ul>
-         <div class="list-services">
-            <ul  *ngFor="let element of menuElements">
-                  <li *ngFor="let item of element?.items">
-                        <a href="{{item?.url}}" style="cursor: pointer">
+            </li>
+        </ul>
+        <div class="list-services">
+            <ul *ngFor="let element of menuElements">
+                <li>
+                    <a class="title" style="cursor: pointer" >
+                      {{element?.Ten}}
+                    </a>
+                </li>
+                <li *ngFor="let item of element?.items">
+                    <a href="{{item?.url}}" style="cursor: pointer">
                               <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
                               <span class="title">{{item.Ten}}</span>
                         </a>
-                  </li>
+                </li>
             </ul>
-          </div>  
-      </div>
+        </div>
+    </div>
 </div>

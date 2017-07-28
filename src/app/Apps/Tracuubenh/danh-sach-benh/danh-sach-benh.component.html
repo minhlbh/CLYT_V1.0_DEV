@@ -38,8 +38,8 @@
             </p>
         </div>
         <div *ngIf="!empty">
-            <a style="cursor: pointer;" *ngFor="let benh of DsBenh">
-                <span class="title" (click)="clickBenh(benh.Id)">{{benh.Name}}</span>
+            <a  *ngFor="let benh of DsBenh" style="cursor: pointer;" (click)="clickBenh(benh.Id)">
+                <span class="title" >{{benh.Name}}</span>
             </a>
         </div>
     </li>
