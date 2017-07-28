@@ -9,16 +9,16 @@
 
         </div>
         <div class="controls">
-            <button class="btn btn-default">Button Home</button>
+            <button class="btn btn-default" (click)="showMore()">Button Home</button>
         </div>
     </div>
     <div class="content scroll">
-        <div *ngFor="let blocks of menus">
-            <div class="block">
-                <div class="title">Title</div>
+        <ng-container *ngFor="let blocks of menus">
+            <div class="block" [id]="blocks.Id">
+                <div class="title">{{blocks.Ten}}</div>
                 <div class="body">
                     <div class="grid">
-                        <ng-container *ngFor="let item of blocks.items">
+                         <ng-container *ngFor="let item of blocks.items">
                             <div class="grid-item" [ngClass]="
                                 {'grid-item-w2': item.chieuRong==2,
                                 'grid-item-w3': item.chieuRong==3,
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </ng-container>
 
 
 

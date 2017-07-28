@@ -4,18 +4,23 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    height: 600px;
+    height: calc(100%-100px);
     flex-direction: row;
+
 }
+
+
 /* .content {
     flex-direction: row;
 } */
 
 .block {
     flex: 0 0 auto;
-    height: 100%;
+    height: 580px;
     overflow-y: hidden;
-    width: 435px;
+    min-width: 435px;
+    margin: 10px;
+    transition:all 0.5s ease-in-out;
 }
 
 .header {
@@ -31,28 +36,33 @@
 }
 
 .body {
-     height: 100%;
-     width: 100%;
-     display: flex;
+    display: flex;
     flex-direction: row;
+    transition:all 0.5s ease-in-out;
 }
-
 
 .grid {
-    height: 100%;
+    /* height: 100%; */
+    /* width: 435px; */
+    min-width: 435px;
+    transition:all 0.4s ease-in-out;
 }
+
 .grid-item {
     width: 145px;
     height: 145px;
     padding: 5px;
+    transition:all 0.4s ease-in-out;
 }
 
 .grid-item-w2 {
-    width: 290px
+    width: 290px;
+
 }
 
 .grid-item-w3 {
     width: 435px;
+    transition:all 0.5s ease-in-out;
 }
 
 .child {
