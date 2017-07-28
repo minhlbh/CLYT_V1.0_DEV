@@ -165,3 +165,26 @@
   top: 7px;
   left: 10px;
 }
+
+/* share button */
+/* share button */
+share-button button {
+  font-size: 18px;
+  width: 80px;
+  background-color: transparent;
+  padding: 0.4em 1em;
+  margin: 1em;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all linear 200ms;
+}
+.facebook button {
+  color: #35528E;
+
+}
+.google button {
+    color: red;
+}
+share-button button:active {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}

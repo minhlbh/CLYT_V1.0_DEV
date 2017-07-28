@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { Routes, RouterModule } from '@angular/router';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+
 
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
@@ -35,6 +37,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         FormsModule,
         ReactiveFormsModule,
         HttpModule,
+        ShareButtonsModule.forRoot(),
         Routing
     ],
     declarations: [

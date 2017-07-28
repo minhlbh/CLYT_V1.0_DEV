@@ -27,9 +27,8 @@
                 </dt>
                 <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
             </dl>
-            <button type="button" class="btn btn-default btn-xs">
-                <i class="glyphicon glyphicon-share"></i> Chia sẻ
-            </button>
+            <share-button class="facebook" [button]="fbButton"></share-button>
+            <share-button class="google" [button]="gPlusButton"></share-button>
             <hr class="thin bg-grayLighter">
             <!-- load phần tử danh mục trong chi tiết bệnh -->
             <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
