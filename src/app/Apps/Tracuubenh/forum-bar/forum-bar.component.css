@@ -1,0 +1,72 @@
+.col-right {
+    height: 100%;
+    width: 320px;
+    padding:0 0 40px 0;
+    margin:25px;
+    float: left;
+    position: absolute;
+    top: 44px;
+    right: 0;
+    overflow: hidden;
+}
+
+.col-right-main {
+  overflow: auto;
+  height: 100%;
+  padding: 0 0 25px 0;
+  float: left;
+}
+
+.box-2 {
+    position: relative;
+    border-radius: 0;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    width: 100%;
+    border-top-color: #0fa5bd;
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+
+.user-block img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.user-block .username, .user-block .description, .user-block .comment {
+    display: block;
+    margin-left: 50px;
+}
+
+.user-block .username {
+    font-size: 16px;
+}
+
+.user-block .username a {
+    color: #0072c6;
+}
+
+.user-block .description {
+    color: #999;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.user-block .username, .user-block .description, .user-block .comment {
+    display: block;
+    margin-left: 50px;
+}
+
+.box-body {
+    padding:10px 0;
+}

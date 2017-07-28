@@ -7,14 +7,15 @@
                         </a>
                   </li>
             </ul>
-
-            <ul *ngFor="let element of elements">
-                  <li>
-                        <a href="{{element?.url}}" style="cursor: pointer">
-                              <span class="fa fa-fw {{element.IconText}} icon" aria-hidden="true"></span>
-                              <span class="title">{{element.Ten}}</span>
+         <div class="list-services">
+            <ul  *ngFor="let element of menuElements">
+                  <li *ngFor="let item of element?.items">
+                        <a href="{{item?.url}}" style="cursor: pointer">
+                              <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
+                              <span class="title">{{item.Ten}}</span>
                         </a>
                   </li>
             </ul>
+          </div>  
       </div>
 </div>
