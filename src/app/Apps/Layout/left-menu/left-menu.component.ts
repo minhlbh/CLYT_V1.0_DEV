@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer } from '@angular/core';
 import { SettingService } from '../../../Share/Services/setting.service';
 
 @Component({
@@ -10,10 +10,17 @@ import { SettingService } from '../../../Share/Services/setting.service';
 })
 export class LeftMenuComponent implements OnInit {
     menuElements: any;
-    constructor(private settingService: SettingService) { }
+    isToggled = false;
+    constructor(
+        private settingService: SettingService,
+        private renderer: Renderer
+    ) { }
 
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
     }
 
+    setWidth(el, width) {
+    this.renderer.setElementStyle(el, 'width', width + 'px');
+  }
 }
