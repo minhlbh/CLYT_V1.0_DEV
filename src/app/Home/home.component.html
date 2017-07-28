@@ -12,4 +12,47 @@
             <button class="btn btn-default">Button Home</button>
         </div>
     </div>
+    <div class="content">
+        <div class="block">
+            <div class="title">Title</div>
+            <div class="body">
+                <masonry>
+                    <masonry-brick class="brick" [ngClass]="
+                            {
+                                'brick-c1': brick.col == 1,
+                                'brick-c2': brick.col == 2,
+                                'brick-c3': brick.col == 3,
+                                'brick-r1': brick.col == 1,
+                                'brick-r2': brick.row == 2,
+                                'brick-r3': brick.row == 3
+                            }
+                        " *ngFor="let brick of bricks"
+                    >
+                    {{brick.title}}
+                    </masonry-brick>
+                </masonry>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="title">Title</div>
+            <div class="body">
+                <masonry>
+                    <masonry-brick class="brick" [ngClass]="
+                            {
+                                'brick-c1': brick.col == 1,
+                                'brick-c2': brick.col == 2,
+                                'brick-c3': brick.col == 3,
+                                'brick-r1': brick.col == 1,
+                                'brick-r2': brick.row == 2,
+                                'brick-r3': brick.row == 3
+                            }
+                        " *ngFor="let brick of bricks"
+                    >{{brick.title}}
+                    </masonry-brick>
+                </masonry>
+            </div>
+        </div>
+    </div>
+
 </div>
