@@ -141,3 +141,40 @@
     color: #fff;
     background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
 }
+
+.search-top {
+    padding: 45px 5px 45px 80px;
+    width: 300px;
+    float: right;
+}
+
+.input-control {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    line-height: 34px;
+    height: 35px;
+}
+
+.input-control .icon-search {
+    top: 11px;
+    left: 10px;
+    position: absolute; 
+    color: #777;
+}
+
+.input-control input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+}
+
+.area-controls {
+    float: right;
+    margin-top: 45px;
+    margin-right: 50px;
+}
