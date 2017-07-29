@@ -1,61 +1,43 @@
 <!-- Start col left 2 -->
 <app-window [icon]="iconText" [name]="name">
     <div class="list-left-wr">
-    <!-- searchbox -->
-    <div class="search-box-top">
-        <div class="input-control text full-size" data-role="input">
-            <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-            <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
-        </div>
+        <!-- searchbox -->
+        <div class="search-box-top">
+            <div class="input-control text full-size" data-role="input">
+                <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
+            </div>
+            <!-- đếm số bệnh -->
+            <div style="padding: 5px 0 0 0;">
+                <span style="font-size: 11px; color: #888; float: right;">
+                    {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
+                </span>
+            </div>
 
-<<<<<<< HEAD
-<!-- searchbox -->
-<div class="search-box-top">
-    <div class="input-control text full-size" data-role="input">
-        <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-<<<<<<< HEAD
-        <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
-=======
-        <input type="text" placeholder="Nhập tên bệnh..." [formControl] = "searchKey">
->>>>>>> 3eff26e15614ea8f384526a52b976f6bb540491b
-    </div>
-
-    <!-- đếm số bệnh -->
-    <div style="padding: 5px 0 0 0;">
-        <span style="font-size: 11px; color: #888; float: right;">
-=======
-        <!-- đếm số bệnh -->
-        <div style="padding: 5px 0 0 0;">
-            <span style="font-size: 11px; color: #888; float: right;">
->>>>>>> ca25b12b31f6c6f997cf6eaaeba30f4d885c8b7f
-          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
-        </span>
-        </div>
-
-        <hr class="thin bg-grayLighter">
-    </div>
-    <!-- loading gif -->
-    <div class="text-center">
-        <p class="lead" *ngIf="loading">
-            <img src="assets/66.gif">
-        </p>
-    </div>
-    <!-- list bệnh -->
-    <ul class="scrollbar-custom list" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()"
-        [scrollWindow]="false">
-        <li *ngIf="!loading">
-            <div class="text-center" *ngIf="empty">
-                <p>
-                    <a> Không kết quả nào phù hợp</a>
+            <hr class="thin bg-grayLighter">
+            <!-- loading gif -->
+            <div class="text-center">
+                <p class="lead" *ngIf="loading">
+                    <img src="assets/66.gif">
                 </p>
             </div>
-            <div *ngIf="!empty">
-                <a *ngFor="let benh of DsBenh" style="cursor: pointer;" (click)="clickBenh(benh.Id)">
+            <!-- list bệnh -->
+            <ul class="scrollbar-custom list" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()"
+                [scrollWindow]="false">
+                <li *ngIf="!loading">
+                    <div class="text-center" *ngIf="empty">
+                        <p>
+                            <a> Không kết quả nào phù hợp</a>
+                        </p>
+                    </div>
+                    <div *ngIf="!empty">
+                        <a *ngFor="let benh of DsBenh" style="cursor: pointer;" (click)="clickBenh(benh.Id)">
                 <span class="title" >{{benh.Name}}</span>
             </a>
-            </div>
-        </li>
-    </ul>
-    <!-- end col left 2 -->
+                    </div>
+                </li>
+            </ul>
+            <!-- end col left 2 -->
+        </div>
     </div>
 </app-window>
