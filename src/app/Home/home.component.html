@@ -11,6 +11,29 @@
         <div class="controls">
             <button class="btn btn-default" (click)="showMore()">Button Home</button>
         </div>
+
+        <!-- searchbox, đăng kí, đăng nhập -->
+        <div class="area-controls">
+            <div class="user">
+                <span *ngIf="this.auth" class="name-user">{{this.auth.HoVaTen}}</span>
+                <span *ngIf="this.auth" class="avt fa fa-fw fa-user" style="cursor: pointer;"></span>
+                <a *ngIf="!this.auth" routerLink='/login' class="name-user bt-sign-up">
+          <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
+          Đăng nhập
+        </a>
+                <a *ngIf="!this.auth" routerLink='/register' class="sign-up-now bt-sign-up">
+          <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
+          Đăng ký ngay
+        </a>
+            </div>
+            <button (click)="logOut()" *ngIf="this.auth" class="settings fa fa-fw fa-power-off" style="cursor: pointer;"></button>
+        </div>
+        <div class="search-top">
+            <div class="input-control text full-size" data-role="input">
+                <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Tìm kiếm dịch vụ...">
+            </div>
+        </div>
     </div>
     <div class="content scroll">
         <ng-container *ngFor="let blocks of menus">
