@@ -21,11 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"fxs-blade-content-container\">\r\n    <div class=\"fxs-block\">\r\n        <app-danh-sach-benh (showBenh)=\"idBenh($event)\">\r\n        </app-danh-sach-benh>\r\n    </div>\r\n\r\n    <div *ngIf=\"showChiTiet\" class=\"fxs-block large\">\r\n        <app-chi-tiet-benh [idBenh]=\"detailBenhId\"></app-chi-tiet-benh>\r\n    </div>\r\n\r\n</div>\r\n"
-=======
-module.exports = "<div class=\"fxs-blade-content-container\">\n    <div class=\"fxs-block\">\n        <app-danh-sach-benh (showBenh)=\"idBenh($event)\">\n        </app-danh-sach-benh>\n    </div>\n\n    <div *ngIf=\"showChiTiet\" class=\"fxs-block large\">\n        <app-chi-tiet-benh [idBenh]=\"detailBenhId\"></app-chi-tiet-benh>\n    </div>\n\n</div>\n"
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ }),
 
@@ -186,11 +182,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, ".title-img {\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #eee;\r\n    padding: 5px;\r\n    font-weight: 400;\r\n    font-size: 13px;\r\n}", ""]);
-=======
-exports.push([module.i, ".title-img {\n    text-align: center;\n    width: 100%;\n    background: #eee;\n    padding: 5px;\n    font-weight: 400;\n    font-size: 13px;\n}", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -203,11 +195,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"img-wr\">\r\n  <img width=\"100%\" src=\"{{duLieuLinkAnh}}{{dulieuImg}}\">\r\n  <div class=\"title-img\">{{dulieuImgTieuDe}}</div>\r\n</div>\r\n"
-=======
-module.exports = "<div class=\"img-wr\">\n  <img width=\"100%\" src=\"{{duLieuLinkAnh}}{{dulieuImg}}\">\n  <div class=\"title-img\">{{dulieuImgTieuDe}}</div>\n</div>\n"
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ }),
 
@@ -336,11 +324,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, "p {\r\n    padding: 20px 0;\r\n    line-height: 22px;\r\n    font-size: 16 px;\r\n    margin: 0;\r\n}\r\n\r\np p {\r\n    margin: 0;\r\n}", ""]);
-=======
-exports.push([module.i, "p {\n    padding: 20px 0;\n    line-height: 22px;\n    font-size: 16 px;\n    margin: 0;\n}\n\np p {\n    margin: 0;\n}", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -405,11 +389,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, ".title-video {\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #eee;\r\n    padding: 5px;\r\n    font-weight: 400;\r\n    font-size: 13px;\r\n}", ""]);
-=======
-exports.push([module.i, ".title-video {\n    text-align: center;\n    width: 100%;\n    background: #eee;\n    padding: 5px;\n    font-weight: 400;\n    font-size: 13px;\n}", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -422,11 +402,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"embed-responsive embed-responsive-16by9\">\r\n    <iframe style=\"width:100%; max-width:100%;\" [src]=\"url\" frameborder=\"0\" allowfullscreen></iframe>\r\n\r\n</div>\r\n<div class=\"title-video\">{{dulieuYoutubeTieuDe}}</div>\r\n"
-=======
-module.exports = "<div class=\"embed-responsive embed-responsive-16by9\">\n    <iframe style=\"width:100%; max-width:100%;\" [src]=\"url\" frameborder=\"0\" allowfullscreen></iframe>\n\n</div>\n<div class=\"title-video\">{{dulieuYoutubeTieuDe}}</div>\n"
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ }),
 
@@ -488,11 +464,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, "/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n.content-box {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    padding-bottom: 40px;\r\n    background: #fff;\r\n}\r\n\r\n.title-col {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 30px;\r\n}\r\n\r\n.title-col .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 9px 0 0 0;\r\n  line-height: 13px;\r\n}\r\n\r\n.title-col .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n.content-wr {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    background: #fff;\r\n}\r\n\r\n.content-left {\r\n  float: left;\r\n  width: 100%;\r\n  position: relative;\r\n  padding: 34px 25px 25px 25px;\r\n  height: 100%;\r\n  overflow: auto;\r\n  border-right: 1px solid #ccc;\r\n}\r\n\r\n\r\n.content-header {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n}\r\n\r\n.content-box h1.text-light.title-top {\r\n    margin-top: 50px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.content-box h1.text-light {\r\n    padding: 0 30px;\r\n    margin: 30px 0;\r\n}\r\n\r\n.content-left .thin.bg-grayLighter {\r\n    margin:0;\r\n}\r\n\r\n\r\n.content-header hr {\r\n    margin: 0 30px;\r\n}\r\n\r\n.bg-grayLighter {\r\n    background-color: #eeeeee !important;\r\n}\r\n\r\n.content-box-main {\r\n    overflow: auto;\r\n    height: 100%;\r\n    margin: 0;\r\n}\r\n\r\n.dl-horizontal {\r\n    font-size: 14px;\r\n    margin: 20px 0;\r\n}\r\n\r\n.dl-horizontal dt {\r\n  font-weight: 600;\r\n}\r\n\r\n.content-box h2.text-light {\r\n    padding: 10px 0 0;\r\n}\r\n\r\n.content-box p {\r\n    padding: 20px 0;\r\n    line-height: 22px;\r\n    font-size: 16 px;\r\n}\r\n\r\n.content-box .img-wr {\r\n    padding: 20px 0;\r\n}\r\n\r\n.bt-bar {\r\n    border-bottom: 1px solid #eee;\r\n    width: 100%;\r\n    float: left;\r\n    padding: 0 25px;\r\n}\r\n\r\n.bt-bar .bt-features:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.bt-bar .bt-features .icon {\r\n    font-size: 18px;\r\n    position: absolute;\r\n    top: 7px;\r\n    left: 10px;\r\n}\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n.bt-close {\r\n  background: none;\r\n  position: absolute;\r\n  top:0;\r\n  right:0;\r\n  padding: 3px 6px;\r\n  border: none;\r\n  box-shadow: none;\r\n  transition: all 0.3s ease 0s;\r\n}\r\n\r\n.bt-close:hover {\r\n  background: #ce352c;\r\n}\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n\r\n/*  buttons */\r\n.bt-features {\r\n  padding: 8px 10px 8px 33px;\r\n  float: left;\r\n  color: #333;\r\n  font-size: 12px;\r\n  font-weight: 600;\r\n  position: relative;\r\n}\r\n\r\n.bt-features:hover, .bt-features:focus {\r\n  color: #333;\r\n  background: #f5f5f5;\r\n}\r\n\r\n.bt-features .glyphicon {\r\n  font-size: 18px;\r\n  position: absolute;\r\n  top: 7px;\r\n  left: 10px;\r\n}\r\n\r\n/* share button */\r\n/* share button */\r\n.bt-social {\r\n    width: 40px;\r\n    height: 40px;\r\n    line-height: 40px;\r\n    position: relative;\r\n    float: left;\r\n    border-radius: 50%;\r\n    color: #fff;\r\n    transition: .25s;\r\n}\r\n\r\n.bt-social button {\r\n   background: none;\r\n}\r\n\r\n.bt-social.facebook  {\r\n  background: #3b5998;\r\n\r\n}\r\n.bt-social.google  {\r\n    background: #DC4E41;\r\n}\r\nshare-button button:active {\r\n    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
-=======
-exports.push([module.i, "/* box chứa */\n/* box chứa */\n/* box chứa */\n.content-box {\n    position: relative;\n    height: 100%;\n    overflow: hidden;\n    width: 1020px;\n    float: left;\n    border-right: 1px solid #ccc;\n    padding-right: 370px;\n    padding-bottom: 40px;\n    background: #fff;\n}\n\n.title-col {\n  width: 100%;\n  height: 44px;\n  background: #0f9cb3;\n  color: #fff;\n  position: absolute;\n  top: 0;\n  left: 0;\n  padding:0 30px;\n}\n\n.title-col .big-title {\n  font-size: 16px;\n  margin: 0;\n  font-weight: 600;\n  padding: 9px 0 0 0;\n  line-height: 13px;\n}\n\n.title-col .sub-title {\n  font-size: 11px;\n  color: #ccc;\n}\n/* box chứa */\n/* box chứa */\n/* box chứa */\n\n/* nội dung chi tiết bệnh */\n/* nội dung chi tiết bệnh */\n/* nội dung chi tiết bệnh */\n.content-wr {\n    position: relative;\n    height: 100%;\n    overflow: hidden;\n    width: 1020px;\n    float: left;\n    border-right: 1px solid #ccc;\n    padding-right: 370px;\n    background: #fff;\n}\n\n.content-left {\n  float: left;\n  width: 100%;\n  position: relative;\n  padding: 34px 25px 25px 25px;\n  height: 100%;\n  overflow: auto;\n  border-right: 1px solid #ccc;\n}\n\n\n.content-header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n}\n\n.content-box h1.text-light.title-top {\n    margin-top: 50px;\n    margin-bottom: 20px;\n}\n\n.content-box h1.text-light {\n    padding: 0 30px;\n    margin: 30px 0;\n}\n\n.content-left .thin.bg-grayLighter {\n    margin:0;\n}\n\n\n.content-header hr {\n    margin: 0 30px;\n}\n\n.bg-grayLighter {\n    background-color: #eeeeee !important;\n}\n\n.content-box-main {\n    overflow: auto;\n    height: 100%;\n    margin: 0;\n}\n\n.dl-horizontal {\n    font-size: 14px;\n    margin: 20px 0;\n}\n\n.dl-horizontal dt {\n  font-weight: 600;\n}\n\n.content-box h2.text-light {\n    padding: 10px 0 0;\n}\n\n.content-box p {\n    padding: 20px 0;\n    line-height: 22px;\n    font-size: 16 px;\n}\n\n.content-box .img-wr {\n    padding: 20px 0;\n}\n\n.bt-bar {\n    border-bottom: 1px solid #eee;\n    width: 100%;\n    float: left;\n    padding: 0 25px;\n}\n\n.bt-bar .bt-features:hover {\n    text-decoration: none;\n}\n\n.bt-bar .bt-features .icon {\n    font-size: 18px;\n    position: absolute;\n    top: 7px;\n    left: 10px;\n}\n/* nội dung chi tiết bệnh */\n/* nội dung chi tiết bệnh */\n/* nội dung chi tiết bệnh */\n\n/* close button */\n/* close button */\n/* close button */\n.bt-close {\n  background: none;\n  position: absolute;\n  top:0;\n  right:0;\n  padding: 3px 6px;\n  border: none;\n  box-shadow: none;\n  transition: all 0.3s ease 0s;\n}\n\n.bt-close:hover {\n  background: #ce352c;\n}\n\n/* close button */\n/* close button */\n/* close button */\n\n/*  buttons */\n.bt-features {\n  padding: 8px 10px 8px 33px;\n  float: left;\n  color: #333;\n  font-size: 12px;\n  font-weight: 600;\n  position: relative;\n}\n\n.bt-features:hover, .bt-features:focus {\n  color: #333;\n  background: #f5f5f5;\n}\n\n.bt-features .glyphicon {\n  font-size: 18px;\n  position: absolute;\n  top: 7px;\n  left: 10px;\n}\n\n/* share button */\n/* share button */\n.bt-social {\n    width: 40px;\n    height: 40px;\n    line-height: 40px;\n    position: relative;\n    float: left;\n    border-radius: 50%;\n    color: #fff;\n    transition: .25s;\n}\n\n.bt-social button {\n   background: none;\n}\n\n.bt-social.facebook  {\n  background: #3b5998;\n\n}\n.bt-social.google  {\n    background: #DC4E41;\n}\nshare-button button:active {\n    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);\n}\n", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -505,11 +477,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button>\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n                \r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
-=======
-module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\">\n    <!-- loading -->\n    <div class=\"content-wr\">\n        <p class=\"lead\" *ngIf=\"loading\">\n            <img src=\"assets/66.gif\">\n        </p>\n        <!-- Start content left -->\n        <div class=\"content-left\" *ngIf=\"!loading\">\n\n            <div class=\"content-header\">\n                <div class=\"bt-bar\">\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\n                </div>\n\n                <hr class=\"thin bg-grayLighter\">\n            </div>\n            <!-- load mô tả chi tiết bệnh -->\n            <div class=\"content-box-main scrollbar-custom\">\n                <dl class=\"dl-horizontal\">\n                    <dt>\n                        Chuyên khoa\n                    </dt>\n                    <dd>\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\n                    </dd>\n                    <dt>\n                        Tóm tắt\n                    </dt>\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\n                </dl>\n                <hr class=\"thin bg-grayLighter\">\n                <!-- <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\n                <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button> -->\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\n                    <h2 class=\"text-light\">\n                        {{phantu?.Ten}}\n                    </h2>\n                    <hr class=\"thin bg-grayLighter\">\n                    <!-- load dữ liệu chi tiết bệnh -->\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\n\n                        <!-- load dữ liệu text -->\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\n                            </app-load-du-lieu-text>\n                        </div>\n\n                        <!-- load dữ liệu ảnh -->\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\n                            </app-load-du-lieu-img>\n                            <br/>\n                            <br/>\n                        </div>\n\n                        <!-- load dữ liệu clip Youtube -->\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\n                            </app-load-du-lieu-youtube>\n                            <br/>\n                            <br/>\n                            <br/>\n                        </div>\n\n                        <!-- load dữ liệu link -->\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\n                            </app-load-du-lieu-link>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n        <!-- end content left -->\n        <app-forum-bar></app-forum-bar>\n    </div>\n</app-window>"
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
+module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button>\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n\r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -590,11 +558,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, "\r\n\r\n.search-box-top {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    padding: 25px 25px 0 25px ;\r\n    width: 100%;\r\n    background: #fff;\r\n    z-index: 100;\r\n}\r\n\r\n.search-box-top .text-light {\r\n    margin-top: 5px;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.search-box-top hr {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.text-light {\r\n    font-weight: 600;\r\n}\r\n\r\n.input-control {\r\n    display: inline-block;\r\n    min-height: 27px;\r\n    height: 27px;\r\n    position: relative;\r\n    vertical-align: middle;\r\n    margin: 0;\r\n    line-height: 1;\r\n    position: relative;\r\n}\r\n\r\n.input-control .icon-search {\r\n  position: absolute;\r\n  top: 6px;\r\n  left: 5px;\r\n  color: #777;\r\n}\r\n\r\n.input-control input {\r\n  width: 100%;\r\n  padding:3px 5px;\r\n  font-size: 13px;\r\n  padding-left:23px;\r\n}\r\n\r\n.full-size {\r\n    width: 100% !important;\r\n}\r\n\r\n.ul {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding:0;\r\n    margin: 0 25px;\r\n}\r\n\r\n.ul li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n\r\n}\r\n\r\n.ul li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom:1px solid #eee;\r\n\r\n}\r\n\r\n.ul li a .title {\r\n    display: block;\r\n\r\n}\r\n\r\n.ul li a:hover, .ul li a:focus {\r\n  background: #f5f5f5;\r\n  text-decoration:none;\r\n}\r\n\r\n.no-mg-top {\r\n  top:0;\r\n  padding-top: 67px;\r\n}\r\n\r\n.ul li a .icon {\r\n    width: 20px;\r\n    top: 13px;\r\n    right: 10px;\r\n    color: #888;\r\n    position: absolute;\r\n}\r\n\r\n\r\n\r\n.toggled ul li a .title {\r\n  display: block\r\n}\r\n\r\n.toggled ul li a {\r\npadding: 12px 10px 12px 40px;\r\n}\r\n\r\n.toggled {\r\n  width: 50px;\r\n  left: 0;\r\n}\r\n\r\n.list {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding: 0;\r\n    margin: 0 25px;\r\n}\r\n\r\n.list li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.list li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom: 1px solid #eee;\r\n}\r\n\r\n.list li a:hover, .list li a:focus {\r\n    background: #f5f5f5;\r\n    text-decoration:none;\r\n}\r\n\r\n.list-left-wr {\r\n    width: 320px;\r\n    padding: 78px 0 25px 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;;\r\n}", ""]);
-=======
-exports.push([module.i, "\n\n.search-box-top {\n    position: absolute;\n    top: 0;\n    left: 0;\n    padding: 25px 25px 0 25px ;\n    width: 100%;\n    background: #fff;\n    z-index: 100;\n}\n\n.search-box-top .text-light {\n    margin-top: 5px;\n    margin-bottom: 15px;\n}\n\n.search-box-top hr {\n    margin-bottom: 0;\n}\n\n.text-light {\n    font-weight: 600;\n}\n\n.input-control {\n    display: inline-block;\n    min-height: 27px;\n    height: 27px;\n    position: relative;\n    vertical-align: middle;\n    margin: 0;\n    line-height: 1;\n    position: relative;\n}\n\n.input-control .icon-search {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  color: #777;\n}\n\n.input-control input {\n  width: 100%;\n  padding:3px 5px;\n  font-size: 13px;\n  padding-left:23px;\n}\n\n.full-size {\n    width: 100% !important;\n}\n\n.ul {\n    height: 100%;\n    overflow: auto;\n    padding:0;\n    margin: 0 25px;\n}\n\n.ul li {\n    display: list-item;\n    list-style-type: none;\n\n}\n\n.ul li a {\n    color: #323232;\n    padding: 8px 5px;\n    font-size: 14px;\n    width: 100%;\n    float: left;\n    position: relative;\n    min-height: 40px;\n    line-height: 25px;\n    border-bottom:1px solid #eee;\n\n}\n\n.ul li a .title {\n    display: block;\n\n}\n\n.ul li a:hover, .ul li a:focus {\n  background: #f5f5f5;\n  text-decoration:none;\n}\n\n.no-mg-top {\n  top:0;\n  padding-top: 67px;\n}\n\n.ul li a .icon {\n    width: 20px;\n    top: 13px;\n    right: 10px;\n    color: #888;\n    position: absolute;\n}\n\n\n\n.toggled ul li a .title {\n  display: block\n}\n\n.toggled ul li a {\npadding: 12px 10px 12px 40px;\n}\n\n.toggled {\n  width: 50px;\n  left: 0;\n}\n\n.list {\n    height: 100%;\n    overflow: auto;\n    padding: 0;\n    margin: 0 25px;\n}\n\n.list li {\n    display: list-item;\n    list-style-type: none;\n    cursor: pointer;\n}\n\n.list li a {\n    color: #323232;\n    padding: 8px 5px;\n    font-size: 14px;\n    width: 100%;\n    float: left;\n    position: relative;\n    min-height: 40px;\n    line-height: 25px;\n    border-bottom: 1px solid #eee;\n}\n\n.list li a:hover, .list li a:focus {\n    background: #f5f5f5;\n    text-decoration:none;\n}\n\n.list-left-wr {\n    width: 320px;\n    padding: 78px 0 25px 0;\n    background: #fff;\n    border-right: 1px solid #ccc;\n    position: relative !important;\n    display: block;\n    height: 100%;\n    float: left;\n    overflow: hidden;;\n}", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -607,11 +571,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\">\r\n    <div class=\"list-left-wr\">\r\n    <!-- searchbox -->\r\n    <div class=\"search-box-top\">\r\n        <div class=\"input-control text full-size\" data-role=\"input\">\r\n            <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n            <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n        </div>\r\n\r\n<<<<<<< HEAD\r\n<!-- searchbox -->\r\n<div class=\"search-box-top\">\r\n    <div class=\"input-control text full-size\" data-role=\"input\">\r\n        <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n<<<<<<< HEAD\r\n        <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n=======\r\n        <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl] = \"searchKey\">\r\n>>>>>>> 3eff26e15614ea8f384526a52b976f6bb540491b\r\n    </div>\r\n\r\n    <!-- đếm số bệnh -->\r\n    <div style=\"padding: 5px 0 0 0;\">\r\n        <span style=\"font-size: 11px; color: #888; float: right;\">\r\n=======\r\n        <!-- đếm số bệnh -->\r\n        <div style=\"padding: 5px 0 0 0;\">\r\n            <span style=\"font-size: 11px; color: #888; float: right;\">\r\n>>>>>>> ca25b12b31f6c6f997cf6eaaeba30f4d885c8b7f\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n        </div>\r\n\r\n        <hr class=\"thin bg-grayLighter\">\r\n    </div>\r\n    <!-- loading gif -->\r\n    <div class=\"text-center\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n    </div>\r\n    <!-- list bệnh -->\r\n    <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n        [scrollWindow]=\"false\">\r\n        <li *ngIf=\"!loading\">\r\n            <div class=\"text-center\" *ngIf=\"empty\">\r\n                <p>\r\n                    <a> Không kết quả nào phù hợp</a>\r\n                </p>\r\n            </div>\r\n            <div *ngIf=\"!empty\">\r\n                <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" (click)=\"clickBenh(benh.Id)\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n            </div>\r\n        </li>\r\n    </ul>\r\n    <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n"
-=======
-module.exports = "<!-- Start col left 2 -->\n<app-window [icon]=\"iconText\" [name]=\"name\">\n    <div class=\"list-left-wr\">\n    <!-- searchbox -->\n    <div class=\"search-box-top\">\n        <div class=\"input-control text full-size\" data-role=\"input\">\n            <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\n            <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\n        </div>\n\n        <!-- đếm số bệnh -->\n        <div style=\"padding: 5px 0 0 0;\">\n            <span style=\"font-size: 11px; color: #888; float: right;\">\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\n        </span>\n        </div>\n\n        <hr class=\"thin bg-grayLighter\">\n    </div>\n    <!-- loading gif -->\n    <div class=\"text-center\">\n        <p class=\"lead\" *ngIf=\"loading\">\n            <img src=\"assets/66.gif\">\n        </p>\n    </div>\n    <!-- list bệnh -->\n    <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\n        [scrollWindow]=\"false\">\n        <li *ngIf=\"!loading\">\n            <div class=\"text-center\" *ngIf=\"empty\">\n                <p>\n                    <a> Không kết quả nào phù hợp</a>\n                </p>\n            </div>\n            <div *ngIf=\"!empty\">\n                <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" (click)=\"clickBenh(benh.Id)\">\n                <span class=\"title\" >{{benh.Name}}</span>\n            </a>\n            </div>\n        </li>\n    </ul>\n    <!-- end col left 2 -->\n    </div>\n</app-window>\n"
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ }),
 
@@ -653,11 +613,7 @@ var DanhSachBenhComponent = (function () {
         this.settingService = settingService;
         this.showBenh = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
         this.searchUpdate = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
-<<<<<<< HEAD
         this.searchKey = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormControl */]('');
-=======
-        this.searchKey = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormControl */]();
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
         this.loading = false;
         this.empty = false;
         this.showChiTiet = false;
@@ -765,11 +721,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, ".col-right {\r\n    height: 100%;\r\n    width: 320px;\r\n    padding:0 0 40px 0;\r\n    margin:25px;\r\n    float: left;\r\n    position: absolute;\r\n    top: 44px;\r\n    right: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.col-right-main {\r\n  overflow: auto;\r\n  height: 100%;\r\n  padding: 0 0 25px 0;\r\n  float: left;\r\n}\r\n\r\n.box-2 {\r\n    position: relative;\r\n    border-radius: 0;\r\n    background: #ffffff;\r\n    border-top: 3px solid #d2d6de;\r\n    width: 100%;\r\n    border-top-color: #0fa5bd;\r\n}\r\n\r\n.box-header.with-border {\r\n    border-bottom: 1px solid #f4f4f4;\r\n}\r\n\r\n.box-header {\r\n    color: #444;\r\n    display: block;\r\n    padding: 10px 0;\r\n    position: relative;\r\n}\r\n\r\n.user-block img {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.user-block .username {\r\n    font-size: 16px;\r\n}\r\n\r\n.user-block .username a {\r\n    color: #0072c6;\r\n}\r\n\r\n.user-block .description {\r\n    color: #999;\r\n    font-size: 12px;\r\n    padding-top: 5px;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.box-body {\r\n    padding:10px 0;\r\n}\r\n", ""]);
-=======
-exports.push([module.i, ".col-right {\n    height: 100%;\n    width: 320px;\n    padding:0 0 40px 0;\n    margin:25px;\n    float: left;\n    position: absolute;\n    top: 44px;\n    right: 0;\n    overflow: hidden;\n}\n\n.col-right-main {\n  overflow: auto;\n  height: 100%;\n  padding: 0 0 25px 0;\n  float: left;\n}\n\n.box-2 {\n    position: relative;\n    border-radius: 0;\n    background: #ffffff;\n    border-top: 3px solid #d2d6de;\n    width: 100%;\n    border-top-color: #0fa5bd;\n}\n\n.box-header.with-border {\n    border-bottom: 1px solid #f4f4f4;\n}\n\n.box-header {\n    color: #444;\n    display: block;\n    padding: 10px 0;\n    position: relative;\n}\n\n.user-block img {\n    width: 40px;\n    height: 40px;\n    float: left;\n}\n\n.user-block .username, .user-block .description, .user-block .comment {\n    display: block;\n    margin-left: 50px;\n}\n\n.user-block .username {\n    font-size: 16px;\n}\n\n.user-block .username a {\n    color: #0072c6;\n}\n\n.user-block .description {\n    color: #999;\n    font-size: 12px;\n    padding-top: 5px;\n}\n\n.user-block .username, .user-block .description, .user-block .comment {\n    display: block;\n    margin-left: 50px;\n}\n\n.box-body {\n    padding:10px 0;\n}\n", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -839,11 +791,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, ".window {\r\n    width: 100%;\r\n    padding:45px 0 0 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n.title-window {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 25px 0 55px;\r\n}\r\n\r\n\r\n.title-window .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 0;\r\n  line-height: 13px;\r\n  line-height: 43px;\r\n}\r\n\r\n.title-window .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n\r\n.title-window .icon {\r\n  font-size: 20px;\r\n  padding: 0;\r\n  position: absolute;\r\n  top:10px;\r\n  left: 25px;\r\n}\r\n\r\n.body {\r\n  position: relative;\r\n  height: 100%;\r\n}\r\n\r\n", ""]);
-=======
-exports.push([module.i, ".window {\n    width: 100%;\n    padding:45px 0 0 0;\n    background: #fff;\n    border-right: 1px solid #ccc;\n    position: relative !important;\n    display: block;\n    height: 100%;\n    float: left;\n    overflow: hidden;\n}\n\n.title-window {\n  width: 100%;\n  height: 44px;\n  background: #0f9cb3;\n  color: #fff;\n  position: absolute;\n  top: 0;\n  left: 0;\n  padding:0 25px 0 55px;\n}\n\n\n.title-window .big-title {\n  font-size: 16px;\n  margin: 0;\n  font-weight: 600;\n  padding: 0;\n  line-height: 13px;\n  line-height: 43px;\n}\n\n.title-window .sub-title {\n  font-size: 11px;\n  color: #ccc;\n}\n\n.title-window .icon {\n  font-size: 20px;\n  padding: 0;\n  position: absolute;\n  top:10px;\n  left: 25px;\n}\n\n.body {\n  position: relative;\n  height: 100%;\n}\n\n", ""]);
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 // exports
 
@@ -856,11 +804,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/window/window.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div>\r\n                <span class=\"fa fa-fw {{icon}} icon\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
-=======
-module.exports = "<div class=\"window\">\n    <div class=\"title-window\">\n        <div style=\"display:flex; flex-direction: row;\">\n            <div>\n                <span class=\"fa fa-fw {{icon}} icon\"></span>\n            </div>\n            <div>\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\n            </div>\n\n        </div>\n    </div>\n    <div class=\"body\">\n        <ng-content></ng-content>\n    </div>\n</div>\n"
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ }),
 
@@ -1492,7 +1436,6 @@ exports.ScrollResolver = ScrollResolver;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareButtonComponent; });
-<<<<<<< HEAD
 
 var ShareButtonComponent = (function () {
     function ShareButtonComponent() {
@@ -1534,49 +1477,6 @@ ShareButtonComponent.propDecorators = {
     'count': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     'popUpClosed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
 };
-=======
-
-var ShareButtonComponent = (function () {
-    function ShareButtonComponent() {
-        /** Show count, disabled by default */
-        this.showCount = false;
-        /** Output button count to calculate total share counts */
-        this.count = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        /** Output pop up closed*/
-        this.popUpClosed = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-    }
-    ShareButtonComponent.prototype.counter = function (count) {
-        this.shareCount = count;
-        this.count.emit(count);
-    };
-    /** emits closed button type: so user can tell which button has been clicked */
-    ShareButtonComponent.prototype.shareClosed = function (provider) {
-        this.popUpClosed.emit(provider);
-    };
-    return ShareButtonComponent;
-}());
-
-ShareButtonComponent.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
-                selector: 'share-button',
-                template: "\n      <button [shareButton]=\"button.provider\"\n              [sbUrl]=\"url\"\n              [sbImage]=\"image\"\n              [sbTitle]=\"title\"\n              [sbDescription]=\"description\"\n              [sbTags]=\"tags\"\n              [sbShowCount]=\"showCount\"\n              (sbCount)=\"counter($event)\"\n              (sbPopUpClosed)=\"shareClosed($event)\"\n              [class.sb-show-count]=\"showCount\"\n        >\n\n        <div class=\"sb-template\" [innerHtml]=\"button.template\"></div>\n        <span *ngIf=\"showCount && shareCount\" class=\"sb-count\">{{ shareCount | nFormatter: 1 }}</span>\n      </button>\n    ",
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectionStrategy"].OnPush
-            },] },
-];
-/** @nocollapse */
-ShareButtonComponent.ctorParameters = function () { return []; };
-ShareButtonComponent.propDecorators = {
-    'url': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'title': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'description': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'image': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'tags': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'button': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'showCount': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'count': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-    'popUpClosed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-};
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-button.component.js.map
 
 /***/ }),
@@ -1588,7 +1488,6 @@ ShareButtonComponent.propDecorators = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_index__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareButtonsComponent; });
-<<<<<<< HEAD
 
 
 var ShareButtonsComponent = (function () {
@@ -1697,116 +1596,6 @@ ShareButtonsComponent.propDecorators = {
     'count': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     'popUpClosed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
 };
-=======
-
-
-var ShareButtonsComponent = (function () {
-    function ShareButtonsComponent() {
-        /** Show count on share-buttons, disabled by default */
-        this.showCount = false;
-        /** Indicates weather default style is applied to the buttons */
-        this.defaultStyle = true;
-        /** Add default class to all buttons */
-        this.buttonClass = '';
-        /** Buttons default templates */
-        this.facebook = '<i class="fa fa-facebook"></i>';
-        this.twitter = '<i class="fa fa-twitter"></i>';
-        this.linkedIn = '<i class="fa fa-linkedin"></i>';
-        this.tumblr = '<i class="fa fa-tumblr"></i>';
-        this.google = '<i class="fa fa-google-plus"></i>';
-        this.pinterest = '<i class="fa fa-pinterest-p"></i>';
-        this.stumbleUpOn = '<i class="fa fa-stumbleupon"></i>';
-        this.reddit = '<i class="fa fa-reddit-alien"></i>';
-        this.whatsApp = '<i class="fa fa-whatsapp"></i>';
-        this.count = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.popUpClosed = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        /** Total Count: the sum of all buttons share count */
-        this.tCount = 0;
-    }
-    ShareButtonsComponent.prototype.ngOnInit = function () {
-        this.buttons = [];
-        if (this.facebook) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].FACEBOOK, this.facebook, "facebook " + this.buttonClass));
-        }
-        if (this.twitter) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].TWITTER, this.twitter, "twitter " + this.buttonClass));
-        }
-        if (this.google) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].GOOGLEPLUS, this.google, "googleplus " + this.buttonClass));
-        }
-        if (this.pinterest) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].PINTEREST, this.pinterest, "pinterest " + this.buttonClass));
-        }
-        if (this.linkedIn) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].LINKEDIN, this.linkedIn, "linkedin " + this.buttonClass));
-        }
-        if (this.tumblr) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].TUMBLR, this.tumblr, "tumblr " + this.buttonClass));
-        }
-        if (this.reddit) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].REDDIT, this.reddit, "reddit " + this.buttonClass));
-        }
-        if (this.stumbleUpOn) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].STUMBLEUPON, this.stumbleUpOn, "stumbleupon " + this.buttonClass));
-        }
-        if (this.whatsApp) {
-            this.buttons.push(new __WEBPACK_IMPORTED_MODULE_1__helpers_index__["a" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_1__helpers_index__["b" /* ShareProvider */].WHATSAPP, this.whatsApp, "whatsapp " + this.buttonClass));
-        }
-    };
-    /** Reset total count on URL changes */
-    ShareButtonsComponent.prototype.ngOnChanges = function (changes) {
-        if (changes['url']) {
-            var currUrl = changes['url'].currentValue;
-            var prevUrl = changes['url'].previousValue;
-            if (currUrl && currUrl !== prevUrl) {
-                this.tCount = 0;
-            }
-        }
-    };
-    /** Sum all buttons count & emits total */
-    ShareButtonsComponent.prototype.counter = function (count) {
-        this.count.emit(count);
-    };
-    /** emits closed button type: so user can tell which button has been clicked */
-    ShareButtonsComponent.prototype.shareClosed = function (provider) {
-        this.popUpClosed.emit(provider);
-    };
-    return ShareButtonsComponent;
-}());
-
-ShareButtonsComponent.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
-                selector: 'share-buttons',
-                template: "\n      <div class=\"sb-buttons\" [ngClass]=\"(defaultStyle) ? ['sb-style', 'sb-style-colors']: ''\">\n        <share-button class=\"sb-button\" *ngFor=\"let button of buttons\"\n                      [ngClass]=\"button.classes\"\n                      [button]=\"button\"\n                      [url]=\"url\"\n                      [image]=\"image\"\n                      [title]=\"title\"\n                      [description]=\"description\"\n                      [tags]=\"tags\"\n                      [showCount]=\"showCount\"\n                      (count)=\"counter($event)\"\n                      (popUpClosed)=\"shareClosed($event)\"></share-button>\n      </div>\n    ",
-                styles: ["\n      .sb-style.sb-style-colors .facebook button{background:#4267b2}.sb-style.sb-style-colors .facebook button:hover{background:#35528e}.sb-style.sb-style-colors .twitter button{background:#00acee}.sb-style.sb-style-colors .twitter button:hover{background:#008abe}.sb-style.sb-style-colors .googleplus button{background:#db4437}.sb-style.sb-style-colors .googleplus button:hover{background:#af362c}.sb-style.sb-style-colors .stumbleupon button{background:#eb4924}.sb-style.sb-style-colors .stumbleupon button:hover{background:#bc3a1d}.sb-style.sb-style-colors .linkedin button{background:#006fa6}.sb-style.sb-style-colors .linkedin button:hover{background:#005985}.sb-style.sb-style-colors .pinterest button{background:#bd081c}.sb-style.sb-style-colors .pinterest button:hover{background:#970616}.sb-style.sb-style-colors .reddit button{background:#ff4006}.sb-style.sb-style-colors .reddit button:hover{background:#cc3305}.sb-style.sb-style-colors .tumblr button{background:#36465d}.sb-style.sb-style-colors .tumblr button:hover{background:#2b384a}.sb-style.sb-style-colors .whatsapp button{background:#25d366}.sb-style.sb-style-colors .whatsapp button:hover{background:#1ea952}share-buttons{width:100%}.sb-style{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;margin:1em auto;-ms-flex-wrap:wrap;flex-wrap:wrap}.sb-style .sb-button{min-width:60px;padding:5px;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.sb-style .sb-button,.sb-style button{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-direction:normal}.sb-style button{-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;border-radius:.2em;padding:.5em .9em;font-size:1em;color:#fff}.sb-style button:hover{-webkit-transition:all .3s ease;transition:all .3s ease}.sb-style .sb-show-count{-ms-flex-pack:distribute;justify-content:space-around;max-width:6em}.sb-style .sb-template{margin:0 auto}.sb-style .sb-count{margin-left:.8em;font-size:.75em;font-family:Tahoma;text-align:center;position:relative;color:#fff;font-weight:700}a:hover,button{cursor:pointer;outline:0;border:0}.facebook{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.twitter{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.googleplus{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.pinterest{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.linkedin{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.tumblr{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.reddit{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.stumbleupon{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.whatsapp{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}\n    "],
-                encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectionStrategy"].OnPush
-            },] },
-];
-/** @nocollapse */
-ShareButtonsComponent.ctorParameters = function () { return []; };
-ShareButtonsComponent.propDecorators = {
-    'url': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'title': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'description': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'image': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'tags': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'showCount': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'defaultStyle': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'buttonClass': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'facebook': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'twitter': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'linkedIn': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'tumblr': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'google': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'pinterest': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'stumbleUpOn': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'reddit': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'whatsApp': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'count': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-    'popUpClosed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-};
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-buttons.component.js.map
 
 /***/ }),
@@ -1819,7 +1608,6 @@ ShareButtonsComponent.propDecorators = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_share_buttons_service__ = __webpack_require__("../../../../ngx-sharebuttons/services/share-buttons.service.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_index__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareButtonDirective; });
-<<<<<<< HEAD
 
 
 
@@ -1887,75 +1675,6 @@ ShareButtonDirective.propDecorators = {
     'sbPopUpClosed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     'onClick': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['click',] },],
 };
-=======
-
-
-
-var ShareButtonDirective = (function () {
-    function ShareButtonDirective(sbService) {
-        this.sbService = sbService;
-        /** Output button count to calculate total share counts */
-        this.sbCount = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        /** Output pop up closed*/
-        this.sbPopUpClosed = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-    }
-    Object.defineProperty(ShareButtonDirective.prototype, "shareButton", {
-        set: function (value) {
-            this.provider = __WEBPACK_IMPORTED_MODULE_2__helpers_index__["c" /* Helper */].getEnumValue(value, __WEBPACK_IMPORTED_MODULE_2__helpers_index__["b" /* ShareProvider */]);
-            if (typeof this.provider === 'undefined') {
-                throw new Error("[shareButton] must be set to one of the values (numeric or string) of ShareProvider enum: was '" + value + "'");
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ShareButtonDirective.prototype.onClick = function () {
-        this.share();
-    };
-    ShareButtonDirective.prototype.ngOnChanges = function (changes) {
-        /** Validate URL */
-        this.sbUrl = this.sbService.validateUrl(this.sbUrl);
-        if (changes['sbUrl']) {
-            var currUrl = changes['sbUrl'].currentValue;
-            var prevUrl = changes['sbUrl'].previousValue;
-            if (currUrl && currUrl !== prevUrl) {
-                /** Add share count if enabled */
-                if (this.sbShowCount) {
-                    this.sbService.count(this.provider, this.sbUrl, this.sbCount);
-                }
-            }
-        }
-    };
-    /** Open share window */
-    ShareButtonDirective.prototype.share = function () {
-        var args = new __WEBPACK_IMPORTED_MODULE_2__helpers_index__["d" /* ShareArgs */](this.sbUrl, this.sbTitle, this.sbDescription, this.sbImage, this.sbTags);
-        this.sbService.share(this.provider, args, this.sbPopUpClosed);
-    };
-    return ShareButtonDirective;
-}());
-
-ShareButtonDirective.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
-                selector: '[shareButton]'
-            },] },
-];
-/** @nocollapse */
-ShareButtonDirective.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_1__services_share_buttons_service__["a" /* ShareButtonsService */], },
-]; };
-ShareButtonDirective.propDecorators = {
-    'shareButton': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbUrl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbTitle': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbDescription': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbImage': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbTags': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbShowCount': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    'sbCount': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-    'sbPopUpClosed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-    'onClick': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['click',] },],
-};
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-button.directive.js.map
 
 /***/ }),
@@ -1975,19 +1694,11 @@ ShareButtonDirective.propDecorators = {
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__share_provider_enum__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/share-provider.enum.js");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_4__share_provider_enum__["a"]; });
-<<<<<<< HEAD
 
 
 
 
 
-=======
-
-
-
-
-
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -1999,7 +1710,6 @@ ShareButtonDirective.propDecorators = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NFormatterPipe; });
-<<<<<<< HEAD
 
 
 var NFormatterPipe = (function () {
@@ -2021,29 +1731,6 @@ NFormatterPipe.decorators = [
 ];
 /** @nocollapse */
 NFormatterPipe.ctorParameters = function () { return []; };
-=======
-
-
-var NFormatterPipe = (function () {
-    function NFormatterPipe() {
-    }
-    NFormatterPipe.prototype.transform = function (num, digits) {
-        if (typeof num !== 'number') {
-            throw new Error('A number is expected for nFormatter');
-        }
-        return __WEBPACK_IMPORTED_MODULE_1__index__["c" /* Helper */].nFormatter(num, digits);
-    };
-    return NFormatterPipe;
-}());
-
-NFormatterPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{
-                name: 'nFormatter'
-            },] },
-];
-/** @nocollapse */
-NFormatterPipe.ctorParameters = function () { return []; };
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=n-formatter.pipe.js.map
 
 /***/ }),
@@ -2054,7 +1741,6 @@ NFormatterPipe.ctorParameters = function () { return []; };
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareButton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ShareArgs; });
-<<<<<<< HEAD
 var ShareButton = (function () {
     function ShareButton(provider, template, classes) {
         this.provider = provider;
@@ -2077,30 +1763,6 @@ var ShareArgs = (function () {
     return ShareArgs;
 }());
 
-=======
-var ShareButton = (function () {
-    function ShareButton(provider, template, classes) {
-        this.provider = provider;
-        this.template = template;
-        this.classes = classes;
-    }
-    return ShareButton;
-}());
-
-var ShareArgs = (function () {
-    function ShareArgs(url, title, description, image, tags, via, mobile) {
-        this.url = url;
-        this.title = title;
-        this.description = description;
-        this.image = image;
-        this.tags = tags;
-        this.via = via;
-        this.mobile = mobile;
-    }
-    return ShareArgs;
-}());
-
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-buttons.class.js.map
 
 /***/ }),
@@ -2110,7 +1772,6 @@ var ShareArgs = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareLinks; });
-<<<<<<< HEAD
 /** Share links functions:
  *  ShareLinks: Provide a share links for all services
  * */
@@ -2240,137 +1901,6 @@ var ShareLinks;
     }
     ShareLinks.whatsappShare = whatsappShare;
 })(ShareLinks || (ShareLinks = {}));
-=======
-/** Share links functions:
- *  ShareLinks: Provide a share links for all services
- * */
-var ShareLinks;
-(function (ShareLinks) {
-    function fbShare(args) {
-        var shareUrl = 'https://www.facebook.com/sharer/sharer.php';
-        shareUrl += "?u=" + args.url;
-        if (args.title) {
-            shareUrl += "&title=" + args.title;
-        }
-        if (args.description) {
-            shareUrl += "&description=" + args.description;
-        }
-        if (args.image) {
-            shareUrl += "&picture=" + args.image;
-        }
-        return shareUrl;
-    }
-    ShareLinks.fbShare = fbShare;
-    // TWITTER DOCS: https://dev.twitter.com/web/tweet-button/web-intent
-    function twitterShare(args) {
-        var shareUrl = 'https://twitter.com/intent/tweet';
-        shareUrl += "?url=" + args.url;
-        if (args.title) {
-            shareUrl += "&text=" + args.title;
-        }
-        if (args.via) {
-            shareUrl += "&via=" + args.via;
-        }
-        if (args.tags) {
-            shareUrl += "&hashtags=" + args.tags;
-        }
-        return shareUrl;
-    }
-    ShareLinks.twitterShare = twitterShare;
-    // LINKEDIN DOCS https://developer.linkedin.com/docs/share-on-linkedin#!
-    function linkedInShare(args) {
-        var shareUrl = 'http://www.linkedin.com/shareArticle';
-        shareUrl += "?url=" + args.url;
-        if (args.title) {
-            shareUrl += "&title=" + args.title;
-        }
-        if (args.description) {
-            shareUrl += "&summary=" + args.description;
-        }
-        return shareUrl;
-    }
-    ShareLinks.linkedInShare = linkedInShare;
-    // REDDIT DOCS: http://stackoverflow.com/questions/24823114/post-to-reddit-via-url
-    function redditShare(args) {
-        var shareUrl = 'http://www.reddit.com/submit';
-        shareUrl += "?url=" + args.url;
-        if (args.title) {
-            shareUrl += "&title=" + args.title;
-        }
-        return shareUrl;
-    }
-    ShareLinks.redditShare = redditShare;
-    // TUMBLR DOCS: https://www.tumblr.com/docs/en/share_button
-    function tumblrShare(args) {
-        var shareUrl = 'http://tumblr.com/widgets/share/tool';
-        shareUrl += "?canonicalUrl=" + args.url;
-        if (args.description) {
-            shareUrl += "&caption=" + args.description;
-        }
-        if (args.tags) {
-            shareUrl += "&tags=" + args.tags;
-        }
-        return shareUrl;
-    }
-    ShareLinks.tumblrShare = tumblrShare;
-    // STUMBLE DOCS: http://stackoverflow.com/questions/10591424/how-can-i-create-a-custom-stumbleupon-button
-    function stumbleShare(args) {
-        var shareUrl;
-        if (args.mobile) {
-            shareUrl = 'stumbleupon://';
-        }
-        else {
-            shareUrl = 'http://www.stumbleupon.com/submit';
-        }
-        shareUrl += "?url=" + args.url;
-        return shareUrl;
-    }
-    ShareLinks.stumbleShare = stumbleShare;
-    // GPLUS DOCS: https://developers.google.com/+/web/share/#sharelink
-    function gPlusShare(args) {
-        return "https://plus.google.com/share?url=" + args.url;
-    }
-    ShareLinks.gPlusShare = gPlusShare;
-    function pinShare(args) {
-        var shareUrl = "https://in.pinterest.com/pin/create/button/?url=" + args.url;
-        // if text is not provided, pin button won't work.
-        if (args.description) {
-            shareUrl += "&description=" + args.description;
-        }
-        else if (document) {
-            var descElm = document.querySelector('meta[property="og:description"]');
-            if (descElm) {
-                shareUrl += "&description=" + descElm.getAttribute('content');
-            }
-        }
-        if (args.image) {
-            shareUrl += "&media=" + args.image;
-        }
-        else if (document) {
-            var imageElm = document.querySelector('meta[property="og:image"]');
-            if (imageElm) {
-                shareUrl += "&media=" + imageElm.getAttribute('content');
-            }
-        }
-        return shareUrl;
-    }
-    ShareLinks.pinShare = pinShare;
-    function whatsappShare(args) {
-        var shareUrl = ((args.mobile) ? 'whatsapp://' : 'https://web.whatsapp.com/') + "send?text=";
-        // Title will add a new line
-        if (args.title) {
-            shareUrl += args.title + " %0A";
-        }
-        // Description adds a pipe to separate the url
-        if (args.description) {
-            shareUrl += args.description + " | ";
-        }
-        shareUrl += "" + args.url;
-        return shareUrl;
-    }
-    ShareLinks.whatsappShare = whatsappShare;
-})(ShareLinks || (ShareLinks = {}));
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-links.functions.js.map
 
 /***/ }),
@@ -2380,7 +1910,6 @@ var ShareLinks;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareProvider; });
-<<<<<<< HEAD
 var ShareProvider;
 (function (ShareProvider) {
     ShareProvider[ShareProvider["FACEBOOK"] = 0] = "FACEBOOK";
@@ -2393,20 +1922,6 @@ var ShareProvider;
     ShareProvider[ShareProvider["PINTEREST"] = 7] = "PINTEREST";
     ShareProvider[ShareProvider["WHATSAPP"] = 8] = "WHATSAPP";
 })(ShareProvider || (ShareProvider = {}));
-=======
-var ShareProvider;
-(function (ShareProvider) {
-    ShareProvider[ShareProvider["FACEBOOK"] = 0] = "FACEBOOK";
-    ShareProvider[ShareProvider["TWITTER"] = 1] = "TWITTER";
-    ShareProvider[ShareProvider["REDDIT"] = 2] = "REDDIT";
-    ShareProvider[ShareProvider["STUMBLEUPON"] = 3] = "STUMBLEUPON";
-    ShareProvider[ShareProvider["LINKEDIN"] = 4] = "LINKEDIN";
-    ShareProvider[ShareProvider["GOOGLEPLUS"] = 5] = "GOOGLEPLUS";
-    ShareProvider[ShareProvider["TUMBLR"] = 6] = "TUMBLR";
-    ShareProvider[ShareProvider["PINTEREST"] = 7] = "PINTEREST";
-    ShareProvider[ShareProvider["WHATSAPP"] = 8] = "WHATSAPP";
-})(ShareProvider || (ShareProvider = {}));
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-provider.enum.js.map
 
 /***/ }),
@@ -2418,7 +1933,6 @@ var ShareProvider;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/share-provider.enum.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_links_functions__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/share-links.functions.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Helper; });
-<<<<<<< HEAD
 
 
 /** Here is a collection of helper functions that can be used statically */
@@ -2496,85 +2010,6 @@ var Helper;
         return result;
     };
 })(Helper || (Helper = {}));
-=======
-
-
-/** Here is a collection of helper functions that can be used statically */
-var Helper;
-(function (Helper) {
-    /** Prepare gPlus count request body   */
-    Helper.gplusCountBody = function (url) {
-        return [{
-                method: 'pos.plusones.get',
-                id: 'p',
-                params: {
-                    nolog: true,
-                    id: decodeURIComponent(url),
-                    source: 'widget',
-                    userId: '@viewer',
-                    groupId: '@self'
-                },
-                jsonrpc: '2.0',
-                key: 'p',
-                apiVersion: 'v1'
-            }];
-    };
-    /** Create share links */
-    Helper.shareFactory = function (type, args) {
-        switch (type) {
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].FACEBOOK:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].fbShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].TWITTER:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].twitterShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].LINKEDIN:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].linkedInShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].REDDIT:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].redditShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].TUMBLR:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].tumblrShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].STUMBLEUPON:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].stumbleShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].GOOGLEPLUS:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].gPlusShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].PINTEREST:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].pinShare(args);
-            case __WEBPACK_IMPORTED_MODULE_0__share_provider_enum__["a" /* ShareProvider */].WHATSAPP:
-                return __WEBPACK_IMPORTED_MODULE_1__share_links_functions__["a" /* ShareLinks */].whatsappShare(args);
-            default:
-                return '';
-        }
-    };
-    /** Change share counts to a readable number e.g 35.6k */
-    Helper.nFormatter = function (num, digits) {
-        var si = [
-            { value: 1E18, symbol: 'E' },
-            { value: 1E15, symbol: 'P' },
-            { value: 1E12, symbol: 'T' },
-            { value: 1E9, symbol: 'G' },
-            { value: 1E6, symbol: 'M' },
-            { value: 1E3, symbol: 'K' }
-        ], rx = /\.0+$|(\.[0-9]*[1-9])0+$/, i;
-        for (i = 0; i < si.length; i++) {
-            if (num >= si[i].value) {
-                return (num / si[i].value).toFixed(digits).replace(rx, '$1') + si[i].symbol;
-            }
-        }
-        return num.toFixed(digits).replace(rx, '$1');
-    };
-    Helper.getEnumValue = function (value, enumeration) {
-        var result;
-        if (typeof value !== 'undefined') {
-            if (typeof value === 'string' && enumeration[value.toUpperCase()] >= 0) {
-                result = enumeration[value.toUpperCase()];
-            }
-            else if (typeof value === 'number' && enumeration["" + value]) {
-                result = enumeration[enumeration["" + value]];
-            }
-        }
-        return result;
-    };
-})(Helper || (Helper = {}));
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share.helper.js.map
 
 /***/ }),
@@ -2599,7 +2034,6 @@ var Helper;
 /* unused harmony reexport ShareButtonsService */
 /* unused harmony reexport ShareArgs */
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_5__helpers_index__["b"]; });
-<<<<<<< HEAD
 
 
 
@@ -2608,16 +2042,6 @@ var Helper;
 
 
 
-=======
-
-
-
-
-
-
-
-
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -2637,7 +2061,6 @@ var Helper;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__window_service__ = __webpack_require__("../../../../ngx-sharebuttons/services/window.service.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__helpers_index__ = __webpack_require__("../../../../ngx-sharebuttons/helpers/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareButtonsService; });
-<<<<<<< HEAD
 
 
 
@@ -2805,175 +2228,6 @@ ShareButtonsService.ctorParameters = function () { return [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], },
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Jsonp */], },
 ]; };
-=======
-
-
-
-
-
-
-
-var ShareButtonsService = (function () {
-    function ShareButtonsService(window, http, jsonp) {
-        this.http = http;
-        this.jsonp = jsonp;
-        /** Optional parameters */
-        this.windowWidth = 500;
-        this.windowHeight = 400;
-        this.window = window.nativeWindow;
-    }
-    ShareButtonsService.prototype.validateUrl = function (url) {
-        /** If URL is specified then validate it, otherwise use window URL */
-        if (url) {
-            var r = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-            if (r.test(url)) {
-                return encodeURIComponent(url);
-            }
-            else {
-                console.warn('[ShareButtons]: Invalid URL, fallback to Window URL');
-            }
-        }
-        /** fallback to "Window" URL, or to "Global" in universal */
-        return (this.window) ? encodeURIComponent(this.window.location.href) : global.url || '';
-    };
-    /** Open share window */
-    ShareButtonsService.prototype.share = function (type, args, popUpClosed) {
-        var _this = this;
-        /** include twitterAccount in args for twitter button */
-        if (this.twitterAccount) {
-            args = Object.assign({}, args, { via: this.twitterAccount });
-        }
-        /** check for mobile browser (this won't detect tablets browser) */
-        if (this.window.innerWidth <= 480) {
-            args = Object.assign({}, args, { mobile: true });
-        }
-        var popUp = this.window.open(__WEBPACK_IMPORTED_MODULE_6__helpers_index__["c" /* Helper */].shareFactory(type, args), 'newwindow', this.windowAttr());
-        /** Emit clicked button */
-        if (this.window) {
-            var pollTimer_1 = this.window.setInterval(function () {
-                if (popUp.closed) {
-                    _this.window.clearInterval(pollTimer_1);
-                    popUpClosed.emit(type);
-                }
-            }, 200);
-        }
-    };
-    /** Share Counts */
-    ShareButtonsService.prototype.count = function (type, url, count) {
-        switch (type) {
-            case __WEBPACK_IMPORTED_MODULE_6__helpers_index__["b" /* ShareProvider */].FACEBOOK:
-                this.fbCount(url, count);
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__helpers_index__["b" /* ShareProvider */].LINKEDIN:
-                this.linkedInCount(url, count);
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__helpers_index__["b" /* ShareProvider */].REDDIT:
-                this.redditCount(url, count);
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__helpers_index__["b" /* ShareProvider */].TUMBLR:
-                this.tumblrCount(url, count);
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__helpers_index__["b" /* ShareProvider */].GOOGLEPLUS:
-                this.gPlusCount(url, count);
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__helpers_index__["b" /* ShareProvider */].PINTEREST:
-                this.pinCount(url, count);
-                break;
-            default:
-        }
-    };
-    ShareButtonsService.prototype.fbCount = function (url, count) {
-        this.fetch("https://graph.facebook.com/?id=" + url)
-            .subscribe(function (data) {
-            data = data.json();
-            if (data.hasOwnProperty('share') && data.share.hasOwnProperty('share_count')) {
-                count.emit(data.share.share_count);
-                return;
-            }
-            count.emit(0);
-        });
-    };
-    ShareButtonsService.prototype.linkedInCount = function (url, count) {
-        this.fetchJsonp("https://www.linkedin.com/countserv/count/share?url=" + url)
-            .subscribe(function (data) {
-            data = data.json();
-            count.emit(data.count || 0);
-        });
-    };
-    ShareButtonsService.prototype.redditCount = function (url, count) {
-        this.fetch("https://buttons.reddit.com/button_info.json?url=" + url)
-            .subscribe(function (data) {
-            data = data.json();
-            if (data.hasOwnProperty('data') && data.data.hasOwnProperty('children')) {
-                if (data.data.children.length) {
-                    count.emit(data.data.children[0].data.score);
-                    return;
-                }
-            }
-            count.emit(0);
-        });
-    };
-    ShareButtonsService.prototype.gPlusCount = function (url, count) {
-        var body = __WEBPACK_IMPORTED_MODULE_6__helpers_index__["c" /* Helper */].gplusCountBody(url);
-        this.post('https://clients6.google.com/rpc?key=AIzaSyCKSbrvQasunBoV16zDH9R33D88CeLr9gQ', body)
-            .subscribe(function (data) {
-            data = data.json();
-            if (data[0] && data[0].hasOwnProperty('result')) {
-                count.emit(data[0].result.metadata.globalCounts.count);
-                return;
-            }
-            count.emit(0);
-        });
-    };
-    ShareButtonsService.prototype.pinCount = function (url, count) {
-        this.fetch("https://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=" + url)
-            .subscribe(function (data) {
-            data = data.text();
-            var result = JSON.parse(data.replace(/^receiveCount\((.*)\)/, '$1'));
-            count.emit(result.count || 0);
-        });
-    };
-    ShareButtonsService.prototype.tumblrCount = function (url, count) {
-        this.fetchJsonp("https://api.tumblr.com/v2/share/stats?url=" + url)
-            .subscribe(function (data) {
-            data = data.json();
-            if (data.hasOwnProperty('response') && data.response.hasOwnProperty('note_count')) {
-                count.emit(data.response.note_count);
-                return;
-            }
-            count.emit(0);
-        });
-    };
-    ShareButtonsService.prototype.post = function (url, body) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Headers */]({ 'Content-Type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* RequestOptions */]({ headers: headers });
-        return this.http.post(url, body, options)
-            .catch(function (err) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].empty(); });
-    };
-    ShareButtonsService.prototype.fetch = function (url) {
-        return this.http.get(url)
-            .catch(function (err) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].empty(); });
-    };
-    ShareButtonsService.prototype.fetchJsonp = function (url) {
-        return this.jsonp.request(url + "&format=jsonp&callback=JSONP_CALLBACK")
-            .catch(function (err) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].empty(); });
-    };
-    ShareButtonsService.prototype.windowAttr = function () {
-        return 'width=' + this.windowWidth + ', height=' + this.windowHeight;
-    };
-    return ShareButtonsService;
-}());
-
-ShareButtonsService.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
-];
-/** @nocollapse */
-ShareButtonsService.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_5__window_service__["a" /* WindowService */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_http__["f" /* Jsonp */], },
-]; };
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-buttons.service.js.map
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("../../../../webpack/buildin/global.js")))
 
@@ -2985,7 +2239,6 @@ ShareButtonsService.ctorParameters = function () { return [
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WindowService; });
-<<<<<<< HEAD
 
 var WindowService = (function () {
     function WindowService() {
@@ -3009,31 +2262,6 @@ function _window() {
     // return the global native browser window object
     return typeof window !== 'undefined' ? window : undefined;
 }
-=======
-
-var WindowService = (function () {
-    function WindowService() {
-    }
-    Object.defineProperty(WindowService.prototype, "nativeWindow", {
-        get: function () {
-            return _window();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return WindowService;
-}());
-
-WindowService.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
-];
-/** @nocollapse */
-WindowService.ctorParameters = function () { return []; };
-function _window() {
-    // return the global native browser window object
-    return typeof window !== 'undefined' ? window : undefined;
-}
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=window.service.js.map
 
 /***/ }),
@@ -3061,7 +2289,6 @@ function _window() {
 /* unused harmony reexport ShareArgs */
 /* unused harmony reexport ShareProvider */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareButtonsModule; });
-<<<<<<< HEAD
 
 
 
@@ -3110,56 +2337,6 @@ ShareButtonsModule.decorators = [
 /** @nocollapse */
 ShareButtonsModule.ctorParameters = function () { return []; };
 
-=======
-
-
-
-
-
-
-
-
-
-
-var ShareButtonsModule = (function () {
-    function ShareButtonsModule() {
-    }
-    ShareButtonsModule.forRoot = function () {
-        return {
-            ngModule: ShareButtonsModule,
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_6__services_share_buttons_service__["a" /* ShareButtonsService */],
-                __WEBPACK_IMPORTED_MODULE_7__services_window_service__["a" /* WindowService */]
-            ]
-        };
-    };
-    return ShareButtonsModule;
-}());
-
-ShareButtonsModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
-                declarations: [
-                    __WEBPACK_IMPORTED_MODULE_3__components_share_buttons_share_buttons_component__["a" /* ShareButtonsComponent */],
-                    __WEBPACK_IMPORTED_MODULE_4__components_share_button_share_button_component__["a" /* ShareButtonComponent */],
-                    __WEBPACK_IMPORTED_MODULE_5__directives_share_button_share_button_directive__["a" /* ShareButtonDirective */],
-                    __WEBPACK_IMPORTED_MODULE_8__helpers_n_formatter_pipe__["a" /* NFormatterPipe */]
-                ],
-                imports: [
-                    __WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* CommonModule */],
-                    __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* JsonpModule */]
-                ],
-                exports: [
-                    __WEBPACK_IMPORTED_MODULE_3__components_share_buttons_share_buttons_component__["a" /* ShareButtonsComponent */],
-                    __WEBPACK_IMPORTED_MODULE_4__components_share_button_share_button_component__["a" /* ShareButtonComponent */],
-                    __WEBPACK_IMPORTED_MODULE_5__directives_share_button_share_button_directive__["a" /* ShareButtonDirective */],
-                    __WEBPACK_IMPORTED_MODULE_8__helpers_n_formatter_pipe__["a" /* NFormatterPipe */]
-                ]
-            },] },
-];
-/** @nocollapse */
-ShareButtonsModule.ctorParameters = function () { return []; };
-
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 //# sourceMappingURL=share-buttons.module.js.map
 
 /***/ })

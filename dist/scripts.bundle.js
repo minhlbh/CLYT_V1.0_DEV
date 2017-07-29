@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 webpackJsonp([6],{
-=======
-webpackJsonp([7],{
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ "../../../../raw-loader/index.js!../../../../bootstrap/dist/js/bootstrap.min.js":
 /***/ (function(module, exports) {
@@ -18,7 +14,6 @@ module.exports = "/*! jQuery v3.2.1 | (c) JS Foundation and other contributors |
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../../../../raw-loader/index.js!../../../../source-map-loader/index.js!../../../../../src/assets/js/home.js":
 /***/ (function(module, exports) {
 
@@ -61,22 +56,6 @@ __webpack_require__("../../../../script-loader/addScript.js")(__webpack_require_
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("../../../../script-loader/addScript.js")(__webpack_require__("../../../../raw-loader/index.js!../../../../source-map-loader/index.js!../../../../../src/assets/js/packery.pkgd.min.js"))
-=======
-/***/ "../../../../script-loader/addScript.js":
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-module.exports = function(src) {
-	if (typeof execScript !== "undefined")
-		execScript(src);
-	else
-		eval.call(null, src);
-}
-
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 /***/ }),
 
@@ -98,13 +77,9 @@ __webpack_require__("../../../../script-loader/addScript.js")(__webpack_require_
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("../../../../script-loader/index.js!../../../../jquery/dist/jquery.min.js");
-<<<<<<< HEAD
 __webpack_require__("../../../../script-loader/index.js!../../../../bootstrap/dist/js/bootstrap.min.js");
 __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/js/packery.pkgd.min.js");
 module.exports = __webpack_require__("../../../../script-loader/index.js!../../../../../src/assets/js/home.js");
-=======
-module.exports = __webpack_require__("../../../../script-loader/index.js!../../../../bootstrap/dist/js/bootstrap.min.js");
->>>>>>> ba8464fc3b6fd715bc6678c2aea74f0cb6b9dd2a
 
 
 /***/ })
