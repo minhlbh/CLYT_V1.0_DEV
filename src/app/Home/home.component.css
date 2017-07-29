@@ -29,12 +29,7 @@
     padding-top: 10px;
 }
 
-.header {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 
 .brand {
     float: left;
@@ -171,10 +166,64 @@
     border: none;
     height: 35px;
     line-height: 35px;
+    width: 100%;
 }
 
 .area-controls {
     float: right;
     margin-top: 45px;
     margin-right: 50px;
+}
+
+.area-controls .user {
+    float: left;
+    margin-right: 2px;
+}
+
+.area-controls .user .name-user {
+    background: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 4px;
+    color: #323232;
+}
+
+.area-controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
+
+.area-controls .user a:hover, .area-controls .user a:focus {
+    text-decoration: none;
+}
+
+.controls {
+    width: 100%;
+    float: left;
+}
+
+.controls .view-all {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0f9cb3;
+}
+
+.controls .view-all span {
+    margin: 2px 5px;
+    float: left;
+}
+
+.controls .view-all i {
+    margin: 0 5px 0 0;
+    font-size: 25px;
+    float: left;
 }
