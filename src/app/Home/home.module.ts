@@ -2,11 +2,9 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MasonryModule } from 'angular2-masonry';
-
-
 
 import { HomeComponent } from './home.component';
+import { SettingService } from '../Share/Services/setting.service';
 
 // Định nghĩa router riêng cho module này
 const routing: Routes = [
@@ -21,9 +19,13 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     imports: [
         CommonModule,
         Routing,
-        FlexLayoutModule,
-        MasonryModule
+        FlexLayoutModule
     ],
-    declarations: [HomeComponent]
+    providers: [
+        SettingService
+    ],
+    declarations: [
+        HomeComponent
+    ]
 })
 export class HomeModule { }
