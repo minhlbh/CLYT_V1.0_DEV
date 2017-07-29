@@ -38,14 +38,12 @@
 .body {
     display: flex;
     flex-direction: row;
-    transition:all 0.5s ease-in-out;
 }
 
 .grid {
     /* height: 100%; */
     /* width: 435px; */
     min-width: 435px;
-    transition:all 0.4s ease-in-out;
 }
 
 .grid-item {
@@ -62,7 +60,6 @@
 
 .grid-item-w3 {
     width: 435px;
-    transition:all 0.5s ease-in-out;
 }
 
 .child {
