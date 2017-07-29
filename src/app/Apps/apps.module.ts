@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { ResponsiveModule } from 'ng2-responsive';
+
 
 // components
 import { LayoutComponent } from './Layout/Layout.component';
@@ -27,6 +29,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 @NgModule({
     imports: [
         CommonModule,
+        ResponsiveModule,
         Routing,
         FormsModule,
         FlexLayoutModule
