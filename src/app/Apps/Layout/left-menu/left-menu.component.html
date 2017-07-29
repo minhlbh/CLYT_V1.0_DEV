@@ -1,8 +1,8 @@
-<div class="fxs-sidebar" [ngClass]="{'toggled': isToggled}">
-    <div class="col-left-fixed"  style="background: '{{menuElements.MauNhat}}'">
+<div class="fxs-sidebar" *showItDevice="['desktop','tablet']" [ngClass]="{'toggled': isToggled}">
+    <div  class="col-left-fixed" style="background: '{{menuElements.MauNhat}}'">
         <ul class="bt-collapsed">
             <li>
-                <a id="menu-toggle" (click)="isToggled = !isToggled">
+                <a id="menu-toggle" (click)="toggledLeft()">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </a>
             </li>
@@ -18,4 +18,29 @@
             </ul>
         </div>
     </div>
+</div>
+<!-- left-menu for mobile -->
+<!-- left-menu for mobile -->
+<!-- left-menu for mobile -->
+<div class="fxs-sidebar mobile" *showItDevice="['mobile','tablet']" [ngClass]="{'toggled': isToggled}">
+    <div  class="col-left-fixed" style="background: '{{menuElements.MauNhat}}'">
+        <ul class="bt-collapsed">
+            <li>
+                <a id="menu-toggle" (click)="toggledLeft()">
+                              <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                        </a>
+            </li>
+        </ul>
+        <div class="list-services">
+            <ul *ngFor="let element of menuElements">
+                <li *ngFor="let item of element?.items">
+                    <a href="{{item?.url}}" style="cursor: pointer">
+                              <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
+                              <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>

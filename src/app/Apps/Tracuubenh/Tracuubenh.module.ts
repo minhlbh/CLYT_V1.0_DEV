@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { Routes, RouterModule } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { ResponsiveModule } from 'ng2-responsive';
 
 
 // components
@@ -36,6 +37,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         InfiniteScrollModule,
         FormsModule,
         ReactiveFormsModule,
+        ResponsiveModule,
         HttpModule,
         ShareButtonsModule.forRoot(),
         Routing

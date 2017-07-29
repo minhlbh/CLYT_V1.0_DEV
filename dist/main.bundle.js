@@ -16,7 +16,8 @@ var map = {
 	],
 	"./Tracuubenh/Tracuubenh.module": [
 		"../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts",
-		1
+		1,
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -77,7 +78,7 @@ var SettingService = (function () {
     }
     SettingService.prototype.getFirstConfig = function () {
         // ...using get request
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "menu?tenmien=" + document.location.hostname)
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "Center/Home_Detail&tenmien=" + document.location.hostname)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };

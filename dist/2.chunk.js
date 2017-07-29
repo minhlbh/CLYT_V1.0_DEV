@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Layout/Layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div  class=\"fxs-portal\" fxLayoutAlign=\"start stretch\" fxLayout=\"column\">\r\n\r\n    <app-Nav></app-Nav>\r\n\r\n\r\n    <div fxLayout=\"row\" fxLayoutAlign=\"start stretch\" class=\"fxs-portal-main\">\r\n\r\n        <div >\r\n            <app-left-menu ></app-left-menu>\r\n        </div>\r\n        <main class=\"fxs-panorama\">\r\n            <router-outlet></router-outlet>\r\n        </main>\r\n    </div>\r\n</div>"
+module.exports = "<div  class=\"fxs-portal\" fxLayoutAlign=\"start stretch\" fxLayout=\"column\">\r\n\r\n    <app-Nav></app-Nav>\r\n\r\n\r\n    <div fxLayout=\"row\" fxLayoutAlign=\"start stretch\" class=\"fxs-portal-main\">\r\n\r\n        <div >\r\n            <app-left-menu></app-left-menu>\r\n        </div>\r\n        <main class=\"fxs-panorama\">\r\n            <router-outlet></router-outlet>\r\n        </main>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -69,7 +69,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\n.col-left-fixed {\r\n    width: 230px;\r\n    height: 100%;\r\n    position: fixed;\r\n    left: 0;\r\n    top: 40px;\r\n    background: #0f9cb3;\r\n    font-size: 13px;\r\n    border-top: rgba(255,255,255,.3) 1px solid;\r\n    border-right: rgba(255,255,255,.3) 1px solid;\r\n    z-index: 10;\r\n    padding: 43px 0 50px 0;\r\n}\r\n\r\n.col-left-fixed ul:first-child {\r\n    border-bottom: rgba(255,255,255,.3) 1px solid;\r\n    float: left;\r\n    width: 100%;\r\n}\r\n\r\n\r\n.col-left-fixed ul {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.col-left-fixed ul li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n}\r\n\r\n.col-left-fixed ul li a {\r\n    color: #fff;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    padding: 12px 10px 12px 50px;\r\n    min-height: 42px;\r\n}\r\n\r\n.col-left-fixed ul li a:hover, .col-left-fixed ul li a:focus, .col-left-fixed ul li.active a {\r\n  text-decoration: none;\r\n  background: #11a8c1;\r\n}\r\n\r\n.col-left-fixed ul li a .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 11px;\r\n    left: 13px;\r\n}\r\n\r\n.col-left-fixed .glyphicon {\r\n  position: absolute;\r\n  top: 13px;\r\n  left: 18px;\r\n  font-size: 16px;\r\n}\r\n\r\n.list-services {\r\n    height: 100%;\r\n    overflow: auto;\r\n    float: left;\r\n}\r\n\r\n.fxs-sidebar.toggled .list-services::-webkit-scrollbar { \r\n    display: none; \r\n}\r\n\r\n.col-left-fixed .list-services ul {\r\n    border-bottom:none;\r\n}\r\n\r\n.list-services .title.big {\r\n    text-transform: uppercase;\r\n}\r\n\r\n/* toggled */\r\n/* toggled */\r\n/* toggled */\r\n/* .col-left-fixed.toggled ul li a .title {\r\n  display: none;\r\n}\r\n\r\n.col-left-fixed.toggled ul li a {\r\npadding: 12px 10px 12px 40px;\r\n}\r\n\r\n.col-left-fixed.toggled {\r\n  width: 50px;\r\n  left: 0;\r\n} */\r\n\r\n.main.toggled {\r\n  padding-left: 50px;\r\n}\r\n.col-left-fixed  ul li a span.title {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    float: left;\r\n    width: 170px;\r\n    white-space: nowrap;\r\n}\r\n\r\n.bt-collapsed {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n.fxs-sidebar.toggled .col-left-fixed {\r\n    width: 50px;\r\n}\r\n\r\n.fxs-sidebar.toggled .col-left-fixed  ul li a span.title {\r\n    display: none;\r\n}\r\n\r\n.fxs-sidebar.toggled .col-left-fixed ul li a {\r\n  padding: 12px 10px 12px 39px;\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n.col-left-fixed {\r\n    width: 230px;\r\n    height: 100%;\r\n    position: fixed;\r\n    left: 0;\r\n    top: 40px;\r\n    background: #0f9cb3;\r\n    font-size: 13px;\r\n    border-top: rgba(255,255,255,.3) 1px solid;\r\n    border-right: rgba(255,255,255,.3) 1px solid;\r\n    z-index: 10;\r\n    padding: 43px 0 50px 0;\r\n}\r\n\r\n\r\n.col-left-fixed ul:first-child {\r\n    border-bottom: rgba(255,255,255,.3) 1px solid;\r\n    float: left;\r\n    width: 100%;\r\n}\r\n\r\n\r\n.col-left-fixed ul {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.col-left-fixed ul li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n}\r\n\r\n.col-left-fixed ul li a {\r\n    color: #fff;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    padding: 12px 10px 12px 50px;\r\n    min-height: 42px;\r\n}\r\n\r\n.col-left-fixed ul li a:hover, .col-left-fixed ul li a:focus, .col-left-fixed ul li.active a {\r\n  text-decoration: none;\r\n  background: #11a8c1;\r\n}\r\n\r\n.col-left-fixed ul li a .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 11px;\r\n    left: 13px;\r\n}\r\n\r\n.col-left-fixed .glyphicon {\r\n  position: absolute;\r\n  top: 13px;\r\n  left: 18px;\r\n  font-size: 16px;\r\n}\r\n\r\n.list-services {\r\n    height: 100%;\r\n    overflow: auto;\r\n    float: left;\r\n}\r\n\r\n.fxs-sidebar.toggled .list-services::-webkit-scrollbar {\r\n    display: none;\r\n}\r\n\r\n.col-left-fixed .list-services ul {\r\n    border-bottom:none;\r\n}\r\n\r\n.list-services .title.big {\r\n    text-transform: uppercase;\r\n}\r\n\r\n/* toggled */\r\n/* toggled */\r\n/* toggled */\r\n\r\n\r\n.col-left-fixed  ul li a span.title {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    float: left;\r\n    width: 170px;\r\n    white-space: nowrap;\r\n}\r\n\r\n.bt-collapsed {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n.fxs-sidebar.toggled .col-left-fixed {\r\n    width: 50px;\r\n}\r\n\r\n.fxs-sidebar.toggled .col-left-fixed  ul li a span.title {\r\n    display: none;\r\n}\r\n\r\n.fxs-sidebar.toggled .col-left-fixed ul li a {\r\n  padding: 12px 10px 12px 39px;\r\n}\r\n\r\n.fxs-sidebar.toggled .list-services::-webkit-scrollbar {\r\n    display: none;\r\n}\r\n\r\n\r\n\r\n\r\n/* left-menu for mobile */\r\n/* left-menu for mobile */\r\n/* left-menu for mobile */\r\n\r\n\r\n.fxs-sidebar.mobile {\r\n    width: 50px;\r\n}\r\n\r\n.fxs-sidebar.mobile .col-left-fixed {\r\n    width: 50px;\r\n}\r\n\r\n.fxs-sidebar.mobile .col-left-fixed ul li a span.title {\r\n    display: none;\r\n}\r\n\r\n/* .fxs-sidebar.mobile.toggled {\r\n    width: 230px;\r\n} */\r\n\r\n.fxs-sidebar.mobile.toggled .col-left-fixed {\r\n    width: 231px;\r\n}\r\n\r\n.fxs-sidebar.mobile.toggled .col-left-fixed ul li a span.title {\r\n    display: block;\r\n}\r\n\r\n.fxs-sidebar.mobile .col-left-fixed ul li a span.title {\r\n    padding: 0 0 0 5px;\r\n}\r\n\r\n.fxs-sidebar.mobile.toggled .col-left-fixed ul li a, .fxs-sidebar.mobile .col-left-fixed ul li a {\r\n    padding: 12px 10px 12px 39px;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -82,7 +82,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Layout/left-menu/left-menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fxs-sidebar\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <div class=\"col-left-fixed\"  style=\"background: '{{menuElements.MauNhat}}'\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"isToggled = !isToggled\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"fa fa-fw {{item.IconText}} icon\" aria-hidden=\"true\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"fxs-sidebar\" *showItDevice=\"['desktop','tablet']\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <div  class=\"col-left-fixed\" style=\"background: '{{menuElements.MauNhat}}'\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"fa fa-fw {{item.IconText}} icon\" aria-hidden=\"true\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- left-menu for mobile -->\r\n<!-- left-menu for mobile -->\r\n<!-- left-menu for mobile -->\r\n<div class=\"fxs-sidebar mobile\" *showItDevice=\"['mobile','tablet']\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <div  class=\"col-left-fixed\" style=\"background: '{{menuElements.MauNhat}}'\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"fa fa-fw {{item.IconText}} icon\" aria-hidden=\"true\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -108,10 +108,14 @@ var LeftMenuComponent = (function () {
     function LeftMenuComponent(settingService) {
         this.settingService = settingService;
         this.isToggled = false;
-        console.log(this.isToggled);
     }
     LeftMenuComponent.prototype.ngOnInit = function () {
         this.menuElements = this.settingService.getMenu();
+    };
+    LeftMenuComponent.prototype.toggledLeft = function () {
+        this.isToggled = !this.isToggled;
+        // this.toggled.emit(this.isToggled);
+        console.log(this.isToggled);
     };
     return LeftMenuComponent;
 }());
@@ -210,10 +214,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__ = __webpack_require__("../../../flex-layout/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Layout_Layout_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/Layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Layout_nav_nav_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/nav/nav.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Layout_left_menu_left_menu_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/left-menu/left-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_responsive__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/Layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/nav/nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/left-menu/left-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppsModule", function() { return AppsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -227,12 +233,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// components
 
 
+
+// service
 
 var routing = [
     {
-        path: '', component: __WEBPACK_IMPORTED_MODULE_5__Layout_Layout_component__["a" /* LayoutComponent */],
+        path: '', component: __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' }
         ]
@@ -248,17 +257,18 @@ AppsModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__["ResponsiveModule"],
             Routing,
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__Layout_Layout_component__["a" /* LayoutComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__Layout_nav_nav_component__["a" /* NavComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__Layout_left_menu_left_menu_component__["a" /* LeftMenuComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__["a" /* NavComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__["a" /* LeftMenuComponent */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_8__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_9__Share_Services_setting_service__["a" /* SettingService */]
         ]
     })
 ], AppsModule);

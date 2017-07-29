@@ -16,28 +16,33 @@
 
 .block {
     flex: 0 0 auto;
-    height: 580px;
+    /* height: 580px;
     overflow-y: hidden;
-    min-width: 435px;
-    margin: 10px;
+    min-width: 435px; 
+    margin: 10px; */
     transition:all 0.5s ease-in-out;
+
+    width: 290px;
+    margin-left: 80px;
+    float: left;
+    position: relative;
+    padding-top: 10px;
 }
 
-.header {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 
 .brand {
-    display: flex;
-    flex-direction: row;
+    float: left;
+    margin-top: 30px;
+    margin-left: 80px;
 }
 
 .body {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .grid {
@@ -65,6 +70,160 @@
 .child {
     padding: 5px;
     background-color: gold;
-    width: 100%;
+    min-width: 100%;
+    min-height: 135px;
+    position: relative;
+    float: left;
+}
+
+.screen {
+    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
+    min-width: 100%;
     height: 100%;
+    min-height: 100%;
+    position: absolute;
+    padding-top: 100px;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.brand-logo {
+    float: left;
+}
+
+.brand-title {
+    float: left;
+    margin: 15px 0 15px 5px;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.content {
+    width: 1945px;
+    overflow: auto;
+    float: left;
+    padding-right: 45px;
+    z-index: 1000;
+    position: relative;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    float: left;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 10px 60px 10px 5px;
+}
+
+.tile-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 13px 10px 10px 10px;
+    z-index: 9999;
+    color: #fff;
+    background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
+}
+
+.search-top {
+    padding: 45px 5px 45px 80px;
+    width: 300px;
+    float: right;
+}
+
+.input-control {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    line-height: 34px;
+    height: 35px;
+}
+
+.input-control .icon-search {
+    top: 11px;
+    left: 10px;
+    position: absolute; 
+    color: #777;
+}
+
+.input-control input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+}
+
+.area-controls {
+    float: right;
+    margin-top: 45px;
+    margin-right: 50px;
+}
+
+.area-controls .user {
+    float: left;
+    margin-right: 2px;
+}
+
+.area-controls .user .name-user {
+    background: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 4px;
+    color: #323232;
+}
+
+.area-controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
+
+.area-controls .user a:hover, .area-controls .user a:focus {
+    text-decoration: none;
+}
+
+.controls {
+    width: 100%;
+    float: left;
+}
+
+.controls .view-all {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0f9cb3;
+}
+
+.controls .view-all span {
+    margin: 2px 5px;
+    float: left;
+}
+
+.controls .view-all i {
+    margin: 0 5px 0 0;
+    font-size: 25px;
+    float: left;
 }

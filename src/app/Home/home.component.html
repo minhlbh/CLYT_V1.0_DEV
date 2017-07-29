@@ -8,8 +8,27 @@
             <div class="brand-title">Trưởng Khoa</div>
 
         </div>
-        <div class="controls">
-            <button class="btn btn-default" (click)="showMore()">Button Home</button>
+        <!-- searchbox, đăng kí, đăng nhập -->
+        <div class="area-controls">
+            <div class="user">
+                <span *ngIf="this.auth" class="name-user">{{this.auth.HoVaTen}}</span>
+                <span *ngIf="this.auth" class="avt fa fa-fw fa-user" style="cursor: pointer;"></span>
+                <a *ngIf="!this.auth" routerLink='/login' class="name-user bt-sign-up">
+          <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
+          Đăng nhập
+        </a>
+                <a *ngIf="!this.auth" routerLink='/register' class="sign-up-now bt-sign-up">
+          <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
+          Đăng ký ngay
+        </a>
+            </div>
+            <button (click)="logOut()" *ngIf="this.auth" class="settings fa fa-fw fa-power-off" style="cursor: pointer;"></button>
+        </div>
+        <div class="search-top">
+            <div class="input-control text full-size" data-role="input">
+                <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Tìm kiếm dịch vụ...">
+            </div>
         </div>
     </div>
     <div class="content scroll">
@@ -18,7 +37,7 @@
                 <div class="title">{{blocks.Ten}}</div>
                 <div class="body">
                     <div class="grid">
-                         <ng-container *ngFor="let item of blocks.items">
+                        <ng-container *ngFor="let item of blocks.items">
                             <div class="grid-item" [ngClass]="
                                 {'grid-item-w2': item.chieuRong==2,
                                 'grid-item-w3': item.chieuRong==3,
@@ -26,19 +45,42 @@
                                 'grid-item-h2': item.chieuCao==2
                                 }
                                 ">
+                                <!-- 1 ảnh 1 icon ảnh -->
+                                <div *ngIf="item?.style=='1 ảnh Icon ảnh'">
+                                    <div class="child" [ngStyle]="{'background-image': 'url('+ item.Images[0] +')'}">
+                                        {{item.ChieuRong}}
+                                        <h4 class="tile-label">
+                                            <span class="fa fa-fw {{item.IconText}}" aria-hidden="true"></span> {{item?.Ten}}
+                                        </h4>
+                                    </div>
+                                </div>
 
-                                <div class="child">{{item.ChieuRong}}</div>
-
+                                <!-- 1 ảnh icon text -->
+                                <div *ngIf="item?.style=='1 ảnh Icon text'">
+                                    <div class="child">
+                                        {{item.ChieuRong}}
+                                        <div class="tile-content iconic">
+                                            <a routerLink={{item.url}}><span class="fa fa-fw {{item.IconText}} icon"></span></a>
+                                        </div>
+                                        <h4 class="tile-label">
+                                            <span class="fa fa-fw {{item.IconText}}" aria-hidden="true"></span> {{item?.Ten}}
+                                        </h4>
+                                    </div>
+                                </div>
                             </div>
                         </ng-container>
+
                     </div>
                 </div>
+                <div class="controls">
+                    <a href="#" class="view-all" (click)="showMore()">
+                      <span>Xem tất cả</span>
+                      <i class="fa fa-fw fa-arrow-circle-o-right"></i>
+                    </a>
+                </div>
             </div>
+
         </ng-container>
 
-
-
-
     </div>
-
 </div>
