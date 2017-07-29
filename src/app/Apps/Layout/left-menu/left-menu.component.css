@@ -113,3 +113,44 @@
 .fxs-sidebar.toggled .list-services::-webkit-scrollbar { 
     display: none; 
 }
+
+
+
+
+/* left-menu for mobile */
+/* left-menu for mobile */
+/* left-menu for mobile */
+
+
+.fxs-sidebar.mobile {
+    width: 50px;
+}
+
+.fxs-sidebar.mobile .col-left-fixed {
+    width: 50px;
+}
+
+.fxs-sidebar.mobile .col-left-fixed ul li a span.title {
+    display: none;
+}
+
+.fxs-sidebar.mobile.toggled {
+    width: 230px;
+}
+
+.fxs-sidebar.mobile.toggled .col-left-fixed {
+    width: 230px;
+}
+
+.fxs-sidebar.mobile.toggled .col-left-fixed ul li a span.title {
+    display: block;
+}
+
+.fxs-sidebar.mobile .col-left-fixed ul li a span.title {
+    padding: 0 0 0 5px;
+}
+
+.fxs-sidebar.mobile.toggled .col-left-fixed ul li a, .fxs-sidebar.mobile .col-left-fixed ul li a {
+    padding: 12px 10px 12px 39px;
+}
+

@@ -22,8 +22,8 @@
 <!-- left-menu for mobile -->
 <!-- left-menu for mobile -->
 <!-- left-menu for mobile -->
-<div *showItDevice="['mobile','tablet']" class="fxs-sidebar" [ngClass]="{'toggled': isToggled}">
-    <div class="col-left-fixed" style="background: '{{menuElements.MauNhat}}'">
+<div class="fxs-sidebar mobile" *showItDevice="['mobile','tablet']" [ngClass]="{'toggled': isToggled}">
+    <div  class="col-left-fixed" style="background: '{{menuElements.MauNhat}}'">
         <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="toggledLeft()">
@@ -43,4 +43,8 @@
         </div>
     </div>
 
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 87fbce4b45f41d4ac074b4537aebf928f82d08b7
