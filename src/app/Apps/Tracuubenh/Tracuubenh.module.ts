@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { Routes, RouterModule } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { ResponsiveModule } from 'ng2-responsive';
 
 
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
 import { DanhSachBenhComponent } from './danh-sach-benh/danh-sach-benh.component';
+import { DsbenhMobileComponent } from './danh-sach-benh/dsbenh-mobile/dsbenh-mobile.component';
 import { ChiTietBenhComponent } from './chi-tiet-benh/chi-tiet-benh.component';
 import { ForumBarComponent } from './forum-bar/forum-bar.component';
 import { WindowComponent } from '../../Share/Components/window/window.component';
@@ -36,6 +38,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         InfiniteScrollModule,
         FormsModule,
         ReactiveFormsModule,
+        ResponsiveModule,
         HttpModule,
         ShareButtonsModule.forRoot(),
         Routing

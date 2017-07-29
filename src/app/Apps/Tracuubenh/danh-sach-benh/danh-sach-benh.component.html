@@ -1,5 +1,7 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name">
+
+<p *showItDevice="['mobile','tablet']">I'll show you if I'm a tablet or a mobile device.</p>
+<app-window [icon]="iconText" [name]="name" >
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
