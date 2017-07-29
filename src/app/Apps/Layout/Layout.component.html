@@ -6,9 +6,9 @@
     <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
 
         <div >
-            <app-left-menu (toggled) = "toggled($event)" ></app-left-menu>
+            <app-left-menu></app-left-menu>
         </div>
-        <main *ngIf= "!isToggled" class="fxs-panorama">
+        <main class="fxs-panorama">
             <router-outlet></router-outlet>
         </main>
     </div>

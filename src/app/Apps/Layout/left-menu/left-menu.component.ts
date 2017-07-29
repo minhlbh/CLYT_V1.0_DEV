@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.Default
 })
 export class LeftMenuComponent implements OnInit {
-    @Output() toggled = new EventEmitter<boolean>();
+    // @Output() toggled = new EventEmitter<boolean>();
 
     menuElements: any;
     isToggled = false;
@@ -24,7 +24,7 @@ export class LeftMenuComponent implements OnInit {
 
     toggledLeft() {
         this.isToggled = !this.isToggled;
-        this.toggled.emit(this.isToggled);
+        // this.toggled.emit(this.isToggled);
         console.log(this.isToggled);
     }
 }
