@@ -65,6 +65,10 @@
     float: left;
 }
 
+.fxs-sidebar.toggled .list-services::-webkit-scrollbar { 
+    display: none; 
+}
+
 .col-left-fixed .list-services ul {
     border-bottom:none;
 }
@@ -116,5 +120,5 @@ padding: 12px 10px 12px 40px;
 }
 
 .fxs-sidebar.toggled .col-left-fixed ul li a {
-  padding: 12px 10px 12px 40px;
+  padding: 12px 10px 12px 39px;
 }
