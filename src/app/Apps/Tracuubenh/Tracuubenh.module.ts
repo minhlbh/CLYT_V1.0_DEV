@@ -12,7 +12,6 @@ import { ResponsiveModule } from 'ng2-responsive';
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
 import { DanhSachBenhComponent } from './danh-sach-benh/danh-sach-benh.component';
-import { DsbenhMobileComponent } from './danh-sach-benh/dsbenh-mobile/dsbenh-mobile.component';
 import { ChiTietBenhComponent } from './chi-tiet-benh/chi-tiet-benh.component';
 import { ForumBarComponent } from './forum-bar/forum-bar.component';
 import { WindowComponent } from '../../Share/Components/window/window.component';
