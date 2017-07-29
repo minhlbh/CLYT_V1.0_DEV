@@ -1,50 +1,12 @@
 <!-- Start col left 2 -->
 <app-window [icon]="iconText" [name]="name">
     <div class="list-left-wr">
-<<<<<<< HEAD
-=======
-
->>>>>>> 68d8107d25e3e08bae5bf9612451590bfc0622c0
         <!-- searchbox -->
         <div class="search-box-top">
             <div class="input-control text full-size" data-role="input">
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
                 <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
             </div>
-<<<<<<< HEAD
-            <!-- đếm số bệnh -->
-            <div style="padding: 5px 0 0 0;">
-                <span style="font-size: 11px; color: #888; float: right;">
-                    {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
-                </span>
-            </div>
-
-            <hr class="thin bg-grayLighter">
-            <!-- loading gif -->
-            <div class="text-center">
-                <p class="lead" *ngIf="loading">
-                    <img src="assets/66.gif">
-                </p>
-            </div>
-            <!-- list bệnh -->
-            <ul class="scrollbar-custom list" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()"
-                [scrollWindow]="false">
-                <li *ngIf="!loading">
-                    <div class="text-center" *ngIf="empty">
-                        <p>
-                            <a> Không kết quả nào phù hợp</a>
-                        </p>
-                    </div>
-                    <div *ngIf="!empty">
-                        <a *ngFor="let benh of DsBenh" style="cursor: pointer;" (click)="clickBenh(benh.Id)">
-                <span class="title" >{{benh.Name}}</span>
-            </a>
-                    </div>
-                </li>
-            </ul>
-            <!-- end col left 2 -->
-        </div>
-=======
 
 
             <!-- đếm số bệnh -->
@@ -79,6 +41,5 @@
             </li>
         </ul>
         <!-- end col left 2 -->
->>>>>>> 68d8107d25e3e08bae5bf9612451590bfc0622c0
     </div>
 </app-window>

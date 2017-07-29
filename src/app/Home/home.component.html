@@ -18,7 +18,7 @@
                 <div class="title">{{blocks.Ten}}</div>
                 <div class="body">
                     <div class="grid">
-                         <ng-container *ngFor="let item of blocks.items">
+                        <ng-container *ngFor="let item of blocks.items">
                             <div class="grid-item" [ngClass]="
                                 {'grid-item-w2': item.chieuRong==2,
                                 'grid-item-w3': item.chieuRong==3,
@@ -26,9 +26,28 @@
                                 'grid-item-h2': item.chieuCao==2
                                 }
                                 ">
+                                <!-- 1 ảnh 1 icon ảnh -->
+                                <div *ngIf="item?.style=='1 ảnh Icon ảnh'">
+                                    <div class="child" [ngStyle]="{'background-image': 'url('+ item.Images[0] +')'}">
+                                        {{item.ChieuRong}}
+                                        <h4 class="tile-label">
+                                            <span class="fa fa-fw {{item.IconText}}" aria-hidden="true"></span> {{item?.Ten}}
+                                        </h4>
+                                    </div>
+                                </div>
 
-                                <div class="child">{{item.ChieuRong}}</div>
-
+                                <!-- 1 ảnh icon text -->
+                                <div *ngIf="item?.style=='1 ảnh Icon text'">
+                                    <div class="child">
+                                        {{item.ChieuRong}}
+                                        <div class="tile-content iconic">
+                                            <a routerLink={{item.url}}><span class="fa fa-fw {{item.IconText}} icon"></span></a>
+                                        </div>
+                                        <h4 class="tile-label">
+                                            <span class="fa fa-fw {{item.IconText}}" aria-hidden="true"></span> {{item?.Ten}}
+                                        </h4>
+                                    </div>
+                                </div>
                             </div>
                         </ng-container>
                     </div>
