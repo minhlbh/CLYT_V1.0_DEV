@@ -66,8 +66,8 @@
     float: left;
 }
 
-.fxs-sidebar.toggled .list-services::-webkit-scrollbar { 
-    display: none; 
+.fxs-sidebar.toggled .list-services::-webkit-scrollbar {
+    display: none;
 }
 
 .col-left-fixed .list-services ul {
@@ -110,8 +110,8 @@
   padding: 12px 10px 12px 39px;
 }
 
-.fxs-sidebar.toggled .list-services::-webkit-scrollbar { 
-    display: none; 
+.fxs-sidebar.toggled .list-services::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -134,9 +134,9 @@
     display: none;
 }
 
-.fxs-sidebar.mobile.toggled {
+/* .fxs-sidebar.mobile.toggled {
     width: 230px;
-}
+} */
 
 .fxs-sidebar.mobile.toggled .col-left-fixed {
     width: 230px;
