@@ -7,10 +7,10 @@ import { Observable } from 'rxjs/Rx';
 export class BenhService {
 
 constructor(private http: Http) { }
-    private benhUrl = `${environment.apiUrl}/CSDLYT/Benh_List&soluongmoitrang=50`;
+    private benhUrl = `${environment.apiUrl}/CSDLYT/Benh_List`;
     getBenh(page): Observable<any> {
         // ...using get request
-        return this.http.get(`${this.benhUrl}&Trang=${page}`)
+        return this.http.get(`${this.benhUrl}?Trang=${page}&soluongmoitrang=50`)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
             // ...errors if any
