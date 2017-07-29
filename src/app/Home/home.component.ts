@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularMasonry, MasonryOptions } from 'angular2-masonry';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { SettingService } from '../Share/Services/setting.service';
+
+declare var HomeObject: any;
+
 
 @Component({
     selector: 'app-home',
@@ -7,6 +10,7 @@ import { AngularMasonry, MasonryOptions } from 'angular2-masonry';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+<<<<<<< HEAD
     options: MasonryOptions = {
         transitionDuration: '0.3s'
     };
@@ -19,8 +23,33 @@ export class HomeComponent implements OnInit {
         { title: 'Brick 6', col: 1, row: 1 }
     ];
     constructor() { }
+=======
+    menus = [];
+    blockFull = false;
+    constructor(
+        private settingService: SettingService
+    ) {
+
+    }
+>>>>>>> home
 
     ngOnInit() {
+        // HomeObject.init();
+
+        this.menus = this.settingService.getMenu();
+        console.log(this.menus);
+        setTimeout(() => {
+            HomeObject.byWidth();
+        }, 0);
     }
+    showMore() {
+        this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];
+        setTimeout(() => {
+            HomeObject.byHeight('49500');
+        }, 0);
+    }
+    // ngAfterViewInit() {
+    //     HomeObject.init();
+    // }
 
 }
