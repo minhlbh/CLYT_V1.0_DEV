@@ -10,7 +10,7 @@
     border-top: rgba(255,255,255,.3) 1px solid;
     border-right: rgba(255,255,255,.3) 1px solid;
     z-index: 10;
-    padding: 43px 0 50px 0;
+    padding: 0 0 50px 0;
 }
 
 
@@ -124,10 +124,64 @@
 
 .fxs-sidebar.mobile {
     width: 50px;
+    padding-top: 45px;
+    border: none;
 }
+
+.fxs-sidebar  .bt-collapsed {
+    z-index: 10000;
+    height: 44px;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    background: #0f9cb3;
+    list-style-type: none;
+    border-bottom: rgba(255,255,255,.3) 1px solid;
+    color: #fff;
+    display: block;
+    position: relative;
+    top: 0;
+}
+
+ .fxs-sidebar.mobile .bt-collapsed.mb {
+    z-index: 10000;
+    height: 44px;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    background: #0f9cb3;
+    list-style-type: none;
+    border-bottom: rgba(255,255,255,.3) 1px solid;
+    border-right: rgba(255,255,255,.3) 1px solid;
+    color: #fff;
+    display: none;
+    top:-45px;
+} 
+
+.fxs-sidebar.mobile .bt-collapsed .glyphicon {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    font-size: 16px;
+    color: #fff;
+}
+
+ @media only screen and (max-width: 768px) {
+    .fxs-sidebar.mobile .bt-collapsed {
+        display: none;
+    }
+
+    .fxs-sidebar.mobile .bt-collapsed.mb {
+        display: block;
+    }
+} 
+
+
 
 .fxs-sidebar.mobile .col-left-fixed {
     width: 50px;
+    top:83px;
+    padding-top: 0;
 }
 
 .fxs-sidebar.mobile .col-left-fixed ul li a span.title {
