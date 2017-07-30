@@ -18,7 +18,7 @@ constructor(private http: Http) { }
     }
 
     getSearchBenh(key: String) {
-        const searchUrl = `${this.benhUrl}&searchTerm=${key}`;
+        const searchUrl = `${this.benhUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
         return this.http.get(searchUrl)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
