@@ -6,15 +6,50 @@
     flex: 0 0 auto;
     height: 100%;
     overflow-y: hidden;
-    min-width: 435px;
     margin: 10px;
     transition: all 0.5s ease-in-out;
+    margin-left: 80px;
+    width: 435px;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    float: left;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 10px 60px 10px 5px;
+}
+
+.title-item {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.count-apps {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.body {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    height: 445px;
 }
 
 .grid {
     /* height: 100%; */
-    /* width: 435px; */
-    min-width: 435px;
+      /* width: 145px;   */
+      min-width: 435px;  
 }
 
 .grid-item {
@@ -40,9 +75,221 @@
     height: 435px;
 }
 
+
+
 .child {
     padding: 5px;
     background-color: gold;
     width: 100%;
     height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+.title-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 13px 10px 10px 10px;
+    z-index: 9999;
+    color: #fff;
+    background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
+    font-size: 18px;
+}
+
+
+.wrapper {
+    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    padding-top: 100px;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+.logo {
+    float: left;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.logo img {
+    float: left;
+    width: 70px;
+    height: 70px;
+}
+
+.logo span {
+    float: left;
+    margin: 15px 0 15px 5px;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.search-home {
+    padding: 45px 5px 45px 80px;
+    width: 300px;
+    float: right;
+}
+
+.input-control {
+    display: inline-block;
+    min-height: 34px;
+    height: 35px;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+}
+
+.input-control .icon-search {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    color: #777;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-control input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    color: #323232;
+}
+
+.controls {
+    float: right;
+    margin-top: 45px;
+    margin-right: 50px;
+}
+
+.controls .user {
+    float: left;
+    margin-right: 2px;
+}
+
+.controls .user .name-user {
+    background: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 4px;
+    color: #323232;
+}
+
+.controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
+
+.controls .user a {
+    text-decoration: none;
+}
+
+.bottom {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.show-all {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0f9cb3;
+    float: left;
+    cursor: pointer;
+}
+
+.show-all span {
+    margin: 2px 5px;
+    float: left;
+}
+
+.show-all i {
+    margin: 0 5px 0 0;
+    font-size: 25px;
+    float: left;
+}
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+.header {
+    width: 1000px;
+}
+}
+
+
+@media only screen and (max-height: 930px) {
+
+}
+
+
+
+@media only screen and (max-height: 630px) {
+.grid-item {
+    width: 110px;
+    height: 110px;
+}
+
+.grid-item-w2 {
+    width: 220px;
+}
+
+.grid-item-w3 {
+    width: 330px;
+}
+
+.grid-item-h2 {
+    height: 220px;
+}
+
+.grid-item-h3 {
+    height: 330px;
+}
+
+.title-label {
+    font-size: 12px;
+}
+
+.body {
+    height: 335px;
+}
+
+}
+
