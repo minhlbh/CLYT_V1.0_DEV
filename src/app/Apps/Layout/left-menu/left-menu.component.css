@@ -10,7 +10,8 @@
     border-top: rgba(255,255,255,.3) 1px solid;
     border-right: rgba(255,255,255,.3) 1px solid;
     z-index: 10;
-    padding: 0 0 50px 0;
+    padding: 0 0 65px 0;
+    overflow: hidden;
 }
 
 
@@ -52,6 +53,10 @@
     top: 2px;
     left: 13px;
     color: #fff;
+}
+
+.col-left-fixed ul li a .icon img {
+    width: 20px;
 }
 
 .col-left-fixed .glyphicon {
