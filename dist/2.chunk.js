@@ -305,7 +305,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/empty/empty.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>Empty</p>\n"
+module.exports = "<p>Empty</p>\r\n"
 
 /***/ }),
 
