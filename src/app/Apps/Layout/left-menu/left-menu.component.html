@@ -1,5 +1,9 @@
 <div class="fxs-sidebar" *showItDevice="['desktop','tablet']" [ngClass]="{'toggled': isToggled}">
+<<<<<<< HEAD
     <div class="col-left-fixed" [ngStyle]="{'background': menuElements.MauNhat}">
+=======
+    <div class="col-left-fixed" >
+>>>>>>> 962dc9157f29b85a9dd7bdfca723a19919abd32d
         <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="toggledLeft()">
@@ -42,7 +46,11 @@
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
                     <a href="{{item?.url}}" style="cursor: pointer">
+<<<<<<< HEAD
                               <span class="icon"><img src="{{item.IconText}}" aria-hidden="true" style="width: 20px;"></span>
+=======
+                              <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
+>>>>>>> 962dc9157f29b85a9dd7bdfca723a19919abd32d
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
                         </a>
                 </li>

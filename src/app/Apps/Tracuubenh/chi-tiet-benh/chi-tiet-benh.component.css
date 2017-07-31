@@ -45,7 +45,7 @@
 /* nội dung chi tiết bệnh */
 .content-wr {
     position: relative;
-    height: 100%;
+    height: calc(100vh - 85px);
     overflow: hidden;
     width: 1020px;
     float: left;

@@ -68,7 +68,7 @@ body {
 }
 
 .fxs-sidebar {
-    z-index: 200;
+    
     position: relative;
     font-size: 13px;
     border-right-width: 1px;
