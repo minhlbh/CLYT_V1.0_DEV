@@ -15,5 +15,4 @@ export class AppComponent {
             this.settingService.setMenu(data.home);
         });
     }
-
 }
