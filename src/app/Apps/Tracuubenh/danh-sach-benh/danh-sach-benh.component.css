@@ -123,7 +123,7 @@ padding: 12px 10px 12px 40px;
     height: 100%;
     overflow: auto;
     padding: 0;
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
 .list li {
@@ -158,9 +158,9 @@ padding: 12px 10px 12px 40px;
     border-right: 1px solid #ccc;
     position: relative !important;
     display: block;
-    height: 100%;
+    height: calc(100vh - 85px);
     float: left;
-    overflow: hidden;;
+    overflow: hidden;
 }
 
 .list-left-wr.mobile {
