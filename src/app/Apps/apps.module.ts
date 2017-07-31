@@ -17,7 +17,8 @@ const routing: Routes = [
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' }
         ]
-    }
+    },
+    {path: '**', component: LayoutComponent}
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);

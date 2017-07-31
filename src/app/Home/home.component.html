@@ -1,44 +1,68 @@
-<div class="screen">
-    <div class="header">
-        <div class="brand">
+<ng-container *showItDevice="['desktop', 'tablet']">
 
-            <div class="brand-logo">
-                <img class="brand-logo-img" src="assets/images/logo-startscreen.png">
-            </div>
-            <div class="brand-title">Trưởng Khoa</div>
+    <div class="fxs-portal" fxLayoutAlign="start stretch" fxLayout="column">
 
+        <div class="fxs-topbar" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
+            <nav>
+                <img width="50px" [src]="config?.Logo">
+            </nav>
         </div>
-        <div class="controls">
-            <button class="btn btn-default" (click)="showMore()">Button Home</button>
+
+
+        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+            <main class="fxs-panorama">
+                <div class="fxs-blade-content-container">
+                    <ng-container *ngFor="let blocks of menus">
+                        <div class="block" [id]="blocks?.Id">
+                            <div class="title">{{blocks.Ten}}</div>
+                            <div class="body">
+                                <div class="grid">
+                                    <ng-container *ngFor="let item of blocks?.items">
+                                        <div class="grid-item" [ngClass]="
+                                {
+                                    'grid-item-w2': item.chieuRong==2,
+                                    'grid-item-w3': item.chieuRong==3,
+                                    'grid-item-h3': item.chieuCao==3,
+                                    'grid-item-h2': item.chieuCao==2
+                                }">
+
+                                            <div class="child">
+                                                {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                            </div>
+
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </main>
         </div>
     </div>
-    <div class="content scroll">
+</ng-container>
+
+<ng-container *showItDevice="['mobile']">
+    <nav fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" style="height:60px;  position:fixed;top:0;left:0;right:0" fxLayoutAlign="space-between center">
+        <div class="brand" fxLayout="row" fxLayoutAlign="start center" style="padding:0 20px;">
+            <img width="25px" [src]="config?.Logo">
+            <div style="color:white">{{config?.ThuongHieu}}</div>
+        </div>
+        <div>
+            <a href="#" style="color:white; padding:0 20px;">Menu</a>
+        </div>
+    </nav>
+    <div style="padding-top:60px">
         <ng-container *ngFor="let blocks of menus">
-            <div class="block" [id]="blocks.Id">
-                <div class="title">{{blocks.Ten}}</div>
-                <div class="body">
-                    <div class="grid">
-                         <ng-container *ngFor="let item of blocks.items">
-                            <div class="grid-item" [ngClass]="
-                                {'grid-item-w2': item.chieuRong==2,
-                                'grid-item-w3': item.chieuRong==3,
-                                'grid-item-h3': item.chieuCao==3,
-                                'grid-item-h2': item.chieuCao==2
-                                }
-                                ">
-
-                                <div class="child">{{item.ChieuRong}}</div>
-
-                            </div>
-                        </ng-container>
+            <h5 style="padding: 0 10px; background-color:#eee; margin:0; padding:10px">{{blocks?.Ten | uppercase}}</h5>
+            <ng-container *ngFor="let item of blocks?.items">
+                <div class="item" fxLayout="row" fxLayoutAlign="start center" style="padding:5px; margin-left:10px; border-bottom:solid 1px #eee">
+                    <div  style="width:60px; height:60px; border-radius:30px;background-position: center center;background-repeat: no-repeat;background-size: cover; " [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
+                    <div style="padding:0 10px">
+                        {{item?.Ten}}
                     </div>
                 </div>
-            </div>
+            </ng-container>
         </ng-container>
-
-
-
-
     </div>
-
-</div>
+</ng-container>
