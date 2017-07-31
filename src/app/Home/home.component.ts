@@ -23,12 +23,6 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
 
-<<<<<<< HEAD
-        this.menus = this.settingService.getMenu();
-        setTimeout(() => {
-            HomeObject.byWidth();
-        }, 0);
-=======
         this.settingService.getFirstConfig().subscribe(() => {
             this.menus = this.settingService.getMenu();
             this.config = this.settingService.getConfig();
@@ -39,7 +33,6 @@ export class HomeComponent implements OnInit {
             }, 0);
         });
 
->>>>>>> home2
     }
     showMore() {
         this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];

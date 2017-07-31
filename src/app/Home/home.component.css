@@ -4,41 +4,11 @@
 
 .block {
     flex: 0 0 auto;
-<<<<<<< HEAD
-    /* height: 580px;
-    overflow-y: hidden;
-    min-width: 435px; 
-    margin: 10px; */
-    transition:all 0.5s ease-in-out;
-
-    width: 290px;
-    margin-left: 80px;
-    float: left;
-    position: relative;
-    padding-top: 10px;
-}
-
-
-
-.brand {
-    float: left;
-    margin-top: 30px;
-    margin-left: 80px;
-}
-
-.body {
-    width: 100%;
-    display: block;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-=======
     height: 100%;
     overflow-y: hidden;
     min-width: 435px;
     margin: 10px;
     transition: all 0.5s ease-in-out;
->>>>>>> home2
 }
 
 .grid {
@@ -160,7 +130,7 @@
 .input-control .icon-search {
     top: 11px;
     left: 10px;
-    position: absolute; 
+    position: absolute;
     color: #777;
 }
 
