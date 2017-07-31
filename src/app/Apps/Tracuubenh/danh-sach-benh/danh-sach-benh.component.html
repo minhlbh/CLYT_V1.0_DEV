@@ -8,7 +8,6 @@
                 <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
             </div>
 
-
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
@@ -49,7 +48,7 @@
 <!-- danh sacsh benh for mobile -->
 <!-- danh sacsh benh for mobile -->
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" *isMobile >
+<app-window [icon]="iconText" [name]="name" [url]="url" *isMobile >
     <div class="list-left-wr mobile">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -84,7 +83,7 @@
                     </p>
                 </div>
                 <div *ngIf="!empty">
-                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" (click)="clickBenh(benh.Id)">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
             </a>
                 </div>
