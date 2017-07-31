@@ -52,7 +52,6 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
         // HomeObject.init();
         this.menus = this.settingService.getMenu();
-        console.log(this.menus);
         setTimeout(function () {
             HomeObject.byWidth();
         }, 0);

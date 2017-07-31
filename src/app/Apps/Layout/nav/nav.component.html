@@ -2,12 +2,12 @@
     <!-- <div>
     <a [routerLink]="['/']">header</a>
   </div> -->
-    <nav  class="navbar navbar-default navbar-fixed-top nav-top" style="background: '{{settings.MauDam}}'">
+    <nav  class="navbar navbar-default navbar-fixed-top nav-top"  [ngStyle]="{'background': menuElements.MauDam}">
         <div class="navbar-header">
             <a class="navbar-brand logo" [routerLink]="['/']">
-              <img src="{{settings.Logo}}">
+              <img src="{{menuElements.Logo}}">
               <span class="app-bar-divider">
-                {{settings.ThuongHieu}}
+                {{menuElements.ThuongHieu}}
               </span>
             </a>
         </div>

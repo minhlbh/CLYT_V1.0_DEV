@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
         // HomeObject.init();
 
         this.menus = this.settingService.getMenu();
-        console.log(this.menus);
         setTimeout(() => {
             HomeObject.byWidth();
         }, 0);

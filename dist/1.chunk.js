@@ -642,6 +642,7 @@ var DanhSachBenhComponent = (function () {
         });
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
+        // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
     };
     DanhSachBenhComponent.prototype.doSearch = function (text) {
@@ -795,7 +796,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".window {\r\n    width: 100%;\r\n    padding:45px 0 0 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .window {\r\n      border-right: none;\r\n    }\r\n}\r\n\r\n.title-window {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 25px 0 55px;\r\n}\r\n\r\n\r\n.title-window .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 0;\r\n  line-height: 13px;\r\n  line-height: 43px;\r\n}\r\n\r\n.title-window .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n\r\n.title-window .icon {\r\n  font-size: 20px;\r\n  padding: 0;\r\n  position: absolute;\r\n  top:10px;\r\n  left: 25px;\r\n}\r\n\r\n.body {\r\n  position: relative;\r\n  height: 100%;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".window {\r\n    width: 100%;\r\n    padding:45px 0 0 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .window {\r\n      border-right: none;\r\n    }\r\n}\r\n\r\n.title-window {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 25px 0 55px;\r\n}\r\n\r\n\r\n.title-window .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 0;\r\n  line-height: 13px;\r\n  line-height: 43px;\r\n}\r\n\r\n.title-window .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n\r\n.title-window .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 13px;\r\n    color: #fff;\r\n}\r\n\r\n.body {\r\n  position: relative;\r\n  height: 100%;\r\n}\r\n\r\n.col-left-fixed ul li a .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 13px;\r\n    color: #fff;\r\n}\r\n", ""]);
 
 // exports
 
@@ -808,7 +809,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/window/window.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div>\r\n                <span class=\"fa fa-fw {{icon}} icon\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div>\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 

@@ -19,7 +19,6 @@ export class LeftMenuComponent implements OnInit {
 
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
-
     }
 
     toggledLeft() {
