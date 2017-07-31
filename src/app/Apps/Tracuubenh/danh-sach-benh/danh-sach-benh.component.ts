@@ -57,6 +57,7 @@ export class DanhSachBenhComponent implements OnInit {
         });
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
+        // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
     }
 

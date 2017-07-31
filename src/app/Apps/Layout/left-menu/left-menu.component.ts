@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer, Output, EventEmitter } from '@angular/core';
 import { SettingService } from '../../../Share/Services/setting.service';
 import { CommonModule } from '@angular/common';
 @Component({
@@ -9,14 +9,21 @@ import { CommonModule } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.Default
 })
 export class LeftMenuComponent implements OnInit {
+    // @Output() toggled = new EventEmitter<boolean>();
+
     menuElements: any;
     isToggled = false;
     constructor(
         private settingService: SettingService,
-    ) { console.log(this.isToggled); }
+    ) { }
 
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
+    }
 
+    toggledLeft() {
+        this.isToggled = !this.isToggled;
+        // this.toggled.emit(this.isToggled);
+        console.log(this.isToggled);
     }
 }

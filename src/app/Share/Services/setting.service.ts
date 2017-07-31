@@ -15,7 +15,11 @@ export class SettingService {
     ) { }
     getFirstConfig(): Observable<any> {
         // ...using get request
+<<<<<<< HEAD
         return this.http.get(`${environment.apiUrl}Center/Home_Detail?tenmien=${document.location.hostname}`)
+=======
+        return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`)
+>>>>>>> 544f6394797993aa4ceb3d1bb71020b126df3bb0
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
             // ...errors if any
