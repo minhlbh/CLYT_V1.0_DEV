@@ -32,6 +32,7 @@ module.exports = "<div class=\"fxs-blade-content-container\">\r\n    <div class=
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TracuubenhComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -45,21 +46,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TracuubenhComponent = (function () {
-    function TracuubenhComponent(settingService, benhService) {
+    function TracuubenhComponent(settingService, router, benhService, activatedroute) {
         this.settingService = settingService;
+        this.router = router;
         this.benhService = benhService;
+        this.activatedroute = activatedroute;
         this.showChiTiet = false;
         this.detailBenhId = 0;
     }
     TracuubenhComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activatedroute.params.subscribe(function (pars) {
+            _this.idBenh(pars['id']);
+        });
     };
     TracuubenhComponent.prototype.idBenh = function (id) {
-        this.detailBenhId = id;
         if (id == null) {
             this.showChiTiet = false;
         }
         else {
+            this.detailBenhId = id;
             this.showChiTiet = true;
         }
     };
@@ -72,10 +80,10 @@ TracuubenhComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
 ], TracuubenhComponent);
 
-var _a, _b;
+var _a, _b, _c, _d;
 //# sourceMappingURL=Tracuubenh.component.js.map
 
 /***/ }),
@@ -136,7 +144,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routing = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] },
+    { path: ':id', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] },
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forChild(routing);
 var TracuubenhModule = (function () {
@@ -481,7 +490,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button>\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n\r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
+module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\" [url]=\"url\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button>\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n\r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -492,6 +501,7 @@ module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\">\r\n    <!-- loadi
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__ = __webpack_require__("../../../../ngx-sharebuttons/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChiTietBenhComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -505,9 +515,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ChiTietBenhComponent = (function () {
-    function ChiTietBenhComponent(benhService) {
+    function ChiTietBenhComponent(benhService, router) {
         this.benhService = benhService;
+        this.router = router;
         this.loading = true;
     }
     Object.defineProperty(ChiTietBenhComponent.prototype, "idBenh", {
@@ -521,6 +533,7 @@ var ChiTietBenhComponent = (function () {
         // ShareButton(button name [provider], template, classes)
         this.fbButton = new __WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["b" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["c" /* ShareProvider */].FACEBOOK, '<i class="fa fa-facebook"></i>', 'facebook');
         this.gPlusButton = new __WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["b" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["c" /* ShareProvider */].GOOGLEPLUS, '<i class="fa fa-google-plus"></i>', 'google');
+        this.url = "apps/tracuubenh"; //(this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
     };
     ChiTietBenhComponent.prototype.show = function (id) {
         var _this = this;
@@ -528,7 +541,6 @@ var ChiTietBenhComponent = (function () {
         if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
             this.benhService.getChiTietBenh(id.toString()).subscribe(function (data) {
                 _this.ChiTietBenh = data;
-                console.log(_this.loading);
                 _this.loading = false;
             });
         }
@@ -546,10 +558,10 @@ ChiTietBenhComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _b || Object])
 ], ChiTietBenhComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=chi-tiet-benh.component.js.map
 
 /***/ }),
@@ -575,7 +587,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" *isDesktop >\r\n    <div class=\"list-left-wr\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" (click)=\"clickBenh(benh.Id)\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n\r\n\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" *isMobile >\r\n    <div class=\"list-left-wr mobile\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" (click)=\"clickBenh(benh.Id)\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n"
+module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" [url]=\"url\" *isDesktop >\r\n    <div class=\"list-left-wr\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]= \"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n\r\n\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" *isMobile >\r\n    <div class=\"list-left-wr mobile\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" (click)=\"clickBenh(benh.Id)\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -593,6 +605,7 @@ module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DanhSachBenhComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -610,10 +623,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DanhSachBenhComponent = (function () {
-    function DanhSachBenhComponent(benhService, settingService) {
+    function DanhSachBenhComponent(benhService, router, settingService) {
         var _this = this;
         this.benhService = benhService;
+        this.router = router;
         this.settingService = settingService;
         this.showBenh = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
         this.searchUpdate = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
@@ -628,7 +643,6 @@ var DanhSachBenhComponent = (function () {
             .debounceTime(1000)
             .subscribe(function (event) {
             _this.doSearch(event);
-            console.log(event);
             // this.clickBenh(null);
         });
     }
@@ -644,6 +658,9 @@ var DanhSachBenhComponent = (function () {
         this.iconText = this.menu[0].items[0].IconText;
         // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
+        // const strUrl = (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
+        this.url = "apps";
+        console.log(this.url);
     };
     DanhSachBenhComponent.prototype.doSearch = function (text) {
         var _this = this;
@@ -679,6 +696,7 @@ var DanhSachBenhComponent = (function () {
     };
     DanhSachBenhComponent.prototype.clickBenh = function (id) {
         this.showBenh.emit(id);
+        this.router.navigate(['tracuubenh/', id]);
     };
     DanhSachBenhComponent.prototype.onScroll = function () {
         var _this = this;
@@ -710,10 +728,10 @@ DanhSachBenhComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object])
 ], DanhSachBenhComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=danh-sach-benh.component.js.map
 
 /***/ }),
@@ -796,7 +814,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".window {\r\n    width: 100%;\r\n    padding:45px 0 0 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .window {\r\n      border-right: none;\r\n    }\r\n}\r\n\r\n.title-window {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 25px 0 55px;\r\n}\r\n\r\n\r\n.title-window .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 0;\r\n  line-height: 13px;\r\n  line-height: 43px;\r\n}\r\n\r\n.title-window .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n\r\n.title-window .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 13px;\r\n    color: #fff;\r\n}\r\n\r\n.body {\r\n  position: relative;\r\n  height: 100%;\r\n}\r\n\r\n.col-left-fixed ul li a .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 13px;\r\n    color: #fff;\r\n}\r\n", ""]);
+exports.push([module.i, ".window {\r\n    width: 100%;\r\n    padding:45px 0 0 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .window {\r\n      border-right: none;\r\n    }\r\n}\r\n\r\n.title-window {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 25px 0 55px;\r\n}\r\n\r\n\r\n.title-window .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 0;\r\n  line-height: 13px;\r\n  line-height: 43px;\r\n}\r\n\r\n.title-window .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n\r\n.title-window .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 13px;\r\n    color: #fff;\r\n}\r\n\r\n.body {\r\n  position: relative;\r\n  height: 100%;\r\n}\r\n\r\n.col-left-fixed ul li a .icon {\r\n    font-size: 20px;\r\n    margin-right: 5px;\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 13px;\r\n    color: #fff;\r\n}\r\n\r\n/* button close */\r\n/* button close */\r\n/* button close */\r\n.bt-close {\r\n  background: none;\r\n  position: absolute;\r\n  top:0;\r\n  right:0;\r\n  padding: 3px 6px;\r\n  border: none;\r\n  box-shadow: none;\r\n  transition: all 0.3s ease 0s;\r\n}\r\n\r\n.bt-close:hover {\r\n  background: #ce352c;\r\n}\r\n", ""]);
 
 // exports
 
@@ -809,7 +827,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/window/window.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div>\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div>\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -818,6 +836,8 @@ module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WindowComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -829,10 +849,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var WindowComponent = (function () {
-    function WindowComponent() {
+    function WindowComponent(router, location, r) {
+        this.router = router;
+        this.location = location;
+        this.r = r;
     }
     WindowComponent.prototype.ngOnInit = function () {
+    };
+    WindowComponent.prototype.back = function () {
+        console.log(this.url);
+        this.router.navigate([this.url]);
     };
     return WindowComponent;
 }());
@@ -844,15 +873,20 @@ __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "icon", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], WindowComponent.prototype, "url", void 0);
 WindowComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-window',
         template: __webpack_require__("../../../../../src/app/Share/Components/window/window.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Share/Components/window/window.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object])
 ], WindowComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=window.component.js.map
 
 /***/ }),

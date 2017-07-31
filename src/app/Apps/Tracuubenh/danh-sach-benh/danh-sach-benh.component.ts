@@ -6,6 +6,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { FormControl } from '@angular/forms';
 import { SettingService } from '../../../Share/Services/setting.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -35,15 +36,17 @@ export class DanhSachBenhComponent implements OnInit {
     public loadMore = false;
     public isSearch = false;
     public page = 1;
+    private url: any;
+    private routerUrl: string;
     constructor(
         private benhService: BenhService,
+        private router: Router,
         private settingService: SettingService
     ) {
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
                 this.doSearch(event);
-                console.log(event);
                 // this.clickBenh(null);
             });
     }
@@ -59,6 +62,10 @@ export class DanhSachBenhComponent implements OnInit {
         this.iconText = this.menu[0].items[0].IconText;
         // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
+        // const strUrl = (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
+        this.url =  "apps";
+
+        console.log(this.url);
     }
 
     doSearch(text: string) {
@@ -91,8 +98,9 @@ export class DanhSachBenhComponent implements OnInit {
         }
     }
 
-     clickBenh(id: number) {
+     clickBenh(id) {
         this.showBenh.emit(id);
+        this.router.navigate(['tracuubenh/', id]);
     }
 
     onScroll() {

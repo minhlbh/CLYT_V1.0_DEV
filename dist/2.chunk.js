@@ -50,7 +50,7 @@ var LayoutComponent = (function () {
 }());
 LayoutComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-Layout',
+        selector: 'app-layout',
         template: __webpack_require__("../../../../../src/app/Apps/Layout/Layout.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Layout/Layout.component.css")]
     }),
@@ -82,7 +82,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Layout/left-menu/left-menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fxs-sidebar\" *showItDevice=\"['desktop','tablet']\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <div class=\"col-left-fixed\"  [ngStyle]=\"{'background': menuElements.MauNhat}\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a routerLink=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- left-menu for mobile -->\r\n<!-- left-menu for mobile -->\r\n<!-- left-menu for mobile -->\r\n<div class=\"fxs-sidebar mobile\" *showItDevice=\"['mobile','tablet']\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <ul class=\"bt-collapsed mb\">\r\n        <li>\r\n            <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n        </li>\r\n    </ul>\r\n    <div class=\"col-left-fixed\" [ngStyle]=\"{'background': menuElements.MauNhat}\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"fxs-sidebar\" *showItDevice=\"['desktop','tablet']\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <div class=\"col-left-fixed\" [ngStyle]=\"{'background': menuElements.MauNhat}\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a [routerLink] = \"['/apps', item.url]\"  style=\"cursor: pointer\">\r\n                              <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- left-menu for mobile -->\r\n<!-- left-menu for mobile -->\r\n<!-- left-menu for mobile -->\r\n<div class=\"fxs-sidebar mobile\" *showItDevice=\"['mobile','tablet']\" [ngClass]=\"{'toggled': isToggled}\">\r\n    <ul class=\"bt-collapsed mb\">\r\n        <li>\r\n            <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n        </li>\r\n    </ul>\r\n    <div class=\"col-left-fixed\" [ngStyle]=\"{'background': menuElements.MauNhat}\">\r\n        <ul class=\"bt-collapsed\">\r\n            <li>\r\n                <a id=\"menu-toggle\" (click)=\"toggledLeft()\">\r\n                              <span class=\"glyphicon glyphicon-align-justify\" aria-hidden=\"true\"></span>\r\n                        </a>\r\n            </li>\r\n        </ul>\r\n        <div class=\"list-services\">\r\n            <ul *ngFor=\"let element of menuElements\">\r\n                <li *ngFor=\"let item of element?.items\">\r\n                    <a href=\"{{item?.url}}\" style=\"cursor: pointer\">\r\n                              <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n                              <span class=\"title\" style=\"text-overflow: ellipsis;\">{{item.Ten}}</span>\r\n                        </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -92,6 +92,7 @@ module.exports = "<div class=\"fxs-sidebar\" *showItDevice=\"['desktop','tablet'
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeftMenuComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -104,9 +105,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var LeftMenuComponent = (function () {
-    function LeftMenuComponent(settingService) {
+    function LeftMenuComponent(settingService, router) {
         this.settingService = settingService;
+        this.router = router;
         this.isToggled = false;
     }
     LeftMenuComponent.prototype.ngOnInit = function () {
@@ -127,10 +130,10 @@ LeftMenuComponent = __decorate([
         encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].Emulated,
         changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectionStrategy"].Default
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _b || Object])
 ], LeftMenuComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=left-menu.component.js.map
 
 /***/ }),
@@ -219,7 +222,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/Layout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/nav/nav.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/left-menu/left-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__ = __webpack_require__("../../../../../src/app/Share/Components/empty/empty.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppsModule", function() { return AppsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -237,15 +241,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // service
 
 var routing = [
     {
         path: '', component: __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
         children: [
-            { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' }
-        ]
-    }
+            { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+            { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__["a" /* EmptyComponent */] }
+        ],
+    },
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forChild(routing);
 var AppsModule = (function () {
@@ -265,15 +271,77 @@ AppsModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
             __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__["a" /* NavComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__["a" /* EmptyComponent */],
             __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__["a" /* LeftMenuComponent */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_9__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_10__Share_Services_setting_service__["a" /* SettingService */]
         ]
     })
 ], AppsModule);
 
 //# sourceMappingURL=apps.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Components/empty/empty.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Components/empty/empty.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>Empty</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Components/empty/empty.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmptyComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EmptyComponent = (function () {
+    function EmptyComponent() {
+    }
+    EmptyComponent.prototype.ngOnInit = function () {
+    };
+    return EmptyComponent;
+}());
+EmptyComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-empty',
+        template: __webpack_require__("../../../../../src/app/Share/Components/empty/empty.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Share/Components/empty/empty.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], EmptyComponent);
+
+//# sourceMappingURL=empty.component.js.map
 
 /***/ })
 

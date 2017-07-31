@@ -4025,7 +4025,7 @@ var ClassDirective = (function (_super) {
         this.ngClass = value || ''; // Delegate subsequent activity to the NgClass logic
     };
     return ClassDirective;
-}(__WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* NgClass */]));
+}(__WEBPACK_IMPORTED_MODULE_1__angular_common__["m" /* NgClass */]));
 
 ClassDirective.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
@@ -6745,7 +6745,7 @@ var StyleDirective = (function (_super) {
         return styles;
     };
     return StyleDirective;
-}(__WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* NgStyle */]));
+}(__WEBPACK_IMPORTED_MODULE_1__angular_common__["l" /* NgStyle */]));
 
 StyleDirective.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{

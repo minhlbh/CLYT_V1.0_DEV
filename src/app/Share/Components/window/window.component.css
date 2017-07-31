@@ -64,3 +64,25 @@
     left: 13px;
     color: #fff;
 }
+
+/* button close */
+/* button close */
+/* button close */
+.bt-close {
+  background: none;
+  position: absolute;
+  top:0;
+  right:0;
+  padding: 3px 6px;
+  border: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.bt-close:hover {
+  background: #ce352c;
+}
