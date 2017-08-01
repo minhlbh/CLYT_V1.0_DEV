@@ -4,7 +4,7 @@
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
-                <img width="50px" [src]="config?.Logo">
+                <img *ngIf="config?.Logo" width="50px" [src]="config?.Logo">
                 <span>{{config?.ThuongHieu}}</span>
             </div>
             <div class="controls">
@@ -34,10 +34,10 @@
         </div>
 
 
-        <div [@pageAnimation]="runAnimation" fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+        <div  fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
             <main class="fxs-panorama">
-                <div class="fxs-blade-content-container">
-                    <ng-container *ngFor="let blocks of menus">
+                <div class="fxs-blade-content-container" *ngIf="menus">
+                    <ng-container  *ngFor="let blocks of menus">
                         <div class="block" [id]="blocks?.Id">
                             <div class="title">
                                 {{blocks.Ten}}
@@ -50,7 +50,7 @@
                                 </a>
                             </div> -->
                             <div class="body">
-                                <div class="grid">
+                                <div #grid class="grid">
                                     <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
                                         <div class="grid-item" [ngClass]="
                                 {
@@ -91,7 +91,10 @@
                                 </div>
                             </div>
                         </div>
+
                     </ng-container>
+                    <!-- thêm khoảng cách vào cuối cùng -->
+                     <div style="padding:40px"> </div>
                 </div>
             </main>
         </div>

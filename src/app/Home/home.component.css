@@ -11,6 +11,10 @@
     margin-left: 80px;
     width: 435px;
 }
+.block:last-child {
+    margin-right: 50px !important;
+}
+
 
 .title {
     color: #ffffff;
