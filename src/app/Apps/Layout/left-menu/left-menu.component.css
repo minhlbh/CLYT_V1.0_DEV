@@ -37,7 +37,7 @@
     width: 100%;
     float: left;
     position: relative;
-    padding: 12px 10px 12px 50px;
+    padding: 12px 20px 12px 50px;
     min-height: 42px;
 }
 
@@ -50,8 +50,8 @@
     font-size: 20px;
     margin-right: 5px;
     position: absolute;
-    top: 2px;
-    left: 13px;
+    top: 3px;
+    left: 18px;
     color: #fff;
 }
 
@@ -61,8 +61,8 @@
 
 .col-left-fixed .glyphicon {
   position: absolute;
-  top: 13px;
-  left: 18px;
+  top: 14px;
+  left: 20px;
   font-size: 16px;
 }
 
@@ -70,6 +70,7 @@
     height: 100%;
     overflow: auto;
     float: left;
+    width: 100%;
 }
 
 .fxs-sidebar.toggled .list-services::-webkit-scrollbar {
@@ -93,7 +94,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     float: left;
-    width: 170px;
+    width: 100%;
     white-space: nowrap;
 }
 
@@ -105,7 +106,7 @@
 }
 
 .fxs-sidebar.toggled .col-left-fixed {
-    width: 50px;
+    width: 57px;
 }
 
 .fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
@@ -136,7 +137,7 @@
 
 .fxs-sidebar  .bt-collapsed {
     z-index: 10000;
-    height: 44px;
+    height: 43px;
     width: 50px;
     margin: 0;
     padding: 0;
