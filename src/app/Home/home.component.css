@@ -63,6 +63,16 @@
     width: 290px;
 }
 
+.grid-item-w2 .title-label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.grid-item-w2 .title-label-icon{
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .grid-item-w3 {
     width: 435px;
 }
@@ -113,13 +123,16 @@
     z-index: 9999;
     color: #fff;
     background: linear-gradient(to top, rgba(0, 0, 0, .60) 0, rgba(255, 255, 255, .05) 100%);
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .title-label .icon img {
     width: 20px;
 }
 
+.title-label-icon .icon img {
+    width: 20px;
+}
 
 
 .title-label-icon {
@@ -368,10 +381,7 @@
     background-size: cover;
 }
 
-.controls .user .sign-up-now {
-    background: #0f9cb3;
-    color: #fff;
-}
+
 /*
 .m-body{
     top:0;
