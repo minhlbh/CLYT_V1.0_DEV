@@ -1,11 +1,30 @@
 <ng-container *showItDevice="['desktop', 'tablet']">
 
-    <div class="fxs-portal" fxLayoutAlign="start stretch" fxLayout="column">
+    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column">
 
-        <div class="fxs-topbar" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
-            <nav>
+        <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
+            <div class="logo">
                 <img width="50px" [src]="config?.Logo">
-            </nav>
+                <span>Trưởng khoa</span>
+            </div>
+            <div class="controls">
+                <div class="user">
+                    <a href="#" class="name-user bt-sign-up">
+                        <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
+                        Đăng nhập
+                    </a>
+                    <a href="#" class="sign-up-now bt-sign-up">
+                        <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
+                        Đăng ký ngay
+                    </a>
+                </div>
+            </div>
+            <div class="search-home">
+                <div class="input-control text full-size">
+                    <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+                    <input type="text" placeholder="Tìm dịch vụ...">
+                </div>
+            </div>
         </div>
 
 
@@ -14,7 +33,10 @@
                 <div class="fxs-blade-content-container">
                     <ng-container *ngFor="let blocks of menus">
                         <div class="block" [id]="blocks?.Id">
-                            <div class="title">{{blocks.Ten}}</div>
+                            <div class="title">
+                                {{blocks.Ten}}
+                                <span class="count-apps">(13 apps)</span>
+                            </div>
                             <div class="body">
                                 <div class="grid">
                                     <ng-container *ngFor="let item of blocks?.items">
@@ -27,12 +49,21 @@
                                 }">
 
                                             <div class="child">
-                                                {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                   <h4 class="title-label">
+                                                       <span class="fa fa-fw fa-medkit icon-title-label" aria-hidden="true"></span>
+                                                       {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                    </h4>
                                             </div>
 
                                         </div>
                                     </ng-container>
                                 </div>
+                            </div>
+                            <div class="bottom">
+                                <a (click)="showMore(blocks?.Id)" class="show-all">
+                                  <span>Xem tất cả</span>
+                                  <i class="fa fa-fw fa-arrow-circle-o-right"></i>
+                                </a>
                             </div>
                         </div>
                     </ng-container>

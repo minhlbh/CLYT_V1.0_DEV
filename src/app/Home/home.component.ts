@@ -29,15 +29,15 @@ export class HomeComponent implements OnInit {
             console.log(this.menus);
             setTimeout(() => {
                 HomeObject.byWidth('all');
-                this.showMore();
+                // this.showMore();
             }, 0);
         });
 
     }
-    showMore() {
+    showMore(id) {
         this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];
         setTimeout(() => {
-            HomeObject.byHeight('49500');
+            HomeObject.byHeight(id);
         }, 0);
     }
 
