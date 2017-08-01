@@ -74,28 +74,28 @@
 </ng-container>
 
 <ng-container *showItDevice="['mobile']">
-    <nav fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" style="height:60px;  position:fixed;top:0;left:0;right:0"
-        fxLayoutAlign="space-between center">
-        <div class="brand" fxLayout="row" fxLayoutAlign="start center" style="padding:0 20px;">
-            <img width="25px" [src]="config?.Logo">
-            <div style="color:white">{{config?.ThuongHieu}}</div>
-        </div>
-        <div>
-            <a href="#" style="color:white; padding:0 20px;">Menu</a>
-        </div>
-    </nav>
-    <div style="padding-top:60px">
-        <ng-container *ngFor="let blocks of menus">
-            <h5 style="padding: 0 10px; background-color:#eee; margin:0; padding:10px">{{blocks?.Ten | uppercase}}</h5>
-            <ng-container *ngFor="let item of blocks?.items">
-                <div class="item" fxLayout="row" fxLayoutAlign="start center" style="padding:5px; margin-left:10px; border-bottom:solid 1px #eee">
-                    <div style="width:60px; height:60px; border-radius:30px;background-position: center center;background-repeat: no-repeat;background-size: cover; "
-                        [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
-                    <div style="padding:0 10px">
-                        {{item?.Ten}}
-                    </div>
-                </div>
+    <div class="m-body">
+        <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
+            <div class="m-brand" fxLayout="row" fxLayoutAlign="start center">
+                <img class="m-brand-logo" [src]="config?.Logo">
+                <div>{{config?.ThuongHieu | uppercase}}</div>
+            </div>
+            <div>
+                <a href="#" style="padding:0 20px;">Menu</a>
+            </div>
+        </nav>
+        <div class="m-content">
+            <ng-container *ngFor="let blocks of menus">
+                <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
+                <ng-container *ngFor="let item of blocks?.items">
+                    <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
+                        <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
+                        <div style="padding:0 10px">
+                            {{item?.Ten}}
+                        </div>
+                    </a>
+                </ng-container>
             </ng-container>
-        </ng-container>
+        </div>
     </div>
 </ng-container>
