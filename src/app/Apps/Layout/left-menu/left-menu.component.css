@@ -108,7 +108,7 @@
 
 
 .fxs-sidebar.toggled .col-left-fixed {
-    width: 70px;
+    width: 75px;
     position: absolute;
     top: 0;
     left: 0;
@@ -131,6 +131,11 @@
     background: transparent;
 }
 
+.fxs-sidebar.toggled .bt-collapsed {
+    border-right: rgba(255,255,255,.3) 1px solid;
+    width: 57px !important;
+}
+
 
 
 
@@ -147,10 +152,9 @@
     border: none;
 }
 
-.fxs-sidebar  .bt-collapsed {
+.fxs-sidebar .bt-collapsed {
     z-index: 10000;
     height: 43px;
-    width: 50px;
     margin: 0;
     padding: 0;
     background: #0f9cb3;
