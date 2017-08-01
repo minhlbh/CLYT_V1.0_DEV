@@ -5,9 +5,12 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { environment } from '../../../environments/environment';
 import { DOCUMENT } from '@angular/platform-browser';
+import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class SettingService {
+
+    public itemValue = new Subject();
 
     constructor(
         private http: Http,
@@ -23,6 +26,7 @@ export class SettingService {
     }
 
     setMenu(data) {
+        this.itemValue.next(data);
         localStorage.setItem('app_menu', JSON.stringify(data));
     }
     getMenu() {

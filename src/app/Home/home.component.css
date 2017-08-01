@@ -1,40 +1,39 @@
-.scroll {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    height: calc(100%-100px);
-    flex-direction: row;
-
-}
-
-
 /* .content {
     flex-direction: row;
 } */
 
 .block {
     flex: 0 0 auto;
-    /* height: 580px;
+    height: 100%;
     overflow-y: hidden;
-    min-width: 435px; 
-    margin: 10px; */
-    transition:all 0.5s ease-in-out;
-
-    width: 290px;
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
     margin-left: 80px;
-    float: left;
-    position: relative;
-    padding-top: 10px;
+    width: 435px;
 }
 
-
-
-.brand {
+.title {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
     float: left;
-    margin-top: 30px;
-    margin-left: 80px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 10px 60px 10px 5px;
+}
+
+.title-item {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.count-apps {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 12px;
 }
 
 .body {
@@ -42,30 +41,41 @@
     display: block;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    float: left;
+    position: relative;
+    height: 445px;
 }
 
 .grid {
     /* height: 100%; */
-    /* width: 435px; */
-    min-width: 435px;
+      /* width: 145px;   */
+      min-width: 435px;
 }
 
 .grid-item {
     width: 145px;
     height: 145px;
     padding: 5px;
-    transition:all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .grid-item-w2 {
     width: 290px;
-
 }
 
 .grid-item-w3 {
     width: 435px;
 }
+
+.grid-item-h2 {
+    height: 290px;
+}
+
+.grid-item-h3 {
+    height: 435px;
+}
+
+
 
 .child {
     padding: 5px;
@@ -77,6 +87,30 @@
 }
 
 .screen {
+    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 13px 10px 10px 10px;
+    z-index: 9999;
+    color: #fff;
+    background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
+    font-size: 18px;
+}
+
+
+.wrapper {
     background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
     min-width: 100%;
     height: 100%;
@@ -93,11 +127,22 @@
     left: 0;
 }
 
-.brand-logo {
+
+
+
+.logo {
     float: left;
+    margin-top: 30px;
+    margin-left: 80px;
 }
 
-.brand-title {
+.logo img {
+    float: left;
+    width: 70px;
+    height: 70px;
+}
+
+.logo span {
     float: left;
     margin: 15px 0 15px 5px;
     font-size: 28px;
@@ -105,39 +150,7 @@
     text-transform: uppercase;
 }
 
-.content {
-    width: 1945px;
-    overflow: auto;
-    float: left;
-    padding-right: 45px;
-    z-index: 1000;
-    position: relative;
-}
-
-.title {
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 20px;
-    float: left;
-    position: relative;
-    margin: 0;
-    width: 100%;
-    padding: 10px 60px 10px 5px;
-}
-
-.tile-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;
-    padding: 13px 10px 10px 10px;
-    z-index: 9999;
-    color: #fff;
-    background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
-}
-
-.search-top {
+.search-home {
     padding: 45px 5px 45px 80px;
     width: 300px;
     float: right;
@@ -145,20 +158,27 @@
 
 .input-control {
     display: inline-block;
+    min-height: 34px;
+    height: 35px;
+    width: 100%;
     position: relative;
     vertical-align: middle;
     margin: 0;
+    line-height: 1;
     position: relative;
-    width: 100%;
-    line-height: 34px;
-    height: 35px;
 }
 
 .input-control .icon-search {
+    position: absolute;
     top: 11px;
     left: 10px;
-    position: absolute; 
     color: #777;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
 
 .input-control input {
@@ -167,20 +187,21 @@
     height: 35px;
     line-height: 35px;
     width: 100%;
+    color: #323232;
 }
 
-.area-controls {
+.controls {
     float: right;
     margin-top: 45px;
     margin-right: 50px;
 }
 
-.area-controls .user {
+.controls .user {
     float: left;
     margin-right: 2px;
 }
 
-.area-controls .user .name-user {
+.controls .user .name-user {
     background: #fff;
     padding: 7px 10px;
     height: 35px;
@@ -190,7 +211,7 @@
     color: #323232;
 }
 
-.area-controls .user .sign-up-now {
+.controls .user .sign-up-now {
     background: #0f9cb3;
     color: #fff;
     padding: 7px 10px;
@@ -201,29 +222,82 @@
     text-transform: uppercase;
 }
 
-.area-controls .user a:hover, .area-controls .user a:focus {
+.controls .user a {
     text-decoration: none;
 }
 
-.controls {
-    width: 100%;
+.bottom {
     float: left;
+    width: 100%;
+    position: relative;
 }
 
-.controls .view-all {
+.show-all {
     color: #ffffff;
     font-size: 16px;
     line-height: 20px;
     color: #0f9cb3;
+    float: left;
+    cursor: pointer;
 }
 
-.controls .view-all span {
+.show-all span {
     margin: 2px 5px;
     float: left;
 }
 
-.controls .view-all i {
+.show-all i {
     margin: 0 5px 0 0;
     font-size: 25px;
     float: left;
 }
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+.header {
+    width: 1000px;
+}
+}
+
+
+@media only screen and (max-height: 930px) {
+
+}
+
+
+
+@media only screen and (max-height: 630px) {
+.grid-item {
+    width: 110px;
+    height: 110px;
+}
+
+.grid-item-w2 {
+    width: 220px;
+}
+
+.grid-item-w3 {
+    width: 330px;
+}
+
+.grid-item-h2 {
+    height: 220px;
+}
+
+.grid-item-h3 {
+    height: 330px;
+}
+
+.title-label {
+    font-size: 12px;
+}
+
+.body {
+    height: 335px;
+}
+
+}
+

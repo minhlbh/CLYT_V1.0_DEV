@@ -14,7 +14,6 @@ export class NavComponent implements OnInit {
     constructor(private settingService: SettingService) {
         this.menuElements = this.settingService.getConfig();
     }
-
     ngOnInit() {
     }
 
