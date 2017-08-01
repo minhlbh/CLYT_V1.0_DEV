@@ -105,8 +105,15 @@
     cursor: pointer;
 }
 
+
+
 .fxs-sidebar.toggled .col-left-fixed {
-    width: 57px;
+    width: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
 }
 
 .fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
@@ -119,7 +126,12 @@
 
 .fxs-sidebar.toggled .list-services::-webkit-scrollbar {
     display: none;
+    height: 0;
+    width: 0;
+    background: transparent;
 }
+
+
 
 
 
