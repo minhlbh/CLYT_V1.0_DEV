@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
             console.log(this.menus);
             setTimeout(() => {
                 HomeObject.byWidth('all');
-                this.showMore();
+                // this.showMore();
             }, 0);
         });
 
