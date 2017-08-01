@@ -28,13 +28,13 @@
             <div class="search-home">
                 <div class="input-control text full-size">
                     <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                    <input type="text" placeholder="Tìm dịch vụ...">
+                    <input type="text" placeholder="Tìm dịch vụ..."  [(ngModel)]="searchKey">
                 </div>
             </div>
         </div>
 
 
-        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+        <div [@pageAnimation]="runAnimation" fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
             <main class="fxs-panorama">
                 <div class="fxs-blade-content-container">
                     <ng-container *ngFor="let blocks of menus">
@@ -51,7 +51,7 @@
                             </div> -->
                             <div class="body">
                                 <div class="grid">
-                                    <ng-container *ngFor="let item of blocks?.items">
+                                    <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey" >
                                         <div class="grid-item" [ngClass]="
                                 {
                                     'grid-item-w2': item.chieuRong==2,
@@ -60,15 +60,26 @@
                                     'grid-item-h2': item.chieuCao==2
                                 }">
                                             <!-- style ô vuông là icon  -->
-                                            <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.IconText +')'}">
+                                            <a class="child" *ngIf="item?.style == 'Icon'"
+                                             [style.background-color]="item?.mauNen"
+                                             [routerLink]="['/apps', item?.url]"
+                                             [ngStyle]="{
+                                                'background-image': 'url('+ item?.IconText +')',
+                                                'background-size': '75px'}">
                                                 <h4 class="title-label">
-                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                    <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span>                                                    {{item.Ten}}
                                                 </h4>
                                             </a>
                                             <!-- style ô vuông là ảnh  -->
-                                            <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                            <a class="child" *ngIf="item?.style == 'Image'"
+                                                [routerLink]="['/apps', item?.url]"
+                                                [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
                                                 <h4 class="title-label">
-                                                    <span class="icon"><img src="{{item?.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                    <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span>                                                   {{item.Ten}}
                                                 </h4>
 
                                             </a>
@@ -76,7 +87,7 @@
                                             <!-- style ô vuông là dạng slide  -->
                                             <div class="child" *ngIf="item?.style == 'Slide'">
                                                 <h4 class="title-label">
-                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                 {{item.Ten}}
                                                 </h4>
                                             </div>
                                         </div>

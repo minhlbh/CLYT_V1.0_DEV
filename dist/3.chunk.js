@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *showItDevice=\"['desktop', 'tablet']\">\r\n\r\n    <div class=\"fxs-portal wrapper\" fxLayoutAlign=\"start stretch\" fxLayout=\"column\"  [ngStyle]=\"{'background-image': 'url('+ config?.Background +')'}\">\r\n\r\n        <div class=\"fxs-topbar header\" [ngStyle]=\"{'background-color': (menus?.MauDam | async)} \">\r\n            <div class=\"logo\">\r\n                <img width=\"50px\" [src]=\"config?.Logo\">\r\n                <span>{{config?.ThuongHieu}}</span>\r\n            </div>\r\n            <div class=\"controls\">\r\n                <div class=\"user\">\r\n                    <a href=\"#\" class=\"name-user bt-sign-up\">\r\n                        <span class=\"fa fa-fw fa-sign-in icon\" aria-hidden=\"true\"></span>\r\n                        Đăng nhập\r\n                    </a>\r\n                    <a href=\"#\" class=\"sign-up-now bt-sign-up\">\r\n                        <span class=\"fa fa-fw fa-user-plus icon\" aria-hidden=\"true\"></span>\r\n                        Đăng ký ngay\r\n                    </a>\r\n                </div>\r\n                <!-- <div class=\"controls\">\r\n                    <a href=\"#\" class=\"view-all\" (click)=\"showMore()\">\r\n                      <span>Xem tất cả</span>\r\n                      <i class=\"fa fa-fw fa-arrow-circle-o-right\"></i>\r\n                    </a>\r\n                </div> -->\r\n            </div>\r\n            <div class=\"search-home\">\r\n                <div class=\"input-control text full-size\">\r\n                    <span class=\"glyphicon glyphicon-search icon-search\" aria-hidden=\"true\"></span>\r\n                    <input type=\"text\" placeholder=\"Tìm dịch vụ...\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start stretch\" class=\"fxs-portal-main\">\r\n            <main class=\"fxs-panorama\">\r\n                <div class=\"fxs-blade-content-container\">\r\n                    <ng-container *ngFor=\"let blocks of menus\">\r\n                        <div class=\"block\" [id]=\"blocks?.Id\">\r\n                            <div class=\"title\">\r\n                                {{blocks.Ten}}\r\n                                <span class=\"count-apps\">({{blocks?.items.length}} apps)</span>\r\n                            </div>\r\n                            <!-- <div class=\"bottom\">\r\n                                <a (click)=\"showMore(blocks?.Id)\" class=\"show-all\">\r\n                                  <span>Xem tất cả</span>\r\n                                  <i class=\"fa fa-fw fa-arrow-circle-o-right\"></i>\r\n                                </a>\r\n                            </div> -->\r\n                            <div class=\"body\">\r\n                                <div class=\"grid\">\r\n                                    <ng-container *ngFor=\"let item of blocks?.items\">\r\n                                        <div class=\"grid-item\" [ngClass]=\"\r\n                                {\r\n                                    'grid-item-w2': item.chieuRong==2,\r\n                                    'grid-item-w3': item.chieuRong==3,\r\n                                    'grid-item-h3': item.chieuCao==3,\r\n                                    'grid-item-h2': item.chieuCao==2\r\n                                }\">\r\n                                            <!-- style ô vuông là icon  -->\r\n                                            <a class=\"child\" *ngIf=\"item?.style == 'Icon'\" [style.background-color]=\"item?.mauNen\" [routerLink]=\"['/apps', item?.url]\" [ngStyle]=\"{'background-image': 'url('+ item?.IconText +')'}\">\r\n                                                <h4 class=\"title-label\">\r\n                                                    <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}\r\n                                                </h4>\r\n                                            </a>\r\n                                            <!-- style ô vuông là ảnh  -->\r\n                                            <a class=\"child\" *ngIf=\"item?.style == 'Image'\" [routerLink]=\"['/apps', item?.url]\" [ngStyle]=\"{'background-image': 'url('+ item?.Images[0] +')'}\">\r\n                                                <h4 class=\"title-label\">\r\n                                                    <span class=\"icon\"><img src=\"{{item?.IconText}}\" aria-hidden=\"true\"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}\r\n                                                </h4>\r\n\r\n                                            </a>\r\n\r\n                                            <!-- style ô vuông là dạng slide  -->\r\n                                            <div class=\"child\" *ngIf=\"item?.style == 'Slide'\">\r\n                                                <h4 class=\"title-label\">\r\n                                                    <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}\r\n                                                </h4>\r\n                                            </div>\r\n                                        </div>\r\n                                    </ng-container>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </ng-container>\r\n                </div>\r\n            </main>\r\n        </div>\r\n    </div>\r\n</ng-container>\r\n\r\n<ng-container *showItDevice=\"['mobile']\">\r\n    <nav class=\"m-nav\" fxLayout=\"row\" [ngStyle]=\"{'background-color': config?.MauDam}\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"m-brand\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n            <img class=\"m-brand-logo\" [src]=\"config?.Logo\">\r\n            <div>{{config?.ThuongHieu | uppercase}}</div>\r\n        </div>\r\n        <div>\r\n            <a href=\"#\" style=\"padding:0 20px;\">Menu</a>\r\n        </div>\r\n    </nav>\r\n    <div class=\"m-content\">\r\n        <ng-container *ngFor=\"let blocks of menus\">\r\n            <div class=\"m-header-title\">{{blocks?.Ten | uppercase}}</div>\r\n            <ng-container *ngFor=\"let item of blocks?.items\">\r\n                <a [routerLink]=\"['/apps',item?.url]\" class=\"m-item\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                    <div class=\"m-cover\" [ngStyle]=\"{'background-image': 'url('+ item?.Images[0] +')'}\"></div>\r\n                    <div style=\"padding:0 10px\">\r\n                        {{item?.Ten}}\r\n                    </div>\r\n                </a>\r\n            </ng-container>\r\n        </ng-container>\r\n    </div>\r\n</ng-container>\r\n"
+module.exports = "<ng-container *showItDevice=\"['desktop', 'tablet']\">\r\n\r\n    <div class=\"fxs-portal wrapper\" fxLayoutAlign=\"start stretch\" fxLayout=\"column\"  [ngStyle]=\"{'background-image': 'url('+ config?.Background +')'}\">\r\n\r\n        <div class=\"fxs-topbar header\" [ngStyle]=\"{'background-color': (menus?.MauDam | async)} \">\r\n            <div class=\"logo\">\r\n                <img width=\"50px\" [src]=\"config?.Logo\">\r\n                <span>{{config?.ThuongHieu}}</span>\r\n            </div>\r\n            <div class=\"controls\">\r\n                <div class=\"user\">\r\n                    <a href=\"#\" class=\"name-user bt-sign-up\">\r\n                        <span class=\"fa fa-fw fa-sign-in icon\" aria-hidden=\"true\"></span>\r\n                        Đăng nhập\r\n                    </a>\r\n                    <a href=\"#\" class=\"sign-up-now bt-sign-up\">\r\n                        <span class=\"fa fa-fw fa-user-plus icon\" aria-hidden=\"true\"></span>\r\n                        Đăng ký ngay\r\n                    </a>\r\n                </div>\r\n                <!-- <div class=\"controls\">\r\n                    <a href=\"#\" class=\"view-all\" (click)=\"showMore()\">\r\n                      <span>Xem tất cả</span>\r\n                      <i class=\"fa fa-fw fa-arrow-circle-o-right\"></i>\r\n                    </a>\r\n                </div> -->\r\n            </div>\r\n            <div class=\"search-home\">\r\n                <div class=\"input-control text full-size\">\r\n                    <span class=\"glyphicon glyphicon-search icon-search\" aria-hidden=\"true\"></span>\r\n                    <input type=\"text\" placeholder=\"Tìm dịch vụ...\"  [(ngModel)]=\"searchKey\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div [@pageAnimation]=\"runAnimation\" fxLayout=\"row\" fxLayoutAlign=\"start stretch\" class=\"fxs-portal-main\">\r\n            <main class=\"fxs-panorama\">\r\n                <div class=\"fxs-blade-content-container\">\r\n                    <ng-container *ngFor=\"let blocks of menus\">\r\n                        <div class=\"block\" [id]=\"blocks?.Id\">\r\n                            <div class=\"title\">\r\n                                {{blocks.Ten}}\r\n                                <span class=\"count-apps\">({{blocks?.items.length}} apps)</span>\r\n                            </div>\r\n                            <!-- <div class=\"bottom\">\r\n                                <a (click)=\"showMore(blocks?.Id)\" class=\"show-all\">\r\n                                  <span>Xem tất cả</span>\r\n                                  <i class=\"fa fa-fw fa-arrow-circle-o-right\"></i>\r\n                                </a>\r\n                            </div> -->\r\n                            <div class=\"body\">\r\n                                <div class=\"grid\">\r\n                                    <ng-container *ngFor=\"let item of blocks?.items | homeFilter:searchKey\" >\r\n                                        <div class=\"grid-item\" [ngClass]=\"\r\n                                {\r\n                                    'grid-item-w2': item.chieuRong==2,\r\n                                    'grid-item-w3': item.chieuRong==3,\r\n                                    'grid-item-h3': item.chieuCao==3,\r\n                                    'grid-item-h2': item.chieuCao==2\r\n                                }\">\r\n                                            <!-- style ô vuông là icon  -->\r\n                                            <a class=\"child\" *ngIf=\"item?.style == 'Icon'\"\r\n                                             [style.background-color]=\"item?.mauNen\"\r\n                                             [routerLink]=\"['/apps', item?.url]\"\r\n                                             [ngStyle]=\"{\r\n                                                'background-image': 'url('+ item?.IconText +')',\r\n                                                'background-size': '75px'}\">\r\n                                                <h4 class=\"title-label\">\r\n                                                    <span class=\"icon\">\r\n                                                        <img src=\"{{item?.IconText}}\" aria-hidden=\"true\">\r\n                                                    </span>                                                    {{item.Ten}}\r\n                                                </h4>\r\n                                            </a>\r\n                                            <!-- style ô vuông là ảnh  -->\r\n                                            <a class=\"child\" *ngIf=\"item?.style == 'Image'\"\r\n                                                [routerLink]=\"['/apps', item?.url]\"\r\n                                                [ngStyle]=\"{'background-image': 'url('+ item?.Images[0] +')'}\">\r\n                                                <h4 class=\"title-label\">\r\n                                                    <span class=\"icon\">\r\n                                                        <img src=\"{{item?.IconText}}\" aria-hidden=\"true\">\r\n                                                    </span>                                                   {{item.Ten}}\r\n                                                </h4>\r\n\r\n                                            </a>\r\n\r\n                                            <!-- style ô vuông là dạng slide  -->\r\n                                            <div class=\"child\" *ngIf=\"item?.style == 'Slide'\">\r\n                                                <h4 class=\"title-label\">\r\n                                                    <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\"></span>                                                 {{item.Ten}}\r\n                                                </h4>\r\n                                            </div>\r\n                                        </div>\r\n                                    </ng-container>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </ng-container>\r\n                </div>\r\n            </main>\r\n        </div>\r\n    </div>\r\n</ng-container>\r\n\r\n<ng-container *showItDevice=\"['mobile']\">\r\n    <nav class=\"m-nav\" fxLayout=\"row\" [ngStyle]=\"{'background-color': config?.MauDam}\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"m-brand\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n            <img class=\"m-brand-logo\" [src]=\"config?.Logo\">\r\n            <div>{{config?.ThuongHieu | uppercase}}</div>\r\n        </div>\r\n        <div>\r\n            <a href=\"#\" style=\"padding:0 20px;\">Menu</a>\r\n        </div>\r\n    </nav>\r\n    <div class=\"m-content\">\r\n        <ng-container *ngFor=\"let blocks of menus\">\r\n            <div class=\"m-header-title\">{{blocks?.Ten | uppercase}}</div>\r\n            <ng-container *ngFor=\"let item of blocks?.items\">\r\n                <a [routerLink]=\"['/apps',item?.url]\" class=\"m-item\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                    <div class=\"m-cover\" [ngStyle]=\"{'background-image': 'url('+ item?.Images[0] +')'}\"></div>\r\n                    <div style=\"padding:0 10px\">\r\n                        {{item?.Ten}}\r\n                    </div>\r\n                </a>\r\n            </ng-container>\r\n        </ng-container>\r\n    </div>\r\n</ng-container>\r\n"
 
 /***/ }),
 
@@ -31,6 +31,7 @@ module.exports = "<ng-container *showItDevice=\"['desktop', 'tablet']\">\r\n\r\n
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -43,9 +44,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var HomeComponent = (function () {
     function HomeComponent(settingService) {
         this.settingService = settingService;
+        this.runAnimation = false;
         this.blockFull = false;
         this.settingService.itemValue.subscribe(function (data) {
             console.log('abc', data);
@@ -56,6 +59,7 @@ var HomeComponent = (function () {
         this.settingService.getFirstConfig().subscribe(function () {
             _this.menus = _this.settingService.getMenu();
             _this.config = _this.settingService.getConfig();
+            _this.runAnimation = true;
             setTimeout(function () {
                 HomeObject.byWidth('all');
                 // this.showMore();
@@ -74,7 +78,22 @@ HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/Home/home.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Home/home.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/Home/home.component.css")],
+        animations: [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["a" /* trigger */])('pageAnimation', [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["b" /* transition */])(':enter', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["c" /* query */])('.item', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["d" /* style */])({ transform: 'translateX(150px)', opacity: 0 })),
+                    // query(
+                    //     '.item', animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
+                    // ),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["c" /* query */])('.item', [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* stagger */])(200, [
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["d" /* style */])('*'))
+                        ])
+                    ])
+                ]),
+            ])
+        ]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
 ], HomeComponent);
@@ -95,8 +114,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__ = __webpack_require__("../../../flex-layout/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_responsive__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_component__ = __webpack_require__("../../../../../src/app/Home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_component__ = __webpack_require__("../../../../../src/app/Home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Share_Pipes_homeFilter_pipe__ = __webpack_require__("../../../../../src/app/Share/Pipes/homeFilter.pipe.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -111,9 +132,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 // Định nghĩa router riêng cho module này
 var routing = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__home_component__["a" /* HomeComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__home_component__["a" /* HomeComponent */] }
 ];
 // forChild -> Router này sẽ được load như một router con
 var Routing = __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forChild(routing);
@@ -126,20 +149,58 @@ HomeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
             Routing,
             __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
             __WEBPACK_IMPORTED_MODULE_4_ng2_responsive__["ResponsiveModule"]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__home_component__["a" /* HomeComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__Share_Pipes_homeFilter_pipe__["a" /* HomeFilterPipe */],
+            __WEBPACK_IMPORTED_MODULE_6__home_component__["a" /* HomeComponent */]
         ]
     })
 ], HomeModule);
 
 //# sourceMappingURL=home.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Pipes/homeFilter.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeFilterPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var HomeFilterPipe = (function () {
+    function HomeFilterPipe() {
+    }
+    HomeFilterPipe.prototype.transform = function (items, filter) {
+        if (!items || !filter) {
+            return items;
+        }
+        // return items.filter(item => item.Ten.indexOf(filter) !== -1);
+        return items.filter(function (item) { return JSON.stringify(item).toLowerCase().indexOf(filter.toLowerCase()) !== -1; });
+    };
+    return HomeFilterPipe;
+}());
+HomeFilterPipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'homeFilter',
+        pure: false
+    })
+], HomeFilterPipe);
+
+//# sourceMappingURL=homeFilter.pipe.js.map
 
 /***/ })
 
