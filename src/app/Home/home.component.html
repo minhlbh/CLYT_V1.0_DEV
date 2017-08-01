@@ -1,11 +1,11 @@
 <ng-container *showItDevice="['desktop', 'tablet']">
 
-    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column">
+    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
                 <img width="50px" [src]="config?.Logo">
-                <span>Trưởng khoa</span>
+                <span>{{config?.ThuongHieu}}</span>
             </div>
             <div class="controls">
                 <div class="user">
@@ -18,34 +18,40 @@
                         Đăng ký ngay
                     </a>
                 </div>
-                <div class="controls">
+                <!-- <div class="controls">
                     <a href="#" class="view-all" (click)="showMore()">
                       <span>Xem tất cả</span>
                       <i class="fa fa-fw fa-arrow-circle-o-right"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="search-home">
                 <div class="input-control text full-size">
                     <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                    <input type="text" placeholder="Tìm dịch vụ...">
+                    <input type="text" placeholder="Tìm dịch vụ..." [(ngModel)]="searchKey">
                 </div>
             </div>
         </div>
 
 
-        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+        <div [@pageAnimation]="runAnimation" fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
             <main class="fxs-panorama">
                 <div class="fxs-blade-content-container">
                     <ng-container *ngFor="let blocks of menus">
                         <div class="block" [id]="blocks?.Id">
                             <div class="title">
                                 {{blocks.Ten}}
-                                <span class="count-apps">(13 apps)</span>
+                                <span class="count-apps">({{blocks?.items.length}} apps)</span>
                             </div>
+                            <!-- <div class="bottom">
+                                <a (click)="showMore(blocks?.Id)" class="show-all">
+                                  <span>Xem tất cả</span>
+                                  <i class="fa fa-fw fa-arrow-circle-o-right"></i>
+                                </a>
+                            </div> -->
                             <div class="body">
                                 <div class="grid">
-                                    <ng-container *ngFor="let item of blocks?.items">
+                                    <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
                                         <div class="grid-item" [ngClass]="
                                 {
                                     'grid-item-w2': item.chieuRong==2,
@@ -53,23 +59,36 @@
                                     'grid-item-h3': item.chieuCao==3,
                                     'grid-item-h2': item.chieuCao==2
                                 }">
+                                            <!-- style ô vuông là icon  -->
+                                            <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]">
+                                                <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
+                                                    <img src="{{item?.IconText}}">
+                                                </div>
+                                                <h4 class="title-label-icon">
+                                                    <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span> {{item.Ten}}
+                                                </h4>
+                                            </a>
+                                            <!-- style ô vuông là ảnh  -->
+                                            <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                                <h4 class="title-label">
+                                                    <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span> {{item.Ten}}
+                                                </h4>
 
-                                            <div class="child" [routerLink] = "['/apps', item.url]">
-                                                   <h4 class="title-label">
-                                                       <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
-                                                       {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
-                                                    </h4>
+                                            </a>
+
+                                            <!-- style ô vuông là dạng slide  -->
+                                            <div class="child" *ngIf="item?.style == 'Slide'">
+                                                <h4 class="title-label">
+                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.Ten}}
+                                                </h4>
                                             </div>
-
                                         </div>
                                     </ng-container>
                                 </div>
-                            </div>
-                            <div class="bottom">
-                                <a (click)="showMore(blocks?.Id)" class="show-all">
-                                  <span>Xem tất cả</span>
-                                  <i class="fa fa-fw fa-arrow-circle-o-right"></i>
-                                </a>
                             </div>
                         </div>
                     </ng-container>
@@ -79,29 +98,27 @@
     </div>
 </ng-container>
 
-<ng-container *showItDevice="['mobile']">
-    <nav fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" style="height:60px;  position:fixed;top:0;left:0;right:0"
-        fxLayoutAlign="space-between center">
-        <div class="brand" fxLayout="row" fxLayoutAlign="start center" style="padding:0 20px;">
-            <img width="25px" [src]="config?.Logo">
-            <div style="color:white">{{config?.ThuongHieu}}</div>
+<!-- <ng-container *showItDevice="['mobile']">
+    <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
+        <div class="m-brand" fxLayout="row" fxLayoutAlign="start center">
+            <img class="m-brand-logo" [src]="config?.Logo">
+            <div>{{config?.ThuongHieu | uppercase}}</div>
         </div>
         <div>
-            <a href="#" style="color:white; padding:0 20px;">Menu</a>
+            <a href="#" style="padding:0 20px;">Menu</a>
         </div>
     </nav>
-    <div style="padding-top:60px">
+    <div class="m-content">
         <ng-container *ngFor="let blocks of menus">
-            <h5 style="padding: 0 10px; background-color:#eee; margin:0; padding:10px">{{blocks?.Ten | uppercase}}</h5>
+            <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
             <ng-container *ngFor="let item of blocks?.items">
-                <div class="item" fxLayout="row" fxLayoutAlign="start center" style="padding:5px; margin-left:10px; border-bottom:solid 1px #eee">
-                    <div style="width:60px; height:60px; border-radius:30px;background-position: center center;background-repeat: no-repeat;background-size: cover; "
-                        [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
+                <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
+                    <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
                     <div style="padding:0 10px">
                         {{item?.Ten}}
                     </div>
-                </div>
+                </a>
             </ng-container>
         </ng-container>
     </div>
-</ng-container>
+</ng-container> -->

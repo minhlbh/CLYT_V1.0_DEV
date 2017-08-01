@@ -48,8 +48,8 @@
 
 .grid {
     /* height: 100%; */
-      /* width: 145px;   */
-      min-width: 435px;
+    /* width: 145px;   */
+    min-width: 435px;
 }
 
 .grid-item {
@@ -75,20 +75,26 @@
     height: 435px;
 }
 
-
+.icon-background img{
+    width: 58px;
+    padding-top: 10px;
+}
 
 .child {
     padding: 5px;
     background-color: gold;
-    min-width: 100%;
-    min-height: 135px;
+    width: 100%;
+    height: 100%;
     position: relative;
     float: left;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .screen {
-    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
+    background: linear-gradient(to bottom, #10b2e1 0%, #26ceeb 31%, #b9e8fa 100%);
     min-width: 100%;
     height: 100%;
     position: relative;
@@ -106,7 +112,25 @@
     padding: 13px 10px 10px 10px;
     z-index: 9999;
     color: #fff;
-    background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, .60) 0, rgba(255, 255, 255, .05) 100%);
+    font-size: 18px;
+}
+
+.title-label .icon img {
+    width: 20px;
+}
+
+
+
+.title-label-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 13px 10px 10px 10px;
+    z-index: 9999;
+    color: #fff;
     font-size: 18px;
 }
 
@@ -131,6 +155,8 @@
     top: 0;
     left: 0;
 }
+
+
 
 
 
@@ -216,6 +242,179 @@
     color: #323232;
 }
 
+.logo {
+    float: left;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.m-nav {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    /* box-shadow: 0 7px 6px -6px #999; */
+}
+
+.m-brand {
+    padding: 0 20px;
+}
+
+.m-brand-logo {
+    margin-right: 10px;
+    width: 42px;
+    height: 42px;
+}
+
+.m-header-title {
+    padding: 0 10px;
+    background-color: #eee;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+}
+
+.input-control .icon-search {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    color: #777;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-control input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    color: #323232;
+}
+
+.controls {
+    float: right;
+    margin-top: 45px;
+    margin-right: 50px;
+}
+
+.controls .user {
+    float: left;
+    margin-right: 2px;
+}
+
+.controls .user .name-user {
+    background: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 4px;
+    color: #323232;
+}
+
+
+/* Mobile css */
+
+.m-nav {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    /* box-shadow: 0 7px 6px -6px #999; */
+}
+
+.m-brand {
+    padding: 0 20px;
+}
+
+.m-brand-logo {
+    margin-right: 10px;
+    width: 42px;
+    height: 42px;
+}
+
+.m-header-title {
+    padding: 0 10px;
+    background-color: #eee;
+    margin: 0;
+    padding: 10px
+}
+
+.m-content {
+    padding-top: 60px;
+}
+
+.m-item {
+    padding: 5px;
+    margin-left: 10px;
+    border-bottom: solid 1px #eee;
+}
+
+.m-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+}
+/*
+.m-body{
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+     background: url('https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg');
+    background-repeat: no-repeat;
+     background-position: top right;
+     background-attachment:fixed;
+     background-size: cover;
+} */
+    .m-body {
+			background: url(https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+.m-content {
+    padding-top:60px;
+
+}
+
+.m-content {
+    padding-top: 60px;
+}
+
+.m-item {
+    padding: 5px;
+    margin-left: 10px;
+    border-bottom: solid 1px #eee;
+}
+
+.m-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .controls .user .sign-up-now {
     background: #0f9cb3;
     color: #fff;
@@ -256,53 +455,3 @@
     font-size: 25px;
     float: left;
 }
-
-
-
-
-
-@media only screen and (max-width: 1100px) {
-.header {
-    width: 1000px;
-}
-}
-
-
-@media only screen and (max-height: 930px) {
-
-}
-
-
-
-@media only screen and (max-height: 630px) {
-.grid-item {
-    width: 110px;
-    height: 110px;
-}
-
-.grid-item-w2 {
-    width: 220px;
-}
-
-.grid-item-w3 {
-    width: 330px;
-}
-
-.grid-item-h2 {
-    height: 220px;
-}
-
-.grid-item-h3 {
-    height: 330px;
-}
-
-.title-label {
-    font-size: 12px;
-}
-
-.body {
-    height: 335px;
-}
-
-}
-
