@@ -1,6 +1,6 @@
 <ng-container *showItDevice="['desktop', 'tablet']">
 
-    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
+    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column"  [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
@@ -28,7 +28,7 @@
             <div class="search-home">
                 <div class="input-control text full-size">
                     <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                    <input type="text" placeholder="Tìm dịch vụ..." [(ngModel)]="searchKey">
+                    <input type="text" placeholder="Tìm dịch vụ..."  [(ngModel)]="searchKey">
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                             </div> -->
                             <div class="body">
                                 <div class="grid">
-                                    <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
+                                    <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey" >
                                         <div class="grid-item" [ngClass]="
                                 {
                                     'grid-item-w2': item.chieuRong==2,
@@ -60,25 +60,26 @@
                                     'grid-item-h2': item.chieuCao==2
                                 }">
                                             <!-- style ô vuông là icon  -->
-                                            <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]"
-                                                fxLayout="column" fxLayoutAlign="start center">
-                                                <div class="icon-background">
-                                                    <img src="{{item?.IconText}}">
-                                                </div>
-                                                <div>
-                                                    <h4 class="title-label-icon">
-                                                        <span class="icon">
-                                                        <img src="{{item?.IconText}}" aria-hidden="true">
-                                                    </span> {{item.Ten}}
-                                                    </h4>
-                                                </div>
-                                            </a>
-                                            <!-- style ô vuông là ảnh  -->
-                                            <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                            <a class="child" *ngIf="item?.style == 'Icon'"
+                                             [style.background-color]="item?.mauNen"
+                                             [routerLink]="['/apps', item?.url]"
+                                             [ngStyle]="{
+                                                'background-image': 'url('+ item?.IconText +')',
+                                                'background-size': '75px'}">
                                                 <h4 class="title-label">
                                                     <span class="icon">
                                                         <img src="{{item?.IconText}}" aria-hidden="true">
-                                                    </span> {{item.Ten}}
+                                                    </span>                                                    {{item.Ten}}
+                                                </h4>
+                                            </a>
+                                            <!-- style ô vuông là ảnh  -->
+                                            <a class="child" *ngIf="item?.style == 'Image'"
+                                                [routerLink]="['/apps', item?.url]"
+                                                [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                                <h4 class="title-label">
+                                                    <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span>                                                   {{item.Ten}}
                                                 </h4>
 
                                             </a>
@@ -86,7 +87,7 @@
                                             <!-- style ô vuông là dạng slide  -->
                                             <div class="child" *ngIf="item?.style == 'Slide'">
                                                 <h4 class="title-label">
-                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.Ten}}
+                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                 {{item.Ten}}
                                                 </h4>
                                             </div>
                                         </div>

@@ -58,24 +58,9 @@
     padding: 5px;
     transition: all 0.4s ease-in-out;
 }
-.grid-item .title-label {
-    font-size: 14px;
-}
-
-.grid-item .title-label-icon {
-    font-size: 14px;
-}
 
 .grid-item-w2 {
     width: 290px;
-}
-
-.grid-item-w2 .title-label{
-    font-size: 18px;
-}
-
-.grid-item-w2 .title-label-icon{
-    font-size: 18px;
 }
 
 .grid-item-w3 {
@@ -113,11 +98,6 @@
     background-size: cover;
 }
 
-.icon-background img{
-    padding-top: 12px;
-    width: 48px;
-}
-
 .title-label {
     position: absolute;
     bottom: 0;
@@ -128,27 +108,11 @@
     z-index: 9999;
     color: #fff;
     background: linear-gradient(to top, rgba(0, 0, 0, .60) 0, rgba(255, 255, 255, .05) 100%);
-    font-weight: 600;
-
+    font-size: 18px;
 }
+
 .title-label .icon img {
     width: 20px;
-}
-
-.title-label-icon .icon img {
-    width: 20px;
-}
-
-.title-label-icon {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;
-    padding: 13px 10px 10px 10px;
-    z-index: 9999;
-    color: #fff;
-    font-weight: 600;
 }
 
 .wrapper {
