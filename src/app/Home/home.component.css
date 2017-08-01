@@ -138,25 +138,110 @@
     margin-left: 80px;
 }
 
+.logo img {
+    float: left;
+    width: 70px;
+    height: 70px;
+}
+
+.logo span {
+    float: left;
+    margin: 15px 0 15px 5px;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.search-home {
+    padding: 45px 5px 45px 80px;
+    width: 300px;
+    float: right;
+}
+
+.input-control {
+    display: inline-block;
+    min-height: 34px;
+    height: 35px;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+}
+
+.input-control .icon-search {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    color: #777;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-control input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    color: #323232;
+}
+
+.controls {
+    float: right;
+    margin-top: 45px;
+    margin-right: 50px;
+}
+
+.controls .user {
+    float: left;
+    margin-right: 2px;
+}
+
+.controls .user .name-user {
+    background: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 4px;
+    color: #323232;
+}
+
+.logo {
+    float: left;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
 .m-nav {
-    height:60px;
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     color: white;
     /* box-shadow: 0 7px 6px -6px #999; */
 }
-.m-brand {
-    padding:0 10px;
 
+.m-brand {
+    padding: 0 20px;
 }
+
 .m-brand-logo {
     margin-right: 10px;
     width: 42px;
     height: 42px;
 }
+
 .m-header-title {
+    padding: 0 10px;
+    background-color: #eee;
     margin: 0;
     line-height: 1;
     position: relative;
@@ -280,4 +365,66 @@
 .m-content {
     padding-top:60px;
 
+}
+    padding: 10px
+}
+
+.m-content {
+    padding-top: 60px;
+}
+
+.m-item {
+    padding: 5px;
+    margin-left: 10px;
+    border-bottom: solid 1px #eee;
+}
+
+.m-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
+
+.controls .user a {
+    text-decoration: none;
+}
+
+.bottom {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.show-all {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0f9cb3;
+    float: left;
+    cursor: pointer;
+}
+
+.show-all span {
+    margin: 2px 5px;
+    float: left;
+}
+
+.show-all i {
+    margin: 0 5px 0 0;
+    font-size: 25px;
+    float: left;
 }

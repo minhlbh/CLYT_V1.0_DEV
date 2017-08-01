@@ -68,7 +68,11 @@ body {
 }
 
 .fxs-sidebar {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> fix
     position: relative;
     font-size: 13px;
     border-right-width: 1px;

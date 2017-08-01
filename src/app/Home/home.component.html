@@ -122,24 +122,7 @@
                         {{item?.Ten}}
                     </div>
                 </a>
-                <div class="search-mb">
-                    <span (click) = "searchState=!searchState" class="glyphicon glyphicon-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        aria-hidden="true"></span>
-                </div>
-            </div>
-        </nav>
-        <div class="m-content">
-            <ng-container *ngFor="let blocks of menus">
-                <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
-                <ng-container *ngFor="let item of blocks?.items">
-                    <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
-                        <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
-                        <div class="title-services">
-                            {{item?.Ten}}
-                        </div>
-                    </a>
-                </ng-container>
             </ng-container>
-        </div>
+        </ng-container>
     </div>
 </ng-container>
