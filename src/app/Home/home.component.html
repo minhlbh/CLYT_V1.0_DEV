@@ -102,26 +102,43 @@
 </ng-container>
 
 <ng-container *showItDevice="['mobile']">
-    <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
-        <div class="m-brand" fxLayout="row" fxLayoutAlign="start center">
-            <img class="m-brand-logo" [src]="config?.Logo">
-            <div>{{config?.ThuongHieu | uppercase}}</div>
-        </div>
-        <div>
-            <a href="#" style="padding:0 20px;">Menu</a>
-        </div>
-    </nav>
-    <div class="m-content">
-        <ng-container *ngFor="let blocks of menus">
-            <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
-            <ng-container *ngFor="let item of blocks?.items">
-                <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
-                    <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
-                    <div style="padding:0 10px">
-                        {{item?.Ten}}
-                    </div>
+    <div class="m-body">
+        <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
+            <div *ngIf="!searchState" class="m-brand" fxLayout="row" fxLayoutAlign="start center">
+                <img class="m-brand-logo" [src]="config?.Logo">
+                <div>{{config?.ThuongHieu | uppercase}}</div>
+            </div>
+            <div *ngIf="searchState" class="input-control mb-home">
+                <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Tìm dịch vụ...">
+            </div>
+            <div>
+                <a href="#" class="account">
+                    <span class="glyphicon glyphicon-user dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true"></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>Đăng nhập</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>Đăng ký</a></li>
+                </ul>
                 </a>
+                <div class="search-mb">
+                    <span (click) = "searchState=!searchState" class="glyphicon glyphicon-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-hidden="true"></span>
+                </div>
+            </div>
+        </nav>
+        <div class="m-content">
+            <ng-container *ngFor="let blocks of menus">
+                <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
+                <ng-container *ngFor="let item of blocks?.items">
+                    <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
+                        <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
+                        <div class="title-services">
+                            {{item?.Ten}}
+                        </div>
+                    </a>
+                </ng-container>
             </ng-container>
-        </ng-container>
+        </div>
     </div>
 </ng-container>
