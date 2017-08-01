@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ResponsiveModule } from 'ng2-responsive';
 
 import { HomeComponent } from './home.component';
 import { SettingService } from '../Share/Services/setting.service';
@@ -19,7 +20,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     imports: [
         CommonModule,
         Routing,
-        FlexLayoutModule
+        FlexLayoutModule,
+        ResponsiveModule
     ],
     providers: [
         SettingService

@@ -1,76 +1,22 @@
-<div class="screen">
-    <div class="header">
-        <div class="brand">
+<ng-container *showItDevice="['desktop', 'tablet']">
 
-            <div class="brand-logo">
-                <img class="brand-logo-img" src="assets/images/logo-startscreen.png">
+    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column"  [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
+
+        <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
+            <div class="logo">
+                <img width="50px" [src]="config?.Logo">
+                <span>{{config?.ThuongHieu}}</span>
             </div>
-            <div class="brand-title">Trưởng Khoa</div>
-
-        </div>
-        <!-- searchbox, đăng kí, đăng nhập -->
-        <div class="area-controls">
-            <div class="user">
-                <span *ngIf="this.auth" class="name-user">{{this.auth.HoVaTen}}</span>
-                <span *ngIf="this.auth" class="avt fa fa-fw fa-user" style="cursor: pointer;"></span>
-                <a *ngIf="!this.auth" routerLink='/login' class="name-user bt-sign-up">
-          <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
-          Đăng nhập
-        </a>
-                <a *ngIf="!this.auth" routerLink='/register' class="sign-up-now bt-sign-up">
-          <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
-          Đăng ký ngay
-        </a>
-            </div>
-            <button (click)="logOut()" *ngIf="this.auth" class="settings fa fa-fw fa-power-off" style="cursor: pointer;"></button>
-        </div>
-        <div class="search-top">
-            <div class="input-control text full-size" data-role="input">
-                <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                <input type="text" placeholder="Tìm kiếm dịch vụ...">
-            </div>
-        </div>
-    </div>
-    <div class="content scroll">
-        <ng-container *ngFor="let blocks of menus">
-            <div class="block" [id]="blocks.Id">
-                <div class="title">{{blocks.Ten}}</div>
-                <div class="body">
-                    <div class="grid">
-                        <ng-container *ngFor="let item of blocks.items">
-                            <div class="grid-item" [ngClass]="
-                                {'grid-item-w2': item.chieuRong==2,
-                                'grid-item-w3': item.chieuRong==3,
-                                'grid-item-h3': item.chieuCao==3,
-                                'grid-item-h2': item.chieuCao==2
-                                }
-                                ">
-                                <!-- 1 ảnh 1 icon ảnh -->
-                                <div *ngIf="item?.style=='1 ảnh Icon ảnh'">
-                                    <div class="child" [ngStyle]="{'background-image': 'url('+ item.Images[0] +')'}">
-                                        {{item.ChieuRong}}
-                                        <h4 class="tile-label">
-                                            <span class="fa fa-fw {{item.IconText}}" aria-hidden="true"></span> {{item?.Ten}}
-                                        </h4>
-                                    </div>
-                                </div>
-
-                                <!-- 1 ảnh icon text -->
-                                <div *ngIf="item?.style=='1 ảnh Icon text'">
-                                    <div class="child">
-                                        {{item.ChieuRong}}
-                                        <div class="tile-content iconic">
-                                            <a routerLink={{item.url}}><span class="fa fa-fw {{item.IconText}} icon"></span></a>
-                                        </div>
-                                        <h4 class="tile-label">
-                                            <span class="fa fa-fw {{item.IconText}}" aria-hidden="true"></span> {{item?.Ten}}
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </ng-container>
-
-                    </div>
+            <div class="controls">
+                <div class="user">
+                    <a href="#" class="name-user bt-sign-up">
+                        <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
+                        Đăng nhập
+                    </a>
+                    <a href="#" class="sign-up-now bt-sign-up">
+                        <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
+                        Đăng ký ngay
+                    </a>
                 </div>
                 <div class="controls">
                     <a href="#" class="view-all" (click)="showMore()">
@@ -79,8 +25,93 @@
                     </a>
                 </div>
             </div>
+            <div class="search-home">
+                <div class="input-control text full-size">
+                    <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+                    <input type="text" placeholder="Tìm dịch vụ...">
+                </div>
+            </div>
+        </div>
 
-        </ng-container>
 
+        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+            <main class="fxs-panorama">
+                <div class="fxs-blade-content-container">
+                    <ng-container *ngFor="let blocks of menus">
+                        <div class="block" [id]="blocks?.Id">
+                            <div class="title">
+                                {{blocks.Ten}}
+                                <span class="count-apps">({{blocks?.items.length}} apps)</span>
+                            </div>
+                            <!-- <div class="bottom">
+                                <a (click)="showMore(blocks?.Id)" class="show-all">
+                                  <span>Xem tất cả</span>
+                                  <i class="fa fa-fw fa-arrow-circle-o-right"></i>
+                                </a>
+                            </div> -->
+                            <div class="body">
+                                <div class="grid">
+                                    <ng-container *ngFor="let item of blocks?.items">
+                                        <div class="grid-item" [ngClass]="
+                                {
+                                    'grid-item-w2': item.chieuRong==2,
+                                    'grid-item-w3': item.chieuRong==3,
+                                    'grid-item-h3': item.chieuCao==3,
+                                    'grid-item-h2': item.chieuCao==2
+                                }">
+                                            <!-- style ô vuông là icon  -->
+                                            <div class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.IconText +')'}">
+                                                <h4 class="title-label">
+                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                </h4>
+                                            </div>
+                                            <!-- style ô vuông là ảnh  -->
+                                            <div class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                                <h4 class="title-label">
+                                                    <span class="icon"><img src="{{item?.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                </h4>
+
+                                            </div>
+
+                                            <!-- style ô vuông là dạng slide  -->
+                                            <div class="child" *ngIf="item?.style == 'Slide'">
+                                                <h4 class="title-label">
+                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </main>
+        </div>
     </div>
-</div>
+</ng-container>
+
+<ng-container *showItDevice="['mobile']">
+    <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
+        <div class="m-brand" fxLayout="row" fxLayoutAlign="start center">
+            <img class="m-brand-logo" [src]="config?.Logo">
+            <div>{{config?.ThuongHieu | uppercase}}</div>
+        </div>
+        <div>
+            <a href="#" style="padding:0 20px;">Menu</a>
+        </div>
+    </nav>
+    <div class="m-content">
+        <ng-container *ngFor="let blocks of menus">
+            <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
+            <ng-container *ngFor="let item of blocks?.items">
+                <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
+                    <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
+                    <div style="padding:0 10px">
+                        {{item?.Ten}}
+                    </div>
+                </a>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-container>
