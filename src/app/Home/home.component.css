@@ -75,6 +75,11 @@
     height: 435px;
 }
 
+.icon-background img{
+    width: 58px;
+    padding-top: 10px;
+}
+
 .child {
     padding: 5px;
     background-color: gold;

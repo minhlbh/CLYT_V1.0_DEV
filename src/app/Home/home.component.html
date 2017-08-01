@@ -62,10 +62,10 @@
                                             <!-- style ô vuông là icon  -->
                                             <a class="child" *ngIf="item?.style == 'Icon'"
                                              [style.background-color]="item?.mauNen"
-                                             [routerLink]="['/apps', item?.url]"
-                                             [ngStyle]="{
-                                                'background-image': 'url('+ item?.IconText +')',
-                                                'background-size': '75px'}">
+                                             [routerLink]="['/apps', item?.url]">
+                                             <div class="icon-background"  fxLayout="column" fxLayoutAlign="start center">
+                                                 <img src="{{item?.IconText}}">
+                                             </div>
                                                 <h4 class="title-label">
                                                     <span class="icon">
                                                         <img src="{{item?.IconText}}" aria-hidden="true">
