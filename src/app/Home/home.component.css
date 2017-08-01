@@ -263,7 +263,16 @@
 }
 
 
-
+.controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
 
 /* Mobile css */
 
