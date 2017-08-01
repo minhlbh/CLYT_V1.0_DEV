@@ -61,13 +61,14 @@ body {
     align-items: stretch;
     height: calc(100% - 40px);
     position: relative;
+    padding-right: 50px;
     z-index: 1;
     flex: 1 1 auto;
     min-height: 0;
 }
 
 .fxs-sidebar {
-    
+
     position: relative;
     font-size: 13px;
     border-right-width: 1px;
