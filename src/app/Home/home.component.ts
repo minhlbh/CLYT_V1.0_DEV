@@ -26,12 +26,13 @@ export class HomeComponent implements OnInit {
         this.settingService.getFirstConfig().subscribe(() => {
             this.menus = this.settingService.getMenu();
             this.config = this.settingService.getConfig();
-            console.log(this.menus);
             setTimeout(() => {
                 HomeObject.byWidth('all');
                 // this.showMore();
             }, 0);
         });
+
+        console.log(this.menus.MauDam);
 
     }
     showMore(id) {
