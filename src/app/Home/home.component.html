@@ -54,9 +54,9 @@
                                     'grid-item-h2': item.chieuCao==2
                                 }">
 
-                                            <div class="child">
+                                            <div class="child" [routerLink] = "['/apps', item.url]">
                                                    <h4 class="title-label">
-                                                       <span class="fa fa-fw fa-medkit icon-title-label" aria-hidden="true"></span>
+                                                       <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
                                                        {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
                                                     </h4>
                                             </div>

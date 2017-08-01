@@ -84,6 +84,7 @@
     min-height: 135px;
     position: relative;
     float: left;
+    cursor: pointer;
 }
 
 .screen {
@@ -107,6 +108,10 @@
     color: #fff;
     background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
     font-size: 18px;
+}
+
+.body .grid .grid-item .child .title-label .icon img{
+    width: 20px;
 }
 
 
