@@ -18,12 +18,12 @@
                         Đăng ký ngay
                     </a>
                 </div>
-                <div class="controls">
+                <!-- <div class="controls">
                     <a href="#" class="view-all" (click)="showMore()">
                       <span>Xem tất cả</span>
                       <i class="fa fa-fw fa-arrow-circle-o-right"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="search-home">
                 <div class="input-control text full-size">
@@ -60,18 +60,18 @@
                                     'grid-item-h2': item.chieuCao==2
                                 }">
                                             <!-- style ô vuông là icon  -->
-                                            <div class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.IconText +')'}">
+                                            <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.IconText +')'}">
                                                 <h4 class="title-label">
                                                     <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
                                                 </h4>
-                                            </div>
+                                            </a>
                                             <!-- style ô vuông là ảnh  -->
-                                            <div class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                            <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
                                                 <h4 class="title-label">
                                                     <span class="icon"><img src="{{item?.IconText}}" aria-hidden="true"></span>                                                    {{item.chieuRong}} - {{item.chieuCao}} - {{item.Ten}}
                                                 </h4>
 
-                                            </div>
+                                            </a>
 
                                             <!-- style ô vuông là dạng slide  -->
                                             <div class="child" *ngIf="item?.style == 'Slide'">

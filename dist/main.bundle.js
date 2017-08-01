@@ -1,4 +1,4 @@
-webpackJsonp([7],{
+webpackJsonp([6],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -16,8 +16,7 @@ var map = {
 	],
 	"./Tracuubenh/Tracuubenh.module": [
 		"../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts",
-		1,
-		0
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -36,6 +35,84 @@ webpackAsyncContext.id = "../../../../../src async recursive";
 
 /***/ }),
 
+/***/ "../../../../../src/app/Share/Pipes/safeHtml.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafeHtmlPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SafeHtmlPipe = (function () {
+    function SafeHtmlPipe(sanitizer) {
+        this.sanitizer = sanitizer;
+    }
+    SafeHtmlPipe.prototype.transform = function (html) {
+        return this.sanitizer.bypassSecurityTrustHtml(html);
+    };
+    return SafeHtmlPipe;
+}());
+SafeHtmlPipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'safeHtml'
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */]) === "function" && _a || Object])
+], SafeHtmlPipe);
+
+var _a;
+//# sourceMappingURL=safeHtml.pipe.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Pipes/safeStyle.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafeStylePipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SafeStylePipe = (function () {
+    function SafeStylePipe(sanitizer) {
+        this.sanitizer = sanitizer;
+    }
+    SafeStylePipe.prototype.transform = function (style) {
+        return this.sanitizer.bypassSecurityTrustStyle(style);
+    };
+    return SafeStylePipe;
+}());
+SafeStylePipe = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'safeStyle'
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */]) === "function" && _a || Object])
+], SafeStylePipe);
+
+var _a;
+//# sourceMappingURL=safeStyle.pipe.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/Share/Services/setting.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -50,6 +127,8 @@ webpackAsyncContext.id = "../../../../../src async recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingService; });
 /* unused harmony export MenuElement */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -71,10 +150,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
 var SettingService = (function () {
     function SettingService(http, document) {
         this.http = http;
         this.document = document;
+        this.itemValue = new __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__["Subject"]();
     }
     SettingService.prototype.getFirstConfig = function () {
         // ...using get request
@@ -83,6 +164,7 @@ var SettingService = (function () {
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
     SettingService.prototype.setMenu = function (data) {
+        this.itemValue.next(data);
         localStorage.setItem('app_menu', JSON.stringify(data));
     };
     SettingService.prototype.getMenu = function () {
@@ -195,8 +277,12 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_responsive__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Pipes_safeHtml_pipe__ = __webpack_require__("../../../../../src/app/Share/Pipes/safeHtml.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Share_Pipes_safeStyle_pipe__ = __webpack_require__("../../../../../src/app/Share/Pipes/safeStyle.pipe.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -210,7 +296,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // Services
+
+
+// Pipes
 
 
 var routes = [
@@ -226,7 +316,9 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__Share_Pipes_safeHtml_pipe__["a" /* SafeHtmlPipe */],
+            __WEBPACK_IMPORTED_MODULE_10__Share_Pipes_safeStyle_pipe__["a" /* SafeStylePipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -234,11 +326,12 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_6_ng2_responsive__["ResponsiveModule"]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */]
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
+        bootstrap: ([__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]])
     })
 ], AppModule);
 

@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([7],{
 
 /***/ "../../../../raw-loader/index.js!../../../../bootstrap/dist/js/bootstrap.min.js":
 /***/ (function(module, exports) {
@@ -17,7 +17,7 @@ module.exports = "/*! jQuery v3.2.1 | (c) JS Foundation and other contributors |
 /***/ "../../../../raw-loader/index.js!../../../../source-map-loader/index.js!../../../../../src/assets/js/home.js":
 /***/ (function(module, exports) {
 
-module.exports = "var HomeObject = (function () {\r\n    return {\r\n        byWidth: function () {\r\n            $('.grid').each(function (i, e) {\r\n                new Packery(e, {\r\n                    // options\r\n                    itemSelector: '.grid-item',\r\n                    gutter: 0,\r\n                    horizontal: false\r\n                });\r\n            });\r\n\r\n        },\r\n        byHeight: function (id) {\r\n            $('#'+id).each(function (i, e) {\r\n                new Packery(e, {\r\n                    // options\r\n                    itemSelector: '.grid-item',\r\n                    gutter: 0,\r\n                    horizontal: true\r\n                });\r\n            });\r\n        }\r\n    }\r\n})(HomeObject || {})\r\n"
+module.exports = "var HomeObject = (function () {\r\n    return {\r\n        byWidth: function (id) {\r\n            if (id == \"all\") {\r\n                $('.grid').each(function (i, e) {\r\n                    new Packery(e, {\r\n                        itemSelector: '.grid-item',\r\n                        gutter: 0,\r\n                        horizontal: false\r\n                    });\r\n                });\r\n            }\r\n            else {\r\n                $('#' + id).each(function (i, e) {\r\n                    new Packery(e, {\r\n                        itemSelector: '.grid-item',\r\n                        gutter: 0,\r\n                        horizontal: false\r\n                    });\r\n                });\r\n            }\r\n\r\n        },\r\n        byHeight: function (id) {\r\n            if (id == \"all\") {\r\n                $('.grid').each(function (i, e) {\r\n                    new Packery(e, {\r\n                        itemSelector: '.grid-item',\r\n                        gutter: 0,\r\n                        horizontal: true\r\n                    });\r\n                });\r\n            } else {\r\n                $('#' + id).each(function (i, e) {\r\n                    new Packery(e, {\r\n                        itemSelector: '.grid-item',\r\n                        gutter: 0,\r\n                        horizontal: true\r\n                    });\r\n                });\r\n            }\r\n\r\n        }\r\n    }\r\n})(HomeObject || {})\r\n"
 
 /***/ }),
 

@@ -48,8 +48,8 @@
 
 .grid {
     /* height: 100%; */
-      /* width: 145px;   */
-      min-width: 435px;
+    /* width: 145px;   */
+    min-width: 435px;
 }
 
 .grid-item {
@@ -75,19 +75,21 @@
     height: 435px;
 }
 
-
-
 .child {
     padding: 5px;
     background-color: gold;
-    min-width: 100%;
-    min-height: 135px;
+    width: 100%;
+    height: 100%;
     position: relative;
     float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .screen {
-    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
+    background: linear-gradient(to bottom, #10b2e1 0%, #26ceeb 31%, #b9e8fa 100%);
     min-width: 100%;
     height: 100%;
     position: relative;
@@ -105,16 +107,16 @@
     padding: 13px 10px 10px 10px;
     z-index: 9999;
     color: #fff;
-    background: linear-gradient(to top,rgba(0,0,0,.60) 0,rgba(255,255,255,.05) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, .60) 0, rgba(255, 255, 255, .05) 100%);
     font-size: 18px;
 }
 
-.title-label .icon img{
+.title-label .icon img {
     width: 20px;
 }
 
 .wrapper {
-    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
+    background: linear-gradient(to bottom, #10b2e1 0%, #26ceeb 31%, #b9e8fa 100%);
     min-width: 100%;
     height: 100%;
     min-height: 100%;
@@ -129,9 +131,6 @@
     top: 0;
     left: 0;
 }
-
-
-
 
 .logo {
     float: left;
@@ -215,53 +214,54 @@
 }
 
 
-
-
-
 /* Mobile css */
 
 .m-nav {
-    height:60px;
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     color: white;
     /* box-shadow: 0 7px 6px -6px #999; */
 }
-.m-brand {
-    padding:0 20px;
 
+.m-brand {
+    padding: 0 20px;
 }
+
 .m-brand-logo {
     margin-right: 10px;
     width: 42px;
     height: 42px;
 }
+
 .m-header-title {
     padding: 0 10px;
-    background-color:#eee;
-    margin:0;
-    padding:10px
+    background-color: #eee;
+    margin: 0;
+    padding: 10px
 }
 
 .m-content {
-    padding-top:60px;
+    padding-top: 60px;
 }
 
-.m-item{
-    padding:5px;
-    margin-left:10px;
-    border-bottom:solid 1px #eee;
+.m-item {
+    padding: 5px;
+    margin-left: 10px;
+    border-bottom: solid 1px #eee;
 }
+
 .m-cover {
-    width:60px;
-    height:60px;
-    border-radius:30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .controls .user .sign-up-now {
     background: #0f9cb3;
     color: #fff;
@@ -302,7 +302,3 @@
     font-size: 25px;
     float: left;
 }
-
-
-
-

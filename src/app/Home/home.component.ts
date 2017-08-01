@@ -31,9 +31,6 @@ export class HomeComponent implements OnInit {
                 // this.showMore();
             }, 0);
         });
-
-        console.log(this.menus.MauDam);
-
     }
     showMore(id) {
         this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];
