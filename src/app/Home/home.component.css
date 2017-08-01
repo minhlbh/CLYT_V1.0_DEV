@@ -261,35 +261,4 @@
 
 
 
-@media only screen and (max-height: 630px) {
-.grid-item {
-    width: 110px;
-    height: 110px;
-}
-
-.grid-item-w2 {
-    width: 220px;
-}
-
-.grid-item-w3 {
-    width: 330px;
-}
-
-.grid-item-h2 {
-    height: 220px;
-}
-
-.grid-item-h3 {
-    height: 330px;
-}
-
-.title-label {
-    font-size: 12px;
-}
-
-.body {
-    height: 335px;
-}
-
-}
 
