@@ -102,168 +102,6 @@
 }
 
 
-<<<<<<< HEAD
-.wrapper {
-    background: linear-gradient(to bottom, #10b2e1 0%,#26ceeb 31%,#b9e8fa 100%);
-    min-width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    padding-top: 100px;
-}
-
-.header {
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-
-
-
-.logo {
-    float: left;
-    margin-top: 30px;
-    margin-left: 80px;
-}
-
-.logo img {
-    float: left;
-    width: 70px;
-    height: 70px;
-}
-
-.logo span {
-    float: left;
-    margin: 15px 0 15px 5px;
-    font-size: 28px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.search-home {
-    padding: 45px 5px 45px 80px;
-    width: 300px;
-    float: right;
-}
-
-.input-control {
-    display: inline-block;
-    min-height: 34px;
-    height: 35px;
-    width: 100%;
-    position: relative;
-    vertical-align: middle;
-    margin: 0;
-    line-height: 1;
-    position: relative;
-}
-
-.input-control .icon-search {
-    position: absolute;
-    top: 11px;
-    left: 10px;
-    color: #777;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-}
-
-.input-control input {
-    padding: 9px 10px 9px 30px;
-    border: none;
-    height: 35px;
-    line-height: 35px;
-    width: 100%;
-    color: #323232;
-}
-
-.controls {
-    float: right;
-    margin-top: 45px;
-    margin-right: 50px;
-}
-
-.controls .user {
-    float: left;
-    margin-right: 2px;
-}
-
-.controls .user .name-user {
-    background: #fff;
-    padding: 7px 10px;
-    height: 35px;
-    line-height: 22px;
-    float: left;
-    margin-right: 4px;
-    color: #323232;
-}
-
-.controls .user .sign-up-now {
-    background: #0f9cb3;
-    color: #fff;
-    padding: 7px 10px;
-    height: 35px;
-    line-height: 22px;
-    float: left;
-    margin-right: 2px;
-    text-transform: uppercase;
-}
-
-.controls .user a {
-    text-decoration: none;
-}
-
-.bottom {
-    float: left;
-    width: 100%;
-    position: relative;
-}
-
-.show-all {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 20px;
-    color: #0f9cb3;
-    float: left;
-    cursor: pointer;
-}
-
-.show-all span {
-    margin: 2px 5px;
-    float: left;
-}
-
-.show-all i {
-    margin: 0 5px 0 0;
-    font-size: 25px;
-    float: left;
-}
-
-
-
-
-
-@media only screen and (max-width: 1100px) {
-.header {
-    width: 1000px;
-}
-}
-
-
-@media only screen and (max-height: 930px) {
-
-}
-
-
-
-
-=======
 
 
 
@@ -279,7 +117,7 @@
     /* box-shadow: 0 7px 6px -6px #999; */
 }
 .m-brand {
-    padding:0 20px;
+    padding:0 10px;
 
 }
 .m-brand-logo {
@@ -288,10 +126,10 @@
     height: 42px;
 }
 .m-header-title {
-    padding: 0 10px;
-    background-color:#eee;
-    margin:0;
-    padding:10px
+    margin: 0;
+    padding: 15px 10px 5px;
+    font-size: 14px;
+    color: #fff;
 }
 /*
 .m-body{
@@ -318,16 +156,95 @@
 }
 
 .m-item{
-    padding:5px;
-    margin-left:10px;
-    border-bottom:solid 1px #eee;
+    padding:5px 0;
+    margin:0 10px;
+    border-bottom:rgba(255,255,255,.3) 1px solid;
 }
 .m-cover {
-    width:60px;
-    height:60px;
+    min-width:60px;
+    min-height:60px;
     border-radius:30px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
->>>>>>> 6f584f88ed8e4a8e003f8568fdf0c4cf6d2d80a9
+
+.title-services {
+    padding: 0 10px;
+    color: #fff;
+}
+
+.account {
+    color: #fff;
+    padding: 0 15px;
+    font-size: 18px;
+    position: relative;
+    float: right;
+}
+
+.dropdown-menu {
+    top:42px;
+    right: -1px;
+    left: auto !important;
+    min-width: 120px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu .divider {
+    margin:0;
+}
+
+.dropdown-menu>li>a {
+    padding:7px 10px;
+}
+
+.dropdown-menu>li>a .icon {
+    margin-right: 5px;
+}
+
+.search-mb {
+    font-size: 18px;
+    float: right;
+    position: relative;
+    padding: 0 5px;
+}
+
+.search-mb:hover, .search-mb:focus {
+    border: none;
+} 
+
+.input-control.mb-home {
+    min-height: 34px;
+    height: 35px;
+    display: block;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+    position: relative;
+    flex-basis: calc(100% - 100px);
+}
+
+.input-control.mb-home .icon-search {
+    position: absolute;
+    top:11px;
+    left: 10px;
+    color: #777;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-control.mb-home input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+}
+
+    

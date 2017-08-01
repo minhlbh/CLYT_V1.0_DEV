@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
     menus: any;
     config: any;
     blockFull = false;
+    searchState = false;
     constructor(
         private settingService: SettingService
     ) {
