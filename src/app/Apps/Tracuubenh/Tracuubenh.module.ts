@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { Routes, RouterModule } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { ResponsiveModule } from 'ng2-responsive';
 
 
 // components
@@ -25,7 +26,8 @@ import { ForumService } from '../../Share/Services/forum.service';
 
 
 const routing: Routes = [
-    { path: '', component: TracuubenhComponent }
+    { path: '', component: TracuubenhComponent },
+    { path: ':id', component: TracuubenhComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
@@ -36,6 +38,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         InfiniteScrollModule,
         FormsModule,
         ReactiveFormsModule,
+        ResponsiveModule,
         HttpModule,
         ShareButtonsModule.forRoot(),
         Routing

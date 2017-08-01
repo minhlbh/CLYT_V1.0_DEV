@@ -1,8 +1,8 @@
-<div class="fxs-sidebar" [ngClass]="{'toggled': isToggled}">
-    <div class="col-left-fixed"  style="background: '{{menuElements.MauNhat}}'">
+<div class="fxs-sidebar" *showItDevice="['desktop','tablet']" [ngClass]="{'toggled': isToggled}">
+    <div class="col-left-fixed" [ngStyle]="{'background': menuElements.MauNhat}">
         <ul class="bt-collapsed">
             <li>
-                <a id="menu-toggle" (click)="isToggled = !isToggled">
+                <a id="menu-toggle" (click)="toggledLeft()">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </a>
             </li>
@@ -10,12 +10,44 @@
         <div class="list-services">
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
-                    <a [routerLink]="['/apps', item.url]" style="cursor: pointer">
-                              <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
+                    <a [routerLink] = "['/apps', item.url]"  style="cursor: pointer">
+                              <span class="icon"><img src="{{item.IconText}}" aria-hidden="true" style="width: 20px;"></span>
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
                         </a>
                 </li>
             </ul>
         </div>
     </div>
+</div>
+<!-- left-menu for mobile -->
+<!-- left-menu for mobile -->
+<!-- left-menu for mobile -->
+<div class="fxs-sidebar mobile" *showItDevice="['mobile','tablet']" [ngClass]="{'toggled': isToggled}">
+    <ul class="bt-collapsed mb">
+        <li>
+            <a id="menu-toggle" (click)="toggledLeft()">
+                              <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                        </a>
+        </li>
+    </ul>
+    <div class="col-left-fixed" [ngStyle]="{'background': menuElements.MauNhat}">
+        <ul class="bt-collapsed">
+            <li>
+                <a id="menu-toggle" (click)="toggledLeft()">
+                              <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                        </a>
+            </li>
+        </ul>
+        <div class="list-services">
+            <ul *ngFor="let element of menuElements">
+                <li *ngFor="let item of element?.items">
+                    <a [routerLink] = "['/apps', item.url]" style="cursor: pointer">
+                              <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
+                              <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>

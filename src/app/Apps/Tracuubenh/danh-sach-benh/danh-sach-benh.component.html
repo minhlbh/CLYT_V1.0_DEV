@@ -1,5 +1,5 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name">
+<app-window [icon]="iconText" [name]="name" [url]="url" *isDesktop >
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -33,7 +33,57 @@
                     </p>
                 </div>
                 <div *ngIf="!empty">
-                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" (click)="clickBenh(benh.Id)">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
+                <span class="title" >{{benh.Name}}</span>
+            </a>
+                </div>
+            </li>
+        </ul>
+        <!-- end col left 2 -->
+    </div>
+</app-window>
+
+
+<!-- danh sacsh benh for mobile -->
+<!-- danh sacsh benh for mobile -->
+<!-- danh sacsh benh for mobile -->
+<!-- Start col left 2 -->
+<app-window [icon]="iconText" [name]="name" [url]="url" *isMobile >
+    <div class="list-left-wr mobile">
+        <!-- searchbox -->
+        <div class="search-box-top">
+            <div class="input-control text full-size" data-role="input">
+                <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
+            </div>
+
+
+            <!-- đếm số bệnh -->
+            <div style="padding: 5px 0 0 0;">
+                <span style="font-size: 11px; color: #888; float: right;">
+          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
+        </span>
+            </div>
+
+            <hr class="thin bg-grayLighter">
+        </div>
+        <!-- loading gif -->
+        <div class="text-center">
+            <p class="lead" *ngIf="loading">
+                <img src="assets/66.gif">
+            </p>
+        </div>
+        <!-- list bệnh -->
+        <ul class="scrollbar-custom list" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()"
+            [scrollWindow]="false">
+            <li *ngIf="!loading">
+                <div class="text-center" *ngIf="empty">
+                    <p>
+                        <a> Không kết quả nào phù hợp</a>
+                    </p>
+                </div>
+                <div *ngIf="!empty">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
             </a>
                 </div>

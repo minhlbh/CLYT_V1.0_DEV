@@ -1,11 +1,14 @@
 <div class="window">
     <div class="title-window">
         <div style="display:flex; flex-direction: row;">
-            <div>
-                <span class="fa fa-fw {{icon}} icon"></span>
+            <div *ngIf="icon != null">
+                <span class="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>
             </div>
             <div>
                 <h3 class="big-title" style="cursor: default">{{name}}</h3>
+            </div>
+            <div>
+                <button (click) = "back()" class="bt-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
             </div>
 
         </div>

@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Renderer, Output, EventEmitter } from '@angular/core';
 import { SettingService } from '../../../Share/Services/setting.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-left-menu',
     templateUrl: './left-menu.component.html',
@@ -9,14 +10,27 @@ import { CommonModule } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.Default
 })
 export class LeftMenuComponent implements OnInit {
+    // @Output() toggled = new EventEmitter<boolean>();
+
     menuElements: any;
     isToggled = false;
     constructor(
         private settingService: SettingService,
-    ) { console.log(this.isToggled); }
+        private router: Router
+    ) { }
 
     ngOnInit() {
         this.menuElements = this.settingService.getMenu();
-
     }
+
+    toggledLeft() {
+        this.isToggled = !this.isToggled;
+        // this.toggled.emit(this.isToggled);
+        console.log(this.isToggled);
+    }
+
+    // navigation(url: string) {
+    //     console.log(url);
+    //     this.router.navigate(['/apps', url]);
+    // }
 }
