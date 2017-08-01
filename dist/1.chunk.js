@@ -659,7 +659,7 @@ var DanhSachBenhComponent = (function () {
         // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
         // const strUrl = (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
-        this.url = "apps";
+        this.url = 'apps';
         console.log(this.url);
     };
     DanhSachBenhComponent.prototype.doSearch = function (text) {
