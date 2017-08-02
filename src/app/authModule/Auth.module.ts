@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthModuleComponent } from './authModule.component';
+import { AuthComponent } from './Auth.component';
 import { SignInComponent } from './SignIn/SignIn.component';
 import { SignOutComponent } from './SignOut/SignOut.component';
 import { RegisterComponent } from './Register/Register.component';
@@ -16,12 +16,15 @@ const routing: Routes = [
     { path: 'forgotPass', component: ForgotPasswordComponent },
 ];
 
+const Routing: ModuleWithProviders = RouterModule.forChild(routing);
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    Routing
   ],
-  declarations: [AuthModuleComponent,
+  declarations: [AuthComponent,
     SignInComponent,
     SignOutComponent,
     RegisterComponent,
@@ -29,4 +32,4 @@ const routing: Routes = [
     ForgotPasswordComponent
 ]
 })
-export class AuthModuleModule { }
+export class AuthModule { }
