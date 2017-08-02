@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([7],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -6,17 +6,21 @@ webpackJsonp([6],{
 var map = {
 	"./Apps/apps.module": [
 		"../../../../../src/app/Apps/apps.module.ts",
-		2,
+		3,
 		0
 	],
 	"./Home/home.module": [
 		"../../../../../src/app/Home/home.module.ts",
-		3,
+		4,
 		0
 	],
 	"./Tracuubenh/Tracuubenh.module": [
 		"../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts",
 		1
+	],
+	"./authModule/authModule.module": [
+		"../../../../../src/app/authModule/authModule.module.ts",
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -305,6 +309,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
+    { path: 'auth', loadChildren: './authModule/authModule.module#AuthModuleModule' },
     { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routes, { preloadingStrategy: __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* PreloadAllModules */], useHash: true });
