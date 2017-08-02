@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FacebookModule } from 'ngx-facebook';
 
 // component
 import { AuthComponent } from './Auth.component';
@@ -30,6 +31,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     imports: [
         CommonModule,
         ReactiveFormsModule,
+        FacebookModule.forRoot(),
         FormsModule,
         Routing
     ],

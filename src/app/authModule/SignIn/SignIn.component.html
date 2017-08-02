@@ -19,6 +19,7 @@
         </label>
             </div>
             <button (click)="onLoginSubmit()" [style.background-color]="elements?.MauNhat">Đăng nhập</button>
+            <button (click)="loginWithFacebook()" [style.background-color]="elements?.MauNhat">Đăng nhập với Facebook</button>
             <div class="form-group">
                 <a [routerLink]="['/auth/register']">
            Tạo tài khoản mới
