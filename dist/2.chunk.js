@@ -106,7 +106,7 @@ var routing = [
     { path: 'signIn', component: __WEBPACK_IMPORTED_MODULE_6__SignIn_SignIn_component__["a" /* SignInComponent */] },
     { path: 'signOut', component: __WEBPACK_IMPORTED_MODULE_7__SignOut_SignOut_component__["a" /* SignOutComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_8__Register_Register_component__["a" /* RegisterComponent */] },
-    { path: 'verify', component: __WEBPACK_IMPORTED_MODULE_9__Verify_Verify_component__["a" /* VerifyComponent */] },
+    { path: 'verify/:IdU/:phone/:code', component: __WEBPACK_IMPORTED_MODULE_9__Verify_Verify_component__["a" /* VerifyComponent */] },
     { path: 'forgotPass', component: __WEBPACK_IMPORTED_MODULE_10__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */] },
     { path: 'changePass', component: __WEBPACK_IMPORTED_MODULE_11__ChangePass_ChangePass_component__["a" /* ChangePassComponent */] },
 ];
@@ -172,7 +172,8 @@ module.exports = "<p>\r\n  ChangePass works!\r\n</p>"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangePassComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -184,22 +185,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ChangePassComponent = (function () {
-    function ChangePassComponent() {
+    function ChangePassComponent(settingService) {
+        this.settingService = settingService;
+        this.elements = this.settingService.getConfig();
     }
     ChangePassComponent.prototype.ngOnInit = function () {
     };
     return ChangePassComponent;
 }());
 ChangePassComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-ChangePass',
         template: __webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
 ], ChangePassComponent);
 
+var _a;
 //# sourceMappingURL=ChangePass.component.js.map
 
 /***/ }),
@@ -212,7 +217,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".sign-in.wr {\r\n\t\t\tbackground-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n\t\t\tposition: absolute;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tdisplay: table;\r\n\t\t}\r\n\r\n\t\t.inner {\r\n\t\t\t    background: #fff;\r\n                position: fixed;\r\n                right: 0;\r\n                float: right;\r\n                height: 100%;\r\n                min-height: 640px;\r\n                width: 450px;\r\n                margin: 0;\r\n                padding: 40px 50px 0;\r\n                z-index: 1;\r\n                overflow: hidden;\r\n                text-align: center;\r\n\t\t}\r\n\r\n\t\t.middle {\r\n\t\t    display: table-cell;\r\n\t\t    vertical-align: middle;\r\n\t\t}\r\n         \r\n        .sign-in .logo {\r\n        \tfont-size: 25px;\r\n        \twidth: 100%;\r\n            float: left;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n\r\n        .sign-in .logo a {\r\n        \tcolor: #555;\r\n        }\r\n\r\n\t\t.sign-in .logo img {\r\n\t\t\twidth: 64px;\r\n\t\t\theight: 64px;\r\n\t\t\tfloat: left;\r\n\t\t}\r\n\r\n\t\t.sign-in .logo span {\r\n\t\t\tmargin:13px 10px;\r\n\t\t\tfloat: left;\r\n        }\r\n        \r\n        .sign-in .social {\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n        \r\n        .sign-in .social a {\r\n            width: 40px;\r\n            height: 40px;\r\n            float: left;\r\n            margin-right: 5px;\r\n            text-align: center;\r\n        }\r\n\r\n        .sign-in .social a:hover, .sign-in .social a:focus {\r\n            opacity: .9;\r\n        }\r\n\r\n        .sign-in .social a i {\r\n            font-size: 17px;\r\n            color: #fff;\r\n            padding: 12px 0 0 0;\r\n        }\r\n\r\n        .sign-in .social a.fb {\r\n            background: #467cbd;\r\n        }\r\n\r\n        .sign-in .social a.google {\r\n            background: #dc4e41;\r\n        }\r\n\r\n        .sign-in .social a.linkedin {\r\n            background: #0077b5;\r\n        }\r\n\r\n\t\t.sign-in .title {\r\n\t\t    padding: 0;\r\n\t\t    margin-top: 16px;\r\n\t\t    margin-bottom: 16px;\t\r\n\t\t    font-weight: 300;\r\n\t\t    font-size: 25px;\r\n            float: left;\r\n            color: #0f9cb3;    \r\n        }\r\n        \r\n        .sign-in input {\r\n            padding: 6px 10px;\r\n            border-width: 1px;\r\n            border-color: #666;\r\n            border-color: rgba(0,0,0,0.6);\r\n            height: 36px;\r\n            outline: none;\r\n            width: 100%;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .sign-in button {\r\n            background-color: #0f9cb3;\r\n            width: auto;\r\n            color: #fff;\r\n            text-align: center;\r\n            height: 36px;\r\n            padding: 4px 12px 4px 12px;\r\n            display: inline-block;\r\n            white-space: nowrap;\r\n            overflow: hidden;\r\n            vertical-align: middle;\r\n            text-overflow: ellipsis;\r\n            -ms-touch-action: manipulation;\r\n                touch-action: manipulation;\r\n            cursor: pointer;\r\n            margin-bottom: 16px;\r\n            box-shadow: none;\r\n            outline: none;\r\n            border: none;\r\n            float: left;\r\n            \r\n        }\r\n\r\n        .sign-in button:hover, .sign-in button:focus {\r\n            opacity: .8;\r\n        }\r\n\r\n        .sign-in .form-group {\r\n            margin-bottom: 16px;\r\n            font-size: 12px;\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .or {\r\n            width: 100%;\r\n            float: left;\r\n            font-size: 13px;\r\n            color: #666;\r\n            text-align: left;\r\n            margin-top: 12px;\r\n            font-weight: 400;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .sign-in .form-group .alert-text {\r\n            color: red;\r\n            text-align: left !important;\r\n            width: 100%;\r\n            float: left;\r\n            font-weight: 400;\r\n            line-height: 16px;\r\n            margin-top: 10px;\r\n            display: block;\r\n        }\r\n\r\n        .sign-in .form-group a {\r\n            font-size: 13px;\r\n            color: #0f9cb3;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .form-group a:hover {\r\n            text-decoration: none;\r\n            color: #777;\r\n        }\r\n\r\n        \r\n\r\n        \r\n\r\n        @media only screen and (max-width: 768px) {\r\n            .inner {\r\n                width: 100%;\r\n                padding: 30px 50px 0 20px;\r\n            }\r\n        }", ""]);
 
 // exports
 
@@ -225,7 +230,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  ForgotPassword works!\r\n</p>"
+module.exports = "<div class=\"sign-in wr\">\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Quên mật khẩu</h3>\r\n        <span _ngcontent-c2=\"\" class=\"or\">\r\n      Chúng tôi sẽ gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu.\r\n    </span>\r\n        <input type=\"text\" placeholder=\"Nhập số điện thoại\">\r\n\r\n        <button>Tiếp tục</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/signIn']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n\r\n    </div>\r\n\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -233,7 +238,8 @@ module.exports = "<p>\r\n  ForgotPassword works!\r\n</p>"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotPasswordComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -245,22 +251,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ForgotPasswordComponent = (function () {
-    function ForgotPasswordComponent() {
+    function ForgotPasswordComponent(settingService) {
+        this.settingService = settingService;
+        this.elements = this.settingService.getConfig();
     }
     ForgotPasswordComponent.prototype.ngOnInit = function () {
     };
     return ForgotPasswordComponent;
 }());
 ForgotPasswordComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-ForgotPassword',
         template: __webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
 ], ForgotPasswordComponent);
 
+var _a;
 //# sourceMappingURL=ForgotPassword.component.js.map
 
 /***/ }),
@@ -273,7 +283,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".sign-in.wr {\r\n\t\t\tbackground-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n\t\t\tposition: absolute;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tdisplay: table;\r\n\t\t}\r\n\r\n\t\t.inner {\r\n\t\t\t    background: #fff;\r\n                position: fixed;\r\n                right: 0;\r\n                float: right;\r\n                height: 100%;\r\n                min-height: 640px;\r\n                width: 450px;\r\n                margin: 0;\r\n                padding: 40px 50px 0;\r\n                z-index: 1;\r\n                overflow: hidden;\r\n                text-align: center;\r\n\t\t}\r\n\r\n\t\t.middle {\r\n\t\t    display: table-cell;\r\n\t\t    vertical-align: middle;\r\n\t\t}\r\n         \r\n        .sign-in .logo {\r\n        \tfont-size: 25px;\r\n        \twidth: 100%;\r\n            float: left;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n\r\n        .sign-in .logo a {\r\n        \tcolor: #555;\r\n        }\r\n\r\n\t\t.sign-in .logo img {\r\n\t\t\twidth: 64px;\r\n\t\t\theight: 64px;\r\n\t\t\tfloat: left;\r\n\t\t}\r\n\r\n\t\t.sign-in .logo span {\r\n\t\t\tmargin:13px 10px;\r\n\t\t\tfloat: left;\r\n        }\r\n        \r\n        .sign-in .social {\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n        \r\n        .sign-in .social a {\r\n            width: 40px;\r\n            height: 40px;\r\n            float: left;\r\n            margin-right: 5px;\r\n            text-align: center;\r\n        }\r\n\r\n        .sign-in .social a:hover, .sign-in .social a:focus {\r\n            opacity: .9;\r\n        }\r\n\r\n        .sign-in .social a i {\r\n            font-size: 17px;\r\n            color: #fff;\r\n            padding: 12px 0 0 0;\r\n        }\r\n\r\n        .sign-in .social a.fb {\r\n            background: #467cbd;\r\n        }\r\n\r\n        .sign-in .social a.google {\r\n            background: #dc4e41;\r\n        }\r\n\r\n        .sign-in .social a.linkedin {\r\n            background: #0077b5;\r\n        }\r\n\r\n\t\t.sign-in .title {\r\n\t\t    padding: 0;\r\n\t\t    margin-top: 16px;\r\n\t\t    margin-bottom: 16px;\t\r\n\t\t    font-weight: 300;\r\n\t\t    font-size: 25px;\r\n            float: left;\r\n            color: #0f9cb3;    \r\n        }\r\n        \r\n        .sign-in input {\r\n            padding: 6px 10px;\r\n            border-width: 1px;\r\n            border-color: #666;\r\n            border-color: rgba(0,0,0,0.6);\r\n            height: 36px;\r\n            outline: none;\r\n            width: 100%;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .sign-in button {\r\n            background-color: #0f9cb3;\r\n            width: auto;\r\n            color: #fff;\r\n            text-align: center;\r\n            height: 36px;\r\n            padding: 4px 12px 4px 12px;\r\n            display: inline-block;\r\n            white-space: nowrap;\r\n            overflow: hidden;\r\n            vertical-align: middle;\r\n            text-overflow: ellipsis;\r\n            -ms-touch-action: manipulation;\r\n                touch-action: manipulation;\r\n            cursor: pointer;\r\n            margin-bottom: 16px;\r\n            box-shadow: none;\r\n            outline: none;\r\n            border: none;\r\n            float: left;\r\n            \r\n        }\r\n\r\n        .sign-in button:hover, .sign-in button:focus {\r\n            opacity: .8;\r\n        }\r\n\r\n        .sign-in .form-group {\r\n            margin-bottom: 16px;\r\n            font-size: 12px;\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .or {\r\n            width: 100%;\r\n            float: left;\r\n            font-size: 13px;\r\n            color: #666;\r\n            text-align: left;\r\n            margin-top: 12px;\r\n            font-weight: 400;\r\n            margin-bottom: 10px;\r\n        }\r\n\r\n        .sign-in .form-group .alert-text {\r\n            color: red;\r\n            text-align: left !important;\r\n            width: 100%;\r\n            float: left;\r\n            font-weight: 400;\r\n            line-height: 16px;\r\n            margin-top: 10px;\r\n            display: block;\r\n        }\r\n\r\n        .sign-in .form-group a {\r\n            font-size: 13px;\r\n            color: #0f9cb3;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .form-group a:hover {\r\n            text-decoration: none;\r\n            color: #777;\r\n        }\r\n\r\n        .sign-in .form-group .checkbox {\r\n            cursor: pointer;\r\n            float: left;\r\n            margin: 0;\r\n            padding: 0;\r\n            position: relative\r\n        }\r\n\r\n        .sign-in .form-group .checkbox input {\r\n            width: 20px;\r\n            height: 20px;\r\n            margin: 3px 3px 0 0;\r\n            padding: 0;\r\n            float: left;\r\n            cursor: pointer;\r\n            color: #0f9cb3;\r\n            position: absolute;\r\n            left: 0;\r\n        }\r\n\r\n        .sign-in .form-group .checkbox span {\r\n            margin-left: 22px;\r\n            font-size: 14px;\r\n            font-weight: 400;\r\n            margin: 0 0 0 20px;\r\n            padding: 0;\r\n            text-align: left;\r\n            float: left\r\n        }\r\n\r\n        .sign-in .form-group .checkbox a {\r\n            float: none;\r\n        }\r\n\r\n        .sign-in .footer {\r\n            width: 100%;\r\n            position: absolute;\r\n            bottom: 0;\r\n            left: 0;\r\n            padding: 0 50px 5px;\r\n            background: rgba(255,255,255,0.3)\r\n        }\r\n\r\n        .sign-in .footer a {\r\n            color: #0f9cb3;\r\n        }\r\n\r\n        .sign-in .footer .form-group {\r\n            margin: 0;\r\n        }\r\n\r\n        .sign-in .footer a, .footer span {\r\n            padding: 0 15px 5px 0;\r\n            font-size: 12px;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .footer a:hover, .sign-in .footer a:focus {\r\n            text-decoration: none;\r\n        }\r\n\r\n        @media only screen and (max-width: 768px) {\r\n            .inner {\r\n                width: 100%;\r\n                padding: 20px 50px 0 20px;\r\n            }\r\n\r\n            .sign-in .logo {\r\n                margin-bottom: 0;\r\n            }\r\n\r\n            .sign-in .footer {\r\n                padding: 0 20px 5px;\r\n            }\r\n\r\n            .sign-in .form-group .checkbox input {\r\n                margin-top: 0;\r\n            }\r\n        }", ""]);
 
 // exports
 
@@ -286,7 +296,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authModule/Register/Register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  Register works!\r\n</p>"
+module.exports = "<div class=\"sign-in wr\">\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Đăng ký tài khoản</h3>\r\n        <div class=\"social\">\r\n            <a href=\"#\" class=\"fb\">\r\n        <i class=\"fa fa-fw fa-facebook\"></i>\r\n      </a>\r\n            <a href=\"#\" class=\"google\">\r\n        <i class=\"fa fa-fw fa-google-plus\"></i>\r\n      </a>\r\n            <a href=\"#\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a>\r\n        </div>\r\n        <span class=\"or\">Hoặc</span>\r\n        <form #f=\"ngForm\" (ngSubmit)=\"registerSubmit()\">\r\n            <input [formControl]=\"name\" type=\"text\" placeholder=\"Họ & tên\">\r\n            <input [formControl]=\"email\" type=\"text\" placeholder=\"Email\">\r\n            <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n            <input [formControl]=\"password\" type=\"password\" placeholder=\"Mật khẩu\">\r\n        </form>\r\n        <div class=\"form-group\">\r\n            <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Tôi đồng ý với <a href=\"#\">điều khoản sử dụng</a> và <a href=\"#\">chính sách bảo mật.</a></span>\r\n        </label>\r\n        </div>\r\n        <button (click) = \"registerSubmit()\">Tạo tài khoản</button>\r\n\r\n        <div class=\"footer\">\r\n            <div class=\"form-group\">\r\n                <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n"
 
 /***/ }),
 
@@ -295,6 +305,10 @@ module.exports = "<p>\r\n  Register works!\r\n</p>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -306,22 +320,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
 var RegisterComponent = (function () {
-    function RegisterComponent() {
+    function RegisterComponent(settingService, router, userService) {
+        this.settingService = settingService;
+        this.router = router;
+        this.userService = userService;
+        this.error = null;
+        this.name = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.phone = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.email = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.password = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.ConfirmPassword = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
     }
     RegisterComponent.prototype.ngOnInit = function () {
+    };
+    RegisterComponent.prototype.registerSubmit = function () {
+        var _this = this;
+        this.userService.register(this.name.value, this.email.value, this.phone.value, this.password.value).subscribe(function (data) {
+            console.log(data);
+            _this.router.navigate(['auth/verify', data.Id, data.Phone, data.Code]);
+        });
     };
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-Register',
+        selector: 'app-register',
         template: __webpack_require__("../../../../../src/app/authModule/Register/Register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/Register/Register.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__["a" /* UserService */]) === "function" && _c || Object])
 ], RegisterComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=Register.component.js.map
 
 /***/ }),
@@ -334,7 +370,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: fixed;\r\n    right: 0;\r\n    float: right;\r\n    height: 100%;\r\n    min-height: 580px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 70px 50px 0;\r\n    z-index: 1;\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 19px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 45px;\r\n    height: 45px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 9px 5px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 16px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n.sign-in .form-group .checkbox {\r\n    cursor: pointer;\r\n    float: left;\r\n    margin: 0;\r\n    padding: 0;\r\n    position: relative\r\n}\r\n\r\n.sign-in .form-group .checkbox input {\r\n    width: 20px;\r\n    height: 20px;\r\n    margin: 3px 3px 0 0;\r\n    padding: 0;\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #0f9cb3;\r\n    position: absolute;\r\n    left: 0;\r\n}\r\n\r\n.sign-in .form-group .checkbox span {\r\n    float: left;\r\n    margin-left: 22px;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n}\r\n\r\n.sign-in .footer {\r\n    width: 100%;\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    padding: 0 50px 5px;\r\n    background: rgba(255, 255, 255, 0.3)\r\n}\r\n\r\n.sign-in .footer a {\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in .footer .form-group {\r\n    margin: 0;\r\n}\r\n\r\n.sign-in .footer a,\r\n.footer span {\r\n    padding: 0 15px 5px 0;\r\n    font-size: 12px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .footer a:hover,\r\n.sign-in .footer a:focus {\r\n    text-decoration: none;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n    .sign-in .footer {\r\n        padding: 0 20px 5px;\r\n    }\r\n    .sign-in .form-group .checkbox input {\r\n        margin-top: 0;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: fixed;\r\n    right: 0;\r\n    float: right;\r\n    height: 100%;\r\n    min-height: 640px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 40px 50px 0;\r\n    z-index: 1;\r\n    overflow: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 25px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 64px;\r\n    height: 64px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 13px 10px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 16px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n.sign-in .form-group .checkbox {\r\n    cursor: pointer;\r\n    float: left;\r\n    margin: 0;\r\n    padding: 0;\r\n    position: relative\r\n}\r\n\r\n.sign-in .form-group .checkbox input {\r\n    width: 20px;\r\n    height: 20px;\r\n    margin: 3px 3px 0 0;\r\n    padding: 0;\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #0f9cb3;\r\n    position: absolute;\r\n    left: 0;\r\n}\r\n\r\n.sign-in .form-group .checkbox span {\r\n    float: left;\r\n    margin-left: 22px;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n}\r\n\r\n.sign-in .footer {\r\n    width: 100%;\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    padding: 0 50px 5px;\r\n    background: rgba(255, 255, 255, 0.3)\r\n}\r\n\r\n.sign-in .footer a {\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in .footer .form-group {\r\n    margin: 0;\r\n}\r\n\r\n.sign-in .footer a,\r\n.footer span {\r\n    padding: 0 15px 5px 0;\r\n    font-size: 12px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .footer a:hover,\r\n.sign-in .footer a:focus {\r\n    text-decoration: none;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n    .sign-in .footer {\r\n        padding: 0 20px 5px;\r\n    }\r\n    .sign-in .form-group .checkbox input {\r\n        margin-top: 0;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -514,7 +550,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".sign-in.wr {\r\n\t\t\tbackground-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n\t\t\tposition: absolute;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tdisplay: table;\r\n\t\t}\r\n\r\n\t\t.inner {\r\n\t\t\t    background: #fff;\r\n                position: fixed;\r\n                right: 0;\r\n                float: right;\r\n                height: 100%;\r\n                min-height: 640px;\r\n                width: 450px;\r\n                margin: 0;\r\n                padding: 40px 50px 0;\r\n                z-index: 1;\r\n                overflow: hidden;\r\n                text-align: center;\r\n\t\t}\r\n\r\n\t\t.middle {\r\n\t\t    display: table-cell;\r\n\t\t    vertical-align: middle;\r\n\t\t}\r\n         \r\n        .sign-in .logo {\r\n        \tfont-size: 25px;\r\n        \twidth: 100%;\r\n            float: left;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n\r\n        .sign-in .logo a {\r\n        \tcolor: #555;\r\n        }\r\n\r\n\t\t.sign-in .logo img {\r\n\t\t\twidth: 64px;\r\n\t\t\theight: 64px;\r\n\t\t\tfloat: left;\r\n\t\t}\r\n\r\n\t\t.sign-in .logo span {\r\n\t\t\tmargin:13px 10px;\r\n\t\t\tfloat: left;\r\n        }\r\n        \r\n        .sign-in .social {\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n        \r\n        .sign-in .social a {\r\n            width: 40px;\r\n            height: 40px;\r\n            float: left;\r\n            margin-right: 5px;\r\n            text-align: center;\r\n        }\r\n\r\n        .sign-in .social a:hover, .sign-in .social a:focus {\r\n            opacity: .9;\r\n        }\r\n\r\n        .sign-in .social a i {\r\n            font-size: 17px;\r\n            color: #fff;\r\n            padding: 12px 0 0 0;\r\n        }\r\n\r\n        .sign-in .social a.fb {\r\n            background: #467cbd;\r\n        }\r\n\r\n        .sign-in .social a.google {\r\n            background: #dc4e41;\r\n        }\r\n\r\n        .sign-in .social a.linkedin {\r\n            background: #0077b5;\r\n        }\r\n\r\n\t\t.sign-in .title {\r\n\t\t    padding: 0;\r\n\t\t    margin-top: 16px;\r\n\t\t    margin-bottom: 16px;\t\r\n\t\t    font-weight: 300;\r\n\t\t    font-size: 25px;\r\n            float: left;\r\n            color: #0f9cb3;    \r\n        }\r\n        \r\n        .sign-in input {\r\n            padding: 6px 10px;\r\n            border-width: 1px;\r\n            border-color: #666;\r\n            border-color: rgba(0,0,0,0.6);\r\n            height: 36px;\r\n            outline: none;\r\n            width: 100%;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .sign-in button {\r\n            background-color: #0f9cb3;\r\n            width: auto;\r\n            color: #fff;\r\n            text-align: center;\r\n            height: 36px;\r\n            padding: 4px 12px 4px 12px;\r\n            display: inline-block;\r\n            white-space: nowrap;\r\n            overflow: hidden;\r\n            vertical-align: middle;\r\n            text-overflow: ellipsis;\r\n            -ms-touch-action: manipulation;\r\n                touch-action: manipulation;\r\n            cursor: pointer;\r\n            margin-bottom: 16px;\r\n            box-shadow: none;\r\n            outline: none;\r\n            border: none;\r\n            float: left;\r\n            \r\n        }\r\n\r\n        .sign-in button:hover, .sign-in button:focus {\r\n            opacity: .8;\r\n        }\r\n\r\n        .sign-in .form-group {\r\n            margin-bottom: 16px;\r\n            font-size: 12px;\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .or {\r\n            width: 100%;\r\n            float: left;\r\n            font-size: 13px;\r\n            color: #666;\r\n            text-align: left;\r\n            margin-top: 12px;\r\n            font-weight: 400;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .sign-in .form-group .alert-text {\r\n            color: red;\r\n            text-align: left !important;\r\n            width: 100%;\r\n            float: left;\r\n            font-weight: 400;\r\n            line-height: 16px;\r\n            margin-top: 10px;\r\n            display: block;\r\n        }\r\n\r\n        .sign-in .form-group a {\r\n            font-size: 13px;\r\n            color: #0f9cb3;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .form-group a:hover {\r\n            text-decoration: none;\r\n            color: #777;\r\n        }\r\n\r\n        \r\n\r\n        \r\n\r\n        @media only screen and (max-width: 768px) {\r\n            .inner {\r\n                width: 100%;\r\n                padding: 30px 50px 0 20px;\r\n            }\r\n        }", ""]);
 
 // exports
 
@@ -527,7 +563,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authModule/Verify/Verify.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  Verify works!\r\n</p>"
+module.exports = "<div class=\"sign-in wr\">\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Xác thực tài khoản</h3>\r\n        <span _ngcontent-c2=\"\" class=\"or\">\r\n      Một tin nhắn chứa mã xác thực đã được gửi đến số điện thoại của bạn. Vui lòng kiểm tra và nhập mã xác thực.\r\n    </span>\r\n        <form #f=\"ngForm\">\r\n            <input [formControl]=\"verifyCode\" type=\"text\" placeholder=\"Nhập mã xác thực\">\r\n        </form>\r\n        <button (click)=\"verification()\">Hoàn tất</button>\r\n        <div class=\"form-group\">\r\n            <a href=\"#\">\r\n           Gửi lại mã xác thực\r\n         </a>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/register']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n\r\n    </div>\r\n\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -535,7 +571,11 @@ module.exports = "<p>\r\n  Verify works!\r\n</p>"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerifyComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -547,22 +587,51 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
 var VerifyComponent = (function () {
-    function VerifyComponent() {
+    function VerifyComponent(router, activedroute, userService, settingService) {
+        this.router = router;
+        this.activedroute = activedroute;
+        this.userService = userService;
+        this.settingService = settingService;
+        this.error = null;
+        this.IdU = null;
+        this.Phone = null;
+        this.verifyCode = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
     }
     VerifyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activedroute.params.subscribe(function (pars) {
+            _this.IdU = pars['IdU'];
+            _this.Phone = pars['phone'];
+        });
+    };
+    VerifyComponent.prototype.verification = function () {
+        var _this = this;
+        this.userService.verifyCode(this.verifyCode.value, this.Phone, this.IdU).subscribe(function (data) {
+            console.log(data);
+            _this.error = data;
+            if (data === 'Xác nhận Phone thành công') {
+                _this.router.navigate(['auth/signIn']);
+            }
+        });
     };
     return VerifyComponent;
 }());
 VerifyComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-Verify',
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        selector: 'app-verify',
         template: __webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _d || Object])
 ], VerifyComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=Verify.component.js.map
 
 /***/ }),

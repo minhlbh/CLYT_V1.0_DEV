@@ -36,6 +36,24 @@ var UserService = (function () {
         body.set('grant_type', 'password');
         return this.http.post("http://api.truongkhoa.com/token", body).map(function (response) { return response.json(); });
     };
+    // register
+    UserService.prototype.register = function (name, email, phone, password) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('HoVaTen', name);
+        body.set('Email', email);
+        body.set('Phone', phone);
+        body.set('Password', password);
+        return this.http.post(this.baseUrl + "Account/Register", body).map(function (response) { return response.json(); });
+    };
+    // verify
+    UserService.prototype.verifyCode = function (code, phone, idUser) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('Code', code);
+        body.set('PhoneNumber', phone);
+        return this.http.post(this.baseUrl + "Account/XacNhanPhone?IdU=" + idUser, body).map(function (response) { return response.json(); });
+    };
     // get & set token/localToken
     UserService.prototype.setTokenType = function (token_type) {
         this.tokenType = token_type;
