@@ -10,22 +10,22 @@ declare var HomeObject: any;
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
-    animations: [
-        trigger('pageAnimation', [
-            transition(':enter', [
-                query('.item', style({ transform: 'translateX(150px)', opacity: 0 })),
+    // animations: [
+    //     trigger('pageAnimation', [
+    //         transition(':enter', [
+    //             query('.grid-item', style({ transform: 'translateX(150px)', opacity: 0 })),
 
-                // query(
-                //     '.item', animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-                // ),
-                query('.item', [
-                    stagger(200, [
-                        animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-                    ])
-                ])
-            ]),
-        ])
-    ]
+    //             query(
+    //                 '.grid-item', animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
+    //             ),
+    //             query('.grid-item', [
+    //                 stagger(200, [
+    //                     animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
+    //                 ])
+    //             ])
+    //         ]),
+    //     ])
+    // ]
 })
 export class HomeComponent implements OnInit {
     public runAnimation = false;
