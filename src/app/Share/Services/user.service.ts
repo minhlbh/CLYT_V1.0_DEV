@@ -46,7 +46,7 @@ export class UserService {
     }
 
     refreshToken() {
-
+        return localStorage.setItem('auth', null);
     }
 
 }

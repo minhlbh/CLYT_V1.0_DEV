@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../Share/Services/user.service';
+import { SettingService } from '../../Share/Services/setting.service';
+import { element } from 'protractor';
 
 @Component({
     selector: 'app-signin',
@@ -13,17 +15,22 @@ export class SignInComponent implements OnInit {
     error: string = null;
     username: FormControl = new FormControl();
     password: FormControl = new FormControl();
+    elements: any;
 
     constructor(
         private router: Router,
+        private settingService: SettingService,
         private userService: UserService
-    ) { }
+    ) {
+        this.elements = this.settingService.getConfig();
+        console.log(this.elements.ThuongHieu);
+    }
 
     ngOnInit() {
     }
     // login function
     onLoginSubmit() {
-        console.log(this.username.value, this.password);
+        console.log(this.username.value, this.password.value);
         this.userService.login(this.username.value, this.password.value).subscribe(
             (data) => {
                 console.log(data.access_token);
