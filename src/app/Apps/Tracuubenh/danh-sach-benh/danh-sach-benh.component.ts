@@ -6,6 +6,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { FormControl } from '@angular/forms';
 import { SettingService } from '../../../Share/Services/setting.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,14 +15,10 @@ import { SettingService } from '../../../Share/Services/setting.service';
     styleUrls: ['./danh-sach-benh.component.css']
 })
 export class DanhSachBenhComponent implements OnInit {
-
-    @Output() showBenh = new EventEmitter<number>();
-
     menu: any;
     iconText: any;
     name: any;
     elements: any;
-
     DsBenh: Benh[];
     TongSoLuong: number;
     startBenh: number;
@@ -35,15 +32,16 @@ export class DanhSachBenhComponent implements OnInit {
     public loadMore = false;
     public isSearch = false;
     public page = 1;
+    private url: any;
     constructor(
         private benhService: BenhService,
+        private router: Router,
         private settingService: SettingService
     ) {
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
                 this.doSearch(event);
-                console.log(event);
                 // this.clickBenh(null);
             });
     }
@@ -57,11 +55,12 @@ export class DanhSachBenhComponent implements OnInit {
         });
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
-        // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
+        this.url =  'apps';
     }
-
+    // search bệnh
     doSearch(text: string) {
+        // no keyword catched => return all
         if (text === '') {
             this.isSearch = false;
             this.benhService.getBenh(1).subscribe(data => {
@@ -70,6 +69,7 @@ export class DanhSachBenhComponent implements OnInit {
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
             });
+        // return search results
         } else {
             this.isSearch = true;
             this.loading = true;
@@ -90,11 +90,12 @@ export class DanhSachBenhComponent implements OnInit {
             }, 1500);
         }
     }
-
-     clickBenh(id: number) {
-        this.showBenh.emit(id);
+    // navigate to chi-tiet-benh url with id
+     clickBenh(id) {
+        this.router.navigate(['tracuubenh/', id]);
     }
 
+    // load more onscroll
     onScroll() {
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;

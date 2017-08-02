@@ -1,4 +1,4 @@
-<app-window [name]="ChiTietBenh?.TenBenh">
+<app-window [name]="ChiTietBenh?.TenBenh" [url]="url">
     <!-- loading -->
     <div class="content-wr">
         <p class="lead" *ngIf="loading">
@@ -11,8 +11,8 @@
                 <div class="bt-bar">
                     <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o icon "></span>Đặt lịch khám</a>
                     <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md icon"></span>Phương pháp điều trị</a>
-                    <share-button class="bt-social facebook" [button]="fbButton"></share-button>
-                    <share-button class="bt-social google" [button]="gPlusButton"></share-button>
+                    <!-- <share-button class="bt-social facebook" [button]="fbButton"></share-button>
+                    <share-button class="bt-social google" [button]="gPlusButton"></share-button> -->
                 </div>
 
                 <hr class="thin bg-grayLighter">

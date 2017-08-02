@@ -26,7 +26,8 @@ import { ForumService } from '../../Share/Services/forum.service';
 
 
 const routing: Routes = [
-    { path: '', component: TracuubenhComponent }
+    { path: '', component: TracuubenhComponent },
+    { path: ':id', component: TracuubenhComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);

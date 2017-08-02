@@ -1,5 +1,5 @@
 <div class="fxs-sidebar" *showItDevice="['desktop','tablet']" [ngClass]="{'toggled': isToggled}">
-    <div class="col-left-fixed"  [ngStyle]="{'background': menuElements.MauNhat}">
+    <div class="col-left-fixed" [ngStyle]="{'background': menuElements.MauNhat}">
         <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="toggledLeft()">
@@ -10,7 +10,7 @@
         <div class="list-services">
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
-                    <a routerLink="{{item?.url}}" style="cursor: pointer">
+                    <a [routerLink] = "['/apps', item.url]"  style="cursor: pointer">
                               <span class="icon"><img src="{{item.IconText}}" aria-hidden="true" style="width: 20px;"></span>
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
                         </a>
@@ -41,8 +41,13 @@
         <div class="list-services">
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
+<<<<<<< HEAD
                     <a [routerLink]="['/apps', item.url]" style="cursor: pointer">
                               <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
+=======
+                    <a [routerLink] = "['/apps', item.url]" style="cursor: pointer">
+                              <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
+>>>>>>> e3606888e97e65ec2c8f76628fbe006795fb90e5
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
                         </a>
                 </li>
