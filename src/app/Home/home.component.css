@@ -298,6 +298,10 @@
     margin-right: 2px;
 }
 
+.controls .user a:hover, .controls .user a:focus {
+    text-decoration: none;
+}
+
 .controls .user .name-user {
     background: #fff;
     padding: 7px 10px;
@@ -466,4 +470,11 @@
     line-height: 35px;
     width: 100%;
     color: #323232;
+}
+
+
+@media only screen and (max-width: 1100px) {
+     .header {
+    width: 1000px;
+}
 }
