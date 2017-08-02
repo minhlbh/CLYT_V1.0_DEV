@@ -11,6 +11,10 @@
     margin-left: 80px;
     width: 435px;
 }
+.block:last-child {
+    margin-right: 50px !important;
+}
+
 
 .title {
     color: #ffffff;
@@ -144,7 +148,7 @@
     padding: 13px 10px 10px 10px;
     z-index: 9999;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .body .grid .grid-item .child .title-label .icon img{
@@ -261,34 +265,6 @@
     margin-left: 80px;
 }
 
-.m-nav {
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    /* box-shadow: 0 7px 6px -6px #999; */
-}
-
-.m-brand {
-    padding: 0 20px;
-}
-
-.m-brand-logo {
-    margin-right: 10px;
-    width: 42px;
-    height: 42px;
-}
-
-.m-header-title {
-    padding: 0 10px;
-    background-color: #eee;
-    margin: 0;
-    line-height: 1;
-    position: relative;
-}
-
 .input-control .icon-search {
     position: absolute;
     top: 11px;
@@ -333,55 +309,43 @@
 }
 
 
+.controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
+
 /* Mobile css */
 
 .m-nav {
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    height:60px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
     color: white;
     /* box-shadow: 0 7px 6px -6px #999; */
 }
-
 .m-brand {
-    padding: 0 20px;
-}
+    padding:0 10px;
 
+}
 .m-brand-logo {
     margin-right: 10px;
     width: 42px;
     height: 42px;
 }
-
 .m-header-title {
-    padding: 0 10px;
-    background-color: #eee;
     margin: 0;
-    padding: 10px
+    padding: 15px 10px 5px;
+    font-size: 14px;
+    color: #fff;
 }
-
-.m-content {
-    padding-top: 60px;
-}
-
-.m-item {
-    padding: 5px;
-    margin-left: 10px;
-    border-bottom: solid 1px #eee;
-}
-
-.m-cover {
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 /*
 .m-body{
     top:0;
@@ -406,62 +370,100 @@
 
 }
 
-.m-content {
-    padding-top: 60px;
-}
-
 .m-item {
-    padding: 5px;
-    margin-left: 10px;
-    border-bottom: solid 1px #eee;
+    padding:5px 0;
+    margin:0 10px;
+    border-bottom:rgba(255,255,255,.3) 1px solid;
 }
 
-.m-cover {
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.controls .user .sign-up-now {
-    background: #0f9cb3;
-    color: #fff;
-    padding: 7px 10px;
-    height: 35px;
-    line-height: 22px;
-    float: left;
-    margin-right: 2px;
-    text-transform: uppercase;
-}
-
-.controls .user a {
+.m-item:hover {
     text-decoration: none;
 }
 
-.bottom {
-    float: left;
-    width: 100%;
+.m-cover {
+    min-width:60px;
+    min-height:60px;
+    border-radius:30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.title-services {
+    padding: 0 10px;
+    color: #fff;
+}
+
+.account {
+    color: #fff;
+    padding: 0 15px;
+    font-size: 18px;
     position: relative;
+    float: right;
 }
 
-.show-all {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 20px;
-    color: #0f9cb3;
-    float: left;
-    cursor: pointer;
+.dropdown-menu {
+    top:42px;
+    right: -1px;
+    left: auto !important;
+    min-width: 120px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.show-all span {
-    margin: 2px 5px;
-    float: left;
+.dropdown-menu .divider {
+    margin:0;
 }
 
-.show-all i {
-    margin: 0 5px 0 0;
-    font-size: 25px;
-    float: left;
+.dropdown-menu>li>a {
+    padding:7px 10px;
+}
+
+.dropdown-menu>li>a .icon {
+    margin-right: 5px;
+}
+
+.search-mb {
+    font-size: 18px;
+    float: right;
+    position: relative;
+    padding: 0 5px;
+}
+
+.search-mb:hover, .search-mb:focus {
+    border: none;
+}
+
+.input-control.mb-home {
+    min-height: 34px;
+    height: 35px;
+    display: block;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+    position: relative;
+    flex-basis: calc(100% - 100px);
+}
+
+.input-control.mb-home .icon-search {
+    position: absolute;
+    top:11px;
+    left: 10px;
+    color: #777;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-control.mb-home input {
+    padding: 9px 10px 9px 30px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    color: #323232;
 }

@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
     config: any;
     searchKey: any;
     blockFull = false;
+    searchState = false;
     constructor(
         private settingService: SettingService
     ) {
