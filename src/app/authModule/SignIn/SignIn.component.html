@@ -19,10 +19,10 @@
             </a>
         </div>
         <span class="or">Hoặc</span>
-        <div class="form-group">
+        <div class="form-group" *ngIf="this.error != null">
             <span class="alert-text">
-                    Đảm bảo bạn đã nhập địa chỉ email đúng cách. Địa chỉ email thường giống như ai_do@example.com hoặc ai_do@example.onmicrosoft.com
-                </span>
+                    {{error}}
+            </span>
         </div>
         <form #f="ngForm">
             <input [formControl]="username" type="text" placeholder="Nhập email hoặc số điện thoại">

@@ -12,9 +12,11 @@ import { SignOutComponent } from './SignOut/SignOut.component';
 import { RegisterComponent } from './Register/Register.component';
 import { VerifyComponent } from './Verify/Verify.component';
 import { ForgotPasswordComponent } from './ForgotPassword/ForgotPassword.component';
+import { ChangePassComponent } from './ChangePass/ChangePass.component';
 
 // services
 import { UserService } from '../Share/Services/user.service';
+
 
 const routing: Routes = [
     { path: 'signIn', component: SignInComponent },
@@ -22,6 +24,7 @@ const routing: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'verify', component: VerifyComponent },
     { path: 'forgotPass', component: ForgotPasswordComponent },
+    { path: 'changePass', component: ChangePassComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
@@ -40,7 +43,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         SignOutComponent,
         RegisterComponent,
         VerifyComponent,
-        ForgotPasswordComponent
+        ForgotPasswordComponent,
+        ChangePassComponent
     ],
     providers: [
         UserService
