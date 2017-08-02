@@ -6,11 +6,6 @@
     flex: 0 0 auto;
     height: 100%;
     overflow-y: hidden;
-<<<<<<< HEAD
-    min-width: 435px;
-    margin: 10px;
-    transition: all 0.5s ease-in-out;
-=======
     margin: 10px;
     transition: all 0.5s ease-in-out;
     margin-left: 80px;
@@ -53,7 +48,6 @@
     float: left;
     position: relative;
     height: 445px;
->>>>>>> e3606888e97e65ec2c8f76628fbe006795fb90e5
 }
 
 .grid {
@@ -275,10 +269,6 @@
     position: absolute;
     top: 11px;
     left: 10px;
-<<<<<<< HEAD
-    position: absolute;
-=======
->>>>>>> e3606888e97e65ec2c8f76628fbe006795fb90e5
     color: #777;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
@@ -390,12 +380,6 @@
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-.controls .view-all i {
-    margin: 0 5px 0 0;
-    font-size: 25px;
-    float: left;
-=======
 .m-cover {
     min-width:60px;
     min-height:60px;
@@ -482,5 +466,4 @@
     line-height: 35px;
     width: 100%;
     color: #323232;
->>>>>>> e3606888e97e65ec2c8f76628fbe006795fb90e5
 }

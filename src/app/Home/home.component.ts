@@ -53,10 +53,6 @@ export class HomeComponent implements OnInit {
                 // this.showMore();
             }, 0);
         });
-<<<<<<< HEAD
-
-=======
->>>>>>> e3606888e97e65ec2c8f76628fbe006795fb90e5
     }
     showMore(id) {
         this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];
