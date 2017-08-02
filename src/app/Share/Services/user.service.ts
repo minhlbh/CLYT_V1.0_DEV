@@ -20,6 +20,28 @@ export class UserService {
         return this.http.post(`http://api.truongkhoa.com/token`, body).map((response: Response) => response.json());
     }
 
+    // register
+    register(name, email, phone, password) {
+        // tslint:disable-next-line:prefer-const
+        let body = new URLSearchParams();
+        body.set('HoVaTen', name);
+        body.set('Email', email);
+        body.set('Phone', phone);
+        body.set('Password', password);
+
+        return this.http.post(`${this.baseUrl}Account/Register`, body).map((response: Response) => response.json());
+    }
+
+    // verify
+    verifyCode(code, phone, idUser) {
+        // tslint:disable-next-line:prefer-const
+        let body = new URLSearchParams();
+        body.set('Code', code);
+        body.set('PhoneNumber', phone);
+        return this.http.post(`${this.baseUrl}Account/XacNhanPhone?IdU=` + idUser, body).map((response: Response) => response.json());
+    }
+
+
     // get & set token/localToken
     setTokenType(token_type: string) {
         this.tokenType = token_type;
