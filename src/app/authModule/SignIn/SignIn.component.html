@@ -7,7 +7,18 @@
 	         </a>
         </div>
         <h3 class="title">Đăng nhập</h3>
-
+        <div class="social">
+            <a class="fb" (click)="loginWithFacebook()">
+                <i class="fa fa-fw fa-facebook"></i>
+            </a>
+            <a href="#" class="google">
+                <i class="fa fa-fw fa-google-plus"></i>
+            </a>
+            <a href="#" class="linkedin">
+                <i class="fa fa-fw fa-linkedin"></i>
+            </a>
+        </div>
+        <span class="or">Hoặc</span>
         <div class="form-group">
             <span class="alert-text">
                     Đảm bảo bạn đã nhập địa chỉ email đúng cách. Địa chỉ email thường giống như ai_do@example.com hoặc ai_do@example.onmicrosoft.com
@@ -24,7 +35,6 @@
                 </label>
         </div>
         <button (click)="onLoginSubmit()" [style.background-color]="elements?.MauNhat">Đăng nhập</button>
-        <button (click)="loginWithFacebook()" [style.background-color]="elements?.MauNhat">Đăng nhập với Facebook</button>
         <div class="form-group">
             <a [routerLink]="['/auth/forgotPass']">
                     Quên mật khẩu
