@@ -43,10 +43,19 @@
 }
 
 .title-window .icon {
+<<<<<<< HEAD
   padding: 0;
   position: absolute;
   top:10px;
   left: 25px;
+=======
+    font-size: 20px;
+    margin-right: 5px;
+    position: absolute;
+    top: 6px;
+    left: 25px;
+    color: #fff;
+>>>>>>> origin/hiep.dev
 }
 
 .body {
@@ -54,3 +63,33 @@
   height: 100%;
 }
 
+.col-left-fixed ul li a .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    color: #fff;
+}
+
+/* button close */
+/* button close */
+/* button close */
+.bt-close {
+  background: none;
+  position: absolute;
+  top:0;
+  right:0;
+  padding: 3px 6px;
+  border: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.bt-close:hover {
+  background: #ce352c;
+}

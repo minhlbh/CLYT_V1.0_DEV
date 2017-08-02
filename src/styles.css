@@ -52,7 +52,6 @@ body {
     -webkit-flex: 0 0 auto;
     flex: 0 0 auto;
     font-size: 13px;
-    background-color: #1c1c1c;
     color: #fff;
 }
 
@@ -68,7 +67,7 @@ body {
 }
 
 .fxs-sidebar {
-    
+
     position: relative;
     font-size: 13px;
     border: none; 

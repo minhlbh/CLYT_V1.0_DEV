@@ -2,9 +2,15 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ResponsiveModule } from 'ng2-responsive';
+import { FormsModule } from '@angular/forms';
+
 
 import { HomeComponent } from './home.component';
+
 import { SettingService } from '../Share/Services/setting.service';
+
+import { HomeFilterPipe } from '../Share/Pipes/homeFilter.pipe';
 
 // Định nghĩa router riêng cho module này
 const routing: Routes = [
@@ -18,13 +24,16 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 @NgModule({
     imports: [
         CommonModule,
+        FormsModule,
         Routing,
-        FlexLayoutModule
+        FlexLayoutModule,
+        ResponsiveModule
     ],
     providers: [
         SettingService
     ],
     declarations: [
+        HomeFilterPipe,
         HomeComponent
     ]
 })
