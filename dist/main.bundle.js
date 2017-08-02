@@ -18,8 +18,13 @@ var map = {
 		"../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts",
 		1
 	],
+<<<<<<< HEAD
 	"./authModule/authModule.module": [
 		"../../../../../src/app/authModule/authModule.module.ts",
+=======
+	"./authModule/Auth.module": [
+		"../../../../../src/app/authModule/Auth.module.ts",
+>>>>>>> origin/hiep.dev
 		2
 	]
 };
@@ -309,7 +314,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
+<<<<<<< HEAD
     { path: 'auth', loadChildren: './authModule/authModule.module#AuthModuleModule' },
+=======
+    { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
+>>>>>>> origin/hiep.dev
     { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routes, { preloadingStrategy: __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* PreloadAllModules */], useHash: true });
