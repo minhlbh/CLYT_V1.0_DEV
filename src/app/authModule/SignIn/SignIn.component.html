@@ -24,7 +24,7 @@
                     {{error}}
             </span>
         </div>
-        <form #f="ngForm">
+        <form #f="ngForm" (ngSubmit)="onLoginSubmit()">
             <input [formControl]="username" type="text" placeholder="Nhập email hoặc số điện thoại">
             <input [formControl]="password" type="password" placeholder="Nhập mật khẩu">
         </form>
