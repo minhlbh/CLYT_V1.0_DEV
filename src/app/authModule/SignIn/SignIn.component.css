@@ -7,17 +7,18 @@
 		}
 
 		.inner {
-			    margin-left: auto;
-			    margin-right: auto;
-			    min-height: 364px;
-			    min-width: 320px;
-			    max-width: 412px;
-			    width: calc(100% - 40px);
-			    padding: 36px;
-			    margin-bottom: 28px;
-			    background-color: #fff;
-			    border: 1px solid #818c94;
-			    border: 1px solid rgba(0,0,0,0.4);
+			    background: #fff;
+                position: fixed;
+                right: 0;
+                float: right;
+                height: 100%;
+                width: 450px;
+                margin: 0;
+                padding: 70px 50px 0;
+                z-index: 1;
+                overflow-y: auto;
+                overflow-x: hidden;
+                text-align: center;
 		}
 
 		.middle {
@@ -26,23 +27,25 @@
 		}
 
         .sign-in .logo {
-        	font-size: 17px;
+        	font-size: 19px;
         	width: 100%;
-        	float: left;
+            float: left;
+            margin-bottom: 50px;
         }
+
 
         .sign-in .logo a {
         	color: #555;
         }
 
 		.sign-in .logo img {
-			width: 35px;
-			height: 35px;
+			width: 45px;
+			height: 45px;
 			float: left;
 		}
 
 		.sign-in .logo span {
-			margin:6px 5px;
+			margin:9px 5px;
 			float: left;
 		}
 
@@ -67,7 +70,7 @@
         }
 
         .sign-in button {
-            width: 100%;
+            width: auto;
             color: #fff;
             text-align: center;
             height: 36px;
@@ -80,10 +83,20 @@
             touch-action: manipulation;
             cursor: pointer;
             margin-bottom: 16px;
+            box-shadow: none;
+            outline: none;
+            border: none;
+            float: left;
+            transition: background 3s;
+            -moz-transition: background 3s;
+            -webkit-transition: background 3s;
+            -o-transition: background 3s;
+            transition-property: background;
+            transition-duration: 3s;
         }
 
         .sign-in button:hover, .sign-in button:focus {
-            opacity: .9;
+            opacity: .8;
         }
 
         .sign-in .form-group {
@@ -93,8 +106,19 @@
             float: left;
         }
 
+        .sign-in .form-group .alert-text {
+            color: red;
+            text-align: left !important;
+            width: 100%;
+            float: left;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
         .sign-in .form-group a {
             font-size: 13px;
+            color: #0f9cb3;
+            float: left;
         }
 
         .sign-in .form-group a:hover {
@@ -107,6 +131,7 @@
             float: left;
             margin: 0;
             padding: 0;
+            position: relative
         }
 
         .sign-in .form-group .checkbox input {
@@ -116,6 +141,9 @@
             padding: 0;
             float: left;
             cursor: pointer;
+            color: #0f9cb3;
+            position: absolute;
+            left: 0;
         }
 
         .sign-in .form-group .checkbox span {
@@ -123,4 +151,46 @@
             margin-left: 22px;
             font-size: 14px;
             font-weight: 400;
+        }
+
+        .sign-in .footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 50px 5px;
+            background: rgba(255,255,255,0.3)
+        }
+
+        .sign-in .footer a {
+            color: #0f9cb3;
+        }
+
+        .sign-in .footer .form-group {
+            margin: 0;
+        }
+
+        .sign-in .footer a, .footer span {
+            padding: 0 15px 5px 0;
+            font-size: 12px;
+            float: left;
+        }
+
+        .sign-in .footer a:hover, .sign-in .footer a:focus {
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .inner {
+                width: 100%;
+                padding: 100px 50px 0 20px;
+            }
+
+            .sign-in .footer {
+                padding: 0 20px 5px;
+            }
+
+            .sign-in .form-group .checkbox input {
+                margin-top: 0;
+            }
         }
