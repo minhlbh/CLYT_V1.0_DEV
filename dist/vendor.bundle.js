@@ -23817,25 +23817,25 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return AnimationBuilder; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return AnimationFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return AUTO_STYLE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return animate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AnimationBuilder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AnimationFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return AUTO_STYLE; });
+/* unused harmony export animate */
 /* unused harmony export animateChild */
 /* unused harmony export animation */
 /* unused harmony export group */
 /* unused harmony export keyframes */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return query; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return sequence; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return stagger; });
+/* unused harmony export query */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sequence; });
+/* unused harmony export stagger */
 /* unused harmony export state */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return style; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return transition; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return trigger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return style; });
+/* unused harmony export transition */
+/* unused harmony export trigger */
 /* unused harmony export useAnimation */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return NoopAnimationPlayer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return AnimationGroupPlayer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ɵPRE_STYLE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return NoopAnimationPlayer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return AnimationGroupPlayer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ɵPRE_STYLE; });
 /**
  * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
@@ -25167,11 +25167,11 @@ var ɵPRE_STYLE = '!';
 function optimizeGroupPlayer(players) {
     switch (players.length) {
         case 0:
-            return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* NoopAnimationPlayer */]();
+            return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* NoopAnimationPlayer */]();
         case 1:
             return players[0];
         default:
-            return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* ɵAnimationGroupPlayer */](players);
+            return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* ɵAnimationGroupPlayer */](players);
     }
 }
 function normalizeKeyframes(driver, normalizer, element, keyframes, preStyles, postStyles) {
@@ -25191,10 +25191,10 @@ function normalizeKeyframes(driver, normalizer, element, keyframes, preStyles, p
             if (prop !== 'offset') {
                 normalizedProp = normalizer.normalizePropertyName(normalizedProp, errors);
                 switch (normalizedValue) {
-                    case __WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* ɵPRE_STYLE */]:
+                    case __WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* ɵPRE_STYLE */]:
                         normalizedValue = preStyles[prop];
                         break;
-                    case __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */]:
+                    case __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */]:
                         normalizedValue = postStyles[prop];
                         break;
                     default:
@@ -25326,7 +25326,7 @@ var NoopAnimationDriver = (function () {
     };
     NoopAnimationDriver.prototype.animate = function (element, keyframes, duration, delay, easing, previousPlayers) {
         if (previousPlayers === void 0) { previousPlayers = []; }
-        return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* NoopAnimationPlayer */]();
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* NoopAnimationPlayer */]();
     };
     return NoopAnimationDriver;
 }());
@@ -25467,7 +25467,7 @@ function normalizeAnimationEntry(steps) {
     if (Array.isArray(steps)) {
         if (steps.length == 1)
             return steps[0];
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* sequence */])(steps);
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["a" /* sequence */])(steps);
     }
     return steps;
 }
@@ -26143,7 +26143,7 @@ var AnimationAstBuilderVisitor = (function () {
         var /** @type {?} */ timingAst = constructTimingAst(metadata.timings, context.errors);
         context.currentAnimateTimings = timingAst;
         var /** @type {?} */ styles;
-        var /** @type {?} */ styleMetadata = metadata.styles ? metadata.styles : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* style */])({});
+        var /** @type {?} */ styleMetadata = metadata.styles ? metadata.styles : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])({});
         if (styleMetadata.type == 5 /* Keyframes */) {
             styles = this.visitKeyframes(/** @type {?} */ (styleMetadata), context);
         }
@@ -26156,7 +26156,7 @@ var AnimationAstBuilderVisitor = (function () {
                 if (timingAst.easing) {
                     newStyleData['easing'] = timingAst.easing;
                 }
-                styleMetadata_1 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* style */])(newStyleData);
+                styleMetadata_1 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* style */])(newStyleData);
             }
             context.currentTime += timingAst.duration + timingAst.delay;
             var /** @type {?} */ styleAst = this.visitStyle(styleMetadata_1, context);
@@ -26186,7 +26186,7 @@ var AnimationAstBuilderVisitor = (function () {
         if (Array.isArray(metadata.styles)) {
             ((metadata.styles)).forEach(function (styleTuple) {
                 if (typeof styleTuple == 'string') {
-                    if (styleTuple == __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */]) {
+                    if (styleTuple == __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */]) {
                         styles.push(/** @type {?} */ (styleTuple));
                     }
                     else {
@@ -27261,8 +27261,8 @@ var TimelineBuilder = (function () {
         // We use `_globalTimelineStyles` here because there may be
         // styles in previous keyframes that are not present in this timeline
         Object.keys(this._globalTimelineStyles).forEach(function (prop) {
-            _this._backFill[prop] = _this._globalTimelineStyles[prop] || __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */];
-            _this._currentKeyframe[prop] = __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */];
+            _this._backFill[prop] = _this._globalTimelineStyles[prop] || __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */];
+            _this._currentKeyframe[prop] = __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */];
         });
         this._currentEmptyStepKeyframe = this._currentKeyframe;
     };
@@ -27286,7 +27286,7 @@ var TimelineBuilder = (function () {
             if (!_this._localTimelineStyles.hasOwnProperty(prop)) {
                 _this._backFill[prop] = _this._globalTimelineStyles.hasOwnProperty(prop) ?
                     _this._globalTimelineStyles[prop] :
-                    __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */];
+                    __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */];
             }
             _this._updateStyle(prop, val);
         });
@@ -27368,10 +27368,10 @@ var TimelineBuilder = (function () {
             var /** @type {?} */ finalKeyframe = copyStyles(keyframe, true);
             Object.keys(finalKeyframe).forEach(function (prop) {
                 var /** @type {?} */ value = finalKeyframe[prop];
-                if (value == __WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* ɵPRE_STYLE */]) {
+                if (value == __WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* ɵPRE_STYLE */]) {
                     preStyleProps.add(prop);
                 }
-                else if (value == __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */]) {
+                else if (value == __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */]) {
                     postStyleProps.add(prop);
                 }
             });
@@ -27490,7 +27490,7 @@ function flattenStyles(input, allStyles) {
     input.forEach(function (token) {
         if (token === '*') {
             allProperties = allProperties || Object.keys(allStyles);
-            allProperties.forEach(function (prop) { styles[prop] = __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */]; });
+            allProperties.forEach(function (prop) { styles[prop] = __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */]; });
         }
         else {
             copyStyles(/** @type {?} */ (token), false, styles);
@@ -27908,7 +27908,7 @@ var TimelineAnimationEngine = (function () {
             throw new Error("Unable to create the animation due to the following errors: " + errors.join("\n"));
         }
         autoStylesMap.forEach(function (styles, element) {
-            Object.keys(styles).forEach(function (prop) { styles[prop] = _this._driver.computeStyle(element, prop, __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */]); });
+            Object.keys(styles).forEach(function (prop) { styles[prop] = _this._driver.computeStyle(element, prop, __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */]); });
         });
         var /** @type {?} */ players = instructions.map(function (i) {
             var /** @type {?} */ styles = autoStylesMap.get(i.element);
@@ -28991,10 +28991,10 @@ var TransitionAnimationEngine = (function () {
         allPreviousPlayersMap.forEach(function (players) { return players.forEach(function (player) { return player.destroy(); }); });
         // PRE STAGE: fill the ! styles
         var /** @type {?} */ preStylesMap = allPreStyleElements.size ?
-            cloakAndComputeStyles(this.driver, enterNodesWithoutAnimations, allPreStyleElements, __WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* ɵPRE_STYLE */]) :
+            cloakAndComputeStyles(this.driver, enterNodesWithoutAnimations, allPreStyleElements, __WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* ɵPRE_STYLE */]) :
             new Map();
         // POST STAGE: fill the * styles
-        var /** @type {?} */ postStylesMap = cloakAndComputeStyles(this.driver, leaveNodesWithoutAnimations, allPostStyleElements, __WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* AUTO_STYLE */]);
+        var /** @type {?} */ postStylesMap = cloakAndComputeStyles(this.driver, leaveNodesWithoutAnimations, allPostStyleElements, __WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* AUTO_STYLE */]);
         var /** @type {?} */ rootPlayers = [];
         var /** @type {?} */ subPlayers = [];
         queuedInstructions.forEach(function (entry) {
@@ -29225,7 +29225,7 @@ var TransitionAnimationEngine = (function () {
             // FIXME (matsko): make sure to-be-removed animations are removed properly
             var /** @type {?} */ details = element[REMOVAL_FLAG];
             if (details && details.removedBeforeQueried)
-                return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* NoopAnimationPlayer */]();
+                return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* NoopAnimationPlayer */]();
             var /** @type {?} */ isQueriedElement = element !== rootElement;
             var /** @type {?} */ previousPlayers = flattenGroupPlayers((allPreviousPlayersMap.get(element) || EMPTY_PLAYER_ARRAY).map(function (p) { return p.getRealPlayer(); }));
             var /** @type {?} */ preStyles = preStylesMap.get(element);
@@ -29271,7 +29271,7 @@ var TransitionAnimationEngine = (function () {
         }
         // special case for when an empty transition|definition is provided
         // ... there is no point in rendering an empty animation
-        return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* NoopAnimationPlayer */]();
+        return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* NoopAnimationPlayer */]();
     };
     return TransitionAnimationEngine;
 }());
@@ -29285,7 +29285,7 @@ var TransitionAnimationPlayer = (function () {
         this.namespaceId = namespaceId;
         this.triggerName = triggerName;
         this.element = element;
-        this._player = new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* NoopAnimationPlayer */]();
+        this._player = new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* NoopAnimationPlayer */]();
         this._containsRealPlayer = false;
         this._queuedCallbacks = {};
         this._destroyed = false;
@@ -29623,7 +29623,7 @@ function flattenGroupPlayers(players) {
 function _flattenGroupPlayersRecur(players, finalPlayers) {
     for (var /** @type {?} */ i = 0; i < players.length; i++) {
         var /** @type {?} */ player = players[i];
-        if (player instanceof __WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* ɵAnimationGroupPlayer */]) {
+        if (player instanceof __WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* ɵAnimationGroupPlayer */]) {
             _flattenGroupPlayersRecur(player.players, finalPlayers);
         }
         else {
@@ -90120,12 +90120,12 @@ var BrowserAnimationBuilder = (function (_super) {
     BrowserAnimationBuilder.prototype.build = function (animation) {
         var /** @type {?} */ id = this._nextAnimationId.toString();
         this._nextAnimationId++;
-        var /** @type {?} */ entry = Array.isArray(animation) ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["g" /* sequence */])(animation) : animation;
+        var /** @type {?} */ entry = Array.isArray(animation) ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["a" /* sequence */])(animation) : animation;
         issueAnimationCommand(this._renderer, null, id, 'register', [entry]);
         return new BrowserAnimationFactory(id, this._renderer);
     };
     return BrowserAnimationBuilder;
-}(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["h" /* AnimationBuilder */]));
+}(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["b" /* AnimationBuilder */]));
 BrowserAnimationBuilder.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
 ];
@@ -90156,7 +90156,7 @@ var BrowserAnimationFactory = (function (_super) {
         return new RendererAnimationPlayer(this._id, element, options || {}, this._renderer);
     };
     return BrowserAnimationFactory;
-}(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["i" /* AnimationFactory */]));
+}(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["c" /* AnimationFactory */]));
 var RendererAnimationPlayer = (function () {
     /**
      * @param {?} id
@@ -90718,7 +90718,7 @@ function instantiateRendererFactory(renderer, engine, zone) {
     return new AnimationRendererFactory(renderer, engine, zone);
 }
 var SHARED_ANIMATION_PROVIDERS = [
-    { provide: __WEBPACK_IMPORTED_MODULE_3__angular_animations__["h" /* AnimationBuilder */], useClass: BrowserAnimationBuilder },
+    { provide: __WEBPACK_IMPORTED_MODULE_3__angular_animations__["b" /* AnimationBuilder */], useClass: BrowserAnimationBuilder },
     { provide: __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__["c" /* ɵAnimationStyleNormalizer */], useFactory: instantiateDefaultStyleNormalizer },
     { provide: __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__["a" /* ɵAnimationEngine */], useClass: InjectableAnimationEngine }, {
         provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["RendererFactory2"],

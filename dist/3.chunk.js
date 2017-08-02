@@ -31,7 +31,6 @@ module.exports = "<ng-container *showItDevice=\"['desktop', 'tablet']\">\r\n\r\n
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -42,7 +41,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 var HomeComponent = (function () {
@@ -80,21 +78,6 @@ HomeComponent = __decorate([
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/Home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Home/home.component.css")],
-        animations: [
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["a" /* trigger */])('pageAnimation', [
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["b" /* transition */])(':enter', [
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["c" /* query */])('.item', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["d" /* style */])({ transform: 'translateX(150px)', opacity: 0 })),
-                    // query(
-                    //     '.item', animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-                    // ),
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["c" /* query */])('.item', [
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* stagger */])(200, [
-                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* animate */])('800ms cubic-bezier(.35,0,.25,1)', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["d" /* style */])('*'))
-                        ])
-                    ])
-                ]),
-            ])
-        ]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
 ], HomeComponent);

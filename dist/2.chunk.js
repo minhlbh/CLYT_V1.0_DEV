@@ -1,5 +1,310 @@
 webpackJsonp([2],{
 
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/ForgotPassword/ForgotPassword.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/ForgotPassword/ForgotPassword.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  ForgotPassword works!\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/ForgotPassword/ForgotPassword.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotPasswordComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ForgotPasswordComponent = (function () {
+    function ForgotPasswordComponent() {
+    }
+    ForgotPasswordComponent.prototype.ngOnInit = function () {
+    };
+    return ForgotPasswordComponent;
+}());
+ForgotPasswordComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-ForgotPassword',
+        template: __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/ForgotPassword/ForgotPassword.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/ForgotPassword/ForgotPassword.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ForgotPasswordComponent);
+
+//# sourceMappingURL=ForgotPassword.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/Register/Register.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/Register/Register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  Register works!\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/Register/Register.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RegisterComponent = (function () {
+    function RegisterComponent() {
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    return RegisterComponent;
+}());
+RegisterComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-Register',
+        template: __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/Register/Register.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/Register/Register.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], RegisterComponent);
+
+//# sourceMappingURL=Register.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/SignIn/SignIn.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/SignIn/SignIn.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  SignIn works!\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/SignIn/SignIn.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SignInComponent = (function () {
+    function SignInComponent() {
+    }
+    SignInComponent.prototype.ngOnInit = function () {
+    };
+    return SignInComponent;
+}());
+SignInComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-SignIn',
+        template: __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/SignIn/SignIn.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/SignIn/SignIn.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], SignInComponent);
+
+//# sourceMappingURL=SignIn.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/SignOut/SignOut.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/SignOut/SignOut.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  SignOut works!\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/SignOut/SignOut.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignOutComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SignOutComponent = (function () {
+    function SignOutComponent() {
+    }
+    SignOutComponent.prototype.ngOnInit = function () {
+    };
+    return SignOutComponent;
+}());
+SignOutComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-SignOut',
+        template: __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/SignOut/SignOut.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/SignOut/SignOut.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], SignOutComponent);
+
+//# sourceMappingURL=SignOut.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/Verify/Verify.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/Verify/Verify.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  Verify works!\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Dangnhap+Dangky/Verify/Verify.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerifyComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var VerifyComponent = (function () {
+    function VerifyComponent() {
+    }
+    VerifyComponent.prototype.ngOnInit = function () {
+    };
+    return VerifyComponent;
+}());
+VerifyComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-Verify',
+        template: __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/Verify/Verify.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/Verify/Verify.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], VerifyComponent);
+
+//# sourceMappingURL=Verify.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/Apps/Layout/Layout.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -223,7 +528,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/nav/nav.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__ = __webpack_require__("../../../../../src/app/Apps/Layout/left-menu/left-menu.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__ = __webpack_require__("../../../../../src/app/Share/Components/empty/empty.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Dangnhap_Dangky_SignIn_SignIn_component__ = __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/SignIn/SignIn.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Dangnhap_Dangky_SignOut_SignOut_component__ = __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/SignOut/SignOut.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Dangnhap_Dangky_Register_Register_component__ = __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/Register/Register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Dangnhap_Dangky_Verify_Verify_component__ = __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/Verify/Verify.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Dangnhap_Dangky_ForgotPassword_ForgotPassword_component__ = __webpack_require__("../../../../../src/app/Apps/Dangnhap+Dangky/ForgotPassword/ForgotPassword.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppsModule", function() { return AppsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -238,6 +548,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // components
+
+
+
+
+
 
 
 
@@ -272,10 +587,15 @@ AppsModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
             __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__["a" /* NavComponent */],
             __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__["a" /* EmptyComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__["a" /* LeftMenuComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__["a" /* LeftMenuComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__Dangnhap_Dangky_SignOut_SignOut_component__["a" /* SignOutComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__Dangnhap_Dangky_SignIn_SignIn_component__["a" /* SignInComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__Dangnhap_Dangky_Register_Register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__Dangnhap_Dangky_Verify_Verify_component__["a" /* VerifyComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__Dangnhap_Dangky_ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_10__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_15__Share_Services_setting_service__["a" /* SettingService */]
         ]
     })
 ], AppsModule);
