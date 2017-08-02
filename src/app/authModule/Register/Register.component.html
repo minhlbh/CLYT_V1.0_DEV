@@ -1,3 +1,44 @@
-<p>
-  Register works!
-</p>
+<div class="sign-in wr">
+  <div class="inner">
+    <div class="logo">
+      <a [routerLink]="['']">
+	         	<img src="https://sharinglife.blob.core.windows.net/images/file_cfdebe4b-a453-4e80-a31f-31cfaea0edce.png">
+	         	<span>Trưởng khoa</span>
+	         </a>
+    </div>
+    <h3 class="title">Đăng ký tài khoản</h3>
+    <div class="social">
+      <a href="#" class="fb">
+        <i class="fa fa-fw fa-facebook"></i>
+      </a>
+      <a href="#" class="google">
+        <i class="fa fa-fw fa-google-plus"></i>
+      </a>
+      <a href="#" class="linkedin">
+        <i class="fa fa-fw fa-linkedin"></i>
+      </a>
+    </div>
+    <span class="or">Hoặc</span>
+    
+    <input type="text" placeholder="Họ & tên">
+    <input type="text" placeholder="Email">
+    <input type="number" placeholder="Số điện thoại">
+    <input type="password" placeholder="Mật khẩu">
+    <div class="form-group">
+      <label class="checkbox">
+          <input type="checkbox" checked>
+          <span>Tôi đồng ý với <a href="#">điều khoản sử dụng</a> và <a href="#">chính sách bảo mật.</a></span>
+        </label>
+    </div>
+    <button [routerLink]="['/auth/verify']">Tạo tài khoản</button>
+    
+    <div class="footer">
+      <div class="form-group">
+          <span>
+               ©2017 Truongkhoa.com
+          </span>
+      </div>
+  </div>
+
+
+</div>

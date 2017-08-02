@@ -1,7 +1,7 @@
 <div class="sign-in wr">
   <div class="inner">
     <div class="logo">
-      <a href="start-screen.html">
+      <a [routerLink]="['']">
 	         	<img src="https://sharinglife.blob.core.windows.net/images/file_cfdebe4b-a453-4e80-a31f-31cfaea0edce.png">
 	         	<span>Trưởng khoa</span>
 	         </a>
@@ -34,7 +34,7 @@
     </div>
     <button>Đăng nhập</button>
     <div class="form-group">    
-        <a href="#">
+        <a [routerLink]="['/auth/forgotPass']">
            Quên mật khẩu
          </a>
     </div>  
