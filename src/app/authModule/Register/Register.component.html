@@ -2,8 +2,8 @@
   <div class="inner">
     <div class="logo">
       <a [routerLink]="['']">
-	         	<img src="https://sharinglife.blob.core.windows.net/images/file_cfdebe4b-a453-4e80-a31f-31cfaea0edce.png">
-	         	<span>Trưởng khoa</span>
+	         	<img src="{{elements.Logo}}">
+	         	<span>{{elements.ThuongHieu}}</span>
 	         </a>
     </div>
     <h3 class="title">Đăng ký tài khoản</h3>
@@ -19,20 +19,22 @@
       </a>
     </div>
     <span class="or">Hoặc</span>
-    <div class="form-group">
-      <input type="text" placeholder="Họ & tên">
-    </div>
-    <div class="form-group">
-      <input type="text" placeholder="Email">
-    </div>
-    <div class="form-group warning">
-      <span class="alert-text">Số điện thoại không hợp lệ!</span>
-      <input type="text" placeholder="Số điện thoại">
-      <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
-    </div>
-    <div class="form-group">
-      <input type="password" placeholder="Mật khẩu">
-    </div>
+    <form #f="ngForm" (ngSubmit)="registerSubmit()">
+      <div class="form-group">
+        <input [formControl]="name" type="text" placeholder="Họ & tên">
+      </div>
+      <div class="form-group">
+        <input [formControl]="email" type="text" placeholder="Email">
+      </div>
+      <div class="form-group warning">
+        <span class="alert-text">Số điện thoại không hợp lệ!</span>
+        <input [formControl]="phone" type="text" placeholder="Số điện thoại">
+        <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
+      </div>
+      <div class="form-group">
+        <input [formControl]="password" type="password" placeholder="Mật khẩu">
+      </div>
+    </form>
     <div class="form-group">
       <label class="checkbox">
           <input type="checkbox" checked>

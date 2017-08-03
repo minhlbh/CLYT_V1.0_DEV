@@ -1,70 +1,71 @@
-<div class="sign-in wr">
-  <div class="inner">
-    <div class="logo">
-      <a [routerLink]="['']">
-	         	<img src="https://sharinglife.blob.core.windows.net/images/file_cfdebe4b-a453-4e80-a31f-31cfaea0edce.png">
-	         	<span>Trưởng khoa</span>
+<div class="sign-in wr" *showItDevice="['desktop', 'tablet']">
+    <div class="inner">
+        <div class="logo">
+            <a [routerLink]="['']">
+	         	<img src="{{elements.Logo}}">
+	         	<span>{{elements.ThuongHieu}}</span>
 	         </a>
-    </div>
-    <h3 class="title">Đăng nhập</h3>
-    <div class="social">
-      <a href="#" class="fb">
+        </div>
+
+        <h3 class="title">Đăng nhập</h3>
+        <div class="social">
+            <a href="#" class="fb">
         <i class="fa fa-fw fa-facebook"></i>
       </a>
-      <a href="#" class="google">
+            <a href="#" class="google">
         <i class="fa fa-fw fa-google-plus"></i>
       </a>
-      <a href="#" class="linkedin">
+            <a href="#" class="linkedin">
         <i class="fa fa-fw fa-linkedin"></i>
       </a>
-    </div>
-    <span class="or">Hoặc</span>
-    <div class="form-group">
-      <span class="alert-text">
+        </div>
+        <span class="or">Hoặc</span>
+        <div class="form-group">
+            <span class="alert-text">
         Đảm bảo bạn đã nhập địa chỉ email đúng cách. Địa chỉ email thường giống như ai_do@example.com hoặc ai_do@example.onmicrosoft.com
       </span>
-    </div>
-    <div class="form-group warning">
-      <span class="alert-text">Số điện thoại không hợp lệ!</span>
-      <input type="text" placeholder="Nhập email hoặc số điện thoại">
-      <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
-    </div>
-    <div class="form-group">
-      <input type="password" placeholder="Nhập mật khẩu">
-    </div>
-    <div class="form-group">
-      <label class="checkbox">
+        </div>
+        <div class="form-group warning">
+            <span class="alert-text">Số điện thoại không hợp lệ!</span>
+            <input type="text" placeholder="Nhập email hoặc số điện thoại">
+            <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Nhập mật khẩu">
+        </div>
+        <div class="form-group">
+            <label class="checkbox">
           <input type="checkbox" checked>
           <span>Giữ tôi luôn đăng nhập</span>
         </label>
-    </div>
-    <button>Đăng nhập</button>
-    <div class="form-group">
-      <a [routerLink]="['/auth/forgotPass']">
+        </div>
+        <button>Đăng nhập</button>
+        <div class="form-group">
+            <a [routerLink]="['/auth/forgotPass']">
            Quên mật khẩu
          </a>
-    </div>
-    <div class="form-group">
-      <a href="#">
+        </div>
+        <div class="form-group">
+            <a href="#">
            Tạo tài khoản mới
          </a>
-    </div>
-    <div class="footer">
-      <div class="form-group">
-        <span>
+        </div>
+        <div class="footer">
+            <div class="form-group">
+                <span>
                ©2017 Truongkhoa.com
           </span>
-      </div>
-      <div class="form-group">
-        <a href="#">
+            </div>
+            <div class="form-group">
+                <a href="#">
           Chính sách bảo mật
         </a>
-        <a href="#">
+                <a href="#">
           Điều khoản sử dụng
         </a>
-        <div class="form-group">
+                <div class="form-group">
+                </div>
+            </div>
+
+
         </div>
-      </div>
-
-
-    </div>

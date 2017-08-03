@@ -1,20 +1,21 @@
 <div class="sign-in wr">
-  <div class="inner">
-    <div class="logo">
-      <a [routerLink]="['']">
-	         	<img src="https://sharinglife.blob.core.windows.net/images/file_cfdebe4b-a453-4e80-a31f-31cfaea0edce.png">
-	         	<span>Trưởng khoa</span>
+    <div class="inner">
+        <div class="logo">
+            <a [routerLink]="['']">
+	         	<img src="{{elements.Logo}}">
+	         	<span>{{elements.ThuongHieu}}</span>
 	         </a>
-    </div>
-    <h3 class="title">Xác thực tài khoản</h3>
-    <span _ngcontent-c2="" class="or">
+        </div>
+        <h3 class="title">Xác thực tài khoản</h3>
+        <span _ngcontent-c2="" class="or">
       Một tin nhắn chứa mã xác thực đã được gửi đến số điện thoại của bạn. Vui lòng kiểm tra và nhập mã xác thực.
     </span>
+<<<<<<< HEAD
     <div class="form-group">
-      <input type="text" placeholder="Nhập mã xác thực">
+      <input [formControl]="verifyCode" type="text" placeholder="Nhập mã xác thực">
     </div>
 
-    <button>Hoàn tất</button>
+    <button (click)="verification()">Hoàn tất</button>
     <div class="form-group">
       <a href="#">
            Gửi lại mã xác thực
@@ -30,3 +31,21 @@
 
 
 </div>
+=======
+        <form #f="ngForm">
+            <input [formControl]="verifyCode" type="text" placeholder="Nhập mã xác thực">
+        </form>
+        <button (click)="verification()">Hoàn tất</button>
+        <div class="form-group">
+            <a href="#">
+           Gửi lại mã xác thực
+         </a>
+        </div>
+        <div class="form-group">
+            <a [routerLink]="['/auth/register']">
+           Thoát
+         </a>
+        </div>
+    </div>
+</div>
+>>>>>>> origin/hiep.dev

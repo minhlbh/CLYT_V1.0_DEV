@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { SettingService } from '../Share/Services/setting.service';
 import { query, stagger, animate, style, transition, trigger } from '@angular/animations';
+import { UserService } from '../Share/Services/user.service';
+import { Router } from '@angular/router';
 
 
 declare var HomeObject: any;
@@ -34,8 +36,11 @@ export class HomeComponent implements OnInit {
     searchKey: any;
     blockFull = false;
     searchState = false;
+    auth: any;
     constructor(
-        private settingService: SettingService
+        private settingService: SettingService,
+        private router: Router,
+        private userService: UserService
     ) {
         this.settingService.itemValue.subscribe((data) => {
             console.log('abc', data);
@@ -53,7 +58,9 @@ export class HomeComponent implements OnInit {
                 // this.showMore();
             }, 0);
         });
+        this.auth = this.userService.getAuth();
     }
+
     showMore(id) {
         this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];
         setTimeout(() => {
