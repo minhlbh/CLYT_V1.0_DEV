@@ -71,14 +71,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_social_login__ = __webpack_require__("../../../../angular2-social-login/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Auth_component__ = __webpack_require__("../../../../../src/app/authModule/Auth.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__SignIn_SignIn_component__ = __webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SignOut_SignOut_component__ = __webpack_require__("../../../../../src/app/authModule/SignOut/SignOut.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Register_Register_component__ = __webpack_require__("../../../../../src/app/authModule/Register/Register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Verify_Verify_component__ = __webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ForgotPassword_ForgotPassword_component__ = __webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChangePass_ChangePass_component__ = __webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_responsive__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Auth_component__ = __webpack_require__("../../../../../src/app/authModule/Auth.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SignIn_SignIn_component__ = __webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SignOut_SignOut_component__ = __webpack_require__("../../../../../src/app/authModule/SignOut/SignOut.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Register_Register_component__ = __webpack_require__("../../../../../src/app/authModule/Register/Register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Verify_Verify_component__ = __webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ForgotPassword_ForgotPassword_component__ = __webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChangePass_ChangePass_component__ = __webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthModule", function() { return AuthModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -86,6 +88,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -103,12 +106,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // services
 
 var routing = [
-    { path: 'signIn', component: __WEBPACK_IMPORTED_MODULE_6__SignIn_SignIn_component__["a" /* SignInComponent */] },
-    { path: 'signOut', component: __WEBPACK_IMPORTED_MODULE_7__SignOut_SignOut_component__["a" /* SignOutComponent */] },
-    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_8__Register_Register_component__["a" /* RegisterComponent */] },
-    { path: 'verify/:IdU/:phone/:code', component: __WEBPACK_IMPORTED_MODULE_9__Verify_Verify_component__["a" /* VerifyComponent */] },
-    { path: 'forgotPass', component: __WEBPACK_IMPORTED_MODULE_10__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */] },
-    { path: 'changePass', component: __WEBPACK_IMPORTED_MODULE_11__ChangePass_ChangePass_component__["a" /* ChangePassComponent */] },
+    { path: 'signIn', component: __WEBPACK_IMPORTED_MODULE_7__SignIn_SignIn_component__["a" /* SignInComponent */] },
+    { path: 'signOut', component: __WEBPACK_IMPORTED_MODULE_8__SignOut_SignOut_component__["a" /* SignOutComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_9__Register_Register_component__["a" /* RegisterComponent */] },
+    { path: 'verify/:IdU/:phone/:code', component: __WEBPACK_IMPORTED_MODULE_10__Verify_Verify_component__["a" /* VerifyComponent */] },
+    { path: 'forgotPass', component: __WEBPACK_IMPORTED_MODULE_11__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */] },
+    { path: 'changePass', component: __WEBPACK_IMPORTED_MODULE_12__ChangePass_ChangePass_component__["a" /* ChangePassComponent */] },
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forChild(routing);
 // tslint:disable-next-line:prefer-const
@@ -136,18 +139,19 @@ AuthModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_social_login__["a" /* Angular2SocialLoginModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__["ResponsiveModule"],
             Routing
         ],
-        declarations: [__WEBPACK_IMPORTED_MODULE_5__Auth_component__["a" /* AuthComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__SignIn_SignIn_component__["a" /* SignInComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__SignOut_SignOut_component__["a" /* SignOutComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__Register_Register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__Verify_Verify_component__["a" /* VerifyComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__ChangePass_ChangePass_component__["a" /* ChangePassComponent */]
+        declarations: [__WEBPACK_IMPORTED_MODULE_6__Auth_component__["a" /* AuthComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__SignIn_SignIn_component__["a" /* SignInComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__SignOut_SignOut_component__["a" /* SignOutComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__Register_Register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__Verify_Verify_component__["a" /* VerifyComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__ChangePass_ChangePass_component__["a" /* ChangePassComponent */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_12__Share_Services_user_service__["a" /* UserService */]
+            __WEBPACK_IMPORTED_MODULE_13__Share_Services_user_service__["a" /* UserService */]
         ]
     })
 ], AuthModule);

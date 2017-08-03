@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Angular2SocialLoginModule } from 'angular2-social-login';
+import { ResponsiveModule } from 'ng2-responsive';
 
 // component
 import { AuthComponent } from './Auth.component';
@@ -49,6 +50,7 @@ let providers = {
         ReactiveFormsModule,
         Angular2SocialLoginModule,
         FormsModule,
+        ResponsiveModule,
         Routing
     ],
     declarations: [AuthComponent,
