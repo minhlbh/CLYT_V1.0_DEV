@@ -295,8 +295,11 @@ module.exports = "<div class=\"sign-in wr\">\r\n    <div class=\"inner\">\r\n   
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnterPhoneNumberComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -309,23 +312,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var EnterPhoneNumberComponent = (function () {
-    function EnterPhoneNumberComponent() {
-        this.phone = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormControl */]();
+    function EnterPhoneNumberComponent(settingService, router, activedroute, userService) {
+        this.settingService = settingService;
+        this.router = router;
+        this.activedroute = activedroute;
+        this.userService = userService;
+        this.phone = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
     }
     EnterPhoneNumberComponent.prototype.ngOnInit = function () {
     };
     return EnterPhoneNumberComponent;
 }());
 EnterPhoneNumberComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
         selector: 'app-enterphonenumber',
         template: __webpack_require__("../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
 ], EnterPhoneNumberComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=EnterPhoneNumber.component.js.map
 
 /***/ }),

@@ -1,3 +1,6 @@
+import {UserService} from '../../Share/Services/user.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {SettingService} from '../../Share/Services/setting.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
@@ -8,7 +11,15 @@ import { FormControl } from '@angular/forms';
 })
 export class EnterPhoneNumberComponent implements OnInit {
     phone: FormControl = new FormControl();
-    constructor() { }
+    elements: any;
+    constructor(
+        private settingService: SettingService,
+        private router: Router,
+        private activedroute: ActivatedRoute,
+        private userService: UserService
+    ) {
+        this.elements = this.settingService.getConfig();
+     }
 
     ngOnInit() {
     }
