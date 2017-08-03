@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FacebookModule } from 'ngx-facebook';
+import { Angular2SocialLoginModule } from 'angular2-social-login';
 
 // component
 import { AuthComponent } from './Auth.component';
@@ -29,12 +29,25 @@ const routing: Routes = [
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 
+// tslint:disable-next-line:prefer-const
+let providers = {
+    'google': {
+      'clientId': 'GOOGLE_CLIENT_ID'
+    },
+    'linkedin': {
+      'clientId': 'LINKEDIN_CLIENT_ID'
+    },
+    'facebook': {
+      'clientId': '1841378422845116',
+      'apiVersion': 'v2.4'
+    }
+  };
 
 @NgModule({
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        FacebookModule.forRoot(),
+        Angular2SocialLoginModule,
         FormsModule,
         Routing
     ],
@@ -51,3 +64,5 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     ]
 })
 export class AuthModule { }
+
+Angular2SocialLoginModule.loadProvidersScripts(providers);

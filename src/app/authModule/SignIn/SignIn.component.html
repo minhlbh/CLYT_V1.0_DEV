@@ -8,13 +8,13 @@
         </div>
         <h3 class="title">Đăng nhập</h3>
         <div class="social">
-            <a class="fb" (click)="loginWithFacebook()">
+            <a class="fb" (click)="signIn('facebook')">
                 <i class="fa fa-fw fa-facebook"></i>
             </a>
-            <a href="#" class="google">
+            <a class="google" (click)="signIn('google')">
                 <i class="fa fa-fw fa-google-plus"></i>
             </a>
-            <a href="#" class="linkedin">
+            <a class="linkedin" (click)="signIn('linkedin')">
                 <i class="fa fa-fw fa-linkedin"></i>
             </a>
         </div>

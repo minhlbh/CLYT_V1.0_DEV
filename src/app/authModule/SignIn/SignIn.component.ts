@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'angular2-social-login';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FacebookService, LoginResponse, InitParams } from 'ngx-facebook';
 import { UserService } from '../../Share/Services/user.service';
 import { SettingService } from '../../Share/Services/setting.service';
 import { element } from 'protractor';
@@ -11,39 +11,36 @@ import { element } from 'protractor';
     templateUrl: './SignIn.component.html',
     styleUrls: ['./SignIn.component.css']
 })
-export class SignInComponent implements OnInit {
+export class SignInComponent implements OnInit, OnDestroy {
+
 
     error: string = null;
     username: FormControl = new FormControl();
     password: FormControl = new FormControl();
     elements: any;
+    public user;
+    sub: any;
 
     constructor(
         private router: Router,
         private settingService: SettingService,
-        private fb: FacebookService,
+        private _auth: AuthService,
         private userService: UserService
     ) {
         this.elements = this.settingService.getConfig();
-        // tslint:disable-next-line:prefer-const
-        let initParams: InitParams = {
-            appId: '1234566778',
-            xfbml: true,
-            version: 'v2.8'
-        };
-
-        fb.init(initParams);
     }
 
     ngOnInit() {
     }
 
-    // fb login
-    loginWithFacebook(): void {
-        this.fb.login()
-            .then((response: LoginResponse) => console.log(response))
-            .catch((error: any) => console.error(error));
-
+    // login social network
+    signIn(provider) {
+        this.sub = this._auth.login(provider).subscribe(
+            (data) => {
+                console.log(data);
+                this.user = data;
+            }
+        );
     }
 
     // login function
@@ -64,6 +61,9 @@ export class SignInComponent implements OnInit {
                 this.error = errOb.error_description;
             }
         );
+    }
+    ngOnDestroy(): void {
+        this.sub.unsubscribe();
     }
 
 }
