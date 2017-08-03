@@ -436,7 +436,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authModule/Register/Register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sign-in wr\">\r\n  <div class=\"inner\">\r\n    <div class=\"logo\">\r\n      <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n    </div>\r\n    <h3 class=\"title\">Đăng ký tài khoản</h3>\r\n    <div class=\"social\">\r\n      <a href=\"#\" class=\"fb\">\r\n        <i class=\"fa fa-fw fa-facebook\"></i>\r\n      </a>\r\n      <a href=\"#\" class=\"google\">\r\n        <i class=\"fa fa-fw fa-google-plus\"></i>\r\n      </a>\r\n      <a href=\"#\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a>\r\n    </div>\r\n    <span class=\"or\">Hoặc</span>\r\n    <form #f=\"ngForm\" (ngSubmit)=\"registerSubmit()\">\r\n      <div class=\"form-group\">\r\n        <input [formControl]=\"name\" type=\"text\" placeholder=\"Họ & tên\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input [formControl]=\"email\" type=\"text\" placeholder=\"Email\">\r\n      </div>\r\n      <div class=\"form-group warning\" *ngIf=\"error != null\">\r\n        <span class=\"alert-text\">Số điện thoại không hợp lệ!</span>\r\n        <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n        <span class=\"glyphicon glyphicon-exclamation-sign icon-error\" data-toggle=\"tooltip\" title=\"\" data-original-title=\"Email không hợp lệ. Vui lòng nhập lại.\"></span>\r\n      </div>\r\n     <div class=\"form-group\">\r\n        <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input [formControl]=\"password\" type=\"password\" placeholder=\"Mật khẩu\">\r\n      </div>\r\n    </form>\r\n    <div class=\"form-group\">\r\n      <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Tôi đồng ý với <a href=\"#\">điều khoản sử dụng</a> và <a href=\"#\">chính sách bảo mật.</a></span>\r\n        </label>\r\n    </div>\r\n    <button (click) = \"registerSubmit()\">Tạo tài khoản</button>\r\n\r\n    <div class=\"footer\">\r\n      <div class=\"form-group\">\r\n        <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n"
+module.exports = "<div class=\"sign-in wr\">\r\n  <div class=\"inner\">\r\n    <div class=\"logo\">\r\n      <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n    </div>\r\n    <h3 class=\"title\">Đăng ký tài khoản</h3>\r\n    <div class=\"social\">\r\n      <a (click) = \"signIn('facebook')\" class=\"fb\">\r\n        <i class=\"fa fa-fw fa-facebook\"></i>\r\n      </a>\r\n      <a (click) = \"signIn('google')\" class=\"google\">\r\n        <i class=\"fa fa-fw fa-google-plus\"></i>\r\n      </a>\r\n      <a (click) = \"signIn('linkedin')\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a>\r\n    </div>\r\n    <span class=\"or\">Hoặc</span>\r\n    <form #f=\"ngForm\" (ngSubmit)=\"registerSubmit()\">\r\n      <div class=\"form-group\">\r\n        <input [formControl]=\"name\" type=\"text\" placeholder=\"Họ & tên\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input [formControl]=\"email\" type=\"text\" placeholder=\"Email\">\r\n      </div>\r\n      <!-- <div class=\"form-group warning\" *ngIf=\"error != null\">\r\n        <span class=\"alert-text\">Số điện thoại không hợp lệ!</span>\r\n        <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n        <span class=\"glyphicon glyphicon-exclamation-sign icon-error\" data-toggle=\"tooltip\" title=\"\" data-original-title=\"Email không hợp lệ. Vui lòng nhập lại.\"></span>\r\n      </div> -->\r\n     <div class=\"form-group\">\r\n        <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <input [formControl]=\"password\" type=\"password\" placeholder=\"Mật khẩu\">\r\n      </div>\r\n    </form>\r\n    <div class=\"form-group\">\r\n      <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Tôi đồng ý với <a href=\"#\">điều khoản sử dụng</a> và <a href=\"#\">chính sách bảo mật.</a></span>\r\n        </label>\r\n    </div>\r\n    <button (click) = \"registerSubmit()\">Tạo tài khoản</button>\r\n\r\n    <div class=\"footer\">\r\n      <div class=\"form-group\">\r\n        <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -444,11 +444,12 @@ module.exports = "<div class=\"sign-in wr\">\r\n  <div class=\"inner\">\r\n    <
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__ = __webpack_require__("../../../../angular2-social-login/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -464,20 +465,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RegisterComponent = (function () {
-    function RegisterComponent(settingService, router, userService) {
+    function RegisterComponent(settingService, router, _auth, userService) {
         this.settingService = settingService;
         this.router = router;
+        this._auth = _auth;
         this.userService = userService;
         this.error = null;
-        this.name = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
-        this.phone = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
-        this.email = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
-        this.password = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
-        this.ConfirmPassword = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.name = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.phone = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.email = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.password = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
         this.elements = this.settingService.getConfig();
     }
     RegisterComponent.prototype.ngOnInit = function () {
+    };
+    // login social network
+    RegisterComponent.prototype.signIn = function (provider) {
+        var _this = this;
+        this.sub = this._auth.login(provider).subscribe(function (data) {
+            console.log(data);
+            _this.user = data;
+            if (_this.user !== null) {
+                _this.socialLogin = true;
+                _this.router.navigate(['auth/phone']);
+            }
+            else {
+                _this.socialLogin = false;
+            }
+        });
     };
     RegisterComponent.prototype.registerSubmit = function () {
         var _this = this;
@@ -493,15 +510,15 @@ var RegisterComponent = (function () {
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-register',
         template: __webpack_require__("../../../../../src/app/authModule/Register/Register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/Register/Register.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
 ], RegisterComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=Register.component.js.map
 
 /***/ }),
@@ -527,7 +544,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authModule/SignIn/SignIn.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sign-in wr\" *showItDevice=\"['desktop', 'tablet']\">\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n\r\n        <h3 class=\"title\">Đăng nhập</h3>\r\n        <div class=\"social\">\r\n            <a (click) = \"signIn('facebook')\" class=\"fb\">\r\n        <i class=\"fa fa-fw fa-facebook\"></i>\r\n      </a>\r\n            <a (click) = \"signIn('google')\" class=\"google\">\r\n        <i class=\"fa fa-fw fa-google-plus\"></i>\r\n      </a>\r\n            <a (click) = \"signIn('linkedin')\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a>\r\n        </div>\r\n        <span class=\"or\">Hoặc</span>\r\n        <div class=\"form-group\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\"> {{error}}\r\n          </span>\r\n        </div>\r\n        <div class=\"form-group warning\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\">Số điện thoại không hợp lệ!</span>\r\n            <input type=\"text\" placeholder=\"Nhập email hoặc số điện thoại\">\r\n            <span class=\"glyphicon glyphicon-exclamation-sign icon-error\" data-toggle=\"tooltip\" title=\"\" data-original-title=\"Email không hợp lệ. Vui lòng nhập lại.\"></span>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <input [formControl] = \"username\" type=\"text\" placeholder=\"Nhập  email hoặc số điện thoại\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <input [formControl] = \"password\" type=\"password\" placeholder=\"Nhập mật khẩu\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Giữ tôi luôn đăng nhập</span>\r\n        </label>\r\n        </div>\r\n        <button (click) = \"onLoginSubmit()\">Đăng nhập</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/forgotPass']\">\r\n           Quên mật khẩu\r\n         </a>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/register']\">\r\n           Tạo tài khoản mới\r\n         </a>\r\n        </div>\r\n        <div class=\"footer\">\r\n            <div class=\"form-group\">\r\n                <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <a href=\"#\">\r\n          Chính sách bảo mật\r\n        </a>\r\n                <a href=\"#\">\r\n          Điều khoản sử dụng\r\n        </a>\r\n                <div class=\"form-group\">\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n"
+module.exports = "<div class=\"sign-in wr\" *showItDevice=\"['desktop', 'tablet']\">\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n\r\n        <h3 class=\"title\">Đăng nhập</h3>\r\n        <div class=\"social\">\r\n            <a (click) = \"signIn('facebook')\" class=\"fb\">\r\n        <i class=\"fa fa-fw fa-facebook\"></i>\r\n      </a>\r\n            <a (click) = \"signIn('google')\" class=\"google\">\r\n        <i class=\"fa fa-fw fa-google-plus\"></i>\r\n      </a>\r\n            <a (click) = \"signIn('linkedin')\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a>\r\n        </div>\r\n        <span class=\"or\">Hoặc</span>\r\n        <div class=\"form-group\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\"> {{error}}\r\n          </span>\r\n        </div>\r\n        <!-- <div class=\"form-group warning\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\">Số điện thoại không hợp lệ!</span>\r\n            <input type=\"text\" placeholder=\"Nhập email hoặc số điện thoại\">\r\n            <span class=\"glyphicon glyphicon-exclamation-sign icon-error\" data-toggle=\"tooltip\" title=\"\" data-original-title=\"Email không hợp lệ. Vui lòng nhập lại.\"></span>\r\n        </div> -->\r\n        <div class=\"form-group\">\r\n            <input [formControl] = \"username\" type=\"text\" placeholder=\"Nhập  email hoặc số điện thoại\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <input [formControl] = \"password\" type=\"password\" placeholder=\"Nhập mật khẩu\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Giữ tôi luôn đăng nhập</span>\r\n        </label>\r\n        </div>\r\n        <button (click) = \"onLoginSubmit()\">Đăng nhập</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/forgotPass']\">\r\n           Quên mật khẩu\r\n         </a>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/register']\">\r\n           Tạo tài khoản mới\r\n         </a>\r\n        </div>\r\n        <div class=\"footer\">\r\n            <div class=\"form-group\">\r\n                <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <a href=\"#\">\r\n          Chính sách bảo mật\r\n        </a>\r\n                <a href=\"#\">\r\n          Điều khoản sử dụng\r\n        </a>\r\n                <div class=\"form-group\">\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n"
 
 /***/ }),
 
