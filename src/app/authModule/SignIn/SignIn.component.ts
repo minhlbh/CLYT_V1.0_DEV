@@ -19,6 +19,7 @@ export class SignInComponent implements OnInit {
     elements: any;
     public user;
     sub: any;
+    socialLogin: boolean;
 
     constructor(
         private router: Router,
@@ -30,6 +31,7 @@ export class SignInComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.socialLogin = false;
     }
 
     // login social network
@@ -38,6 +40,12 @@ export class SignInComponent implements OnInit {
             (data) => {
                 console.log(data);
                 this.user = data;
+                if (this.user !== null) {
+                    this.socialLogin = true;
+                    this.router.navigate(['auth/phone']);
+                } else {
+                    this.socialLogin = false;
+                }
             }
         );
     }

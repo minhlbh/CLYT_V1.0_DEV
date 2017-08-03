@@ -14,6 +14,7 @@ import { RegisterComponent } from './Register/Register.component';
 import { VerifyComponent } from './Verify/Verify.component';
 import { ForgotPasswordComponent } from './ForgotPassword/ForgotPassword.component';
 import { ChangePassComponent } from './ChangePass/ChangePass.component';
+import { EnterPhoneNumberComponent } from './EnterPhoneNumber/EnterPhoneNumber.component';
 
 // services
 import { UserService } from '../Share/Services/user.service';
@@ -26,6 +27,7 @@ const routing: Routes = [
     { path: 'verify/:IdU/:phone/:code', component: VerifyComponent },
     { path: 'forgotPass', component: ForgotPasswordComponent },
     { path: 'changePass', component: ChangePassComponent },
+    { path: 'phone', component: EnterPhoneNumberComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
@@ -33,17 +35,17 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 // tslint:disable-next-line:prefer-const
 let providers = {
     'google': {
-      'clientId': '442448415974-lvusnqsttcup9dd79fa2en47car1793k.apps.googleusercontent.com'
-      // client secret: Nz_F3bCWPtJs6XMYaui40TMv
+        'clientId': '442448415974-lvusnqsttcup9dd79fa2en47car1793k.apps.googleusercontent.com'
+        // client secret: Nz_F3bCWPtJs6XMYaui40TMv
     },
     'linkedin': {
-      'clientId': 'LINKEDIN_CLIENT_ID'
+        'clientId': 'LINKEDIN_CLIENT_ID'
     },
     'facebook': {
-      'clientId': '123454808277990',
-      'apiVersion': 'v2.10'
+        'clientId': '123454808277990',
+        'apiVersion': 'v2.10'
     }
-  };
+};
 
 @NgModule({
     imports: [
@@ -60,7 +62,8 @@ let providers = {
         RegisterComponent,
         VerifyComponent,
         ForgotPasswordComponent,
-        ChangePassComponent
+        ChangePassComponent,
+        EnterPhoneNumberComponent
     ],
     providers: [
         UserService
