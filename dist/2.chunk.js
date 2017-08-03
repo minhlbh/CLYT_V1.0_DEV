@@ -117,7 +117,7 @@ var Routing = __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule 
 // tslint:disable-next-line:prefer-const
 var providers = {
     'google': {
-        'clientId': '574197949709-mri41vhj6p14l3kg41d8fd3kjkl8e69i.apps.googleusercontent.com'
+        'clientId': '442448415974-lvusnqsttcup9dd79fa2en47car1793k.apps.googleusercontent.com'
         // client secret: Nz_F3bCWPtJs6XMYaui40TMv
     },
     'linkedin': {
