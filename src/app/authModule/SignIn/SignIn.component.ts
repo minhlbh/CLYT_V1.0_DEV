@@ -34,21 +34,21 @@ export class SignInComponent implements OnInit {
         this.socialLogin = false;
     }
 
-    // // login social network
-    // signIn(provider) {
-    //     this.sub = this._auth.login(provider).subscribe(
-    //         (data) => {
-    //             console.log(data);
-    //             this.user = data;
-    //             if (this.user !== null) {
-    //                 this.socialLogin = true;
-    //                 this.router.navigate(['auth/phone']);
-    //             } else {
-    //                 this.socialLogin = false;
-    //             }
-    //         }
-    //     );
-    // }
+    // login social network
+    signIn(provider) {
+        this.sub = this._auth.login(provider).subscribe(
+            (data) => {
+                console.log(data);
+                this.user = data;
+                if (this.user !== null) {
+                    this.socialLogin = true;
+                    this.router.navigate(['auth/phone']);
+                } else {
+                    this.socialLogin = false;
+                }
+            }
+        );
+    }
 
     // login function
     onLoginSubmit() {

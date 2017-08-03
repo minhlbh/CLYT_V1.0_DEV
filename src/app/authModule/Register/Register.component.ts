@@ -34,6 +34,12 @@ export class RegisterComponent implements OnInit {
                 console.log(data);
 
                 this.router.navigate(['auth/verify', data.Id, data.Phone, data.Code]);
-            });
+            },
+            err => {
+                const errOb = JSON.parse(err.text());
+                console.log('error:', errOb.error_description);
+                this.error = errOb.error_description;
+            }
+        );
     }
 }
