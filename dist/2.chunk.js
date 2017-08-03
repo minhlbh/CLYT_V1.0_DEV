@@ -117,14 +117,15 @@ var Routing = __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule 
 // tslint:disable-next-line:prefer-const
 var providers = {
     'google': {
-        'clientId': 'GOOGLE_CLIENT_ID'
+        'clientId': '574197949709-mri41vhj6p14l3kg41d8fd3kjkl8e69i.apps.googleusercontent.com'
+        // client secret: Nz_F3bCWPtJs6XMYaui40TMv
     },
     'linkedin': {
         'clientId': 'LINKEDIN_CLIENT_ID'
     },
     'facebook': {
         'clientId': '123454808277990',
-        'apiVersion': 'v2.4'
+        'apiVersion': 'v2.10'
     }
 };
 var AuthModule = (function () {

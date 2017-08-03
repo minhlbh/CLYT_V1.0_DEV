@@ -41,7 +41,7 @@ let providers = {
     },
     'facebook': {
       'clientId': '123454808277990',
-      'apiVersion': 'v2.4'
+      'apiVersion': 'v2.10'
     }
   };
 
