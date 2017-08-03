@@ -6,9 +6,9 @@
 	         	<span>{{elements.ThuongHieu}}</span>
 	         </a>
         </div>
-        <h3 class="title">Nhập số diện thoại của bạn</h3>
+        <h3 class="title">Nhập số điện thoại của bạn</h3>
 
-        <form #f="ngForm">
+        <form #f="ngForm" class="form-group">
             <input [formControl]="phone" type="text" placeholder="Nhập số điện thoại...">
         </form>
         <button (click)="verification()">Hoàn tất</button>

@@ -1,3 +1,32 @@
-<p>
-  ChangePass works!
-</p>
+<div class="sign-in wr">
+    <div class="inner">
+        <div class="logo">
+            <a [routerLink]="['']">
+	         	<img src="{{elements.Logo}}">
+	         	<span>{{elements.ThuongHieu}}</span>
+	         </a>
+    </div>
+    <h3 class="title">Đặt lại mật khẩu</h3>
+    <span _ngcontent-c2="" class="or">
+      Chúng tôi đã gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu mới.
+    </span>
+    <div class="form-group">
+      <input type="text" placeholder="Nhập mã xác thực">
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Nhập mật khẩu mới">
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Nhập lại mật khẩu mới">
+    </div>
+    <button [routerLink]="['/auth/changePass']">Hoàn tất</button>
+    <div class="form-group">
+      <a [routerLink]="['/auth/forgotPass']">
+           Thoát
+         </a>
+    </div>
+
+  </div>
+
+
+</div>

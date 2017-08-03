@@ -24,7 +24,7 @@ const routing: Routes = [
     { path: 'signIn', component: SignInComponent },
     { path: 'signOut', component: SignOutComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'verify/:IdU/:phone/:code', component: VerifyComponent },
+    { path: 'verify', component: VerifyComponent },
     { path: 'forgotPass', component: ForgotPasswordComponent },
     { path: 'changePass', component: ChangePassComponent },
     { path: 'phone', component: EnterPhoneNumberComponent },
