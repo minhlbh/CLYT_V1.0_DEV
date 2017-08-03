@@ -24,11 +24,11 @@
             <span class="alert-text"> {{error}}
           </span>
         </div>
-        <div class="form-group warning" *ngIf="error != null">
+        <!-- <div class="form-group warning" *ngIf="error != null">
             <span class="alert-text">Số điện thoại không hợp lệ!</span>
             <input type="text" placeholder="Nhập email hoặc số điện thoại">
             <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
-        </div>
+        </div> -->
         <div class="form-group">
             <input [formControl] = "username" type="text" placeholder="Nhập  email hoặc số điện thoại">
         </div>
