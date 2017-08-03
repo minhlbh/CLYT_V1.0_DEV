@@ -1,4 +1,4 @@
-.sign-in.wr {
+        .sign-in.wr {
 			background-image: url("https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg");
 			position: absolute;
 			width: 100%;
@@ -102,7 +102,7 @@
             height: 36px;
             outline: none;
             width: 100%;
-            margin-bottom: 20px;
+            
         }
 
         .sign-in button {
@@ -132,10 +132,35 @@
         }
 
         .sign-in .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             font-size: 12px;
             width: 100%;
             float: left;
+            position: relative;
+        }
+
+        .sign-in .icon-error {
+            position: absolute;
+            right: 5px;
+            top: 29px;
+            font-size: 20px;
+            color: #ff4a68;
+            display: none;
+            z-index: 10;
+        }
+
+        .sign-in .form-group.warning .icon-error {
+            display: block
+        }
+
+        .sign-in .form-group.warning input {
+            border: solid 1px #ff4a68;
+            padding-right: 30px;
+        }
+
+        .sign-in .form-group.warning .alert-text {
+            padding:0;
+            margin: 0 0 5px 0;
         }
 
         .sign-in .or {
@@ -159,6 +184,9 @@
             margin-top: 10px;
             display: block;
         }
+
+        
+        
 
         .sign-in .form-group a {
             font-size: 13px;
@@ -193,7 +221,7 @@
 
         .sign-in .form-group .checkbox span {
             margin-left: 22px;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 400;
             margin: 0 0 0 20px;
             padding: 0;
@@ -231,6 +259,8 @@
         .sign-in .footer a:hover, .sign-in .footer a:focus {
             text-decoration: none;
         }
+
+        
 
         @media only screen and (max-width: 768px) {
             .inner {
