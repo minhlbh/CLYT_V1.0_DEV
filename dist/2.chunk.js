@@ -124,7 +124,7 @@ var providers = {
         'clientId': 'LINKEDIN_CLIENT_ID'
     },
     'facebook': {
-        'clientId': '1841378422845116',
+        'clientId': '123454808277990',
         'apiVersion': 'v2.10'
     }
 };
