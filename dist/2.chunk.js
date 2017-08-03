@@ -469,9 +469,6 @@ var SignInComponent = (function () {
             _this.error = errOb.error_description;
         });
     };
-    SignInComponent.prototype.ngOnDestroy = function () {
-        this.sub.unsubscribe();
-    };
     return SignInComponent;
 }());
 SignInComponent = __decorate([

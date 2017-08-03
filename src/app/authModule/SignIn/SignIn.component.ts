@@ -11,8 +11,7 @@ import { element } from 'protractor';
     templateUrl: './SignIn.component.html',
     styleUrls: ['./SignIn.component.css']
 })
-export class SignInComponent implements OnInit, OnDestroy {
-
+export class SignInComponent implements OnInit {
 
     error: string = null;
     username: FormControl = new FormControl();
@@ -61,9 +60,6 @@ export class SignInComponent implements OnInit, OnDestroy {
                 this.error = errOb.error_description;
             }
         );
-    }
-    ngOnDestroy(): void {
-        this.sub.unsubscribe();
     }
 
 }
