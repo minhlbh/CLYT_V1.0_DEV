@@ -30,6 +30,7 @@
             <input type="text" placeholder="Nhập email hoặc số điện thoại">
             <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
         </div> -->
+        <form #f="ngForm" (ngSubmit)="onLoginSubmit()">
         <div class="form-group">
             <input [formControl]="username" type="text" placeholder="Nhập email hoặc số điện thoại">
         </div>
@@ -42,7 +43,8 @@
           <span>Giữ tôi luôn đăng nhập</span>
         </label>
         </div>
-        <button (click)="onLoginSubmit()">Đăng nhập</button>
+        <input (click)="onLoginSubmit()" type="submit" placeholder="Đăng nhập">
+        </form>
         <div class="form-group">
             <a [routerLink]="['/auth/forgotPass']">
            Quên mật khẩu
