@@ -462,7 +462,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .start-screen header {
+    .header {
         position: absolute;
     }
 }
