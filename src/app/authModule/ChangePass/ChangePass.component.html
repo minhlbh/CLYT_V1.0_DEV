@@ -25,6 +25,13 @@
                 <input [formControl]="confirmPassword" type="password" placeholder="Nhập lại mật khẩu mới">
             </div>
         </form>
+        <div class="form-group" *ngIf="!success">
+            <a [routerLink]="['/auth/forgotPass']" class="alert-text">Thiếp lập mật khẩu mới thất bại! Click để quay lại</a>
+        </div>
+
+        <div class="form-group" *ngIf="success">
+            <a [routerLink]="['/auth/signIn']" class="success-text">Thiếp lập mật khẩu mới thành công! Click để về trang đăng nhập</a>
+        </div>
         <button (click)="changePassword()">Hoàn tất</button>
         <div class="form-group">
             <a [routerLink]="['/auth/forgotPass']">

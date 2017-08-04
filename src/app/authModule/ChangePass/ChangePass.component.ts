@@ -18,6 +18,7 @@ export class ChangePassComponent implements OnInit {
     IdU: string = null;
     phone: string = null;
     error: any;
+    success: any;
     constructor(
         private settingService: SettingService,
         private router: Router,
@@ -43,7 +44,8 @@ export class ChangePassComponent implements OnInit {
                     console.log(data);
 
                     if (data.Mes === 'Thiếp lập mật khẩu mới thành công!') {
-                        this.router.navigate(['auth/signIn']);
+                        this.success = true;
+                        // this.router.navigate(['auth/signIn']);
                     }
                 });
         }

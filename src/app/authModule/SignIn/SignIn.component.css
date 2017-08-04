@@ -8,7 +8,7 @@
 
 		.inner {
 			    background: #fff;
-                position: fixed;
+                position: relative;
                 right: 0;
                 float: right;
                 height: 100%;
