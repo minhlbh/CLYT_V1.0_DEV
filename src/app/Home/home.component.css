@@ -153,6 +153,7 @@
 
 .body .grid .grid-item .child .title-label .icon img{
     width: 20px;
+    vertical-align: sub;
 }
 
 
@@ -241,7 +242,7 @@
 .controls {
     float: right;
     margin-top: 45px;
-    margin-right: 50px;
+    margin-right: 68px;
 }
 
 .controls .user {
@@ -258,6 +259,21 @@
     margin-right: 4px;
     color: #323232;
 }
+.controls .user a:hover, .controls .user a:focus {
+    text-decoration: none;
+}
+
+.controls .user .sign-up-now {
+    background: #0f9cb3;
+    color: #fff;
+    padding: 7px 10px;
+    height: 35px;
+    line-height: 22px;
+    float: left;
+    margin-right: 2px;
+    text-transform: uppercase;
+}
+
 
 .logo {
     float: left;
@@ -287,42 +303,8 @@
     color: #323232;
 }
 
-.controls {
-    float: right;
-    margin-top: 45px;
-    margin-right: 50px;
-}
-
-.controls .user {
-    float: left;
-    margin-right: 2px;
-}
-
-.controls .user a:hover, .controls .user a:focus {
-    text-decoration: none;
-}
-
-.controls .user .name-user {
-    background: #fff;
-    padding: 7px 10px;
-    height: 35px;
-    line-height: 22px;
-    float: left;
-    margin-right: 4px;
-    color: #323232;
-}
 
 
-.controls .user .sign-up-now {
-    background: #0f9cb3;
-    color: #fff;
-    padding: 7px 10px;
-    height: 35px;
-    line-height: 22px;
-    float: left;
-    margin-right: 2px;
-    text-transform: uppercase;
-}
 
 /* Mobile css */
 

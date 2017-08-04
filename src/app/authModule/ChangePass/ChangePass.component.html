@@ -8,8 +8,12 @@
         </div>
         <h3 class="title">Đặt lại mật khẩu</h3>
         <span _ngcontent-c2="" class="or">
-      Chúng tôi đã gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu mới.
-    </span>
+            Chúng tôi đã gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu mới.
+        </span>
+        <div class="form-group" *ngIf="error != null">
+            <span class="alert-text"> {{error}}
+          </span>
+        </div>
         <form #f="ngForm">
             <div class="form-group">
                 <input [formControl]="verifyCode" type="text" placeholder="Nhập mã xác thực">
@@ -21,13 +25,7 @@
                 <input [formControl]="confirmPassword" type="password" placeholder="Nhập lại mật khẩu mới">
             </div>
         </form>
-        <!-- Hiện lỗi nếu có -->
-        <blockquote *ngIf="error!= null">
-          <small style="color:red">{{error}}</small>
-        </blockquote>
-        <br />
-
-        <button (click) = "changePassword()">Hoàn tất</button>
+        <button (click)="changePassword()">Hoàn tất</button>
         <div class="form-group">
             <a [routerLink]="['/auth/forgotPass']">
            Thoát

@@ -42,6 +42,7 @@ export class SignInComponent implements OnInit {
                 this.user = data;
                 if (this.user !== null) {
                     this.socialLogin = true;
+
                     this.router.navigate(['auth/phone']);
                 } else {
                     this.socialLogin = false;

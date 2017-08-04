@@ -35,9 +35,9 @@ body {
 .fxs-portal {
     position: fixed;
     left: 0;
-    right: 0;
+    /* right: 0; */
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
     overflow: hidden;
     transition: background .25s ease;
     z-index: 0;
@@ -70,7 +70,7 @@ body {
 
     position: relative;
     font-size: 13px;
-    border: none; 
+    border: none;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
