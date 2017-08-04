@@ -104,7 +104,7 @@
             width: 100%;
         }
 
-        .sign-in button {
+        .sign-in .input-button {
             background-color: #0f9cb3;
             width: auto;
             color: #fff;
