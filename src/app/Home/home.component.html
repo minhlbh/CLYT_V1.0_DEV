@@ -117,7 +117,7 @@
             </div>
             <div *ngIf="searchState" class="input-control mb-home">
                 <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                <input type="text" placeholder="Tìm dịch vụ...">
+                <input type="text" placeholder="Tìm dịch vụ..." [(ngModel)]="searchKey">
             </div>
             <div>
                 <a href="#" class="account">
@@ -137,13 +137,14 @@
         <div class="m-content">
             <ng-container *ngFor="let blocks of menus">
                 <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
-                <ng-container *ngFor="let item of blocks?.items">
+                <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
                     <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
                         <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
                         <div class="title-services">
                             {{item?.Ten}}
                         </div>
                     </a>
+                     <!-- <a *ngIf="homeFilter return null"> Không có kết quả nào </a> -->
                 </ng-container>
             </ng-container>
         </div>
