@@ -26,7 +26,6 @@ export class LeftMenuComponent implements OnInit {
     toggledLeft() {
         this.isToggled = !this.isToggled;
         // this.toggled.emit(this.isToggled);
-        console.log(this.isToggled);
     }
 
     // navigation(url: string) {

@@ -345,7 +345,7 @@
     background: url(https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg) no-repeat center center fixed;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
