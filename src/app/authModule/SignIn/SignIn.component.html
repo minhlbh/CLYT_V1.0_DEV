@@ -10,16 +10,17 @@
         <h3 class="title">Đăng nhập</h3>
         <div class="social">
             <a (click)="signIn('facebook')" class="fb">
-        <i class="fa fa-fw fa-facebook"></i>
-      </a>
+                <i class="fa fa-fw fa-facebook"></i>
+            </a>
             <a (click)="signIn('google')" class="google">
-        <i class="fa fa-fw fa-google-plus"></i>
-      </a>
-            <a (click)="signIn('linkedin')" class="linkedin">
+                <i class="fa fa-fw fa-google-plus"></i>
+            </a>
+            <!-- <a (click)="signIn('linkedin')" class="linkedin">
         <i class="fa fa-fw fa-linkedin"></i>
-      </a>
+      </a> -->
+            <span class="or">Hoặc</span>
         </div>
-        <span class="or">Hoặc</span>
+
         <div class="form-group" *ngIf="error != null">
             <span class="alert-text"> {{error}}
           </span>
@@ -30,7 +31,7 @@
             <span class="glyphicon glyphicon-exclamation-sign icon-error" data-toggle="tooltip" title="" data-original-title="Email không hợp lệ. Vui lòng nhập lại."></span>
         </div> -->
         <div class="form-group">
-            <input [formControl]="username" type="text" placeholder="Nhập  email hoặc số điện thoại">
+            <input [formControl]="username" type="text" placeholder="Nhập email hoặc số điện thoại">
         </div>
         <div class="form-group">
             <input [formControl]="password" type="password" placeholder="Nhập mật khẩu">
