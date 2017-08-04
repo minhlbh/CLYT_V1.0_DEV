@@ -18,6 +18,7 @@ import { SafeStylePipe } from './Share/Pipes/safeStyle.pipe';
 const routes: Routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
     { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
+    { path: 'policies', loadChildren: './Policy/policy.module#PolicyModule' },
     { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
 ];
 

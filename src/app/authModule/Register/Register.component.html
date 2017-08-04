@@ -41,7 +41,7 @@
     <div class="form-group">
       <label class="checkbox">
           <input type="checkbox" checked>
-          <span>Tôi đồng ý với <a href="#">điều khoản sử dụng</a> và <a href="#">chính sách bảo mật.</a></span>
+          <span>Tôi đồng ý với <a [routerLink]="['/policies/terms']">điều khoản sử dụng</a> và <a [routerLink]="['/policies/privacy']">chính sách bảo mật.</a></span>
         </label>
     </div>
     <button (click) = "registerSubmit()">Tạo tài khoản</button>

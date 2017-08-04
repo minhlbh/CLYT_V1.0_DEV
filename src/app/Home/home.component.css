@@ -162,6 +162,8 @@
     min-height: 100%;
     position: absolute;
     padding-top: 100px;
+    max-width: none !important;
+    background-size: cover;
 }
 
 .header {
