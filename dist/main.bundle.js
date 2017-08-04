@@ -186,7 +186,7 @@ var SettingService = (function () {
 }());
 SettingService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["b" /* DOCUMENT */])),
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["e" /* DOCUMENT */])),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, Object])
 ], SettingService);
 
@@ -236,6 +236,7 @@ module.exports = "<router-outlet></router-outlet>"
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -248,14 +249,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = (function () {
-    function AppComponent(settingService) {
+    function AppComponent(settingService, titleService) {
         var _this = this;
         this.settingService = settingService;
+        this.titleService = titleService;
         this.settingService.getFirstConfig().subscribe(function (data) {
             _this.settingService.setConfig(data.setting);
             _this.settingService.setMenu(data.home);
         });
+        this.elements = this.settingService.getConfig();
+        this.titleService.setTitle('Cloud Y Tế - ' + this.elements.ThuongHieu);
     }
     return AppComponent;
 }());
@@ -265,10 +270,10 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["b" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["b" /* Title */]) === "function" && _b || Object])
 ], AppComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -336,7 +341,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6_ng2_responsive__["ResponsiveModule"]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["b" /* Title */]
         ],
         bootstrap: ([__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]])
     })
@@ -377,17 +383,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-// class MainInit implements OnInit {
-//     elements: any;
-//     constructor(
-//         private settingService: SettingService,
-//     ) {
-//         this.elements = this.settingService.getConfig();
-//         console.log(this.elements.ThuongHieu);
-//     }
-//     ngOnInit() {
-//     }
-// }
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }

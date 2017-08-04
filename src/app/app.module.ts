@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
@@ -39,7 +39,8 @@ const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingSt
         ResponsiveModule
     ],
     providers: [
-        SettingService
+        SettingService,
+        Title
     ],
     bootstrap: ([AppComponent])
 })

@@ -156,7 +156,7 @@ var TracuubenhModule = (function () {
 TracuubenhModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_infinite_scroll__["InfiniteScrollModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
@@ -2345,7 +2345,7 @@ ShareButtonsModule.decorators = [
                     __WEBPACK_IMPORTED_MODULE_8__helpers_n_formatter_pipe__["a" /* NFormatterPipe */]
                 ],
                 imports: [
-                    __WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* CommonModule */],
+                    __WEBPACK_IMPORTED_MODULE_2__angular_common__["e" /* CommonModule */],
                     __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* JsonpModule */]
                 ],
                 exports: [

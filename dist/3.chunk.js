@@ -262,7 +262,7 @@ var AppsModule = (function () {
 AppsModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
             __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__["ResponsiveModule"],
             Routing,
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
