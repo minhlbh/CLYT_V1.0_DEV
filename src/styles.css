@@ -96,6 +96,7 @@ body {
     overflow-y: hidden;
     transition: margin .2s ease;
     z-index: 1;
+    height: calc(100vh - 40px);
 }
 
 .fxs-blade-content-container {
