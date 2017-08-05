@@ -113,7 +113,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    
+
 }
 
 .fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
@@ -134,6 +134,7 @@
 .fxs-sidebar.toggled .bt-collapsed {
     border-right: rgba(255,255,255,.3) 1px solid;
     width: 57px !important;
+    height: 100vh;
 }
 
 
@@ -179,7 +180,7 @@
     color: #fff;
     display: none;
     top:-45px;
-} 
+}
 
 .fxs-sidebar.mobile .bt-collapsed .glyphicon {
     position: absolute;
@@ -197,7 +198,7 @@
     .fxs-sidebar.mobile .bt-collapsed.mb {
         display: block;
     }
-} 
+}
 
 
 
