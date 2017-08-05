@@ -82,6 +82,7 @@ body {
 }
 
 .fxs-sidebar.toggled {
+    height: 100vh;
     width: 57px;
     left: 0;
 }
