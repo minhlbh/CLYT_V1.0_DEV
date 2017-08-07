@@ -176,6 +176,7 @@
     min-height: 100%;
     position: absolute;
     padding-top: 100px;
+    background-size: cover;
 }
 
 .header {
@@ -352,26 +353,25 @@
 .m-header-title {
     margin: 0;
     padding: 15px 10px 5px;
-    font-size: 14px;
-    color: #fff;
+    font-size: 16px;
+    color: #555;
 }
 
-.m-body {
-    background: url(https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+ .m-body {
+    /* background: url(https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg) no-repeat center center fixed;    */
+    background: #333;
 }
 
 .m-content {
     padding-top: 60px;
+    float: left;
+    background: #eee;
 }
 
 .m-item {
     padding: 5px 0;
     margin: 0 10px;
-    border-bottom: rgba(255, 255, 255, .3) 1px solid;
+    border-bottom: rgba(0, 0, 0, .3) 1px solid;
 }
 
 .m-item:hover {
@@ -387,9 +387,16 @@
     background-size: cover;
 }
 
+.m-categories {
+    margin-bottom: 20px;
+    background: #fff;
+    width: 100%;
+    float: left;
+}
+
 .title-services {
     padding: 0 10px;
-    color: #fff;
+    color: #555;
 }
 
 .account {
