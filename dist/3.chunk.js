@@ -111,9 +111,9 @@ var LeftMenuComponent = (function () {
         this.settingService = settingService;
         this.router = router;
         this.isToggled = false;
+        this.menuElements = this.settingService.getMenu();
     }
     LeftMenuComponent.prototype.ngOnInit = function () {
-        this.menuElements = this.settingService.getMenu();
     };
     LeftMenuComponent.prototype.toggledLeft = function () {
         this.isToggled = !this.isToggled;
