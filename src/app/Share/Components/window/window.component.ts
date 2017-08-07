@@ -16,7 +16,7 @@ export class WindowComponent implements OnInit {
     @Input() icon;
     @Input() url;
     private route: string;
-    menuElements: string;
+    menuElements: any;
     constructor(
         private router: Router,
         private location: Location,

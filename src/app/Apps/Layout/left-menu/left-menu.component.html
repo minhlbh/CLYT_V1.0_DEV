@@ -30,7 +30,7 @@
                         </a>
         </li>
     </ul>
-    <div class="col-left-fixed" [ngStyle]="{'background': settings.MauNhat}">
+    <div class="col-left-fixed" [ngStyle]="{'background': settings?.MauNhat}">
         <!-- <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="toggledLeft()">
@@ -38,7 +38,7 @@
                         </a>
             </li>
         </ul> -->
-        <div class="list-services" [ngStyle]="{'background': settings.MauNhat}">
+        <div class="list-services" [ngStyle]="{'background': settings?.MauNhat}">
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
                     <a [routerLink]="['/apps', item.url]" style="cursor: pointer">
