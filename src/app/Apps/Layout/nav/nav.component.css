@@ -48,7 +48,7 @@
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-    background: #11a8c1;
+    background: rgba(255,255,255,.3);
     color: #fff;
 }
 
@@ -62,6 +62,5 @@
 
 .nav-top .navbar-nav>li>a.menu-toggle:hover,
 .nav-top .nav-right-mb>li>a.menu-toggle:hover {
-    background: none;
-    border-bottom: 3px solid #0fa5bd;
+    background: rgba(255,255,255,.3);
 }
