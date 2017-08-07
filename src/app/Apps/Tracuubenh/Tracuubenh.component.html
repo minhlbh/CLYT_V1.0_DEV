@@ -1,0 +1,11 @@
+<div class="fxs-blade-content-container">
+    <div class="fxs-block">
+        <app-danh-sach-benh>
+        </app-danh-sach-benh>
+    </div>
+
+    <div *ngIf="showChiTiet" class="fxs-block large">
+        <app-chi-tiet-benh [idBenh]="detailBenhId"></app-chi-tiet-benh>
+    </div>
+
+</div>

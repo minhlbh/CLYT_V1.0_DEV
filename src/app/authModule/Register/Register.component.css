@@ -1,0 +1,282 @@
+        .sign-in.wr {
+			background-image: url("https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg");
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: table;
+		}
+
+		.inner {
+			    background: #fff;
+                position: relative;
+                right: 0;
+                float: right;
+                height: 100%;
+                min-height: 640px;
+                width: 450px;
+                margin: 0;
+                padding: 40px 50px 0;
+                z-index: 1;
+                overflow: hidden;
+                text-align: center;
+		}
+
+		.middle {
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+
+        .sign-in .logo {
+        	font-size: 25px;
+        	width: 100%;
+            float: left;
+            margin-bottom: 20px;
+        }
+
+
+        .sign-in .logo a {
+        	color: #555;
+        }
+
+		.sign-in .logo img {
+			width: 64px;
+			height: 64px;
+			float: left;
+		}
+
+		.sign-in .logo span {
+			margin:13px 10px;
+			float: left;
+        }
+
+        .sign-in .social {
+            width: 100%;
+            float: left;
+        }
+
+        .sign-in .social a {
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+        }
+
+        .sign-in .social a:hover, .sign-in .social a:focus {
+            opacity: .9;
+        }
+
+        .sign-in .social a i {
+            font-size: 17px;
+            color: #fff;
+            padding: 12px 0 0 0;
+        }
+
+        .sign-in .social a.fb {
+            background: #467cbd;
+        }
+
+        .sign-in .social a.google {
+            background: #dc4e41;
+        }
+
+        .sign-in .social a.linkedin {
+            background: #0077b5;
+        }
+
+		.sign-in .title {
+		    padding: 0;
+		    margin-top: 16px;
+		    margin-bottom: 16px;
+		    font-weight: 300;
+		    font-size: 25px;
+            float: left;
+            color: #0f9cb3;
+        }
+
+        .sign-in input {
+            padding: 6px 10px;
+            border-width: 1px;
+            border-color: #666;
+            border-color: rgba(0,0,0,0.6);
+            height: 36px;
+            outline: none;
+            width: 100%;
+
+        }
+
+        .sign-in button {
+            background-color: #0f9cb3;
+            width: auto;
+            color: #fff;
+            text-align: center;
+            height: 36px;
+            padding: 4px 12px 4px 12px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+            touch-action: manipulation;
+            cursor: pointer;
+            margin-bottom: 16px;
+            box-shadow: none;
+            outline: none;
+            border: none;
+            float: left;
+
+        }
+
+        .sign-in button:hover, .sign-in button:focus {
+            opacity: .8;
+        }
+
+        .sign-in .form-group {
+            margin-bottom: 20px;
+            font-size: 12px;
+            width: 100%;
+            float: left;
+            position: relative;
+        }
+
+        .sign-in .icon-error {
+            position: absolute;
+            right: 5px;
+            top: 29px;
+            font-size: 20px;
+            color: #ff4a68;
+            display: none;
+            z-index: 10;
+        }
+
+        .sign-in .form-group.warning .icon-error {
+            display: block
+        }
+
+        .sign-in .form-group.warning input {
+            border: solid 1px #ff4a68;
+            padding-right: 30px;
+        }
+
+        .sign-in .form-group.warning .alert-text {
+            padding:0;
+            margin: 0 0 5px 0;
+        }
+
+        .sign-in .or {
+            width: 100%;
+            float: left;
+            font-size: 13px;
+            color: #666;
+            text-align: left;
+            margin-top: 12px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .sign-in .form-group .alert-text {
+            color: red;
+            text-align: left !important;
+            width: 100%;
+            float: left;
+            font-weight: 400;
+            line-height: 16px;
+            margin-top: 10px;
+            display: block;
+        }
+
+
+
+
+        .sign-in .form-group a {
+            font-size: 13px;
+            color: #0f9cb3;
+            float: left;
+        }
+
+        .sign-in .form-group a:hover {
+            text-decoration: none;
+            color: #777;
+        }
+
+        .sign-in .form-group .checkbox {
+            cursor: pointer;
+            float: left;
+            margin: 0;
+            padding: 0;
+            position: relative
+        }
+
+        .sign-in .form-group .checkbox input {
+            width: 20px;
+            height: 20px;
+            margin: 3px 3px 0 0;
+            padding: 0;
+            float: left;
+            cursor: pointer;
+            color: #0f9cb3;
+            position: absolute;
+            left: 0;
+        }
+
+        .sign-in .form-group .checkbox span {
+            margin-left: 22px;
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0 0 0 20px;
+            padding: 0;
+            text-align: left;
+            float: left
+        }
+
+        .sign-in .form-group .checkbox a {
+            float: none;
+        }
+
+        .sign-in .footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 50px 5px;
+            background: rgba(255,255,255,0.3)
+        }
+
+        .sign-in .footer a {
+            color: #0f9cb3;
+        }
+
+        .sign-in .footer .form-group {
+            margin: 0;
+        }
+
+        .sign-in .footer a, .footer span {
+            padding: 0 15px 5px 0;
+            font-size: 12px;
+            float: left;
+        }
+
+        .sign-in .footer a:hover, .sign-in .footer a:focus {
+            text-decoration: none;
+        }
+
+
+
+        @media only screen and (max-width: 768px) {
+            .inner {
+                width: 100%;
+                padding: 20px 50px 0 20px;
+            }
+
+            .sign-in .logo {
+                margin-bottom: 0;
+            }
+
+            .sign-in .footer {
+                padding: 0 20px 5px;
+            }
+
+            .sign-in .form-group .checkbox input {
+                margin-top: 0;
+            }
+        }

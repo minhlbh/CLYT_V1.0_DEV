@@ -1,0 +1,232 @@
+
+.col-left-fixed {
+    width: 230px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 40px;
+    background: #0f9cb3;
+    font-size: 13px;
+    border-top: rgba(255,255,255,.3) 1px solid;
+    border-right: rgba(255,255,255,.3) 1px solid;
+    z-index: 10;
+    padding: 0 0 110px 0;
+    overflow: hidden;
+}
+
+.col-left-fixed ul:first-child {
+    border-bottom: rgba(255,255,255,.3) 1px solid;
+    float: left;
+    width: 100%;
+}
+
+
+.col-left-fixed ul {
+    padding: 0;
+    margin: 0;
+}
+
+.col-left-fixed ul li {
+    display: list-item;
+    list-style-type: none;
+}
+
+.col-left-fixed ul li a {
+    color: #fff;
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 12px 20px 12px 50px;
+    min-height: 42px;
+}
+
+.col-left-fixed ul li a:hover, .col-left-fixed ul li a:focus, .col-left-fixed ul li.active a {
+  text-decoration: none;
+  background: #11a8c1;
+}
+
+.col-left-fixed ul li a .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    color: #fff;
+}
+
+.col-left-fixed ul li a .icon img {
+    width: 20px;
+}
+
+.col-left-fixed .glyphicon {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 16px;
+}
+
+.list-services {
+    height: 100%;
+    overflow: auto;
+    float: left;
+    width: 100%;
+}
+
+.fxs-sidebar.toggled .list-services::-webkit-scrollbar {
+    display: none;
+}
+
+.col-left-fixed .list-services ul {
+    border-bottom:none;
+}
+
+.list-services .title.big {
+    text-transform: uppercase;
+}
+
+/* toggled */
+/* toggled */
+/* toggled */
+
+
+.col-left-fixed  ul li a span.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.bt-collapsed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+
+
+.fxs-sidebar.toggled .col-left-fixed {
+    width: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+.fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
+    display: none;
+}
+
+.fxs-sidebar.toggled .col-left-fixed ul li a {
+  padding: 12px 10px 12px 39px;
+}
+
+.fxs-sidebar.toggled .list-services::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    width: 0;
+    background: transparent;
+}
+
+.fxs-sidebar.toggled .bt-collapsed {
+    border-right: rgba(255,255,255,.3) 1px solid;
+    width: 57px !important;
+}
+
+
+
+
+
+
+/* left-menu for mobile */
+/* left-menu for mobile */
+/* left-menu for mobile */
+
+
+.fxs-sidebar.mobile {
+    width: 50px;
+    padding-top: 45px;
+    border: none;
+}
+
+.fxs-sidebar .bt-collapsed {
+    z-index: 10000;
+    height: 43px;
+    margin: 0;
+    padding: 0;
+    background: #0f9cb3;
+    list-style-type: none;
+    border-bottom: rgba(255,255,255,.3) 1px solid;
+    color: #fff;
+    display: block;
+    position: relative;
+    top: 0;
+}
+
+ .fxs-sidebar.mobile .bt-collapsed.mb {
+    z-index: 10000;
+    height: 44px;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    background: #0f9cb3;
+    list-style-type: none;
+    border-bottom: rgba(255,255,255,.3) 1px solid;
+    border-right: rgba(255,255,255,.3) 1px solid;
+    color: #fff;
+    display: none;
+    top:-45px;
+}
+
+.fxs-sidebar.mobile .bt-collapsed .glyphicon {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    font-size: 16px;
+    color: #fff;
+}
+
+ @media only screen and (max-width: 768px) {
+    .fxs-sidebar.mobile .bt-collapsed {
+        display: none;
+    }
+
+    .fxs-sidebar.mobile .bt-collapsed.mb {
+        display: block;
+    }
+}
+
+
+
+.fxs-sidebar.mobile .col-left-fixed {
+    width: 50px;
+    top:83px;
+    padding-top: 0;
+}
+
+.fxs-sidebar.mobile .col-left-fixed ul li a span.title {
+    display: none;
+}
+
+/* .fxs-sidebar.mobile.toggled {
+    width: 230px;
+} */
+
+.fxs-sidebar.mobile.toggled .col-left-fixed {
+    width: 231px;
+}
+
+.fxs-sidebar.mobile.toggled .col-left-fixed ul li a span.title {
+    display: block;
+}
+
+.fxs-sidebar.mobile .col-left-fixed ul li a span.title {
+    padding: 0 0 0 5px;
+}
+
+.fxs-sidebar.mobile.toggled .col-left-fixed ul li a, .fxs-sidebar.mobile .col-left-fixed ul li a {
+    padding: 12px 10px 12px 39px;
+}
+

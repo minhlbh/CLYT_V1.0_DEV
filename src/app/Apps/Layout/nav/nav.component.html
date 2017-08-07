@@ -1,0 +1,41 @@
+<div class="fxs-topbar">
+    <!-- <div>
+    <a [routerLink]="['/']">header</a>
+  </div> -->
+    <nav  class="navbar navbar-default navbar-fixed-top nav-top"  [ngStyle]="{'background': menuElements.MauDam}">
+        <div class="navbar-header">
+            <a class="navbar-brand logo" [routerLink]="['/']">
+              <img src="{{menuElements.Logo}}">
+              <span class="app-bar-divider">
+                {{menuElements.ThuongHieu}}
+              </span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="#">
+                  Giới thiệu
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                  Liên hệ
+                </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a [routerLink]= "['/auth/signIn']">Đăng nhập
+                </a>
+                </li>
+                <li>
+                    <a class="bt-sign-up" [routerLink]= "['/auth/register']">
+                  <span>Đăng ký ngay
+                  </span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

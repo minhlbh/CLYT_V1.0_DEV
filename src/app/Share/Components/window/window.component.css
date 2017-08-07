@@ -1,0 +1,88 @@
+.window {
+    width: 100%;
+    padding:45px 0 0 0;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    position: relative !important;
+    display: block;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .window {
+      border-right: none;
+    }
+}
+
+.title-window {
+  width: 100%;
+  height: 44px;
+  background: #0f9cb3;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:0 25px 0 55px;
+}
+
+
+.title-window .big-title {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+  padding: 0;
+  line-height: 13px;
+  line-height: 43px;
+}
+
+.title-window .sub-title {
+  font-size: 11px;
+  color: #ccc;
+}
+
+.title-window .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    position: absolute;
+    top: 6px;
+    left: 25px;
+    color: #fff;
+}
+
+.body {
+  position: relative;
+  height: 100%;
+}
+
+.col-left-fixed ul li a .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    color: #fff;
+}
+
+/* button close */
+/* button close */
+/* button close */
+.bt-close {
+  background: none;
+  position: absolute;
+  top:0;
+  right:0;
+  padding: 3px 6px;
+  border: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.bt-close:hover {
+  background: #ce352c;
+}

@@ -1,0 +1,169 @@
+
+
+.search-box-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px 0 20px ;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+
+
+
+.search-box-top .text-light {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.search-box-top hr {
+    margin-bottom: 0;
+}
+
+.text-light {
+    font-weight: 600;
+}
+
+.input-control {
+    display: inline-block;
+    min-height: 27px;
+    height: 27px;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+}
+
+.input-control .icon-search {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #777;
+}
+
+.input-control input {
+  width: 100%;
+  padding:3px 5px;
+  font-size: 13px;
+  padding-left:25px;
+  border: solid 1px #ccc;
+  height: 25px;
+}
+
+.full-size {
+    width: 100% !important;
+}
+
+.ul {
+    height: 100%;
+    overflow: auto;
+    padding:0;
+    margin: 0 25px;
+}
+
+.ul li {
+    display: list-item;
+    list-style-type: none;
+
+}
+
+.ul li a {
+    color: #323232;
+    padding: 8px 5px;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 40px;
+    line-height: 25px;
+    border-bottom:1px solid #eee;
+}
+
+
+
+.ul li a .title {
+    display: block;
+}
+
+.ul li a:hover, .ul li a:focus {
+  background: #f5f5f5;
+  text-decoration:none;
+}
+
+.no-mg-top {
+  top:0;
+  padding-top: 67px;
+}
+
+.ul li a .icon {
+    width: 20px;
+    top: 13px;
+    right: 10px;
+    color: #888;
+    position: absolute;
+}
+
+
+
+.toggled ul li a .title {
+  display: block
+}
+
+.toggled ul li a {
+padding: 12px 10px 12px 40px;
+}
+
+.toggled {
+  width: 50px;
+  left: 0;
+}
+
+.list {
+    height: 100%;
+    overflow: auto;
+    padding: 0;
+    margin: 0 20px;
+}
+
+.list li {
+    display: list-item;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.list li a {
+    color: #323232;
+    padding: 8px 5px;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 40px;
+    line-height: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.list li a:hover, .list li a:focus {
+    background: #f5f5f5;
+    text-decoration:none;
+}
+
+.list-left-wr {
+    width: 100%;
+    padding: 64px 0 25px 0;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    position: relative !important;
+    display: block;
+    height: calc(100vh - 85px);
+    float: left;
+    overflow: hidden;
+}
+
+.list-left-wr.mobile {
+    border:none;
+}
