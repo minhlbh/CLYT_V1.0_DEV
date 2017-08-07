@@ -17,10 +17,11 @@ export class LeftMenuComponent implements OnInit {
     constructor(
         private settingService: SettingService,
         private router: Router
-    ) { }
+    ) { 
+        this.menuElements = this.settingService.getMenu();
+    }
 
     ngOnInit() {
-        this.menuElements = this.settingService.getMenu();
     }
 
     toggledLeft() {
