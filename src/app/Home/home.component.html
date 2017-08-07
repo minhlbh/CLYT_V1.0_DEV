@@ -9,7 +9,7 @@
             </div>
             <div class="controls">
                 <div class="user">
-                    <a href="#" class="name-user bt-sign-up">
+                    <a href="#" class="name-user bt-sign-up" (click)="reLayout()">
                         <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
                         Đăng nhập
                     </a>
@@ -34,67 +34,71 @@
         </div>
 
 
-        <div  fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
             <main class="fxs-panorama">
                 <div class="fxs-blade-content-container" *ngIf="menus">
-                    <ng-container  *ngFor="let blocks of menus">
-                        <div class="block" [id]="blocks?.Id">
+                    <ng-container *ngFor="let blocks of menus; let bl_i = index">
+                        <div class="block" [id]="blocks?.Id" [ngClass]="{'fixwidth': !blocks?.full}">
                             <div class="title">
                                 {{blocks.Ten}}
                                 <span class="count-apps">({{blocks?.items.length}} apps)</span>
                             </div>
-                            <!-- <div class="bottom">
-                                <a (click)="showMore(blocks?.Id)" class="show-all">
-                                  <span>Xem tất cả</span>
-                                  <i class="fa fa-fw fa-arrow-circle-o-right"></i>
-                                </a>
-                            </div> -->
-                            <div class="body">
-                                <div #grid class="grid">
-                                    <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
-                                        <div class="grid-item" [ngClass]="
+
+
+                            <section class="grid" [ngClass]="{'g-holiz': blocks?.full}">
+                                <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
+                                    <div class="grid-item"  [ngClass]="
                                 {
                                     'grid-item-w2': item.chieuRong==2,
                                     'grid-item-w3': item.chieuRong==3,
                                     'grid-item-h3': item.chieuCao==3,
                                     'grid-item-h2': item.chieuCao==2
-                                }">
-                                            <!-- style ô vuông là icon  -->
-                                            <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]">
-                                                <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
-                                                    <img src="{{item?.IconText}}">
-                                                </div>
-                                                <h4 class="title-label-icon">
-                                                    <span class="icon">
-                                                        <img src="{{item?.IconText}}" aria-hidden="true">
-                                                    </span> {{item.Ten}}
-                                                </h4>
-                                            </a>
-                                            <!-- style ô vuông là ảnh  -->
-                                            <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
-                                                <h4 class="title-label">
-                                                    <span class="icon">
-                                                        <img src="{{item?.IconText}}" aria-hidden="true">
-                                                    </span> {{item.Ten}}
-                                                </h4>
-
-                                            </a>
-
-                                            <!-- style ô vuông là dạng slide  -->
-                                            <div class="child" *ngIf="item?.style == 'Slide'">
-                                                <h4 class="title-label">
-                                                    <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                    {{item.Ten}}
-                                                </h4>
+                                }"
+                                >
+                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]">
+                                            <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
+                                                <img src="{{item?.IconText}}">
                                             </div>
+                                            <h4 class="title-label-icon">
+                                                <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span> {{item.Ten}}
+                                            </h4>
+                                        </a>
+                                        <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                            <h4 class="title-label">
+                                                <span class="icon">
+                                                        <img src="{{item?.IconText}}" aria-hidden="true">
+                                                    </span> {{item.Ten}}
+                                            </h4>
+
+                                        </a>
+
+                                        <div class="child" *ngIf="item?.style == 'Slide'">
+                                            <h4 class="title-label">
+                                                <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                {{item.Ten}}
+                                            </h4>
                                         </div>
-                                    </ng-container>
-                                </div>
+                                    </div>
+                                </ng-container>
+                            </section>
+                            <div class="bottom">
+                                <a *ngIf="!blocks?.full" (click)="showMore(bl_i)" class="show-all">
+                                  <span>Xem tất cả</span>
+                                  <i class="fa fa-fw fa-arrow-circle-o-right"></i>
+                                </a>
+                                <a *ngIf="blocks?.full" (click)="showLess(bl_i)" class="show-all">
+                                  <span>Thu gọn</span>
+                                  <i class="fa fa-fw fa-arrow-circle-o-left"></i>
+                                </a>
                             </div>
+                            <!-- </div> -->
+                            <!-- </div> -->
                         </div>
 
                     </ng-container>
                     <!-- thêm khoảng cách vào cuối cùng -->
-                     <div style="padding:40px"> </div>
+                    <div style="padding:40px"> </div>
                 </div>
             </main>
         </div>
@@ -121,8 +125,8 @@
                 </ul>
                 </a>
                 <div class="search-mb">
-                    <span (click) = "searchState=!searchState" class="glyphicon glyphicon-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        aria-hidden="true"></span>
+                    <span (click)="searchState=!searchState" class="glyphicon glyphicon-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" aria-hidden="true"></span>
                 </div>
             </div>
         </nav>
