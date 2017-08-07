@@ -1,3 +1,4 @@
+import {UserService} from '../Share/Services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { SettingService } from '../Share/Services/setting.service';
 import { group, state, query, stagger, animate, style, transition, trigger } from '@angular/animations';
@@ -14,8 +15,10 @@ export class HomeComponent implements OnInit {
     searchKey: any;
     searchState = false;
     state = 'show';
+    auth: any;
     constructor(
-        private settingService: SettingService
+        private settingService: SettingService,
+        private userService: UserService,
     ) {
         // this.settingService.itemValue.subscribe((data) => {
         //     console.log('abc', data);
@@ -28,6 +31,8 @@ export class HomeComponent implements OnInit {
             this.config = this.settingService.getConfig();
 
         });
+        this.auth = this.userService.getAuth();
+
     }
 
     showMore(i) {
