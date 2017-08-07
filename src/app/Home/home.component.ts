@@ -1,75 +1,49 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SettingService } from '../Share/Services/setting.service';
-import { query, stagger, animate, style, transition, trigger } from '@angular/animations';
-import { UserService } from '../Share/Services/user.service';
-import { Router } from '@angular/router';
-
-
-declare var HomeObject: any;
-
+import { group, state, query, stagger, animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css'],
-    // animations: [
-    //     trigger('pageAnimation', [
-    //         transition(':enter', [
-    //             query('.grid-item', style({ transform: 'translateX(150px)', opacity: 0 })),
-
-    //             query(
-    //                 '.grid-item', animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-    //             ),
-    //             query('.grid-item', [
-    //                 stagger(200, [
-    //                     animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-    //                 ])
-    //             ])
-    //         ]),
-    //     ])
-    // ]
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
     public runAnimation = false;
     menus: any;
     config: any;
     searchKey: any;
-    blockFull = false;
     searchState = false;
-    auth: any;
+    state = 'show';
     constructor(
-        private settingService: SettingService,
-        private router: Router,
-        private userService: UserService
+        private settingService: SettingService
     ) {
-        this.settingService.itemValue.subscribe((data) => {
-            console.log('abc', data);
-        });
+        // this.settingService.itemValue.subscribe((data) => {
+        //     console.log('abc', data);
+        // });
     }
 
     ngOnInit() {
-
         this.settingService.getFirstConfig().subscribe(() => {
             this.menus = this.settingService.getMenu();
             this.config = this.settingService.getConfig();
-            this.runAnimation = true;
-            setTimeout(() => {
-                HomeObject.byWidth('all');
-                // this.showMore();
-            }, 0);
+
         });
-        this.auth = this.userService.getAuth();
     }
 
-    showMore(id) {
-        this.menus[0].items = [...this.menus[0].items, ...this.menus[0].items];
-        setTimeout(() => {
-            HomeObject.byHeight(id);
-        }, 0);
+    showMore(i) {
+        this.menus.forEach(block => {
+            block.full = false;
+        });
+        // this.menus[i].items = [...this.menus[i].items, ...this.menus[i].items];
+        this.menus[i].full = true;
+        this.state = 'show';
+    }
+    showLess(i) {
+        this.menus[i].full = false;
+    }
+    getRandomInt(min, max) {
+        return (Math.floor(Math.random() * (max - min + 1)) + min) * 0.01;
     }
 
-    // ngAfterViewInit() {
-    //     HomeObject.init();
-    // }
 
 }
