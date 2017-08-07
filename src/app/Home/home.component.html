@@ -9,19 +9,19 @@
             </div>
             <div class="controls">
                 <div class="user">
-                    <a *ngIf="!this.auth" [routerLink]= "['/auth/signIn']" class="name-user bt-sign-up">
+                    <a *ngIf="!this.auth" [routerLink]="['/auth/signIn']" class="name-user bt-sign-up">
                         <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
                         Đăng nhập
                     </a>
-                    <a *ngIf="!this.auth" [routerLink]= "['/auth/register']" class="sign-up-now bt-sign-up">
+                    <a *ngIf="!this.auth" [routerLink]="['/auth/register']" class="sign-up-now bt-sign-up">
                         <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
                         Đăng ký ngay
                     </a>
-                    <a *ngIf="this.auth"  class="name-user bt-sign-up">
+                    <a *ngIf="this.auth" class="name-user bt-sign-up">
                         <span class="avt fa fa-fw fa-user" aria-hidden="true"></span>
                         {{this.auth.HoVaTen}}
                     </a>
-                    <a *ngIf="this.auth" [routerLink]= "['/auth/signOut']" class="name-user bt-sign-up">
+                    <a *ngIf="this.auth" [routerLink]="['/auth/signOut']" class="name-user bt-sign-up">
                         <span class="settings fa fa-fw fa-power-off" aria-hidden="true"></span>
                         Đăng xuất
                     </a>
@@ -120,16 +120,44 @@
             </div>
             <div *ngIf="searchState" class="input-control mb-home">
                 <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                <input type="text" placeholder="Tìm dịch vụ...">
+                <input type="text" placeholder="Tìm dịch vụ..." [(ngModel)]="searchKey">
             </div>
             <div>
                 <a href="#" class="account">
                     <span class="glyphicon glyphicon-user dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true"></span>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>Đăng nhập</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#"><span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>Đăng ký</a></li>
-                </ul>
+                        <li>
+                            <a *ngIf="!this.auth" [routerLink]= "['/auth/signIn']">
+                                <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
+                                Đăng nhập
+                            </a>
+                        </li>
+
+                        <li role="separator" class="divider"></li>
+
+                        <li>
+                            <a *ngIf="!this.auth" [routerLink]="['/auth/register']">
+                                <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
+                                Đăng ký
+                            </a>
+                        </li>
+
+                        <li>
+                            <a *ngIf="this.auth" class="name-user bt-sign-up">
+                                <span class="avt fa fa-fw fa-user" aria-hidden="true"></span>
+                                {{this.auth.HoVaTen}}
+                            </a>
+                        </li>
+
+                        <li role="separator" class="divider"></li>
+
+                        <li>
+                            <a *ngIf="this.auth" [routerLink]="['/auth/signOut']" class="name-user bt-sign-up">
+                                <span class="settings fa fa-fw fa-power-off" aria-hidden="true"></span>
+                                Đăng xuất
+                            </a>
+                        </li>
+                    </ul>
                 </a>
                 <div class="search-mb">
                     <span (click)="searchState=!searchState" class="glyphicon glyphicon-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -141,7 +169,7 @@
             <ng-container *ngFor="let blocks of menus">
                 <div class="m-categories">
                     <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
-                    <ng-container *ngFor="let item of blocks?.items">
+                    <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
                         <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
                             <div class="m-cover" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
                             <div class="title-services">
