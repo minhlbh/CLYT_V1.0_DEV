@@ -823,7 +823,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/window/window.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div *ngIf=\"icon != null\">\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\" [ngStyle]=\"{'background': 'menuElements.MauNhat'}\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div *ngIf=\"icon != null\">\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -831,9 +831,10 @@ module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WindowComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -847,11 +848,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WindowComponent = (function () {
-    function WindowComponent(router, location, r) {
+    function WindowComponent(router, location, settingService, r) {
         this.router = router;
         this.location = location;
+        this.settingService = settingService;
         this.r = r;
+        this.menuElements = this.settingService.getMenu();
     }
     WindowComponent.prototype.ngOnInit = function () {
     };
@@ -862,27 +866,27 @@ var WindowComponent = (function () {
     return WindowComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "name", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "icon", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "url", void 0);
 WindowComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-window',
         template: __webpack_require__("../../../../../src/app/Share/Components/window/window.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Share/Components/window/window.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
 ], WindowComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=window.component.js.map
 
 /***/ }),

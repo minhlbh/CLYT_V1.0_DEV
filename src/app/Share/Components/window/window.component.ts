@@ -1,3 +1,4 @@
+import { SettingService } from '../../Services/setting.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -13,11 +14,15 @@ export class WindowComponent implements OnInit {
     @Input() icon;
     @Input() url;
     private route: string;
+    menuElements: any;
     constructor(
         private router: Router,
         private location: Location,
+        private settingService: SettingService,
         private r: ActivatedRoute
-    ) {}
+    ) {
+        this.menuElements = this.settingService.getMenu();
+    }
 
     ngOnInit() {
     }
