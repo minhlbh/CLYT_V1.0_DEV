@@ -856,7 +856,6 @@ var WindowComponent = (function () {
         this.settingService = settingService;
         this.r = r;
         this.menuElements = this.settingService.getMenu();
-        console.log(this.menuElements.MauNhat);
     }
     WindowComponent.prototype.ngOnInit = function () {
     };
@@ -882,7 +881,9 @@ WindowComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-window',
         template: __webpack_require__("../../../../../src/app/Share/Components/window/window.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Share/Components/window/window.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/Share/Components/window/window.component.css")],
+        encapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated,
+        changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].Default
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
 ], WindowComponent);
