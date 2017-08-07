@@ -123,9 +123,6 @@ var providers = {
         'clientId': '442448415974-lvusnqsttcup9dd79fa2en47car1793k.apps.googleusercontent.com'
         // client secret: Nz_F3bCWPtJs6XMYaui40TMv
     },
-    'linkedin': {
-        'clientId': 'LINKEDIN_CLIENT_ID'
-    },
     'facebook': {
         'clientId': '123454808277990',
         'apiVersion': 'v2.10'

@@ -27,7 +27,7 @@
 }
 
 .navbar-brand.logo:hover {
-    background: #11a8c1;
+    background: rgba(255,255,255,.3);
 }
 
 .navbar-brand.logo span {
