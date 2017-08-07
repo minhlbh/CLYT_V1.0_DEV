@@ -281,7 +281,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a href=\"{{dulieuLink}}\">{{dulieuLinkTieuDe}}</a>\n\n"
+module.exports = "<a href=\"{{dulieuLink}}\">{{dulieuLinkTieuDe}}</a>\r\n\r\n"
 
 /***/ }),
 
@@ -350,7 +350,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p [innerHTML]=\"dulieuText\"></p>\n"
+module.exports = "<p [innerHTML]=\"dulieuText\"></p>\r\n"
 
 /***/ }),
 
@@ -753,7 +753,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Start content right -->\n<div class=\"col-right\">\n    <div class=\"col-right-main scrollbar-custom\">\n        <div class=\"box-2 \" *ngFor=\"let baiviet of forumBarContent\">\n            <div class=\"box-header with-border\">\n                <div class=\"user-block\">\n                    <span class=\"username\">\n                  <a href=\"#\">{{baiviet.TieuDe}}</a>\n                </span>\n                    <span class=\"description\">Tác giả: {{baiviet.NguoiViet.Name}}\n                </span>\n                </div>\n            </div>\n            <div class=\"box-body\">\n                <p class=\"t-13px\"> {{baiviet.TomTat}}\n                </p>\n\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\n                <i class=\"glyphicon glyphicon-share\">\n                </i> Chia sẻ\n              </button>\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\n                <i class=\"glyphicon glyphicon-thumbs-up\">\n                </i> Thích\n              </button>\n                <span class=\"pull-right text-muted\">45 thích - 2 bình luận\n              </span>\n            </div>\n\n        </div>\n    </div>\n</div>\n<!-- End content right -->\n"
+module.exports = "<!-- Start content right -->\r\n<div class=\"col-right\">\r\n    <div class=\"col-right-main scrollbar-custom\">\r\n        <div class=\"box-2 \" *ngFor=\"let baiviet of forumBarContent\">\r\n            <div class=\"box-header with-border\">\r\n                <div class=\"user-block\">\r\n                    <span class=\"username\">\r\n                  <a href=\"#\">{{baiviet.TieuDe}}</a>\r\n                </span>\r\n                    <span class=\"description\">Tác giả: {{baiviet.NguoiViet.Name}}\r\n                </span>\r\n                </div>\r\n            </div>\r\n            <div class=\"box-body\">\r\n                <p class=\"t-13px\"> {{baiviet.TomTat}}\r\n                </p>\r\n\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-share\">\r\n                </i> Chia sẻ\r\n              </button>\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-thumbs-up\">\r\n                </i> Thích\r\n              </button>\r\n                <span class=\"pull-right text-muted\">45 thích - 2 bình luận\r\n              </span>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End content right -->\r\n"
 
 /***/ }),
 

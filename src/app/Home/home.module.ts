@@ -9,8 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home.component';
 
 import { SettingService } from '../Share/Services/setting.service';
-import { UserService } from '../Share/Services/user.service';
-
 
 import { HomeFilterPipe } from '../Share/Pipes/homeFilter.pipe';
 
@@ -32,8 +30,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ResponsiveModule
     ],
     providers: [
-        SettingService,
-        UserService
+        SettingService
     ],
     declarations: [
         HomeFilterPipe,

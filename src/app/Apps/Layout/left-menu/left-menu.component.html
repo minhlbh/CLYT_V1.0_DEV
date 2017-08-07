@@ -41,8 +41,13 @@
         <div class="list-services">
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
+<<<<<<< HEAD
+                    <a [routerLink]="['/apps', item.url]" style="cursor: pointer">
+                              <span class="fa fa-fw {{item.IconText}} icon" aria-hidden="true"></span>
+=======
                     <a [routerLink] = "['/apps', item.url]" style="cursor: pointer">
                               <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
+>>>>>>> e3606888e97e65ec2c8f76628fbe006795fb90e5
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
                         </a>
                 </li>
