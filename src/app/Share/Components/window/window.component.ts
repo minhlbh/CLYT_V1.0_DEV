@@ -23,7 +23,7 @@ export class WindowComponent implements OnInit {
         private settingService: SettingService,
         private r: ActivatedRoute
     ) {
-        this.menuElements = this.settingService.getMenu();
+        this.menuElements = this.settingService.getConfig();
     }
 
     ngOnInit() {

@@ -12,13 +12,15 @@ import { Router } from '@angular/router';
 export class LeftMenuComponent implements OnInit {
     // @Output() toggled = new EventEmitter<boolean>();
 
-    menuElements: string;
+    menuElements: any;
+    settings: any;
     isToggled = false;
     constructor(
         private settingService: SettingService,
         private router: Router
     ) {
         this.menuElements = this.settingService.getMenu();
+        this.settings = this.settingService.getConfig();
     }
 
     ngOnInit() {

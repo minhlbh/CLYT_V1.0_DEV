@@ -855,7 +855,7 @@ var WindowComponent = (function () {
         this.location = location;
         this.settingService = settingService;
         this.r = r;
-        this.menuElements = this.settingService.getMenu();
+        this.menuElements = this.settingService.getConfig();
     }
     WindowComponent.prototype.ngOnInit = function () {
     };
