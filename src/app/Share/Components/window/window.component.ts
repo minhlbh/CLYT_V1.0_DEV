@@ -22,6 +22,7 @@ export class WindowComponent implements OnInit {
         private r: ActivatedRoute
     ) {
         this.menuElements = this.settingService.getMenu();
+        console.log(this.menuElements.MauNhat);
     }
 
     ngOnInit() {
