@@ -43,19 +43,11 @@
 }
 
 .title-window .icon {
-<<<<<<< HEAD
-  padding: 0;
-  position: absolute;
-  top:10px;
-  left: 25px;
-=======
     font-size: 20px;
     margin-right: 5px;
     position: absolute;
     top: 6px;
     left: 25px;
-    color: #fff;
->>>>>>> origin/hiep.dev
 }
 
 .body {
