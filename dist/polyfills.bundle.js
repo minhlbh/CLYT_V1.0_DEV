@@ -94,9 +94,12 @@ __webpack_require__("../../../../core-js/modules/es6.reflect.set-prototype-of.js
 module.exports = __webpack_require__("../../../../core-js/modules/_core.js").Reflect;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/es7/reflect.js":
@@ -120,6 +123,7 @@ module.exports = __webpack_require__("../../../../core-js/modules/_core.js").Ref
 /***/ (function(module, exports) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (it) {
   if (typeof it != 'function') throw TypeError(it + ' is not a function!');
   return it;
@@ -127,17 +131,23 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it){
   if(typeof it != 'function')throw TypeError(it + ' is not a function!');
   return it;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_an-instance.js":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (it, Constructor, name, forbiddenField) {
   if (!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)) {
@@ -145,20 +155,28 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 module.exports = function(it, Constructor, name, forbiddenField){
   if(!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)){
 >>>>>>> origin/hiep.dev
+=======
+module.exports = function(it, Constructor, name, forbiddenField){
+  if(!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)){
+>>>>>>> origin/master
     throw TypeError(name + ': incorrect invocation!');
   } return it;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_an-object.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (it) {
   if (!isObject(it)) throw TypeError(it + ' is not an object!');
@@ -167,12 +185,17 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_array-from-iterable.js":
@@ -181,10 +204,14 @@ module.exports = function(it){
 var forOf = __webpack_require__("../../../../core-js/modules/_for-of.js");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (iter, ITERATOR) {
 =======
 module.exports = function(iter, ITERATOR){
 >>>>>>> origin/hiep.dev
+=======
+module.exports = function(iter, ITERATOR){
+>>>>>>> origin/master
   var result = [];
   forOf(iter, false, result.push, result, ITERATOR);
   return result;
@@ -198,6 +225,7 @@ module.exports = function(iter, ITERATOR){
 
 // false -> Array#indexOf
 // true  -> Array#includes
+<<<<<<< HEAD
 <<<<<<< HEAD
 var toIObject = __webpack_require__("../../../../core-js/modules/_to-iobject.js");
 var toLength = __webpack_require__("../../../../core-js/modules/_to-length.js");
@@ -218,6 +246,8 @@ module.exports = function (IS_INCLUDES) {
     } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
       if (O[index] === el) return IS_INCLUDES || index || 0;
 =======
+=======
+>>>>>>> origin/master
 var toIObject = __webpack_require__("../../../../core-js/modules/_to-iobject.js")
   , toLength  = __webpack_require__("../../../../core-js/modules/_to-length.js")
   , toIndex   = __webpack_require__("../../../../core-js/modules/_to-index.js");
@@ -234,15 +264,21 @@ module.exports = function(IS_INCLUDES){
     // Array#toIndex ignores holes, Array#includes - not
     } else for(;length > index; index++)if(IS_INCLUDES || index in O){
       if(O[index] === el)return IS_INCLUDES || index || 0;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     } return !IS_INCLUDES && -1;
   };
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_array-methods.js":
@@ -255,6 +291,7 @@ module.exports = function(IS_INCLUDES){
 // 4 -> Array#every
 // 5 -> Array#find
 // 6 -> Array#findIndex
+<<<<<<< HEAD
 <<<<<<< HEAD
 var ctx = __webpack_require__("../../../../core-js/modules/_ctx.js");
 var IObject = __webpack_require__("../../../../core-js/modules/_iobject.js");
@@ -289,6 +326,8 @@ module.exports = function (TYPE, $create) {
           case 2: result.push(val);        // filter
         } else if (IS_EVERY) return false; // every
 =======
+=======
+>>>>>>> origin/master
 var ctx      = __webpack_require__("../../../../core-js/modules/_ctx.js")
   , IObject  = __webpack_require__("../../../../core-js/modules/_iobject.js")
   , toObject = __webpack_require__("../../../../core-js/modules/_to-object.js")
@@ -321,7 +360,10 @@ module.exports = function(TYPE, $create){
           case 6: return index;                   // findIndex
           case 2: result.push(val);               // filter
         } else if(IS_EVERY)return false;          // every
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       }
     }
     return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
@@ -329,14 +371,18 @@ module.exports = function(TYPE, $create){
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_array-species-constructor.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
 var isArray = __webpack_require__("../../../../core-js/modules/_is-array.js");
@@ -352,6 +398,8 @@ module.exports = function (original) {
       C = C[SPECIES];
       if (C === null) C = undefined;
 =======
+=======
+>>>>>>> origin/master
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js")
   , isArray  = __webpack_require__("../../../../core-js/modules/_is-array.js")
   , SPECIES  = __webpack_require__("../../../../core-js/modules/_wks.js")('species');
@@ -365,15 +413,21 @@ module.exports = function(original){
     if(isObject(C)){
       C = C[SPECIES];
       if(C === null)C = undefined;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     }
   } return C === undefined ? Array : C;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_array-species-create.js":
@@ -383,17 +437,23 @@ module.exports = function(original){
 var speciesConstructor = __webpack_require__("../../../../core-js/modules/_array-species-constructor.js");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
 };
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(original, length){
   return new (speciesConstructor(original))(length);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_bind.js":
@@ -401,6 +461,7 @@ module.exports = function(original, length){
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var aFunction = __webpack_require__("../../../../core-js/modules/_a-function.js");
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
@@ -413,6 +474,8 @@ var construct = function (F, len, args) {
     for (var n = [], i = 0; i < len; i++) n[i] = 'a[' + i + ']';
     // eslint-disable-next-line no-new-func
 =======
+=======
+>>>>>>> origin/master
 var aFunction  = __webpack_require__("../../../../core-js/modules/_a-function.js")
   , isObject   = __webpack_require__("../../../../core-js/modules/_is-object.js")
   , invoke     = __webpack_require__("../../../../core-js/modules/_invoke.js")
@@ -422,11 +485,15 @@ var aFunction  = __webpack_require__("../../../../core-js/modules/_a-function.js
 var construct = function(F, len, args){
   if(!(len in factories)){
     for(var n = [], i = 0; i < len; i++)n[i] = 'a[' + i + ']';
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     factories[len] = Function('F,a', 'return new F(' + n.join(',') + ')');
   } return factories[len](F, args);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = Function.bind || function bind(that /* , ...args */) {
   var fn = aFunction(this);
@@ -441,6 +508,8 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = Function.bind || function bind(that /*, args... */){
   var fn       = aFunction(this)
     , partArgs = arraySlice.call(arguments, 1);
@@ -452,13 +521,17 @@ module.exports = Function.bind || function bind(that /*, args... */){
   return bound;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_classof.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
+<<<<<<< HEAD
 <<<<<<< HEAD
 var cof = __webpack_require__("../../../../core-js/modules/_cof.js");
 var TAG = __webpack_require__("../../../../core-js/modules/_wks.js")('toStringTag');
@@ -474,6 +547,8 @@ var tryGet = function (it, key) {
 
 module.exports = function (it) {
 =======
+=======
+>>>>>>> origin/master
 var cof = __webpack_require__("../../../../core-js/modules/_cof.js")
   , TAG = __webpack_require__("../../../../core-js/modules/_wks.js")('toStringTag')
   // ES3 wrong here
@@ -487,7 +562,10 @@ var tryGet = function(it, key){
 };
 
 module.exports = function(it){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   var O, T, B;
   return it === undefined ? 'Undefined' : it === null ? 'Null'
     // @@toStringTag case
@@ -499,9 +577,12 @@ module.exports = function(it){
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_cof.js":
@@ -510,17 +591,23 @@ module.exports = function(it){
 var toString = {}.toString;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (it) {
   return toString.call(it).slice(8, -1);
 };
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it){
   return toString.call(it).slice(8, -1);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_collection-strong.js":
@@ -528,6 +615,7 @@ module.exports = function(it){
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var dP = __webpack_require__("../../../../core-js/modules/_object-dp.js").f;
 var create = __webpack_require__("../../../../core-js/modules/_object-create.js");
@@ -552,6 +640,8 @@ var getEntry = function (that, key) {
   for (entry = that._f; entry; entry = entry.n) {
     if (entry.k == key) return entry;
 =======
+=======
+>>>>>>> origin/master
 var dP          = __webpack_require__("../../../../core-js/modules/_object-dp.js").f
   , create      = __webpack_require__("../../../../core-js/modules/_object-create.js")
   , redefineAll = __webpack_require__("../../../../core-js/modules/_redefine-all.js")
@@ -573,11 +663,15 @@ var getEntry = function(that, key){
   // frozen object case
   for(entry = that._f; entry; entry = entry.n){
     if(entry.k == key)return entry;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   }
 };
 
 module.exports = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
     var C = wrapper(function (that, iterable) {
@@ -588,30 +682,45 @@ module.exports = {
     var C = wrapper(function(that, iterable){
       anInstance(that, C, NAME, '_i');
 >>>>>>> origin/hiep.dev
+=======
+  getConstructor: function(wrapper, NAME, IS_MAP, ADDER){
+    var C = wrapper(function(that, iterable){
+      anInstance(that, C, NAME, '_i');
+>>>>>>> origin/master
       that._i = create(null); // index
       that._f = undefined;    // first entry
       that._l = undefined;    // last entry
       that[SIZE] = 0;         // size
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
 =======
       if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
 >>>>>>> origin/hiep.dev
+=======
+      if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
+>>>>>>> origin/master
     });
     redefineAll(C.prototype, {
       // 23.1.3.1 Map.prototype.clear()
       // 23.2.3.2 Set.prototype.clear()
+<<<<<<< HEAD
 <<<<<<< HEAD
       clear: function clear() {
         for (var that = validate(this, NAME), data = that._i, entry = that._f; entry; entry = entry.n) {
           entry.r = true;
           if (entry.p) entry.p = entry.p.n = undefined;
 =======
+=======
+>>>>>>> origin/master
       clear: function clear(){
         for(var that = this, data = that._i, entry = that._f; entry; entry = entry.n){
           entry.r = true;
           if(entry.p)entry.p = entry.p.n = undefined;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
           delete data[entry.i];
         }
         that._f = that._l = undefined;
@@ -619,6 +728,7 @@ module.exports = {
       },
       // 23.1.3.3 Map.prototype.delete(key)
       // 23.2.3.4 Set.prototype.delete(value)
+<<<<<<< HEAD
 <<<<<<< HEAD
       'delete': function (key) {
         var that = validate(this, NAME);
@@ -633,6 +743,8 @@ module.exports = {
           if (that._f == entry) that._f = next;
           if (that._l == entry) that._l = prev;
 =======
+=======
+>>>>>>> origin/master
       'delete': function(key){
         var that  = this
           , entry = getEntry(that, key);
@@ -645,12 +757,16 @@ module.exports = {
           if(next)next.p = prev;
           if(that._f == entry)that._f = next;
           if(that._l == entry)that._l = prev;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
           that[SIZE]--;
         } return !!entry;
       },
       // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
       // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
+<<<<<<< HEAD
 <<<<<<< HEAD
       forEach: function forEach(callbackfn /* , that = undefined */) {
         validate(this, NAME);
@@ -661,6 +777,8 @@ module.exports = {
           // revert to the last existing entry
           while (entry && entry.r) entry = entry.p;
 =======
+=======
+>>>>>>> origin/master
       forEach: function forEach(callbackfn /*, that = undefined */){
         anInstance(this, C, 'forEach');
         var f = ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3)
@@ -669,11 +787,15 @@ module.exports = {
           f(entry.v, entry.k, this);
           // revert to the last existing entry
           while(entry && entry.r)entry = entry.p;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         }
       },
       // 23.1.3.7 Map.prototype.has(key)
       // 23.2.3.7 Set.prototype.has(value)
+<<<<<<< HEAD
 <<<<<<< HEAD
       has: function has(key) {
         return !!getEntry(validate(this, NAME), key);
@@ -683,6 +805,8 @@ module.exports = {
       get: function () {
         return validate(this, NAME)[SIZE];
 =======
+=======
+>>>>>>> origin/master
       has: function has(key){
         return !!getEntry(this, key);
       }
@@ -690,11 +814,15 @@ module.exports = {
     if(DESCRIPTORS)dP(C.prototype, 'size', {
       get: function(){
         return defined(this[SIZE]);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       }
     });
     return C;
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   def: function (that, key, value) {
     var entry = getEntry(that, key);
@@ -702,12 +830,17 @@ module.exports = {
     // change existing entry
     if (entry) {
 =======
+=======
+>>>>>>> origin/master
   def: function(that, key, value){
     var entry = getEntry(that, key)
       , prev, index;
     // change existing entry
     if(entry){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       entry.v = value;
     // create new entry
     } else {
@@ -719,6 +852,7 @@ module.exports = {
         n: undefined,                  // <- next entry
         r: false                       // <- removed
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (!that._f) that._f = entry;
       if (prev) prev.n = entry;
@@ -744,6 +878,8 @@ module.exports = {
       // get next entry
       if (!that._t || !(that._l = entry = entry ? entry.n : that._t._f)) {
 =======
+=======
+>>>>>>> origin/master
       if(!that._f)that._f = entry;
       if(prev)prev.n = entry;
       that[SIZE]++;
@@ -767,23 +903,32 @@ module.exports = {
       while(entry && entry.r)entry = entry.p;
       // get next entry
       if(!that._t || !(that._l = entry = entry ? entry.n : that._t._f)){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         // or finish the iteration
         that._t = undefined;
         return step(1);
       }
       // return step by kind
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (kind == 'keys') return step(0, entry.k);
       if (kind == 'values') return step(0, entry.v);
       return step(0, [entry.k, entry.v]);
     }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
 =======
+=======
+>>>>>>> origin/master
       if(kind == 'keys'  )return step(0, entry.k);
       if(kind == 'values')return step(0, entry.v);
       return step(0, [entry.k, entry.v]);
     }, IS_MAP ? 'entries' : 'values' , !IS_MAP, true);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
     // add [@@species], 23.1.2.2, 23.2.2.2
     setSpecies(NAME);
@@ -791,9 +936,12 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_collection-weak.js":
@@ -801,6 +949,7 @@ module.exports = {
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var redefineAll = __webpack_require__("../../../../core-js/modules/_redefine-all.js");
 var getWeak = __webpack_require__("../../../../core-js/modules/_meta.js").getWeak;
@@ -825,6 +974,8 @@ var UncaughtFrozenStore = function () {
 var findUncaughtFrozen = function (store, key) {
   return arrayFind(store.a, function (it) {
 =======
+=======
+>>>>>>> origin/master
 var redefineAll       = __webpack_require__("../../../../core-js/modules/_redefine-all.js")
   , getWeak           = __webpack_require__("../../../../core-js/modules/_meta.js").getWeak
   , anObject          = __webpack_require__("../../../../core-js/modules/_an-object.js")
@@ -846,11 +997,15 @@ var UncaughtFrozenStore = function(){
 };
 var findUncaughtFrozen = function(store, key){
   return arrayFind(store.a, function(it){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return it[0] === key;
   });
 };
 UncaughtFrozenStore.prototype = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   get: function (key) {
     var entry = findUncaughtFrozen(this, key);
@@ -870,6 +1025,8 @@ UncaughtFrozenStore.prototype = {
     });
     if (~index) this.a.splice(index, 1);
 =======
+=======
+>>>>>>> origin/master
   get: function(key){
     var entry = findUncaughtFrozen(this, key);
     if(entry)return entry[1];
@@ -887,12 +1044,16 @@ UncaughtFrozenStore.prototype = {
       return it[0] === key;
     });
     if(~index)this.a.splice(index, 1);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return !!~index;
   }
 };
 
 module.exports = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
     var C = wrapper(function (that, iterable) {
@@ -902,48 +1063,66 @@ module.exports = {
       that._l = undefined; // leak store for uncaught frozen objects
       if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
 =======
+=======
+>>>>>>> origin/master
   getConstructor: function(wrapper, NAME, IS_MAP, ADDER){
     var C = wrapper(function(that, iterable){
       anInstance(that, C, NAME, '_i');
       that._i = id++;      // collection id
       that._l = undefined; // leak store for uncaught frozen objects
       if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     });
     redefineAll(C.prototype, {
       // 23.3.3.2 WeakMap.prototype.delete(key)
       // 23.4.3.3 WeakSet.prototype.delete(value)
+<<<<<<< HEAD
 <<<<<<< HEAD
       'delete': function (key) {
         if (!isObject(key)) return false;
         var data = getWeak(key);
         if (data === true) return uncaughtFrozenStore(validate(this, NAME))['delete'](key);
 =======
+=======
+>>>>>>> origin/master
       'delete': function(key){
         if(!isObject(key))return false;
         var data = getWeak(key);
         if(data === true)return uncaughtFrozenStore(this)['delete'](key);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         return data && $has(data, this._i) && delete data[this._i];
       },
       // 23.3.3.4 WeakMap.prototype.has(key)
       // 23.4.3.4 WeakSet.prototype.has(value)
+<<<<<<< HEAD
 <<<<<<< HEAD
       has: function has(key) {
         if (!isObject(key)) return false;
         var data = getWeak(key);
         if (data === true) return uncaughtFrozenStore(validate(this, NAME)).has(key);
 =======
+=======
+>>>>>>> origin/master
       has: function has(key){
         if(!isObject(key))return false;
         var data = getWeak(key);
         if(data === true)return uncaughtFrozenStore(this).has(key);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         return data && $has(data, this._i);
       }
     });
     return C;
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   def: function (that, key, value) {
     var data = getWeak(anObject(key), true);
@@ -953,6 +1132,11 @@ module.exports = {
     var data = getWeak(anObject(key), true);
     if(data === true)uncaughtFrozenStore(that).set(key, value);
 >>>>>>> origin/hiep.dev
+=======
+  def: function(that, key, value){
+    var data = getWeak(anObject(key), true);
+    if(data === true)uncaughtFrozenStore(that).set(key, value);
+>>>>>>> origin/master
     else data[that._i] = value;
     return that;
   },
@@ -960,9 +1144,12 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_collection.js":
@@ -970,6 +1157,7 @@ module.exports = {
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var global = __webpack_require__("../../../../core-js/modules/_global.js");
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
@@ -1007,6 +1195,8 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
     new C().entries().next();
   }))) {
 =======
+=======
+>>>>>>> origin/master
 var global            = __webpack_require__("../../../../core-js/modules/_global.js")
   , $export           = __webpack_require__("../../../../core-js/modules/_export.js")
   , redefine          = __webpack_require__("../../../../core-js/modules/_redefine.js")
@@ -1042,12 +1232,16 @@ module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
   if(typeof C != 'function' || !(IS_WEAK || proto.forEach && !fails(function(){
     new C().entries().next();
   }))){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     // create collection constructor
     C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
     redefineAll(C.prototype, methods);
     meta.NEED = true;
   } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
     var instance = new C();
     // early implementations not supports chaining
@@ -1070,6 +1264,8 @@ module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
         var that = inheritIfRequired(new Base(), target, C);
         if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
 =======
+=======
+>>>>>>> origin/master
     var instance             = new C
       // early implementations not supports chaining
       , HASNT_CHAINING       = instance[ADDER](IS_WEAK ? {} : -0, 1) != instance
@@ -1090,21 +1286,29 @@ module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
         anInstance(target, C, NAME);
         var that = inheritIfRequired(new Base, target, C);
         if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         return that;
       });
       C.prototype = proto;
       proto.constructor = C;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (THROWS_ON_PRIMITIVES || BUGGY_ZERO) {
 =======
     if(THROWS_ON_PRIMITIVES || BUGGY_ZERO){
 >>>>>>> origin/hiep.dev
+=======
+    if(THROWS_ON_PRIMITIVES || BUGGY_ZERO){
+>>>>>>> origin/master
       fixMethod('delete');
       fixMethod('has');
       IS_MAP && fixMethod('get');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (BUGGY_ZERO || HASNT_CHAINING) fixMethod(ADDER);
     // weak collections should not contains .clear method
@@ -1114,6 +1318,11 @@ module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
     // weak collections should not contains .clear method
     if(IS_WEAK && proto.clear)delete proto.clear;
 >>>>>>> origin/hiep.dev
+=======
+    if(BUGGY_ZERO || HASNT_CHAINING)fixMethod(ADDER);
+    // weak collections should not contains .clear method
+    if(IS_WEAK && proto.clear)delete proto.clear;
+>>>>>>> origin/master
   }
 
   setToStringTag(C, NAME);
@@ -1122,23 +1331,31 @@ module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
   $export($export.G + $export.W + $export.F * (C != Base), O);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!IS_WEAK) common.setStrong(C, NAME, IS_MAP);
 =======
   if(!IS_WEAK)common.setStrong(C, NAME, IS_MAP);
 >>>>>>> origin/hiep.dev
+=======
+  if(!IS_WEAK)common.setStrong(C, NAME, IS_MAP);
+>>>>>>> origin/master
 
   return C;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_core.js":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var core = module.exports = { version: '2.5.0' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
@@ -1147,6 +1364,10 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 var core = module.exports = {version: '2.4.0'};
 if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 >>>>>>> origin/hiep.dev
+=======
+var core = module.exports = {version: '2.4.0'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -1155,6 +1376,7 @@ if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 // optional / simple context binding
 var aFunction = __webpack_require__("../../../../core-js/modules/_a-function.js");
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (fn, that, length) {
   aFunction(fn);
@@ -1172,6 +1394,8 @@ module.exports = function (fn, that, length) {
   }
   return function (/* ...args */) {
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(fn, that, length){
   aFunction(fn);
   if(that === undefined)return fn;
@@ -1187,21 +1411,28 @@ module.exports = function(fn, that, length){
     };
   }
   return function(/* ...args */){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return fn.apply(that, arguments);
   };
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_defined.js":
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (it) {
   if (it == undefined) throw TypeError("Can't call method on  " + it);
@@ -1210,12 +1441,17 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it){
   if(it == undefined)throw TypeError("Can't call method on  " + it);
   return it;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_descriptors.js":
@@ -1223,22 +1459,29 @@ module.exports = function(it){
 
 // Thank's IE8 for his funny defineProperty
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = !__webpack_require__("../../../../core-js/modules/_fails.js")(function () {
   return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = !__webpack_require__("../../../../core-js/modules/_fails.js")(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_dom-create.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
 var document = __webpack_require__("../../../../core-js/modules/_global.js").document;
@@ -1250,6 +1493,8 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js")
   , document = __webpack_require__("../../../../core-js/modules/_global.js").document
   // in old IE typeof document.createElement is 'object'
@@ -1258,7 +1503,10 @@ module.exports = function(it){
   return is ? document.createElement(it) : {};
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_enum-bug-keys.js":
@@ -1270,14 +1518,18 @@ module.exports = (
 ).split(',');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_export.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var global = __webpack_require__("../../../../core-js/modules/_global.js");
 var core = __webpack_require__("../../../../core-js/modules/_core.js");
@@ -1299,6 +1551,8 @@ var $export = function (type, name, source) {
   if (IS_GLOBAL) source = name;
   for (key in source) {
 =======
+=======
+>>>>>>> origin/master
 var global    = __webpack_require__("../../../../core-js/modules/_global.js")
   , core      = __webpack_require__("../../../../core-js/modules/_core.js")
   , hide      = __webpack_require__("../../../../core-js/modules/_hide.js")
@@ -1318,7 +1572,10 @@ var $export = function(type, name, source){
     , key, own, out, exp;
   if(IS_GLOBAL)source = name;
   for(key in source){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     // contains in native
     own = !IS_FORCED && target && target[key] !== undefined;
     // export native or passed
@@ -1327,16 +1584,22 @@ var $export = function(type, name, source){
     exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
     // extend global
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (target) redefine(target, key, out, type & $export.U);
     // export
     if (exports[key] != out) hide(exports, key, exp);
     if (IS_PROTO && expProto[key] != out) expProto[key] = out;
 =======
+=======
+>>>>>>> origin/master
     if(target)redefine(target, key, out, type & $export.U);
     // export
     if(exports[key] != out)hide(exports, key, exp);
     if(IS_PROTO && expProto[key] != out)expProto[key] = out;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   }
 };
 global.core = core;
@@ -1349,6 +1612,7 @@ $export.B = 16;  // bind
 $export.W = 32;  // wrap
 $export.U = 64;  // safe
 <<<<<<< HEAD
+<<<<<<< HEAD
 $export.R = 128; // real proto method for `library`
 module.exports = $export;
 
@@ -1358,35 +1622,50 @@ $export.R = 128; // real proto method for `library`
 module.exports = $export;
 
 >>>>>>> origin/hiep.dev
+=======
+$export.R = 128; // real proto method for `library` 
+module.exports = $export;
+
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_fails.js":
 /***/ (function(module, exports) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (exec) {
   try {
     return !!exec();
   } catch (e) {
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(exec){
   try {
     return !!exec();
   } catch(e){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return true;
   }
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_for-of.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var ctx = __webpack_require__("../../../../core-js/modules/_ctx.js");
 var call = __webpack_require__("../../../../core-js/modules/_iter-call.js");
@@ -1416,6 +1695,8 @@ exports.RETURN = RETURN;
 
 
 =======
+=======
+>>>>>>> origin/master
 var ctx         = __webpack_require__("../../../../core-js/modules/_ctx.js")
   , call        = __webpack_require__("../../../../core-js/modules/_iter-call.js")
   , isArrayIter = __webpack_require__("../../../../core-js/modules/_is-array-iter.js")
@@ -1442,7 +1723,10 @@ var exports = module.exports = function(iterable, entries, fn, that, ITERATOR){
 exports.BREAK  = BREAK;
 exports.RETURN = RETURN;
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_global.js":
@@ -1450,6 +1734,7 @@ exports.RETURN = RETURN;
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 var global = module.exports = typeof window != 'undefined' && window.Math == Math
+<<<<<<< HEAD
 <<<<<<< HEAD
   ? window : typeof self != 'undefined' && self.Math == Math ? self
   // eslint-disable-next-line no-new-func
@@ -1460,6 +1745,10 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
   ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
 if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 >>>>>>> origin/hiep.dev
+=======
+  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -1468,22 +1757,29 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 var hasOwnProperty = {}.hasOwnProperty;
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (it, key) {
   return hasOwnProperty.call(it, key);
 };
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it, key){
   return hasOwnProperty.call(it, key);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_hide.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var dP = __webpack_require__("../../../../core-js/modules/_object-dp.js");
 var createDesc = __webpack_require__("../../../../core-js/modules/_property-desc.js");
@@ -1491,25 +1787,34 @@ module.exports = __webpack_require__("../../../../core-js/modules/_descriptors.j
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
 =======
+=======
+>>>>>>> origin/master
 var dP         = __webpack_require__("../../../../core-js/modules/_object-dp.js")
   , createDesc = __webpack_require__("../../../../core-js/modules/_property-desc.js");
 module.exports = __webpack_require__("../../../../core-js/modules/_descriptors.js") ? function(object, key, value){
   return dP.f(object, key, createDesc(1, value));
 } : function(object, key, value){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   object[key] = value;
   return object;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_html.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var document = __webpack_require__("../../../../core-js/modules/_global.js").document;
 module.exports = document && document.documentElement;
@@ -1517,6 +1822,9 @@ module.exports = document && document.documentElement;
 =======
 module.exports = __webpack_require__("../../../../core-js/modules/_global.js").document && document.documentElement;
 >>>>>>> origin/hiep.dev
+=======
+module.exports = __webpack_require__("../../../../core-js/modules/_global.js").document && document.documentElement;
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -1524,22 +1832,29 @@ module.exports = __webpack_require__("../../../../core-js/modules/_global.js").d
 /***/ (function(module, exports, __webpack_require__) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = !__webpack_require__("../../../../core-js/modules/_descriptors.js") && !__webpack_require__("../../../../core-js/modules/_fails.js")(function () {
   return Object.defineProperty(__webpack_require__("../../../../core-js/modules/_dom-create.js")('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = !__webpack_require__("../../../../core-js/modules/_descriptors.js") && !__webpack_require__("../../../../core-js/modules/_fails.js")(function(){
   return Object.defineProperty(__webpack_require__("../../../../core-js/modules/_dom-create.js")('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_inherit-if-required.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
 var setPrototypeOf = __webpack_require__("../../../../core-js/modules/_set-proto.js").set;
@@ -1548,26 +1863,35 @@ module.exports = function (that, target, C) {
   var P;
   if (S !== C && typeof S == 'function' && (P = S.prototype) !== C.prototype && isObject(P) && setPrototypeOf) {
 =======
+=======
+>>>>>>> origin/master
 var isObject       = __webpack_require__("../../../../core-js/modules/_is-object.js")
   , setPrototypeOf = __webpack_require__("../../../../core-js/modules/_set-proto.js").set;
 module.exports = function(that, target, C){
   var P, S = target.constructor;
   if(S !== C && typeof S == 'function' && (P = S.prototype) !== C.prototype && isObject(P) && setPrototypeOf){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     setPrototypeOf(that, P);
   } return that;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_invoke.js":
 /***/ (function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (fn, args, that) {
   var un = that === undefined;
@@ -1577,6 +1901,11 @@ module.exports = function(fn, args, that){
   var un = that === undefined;
   switch(args.length){
 >>>>>>> origin/hiep.dev
+=======
+module.exports = function(fn, args, that){
+  var un = that === undefined;
+  switch(args.length){
+>>>>>>> origin/master
     case 0: return un ? fn()
                       : fn.call(that);
     case 1: return un ? fn(args[0])
@@ -1588,6 +1917,7 @@ module.exports = function(fn, args, that){
     case 4: return un ? fn(args[0], args[1], args[2], args[3])
                       : fn.call(that, args[0], args[1], args[2], args[3]);
 <<<<<<< HEAD
+<<<<<<< HEAD
   } return fn.apply(that, args);
 };
 
@@ -1597,6 +1927,11 @@ module.exports = function(fn, args, that){
 };
 
 >>>>>>> origin/hiep.dev
+=======
+  } return              fn.apply(that, args);
+};
+
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iobject.js":
@@ -1605,6 +1940,7 @@ module.exports = function(fn, args, that){
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
 var cof = __webpack_require__("../../../../core-js/modules/_cof.js");
 <<<<<<< HEAD
+<<<<<<< HEAD
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -1612,17 +1948,23 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_is-array-iter.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
+<<<<<<< HEAD
 <<<<<<< HEAD
 var Iterators = __webpack_require__("../../../../core-js/modules/_iterators.js");
 var ITERATOR = __webpack_require__("../../../../core-js/modules/_wks.js")('iterator');
@@ -1634,6 +1976,8 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var Iterators  = __webpack_require__("../../../../core-js/modules/_iterators.js")
   , ITERATOR   = __webpack_require__("../../../../core-js/modules/_wks.js")('iterator')
   , ArrayProto = Array.prototype;
@@ -1642,7 +1986,10 @@ module.exports = function(it){
   return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_is-array.js":
@@ -1651,22 +1998,29 @@ module.exports = function(it){
 // 7.2.2 IsArray(argument)
 var cof = __webpack_require__("../../../../core-js/modules/_cof.js");
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_is-object.js":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (it) {
   return typeof it === 'object' ? it !== null : typeof it === 'function';
@@ -1674,11 +2028,16 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it){
   return typeof it === 'object' ? it !== null : typeof it === 'function';
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iter-call.js":
@@ -1686,6 +2045,7 @@ module.exports = function(it){
 
 // call something on iterator step with safe closing on error
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (iterator, fn, value, entries) {
   try {
@@ -1695,6 +2055,8 @@ module.exports = function (iterator, fn, value, entries) {
     var ret = iterator['return'];
     if (ret !== undefined) anObject(ret.call(iterator));
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(iterator, fn, value, entries){
   try {
     return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -1702,15 +2064,21 @@ module.exports = function(iterator, fn, value, entries){
   } catch(e){
     var ret = iterator['return'];
     if(ret !== undefined)anObject(ret.call(iterator));
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     throw e;
   }
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iter-create.js":
@@ -1718,6 +2086,7 @@ module.exports = function(iterator, fn, value, entries){
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var create = __webpack_require__("../../../../core-js/modules/_object-create.js");
 var descriptor = __webpack_require__("../../../../core-js/modules/_property-desc.js");
@@ -1734,6 +2103,8 @@ module.exports = function (Constructor, NAME, next) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var create         = __webpack_require__("../../../../core-js/modules/_object-create.js")
   , descriptor     = __webpack_require__("../../../../core-js/modules/_property-desc.js")
   , setToStringTag = __webpack_require__("../../../../core-js/modules/_set-to-string-tag.js")
@@ -1747,7 +2118,10 @@ module.exports = function(Constructor, NAME, next){
   setToStringTag(Constructor, NAME + ' Iterator');
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iter-define.js":
@@ -1755,6 +2129,7 @@ module.exports = function(Constructor, NAME, next){
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var LIBRARY = __webpack_require__("../../../../core-js/modules/_library.js");
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
@@ -1809,6 +2184,8 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
   // Define iterator
   if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
 =======
+=======
+>>>>>>> origin/master
 var LIBRARY        = __webpack_require__("../../../../core-js/modules/_library.js")
   , $export        = __webpack_require__("../../../../core-js/modules/_export.js")
   , redefine       = __webpack_require__("../../../../core-js/modules/_redefine.js")
@@ -1861,11 +2238,15 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
   }
   // Define iterator
   if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     hide(proto, ITERATOR, $default);
   }
   // Plug for library
   Iterators[NAME] = $default;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Iterators[TAG] = returnThis;
   if (DEFAULT) {
@@ -1877,6 +2258,8 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
     if (FORCED) for (key in methods) {
       if (!(key in proto)) redefine(proto, key, methods[key]);
 =======
+=======
+>>>>>>> origin/master
   Iterators[TAG]  = returnThis;
   if(DEFAULT){
     methods = {
@@ -1886,21 +2269,28 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
     };
     if(FORCED)for(key in methods){
       if(!(key in proto))redefine(proto, key, methods[key]);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
   }
   return methods;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iter-detect.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var ITERATOR = __webpack_require__("../../../../core-js/modules/_wks.js")('iterator');
 var SAFE_CLOSING = false;
@@ -1927,6 +2317,8 @@ module.exports = function (exec, skipClosing) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var ITERATOR     = __webpack_require__("../../../../core-js/modules/_wks.js")('iterator')
   , SAFE_CLOSING = false;
 
@@ -1949,12 +2341,16 @@ module.exports = function(exec, skipClosing){
   return safe;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iter-step.js":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (done, value) {
   return { value: value, done: !!done };
@@ -1962,11 +2358,16 @@ module.exports = function (done, value) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(done, value){
   return {value: value, done: !!done};
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_iterators.js":
@@ -1975,9 +2376,12 @@ module.exports = function(done, value){
 module.exports = {};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_library.js":
@@ -1986,14 +2390,18 @@ module.exports = {};
 module.exports = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_meta.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var META = __webpack_require__("../../../../core-js/modules/_uid.js")('meta');
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
@@ -2021,6 +2429,8 @@ var fastKey = function (it, create) {
     // not necessary to add metadata
     if (!create) return 'E';
 =======
+=======
+>>>>>>> origin/master
 var META     = __webpack_require__("../../../../core-js/modules/_uid.js")('meta')
   , isObject = __webpack_require__("../../../../core-js/modules/_is-object.js")
   , has      = __webpack_require__("../../../../core-js/modules/_has.js")
@@ -2046,12 +2456,16 @@ var fastKey = function(it, create){
     if(!isExtensible(it))return 'F';
     // not necessary to add metadata
     if(!create)return 'E';
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     // add missing metadata
     setMeta(it);
   // return object ID
   } return it[META].i;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 var getWeak = function (it, create) {
   if (!has(it, META)) {
@@ -2060,19 +2474,25 @@ var getWeak = function (it, create) {
     // not necessary to add metadata
     if (!create) return false;
 =======
+=======
+>>>>>>> origin/master
 var getWeak = function(it, create){
   if(!has(it, META)){
     // can't set metadata to uncaught frozen object
     if(!isExtensible(it))return true;
     // not necessary to add metadata
     if(!create)return false;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     // add missing metadata
     setMeta(it);
   // return hash weak collections IDs
   } return it[META].w;
 };
 // add metadata on freeze-family methods calling
+<<<<<<< HEAD
 <<<<<<< HEAD
 var onFreeze = function (it) {
   if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
@@ -2088,6 +2508,8 @@ var meta = module.exports = {
 
 
 =======
+=======
+>>>>>>> origin/master
 var onFreeze = function(it){
   if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
   return it;
@@ -2100,12 +2522,16 @@ var meta = module.exports = {
   onFreeze: onFreeze
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var Map = __webpack_require__("../../../../core-js/modules/es6.map.js");
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
@@ -2146,6 +2572,8 @@ var toMetaKey = function (it) {
 };
 var exp = function (O) {
 =======
+=======
+>>>>>>> origin/master
 var Map     = __webpack_require__("../../../../core-js/modules/es6.map.js")
   , $export = __webpack_require__("../../../../core-js/modules/_export.js")
   , shared  = __webpack_require__("../../../../core-js/modules/_shared.js")('metadata')
@@ -2184,7 +2612,10 @@ var toMetaKey = function(it){
   return it === undefined || typeof it == 'symbol' ? it : String(it);
 };
 var exp = function(O){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   $export($export.S, 'Reflect', O);
 };
 
@@ -2200,9 +2631,12 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-assign.js":
@@ -2211,6 +2645,7 @@ module.exports = {
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var getKeys = __webpack_require__("../../../../core-js/modules/_object-keys.js");
 var gOPS = __webpack_require__("../../../../core-js/modules/_object-gops.js");
@@ -2247,6 +2682,8 @@ module.exports = !$assign || __webpack_require__("../../../../core-js/modules/_f
 
 
 =======
+=======
+>>>>>>> origin/master
 var getKeys  = __webpack_require__("../../../../core-js/modules/_object-keys.js")
   , gOPS     = __webpack_require__("../../../../core-js/modules/_object-gops.js")
   , pIE      = __webpack_require__("../../../../core-js/modules/_object-pie.js")
@@ -2279,13 +2716,17 @@ module.exports = !$assign || __webpack_require__("../../../../core-js/modules/_f
   } return T;
 } : $assign;
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-create.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+<<<<<<< HEAD
 <<<<<<< HEAD
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 var dPs = __webpack_require__("../../../../core-js/modules/_object-dps.js");
@@ -2303,6 +2744,8 @@ var createDict = function () {
   var gt = '>';
   var iframeDocument;
 =======
+=======
+>>>>>>> origin/master
 var anObject    = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , dPs         = __webpack_require__("../../../../core-js/modules/_object-dps.js")
   , enumBugKeys = __webpack_require__("../../../../core-js/modules/_enum-bug-keys.js")
@@ -2318,7 +2761,10 @@ var createDict = function(){
     , lt     = '<'
     , gt     = '>'
     , iframeDocument;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   iframe.style.display = 'none';
   __webpack_require__("../../../../core-js/modules/_html.js").appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
@@ -2330,6 +2776,7 @@ var createDict = function(){
   iframeDocument.close();
   createDict = iframeDocument.F;
 <<<<<<< HEAD
+<<<<<<< HEAD
   while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
   return createDict();
 };
@@ -2340,6 +2787,8 @@ module.exports = Object.create || function create(O, Properties) {
     Empty[PROTOTYPE] = anObject(O);
     result = new Empty();
 =======
+=======
+>>>>>>> origin/master
   while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
   return createDict();
 };
@@ -2349,7 +2798,10 @@ module.exports = Object.create || function create(O, Properties){
   if(O !== null){
     Empty[PROTOTYPE] = anObject(O);
     result = new Empty;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     Empty[PROTOTYPE] = null;
     // add "__proto__" for Object.getPrototypeOf polyfill
     result[IE_PROTO] = O;
@@ -2363,6 +2815,7 @@ module.exports = Object.create || function create(O, Properties){
 /***/ "../../../../core-js/modules/_object-dp.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 var IE8_DOM_DEFINE = __webpack_require__("../../../../core-js/modules/_ie8-dom-define.js");
@@ -2383,6 +2836,8 @@ exports.f = __webpack_require__("../../../../core-js/modules/_descriptors.js") ?
 
 
 =======
+=======
+>>>>>>> origin/master
 var anObject       = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , IE8_DOM_DEFINE = __webpack_require__("../../../../core-js/modules/_ie8-dom-define.js")
   , toPrimitive    = __webpack_require__("../../../../core-js/modules/_to-primitive.js")
@@ -2400,12 +2855,16 @@ exports.f = __webpack_require__("../../../../core-js/modules/_descriptors.js") ?
   return O;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-dps.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var dP = __webpack_require__("../../../../core-js/modules/_object-dp.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -2423,6 +2882,8 @@ module.exports = __webpack_require__("../../../../core-js/modules/_descriptors.j
 
 
 =======
+=======
+>>>>>>> origin/master
 var dP       = __webpack_require__("../../../../core-js/modules/_object-dp.js")
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , getKeys  = __webpack_require__("../../../../core-js/modules/_object-keys.js");
@@ -2437,12 +2898,16 @@ module.exports = __webpack_require__("../../../../core-js/modules/_descriptors.j
   return O;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-gopd.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var pIE = __webpack_require__("../../../../core-js/modules/_object-pie.js");
 var createDesc = __webpack_require__("../../../../core-js/modules/_property-desc.js");
@@ -2463,6 +2928,8 @@ exports.f = __webpack_require__("../../../../core-js/modules/_descriptors.js") ?
 
 
 =======
+=======
+>>>>>>> origin/master
 var pIE            = __webpack_require__("../../../../core-js/modules/_object-pie.js")
   , createDesc     = __webpack_require__("../../../../core-js/modules/_property-desc.js")
   , toIObject      = __webpack_require__("../../../../core-js/modules/_to-iobject.js")
@@ -2480,13 +2947,17 @@ exports.f = __webpack_require__("../../../../core-js/modules/_descriptors.js") ?
   if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-gopn.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $keys = __webpack_require__("../../../../core-js/modules/_object-keys-internal.js");
 var hiddenKeys = __webpack_require__("../../../../core-js/modules/_enum-bug-keys.js").concat('length', 'prototype');
@@ -2497,6 +2968,8 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var $keys      = __webpack_require__("../../../../core-js/modules/_object-keys-internal.js")
   , hiddenKeys = __webpack_require__("../../../../core-js/modules/_enum-bug-keys.js").concat('length', 'prototype');
 
@@ -2504,7 +2977,10 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
   return $keys(O, hiddenKeys);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-gops.js":
@@ -2513,15 +2989,19 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 exports.f = Object.getOwnPropertySymbols;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-gpo.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var has = __webpack_require__("../../../../core-js/modules/_has.js");
 var toObject = __webpack_require__("../../../../core-js/modules/_to-object.js");
@@ -2533,6 +3013,8 @@ module.exports = Object.getPrototypeOf || function (O) {
   if (has(O, IE_PROTO)) return O[IE_PROTO];
   if (typeof O.constructor == 'function' && O instanceof O.constructor) {
 =======
+=======
+>>>>>>> origin/master
 var has         = __webpack_require__("../../../../core-js/modules/_has.js")
   , toObject    = __webpack_require__("../../../../core-js/modules/_to-object.js")
   , IE_PROTO    = __webpack_require__("../../../../core-js/modules/_shared-key.js")('IE_PROTO')
@@ -2542,20 +3024,27 @@ module.exports = Object.getPrototypeOf || function(O){
   O = toObject(O);
   if(has(O, IE_PROTO))return O[IE_PROTO];
   if(typeof O.constructor == 'function' && O instanceof O.constructor){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return O.constructor.prototype;
   } return O instanceof Object ? ObjectProto : null;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-keys-internal.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var has = __webpack_require__("../../../../core-js/modules/_has.js");
 var toIObject = __webpack_require__("../../../../core-js/modules/_to-iobject.js");
@@ -2571,6 +3060,8 @@ module.exports = function (object, names) {
   // Don't enum bug & hidden keys
   while (names.length > i) if (has(O, key = names[i++])) {
 =======
+=======
+>>>>>>> origin/master
 var has          = __webpack_require__("../../../../core-js/modules/_has.js")
   , toIObject    = __webpack_require__("../../../../core-js/modules/_to-iobject.js")
   , arrayIndexOf = __webpack_require__("../../../../core-js/modules/_array-includes.js")(false)
@@ -2584,22 +3075,29 @@ module.exports = function(object, names){
   for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
   // Don't enum bug & hidden keys
   while(names.length > i)if(has(O, key = names[i++])){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     ~arrayIndexOf(result, key) || result.push(key);
   }
   return result;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-keys.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $keys = __webpack_require__("../../../../core-js/modules/_object-keys-internal.js");
 var enumBugKeys = __webpack_require__("../../../../core-js/modules/_enum-bug-keys.js");
@@ -2610,6 +3108,8 @@ module.exports = Object.keys || function keys(O) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var $keys       = __webpack_require__("../../../../core-js/modules/_object-keys-internal.js")
   , enumBugKeys = __webpack_require__("../../../../core-js/modules/_enum-bug-keys.js");
 
@@ -2617,7 +3117,10 @@ module.exports = Object.keys || function keys(O){
   return $keys(O, enumBugKeys);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_object-pie.js":
@@ -2626,13 +3129,17 @@ module.exports = Object.keys || function keys(O){
 exports.f = {}.propertyIsEnumerable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_own-keys.js":
 /***/ (function(module, exports, __webpack_require__) {
+<<<<<<< HEAD
 
 // all object keys, includes non-enumerable and symbols
 <<<<<<< HEAD
@@ -2648,6 +3155,10 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 
 
 =======
+=======
+
+// all object keys, includes non-enumerable and symbols
+>>>>>>> origin/master
 var gOPN     = __webpack_require__("../../../../core-js/modules/_object-gopn.js")
   , gOPS     = __webpack_require__("../../../../core-js/modules/_object-gops.js")
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js")
@@ -2658,12 +3169,16 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it){
   return getSymbols ? keys.concat(getSymbols(it)) : keys;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_property-desc.js":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (bitmap, value) {
   return {
@@ -2676,6 +3191,8 @@ module.exports = function (bitmap, value) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(bitmap, value){
   return {
     enumerable  : !(bitmap & 1),
@@ -2685,13 +3202,17 @@ module.exports = function(bitmap, value){
   };
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_redefine-all.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 var redefine = __webpack_require__("../../../../core-js/modules/_redefine.js");
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (target, src, safe) {
   for (var key in src) redefine(target, key, src[key], safe);
@@ -2700,17 +3221,23 @@ module.exports = function (target, src, safe) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(target, src, safe){
   for(var key in src)redefine(target, key, src[key], safe);
   return target;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_redefine.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var global = __webpack_require__("../../../../core-js/modules/_global.js");
 var hide = __webpack_require__("../../../../core-js/modules/_hide.js");
@@ -2746,6 +3273,8 @@ __webpack_require__("../../../../core-js/modules/_core.js").inspectSource = func
 
 
 =======
+=======
+>>>>>>> origin/master
 var global    = __webpack_require__("../../../../core-js/modules/_global.js")
   , hide      = __webpack_require__("../../../../core-js/modules/_hide.js")
   , has       = __webpack_require__("../../../../core-js/modules/_has.js")
@@ -2779,7 +3308,10 @@ __webpack_require__("../../../../core-js/modules/_core.js").inspectSource = func
   return typeof this == 'function' && this[SRC] || $toString.call(this);
 });
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_set-proto.js":
@@ -2787,6 +3319,7 @@ __webpack_require__("../../../../core-js/modules/_core.js").inspectSource = func
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
+<<<<<<< HEAD
 <<<<<<< HEAD
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -2798,6 +3331,8 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function (test, buggy, set) {
 =======
+=======
+>>>>>>> origin/master
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js")
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 var check = function(O, proto){
@@ -2807,22 +3342,31 @@ var check = function(O, proto){
 module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function(test, buggy, set){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       try {
         set = __webpack_require__("../../../../core-js/modules/_ctx.js")(Function.call, __webpack_require__("../../../../core-js/modules/_object-gopd.js").f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
+<<<<<<< HEAD
 <<<<<<< HEAD
       } catch (e) { buggy = true; }
       return function setPrototypeOf(O, proto) {
         check(O, proto);
         if (buggy) O.__proto__ = proto;
 =======
+=======
+>>>>>>> origin/master
       } catch(e){ buggy = true; }
       return function setPrototypeOf(O, proto){
         check(O, proto);
         if(buggy)O.__proto__ = proto;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         else set(O, proto);
         return O;
       };
@@ -2831,9 +3375,12 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_set-species.js":
@@ -2841,6 +3388,7 @@ module.exports = {
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var global = __webpack_require__("../../../../core-js/modules/_global.js");
 var dP = __webpack_require__("../../../../core-js/modules/_object-dp.js");
@@ -2857,6 +3405,8 @@ module.exports = function (KEY) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var global      = __webpack_require__("../../../../core-js/modules/_global.js")
   , dP          = __webpack_require__("../../../../core-js/modules/_object-dp.js")
   , DESCRIPTORS = __webpack_require__("../../../../core-js/modules/_descriptors.js")
@@ -2870,12 +3420,16 @@ module.exports = function(KEY){
   });
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_set-to-string-tag.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var def = __webpack_require__("../../../../core-js/modules/_object-dp.js").f;
 var has = __webpack_require__("../../../../core-js/modules/_has.js");
@@ -2887,6 +3441,8 @@ module.exports = function (it, tag, stat) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var def = __webpack_require__("../../../../core-js/modules/_object-dp.js").f
   , has = __webpack_require__("../../../../core-js/modules/_has.js")
   , TAG = __webpack_require__("../../../../core-js/modules/_wks.js")('toStringTag');
@@ -2895,12 +3451,16 @@ module.exports = function(it, tag, stat){
   if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_shared-key.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var shared = __webpack_require__("../../../../core-js/modules/_shared.js")('keys');
 var uid = __webpack_require__("../../../../core-js/modules/_uid.js");
@@ -2910,18 +3470,24 @@ module.exports = function (key) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var shared = __webpack_require__("../../../../core-js/modules/_shared.js")('keys')
   , uid    = __webpack_require__("../../../../core-js/modules/_uid.js");
 module.exports = function(key){
   return shared[key] || (shared[key] = uid(key));
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_shared.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var global = __webpack_require__("../../../../core-js/modules/_global.js");
 var SHARED = '__core-js_shared__';
@@ -2941,6 +3507,8 @@ var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
 =======
+=======
+>>>>>>> origin/master
 var global = __webpack_require__("../../../../core-js/modules/_global.js")
   , SHARED = '__core-js_shared__'
   , store  = global[SHARED] || (global[SHARED] = {});
@@ -2957,21 +3525,28 @@ var toInteger = __webpack_require__("../../../../core-js/modules/_to-integer.js"
   , max       = Math.max
   , min       = Math.min;
 module.exports = function(index, length){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   index = toInteger(index);
   return index < 0 ? max(index + length, 0) : min(index, length);
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_to-integer.js":
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
+<<<<<<< HEAD
 <<<<<<< HEAD
 var ceil = Math.ceil;
 var floor = Math.floor;
@@ -2981,19 +3556,25 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var ceil  = Math.ceil
   , floor = Math.floor;
 module.exports = function(it){
   return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_to-iobject.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
+<<<<<<< HEAD
 <<<<<<< HEAD
 var IObject = __webpack_require__("../../../../core-js/modules/_iobject.js");
 var defined = __webpack_require__("../../../../core-js/modules/_defined.js");
@@ -3003,19 +3584,25 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var IObject = __webpack_require__("../../../../core-js/modules/_iobject.js")
   , defined = __webpack_require__("../../../../core-js/modules/_defined.js");
 module.exports = function(it){
   return IObject(defined(it));
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_to-length.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
+<<<<<<< HEAD
 <<<<<<< HEAD
 var toInteger = __webpack_require__("../../../../core-js/modules/_to-integer.js");
 var min = Math.min;
@@ -3025,13 +3612,18 @@ module.exports = function (it) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var toInteger = __webpack_require__("../../../../core-js/modules/_to-integer.js")
   , min       = Math.min;
 module.exports = function(it){
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_to-object.js":
@@ -3040,17 +3632,23 @@ module.exports = function(it){
 // 7.1.13 ToObject(argument)
 var defined = __webpack_require__("../../../../core-js/modules/_defined.js");
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it){
   return Object(defined(it));
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_to-primitive.js":
@@ -3060,6 +3658,7 @@ module.exports = function(it){
 var isObject = __webpack_require__("../../../../core-js/modules/_is-object.js");
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = function (it, S) {
   if (!isObject(it)) return it;
@@ -3072,6 +3671,8 @@ module.exports = function (it, S) {
 
 
 =======
+=======
+>>>>>>> origin/master
 module.exports = function(it, S){
   if(!isObject(it))return it;
   var fn, val;
@@ -3081,12 +3682,16 @@ module.exports = function(it, S){
   throw TypeError("Can't convert object to primitive value");
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_uid.js":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var id = 0;
 var px = Math.random();
@@ -3108,18 +3713,24 @@ module.exports = function (it, TYPE) {
 
 
 =======
+=======
+>>>>>>> origin/master
 var id = 0
   , px = Math.random();
 module.exports = function(key){
   return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/_wks.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var store = __webpack_require__("../../../../core-js/modules/_shared.js")('wks');
 var uid = __webpack_require__("../../../../core-js/modules/_uid.js");
@@ -3128,13 +3739,18 @@ var USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function (name) {
 =======
+=======
+>>>>>>> origin/master
 var store      = __webpack_require__("../../../../core-js/modules/_shared.js")('wks')
   , uid        = __webpack_require__("../../../../core-js/modules/_uid.js")
   , Symbol     = __webpack_require__("../../../../core-js/modules/_global.js").Symbol
   , USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function(name){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   return store[name] || (store[name] =
     USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
 };
@@ -3142,14 +3758,18 @@ var $exports = module.exports = function(name){
 $exports.store = store;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/core.get-iterator-method.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var classof = __webpack_require__("../../../../core-js/modules/_classof.js");
 var ITERATOR = __webpack_require__("../../../../core-js/modules/_wks.js")('iterator');
@@ -3157,20 +3777,28 @@ var Iterators = __webpack_require__("../../../../core-js/modules/_iterators.js")
 module.exports = __webpack_require__("../../../../core-js/modules/_core.js").getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
 =======
+=======
+>>>>>>> origin/master
 var classof   = __webpack_require__("../../../../core-js/modules/_classof.js")
   , ITERATOR  = __webpack_require__("../../../../core-js/modules/_wks.js")('iterator')
   , Iterators = __webpack_require__("../../../../core-js/modules/_iterators.js");
 module.exports = __webpack_require__("../../../../core-js/modules/_core.js").getIteratorMethod = function(it){
   if(it != undefined)return it[ITERATOR]
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     || it['@@iterator']
     || Iterators[classof(it)];
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.map.js":
@@ -3179,6 +3807,7 @@ module.exports = __webpack_require__("../../../../core-js/modules/_core.js").get
 "use strict";
 
 var strong = __webpack_require__("../../../../core-js/modules/_collection-strong.js");
+<<<<<<< HEAD
 <<<<<<< HEAD
 var validate = __webpack_require__("../../../../core-js/modules/_validate-collection.js");
 var MAP = 'Map';
@@ -3200,6 +3829,8 @@ module.exports = __webpack_require__("../../../../core-js/modules/_collection.js
 
 
 =======
+=======
+>>>>>>> origin/master
 
 // 23.1 Map Objects
 module.exports = __webpack_require__("../../../../core-js/modules/_collection.js")('Map', function(get){
@@ -3216,13 +3847,17 @@ module.exports = __webpack_require__("../../../../core-js/modules/_collection.js
   }
 }, strong, true);
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.apply.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var aFunction = __webpack_require__("../../../../core-js/modules/_a-function.js");
@@ -3237,6 +3872,8 @@ $export($export.S + $export.F * !__webpack_require__("../../../../core-js/module
     var T = aFunction(target);
     var L = anObject(argumentsList);
 =======
+=======
+>>>>>>> origin/master
 var $export   = __webpack_require__("../../../../core-js/modules/_export.js")
   , aFunction = __webpack_require__("../../../../core-js/modules/_a-function.js")
   , anObject  = __webpack_require__("../../../../core-js/modules/_an-object.js")
@@ -3249,21 +3886,28 @@ $export($export.S + $export.F * !__webpack_require__("../../../../core-js/module
   apply: function apply(target, thisArgument, argumentsList){
     var T = aFunction(target)
       , L = anObject(argumentsList);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return rApply ? rApply(T, thisArgument, L) : fApply.call(T, thisArgument, L);
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.construct.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var create = __webpack_require__("../../../../core-js/modules/_object-create.js");
@@ -3295,6 +3939,8 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
       switch (args.length) {
         case 0: return new Target();
 =======
+=======
+>>>>>>> origin/master
 var $export    = __webpack_require__("../../../../core-js/modules/_export.js")
   , create     = __webpack_require__("../../../../core-js/modules/_object-create.js")
   , aFunction  = __webpack_require__("../../../../core-js/modules/_a-function.js")
@@ -3324,7 +3970,10 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
       // w/o altered newTarget, optimization for 0-4 arguments
       switch(args.length){
         case 0: return new Target;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         case 1: return new Target(args[0]);
         case 2: return new Target(args[0], args[1]);
         case 3: return new Target(args[0], args[1], args[2]);
@@ -3334,6 +3983,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
       var $args = [null];
       $args.push.apply($args, args);
 <<<<<<< HEAD
+<<<<<<< HEAD
       return new (bind.apply(Target, $args))();
     }
     // with altered newTarget, not support built-in constructors
@@ -3341,27 +3991,36 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
     var instance = create(isObject(proto) ? proto : Object.prototype);
     var result = Function.apply.call(Target, instance, args);
 =======
+=======
+>>>>>>> origin/master
       return new (bind.apply(Target, $args));
     }
     // with altered newTarget, not support built-in constructors
     var proto    = newTarget.prototype
       , instance = create(isObject(proto) ? proto : Object.prototype)
       , result   = Function.apply.call(Target, instance, args);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return isObject(result) ? result : instance;
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.define-property.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var dP = __webpack_require__("../../../../core-js/modules/_object-dp.js");
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
@@ -3375,6 +4034,8 @@ $export($export.S + $export.F * __webpack_require__("../../../../core-js/modules
 }), 'Reflect', {
   defineProperty: function defineProperty(target, propertyKey, attributes) {
 =======
+=======
+>>>>>>> origin/master
 var dP          = __webpack_require__("../../../../core-js/modules/_object-dp.js")
   , $export     = __webpack_require__("../../../../core-js/modules/_export.js")
   , anObject    = __webpack_require__("../../../../core-js/modules/_an-object.js")
@@ -3385,7 +4046,10 @@ $export($export.S + $export.F * __webpack_require__("../../../../core-js/modules
   Reflect.defineProperty(dP.f({}, 1, {value: 1}), 1, {value: 2});
 }), 'Reflect', {
   defineProperty: function defineProperty(target, propertyKey, attributes){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     anObject(target);
     propertyKey = toPrimitive(propertyKey, true);
     anObject(attributes);
@@ -3393,25 +4057,33 @@ $export($export.S + $export.F * __webpack_require__("../../../../core-js/modules
       dP.f(target, propertyKey, attributes);
       return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (e) {
 =======
     } catch(e){
 >>>>>>> origin/hiep.dev
+=======
+    } catch(e){
+>>>>>>> origin/master
       return false;
     }
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.delete-property.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var gOPD = __webpack_require__("../../../../core-js/modules/_object-gopd.js").f;
@@ -3420,22 +4092,30 @@ var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 $export($export.S, 'Reflect', {
   deleteProperty: function deleteProperty(target, propertyKey) {
 =======
+=======
+>>>>>>> origin/master
 var $export  = __webpack_require__("../../../../core-js/modules/_export.js")
   , gOPD     = __webpack_require__("../../../../core-js/modules/_object-gopd.js").f
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 
 $export($export.S, 'Reflect', {
   deleteProperty: function deleteProperty(target, propertyKey){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     var desc = gOPD(anObject(target), propertyKey);
     return desc && !desc.configurable ? false : delete target[propertyKey];
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.enumerate.js":
@@ -3444,6 +4124,7 @@ $export($export.S, 'Reflect', {
 "use strict";
 
 // 26.1.5 Reflect.enumerate(target)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -3467,6 +4148,8 @@ __webpack_require__("../../../../core-js/modules/_iter-create.js")(Enumerate, 'O
 $export($export.S, 'Reflect', {
   enumerate: function enumerate(target) {
 =======
+=======
+>>>>>>> origin/master
 var $export  = __webpack_require__("../../../../core-js/modules/_export.js")
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 var Enumerate = function(iterated){
@@ -3488,21 +4171,28 @@ __webpack_require__("../../../../core-js/modules/_iter-create.js")(Enumerate, 'O
 
 $export($export.S, 'Reflect', {
   enumerate: function enumerate(target){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return new Enumerate(target);
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.get-own-property-descriptor.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var gOPD = __webpack_require__("../../../../core-js/modules/_object-gopd.js");
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
@@ -3511,27 +4201,36 @@ var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 $export($export.S, 'Reflect', {
   getOwnPropertyDescriptor: function getOwnPropertyDescriptor(target, propertyKey) {
 =======
+=======
+>>>>>>> origin/master
 var gOPD     = __webpack_require__("../../../../core-js/modules/_object-gopd.js")
   , $export  = __webpack_require__("../../../../core-js/modules/_export.js")
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 
 $export($export.S, 'Reflect', {
   getOwnPropertyDescriptor: function getOwnPropertyDescriptor(target, propertyKey){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return gOPD.f(anObject(target), propertyKey);
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.get-prototype-of.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.8 Reflect.getPrototypeOf(target)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var getProto = __webpack_require__("../../../../core-js/modules/_object-gpo.js");
@@ -3540,27 +4239,36 @@ var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 $export($export.S, 'Reflect', {
   getPrototypeOf: function getPrototypeOf(target) {
 =======
+=======
+>>>>>>> origin/master
 var $export  = __webpack_require__("../../../../core-js/modules/_export.js")
   , getProto = __webpack_require__("../../../../core-js/modules/_object-gpo.js")
   , anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
 
 $export($export.S, 'Reflect', {
   getPrototypeOf: function getPrototypeOf(target){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return getProto(anObject(target));
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.get.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
+<<<<<<< HEAD
 <<<<<<< HEAD
 var gOPD = __webpack_require__("../../../../core-js/modules/_object-gopd.js");
 var getPrototypeOf = __webpack_require__("../../../../core-js/modules/_object-gpo.js");
@@ -3575,6 +4283,8 @@ function get(target, propertyKey /* , receiver */) {
   if (anObject(target) === receiver) return target[propertyKey];
   if (desc = gOPD.f(target, propertyKey)) return has(desc, 'value')
 =======
+=======
+>>>>>>> origin/master
 var gOPD           = __webpack_require__("../../../../core-js/modules/_object-gopd.js")
   , getPrototypeOf = __webpack_require__("../../../../core-js/modules/_object-gpo.js")
   , has            = __webpack_require__("../../../../core-js/modules/_has.js")
@@ -3587,11 +4297,15 @@ function get(target, propertyKey/*, receiver*/){
     , desc, proto;
   if(anObject(target) === receiver)return target[propertyKey];
   if(desc = gOPD.f(target, propertyKey))return has(desc, 'value')
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     ? desc.value
     : desc.get !== undefined
       ? desc.get.call(receiver)
       : undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isObject(proto = getPrototypeOf(target))) return get(proto, propertyKey, receiver);
 }
@@ -3599,11 +4313,16 @@ function get(target, propertyKey/*, receiver*/){
 $export($export.S, 'Reflect', { get: get });
 
 =======
+=======
+>>>>>>> origin/master
   if(isObject(proto = getPrototypeOf(target)))return get(proto, propertyKey, receiver);
 }
 
 $export($export.S, 'Reflect', {get: get});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -3615,24 +4334,32 @@ var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 
 $export($export.S, 'Reflect', {
 <<<<<<< HEAD
+<<<<<<< HEAD
   has: function has(target, propertyKey) {
 =======
   has: function has(target, propertyKey){
 >>>>>>> origin/hiep.dev
+=======
+  has: function has(target, propertyKey){
+>>>>>>> origin/master
     return propertyKey in target;
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.is-extensible.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.10 Reflect.isExtensible(target)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -3641,22 +4368,30 @@ var $isExtensible = Object.isExtensible;
 $export($export.S, 'Reflect', {
   isExtensible: function isExtensible(target) {
 =======
+=======
+>>>>>>> origin/master
 var $export       = __webpack_require__("../../../../core-js/modules/_export.js")
   , anObject      = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , $isExtensible = Object.isExtensible;
 
 $export($export.S, 'Reflect', {
   isExtensible: function isExtensible(target){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     anObject(target);
     return $isExtensible ? $isExtensible(target) : true;
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.own-keys.js":
@@ -3666,11 +4401,15 @@ $export($export.S, 'Reflect', {
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $export($export.S, 'Reflect', { ownKeys: __webpack_require__("../../../../core-js/modules/_own-keys.js") });
 
 =======
 $export($export.S, 'Reflect', {ownKeys: __webpack_require__("../../../../core-js/modules/_own-keys.js")});
 >>>>>>> origin/hiep.dev
+=======
+$export($export.S, 'Reflect', {ownKeys: __webpack_require__("../../../../core-js/modules/_own-keys.js")});
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -3678,6 +4417,7 @@ $export($export.S, 'Reflect', {ownKeys: __webpack_require__("../../../../core-js
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.12 Reflect.preventExtensions(target)
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -3691,6 +4431,8 @@ $export($export.S, 'Reflect', {
       return true;
     } catch (e) {
 =======
+=======
+>>>>>>> origin/master
 var $export            = __webpack_require__("../../../../core-js/modules/_export.js")
   , anObject           = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , $preventExtensions = Object.preventExtensions;
@@ -3702,16 +4444,22 @@ $export($export.S, 'Reflect', {
       if($preventExtensions)$preventExtensions(target);
       return true;
     } catch(e){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       return false;
     }
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.set-prototype-of.js":
@@ -3719,42 +4467,56 @@ $export($export.S, 'Reflect', {
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
 <<<<<<< HEAD
+<<<<<<< HEAD
 var $export = __webpack_require__("../../../../core-js/modules/_export.js");
 var setProto = __webpack_require__("../../../../core-js/modules/_set-proto.js");
 
 if (setProto) $export($export.S, 'Reflect', {
   setPrototypeOf: function setPrototypeOf(target, proto) {
 =======
+=======
+>>>>>>> origin/master
 var $export  = __webpack_require__("../../../../core-js/modules/_export.js")
   , setProto = __webpack_require__("../../../../core-js/modules/_set-proto.js");
 
 if(setProto)$export($export.S, 'Reflect', {
   setPrototypeOf: function setPrototypeOf(target, proto){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     setProto.check(target, proto);
     try {
       setProto.set(target, proto);
       return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (e) {
 =======
     } catch(e){
 >>>>>>> origin/hiep.dev
+=======
+    } catch(e){
+>>>>>>> origin/master
       return false;
     }
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.reflect.set.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
+<<<<<<< HEAD
 <<<<<<< HEAD
 var dP = __webpack_require__("../../../../core-js/modules/_object-dp.js");
 var gOPD = __webpack_require__("../../../../core-js/modules/_object-gopd.js");
@@ -3772,6 +4534,8 @@ function set(target, propertyKey, V /* , receiver */) {
   if (!ownDesc) {
     if (isObject(proto = getPrototypeOf(target))) {
 =======
+=======
+>>>>>>> origin/master
 var dP             = __webpack_require__("../../../../core-js/modules/_object-dp.js")
   , gOPD           = __webpack_require__("../../../../core-js/modules/_object-gopd.js")
   , getPrototypeOf = __webpack_require__("../../../../core-js/modules/_object-gpo.js")
@@ -3787,11 +4551,15 @@ function set(target, propertyKey, V/*, receiver*/){
     , existingDescriptor, proto;
   if(!ownDesc){
     if(isObject(proto = getPrototypeOf(target))){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       return set(proto, propertyKey, V, receiver);
     }
     ownDesc = createDesc(0);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (has(ownDesc, 'value')) {
     if (ownDesc.writable === false || !isObject(receiver)) return false;
@@ -3799,6 +4567,10 @@ function set(target, propertyKey, V/*, receiver*/){
   if(has(ownDesc, 'value')){
     if(ownDesc.writable === false || !isObject(receiver))return false;
 >>>>>>> origin/hiep.dev
+=======
+  if(has(ownDesc, 'value')){
+    if(ownDesc.writable === false || !isObject(receiver))return false;
+>>>>>>> origin/master
     existingDescriptor = gOPD.f(receiver, propertyKey) || createDesc(0);
     existingDescriptor.value = V;
     dP.f(receiver, propertyKey, existingDescriptor);
@@ -3808,11 +4580,15 @@ function set(target, propertyKey, V/*, receiver*/){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $export($export.S, 'Reflect', { set: set });
 
 =======
 $export($export.S, 'Reflect', {set: set});
 >>>>>>> origin/hiep.dev
+=======
+$export($export.S, 'Reflect', {set: set});
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -3822,6 +4598,7 @@ $export($export.S, 'Reflect', {set: set});
 "use strict";
 
 var strong = __webpack_require__("../../../../core-js/modules/_collection-strong.js");
+<<<<<<< HEAD
 <<<<<<< HEAD
 var validate = __webpack_require__("../../../../core-js/modules/_validate-collection.js");
 var SET = 'Set';
@@ -3838,6 +4615,8 @@ module.exports = __webpack_require__("../../../../core-js/modules/_collection.js
 
 
 =======
+=======
+>>>>>>> origin/master
 
 // 23.2 Set Objects
 module.exports = __webpack_require__("../../../../core-js/modules/_collection.js")('Set', function(get){
@@ -3849,7 +4628,10 @@ module.exports = __webpack_require__("../../../../core-js/modules/_collection.js
   }
 }, strong);
 
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es6.weak-map.js":
@@ -3857,6 +4639,7 @@ module.exports = __webpack_require__("../../../../core-js/modules/_collection.js
 
 "use strict";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var each = __webpack_require__("../../../../core-js/modules/_array-methods.js")(0);
 var redefine = __webpack_require__("../../../../core-js/modules/_redefine.js");
@@ -3876,6 +4659,8 @@ var InternalMap;
 var wrapper = function (get) {
   return function WeakMap() {
 =======
+=======
+>>>>>>> origin/master
 var each         = __webpack_require__("../../../../core-js/modules/_array-methods.js")(0)
   , redefine     = __webpack_require__("../../../../core-js/modules/_redefine.js")
   , meta         = __webpack_require__("../../../../core-js/modules/_meta.js")
@@ -3890,7 +4675,10 @@ var each         = __webpack_require__("../../../../core-js/modules/_array-metho
 
 var wrapper = function(get){
   return function WeakMap(){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     return get(this, arguments.length > 0 ? arguments[0] : undefined);
   };
 };
@@ -3898,20 +4686,27 @@ var wrapper = function(get){
 var methods = {
   // 23.3.3.3 WeakMap.prototype.get(key)
 <<<<<<< HEAD
+<<<<<<< HEAD
   get: function get(key) {
     if (isObject(key)) {
       var data = getWeak(key);
       if (data === true) return uncaughtFrozenStore(validate(this, WEAK_MAP)).get(key);
 =======
+=======
+>>>>>>> origin/master
   get: function get(key){
     if(isObject(key)){
       var data = getWeak(key);
       if(data === true)return uncaughtFrozenStore(this).get(key);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
       return data ? data[this._i] : undefined;
     }
   },
   // 23.3.3.5 WeakMap.prototype.set(key, value)
+<<<<<<< HEAD
 <<<<<<< HEAD
   set: function set(key, value) {
     return weak.def(validate(this, WEAK_MAP), key, value);
@@ -3919,10 +4714,15 @@ var methods = {
   set: function set(key, value){
     return weak.def(this, key, value);
 >>>>>>> origin/hiep.dev
+=======
+  set: function set(key, value){
+    return weak.def(this, key, value);
+>>>>>>> origin/master
   }
 };
 
 // 23.3 WeakMap Objects
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $WeakMap = module.exports = __webpack_require__("../../../../core-js/modules/_collection.js")(WEAK_MAP, wrapper, methods, weak, true, true);
 
@@ -3939,6 +4739,8 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
       if (isObject(a) && !isExtensible(a)) {
         if (!this._f) this._f = new InternalMap();
 =======
+=======
+>>>>>>> origin/master
 var $WeakMap = module.exports = __webpack_require__("../../../../core-js/modules/_collection.js")('WeakMap', wrapper, methods, weak, true, true);
 
 // IE11 WeakMap frozen keys fix
@@ -3953,7 +4755,10 @@ if(new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7){
       // store frozen objects on internal weakmap shim
       if(isObject(a) && !isExtensible(a)){
         if(!this._f)this._f = new InternalMap;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         var result = this._f[key](a, b);
         return key == 'set' ? this : result;
       // store all the rest on native weakmap
@@ -3963,14 +4768,18 @@ if(new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.define-metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -3982,6 +4791,8 @@ metadata.exp({ defineMetadata: function defineMetadata(metadataKey, metadataValu
 } });
 
 =======
+=======
+>>>>>>> origin/master
 var metadata                  = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject                  = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , toMetaKey                 = metadata.key
@@ -3990,13 +4801,17 @@ var metadata                  = __webpack_require__("../../../../core-js/modules
 metadata.exp({defineMetadata: function defineMetadata(metadataKey, metadataValue, target, targetKey){
   ordinaryDefineOwnMetadata(metadataKey, metadataValue, anObject(target), toMetaKey(targetKey));
 }});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.delete-metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4015,6 +4830,8 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 } });
 
 =======
+=======
+>>>>>>> origin/master
 var metadata               = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject               = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , toMetaKey              = metadata.key
@@ -4030,13 +4847,17 @@ metadata.exp({deleteMetadata: function deleteMetadata(metadataKey, target /*, ta
   targetMetadata['delete'](targetKey);
   return !!targetMetadata.size || store['delete'](target);
 }});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.get-metadata-keys.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var Set = __webpack_require__("../../../../core-js/modules/es6.set.js");
 var from = __webpack_require__("../../../../core-js/modules/_array-from-iterable.js");
@@ -4059,6 +4880,8 @@ metadata.exp({ getMetadataKeys: function getMetadataKeys(target /* , targetKey *
 } });
 
 =======
+=======
+>>>>>>> origin/master
 var Set                     = __webpack_require__("../../../../core-js/modules/es6.set.js")
   , from                    = __webpack_require__("../../../../core-js/modules/_array-from-iterable.js")
   , metadata                = __webpack_require__("../../../../core-js/modules/_metadata.js")
@@ -4078,13 +4901,17 @@ var ordinaryMetadataKeys = function(O, P){
 metadata.exp({getMetadataKeys: function getMetadataKeys(target /*, targetKey */){
   return ordinaryMetadataKeys(anObject(target), arguments.length < 2 ? undefined : toMetaKey(arguments[1]));
 }});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.get-metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4097,6 +4924,8 @@ var ordinaryGetMetadata = function (MetadataKey, O, P) {
   var hasOwn = ordinaryHasOwnMetadata(MetadataKey, O, P);
   if (hasOwn) return ordinaryGetOwnMetadata(MetadataKey, O, P);
 =======
+=======
+>>>>>>> origin/master
 var metadata               = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject               = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , getPrototypeOf         = __webpack_require__("../../../../core-js/modules/_object-gpo.js")
@@ -4107,11 +4936,15 @@ var metadata               = __webpack_require__("../../../../core-js/modules/_m
 var ordinaryGetMetadata = function(MetadataKey, O, P){
   var hasOwn = ordinaryHasOwnMetadata(MetadataKey, O, P);
   if(hasOwn)return ordinaryGetOwnMetadata(MetadataKey, O, P);
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   var parent = getPrototypeOf(O);
   return parent !== null ? ordinaryGetMetadata(MetadataKey, parent, P) : undefined;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , targetKey */) {
   return ordinaryGetMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
@@ -4122,12 +4955,18 @@ metadata.exp({getMetadata: function getMetadata(metadataKey, target /*, targetKe
   return ordinaryGetMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
 }});
 >>>>>>> origin/hiep.dev
+=======
+metadata.exp({getMetadata: function getMetadata(metadataKey, target /*, targetKey */){
+  return ordinaryGetMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
+}});
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.get-own-metadata-keys.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4139,6 +4978,8 @@ metadata.exp({ getOwnMetadataKeys: function getOwnMetadataKeys(target /* , targe
 } });
 
 =======
+=======
+>>>>>>> origin/master
 var metadata                = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject                = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , ordinaryOwnMetadataKeys = metadata.keys
@@ -4147,13 +4988,17 @@ var metadata                = __webpack_require__("../../../../core-js/modules/_
 metadata.exp({getOwnMetadataKeys: function getOwnMetadataKeys(target /*, targetKey */){
   return ordinaryOwnMetadataKeys(anObject(target), arguments.length < 2 ? undefined : toMetaKey(arguments[1]));
 }});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.get-own-metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4166,6 +5011,8 @@ metadata.exp({ getOwnMetadata: function getOwnMetadata(metadataKey, target /* , 
 } });
 
 =======
+=======
+>>>>>>> origin/master
 var metadata               = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject               = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , ordinaryGetOwnMetadata = metadata.get
@@ -4175,13 +5022,17 @@ metadata.exp({getOwnMetadata: function getOwnMetadata(metadataKey, target /*, ta
   return ordinaryGetOwnMetadata(metadataKey, anObject(target)
     , arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
 }});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.has-metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4193,6 +5044,8 @@ var ordinaryHasMetadata = function (MetadataKey, O, P) {
   var hasOwn = ordinaryHasOwnMetadata(MetadataKey, O, P);
   if (hasOwn) return true;
 =======
+=======
+>>>>>>> origin/master
 var metadata               = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject               = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , getPrototypeOf         = __webpack_require__("../../../../core-js/modules/_object-gpo.js")
@@ -4202,11 +5055,15 @@ var metadata               = __webpack_require__("../../../../core-js/modules/_m
 var ordinaryHasMetadata = function(MetadataKey, O, P){
   var hasOwn = ordinaryHasOwnMetadata(MetadataKey, O, P);
   if(hasOwn)return true;
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
   var parent = getPrototypeOf(O);
   return parent !== null ? ordinaryHasMetadata(MetadataKey, parent, P) : false;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 metadata.exp({ hasMetadata: function hasMetadata(metadataKey, target /* , targetKey */) {
   return ordinaryHasMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
@@ -4217,12 +5074,18 @@ metadata.exp({hasMetadata: function hasMetadata(metadataKey, target /*, targetKe
   return ordinaryHasMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
 }});
 >>>>>>> origin/hiep.dev
+=======
+metadata.exp({hasMetadata: function hasMetadata(metadataKey, target /*, targetKey */){
+  return ordinaryHasMetadata(metadataKey, anObject(target), arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
+}});
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.has-own-metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4235,6 +5098,8 @@ metadata.exp({ hasOwnMetadata: function hasOwnMetadata(metadataKey, target /* , 
 } });
 
 =======
+=======
+>>>>>>> origin/master
 var metadata               = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject               = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , ordinaryHasOwnMetadata = metadata.has
@@ -4244,13 +5109,17 @@ metadata.exp({hasOwnMetadata: function hasOwnMetadata(metadataKey, target /*, ta
   return ordinaryHasOwnMetadata(metadataKey, anObject(target)
     , arguments.length < 3 ? undefined : toMetaKey(arguments[2]));
 }});
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
 
 /***/ }),
 
 /***/ "../../../../core-js/modules/es7.reflect.metadata.js":
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 var $metadata = __webpack_require__("../../../../core-js/modules/_metadata.js");
 var anObject = __webpack_require__("../../../../core-js/modules/_an-object.js");
@@ -4261,6 +5130,8 @@ var ordinaryDefineOwnMetadata = $metadata.set;
 $metadata.exp({ metadata: function metadata(metadataKey, metadataValue) {
   return function decorator(target, targetKey) {
 =======
+=======
+>>>>>>> origin/master
 var metadata                  = __webpack_require__("../../../../core-js/modules/_metadata.js")
   , anObject                  = __webpack_require__("../../../../core-js/modules/_an-object.js")
   , aFunction                 = __webpack_require__("../../../../core-js/modules/_a-function.js")
@@ -4269,7 +5140,10 @@ var metadata                  = __webpack_require__("../../../../core-js/modules
 
 metadata.exp({metadata: function metadata(metadataKey, metadataValue){
   return function decorator(target, targetKey){
+<<<<<<< HEAD
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
     ordinaryDefineOwnMetadata(
       metadataKey, metadataValue,
       (targetKey !== undefined ? anObject : aFunction)(target),
@@ -4277,11 +5151,15 @@ metadata.exp({metadata: function metadata(metadataKey, metadataValue){
     );
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 } });
 
 =======
 }});
 >>>>>>> origin/hiep.dev
+=======
+}});
+>>>>>>> origin/master
 
 /***/ }),
 
@@ -5257,6 +6135,7 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
         // Keep a reference to the original method.
         proto[symbolThen] = originalThen;
 <<<<<<< HEAD
+<<<<<<< HEAD
         // check Ctor.prototype.then propertyDescritor is writable or not
         // in meteor env, writable is false, we have to make it to be true.
         var prop = Object.getOwnPropertyDescriptor(Ctor.prototype, 'then');
@@ -5265,6 +6144,8 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
         }
 =======
 >>>>>>> origin/hiep.dev
+=======
+>>>>>>> origin/master
         Ctor.prototype.then = function (onResolve, onReject) {
             var _this = this;
             var wrapped = new ZoneAwarePromise(function (resolve, reject) {
@@ -7033,7 +7914,7 @@ Zone.__load_patch('util', function (global, Zone, api) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("../../../../../src/polyfills.ts");
@@ -7041,5 +7922,5 @@ module.exports = __webpack_require__("../../../../../src/polyfills.ts");
 
 /***/ })
 
-},[1]);
+},[2]);
 //# sourceMappingURL=polyfills.bundle.js.map
