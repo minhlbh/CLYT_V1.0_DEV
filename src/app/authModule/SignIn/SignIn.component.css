@@ -263,3 +263,19 @@
         margin-top: 0;
     }
 }
+
+
+/* button close */
+/* button close */
+.bt-close {
+
+  -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.bt-close:hover {
+  background: #ce352c;
+}

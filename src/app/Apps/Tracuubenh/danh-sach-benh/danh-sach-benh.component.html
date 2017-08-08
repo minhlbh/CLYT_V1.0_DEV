@@ -1,5 +1,5 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" [url]="url" *isDesktop >
+<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']" >
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -48,7 +48,7 @@
 <!-- danh sacsh benh for mobile -->
 <!-- danh sacsh benh for mobile -->
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" [url]="url" *isMobile >
+<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['mobile']" >
     <div class="list-left-wr mobile">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -56,15 +56,12 @@
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
                 <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
             </div>
-
-
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
           {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
         </span>
             </div>
-
             <hr class="thin bg-grayLighter">
         </div>
         <!-- loading gif -->

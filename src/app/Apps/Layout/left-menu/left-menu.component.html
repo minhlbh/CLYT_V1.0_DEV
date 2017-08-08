@@ -31,13 +31,13 @@
         </li>
     </ul>
     <div class="col-left-fixed" [ngStyle]="{'background': settings.MauNhat}">
-        <!-- <ul class="bt-collapsed">
+         <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="toggledLeft()">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </a>
             </li>
-        </ul> -->
+        </ul>
         <div class="list-services" [ngStyle]="{'background': settings.MauNhat}">
             <ul *ngFor="let element of menuElements">
                 <li *ngFor="let item of element?.items">
