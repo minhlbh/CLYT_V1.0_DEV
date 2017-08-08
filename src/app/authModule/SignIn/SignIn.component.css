@@ -125,6 +125,32 @@
     float: left;
 }
 
+.sign-in button {
+    background-color: #0f9cb3;
+    width: auto;
+    color: #fff;
+    text-align: center;
+    height: 36px;
+    padding: 4px 12px 4px 12px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+    cursor: pointer;
+    margin-bottom: 16px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    float: left;
+}
+
+.sign-in button:hover,
+.sign-in button:focus {
+    opacity: .8;
+}
+
 .sign-in button:hover,
 .sign-in button:focus {
     opacity: .8;
@@ -266,7 +292,10 @@
 
 
 /* button close */
+
+
 /* button close */
+
 .bt-close {
     transition: all 0.3s ease 0s;
     position: absolute;
@@ -276,5 +305,5 @@
 }
 
 .bt-close:hover {
-  background: #ce352c;
+    background: #ce352c;
 }
