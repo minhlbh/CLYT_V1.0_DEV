@@ -49,7 +49,7 @@
     margin-right: 5px;
     position: absolute;
     top: 3px;
-    left: 18px;
+    left: 19px;
     color: #fff;
 }
 
@@ -111,7 +111,6 @@
     top: 0;
     left: 0;
     bottom: 0;
-
 }
 
 .fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
@@ -145,9 +144,10 @@
 
 
 .fxs-sidebar.mobile {
-    width: 50px;
+    width: 57px;
     padding-top: 45px;
     border: none;
+    overflow: hidden;
 }
 
 .fxs-sidebar .bt-collapsed {
@@ -166,7 +166,7 @@
  .fxs-sidebar.mobile .bt-collapsed.mb {
     z-index: 10000;
     height: 44px;
-    width: 50px;
+    width: 57px;
     margin: 0;
     padding: 0;
     background: #0f9cb3;
@@ -180,8 +180,8 @@
 
 .fxs-sidebar.mobile .bt-collapsed .glyphicon {
     position: absolute;
-    top: 13px;
-    left: 18px;
+    top: 14px;
+    left: 21px;
     font-size: 16px;
     color: #fff;
 }
@@ -199,21 +199,28 @@
 
 
 .fxs-sidebar.mobile .col-left-fixed {
-    width: 50px;
-    top:83px;
+    width: 75px;
+    top:43px;
     padding-top: 0;
+    position: absolute;
+    padding-bottom: 67px;
 }
 
 .fxs-sidebar.mobile .col-left-fixed ul li a span.title {
     display: none;
 }
 
-/* .fxs-sidebar.mobile.toggled {
-    width: 230px;
-} */
+ .fxs-sidebar.mobile.toggled {
+    overflow: visible;
+}
 
 .fxs-sidebar.mobile.toggled .col-left-fixed {
     width: 231px;
+    top: 43px;
+    position: absolute;
+    z-index: 1000;
+    padding: 0 0 77px 0;
+    height: calc(100vh - 30px);
 }
 
 .fxs-sidebar.mobile.toggled .col-left-fixed ul li a span.title {
@@ -225,6 +232,6 @@
 }
 
 .fxs-sidebar.mobile.toggled .col-left-fixed ul li a, .fxs-sidebar.mobile .col-left-fixed ul li a {
-    padding: 12px 10px 12px 39px;
+    padding: 12px 10px 12px 45px;
 }
 

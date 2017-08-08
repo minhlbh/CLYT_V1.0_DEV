@@ -43,6 +43,7 @@ body {
     z-index: 0;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .fxs-topbar {
@@ -53,6 +54,7 @@ body {
     flex: 0 0 auto;
     font-size: 13px;
     color: #fff;
+    width: 100vw;
 }
 
 .fxs-portal-main {
@@ -67,11 +69,10 @@ body {
 }
 
 .fxs-sidebar {
-
     position: relative;
     font-size: 13px;
     border: none;
-    height: 100%;
+    height: calc(100vh - 40px);
     box-sizing: border-box;
     overflow: hidden;
     width: 230px;

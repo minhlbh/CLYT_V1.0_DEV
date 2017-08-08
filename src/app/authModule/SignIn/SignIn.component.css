@@ -263,3 +263,18 @@
         margin-top: 0;
     }
 }
+
+
+/* button close */
+/* button close */
+.bt-close {
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+}
+
+.bt-close:hover {
+  background: #ce352c;
+}
