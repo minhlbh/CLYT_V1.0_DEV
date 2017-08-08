@@ -112,6 +112,7 @@ export class DanhSachBenhComponent implements OnInit {
                 this.loading = true;
                 if (this.endBenh > this.DsBenh.length) {
                   this.endBenh = this.DsBenh.length;
+                this.loading = false;
 
                 }
                 this.loading = false;

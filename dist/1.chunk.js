@@ -716,6 +716,7 @@ var DanhSachBenhComponent = (function () {
                 _this.loading = true;
                 if (_this.endBenh > _this.DsBenh.length) {
                     _this.endBenh = _this.DsBenh.length;
+                    _this.loading = false;
                 }
                 _this.loading = false;
             });
