@@ -56,7 +56,7 @@ export class DanhSachBenhComponent implements OnInit {
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
         this.name = this.menu[0].items[0].Ten;
-        this.url =  'apps';
+        this.url = 'apps';
     }
     // search bệnh
     doSearch(text: string) {
@@ -69,7 +69,7 @@ export class DanhSachBenhComponent implements OnInit {
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
             });
-        // return search results
+            // return search results
         } else {
             this.isSearch = true;
             this.loading = true;
@@ -91,7 +91,7 @@ export class DanhSachBenhComponent implements OnInit {
         }
     }
     // navigate to chi-tiet-benh url with id
-     clickBenh(id) {
+    clickBenh(id) {
         this.router.navigate(['tracuubenh/', id]);
     }
 
@@ -109,6 +109,10 @@ export class DanhSachBenhComponent implements OnInit {
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
                 this.loadMore = false;
+                if (this.endBenh > this.DsBenh.length) {
+                  this.endBenh = this.DsBenh.length;
+
+                }
             });
         }
     }

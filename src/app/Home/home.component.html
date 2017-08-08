@@ -49,7 +49,7 @@
                         <div class="block" [id]="blocks?.Id" [ngClass]="{'fixwidth': !blocks?.full}">
                             <div class="title">
                                 {{blocks.Ten}}
-                                <span class="count-apps">({{blocks?.items.length}} apps)</span>
+                                <span class="count-apps">({{blocks?.items.length}} mục)</span>
                             </div>
 
 
@@ -90,7 +90,7 @@
                                 </ng-container>
                             </section>
                             <div class="bottom">
-                                <a *ngIf="!blocks?.full" (click)="showMore(bl_i)" class="show-all">
+                                <a *ngIf="!blocks?.full" (click)="showMore(bl_i)" class="show-all" style="color: #fff">
                                   <span style="cursor: pointer">Xem tất cả</span>
                                   <i class="fa fa-fw fa-arrow-circle-o-right"></i>
                                 </a>
