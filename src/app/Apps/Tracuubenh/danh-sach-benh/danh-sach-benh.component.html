@@ -1,5 +1,5 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']" >
+<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']">
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -11,7 +11,7 @@
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
-          0-{{endBenh}}/{{TongSoLuong}} bệnh
+          {{endBenh}}/{{TongSoLuong}} bệnh
         </span>
             </div>
 
@@ -33,9 +33,11 @@
                     </p>
                 </div>
                 <div *ngIf="!empty">
-                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
+
             </a>
+                            <a><img src="assets/66.gif"></a>
                 </div>
             </li>
         </ul>
@@ -48,7 +50,7 @@
 <!-- danh sacsh benh for mobile -->
 <!-- danh sacsh benh for mobile -->
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['mobile']" >
+<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['mobile']">
     <div class="list-left-wr mobile">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -59,7 +61,7 @@
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
-          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
+          {{endBenh}}/{{TongSoLuong}} bệnh
         </span>
             </div>
             <hr class="thin bg-grayLighter">
@@ -80,7 +82,7 @@
                     </p>
                 </div>
                 <div *ngIf="!empty">
-                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
             </a>
                 </div>

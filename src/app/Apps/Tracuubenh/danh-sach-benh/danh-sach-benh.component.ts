@@ -109,10 +109,13 @@ export class DanhSachBenhComponent implements OnInit {
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
                 this.loadMore = false;
+                this.loading = true;
                 if (this.endBenh > this.DsBenh.length) {
                   this.endBenh = this.DsBenh.length;
+                this.loading = false;
 
                 }
+                this.loading = false;
             });
         }
     }

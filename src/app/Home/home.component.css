@@ -212,7 +212,7 @@
 }
 
 .search-home {
-    padding: 45px 5px 45px 80px;
+    padding: 45px 5px 45px 5px;
     width: 300px;
     float: right;
 }
@@ -521,4 +521,24 @@
 
 .fxs-panorama.home {
     height: calc(100vh - 100px);
+}
+
+.idea {
+    margin: 45px 0 45px 5px;
+    width: 35px;
+    float: right;
+}
+
+.idea a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 20px;
+    float: left;
+    background: #fff;
+}
+
+.idea a .icon-idea {
+    color: #00CDAC;
 }
