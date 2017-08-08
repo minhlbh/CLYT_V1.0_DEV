@@ -23837,15 +23837,7 @@ module.exports = g;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return AnimationGroupPlayer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ɵPRE_STYLE; });
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -25160,15 +25152,7 @@ var ɵPRE_STYLE = '!';
 /* unused harmony export ɵWebAnimationsPlayer */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -30212,15 +30196,7 @@ function supportsWebAnimations() {
 /* unused harmony export ɵb */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -34163,15 +34139,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -34440,15 +34408,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /* unused harmony export removeSummaryDuplicates */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -34468,15 +34428,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -41453,15 +41405,7 @@ function isExpansionFormStart(input, offset, interpolationConfig) {
  * @return {?}
  */
 function isExpansionCaseStart(peek) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     return peek === $EQ || isAsciiLetter(peek) || isDigit(peek);
-=======
-    return peek === $EQ || isAsciiLetter(peek);
->>>>>>> origin/hiep.dev
-=======
-    return peek === $EQ || isAsciiLetter(peek);
->>>>>>> origin/master
 }
 /**
  * @param {?} code1
@@ -41761,23 +41705,9 @@ var _TreeBuilder = (function () {
      * @return {?}
      */
     _TreeBuilder.prototype._closeVoidElement = function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
         var /** @type {?} */ el = this._getParentElement();
         if (el && this.getTagDefinition(el.name).isVoid) {
             this._elementStack.pop();
-=======
-=======
->>>>>>> origin/master
-        if (this._elementStack.length > 0) {
-            var /** @type {?} */ el = this._elementStack[this._elementStack.length - 1];
-            if (this.getTagDefinition(el.name).isVoid) {
-                this._elementStack.pop();
-            }
-<<<<<<< HEAD
->>>>>>> origin/hiep.dev
-=======
->>>>>>> origin/master
         }
     };
     /**
@@ -41821,23 +41751,9 @@ var _TreeBuilder = (function () {
      * @return {?}
      */
     _TreeBuilder.prototype._pushElement = function (el) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         var /** @type {?} */ parentEl = this._getParentElement();
         if (parentEl && this.getTagDefinition(parentEl.name).isClosedByChild(el.name)) {
             this._elementStack.pop();
-=======
-=======
->>>>>>> origin/master
-        if (this._elementStack.length > 0) {
-            var /** @type {?} */ parentEl = this._elementStack[this._elementStack.length - 1];
-            if (this.getTagDefinition(parentEl.name).isClosedByChild(el.name)) {
-                this._elementStack.pop();
-            }
-<<<<<<< HEAD
->>>>>>> origin/hiep.dev
-=======
->>>>>>> origin/master
         }
         var /** @type {?} */ tagDef = this.getTagDefinition(el.name);
         var _a = this._getParentElementSkippingContainers(), parent = _a.parent, container = _a.container;
@@ -41919,15 +41835,7 @@ var _TreeBuilder = (function () {
             }
             container = this._elementStack[i];
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         return { parent: null, container: container };
-=======
-        return { parent: this._elementStack[this._elementStack.length - 1], container: container };
->>>>>>> origin/hiep.dev
-=======
-        return { parent: this._elementStack[this._elementStack.length - 1], container: container };
->>>>>>> origin/master
     };
     /**
      * @param {?} node
@@ -44437,19 +44345,9 @@ var _WriteVisitor$1 = (function () {
      * @return {?}
      */
     _WriteVisitor$1.prototype.visitPlaceholder = function (ph, context) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         var /** @type {?} */ idStr = (this._nextPlaceholderId++).toString();
         return [new Tag(_PLACEHOLDER_TAG$1, {
                 id: idStr,
-=======
-        return [new Tag(_PLACEHOLDER_TAG$1, {
-                id: (this._nextPlaceholderId++).toString(),
->>>>>>> origin/hiep.dev
-=======
-        return [new Tag(_PLACEHOLDER_TAG$1, {
-                id: (this._nextPlaceholderId++).toString(),
->>>>>>> origin/master
                 equiv: ph.name,
                 disp: "{{" + ph.value + "}}",
             })];
@@ -44460,17 +44358,9 @@ var _WriteVisitor$1 = (function () {
      * @return {?}
      */
     _WriteVisitor$1.prototype.visitIcuPlaceholder = function (ph, context) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         var /** @type {?} */ cases = Object.keys(ph.value.cases).map(function (value) { return value + ' {...}'; }).join(' ');
         var /** @type {?} */ idStr = (this._nextPlaceholderId++).toString();
         return [new Tag(_PLACEHOLDER_TAG$1, { id: idStr, equiv: ph.name, disp: "{" + ph.value.expression + ", " + ph.value.type + ", " + cases + "}" })];
-=======
-        return [new Tag(_PLACEHOLDER_TAG$1, { id: (this._nextPlaceholderId++).toString() })];
->>>>>>> origin/hiep.dev
-=======
-        return [new Tag(_PLACEHOLDER_TAG$1, { id: (this._nextPlaceholderId++).toString() })];
->>>>>>> origin/master
     };
     /**
      * @param {?} nodes
@@ -62366,15 +62256,7 @@ function _mergeArrays(parts) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵu", function() { return DebugContext; });
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -63170,15 +63052,7 @@ var Version = (function () {
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new Version('4.3.3');
-=======
-var VERSION = new Version('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new Version('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -66291,15 +66165,7 @@ function forkInnerZoneWithAngularBehavior(zone) {
         },
         onHandleError: function (delegate, current, target, error) {
             delegate.handleError(target, error);
-<<<<<<< HEAD
-<<<<<<< HEAD
             zone.runOutsideAngular(function () { return zone.onError.emit(error); });
-=======
-            zone.onError.emit(error);
->>>>>>> origin/hiep.dev
-=======
-            zone.onError.emit(error);
->>>>>>> origin/master
             return false;
         }
     });
@@ -66787,37 +66653,16 @@ var PlatformRef = (function () {
 }());
 /**
  * @param {?} errorHandler
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @param {?} ngZone
  * @param {?} callback
  * @return {?}
  */
 function _callAndReportToErrorHandler(errorHandler, ngZone, callback) {
-=======
-=======
->>>>>>> origin/master
- * @param {?} callback
- * @return {?}
- */
-function _callAndReportToErrorHandler(errorHandler, callback) {
-<<<<<<< HEAD
->>>>>>> origin/hiep.dev
-=======
->>>>>>> origin/master
     try {
         var /** @type {?} */ result = callback();
         if (isPromise(result)) {
             return result.catch(function (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ngZone.runOutsideAngular(function () { return errorHandler.handleError(e); });
-=======
-                errorHandler.handleError(e);
->>>>>>> origin/hiep.dev
-=======
-                errorHandler.handleError(e);
->>>>>>> origin/master
                 // rethrow as the exception handler might not do it
                 throw e;
             });
@@ -66825,15 +66670,7 @@ function _callAndReportToErrorHandler(errorHandler, callback) {
         return result;
     }
     catch (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         ngZone.runOutsideAngular(function () { return errorHandler.handleError(e); });
-=======
-        errorHandler.handleError(e);
->>>>>>> origin/hiep.dev
-=======
-        errorHandler.handleError(e);
->>>>>>> origin/master
         // rethrow as the exception handler might not do it
         throw e;
     }
@@ -66919,18 +66756,8 @@ var PlatformRef_ = (function (_super) {
                 throw new Error('No ErrorHandler. Is platform module (BrowserModule) included?');
             }
             moduleRef.onDestroy(function () { return remove(_this._modules, moduleRef); }); /** @type {?} */
-<<<<<<< HEAD
-<<<<<<< HEAD
             ((ngZone)).runOutsideAngular(function () { return ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } }); });
             return _callAndReportToErrorHandler(exceptionHandler, /** @type {?} */ ((ngZone)), function () {
-=======
-            ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } });
-            return _callAndReportToErrorHandler(exceptionHandler, function () {
->>>>>>> origin/hiep.dev
-=======
-            ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } });
-            return _callAndReportToErrorHandler(exceptionHandler, function () {
->>>>>>> origin/master
                 var /** @type {?} */ initStatus = moduleRef.injector.get(ApplicationInitStatus);
                 initStatus.runInitializers();
                 return initStatus.donePromise.then(function () {
@@ -67226,13 +67053,7 @@ var ApplicationRef_ = (function (_super) {
      * @return {?}
      */
     ApplicationRef_.prototype.tick = function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
         var _this = this;
-=======
->>>>>>> origin/hiep.dev
-=======
->>>>>>> origin/master
         if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
         }
@@ -67246,15 +67067,7 @@ var ApplicationRef_ = (function (_super) {
         }
         catch (e) {
             // Attention: Don't rethrow as it could cancel subscriptions to Observables!
-<<<<<<< HEAD
-<<<<<<< HEAD
             this._zone.runOutsideAngular(function () { return _this._exceptionHandler.handleError(e); });
-=======
-            this._exceptionHandler.handleError(e);
->>>>>>> origin/hiep.dev
-=======
-            this._exceptionHandler.handleError(e);
->>>>>>> origin/master
         }
         finally {
             this._runningTick = false;
@@ -77324,15 +77137,7 @@ function transition$$1(stateChangeExpr, steps) {
 /* unused harmony export ɵr */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -83181,15 +82986,7 @@ FormBuilder.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -83402,15 +83199,7 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 /* unused harmony export ɵd */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -85565,15 +85354,7 @@ JsonpModule.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -85619,15 +85400,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /* unused harmony export ɵResourceLoaderImpl */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -85760,15 +85533,7 @@ var CachedResourceLoader = (function (_super) {
 /**
  * @stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -85856,15 +85621,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 /* unused harmony export ɵe */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -90271,15 +90028,7 @@ var By = (function () {
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -90333,15 +90082,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1'
 /* unused harmony export ɵc */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -91015,15 +90756,7 @@ var BrowserAnimationsModule = (function () {
 }());
 BrowserAnimationsModule.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
-<<<<<<< HEAD
-<<<<<<< HEAD
                 exports: [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */]],
-=======
-                imports: [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */]],
->>>>>>> origin/hiep.dev
-=======
-                imports: [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */]],
->>>>>>> origin/master
                 providers: BROWSER_ANIMATIONS_PROVIDERS,
             },] },
 ];
@@ -91041,15 +90774,7 @@ var NoopAnimationsModule = (function () {
 }());
 NoopAnimationsModule.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
-<<<<<<< HEAD
-<<<<<<< HEAD
                 exports: [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */]],
-=======
-                imports: [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */]],
->>>>>>> origin/hiep.dev
-=======
-                imports: [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */]],
->>>>>>> origin/master
                 providers: BROWSER_NOOP_ANIMATIONS_PROVIDERS,
             },] },
 ];
@@ -91198,15 +90923,7 @@ NoopAnimationsModule.ctorParameters = function () { return []; };
 /* unused harmony export ɵl */
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @license Angular v4.3.3
-=======
- * @license Angular v4.3.1
->>>>>>> origin/hiep.dev
-=======
- * @license Angular v4.3.1
->>>>>>> origin/master
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -95627,15 +95344,7 @@ var PreActivation = (function () {
     PreActivation.prototype.runCanActivateChecks = function () {
         var _this = this;
         var /** @type {?} */ checks$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canActivateChecks);
-<<<<<<< HEAD
-<<<<<<< HEAD
         var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap__["concatMap"].call(checks$, function (check) { return andObservables(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])([_this.runCanActivateChild(check.path), _this.runCanActivate(check.route)])); });
-=======
-        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(checks$, function (check) { return andObservables(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])([_this.runCanActivateChild(check.path), _this.runCanActivate(check.route)])); });
->>>>>>> origin/hiep.dev
-=======
-        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(checks$, function (check) { return andObservables(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])([_this.runCanActivateChild(check.path), _this.runCanActivate(check.route)])); });
->>>>>>> origin/master
         return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every__["every"].call(runningChecks$, function (result) { return result === true; });
     };
     /**
@@ -97464,15 +97173,7 @@ function provideRouterInitializer() {
 /**
  * \@stable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3');
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
->>>>>>> origin/hiep.dev
-=======
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
->>>>>>> origin/master
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
