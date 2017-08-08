@@ -36,7 +36,7 @@
     float: left;
     position: relative;
     padding: 12px 20px 12px 50px;
-    min-height: 43px;
+    min-height: 42px;
 }
 
 .col-left-fixed ul li a:hover, .col-left-fixed ul li a:focus, .col-left-fixed ul li.active a {
@@ -111,7 +111,6 @@
     top: 0;
     left: 0;
     bottom: 0;
-    padding-bottom: 70px;
 }
 
 .fxs-sidebar.toggled .col-left-fixed  ul li a span.title {
