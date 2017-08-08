@@ -89,6 +89,10 @@
     background-size: cover;
 }
 
+.child:hover{
+    outline: #fff solid 3px;
+}
+
 @keyframes scale {
     0% {
         transform: scale(0.0);

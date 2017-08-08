@@ -36,7 +36,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 let providers = {
     'google': {
         'clientId': '442448415974-lvusnqsttcup9dd79fa2en47car1793k.apps.googleusercontent.com'
-        // client secret: Nz_F3bCWPtJs6XMYaui40TMv
+        // client secret: jQN-Mm7lJw78IrM6HTnYahxs
     },
     'facebook': {
         'clientId': '123454808277990',
