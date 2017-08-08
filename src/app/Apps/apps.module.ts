@@ -21,7 +21,8 @@ const routing: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
-            { path: '**', component: EmptyComponent }
+            { path: '**', component: EmptyComponent },
+            { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' }
         ],
     },
 ];

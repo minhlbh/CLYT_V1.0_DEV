@@ -36,9 +36,13 @@
                     <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
                     </a>
+<<<<<<< HEAD
                     <a *ngIf="loading">
                                 <img src="assets/66.gif">
                     </a>
+=======
+                <a *ngIf="scrollLoading"><img src="assets/66.gif"></a>
+>>>>>>> 29279bb7526accc79db4b39445c6971a225525b5
                 </div>
             </li>
         </ul>

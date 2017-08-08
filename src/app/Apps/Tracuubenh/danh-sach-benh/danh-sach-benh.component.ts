@@ -27,6 +27,7 @@ export class DanhSachBenhComponent implements OnInit {
     searchKey = new FormControl('');
     public id: any;
     public loading = false;
+    public scrollLoading = false;
     public empty = false;
     public showChiTiet = false;
     public loadMore = false;
@@ -97,18 +98,18 @@ export class DanhSachBenhComponent implements OnInit {
 
     // load more onscroll
     onScroll() {
+        this.scrollLoading = true;
+        console.log(this.scrollLoading);
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
         } else {
             this.loadMore = true;
             this.page++;
-            console.log(this.loadMore);
             this.benhService.getBenh(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsBenh.length; i++) {
                     this.DsBenh.push(data.DsBenh[i]);
 
                 }
-                this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
                 this.loadMore = false;
                 this.loading = false;
@@ -116,13 +117,16 @@ export class DanhSachBenhComponent implements OnInit {
                     this.endBenh = this.DsBenh.length;
 
                 }
-                this.loading = false;
 
             });
 
 
         }
-
+        if (this.endBenh === this.DsBenh.length) {
+            this.scrollLoading = false;
         }
+
+
     }
+}
 
