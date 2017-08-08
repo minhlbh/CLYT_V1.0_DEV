@@ -35,9 +35,9 @@
                 <div *ngIf="!empty">
                     <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
+                            <a *ngIf="loading"><img src="assets/66.gif"></a>
 
-            </a>
-                            <a><img src="assets/66.gif"></a>
+</a>
                 </div>
             </li>
         </ul>

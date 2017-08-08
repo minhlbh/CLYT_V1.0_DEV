@@ -102,20 +102,27 @@ export class DanhSachBenhComponent implements OnInit {
         } else {
             this.loadMore = true;
             this.page++;
+            console.log(this.loadMore);
             this.benhService.getBenh(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsBenh.length; i++) {
                     this.DsBenh.push(data.DsBenh[i]);
+
                 }
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
                 this.loadMore = false;
-                this.loading = true;
+                this.loading = false;
                 if (this.endBenh > this.DsBenh.length) {
-                  this.endBenh = this.DsBenh.length;
+                    this.endBenh = this.DsBenh.length;
 
                 }
                 this.loading = false;
+
             });
+
+
+        }
+
         }
     }
-}
+
