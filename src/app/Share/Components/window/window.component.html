@@ -1,10 +1,10 @@
 <div class="window">
     <div class="title-window" [ngStyle]="{'background': menuElements?.MauNhat}">
         <div style="display:flex; flex-direction: row;">
-            <div *ngIf="icon != null">
+            <div *ngIf="idea">
                 <span class="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>
                         <div class="idea">
-              <a href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
+              <a target="blank" href="http://idea.truongkhoa.com/Home/Index?Ma={{urlIdea}}" title="Đóng góp ý tưởng">
                 <span class="fa fa-fw fa-lightbulb-o icon-idea" aria-hidden="true"></span>
               </a>
             </div>

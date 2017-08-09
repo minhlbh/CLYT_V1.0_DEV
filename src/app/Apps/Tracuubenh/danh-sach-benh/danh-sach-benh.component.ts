@@ -19,6 +19,8 @@ export class DanhSachBenhComponent implements OnInit {
     iconText: any;
     name: any;
     elements: any;
+    idea: any;
+    urlIdea: any;
     DsBenh: Benh[];
     TongSoLuong: number;
     startBenh: number;
@@ -33,7 +35,7 @@ export class DanhSachBenhComponent implements OnInit {
     public loadMore = false;
     public isSearch = false;
     public page = 1;
-    private url: any;
+    public url: any;
     constructor(
         private benhService: BenhService,
         private router: Router,
@@ -58,6 +60,8 @@ export class DanhSachBenhComponent implements OnInit {
         this.iconText = this.menu[0].items[0].IconText;
         this.name = this.menu[0].items[0].Ten;
         this.url = 'apps';
+        this.idea = true ;
+        this.urlIdea = 'tracuubenh';
     }
     // search bệnh
     doSearch(text: string) {
