@@ -23,7 +23,7 @@ import { LoadDuLieuYoutubeComponent } from '../Tracuubenh/chi-tiet-benh/Load-ite
 // services
 import { BenhService } from '../../Share/Services/benh.service';
 import { ForumService } from '../../Share/Services/forum.service';
-
+import { ShareModule } from '../../Share/Components/share.module';
 
 const routing: Routes = [
     { path: '', component: TracuubenhComponent },
@@ -41,18 +41,19 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ResponsiveModule,
         HttpModule,
         ShareButtonsModule.forRoot(),
-        Routing
+        Routing,
+        ShareModule
     ],
     declarations: [
         TracuubenhComponent,
         DanhSachBenhComponent,
         ChiTietBenhComponent,
-        WindowComponent,
+        // WindowComponent,
         LoadDuLieuImgComponent,
         LoadDuLieuTextComponent,
         LoadDuLieuLinkComponent,
         LoadDuLieuYoutubeComponent,
-        ForumBarComponent
+        ForumBarComponent,
     ],
     providers: [
         BenhService,

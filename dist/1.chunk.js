@@ -107,13 +107,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__danh_sach_benh_danh_sach_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__chi_tiet_benh_chi_tiet_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Share_Components_window_window_component__ = __webpack_require__("../../../../../src/app/Share/Components/window/window.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Share_Components_share_module__ = __webpack_require__("../../../../../src/app/Share/Components/share.module.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TracuubenhModule", function() { return TracuubenhModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -139,8 +139,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 // services
+
 
 
 var routing = [
@@ -163,22 +163,23 @@ TracuubenhModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7_ng2_responsive__["ResponsiveModule"],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_6_ngx_sharebuttons__["a" /* ShareButtonsModule */].forRoot(),
-            Routing
+            Routing,
+            __WEBPACK_IMPORTED_MODULE_18__Share_Components_share_module__["a" /* ShareModule */]
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */],
             __WEBPACK_IMPORTED_MODULE_9__danh_sach_benh_danh_sach_benh_component__["a" /* DanhSachBenhComponent */],
             __WEBPACK_IMPORTED_MODULE_10__chi_tiet_benh_chi_tiet_benh_component__["a" /* ChiTietBenhComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__Share_Components_window_window_component__["a" /* WindowComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__["a" /* LoadDuLieuImgComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__["a" /* LoadDuLieuTextComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__["a" /* LoadDuLieuLinkComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__["a" /* LoadDuLieuYoutubeComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__["a" /* ForumBarComponent */]
+            // WindowComponent,
+            __WEBPACK_IMPORTED_MODULE_12__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__["a" /* LoadDuLieuImgComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__["a" /* LoadDuLieuTextComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__["a" /* LoadDuLieuLinkComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__["a" /* LoadDuLieuYoutubeComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__["a" /* ForumBarComponent */],
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_17__Share_Services_benh_service__["a" /* BenhService */],
-            __WEBPACK_IMPORTED_MODULE_18__Share_Services_forum_service__["a" /* ForumService */]
+            __WEBPACK_IMPORTED_MODULE_16__Share_Services_benh_service__["a" /* BenhService */],
+            __WEBPACK_IMPORTED_MODULE_17__Share_Services_forum_service__["a" /* ForumService */]
         ]
     })
 ], TracuubenhModule);
@@ -746,7 +747,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".col-right {\r\n    height: 100%;\r\n    width: 320px;\r\n    padding:0 0 40px 0;\r\n    margin:25px;\r\n    float: left;\r\n    position: absolute;\r\n    top: 44px;\r\n    right: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.col-right-main {\r\n  overflow: auto;\r\n  height: 100%;\r\n  padding: 0 0 25px 0;\r\n  float: left;\r\n}\r\n\r\n.box-2 {\r\n    position: relative;\r\n    border-radius: 0;\r\n    background: #ffffff;\r\n    border-top: 3px solid #d2d6de;\r\n    width: 100%;\r\n    border-top-color: #0fa5bd;\r\n}\r\n\r\n.box-header.with-border {\r\n    border-bottom: 1px solid #f4f4f4;\r\n}\r\n\r\n.box-header {\r\n    color: #444;\r\n    display: block;\r\n    padding: 10px 0;\r\n    position: relative;\r\n}\r\n\r\n.user-block img {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.user-block .username {\r\n    font-size: 16px;\r\n}\r\n\r\n.user-block .username a {\r\n    color: #0072c6;\r\n}\r\n\r\n.user-block .description {\r\n    color: #999;\r\n    font-size: 12px;\r\n    padding-top: 5px;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.box-body {\r\n    padding:10px 0;\r\n}\r\n", ""]);
+exports.push([module.i, ".col-right {\n    height: 100%;\n    width: 320px;\n    padding:0 0 40px 0;\n    margin:25px;\n    float: left;\n    position: absolute;\n    top: 44px;\n    right: 0;\n    overflow: hidden;\n}\n\n.col-right-main {\n  overflow: auto;\n  height: 100%;\n  padding: 0 0 25px 0;\n  float: left;\n}\n\n.box-2 {\n    position: relative;\n    border-radius: 0;\n    background: #ffffff;\n    border-top: 3px solid #d2d6de;\n    width: 100%;\n    border-top-color: #0fa5bd;\n}\n\n.box-header.with-border {\n    border-bottom: 1px solid #f4f4f4;\n}\n\n.box-header {\n    color: #444;\n    display: block;\n    padding: 10px 0;\n    position: relative;\n}\n\n.user-block img {\n    width: 40px;\n    height: 40px;\n    float: left;\n}\n\n.user-block .username, .user-block .description, .user-block .comment {\n    display: block;\n    margin-left: 50px;\n}\n\n.user-block .username {\n    font-size: 16px;\n}\n\n.user-block .username a {\n    color: #0072c6;\n}\n\n.user-block .description {\n    color: #999;\n    font-size: 12px;\n    padding-top: 5px;\n}\n\n.user-block .username, .user-block .description, .user-block .comment {\n    display: block;\n    margin-left: 50px;\n}\n\n.box-body {\n    padding:10px 0;\n}\n", ""]);
 
 // exports
 
@@ -805,6 +806,46 @@ ForumBarComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=forum-bar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Components/share.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__window_window_component__ = __webpack_require__("../../../../../src/app/Share/Components/window/window.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ShareModule = (function () {
+    function ShareModule() {
+    }
+    return ShareModule;
+}());
+ShareModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */]
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__window_window_component__["a" /* WindowComponent */]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__window_window_component__["a" /* WindowComponent */]
+        ]
+    })
+], ShareModule);
+
+//# sourceMappingURL=share.module.js.map
 
 /***/ }),
 
@@ -891,7 +932,7 @@ WindowComponent = __decorate([
         encapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated,
         changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].Default
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["g" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["g" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
 ], WindowComponent);
 
 var _a, _b, _c, _d;
