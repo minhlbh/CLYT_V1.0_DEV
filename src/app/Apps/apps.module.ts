@@ -14,7 +14,8 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
 // service
 import { SettingService } from '../Share/Services/setting.service';
-import { WindowComponent } from '../Share/Components/window/window.component';
+// import { WindowComponent } from '../Share/Components/window/window.component';
+import { ShareModule } from '../Share/Components/share.module';
 
 
 const routing: Routes = [
@@ -22,8 +23,8 @@ const routing: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+            { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
             { path: '**', component: EmptyComponent },
-            { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' }
         ],
     },
 ];
@@ -36,14 +37,15 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ResponsiveModule,
         Routing,
         FormsModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        ShareModule
     ],
     declarations: [
         LayoutComponent,
         NavComponent,
         EmptyComponent,
         LeftMenuComponent,
-        WindowComponent
+        // WindowComponent
     ],
     providers: [
         SettingService

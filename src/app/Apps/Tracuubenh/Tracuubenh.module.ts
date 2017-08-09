@@ -54,6 +54,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         LoadDuLieuLinkComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
+
     ],
     providers: [
         BenhService,
