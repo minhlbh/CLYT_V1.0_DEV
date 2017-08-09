@@ -1,3 +1,479 @@
-<app-window [idea]="idea" [urlIdea]="urlIdea" [name]="name" [icon]=" iconText " [idIdea] = "idIdea" >
-   <h1> </h1>
+<app-window [idea]="idea" [urlIdea]="urlIdea" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
+    <!-- searchbox -->
+    <div class="search-box-top">
+        <div class="input-control text full-size" data-role="input">
+            <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+            <input type="text" placeholder="Nhập tên thuốc...">
+        </div>
+
+        <!-- đếm số thuốc -->
+        <div style="padding: 5px 0 0 0;">
+            <span style="font-size: 11px; color: #888; float: right;">
+                   50/435 thuốc
+                </span>
+        </div>
+
+        <hr class="thin bg-grayLighter">
+    </div>
+    <!-- Danh sách thuốc -->
+    <div class="drugs-list-wr">
+        <div class="row-l head">
+            <div class="col w25">
+                Tên
+            </div>
+            <div class="col w20">
+                Hãng
+            </div>
+            <div class="col w10">
+                Nước
+            </div>
+            <div class="col w10">
+                Đóng gói
+            </div>
+            <div class="col w15">
+                Hoạt chất
+            </div>
+            <div class="col w10">
+                Đường dùng
+            </div>
+            <div class="col w10">
+                Hàm lượng
+            </div>
+        </div>
+
+        <div class="drugs-list">
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    Optimox Sterile eye Drops
+                </div>
+                <div class="col w20">
+                    Aristopharma Ltd
+                </div>
+                <div class="col w10">
+                    Bangladesh
+                </div>
+                <div class="col w10">
+                    Hộp 01 lọ 5 ml
+                </div>
+                <div class="col w15">
+                    Moxifloxacin
+                </div>
+                <div class="col w10">
+                    Nhỏ mắt
+                </div>
+                <div class="col w10">
+                    0,5%
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    Oxaliplatin
+                </div>
+                <div class="col w20">
+                    S.C.SINDAN-Pharma S.R.L.Rumani.
+                </div>
+                <div class="col w10">
+                    Rumani
+                </div>
+                <div class="col w10">
+                    Hộp 1 lọ bột đông khô
+                </div>
+                <div class="col w15">
+                    Oxaliplatin
+                </div>
+                <div class="col w10">
+                    Tiêm
+                </div>
+                <div class="col w10">
+                    5mg/ml
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                    MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+            <a href="#" class="row-l">
+                <div class="col w25">
+                   9 - MORIHEPAMIN
+                </div>
+                <div class="col w20">
+                    AJINOMOTO- Japan
+                </div>
+                <div class="col w10">
+                    Japan
+                </div>
+                <div class="col w10">
+                    túi
+                </div>
+                <div class="col w15">
+                    Acid amin*
+                </div>
+                <div class="col w10">
+                    Tiêm truyền
+                </div>
+                <div class="col w10">
+
+                </div>
+            </a>
+
+        </div>
+    </div>
 </app-window>
