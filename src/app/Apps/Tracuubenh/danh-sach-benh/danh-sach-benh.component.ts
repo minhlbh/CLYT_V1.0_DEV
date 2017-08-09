@@ -20,6 +20,7 @@ export class DanhSachBenhComponent implements OnInit {
     elements: any;
     idea: any;
     urlIdea: any;
+    idIdea: any;
     DsBenh: Benh[];
     TongSoLuong: number;
     startBenh: number;
@@ -58,6 +59,7 @@ export class DanhSachBenhComponent implements OnInit {
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
         this.name = this.menu[0].items[0].Ten;
+        this.idIdea = this.menu[0].items[0].Id;
         this.url = 'apps';
         this.idea = true ;
         this.urlIdea = 'tracuubenh';

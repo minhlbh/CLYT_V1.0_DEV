@@ -146,7 +146,11 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuuthuoc/danh-sach-thuoc/danh-sach-thuoc.component.html":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [name]=\"name\" [icon]=\" iconText \" >\r\n\r\n</app-window>\r\n"
+=======
+module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [name]=\"name\" [icon]=\" iconText \" [idIdea] = \"idIdea\" >\r\n   <h1> </h1>\r\n</app-window>\r\n"
+>>>>>>> origin/son
 
 /***/ }),
 
@@ -181,6 +185,7 @@ var DanhSachThuocComponent = (function () {
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[1].IconText;
         this.name = this.menu[0].items[1].Ten;
+        this.idIdea = this.menu[0].items[1].Id;
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';

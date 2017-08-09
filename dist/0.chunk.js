@@ -61,7 +61,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/window/window.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\" [ngStyle]=\"{'background': menuElements?.MauNhat}\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div *ngIf=\"idea\">\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n                        <div class=\"idea\">\r\n              <a target=\"blank\" href=\"http://idea.truongkhoa.com/Home/Index?Ma={{urlIdea}}\" title=\"Đóng góp ý tưởng\">\r\n                <span class=\"fa fa-fw fa-lightbulb-o icon-idea\" aria-hidden=\"true\"></span>\r\n              </a>\r\n            </div>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\" [ngStyle]=\"{'background': menuElements?.MauNhat}\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div *ngIf=\"idea\">\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n                        <div class=\"idea\">\r\n              <a target=\"blank\" href=\"http://idea.truongkhoa.com/Home/Index?Id={{idIdea}}&Ma={{urlIdea}}\" title=\"Đóng góp ý tưởng\">\r\n                <span class=\"fa fa-fw fa-lightbulb-o icon-idea\" aria-hidden=\"true\"></span>\r\n              </a>\r\n            </div>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -123,6 +123,10 @@ __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "urlIdea", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], WindowComponent.prototype, "idIdea", void 0);
 WindowComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-window',

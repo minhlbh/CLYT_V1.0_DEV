@@ -13,6 +13,7 @@ export class DanhSachThuocComponent implements OnInit {
     menu: any;
     idea: any;
     urlIdea: any;
+    idIdea: any;
     iconText: any;
     name: any;
     public url: any;
@@ -28,6 +29,7 @@ export class DanhSachThuocComponent implements OnInit {
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[1].IconText;
         this.name = this.menu[0].items[1].Ten;
+        this.idIdea = this.menu[0].items[1].Id;
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
