@@ -627,10 +627,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var DanhSachBenhComponent = (function () {
-    function DanhSachBenhComponent(benhService, router, settingService) {
+    function DanhSachBenhComponent(benhService, router, activedroute, settingService) {
         var _this = this;
         this.benhService = benhService;
         this.router = router;
+        this.activedroute = activedroute;
         this.settingService = settingService;
         this.searchUpdate = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
         this.searchKey = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormControl */]('');
@@ -657,9 +658,15 @@ var DanhSachBenhComponent = (function () {
             _this.endBenh = 50;
         });
         this.menu = this.settingService.getMenu();
-        this.iconText = this.menu[0].items[0].IconText;
-        this.name = this.menu[0].items[0].Ten;
-        this.idIdea = this.menu[0].items[0].Id;
+        for (var i = 0; i < this.menu.length; i++) {
+            for (var x = 0; x < this.menu[i].items.length; x++) {
+                if (this.menu[i].items[x].url === 'tracuubenh') {
+                    this.name = this.menu[i].items[x].Ten;
+                    this.iconText = this.menu[i].items[x].IconText;
+                    this.idIdea = this.menu[i].items[x].Id;
+                }
+            }
+        }
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuubenh';
@@ -738,10 +745,10 @@ DanhSachBenhComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _d || Object])
 ], DanhSachBenhComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=danh-sach-benh.component.js.map
 
 /***/ }),

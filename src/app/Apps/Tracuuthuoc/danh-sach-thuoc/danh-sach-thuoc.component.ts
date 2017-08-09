@@ -27,9 +27,15 @@ export class DanhSachThuocComponent implements OnInit {
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
         this.menu = this.settingService.getMenu();
-        this.iconText = this.menu[0].items[1].IconText;
-        this.name = this.menu[0].items[1].Ten;
-        this.idIdea = this.menu[0].items[1].Id;
+        for (let i = 0; i < this.menu.length; i++) {
+            for (let x = 0; x < this.menu[i].items.length; x++) {
+                if (this.menu[i].items[x].url === 'tracuuthuoc') {
+                    this.name = this.menu[i].items[x].Ten;
+                    this.iconText = this.menu[i].items[x].IconText;
+                    this.idIdea = this.menu[i].items[x].Id;
+                }
+            }
+        }
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
