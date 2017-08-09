@@ -116,11 +116,14 @@
     font-weight: bold;
 }
 
+
 .idea a img {
     width: 100%;
     float: left;
 }
-
+.idea a img:hover {
+    transform: scale(1.2);
+}
 .idea a:hover .icon-idea {
   color: #00CDAC;
 }

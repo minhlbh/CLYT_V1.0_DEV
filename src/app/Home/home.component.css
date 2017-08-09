@@ -1,4 +1,3 @@
-
 .block {
     flex: 0 0 auto;
     height: 100%;
@@ -18,7 +17,6 @@
     grid-auto-rows: 145px;
     grid-auto-columns: 145px;
     grid-auto-flow: row dense;
-
 }
 
 @media screen and (max-height: 700px) {
@@ -89,7 +87,7 @@
     background-size: cover;
 }
 
-.child:hover{
+.child:hover {
     outline: #fff solid 3px;
 }
 
@@ -361,7 +359,7 @@
     color: #555;
 }
 
- .m-body {
+.m-body {
     /* background: url(https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg) no-repeat center center fixed;    */
     background: #333;
 }
@@ -542,6 +540,10 @@
     width: 100%;
     height: 100%;
     float: left;
+}
+
+.idea a img:hover {
+    transform: scale(1.2);
 }
 
 .idea a .icon-idea {
