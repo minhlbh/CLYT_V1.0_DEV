@@ -3,18 +3,18 @@
         <div style="display:flex; flex-direction: row;">
             <div *ngIf="idea">
                 <span class="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>
-                        <div class="idea">
-              <a target="blank" href="http://idea.truongkhoa.com/Home/Index?Id={{idIdea}}&Ma={{urlIdea}}" title="Đóng góp ý tưởng">
-                <span class="fa fa-fw fa-lightbulb-o icon-idea" aria-hidden="true"></span>
+                <div class="idea">
+                    <a target="blank" href="http://idea.truongkhoa.com/Home/Index?Id={{idIdea}}&Ma={{urlIdea}}" title="Đóng góp ý tưởng">
+                             <img src="../../assets/idea.png">
               </a>
-            </div>
+                </div>
             </div>
             <div>
                 <h3 class="big-title" style="cursor: default">{{name}}</h3>
             </div>
 
             <div>
-                <button (click) = "back()" class="bt-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <button (click)="back()" class="bt-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
             </div>
 
         </div>
