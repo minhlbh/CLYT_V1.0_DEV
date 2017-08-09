@@ -1,5 +1,5 @@
 <div class="window">
-    <div class="title-window">
+    <div class="title-window" [ngStyle]="{'background': menuElements?.MauNhat}">
         <div style="display:flex; flex-direction: row;">
             <div *ngIf="icon != null">
                 <span class="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>

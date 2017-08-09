@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
@@ -17,6 +17,8 @@ import { SafeStylePipe } from './Share/Pipes/safeStyle.pipe';
 
 const routes: Routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
+    { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
+    { path: 'policies', loadChildren: './Policy/policy.module#PolicyModule' },
     { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
 ];
 
@@ -38,7 +40,8 @@ const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingSt
         ResponsiveModule
     ],
     providers: [
-        SettingService
+        SettingService,
+        Title
     ],
     bootstrap: ([AppComponent])
 })

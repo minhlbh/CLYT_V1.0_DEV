@@ -12,7 +12,6 @@ import { NavComponent } from './Layout/nav/nav.component';
 import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
 import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
-
 // service
 import { SettingService } from '../Share/Services/setting.service';
 
@@ -22,7 +21,6 @@ const routing: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
-
             { path: '**', component: EmptyComponent }
         ],
     },

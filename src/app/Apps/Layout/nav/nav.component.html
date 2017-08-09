@@ -2,12 +2,12 @@
     <!-- <div>
     <a [routerLink]="['/']">header</a>
   </div> -->
-    <nav  class="navbar navbar-default navbar-fixed-top nav-top"  [ngStyle]="{'background': menuElements.MauDam}">
+    <nav  class="navbar navbar-default navbar-fixed-top nav-top"  [ngStyle]="{'background': menuElements?.MauDam}">
         <div class="navbar-header">
             <a class="navbar-brand logo" [routerLink]="['/']">
-              <img src="{{menuElements.Logo}}">
+              <img src="{{menuElements?.Logo}}">
               <span class="app-bar-divider">
-                {{menuElements.ThuongHieu}}
+                {{menuElements?.ThuongHieu}}
               </span>
             </a>
         </div>
@@ -26,11 +26,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a routerLink="/login">Đăng nhập
+                    <a [routerLink]= "['/auth/signIn']">Đăng nhập
                 </a>
                 </li>
                 <li>
-                    <a class="bt-sign-up" routerLink="/register">
+                    <a class="bt-sign-up" [routerLink]= "['/auth/register']">
                   <span>Đăng ký ngay
                   </span>
                 </a>

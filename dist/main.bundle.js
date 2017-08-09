@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([8],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -6,17 +6,27 @@ webpackJsonp([6],{
 var map = {
 	"./Apps/apps.module": [
 		"../../../../../src/app/Apps/apps.module.ts",
-		2,
+		3,
 		0
 	],
 	"./Home/home.module": [
 		"../../../../../src/app/Home/home.module.ts",
-		3,
+		5,
 		0
+	],
+	"./Policy/policy.module": [
+		"../../../../../src/app/Policy/policy.module.ts",
+		4
 	],
 	"./Tracuubenh/Tracuubenh.module": [
 		"../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts",
-		1
+		1,
+		0
+	],
+	"./authModule/Auth.module": [
+		"../../../../../src/app/authModule/Auth.module.ts",
+		2,
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -180,7 +190,7 @@ var SettingService = (function () {
 }());
 SettingService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["b" /* DOCUMENT */])),
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["e" /* DOCUMENT */])),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, Object])
 ], SettingService);
 
@@ -230,6 +240,7 @@ module.exports = "<router-outlet></router-outlet>"
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -242,14 +253,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = (function () {
-    function AppComponent(settingService) {
+    function AppComponent(settingService, titleService) {
         var _this = this;
         this.settingService = settingService;
+        this.titleService = titleService;
         this.settingService.getFirstConfig().subscribe(function (data) {
             _this.settingService.setConfig(data.setting);
             _this.settingService.setMenu(data.home);
         });
+        this.elements = this.settingService.getConfig();
+        this.titleService.setTitle('Cloud Y Tế - ' + this.elements.ThuongHieu);
     }
     return AppComponent;
 }());
@@ -259,10 +274,10 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["b" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["b" /* Title */]) === "function" && _b || Object])
 ], AppComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -305,6 +320,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
+    { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
+    { path: 'policies', loadChildren: './Policy/policy.module#PolicyModule' },
     { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(routes, { preloadingStrategy: __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* PreloadAllModules */], useHash: true });
@@ -329,7 +346,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6_ng2_responsive__["ResponsiveModule"]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */]
+            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["b" /* Title */]
         ],
         bootstrap: ([__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]])
     })
@@ -378,7 +396,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("../../../../../src/main.ts");
@@ -386,5 +404,5 @@ module.exports = __webpack_require__("../../../../../src/main.ts");
 
 /***/ })
 
-},[0]);
+},[1]);
 //# sourceMappingURL=main.bundle.js.map

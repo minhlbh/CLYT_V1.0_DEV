@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fxs-blade-content-container\">\r\n    <div class=\"fxs-block\">\r\n        <app-danh-sach-benh (showBenh)=\"idBenh($event)\">\r\n        </app-danh-sach-benh>\r\n    </div>\r\n\r\n    <div *ngIf=\"showChiTiet\" class=\"fxs-block large\">\r\n        <app-chi-tiet-benh [idBenh]=\"detailBenhId\"></app-chi-tiet-benh>\r\n    </div>\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"fxs-blade-content-container\">\r\n    <div class=\"fxs-block\">\r\n        <app-danh-sach-benh>\r\n        </app-danh-sach-benh>\r\n    </div>\r\n\r\n    <div *ngIf=\"showChiTiet\" class=\"fxs-block large\">\r\n        <app-chi-tiet-benh [idBenh]=\"detailBenhId\"></app-chi-tiet-benh>\r\n    </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -156,7 +156,7 @@ var TracuubenhModule = (function () {
 TracuubenhModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_infinite_scroll__["InfiniteScrollModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
@@ -490,7 +490,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\" [url]=\"url\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <!-- <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button> -->\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n\r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
+module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\" [url]=\"url\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <!-- <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button> -->\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n\r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -574,7 +574,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\n\r\n.search-box-top {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    padding: 10px 20px 0 20px ;\r\n    width: 100%;\r\n    background: #fff;\r\n    z-index: 100;\r\n}\r\n\r\n\r\n\r\n.search-box-top .text-light {\r\n    margin-top: 5px;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.search-box-top hr {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.text-light {\r\n    font-weight: 600;\r\n}\r\n\r\n.input-control {\r\n    display: inline-block;\r\n    min-height: 27px;\r\n    height: 27px;\r\n    position: relative;\r\n    vertical-align: middle;\r\n    margin: 0;\r\n    line-height: 1;\r\n    position: relative;\r\n}\r\n\r\n.input-control .icon-search {\r\n  position: absolute;\r\n  top: 6px;\r\n  left: 5px;\r\n  color: #777;\r\n}\r\n\r\n.input-control input {\r\n  width: 100%;\r\n  padding:3px 5px;\r\n  font-size: 13px;\r\n  padding-left:23px;\r\n  border: solid 1px #ccc;\r\n}\r\n\r\n.full-size {\r\n    width: 100% !important;\r\n}\r\n\r\n.ul {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding:0;\r\n    margin: 0 25px;\r\n}\r\n\r\n.ul li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n\r\n}\r\n\r\n.ul li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom:1px solid #eee;\r\n}\r\n\r\n\r\n\r\n.ul li a .title {\r\n    display: block;\r\n}\r\n\r\n.ul li a:hover, .ul li a:focus {\r\n  background: #f5f5f5;\r\n  text-decoration:none;\r\n}\r\n\r\n.no-mg-top {\r\n  top:0;\r\n  padding-top: 67px;\r\n}\r\n\r\n.ul li a .icon {\r\n    width: 20px;\r\n    top: 13px;\r\n    right: 10px;\r\n    color: #888;\r\n    position: absolute;\r\n}\r\n\r\n\r\n\r\n.toggled ul li a .title {\r\n  display: block\r\n}\r\n\r\n.toggled ul li a {\r\npadding: 12px 10px 12px 40px;\r\n}\r\n\r\n.toggled {\r\n  width: 50px;\r\n  left: 0;\r\n}\r\n\r\n.list {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding: 0;\r\n    margin: 0 20px;\r\n}\r\n\r\n.list li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.list li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom: 1px solid #eee;\r\n}\r\n\r\n\r\n\r\n.list li a:hover, .list li a:focus {\r\n    background: #f5f5f5;\r\n    text-decoration:none;\r\n}\r\n\r\n.list-left-wr {\r\n    width: 100%;\r\n    padding: 64px 0 25px 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: calc(100vh - 85px);\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n.list-left-wr.mobile {\r\n    border:none;\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n\r\n.search-box-top {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    padding: 10px 20px 0 20px ;\r\n    width: 100%;\r\n    background: #fff;\r\n    z-index: 100;\r\n}\r\n\r\n\r\n\r\n.search-box-top .text-light {\r\n    margin-top: 5px;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.search-box-top hr {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.text-light {\r\n    font-weight: 600;\r\n}\r\n\r\n.input-control {\r\n    display: inline-block;\r\n    min-height: 27px;\r\n    height: 27px;\r\n    position: relative;\r\n    vertical-align: middle;\r\n    margin: 0;\r\n    line-height: 1;\r\n    position: relative;\r\n}\r\n\r\n.input-control .icon-search {\r\n  position: absolute;\r\n  top: 5px;\r\n  left: 5px;\r\n  color: #777;\r\n}\r\n\r\n.input-control input {\r\n  width: 100%;\r\n  padding:3px 5px;\r\n  font-size: 13px;\r\n  padding-left:25px;\r\n  border: solid 1px #ccc;\r\n  height: 25px;\r\n}\r\n\r\n.full-size {\r\n    width: 100% !important;\r\n}\r\n\r\n.ul {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding:0;\r\n    margin: 0 25px;\r\n}\r\n\r\n.ul li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n\r\n}\r\n\r\n.ul li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom:1px solid #eee;\r\n}\r\n\r\n\r\n\r\n.ul li a .title {\r\n    display: block;\r\n}\r\n\r\n.ul li a:hover, .ul li a:focus {\r\n  background: #f5f5f5;\r\n  text-decoration:none;\r\n}\r\n\r\n.no-mg-top {\r\n  top:0;\r\n  padding-top: 67px;\r\n}\r\n\r\n.ul li a .icon {\r\n    width: 20px;\r\n    top: 13px;\r\n    right: 10px;\r\n    color: #888;\r\n    position: absolute;\r\n}\r\n\r\n\r\n\r\n.toggled ul li a .title {\r\n  display: block\r\n}\r\n\r\n.toggled ul li a {\r\npadding: 12px 10px 12px 40px;\r\n}\r\n\r\n.toggled {\r\n  width: 50px;\r\n  left: 0;\r\n}\r\n\r\n.list {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding: 0;\r\n    margin: 0 20px;\r\n}\r\n\r\n.list li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.list li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom: 1px solid #eee;\r\n}\r\n\r\n\r\n\r\n.list li a:hover, .list li a:focus {\r\n    background: #f5f5f5;\r\n    text-decoration:none;\r\n}\r\n\r\n.list-left-wr {\r\n    width: 100%;\r\n    padding: 64px 0 25px 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: calc(100vh - 85px);\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n.list-left-wr.mobile {\r\n    border:none;\r\n}\r\n", ""]);
 
 // exports
 
@@ -587,7 +587,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" [url]=\"url\" *isDesktop >\r\n    <div class=\"list-left-wr\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]= \"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n\r\n\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" [url]=\"url\" *isMobile >\r\n    <div class=\"list-left-wr mobile\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]= \"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n"
+module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" [url]=\"url\" *showItDevice=\"['desktop', 'tablet']\">\r\n    <div class=\"list-left-wr\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]=\"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n\r\n            </a>\r\n                            <a><img src=\"assets/66.gif\"></a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n\r\n\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" [url]=\"url\" *showItDevice=\"['mobile']\">\r\n    <div class=\"list-left-wr mobile\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"1\" [infiniteScrollThrottle]=\"200\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]=\"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -630,7 +630,6 @@ var DanhSachBenhComponent = (function () {
         this.benhService = benhService;
         this.router = router;
         this.settingService = settingService;
-        this.showBenh = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
         this.searchUpdate = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
         this.searchKey = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormControl */]('');
         this.loading = false;
@@ -656,14 +655,13 @@ var DanhSachBenhComponent = (function () {
         });
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
-        // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
-        // const strUrl = (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
         this.url = 'apps';
-        console.log(this.url);
     };
+    // search bệnh
     DanhSachBenhComponent.prototype.doSearch = function (text) {
         var _this = this;
+        // no keyword catched => return all
         if (text === '') {
             this.isSearch = false;
             this.benhService.getBenh(1).subscribe(function (data) {
@@ -672,6 +670,7 @@ var DanhSachBenhComponent = (function () {
                 _this.startBenh = (_this.page - 1) * 50;
                 _this.endBenh = _this.page * 50;
             });
+            // return search results
         }
         else {
             this.isSearch = true;
@@ -694,10 +693,11 @@ var DanhSachBenhComponent = (function () {
             }, 1500);
         }
     };
+    // navigate to chi-tiet-benh url with id
     DanhSachBenhComponent.prototype.clickBenh = function (id) {
-        this.showBenh.emit(id);
         this.router.navigate(['tracuubenh/', id]);
     };
+    // load more onscroll
     DanhSachBenhComponent.prototype.onScroll = function () {
         var _this = this;
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
@@ -713,15 +713,17 @@ var DanhSachBenhComponent = (function () {
                 _this.startBenh = (_this.page - 1) * 50;
                 _this.endBenh = _this.page * 50;
                 _this.loadMore = false;
+                _this.loading = true;
+                if (_this.endBenh > _this.DsBenh.length) {
+                    _this.endBenh = _this.DsBenh.length;
+                    _this.loading = false;
+                }
+                _this.loading = false;
             });
         }
     };
     return DanhSachBenhComponent;
 }());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"])(),
-    __metadata("design:type", Object)
-], DanhSachBenhComponent.prototype, "showBenh", void 0);
 DanhSachBenhComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-danh-sach-benh',
@@ -744,7 +746,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".col-right {\n    height: 100%;\n    width: 320px;\n    padding:0 0 40px 0;\n    margin:25px;\n    float: left;\n    position: absolute;\n    top: 44px;\n    right: 0;\n    overflow: hidden;\n}\n\n.col-right-main {\n  overflow: auto;\n  height: 100%;\n  padding: 0 0 25px 0;\n  float: left;\n}\n\n.box-2 {\n    position: relative;\n    border-radius: 0;\n    background: #ffffff;\n    border-top: 3px solid #d2d6de;\n    width: 100%;\n    border-top-color: #0fa5bd;\n}\n\n.box-header.with-border {\n    border-bottom: 1px solid #f4f4f4;\n}\n\n.box-header {\n    color: #444;\n    display: block;\n    padding: 10px 0;\n    position: relative;\n}\n\n.user-block img {\n    width: 40px;\n    height: 40px;\n    float: left;\n}\n\n.user-block .username, .user-block .description, .user-block .comment {\n    display: block;\n    margin-left: 50px;\n}\n\n.user-block .username {\n    font-size: 16px;\n}\n\n.user-block .username a {\n    color: #0072c6;\n}\n\n.user-block .description {\n    color: #999;\n    font-size: 12px;\n    padding-top: 5px;\n}\n\n.user-block .username, .user-block .description, .user-block .comment {\n    display: block;\n    margin-left: 50px;\n}\n\n.box-body {\n    padding:10px 0;\n}\n", ""]);
+exports.push([module.i, ".col-right {\r\n    height: 100%;\r\n    width: 320px;\r\n    padding:0 0 40px 0;\r\n    margin:25px;\r\n    float: left;\r\n    position: absolute;\r\n    top: 44px;\r\n    right: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.col-right-main {\r\n  overflow: auto;\r\n  height: 100%;\r\n  padding: 0 0 25px 0;\r\n  float: left;\r\n}\r\n\r\n.box-2 {\r\n    position: relative;\r\n    border-radius: 0;\r\n    background: #ffffff;\r\n    border-top: 3px solid #d2d6de;\r\n    width: 100%;\r\n    border-top-color: #0fa5bd;\r\n}\r\n\r\n.box-header.with-border {\r\n    border-bottom: 1px solid #f4f4f4;\r\n}\r\n\r\n.box-header {\r\n    color: #444;\r\n    display: block;\r\n    padding: 10px 0;\r\n    position: relative;\r\n}\r\n\r\n.user-block img {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.user-block .username {\r\n    font-size: 16px;\r\n}\r\n\r\n.user-block .username a {\r\n    color: #0072c6;\r\n}\r\n\r\n.user-block .description {\r\n    color: #999;\r\n    font-size: 12px;\r\n    padding-top: 5px;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.box-body {\r\n    padding:10px 0;\r\n}\r\n", ""]);
 
 // exports
 
@@ -827,7 +829,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Share/Components/window/window.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div *ngIf=\"icon != null\">\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\" [ngStyle]=\"{'background': menuElements?.MauNhat}\">\r\n        <div style=\"display:flex; flex-direction: row;\">\r\n            <div *ngIf=\"icon != null\">\r\n                <span class=\"icon\"><img src=\"{{icon}}\" aria-hidden=\"true\" style=\"width: 20px;\"></span>\r\n            </div>\r\n            <div>\r\n                <h3 class=\"big-title\" style=\"cursor: default\">{{name}}</h3>\r\n            </div>\r\n            <div>\r\n                <button (click) = \"back()\" class=\"bt-close\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></button>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -835,9 +837,10 @@ module.exports = "<div class=\"window\">\r\n    <div class=\"title-window\">\r\n
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WindowComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -851,11 +854,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WindowComponent = (function () {
-    function WindowComponent(router, location, r) {
+    function WindowComponent(router, location, settingService, r) {
         this.router = router;
         this.location = location;
+        this.settingService = settingService;
         this.r = r;
+        this.menuElements = this.settingService.getConfig();
     }
     WindowComponent.prototype.ngOnInit = function () {
     };
@@ -866,27 +872,29 @@ var WindowComponent = (function () {
     return WindowComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "name", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "icon", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(),
     __metadata("design:type", Object)
 ], WindowComponent.prototype, "url", void 0);
 WindowComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
         selector: 'app-window',
         template: __webpack_require__("../../../../../src/app/Share/Components/window/window.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Share/Components/window/window.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/Share/Components/window/window.component.css")],
+        encapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated,
+        changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].Default
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Services_setting_service__["a" /* SettingService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
 ], WindowComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=window.component.js.map
 
 /***/ }),
@@ -1010,19 +1018,6 @@ var BaiViet = (function () {
 
 var _a;
 //# sourceMappingURL=forum.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/environments/environment.prod.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-var environment = {
-    production: true,
-    apiUrl: 'http://api.truongkhoa.com/api/'
-};
-//# sourceMappingURL=environment.prod.js.map
 
 /***/ }),
 
@@ -2362,7 +2357,7 @@ ShareButtonsModule.decorators = [
                     __WEBPACK_IMPORTED_MODULE_8__helpers_n_formatter_pipe__["a" /* NFormatterPipe */]
                 ],
                 imports: [
-                    __WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* CommonModule */],
+                    __WEBPACK_IMPORTED_MODULE_2__angular_common__["e" /* CommonModule */],
                     __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* JsonpModule */]
                 ],
                 exports: [

@@ -1,5 +1,5 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" [url]="url" *isDesktop >
+<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']">
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -11,7 +11,7 @@
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
-          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
+          {{endBenh}}/{{TongSoLuong}} bệnh
         </span>
             </div>
 
@@ -33,9 +33,11 @@
                     </p>
                 </div>
                 <div *ngIf="!empty">
-                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
+
             </a>
+                            <a><img src="assets/66.gif"></a>
                 </div>
             </li>
         </ul>
@@ -48,7 +50,7 @@
 <!-- danh sacsh benh for mobile -->
 <!-- danh sacsh benh for mobile -->
 <!-- Start col left 2 -->
-<app-window [icon]="iconText" [name]="name" [url]="url" *isMobile >
+<app-window [icon]="iconText" [name]="name" [url]="url" *showItDevice="['mobile']">
     <div class="list-left-wr mobile">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -56,15 +58,12 @@
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
                 <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
             </div>
-
-
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
-          {{startBenh}}-{{endBenh}}/{{TongSoLuong}} bệnh
+          {{endBenh}}/{{TongSoLuong}} bệnh
         </span>
             </div>
-
             <hr class="thin bg-grayLighter">
         </div>
         <!-- loading gif -->
@@ -74,7 +73,7 @@
             </p>
         </div>
         <!-- list bệnh -->
-        <ul class="scrollbar-custom list" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()"
+        <ul class="scrollbar-custom list" infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="200" (scrolled)="onScroll()"
             [scrollWindow]="false">
             <li *ngIf="!loading">
                 <div class="text-center" *ngIf="empty">
@@ -83,7 +82,7 @@
                     </p>
                 </div>
                 <div *ngIf="!empty">
-                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]= "['/apps/tracuubenh', benh.Id]">
+                    <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
             </a>
                 </div>

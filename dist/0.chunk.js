@@ -1,5 +1,124 @@
 webpackJsonp([0],{
 
+/***/ "../../../../../src/app/Share/Services/user.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment_prod__ = __webpack_require__("../../../../../src/environments/environment.prod.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UserService = (function () {
+    function UserService(http) {
+        this.http = http;
+        this.authToken = null;
+        this.tokenType = null;
+        this.baseUrl = "" + __WEBPACK_IMPORTED_MODULE_0__environments_environment_prod__["a" /* environment */].apiUrl;
+    }
+    // login
+    UserService.prototype.login = function (username, password) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('username', username);
+        body.set('password', password);
+        body.set('grant_type', 'password');
+        return this.http.post("http://api.truongkhoa.com/token", body).map(function (response) { return response.json(); });
+    };
+    // register
+    UserService.prototype.register = function (name, email, phone, password) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('HoVaTen', name);
+        body.set('Email', email);
+        body.set('Phone', phone);
+        body.set('Password', password);
+        return this.http.post(this.baseUrl + "Account/Register", body).map(function (response) { return response.json(); });
+    };
+    // verify
+    UserService.prototype.verifyCode = function (code, phone, idUser) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('Code', code);
+        body.set('PhoneNumber', phone);
+        return this.http.post(this.baseUrl + "Account/XacNhanPhone?IdU=" + idUser, body).map(function (response) { return response.json(); });
+    };
+    // forgot pass
+    UserService.prototype.forgotPassword = function (phone) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('Phone', phone);
+        return this.http.post(this.baseUrl + "Account/ForgotPassword", body).map(function (response) { return response.json(); });
+    };
+    // change pass
+    UserService.prototype.changePass = function (newPass, code, phone, idU) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('PhoneNumber', phone);
+        body.set('Code', code);
+        body.set('Password', newPass);
+        return this.http.post(this.baseUrl + "Account/ForgotPassword?IdU=" + idU, body).map(function (response) { return response.json(); });
+    };
+    // get & set token/localToken
+    UserService.prototype.setTokenType = function (token_type) {
+        this.tokenType = token_type;
+        localStorage.setItem('token_type', token_type);
+    };
+    UserService.prototype.setAuthToken = function (token) {
+        this.authToken = token;
+        localStorage.setItem('token', token);
+    };
+    UserService.prototype.getLocalToken = function () {
+        return localStorage.getItem('token') ? localStorage.getItem('token') : null;
+    };
+    UserService.prototype.getLocalTokenType = function () {
+        return localStorage.getItem('token_type') ? localStorage.getItem('token_type') : null;
+    };
+    UserService.prototype.setAuth = function (data) {
+        localStorage.setItem('auth', JSON.stringify(data));
+    };
+    UserService.prototype.getAuth = function () {
+        return JSON.parse(localStorage.getItem('auth'));
+    };
+    UserService.prototype.refreshToken = function () {
+        return localStorage.setItem('auth', null);
+    };
+    return UserService;
+}());
+UserService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], UserService);
+
+var _a;
+//# sourceMappingURL=user.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/environments/environment.prod.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+var environment = {
+    production: true,
+    apiUrl: 'http://api.truongkhoa.com/api/'
+};
+//# sourceMappingURL=environment.prod.js.map
+
+/***/ }),
+
 /***/ "../../../flex-layout/flexbox/_module.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

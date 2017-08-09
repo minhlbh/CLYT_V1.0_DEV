@@ -15,14 +15,10 @@ import { Router } from '@angular/router';
     styleUrls: ['./danh-sach-benh.component.css']
 })
 export class DanhSachBenhComponent implements OnInit {
-
-    @Output() showBenh = new EventEmitter<number>();
-
     menu: any;
     iconText: any;
     name: any;
     elements: any;
-
     DsBenh: Benh[];
     TongSoLuong: number;
     startBenh: number;
@@ -37,7 +33,6 @@ export class DanhSachBenhComponent implements OnInit {
     public isSearch = false;
     public page = 1;
     private url: any;
-    private routerUrl: string;
     constructor(
         private benhService: BenhService,
         private router: Router,
@@ -60,15 +55,12 @@ export class DanhSachBenhComponent implements OnInit {
         });
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[0].IconText;
-        // console.log(this.iconText);
         this.name = this.menu[0].items[0].Ten;
-        // const strUrl = (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
-        this.url =  'apps';
-
-        console.log(this.url);
+        this.url = 'apps';
     }
-
+    // search bệnh
     doSearch(text: string) {
+        // no keyword catched => return all
         if (text === '') {
             this.isSearch = false;
             this.benhService.getBenh(1).subscribe(data => {
@@ -77,6 +69,7 @@ export class DanhSachBenhComponent implements OnInit {
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
             });
+            // return search results
         } else {
             this.isSearch = true;
             this.loading = true;
@@ -97,12 +90,12 @@ export class DanhSachBenhComponent implements OnInit {
             }, 1500);
         }
     }
-
-     clickBenh(id) {
-        this.showBenh.emit(id);
+    // navigate to chi-tiet-benh url with id
+    clickBenh(id) {
         this.router.navigate(['tracuubenh/', id]);
     }
 
+    // load more onscroll
     onScroll() {
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
@@ -116,6 +109,13 @@ export class DanhSachBenhComponent implements OnInit {
                 this.startBenh = (this.page - 1) * 50;
                 this.endBenh = this.page * 50;
                 this.loadMore = false;
+                this.loading = true;
+                if (this.endBenh > this.DsBenh.length) {
+                  this.endBenh = this.DsBenh.length;
+                this.loading = false;
+
+                }
+                this.loading = false;
             });
         }
     }

@@ -1,0 +1,48 @@
+<div class="sign-in wr">
+    <button class="bt-close">
+        <span [routerLink] = "['']" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </button>
+    <div class="inner">
+        <div class="logo">
+            <a [routerLink]="['']">
+	         	<img src="{{elements.Logo}}">
+	         	<span>{{elements.ThuongHieu}}</span>
+	         </a>
+        </div>
+        <h3 class="title">Đặt lại mật khẩu</h3>
+        <span _ngcontent-c2="" class="or">
+            Chúng tôi đã gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu mới.
+        </span>
+        <div class="form-group" *ngIf="error != null">
+            <span class="alert-text"> {{error}}
+          </span>
+        </div>
+        <form #f="ngForm">
+            <div class="form-group">
+                <input [formControl]="verifyCode" type="text" placeholder="Nhập mã xác thực">
+            </div>
+            <div class="form-group">
+                <input [formControl]="newPassword" type="password" placeholder="Nhập mật khẩu mới">
+            </div>
+            <div class="form-group">
+                <input [formControl]="confirmPassword" type="password" placeholder="Nhập lại mật khẩu mới">
+            </div>
+        </form>
+        <div class="form-group" *ngIf="!success">
+            <a [routerLink]="['/auth/forgotPass']" class="alert-text">Thiếp lập mật khẩu mới thất bại! Click để quay lại</a>
+        </div>
+
+        <div class="form-group" *ngIf="success">
+            <a [routerLink]="['/auth/signIn']" class="success-text">Thiếp lập mật khẩu mới thành công! Click để về trang đăng nhập</a>
+        </div>
+        <button (click)="changePassword()">Hoàn tất</button>
+        <div class="form-group">
+            <a [routerLink]="['/auth/forgotPass']">
+           Thoát
+         </a>
+        </div>
+
+    </div>
+
+
+</div>

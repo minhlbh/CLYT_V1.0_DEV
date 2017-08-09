@@ -13,20 +13,22 @@ export class LeftMenuComponent implements OnInit {
     // @Output() toggled = new EventEmitter<boolean>();
 
     menuElements: any;
+    settings: any;
     isToggled = false;
     constructor(
         private settingService: SettingService,
         private router: Router
-    ) { }
+    ) {
+        this.menuElements = this.settingService.getMenu();
+        this.settings = this.settingService.getConfig();
+    }
 
     ngOnInit() {
-        this.menuElements = this.settingService.getMenu();
     }
 
     toggledLeft() {
         this.isToggled = !this.isToggled;
         // this.toggled.emit(this.isToggled);
-        console.log(this.isToggled);
     }
 
     // navigation(url: string) {

@@ -1,0 +1,24 @@
+<div class="sign-in wr">
+    <button class="bt-close">
+        <span [routerLink] = "['']" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </button>
+    <div class="inner">
+        <div class="logo">
+            <a [routerLink]="['']">
+	         	<img src="{{elements.Logo}}">
+	         	<span>{{elements.ThuongHieu}}</span>
+	         </a>
+        </div>
+        <h3 class="title">Nhập số điện thoại của bạn</h3>
+
+        <form #f="ngForm" class="form-group">
+            <input [formControl]="phone" type="text" placeholder="Nhập số điện thoại...">
+        </form>
+        <button>Hoàn tất</button>
+        <div class="form-group">
+            <a [routerLink]="['/auth/signIn']">
+           Thoát
+         </a>
+        </div>
+    </div>
+</div>

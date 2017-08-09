@@ -10,7 +10,7 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
     changeDetection: ChangeDetectionStrategy.Default
 })
 export class NavComponent implements OnInit {
-    public menuElements: string;
+    public menuElements: any;
     constructor(private settingService: SettingService) {
         this.menuElements = this.settingService.getConfig();
     }
