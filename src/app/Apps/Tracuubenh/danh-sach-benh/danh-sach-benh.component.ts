@@ -8,7 +8,6 @@ import { FormControl } from '@angular/forms';
 import { SettingService } from '../../../Share/Services/setting.service';
 import { Router } from '@angular/router';
 
-
 @Component({
     selector: 'app-danh-sach-benh',
     templateUrl: './danh-sach-benh.component.html',
