@@ -1,9 +1,10 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
 import { TracuuthuocComponent } from './Tracuuthuoc.component';
 import { DanhSachThuocComponent } from './danh-sach-thuoc/danh-sach-thuoc.component';
-import { Routes, RouterModule } from '@angular/router';
-import { WindowComponent } from '../../Share/Components/window/window.component';
+// import { WindowComponent } from '../../Share/Components/window/window.component';
 
 
 
@@ -22,7 +23,6 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     ],
     declarations: [TracuuthuocComponent,
         DanhSachThuocComponent,
-        WindowComponent
     ]
 })
 export class TracuuthuocModule {

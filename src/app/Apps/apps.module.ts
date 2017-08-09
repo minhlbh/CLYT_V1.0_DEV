@@ -14,6 +14,7 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
 // service
 import { SettingService } from '../Share/Services/setting.service';
+import { WindowComponent } from '../Share/Components/window/window.component';
 
 
 const routing: Routes = [
@@ -41,7 +42,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         LayoutComponent,
         NavComponent,
         EmptyComponent,
-        LeftMenuComponent
+        LeftMenuComponent,
+        WindowComponent
     ],
     providers: [
         SettingService
