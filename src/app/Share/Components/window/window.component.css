@@ -97,10 +97,10 @@
     font-size: 14px;
     background: none;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 26px;
-    height: 26px;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    height: 20px;
     line-height: 23px;
     text-align: center;
     -webkit-transition: all 0.2s ease 0s;
@@ -108,7 +108,7 @@
     -ms-transition: all 0.2s ease 0s;
     -o-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
-    
+
 }
 
 .idea a .icon-idea {
@@ -116,8 +116,9 @@
     font-weight: bold;
 }
 
-.idea a:hover {
-  background: #fff;
+.idea a img {
+    width: 100%;
+    float: left;
 }
 
 .idea a:hover .icon-idea {
