@@ -21,11 +21,7 @@
       "styles": [
         "../node_modules/font-awesome/css/font-awesome.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-<<<<<<< HEAD
         "styles.css"
-=======
-         "styles.css"
->>>>>>> 6d289aab23a5856bfc434d6748938527d4c7ecd9
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
