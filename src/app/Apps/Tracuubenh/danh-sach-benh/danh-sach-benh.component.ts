@@ -21,6 +21,7 @@ export class DanhSachBenhComponent implements OnInit {
     idea: any;
     urlIdea: any;
     idIdea: any;
+// lấy từ benh.service
     DsBenh: Benh[];
     TongSoLuong: number;
     startBenh: number;
@@ -37,6 +38,7 @@ export class DanhSachBenhComponent implements OnInit {
     public page = 1;
     public url: any;
     constructor(
+        // nhớ khai báo service
         private benhService: BenhService,
         private router: Router,
         private activedroute: ActivatedRoute,
@@ -51,6 +53,7 @@ export class DanhSachBenhComponent implements OnInit {
     }
 
     ngOnInit() {
+        // Hàm lấy dữ liệu bệnh
         this.benhService.getBenh(1).subscribe(data => {
             this.DsBenh = data.DsBenh;
             this.TongSoLuong = data.TongSoLuong;
