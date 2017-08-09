@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuuthuoc/Tracuuthuoc.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fxs-blade-content-container\">\n    <div class=\"fxs-block\">\n        <app-danh-sach-thuoc>\n        </app-danh-sach-thuoc>\n    </div>\n\n<a></a>\n\n</div>\n"
+module.exports = "<div class=\"fxs-blade-content-container\">\r\n    <div class=\"fxs-block\">\r\n        <app-danh-sach-thuoc>\r\n        </app-danh-sach-thuoc>\r\n    </div>\r\n\r\n<a></a>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -146,7 +146,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuuthuoc/danh-sach-thuoc/danh-sach-thuoc.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [name]=\"name\" [icon]=\" iconText \" >\n   <h1> </h1>\n</app-window>\n"
+module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [name]=\"name\" [icon]=\" iconText \" [idIdea] = \"idIdea\" >\r\n   <h1> </h1>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -181,6 +181,7 @@ var DanhSachThuocComponent = (function () {
         this.menu = this.settingService.getMenu();
         this.iconText = this.menu[0].items[1].IconText;
         this.name = this.menu[0].items[1].Ten;
+        this.idIdea = this.menu[0].items[1].Id;
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
