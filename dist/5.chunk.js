@@ -157,6 +157,7 @@ module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [name]=\"nam
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Share_Services_thuoc_service__ = __webpack_require__("../../../../../src/app/Share/Services/thuoc.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DanhSachThuocComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -170,12 +171,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DanhSachThuocComponent = (function () {
-    function DanhSachThuocComponent(router, settingService) {
+    function DanhSachThuocComponent(router, settingService, ThuocService) {
         this.router = router;
         this.settingService = settingService;
+        this.ThuocService = ThuocService;
     }
     DanhSachThuocComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
         this.menu = this.settingService.getMenu();
@@ -185,6 +189,12 @@ var DanhSachThuocComponent = (function () {
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
+        this.ThuocService.getThuoc(1).subscribe(function (data) {
+            _this.DsThuoc = data.DsThuoc;
+            _this.TongSoLuong = data.TongSoLuong;
+            _this.startBenh = 0;
+            _this.endBenh = 50;
+        });
     };
     return DanhSachThuocComponent;
 }());
@@ -194,11 +204,66 @@ DanhSachThuocComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuuthuoc/danh-sach-thuoc/danh-sach-thuoc.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuuthuoc/danh-sach-thuoc/danh-sach-thuoc.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__Share_Services_thuoc_service__["a" /* ThuocService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__Share_Services_thuoc_service__["a" /* ThuocService */]) === "function" && _c || Object])
 ], DanhSachThuocComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=danh-sach-thuoc.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Services/thuoc.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment_prod__ = __webpack_require__("../../../../../src/environments/environment.prod.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThuocService; });
+/* unused harmony export Thuoc */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ThuocService = (function () {
+    function ThuocService(http) {
+        this.http = http;
+        this.thuocUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment_prod__["a" /* environment */].apiUrl + "/CSDLYT/Thuoc_List";
+    }
+    ThuocService.prototype.getThuoc = function (page) {
+        // ...using get request
+        return this.http.get(this.thuocUrl + "?Trang=" + page + "&soluongmoitrang=50")
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    return ThuocService;
+}());
+ThuocService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], ThuocService);
+
+var Thuoc = (function () {
+    function Thuoc(id, Name) {
+        this.id = id;
+        this.Name = Name;
+    }
+    return Thuoc;
+}());
+
+var _a;
+//# sourceMappingURL=thuoc.service.js.map
 
 /***/ })
 
