@@ -23,6 +23,14 @@ export class Thuoc {
     constructor(
         public id: number,
         public Name: string,
+        public Hang: string,
+        public Nuoc: string,
+        public DongGoi: string,
+        public HoatChat: string,
+        public DuongDung: string,
+        public HamLuong: string,
+
+
 
     ) { }
 
