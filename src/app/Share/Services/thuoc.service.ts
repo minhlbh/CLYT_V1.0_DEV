@@ -30,6 +30,7 @@ export class Thuoc {
         public HoatChat: string,
         public DuongDung: string,
         public HamLuong: string,
+        public TongSoLuong: number,
 
 
 

@@ -8,10 +8,11 @@
 
         <!-- đếm số thuốc -->
         <div style="padding: 5px 0 0 0;">
-            <span style="font-size: 11px; color: #fff; float: right;">
-                {{ endThuoc }}/{{TongSoLuong}} thuốc
+            <span style="font-size: 11px; color: #888; float: right;">
+                {{ endThuoc }}/{{ TongSoLuong }} thuốc
                 </span>
         </div>
+
 
         <hr class="thin bg-grayLighter">
     </div>
@@ -44,9 +45,8 @@
         <div class="drugs-list">
             <div *ngIf="!empty">
 
-                <a *ngFor="let thuoc of DsThuoc">
+                <a *ngFor="let thuoc of DsThuoc" class="row-l">
 
-                    <div href="#" class="row-l">
 
                         <div class="col w25">
                             <span class="title">{{thuoc.Name}}</span>
@@ -76,7 +76,6 @@
                             <span class="title">{{thuoc.HamLuong}}</span>
                         </div>
 
-                    </div>
                 </a>
             </div>
         </div>

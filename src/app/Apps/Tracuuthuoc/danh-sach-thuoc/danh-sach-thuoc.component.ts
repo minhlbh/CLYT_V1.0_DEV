@@ -35,9 +35,10 @@ export class DanhSachThuocComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        // Hàm lấy dữ liệu thuốc
         this.thuocService.getThuoc(1).subscribe(data => {
             this.DsThuoc = data.DsThuoc.DsThuoc;
-            this.TongSoLuong = data.TongSoLuong;
+            this.TongSoLuong = data.DsThuoc.TongSoLuong;
             this.startThuoc = 0;
             this.endThuoc = 50;
         });
