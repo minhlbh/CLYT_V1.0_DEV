@@ -91,7 +91,7 @@ export class DanhSachThuocComponent implements OnInit {
         if (text === '') {
             this.isSearch = false;
             this.thuocService.getThuoc(1).subscribe(data => {
-                this.DsThuoc = data.DsThuoc;
+                this.DsThuoc = data.DsThuoc.DsThuoc;
                 this.TongSoLuong = data.TongSoLuong;
                 this.startThuoc = (this.page - 1) * 50;
                 this.endThuoc = this.page * 50;
