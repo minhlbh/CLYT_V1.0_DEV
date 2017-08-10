@@ -57,7 +57,7 @@
     height: calc(100vh - 85px);
     float: left;
     padding: 63px 20px 20px 20px;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 .drugs-list {

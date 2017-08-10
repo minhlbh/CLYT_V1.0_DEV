@@ -40,43 +40,45 @@
                 Hàm lượng
             </div>
         </div>
-        <div *ngIf="!empty">
-            <a *ngFor="let thuoc of DsThuoc">
-            <div class="drugs-list">
-                <div href="#" class="row-l">
+
+        <div class="drugs-list">
+            <div *ngIf="!empty">
+
+                <a *ngFor="let thuoc of DsThuoc">
+
+                    <div href="#" class="row-l">
 
                         <div class="col w25">
-                <span class="title" >{{thuoc.Name}}</span>
-
-
+                            <span class="title">{{thuoc.Name}}</span>
                         </div>
 
-                <div class="col w20">
-                    <span class="title">{{thuoc.Hang}}</span>
-                </div>
+                        <div class="col w20">
+                            <span class="title">{{thuoc.Hang}}</span>
+                        </div>
 
-                <div class="col w10">
-                    <span class="title">{{thuoc.Nuoc}}</span>
-                </div>
+                        <div class="col w10">
+                            <span class="title">{{thuoc.Nuoc}}</span>
+                        </div>
 
-                <div class="col w10">
-                    <span class="title">{{thuoc.DongGoi}}</span>
-                </div>
+                        <div class="col w10">
+                            <span class="title">{{thuoc.DongGoi}}</span>
+                        </div>
 
-                <div class="col w15">
-                    <span class="title">{{thuoc.HoatChat}}</span>
-                </div>
+                        <div class="col w15">
+                            <span class="title">{{thuoc.HoatChat}}</span>
+                        </div>
 
-                <div class="col w10">
-                    <span class="title">{{thuoc.DuongDung}}</span>
-                </div>
+                        <div class="col w10">
+                            <span class="title">{{thuoc.DuongDung}}</span>
+                        </div>
 
-                <div class="col w10">
-                    <span class="title">{{thuoc.HamLuong}}</span>
-                </div>
+                        <div class="col w10">
+                            <span class="title">{{thuoc.HamLuong}}</span>
+                        </div>
 
+                    </div>
+                </a>
             </div>
-            </div></a>
         </div>
     </div>
 </app-window>
