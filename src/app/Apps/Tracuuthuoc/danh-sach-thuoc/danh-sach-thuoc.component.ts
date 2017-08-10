@@ -64,6 +64,8 @@ export class DanhSachThuocComponent implements OnInit {
         this.thuocService.getThuoc(1).subscribe(data => {
             this.DsThuoc = data.DsThuoc.DsThuoc;
             this.TongSoLuong = data.DsThuoc.TongSoLuong;
+            console.log(data.TongSoLuong);
+
             this.startThuoc = 0;
             this.endThuoc = 50;
         });
@@ -103,7 +105,7 @@ export class DanhSachThuocComponent implements OnInit {
                 this.thuocService.getSearchThuoc(text).subscribe(data => {
                     console.log(data);
                     this.DsThuoc = data.DsThuoc.DsThuoc;
-                    this.TongSoLuong = data.TongSoLuong;
+                    this.TongSoLuong = data.DsThuoc.TongSoLuong;
                     this.startThuoc = 0;
                     this.endThuoc = data.TongSoLuong;
                     if (this.DsThuoc.length === 0 && this.TongSoLuong === 0) {
