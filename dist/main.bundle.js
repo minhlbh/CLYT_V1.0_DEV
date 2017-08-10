@@ -174,8 +174,7 @@ var SettingService = (function () {
     }
     SettingService.prototype.getFirstConfig = function () {
         // ...using get request
-        // return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`)
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "Center/Home_Detail?i=0&tenmien=chandoan.com")
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "Center/Home_Detail?i=0&tenmien=" + document.location.hostname)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
     };
