@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { SettingService } from '../../../Share/Services/setting.service';
-import { Router } from '@angular/router';
 import { WindowComponent } from '../../../Share/Components/window/window.component';
+import { Thuoc, ThuocService, } from '../../../Share/Services/thuoc.service';
+
+
 
 
 @Component({
@@ -16,14 +20,24 @@ export class DanhSachThuocComponent implements OnInit {
     idIdea: any;
     iconText: any;
     name: any;
+    DsThuoc: Thuoc[];
+    TongSoLuong: number;
+
     public url: any;
+
 
     constructor(
         private router: Router,
-        private settingService: SettingService
+        private settingService: SettingService,
+        private thuocService: ThuocService,
     ) { }
 
     ngOnInit() {
+        this.thuocService.getThuoc(1).subscribe(data => {
+            this.DsThuoc = data.DsThuoc.DsThuoc;
+            console.log(this.DsThuoc);
+            this.TongSoLuong = data.TongSoLuong;
+        });
         this.idea = true;
         this.urlIdea = 'tracuuthuoc';
         this.menu = this.settingService.getMenu();
@@ -42,5 +56,5 @@ export class DanhSachThuocComponent implements OnInit {
 
 
     }
-
 }
+

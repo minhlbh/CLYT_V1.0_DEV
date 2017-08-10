@@ -1,7 +1,13 @@
+.fxs-block.drug-lookup {
+    width: calc(90vw - 229px);
+    min-width: 900px;
+}
+
 @media only screen and (max-width: 768px) {
     .fxs-block {
     width: 100%;
     }
+    
 }
 
 

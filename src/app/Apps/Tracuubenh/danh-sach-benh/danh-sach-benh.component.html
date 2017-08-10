@@ -1,5 +1,5 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText"[idea]="true" [idIdea] = "idIdea" [urlIdea]="urlIdea" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']" >
+<app-window [icon]="iconText" [idea]="true" [idIdea]="idIdea" [urlIdea]="urlIdea" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']">
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
@@ -11,8 +11,8 @@
             <!-- đếm số bệnh -->
             <div style="padding: 5px 0 0 0;">
                 <span style="font-size: 11px; color: #888; float: right;">
-          {{endBenh}}/{{TongSoLuong}} bệnh
-        </span>
+                {{endBenh}}/{{TongSoLuong}} bệnh
+                </span>
             </div>
 
             <hr class="thin bg-grayLighter">
@@ -36,7 +36,7 @@
                     <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
                     </a>
-                <!-- <a *ngIf="scrollLoading"><img src="assets/66.gif"></a> -->
+                    <!-- <a *ngIf="scrollLoading"><img src="assets/66.gif"></a> -->
                 </div>
             </li>
         </ul>
