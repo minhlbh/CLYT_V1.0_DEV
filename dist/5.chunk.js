@@ -261,7 +261,7 @@ var DanhSachThuocComponent = (function () {
             this.isSearch = false;
             this.thuocService.getThuoc(1).subscribe(function (data) {
                 _this.DsThuoc = data.DsThuoc.DsThuoc;
-                _this.TongSoLuong = data.TongSoLuong;
+                _this.TongSoLuong = data.DsThuoc.TongSoLuong;
                 _this.startThuoc = (_this.page - 1) * 50;
                 _this.endThuoc = _this.page * 50;
             });

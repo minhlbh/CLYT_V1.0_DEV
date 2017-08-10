@@ -1,8 +1,8 @@
 .col-right {
     height: 100%;
-    width: 340px;
+    width: 350px;
     padding:0 0 40px 0;
-    margin:0 25px 25px 25px;
+    margin:0 20px 20px 20px;
     float: left;
     position: absolute;
     top: 0;
@@ -76,4 +76,8 @@
     height:100%;
     float:left;
     overflow:auto;
+}
+
+.forum-fb  .fb_iframe_widget iframe {
+    width: 100% !important;
 }
