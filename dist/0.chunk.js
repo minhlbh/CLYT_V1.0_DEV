@@ -151,6 +151,7 @@ var _a, _b, _c, _d;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+/* unused harmony export SocialLogin */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -237,12 +238,37 @@ var UserService = (function () {
     UserService.prototype.refreshToken = function () {
         return localStorage.setItem('auth', null);
     };
+    // social login
+    UserService.prototype.checkLoginFacebook = function (_acc) {
+        // tslint:disable-next-line:prefer-const
+        var body = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["g" /* URLSearchParams */]();
+        body.set('id', _acc.id);
+        body.set('email', _acc.email);
+        body.set('token', _acc.token);
+        return this.http.post(this.baseUrl + "Account/CheckFacebookLogin", body).map(function (response) { return response.json(); });
+    };
+    // get set localStorage social login
+    UserService.prototype.set_UserInfoFB = function (data) {
+        localStorage.setItem('_fbData', JSON.stringify(data));
+    };
+    UserService.prototype.get_UserInfoFB = function () {
+        return localStorage.getItem('_fbData') ? localStorage.getItem('_fbData') : null;
+    };
     return UserService;
 }());
 UserService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], UserService);
+
+var SocialLogin = (function () {
+    function SocialLogin(id, email, token) {
+        this.id = id;
+        this.email = email;
+        this.token = token;
+    }
+    return SocialLogin;
+}());
 
 var _a;
 //# sourceMappingURL=user.service.js.map

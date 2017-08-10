@@ -90,6 +90,30 @@ export class UserService {
 
 
     // social login
+    checkLoginFacebook(_acc: SocialLogin) {
+        // tslint:disable-next-line:prefer-const
+        let body = new URLSearchParams();
+        body.set('id', _acc.id);
+        body.set('email', _acc.email);
+        body.set('token', _acc.token);
+        return this.http.post(`${this.baseUrl}Account/CheckFacebookLogin`, body).map((response: Response) => response.json());
+    }
 
+
+
+    // get set localStorage social login
+    set_UserInfoFB(data) {
+        localStorage.setItem('_fbData', JSON.stringify(data));
+    }
+    get_UserInfoFB() {
+        return localStorage.getItem('_fbData') ? localStorage.getItem('_fbData') : null;
+    }
+}
+export class SocialLogin {
+    constructor(
+        public id: string,
+        public email: string,
+        public token: string,
+    ) { }
 
 }

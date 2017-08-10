@@ -124,7 +124,8 @@ var providers = {
         // client secret: jQN-Mm7lJw78IrM6HTnYahxs
     },
     'facebook': {
-        'clientId': '123454808277990',
+        // 'clientId': '123454808277990',
+        'clientId': '1914775922118244',
         'apiVersion': 'v2.10'
     }
 };
@@ -597,24 +598,44 @@ var SignInComponent = (function () {
         this.username = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
         this.password = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
         this.elements = this.settingService.getConfig();
+        this.user = {
+            token: '',
+            id: '',
+            email: ''
+        };
     }
     SignInComponent.prototype.ngOnInit = function () {
-        this.socialLogin = false;
     };
     // login social network
     SignInComponent.prototype.signIn = function (provider) {
         var _this = this;
         this.sub = this._auth.login(provider).subscribe(function (data) {
-            console.log(data);
-            _this.user = data;
-            if (_this.user !== null) {
-                _this.socialLogin = true;
-                _this.router.navigate(['auth/phone']);
-            }
-            else {
-                _this.socialLogin = false;
-            }
+            // tslint:disable-next-line:prefer-const
+            var _fbdata = JSON.parse(JSON.stringify(data));
+            console.log(_fbdata);
+            _this.user.email = _fbdata.email;
+            _this.user.id = _fbdata.uid;
+            _this.user.token = _fbdata.token;
+            _this.userService.checkLoginFacebook(_this.user).subscribe(function (dataReturn) {
+                console.log(dataReturn.access_token);
+                _this.userService.setAuthToken(dataReturn.access_token);
+                _this.userService.setTokenType(dataReturn.token_type);
+                _this.userService.setAuth(dataReturn);
+                _this.router.navigate(['apps']);
+            }, function (err) {
+                console.log(err.json());
+                if (err.json() === 'Email chưa được dùng đăng kí tài khoản nào!') {
+                    _this.userService.set_UserInfoFB(_this.user);
+                    _this.router.navigate(['apps']);
+                }
+            });
         });
+        // if (this.user !== null) {
+        //     this.socialLogin = true;
+        //     this.router.navigate(['auth/phone']);
+        // } else {
+        //     this.socialLogin = false;
+        // }
     };
     // login function
     SignInComponent.prototype.onLoginSubmit = function () {
