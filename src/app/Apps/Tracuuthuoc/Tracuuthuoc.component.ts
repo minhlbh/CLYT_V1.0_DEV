@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { SettingService } from '../../Share/Services/setting.service';
 
 @Component({
-  selector: 'app-Tracuuthuoc',
-  templateUrl: './Tracuuthuoc.component.html',
-  styleUrls: ['./Tracuuthuoc.component.css']
+    // tslint:disable-next-line:component-selector
+    selector: 'app-Tracuuthuoc',
+    templateUrl: './Tracuuthuoc.component.html',
+    styleUrls: ['./Tracuuthuoc.component.css']
 })
 export class TracuuthuocComponent implements OnInit {
 
-  constructor() { }
+    constructor(
+        private settingService: SettingService,
+        private router: Router,
+        private activatedroute: ActivatedRoute) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

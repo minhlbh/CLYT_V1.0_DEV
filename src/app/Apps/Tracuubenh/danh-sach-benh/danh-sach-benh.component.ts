@@ -6,8 +6,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { FormControl } from '@angular/forms';
 import { SettingService } from '../../../Share/Services/setting.service';
-import { Router } from '@angular/router';
-
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
     selector: 'app-danh-sach-benh',
@@ -19,6 +18,10 @@ export class DanhSachBenhComponent implements OnInit {
     iconText: any;
     name: any;
     elements: any;
+    idea: any;
+    urlIdea: any;
+    idIdea: any;
+// lấy từ benh.service
     DsBenh: Benh[];
     TongSoLuong: number;
     startBenh: number;
@@ -33,10 +36,12 @@ export class DanhSachBenhComponent implements OnInit {
     public loadMore = false;
     public isSearch = false;
     public page = 1;
-    private url: any;
+    public url: any;
     constructor(
+        // nhớ khai báo service
         private benhService: BenhService,
         private router: Router,
+        private activedroute: ActivatedRoute,
         private settingService: SettingService
     ) {
         this.searchKey.valueChanges
@@ -48,6 +53,7 @@ export class DanhSachBenhComponent implements OnInit {
     }
 
     ngOnInit() {
+        // Hàm lấy dữ liệu bệnh
         this.benhService.getBenh(1).subscribe(data => {
             this.DsBenh = data.DsBenh;
             this.TongSoLuong = data.TongSoLuong;
@@ -55,9 +61,18 @@ export class DanhSachBenhComponent implements OnInit {
             this.endBenh = 50;
         });
         this.menu = this.settingService.getMenu();
-        this.iconText = this.menu[0].items[0].IconText;
-        this.name = this.menu[0].items[0].Ten;
+        for (let i = 0; i < this.menu.length; i++) {
+            for (let x = 0; x < this.menu[i].items.length; x++) {
+                if (this.menu[i].items[x].url === 'tracuubenh' ) {
+                    this.name = this.menu[i].items[x].Ten;
+                    this.iconText = this.menu[i].items[x].IconText;
+                    this.idIdea = this.menu[i].items[x].Id;
+                }
+            }
+        }
         this.url = 'apps';
+        this.idea = true ;
+        this.urlIdea = 'tracuubenh';
     }
     // search bệnh
     doSearch(text: string) {
