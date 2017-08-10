@@ -169,7 +169,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuuthuoc/danh-sach-thuoc/danh-sach-thuoc.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [url]=\"url\" [name]=\"name\" [icon]=\" iconText \" [idIdea]=\"idIdea\">\r\n    <!-- searchbox -->\r\n    <div class=\"search-box-top\">\r\n        <div class=\"input-control text full-size\" data-role=\"input\">\r\n            <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n            <input type=\"text\" placeholder=\"Nhập tên thuốc...\" [formControl]=\"searchKey\">\r\n        </div>\r\n\r\n        <!-- đếm số thuốc -->\r\n        <div style=\"padding: 5px 0 0 0;\">\r\n            <span style=\"font-size: 11px; color: #888; float: right;\">\r\n                {{ startThuoc }}/{{ TongSoLuong }} thuốc\r\n                </span>\r\n        </div>\r\n\r\n\r\n\r\n\r\n        <hr class=\"thin bg-grayLighter\">\r\n    </div>\r\n    <!-- Danh sách thuốc -->\r\n    <div class=\"drugs-list-wr\">\r\n        <div class=\"row-l head\">\r\n            <div class=\"col w25\">\r\n                Tên\r\n            </div>\r\n            <div class=\"col w20\">\r\n                Hãng\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Nước\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Đóng gói\r\n            </div>\r\n            <div class=\"col w15\">\r\n                Hoạt chất\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Đường dùng\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Hàm lượng\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"drugs-list\">\r\n            <div *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n\r\n                    <a *ngFor=\"let thuoc of DsThuoc\" class=\"row-l\">\r\n\r\n\r\n                        <div class=\"col w25\">\r\n                            <span class=\"title\">{{thuoc.Name}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w20\">\r\n                            <span class=\"title\">{{thuoc.Hang}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.Nuoc}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.DongGoi}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w15\">\r\n                            <span class=\"title\">{{thuoc.HoatChat}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.DuongDung}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.HamLuong}}</span>\r\n                        </div>\r\n\r\n                    </a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</app-window>\r\n"
+module.exports = "<app-window [idea]=\"idea\" [urlIdea]=\"urlIdea\" [url]=\"url\" [name]=\"name\" [icon]=\" iconText \" [idIdea]=\"idIdea\">\r\n    <!-- searchbox -->\r\n    <div class=\"search-box-top\">\r\n        <div class=\"input-control text full-size\" data-role=\"input\">\r\n            <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n            <input type=\"text\" placeholder=\"Nhập tên thuốc...\" [formControl]=\"searchKey\">\r\n        </div>\r\n\r\n        <!-- đếm số thuốc -->\r\n        <div style=\"padding: 5px 0 0 0;\">\r\n            <span style=\"font-size: 11px; color: #888; float: right;\">\r\n                {{ startThuoc }}/{{ TongSoLuong }} thuốc\r\n                </span>\r\n        </div>\r\n\r\n\r\n\r\n\r\n        <hr class=\"thin bg-grayLighter\">\r\n    </div>\r\n\r\n\r\n    <!-- list thuốc -->\r\n\r\n    <div class=\"drugs-list-wr\">\r\n        <div class=\"row-l head\">\r\n            <div class=\"col w25\">\r\n                Tên\r\n            </div>\r\n            <div class=\"col w20\">\r\n                Hãng\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Nước\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Đóng gói\r\n            </div>\r\n            <div class=\"col w15\">\r\n                Hoạt chất\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Đường dùng\r\n            </div>\r\n            <div class=\"col w10\">\r\n                Hàm lượng\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n\r\n\r\n        <div class=\"drugs-list\" >\r\n            <div  class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"1\" [infiniteScrollThrottle]=\"200\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <div *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n\r\n                <div *ngIf=\"!empty\" >\r\n\r\n                    <a *ngFor=\"let thuoc of DsThuoc\" class=\"row-l\">\r\n\r\n\r\n                        <div class=\"col w25\">\r\n                            <span class=\"title\">{{thuoc.Name}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w20\">\r\n                            <span class=\"title\">{{thuoc.Hang}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.Nuoc}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.DongGoi}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w15\">\r\n                            <span class=\"title\">{{thuoc.HoatChat}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.DuongDung}}</span>\r\n                        </div>\r\n\r\n                        <div class=\"col w10\">\r\n                            <span class=\"title\">{{thuoc.HamLuong}}</span>\r\n                        </div>\r\n\r\n                    </a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        </div>\r\n        </div>\r\n</app-window>\r\n"
 
 /***/ }),
 
@@ -235,7 +235,6 @@ var DanhSachThuocComponent = (function () {
         this.thuocService.getThuoc(1).subscribe(function (data) {
             _this.DsThuoc = data.DsThuoc.DsThuoc;
             _this.TongSoLuong = data.DsThuoc.TongSoLuong;
-            console.log(data.TongSoLuong);
             _this.startThuoc = 0;
             _this.endThuoc = 50;
         });
@@ -292,6 +291,33 @@ var DanhSachThuocComponent = (function () {
     // navigate to chi-tiet-thuoc url with id
     DanhSachThuocComponent.prototype.clickThuoc = function (id) {
         this.router.navigate(['tracuuthuoc/', id]);
+    };
+    // load more onscroll
+    DanhSachThuocComponent.prototype.onScroll = function () {
+        var _this = this;
+        this.scrollLoading = true;
+        if (this.isSearch || this.page > this.TongSoLuong / 50) {
+            return;
+        }
+        else {
+            this.loadMore = true;
+            this.page++;
+            this.thuocService.getThuoc(this.page).subscribe(function (data) {
+                for (var i = 0; i < data.DsThuoc.length; i++) {
+                    _this.DsThuoc.push(data.DsThuoc[i]);
+                }
+                _this.endBenh = _this.page * 50;
+                _this.loadMore = false;
+                _this.loading = false;
+                if (_this.endThuoc > _this.DsThuoc.length) {
+                    _this.endThuoc = _this.DsThuoc.length;
+                }
+            });
+        }
+        if (this.endThuoc === this.DsThuoc.length) {
+            this.scrollLoading = false;
+        }
+        console.log(this.scrollLoading);
     };
     return DanhSachThuocComponent;
 }());

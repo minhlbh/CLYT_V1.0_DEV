@@ -64,7 +64,6 @@ export class DanhSachThuocComponent implements OnInit {
         this.thuocService.getThuoc(1).subscribe(data => {
             this.DsThuoc = data.DsThuoc.DsThuoc;
             this.TongSoLuong = data.DsThuoc.TongSoLuong;
-            console.log(data.TongSoLuong);
 
             this.startThuoc = 0;
             this.endThuoc = 50;
@@ -121,6 +120,39 @@ export class DanhSachThuocComponent implements OnInit {
     // navigate to chi-tiet-thuoc url with id
     clickThuoc(id) {
         this.router.navigate(['tracuuthuoc/', id]);
+
+    }
+    // load more onscroll
+    onScroll() {
+        this.scrollLoading = true;
+
+        if (this.isSearch || this.page > this.TongSoLuong / 50) {
+            return;
+        } else {
+            this.loadMore = true;
+            this.page++;
+            this.thuocService.getThuoc(this.page).subscribe(data => {
+                for (let i = 0; i < data.DsThuoc.length; i++) {
+                    this.DsThuoc.push(data.DsThuoc[i]);
+
+                }
+                this.endBenh = this.page * 50;
+                this.loadMore = false;
+                this.loading = false;
+                if (this.endThuoc > this.DsThuoc.length) {
+                    this.endThuoc = this.DsThuoc.length;
+
+                }
+
+            });
+
+
+
+        }
+        if (this.endThuoc === this.DsThuoc.length) {
+            this.scrollLoading = false;
+        }
+        console.log(this.scrollLoading);
 
     }
 

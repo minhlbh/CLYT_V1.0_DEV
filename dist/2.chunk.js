@@ -717,7 +717,6 @@ var DanhSachBenhComponent = (function () {
     DanhSachBenhComponent.prototype.onScroll = function () {
         var _this = this;
         this.scrollLoading = true;
-        console.log(this.scrollLoading);
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
         }
