@@ -384,7 +384,7 @@
 }
 
 .m-item:nth-child(n+3) {
-    border-left-color: #919999;
+    border-left-color: #A80000;
 }
 
 .m-item:nth-child(n+4) {
@@ -396,7 +396,7 @@
 }
 
 .m-item:nth-child(n+6) {
-    border-left-color: #919999;
+    border-left-color: #A80000;
 }
 
 .m-item:nth-child(n+7) {
@@ -434,6 +434,8 @@
     background: #fff;
     width: 100%;
     float: left;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .m-categories .m-item:last-child {
@@ -488,13 +490,13 @@
 }
 
 .input-control.mb-home {
-    min-height: 34px;
     height: 35px;
     display: block;
     vertical-align: middle;
     margin: 0 0 0 10px;
     position: relative;
     flex-basis: calc(100% - 100px);
+    background: #fff;
 }
 
 .input-control.mb-home .icon-search {
@@ -511,10 +513,11 @@
 }
 
 .input-control.mb-home input {
-    padding: 9px 10px 9px 30px;
+    margin: 5px 0 5px 0;
+    padding: 0 10px 0 30px;
     border: none;
-    height: 35px;
-    line-height: 35px;
+    height: 25px;
+    line-height: 25px;
     width: 100%;
     color: #323232;
 }

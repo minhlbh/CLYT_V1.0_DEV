@@ -67,6 +67,7 @@
 .list-services {
     height: 100%;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     float: left;
     width: 100%;
 }
