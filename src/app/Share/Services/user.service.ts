@@ -89,7 +89,7 @@ export class UserService {
     }
 
 
-    // get & set user for social login
+    // social login
 
 
 }

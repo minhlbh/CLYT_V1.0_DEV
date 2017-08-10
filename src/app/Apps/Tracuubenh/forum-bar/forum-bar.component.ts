@@ -1,3 +1,4 @@
+import {ActivatedRoute} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 // services
@@ -15,8 +16,10 @@ import { BaiViet } from '../../../Share/Services/forum.service';
 })
 export class ForumBarComponent implements OnInit {
     forumBarContent: BaiViet[];
-
-    constructor(private forumService: ForumService,
+    idBenh: any;
+    constructor(
+        private forumService: ForumService,
+        private activedroute: ActivatedRoute,
         private fb: FacebookService
     ) {
         // tslint:disable-next-line:prefer-const
@@ -27,6 +30,9 @@ export class ForumBarComponent implements OnInit {
         };
 
         fb.init(initParams);
+        this.activedroute.params.subscribe(pars => {
+            this.idBenh = pars['id'];
+        });
     }
 
     ngOnInit() {
