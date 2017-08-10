@@ -103,17 +103,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_sharebuttons__ = __webpack_require__("../../../../ngx-sharebuttons/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_responsive__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__danh_sach_benh_danh_sach_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__chi_tiet_benh_chi_tiet_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Share_Components_share_module__ = __webpack_require__("../../../../../src/app/Share/Components/share.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Tracuubenh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__danh_sach_benh_danh_sach_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__chi_tiet_benh_chi_tiet_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__forum_bar_forum_bar_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Share_Components_share_module__ = __webpack_require__("../../../../../src/app/Share/Components/share.module.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TracuubenhModule", function() { return TracuubenhModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -122,6 +123,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 // module
+
 
 
 
@@ -145,8 +147,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routing = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] },
-    { path: ':id', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_9__Tracuubenh_component__["a" /* TracuubenhComponent */] },
+    { path: ':id', component: __WEBPACK_IMPORTED_MODULE_9__Tracuubenh_component__["a" /* TracuubenhComponent */] },
 ];
 var Routing = __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forChild(routing);
 var TracuubenhModule = (function () {
@@ -163,24 +165,25 @@ TracuubenhModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_7_ng2_responsive__["ResponsiveModule"],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_8_ngx_facebook__["a" /* FacebookModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_6_ngx_sharebuttons__["a" /* ShareButtonsModule */].forRoot(),
             Routing,
-            __WEBPACK_IMPORTED_MODULE_18__Share_Components_share_module__["a" /* ShareModule */]
+            __WEBPACK_IMPORTED_MODULE_19__Share_Components_share_module__["a" /* ShareModule */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__danh_sach_benh_danh_sach_benh_component__["a" /* DanhSachBenhComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__chi_tiet_benh_chi_tiet_benh_component__["a" /* ChiTietBenhComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__Tracuubenh_component__["a" /* TracuubenhComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__danh_sach_benh_danh_sach_benh_component__["a" /* DanhSachBenhComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__chi_tiet_benh_chi_tiet_benh_component__["a" /* ChiTietBenhComponent */],
             // WindowComponent,
-            __WEBPACK_IMPORTED_MODULE_12__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__["a" /* LoadDuLieuImgComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__["a" /* LoadDuLieuTextComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__["a" /* LoadDuLieuLinkComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__["a" /* LoadDuLieuYoutubeComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__["a" /* ForumBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__["a" /* LoadDuLieuImgComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__["a" /* LoadDuLieuTextComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__["a" /* LoadDuLieuLinkComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__["a" /* LoadDuLieuYoutubeComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__forum_bar_forum_bar_component__["a" /* ForumBarComponent */],
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_16__Share_Services_benh_service__["a" /* BenhService */],
-            __WEBPACK_IMPORTED_MODULE_17__Share_Services_forum_service__["a" /* ForumService */]
+            __WEBPACK_IMPORTED_MODULE_17__Share_Services_benh_service__["a" /* BenhService */],
+            __WEBPACK_IMPORTED_MODULE_18__Share_Services_forum_service__["a" /* ForumService */]
         ]
     })
 ], TracuubenhModule);
@@ -479,7 +482,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n.content-box {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    padding-bottom: 40px;\r\n    background: #fff;\r\n}\r\n\r\n.title-col {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 30px;\r\n}\r\n\r\n.title-col .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 9px 0 0 0;\r\n  line-height: 13px;\r\n}\r\n\r\n.title-col .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n.content-wr {\r\n    position: relative;\r\n    height: calc(100vh - 85px);\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    background: #fff;\r\n}\r\n\r\n.content-left {\r\n  float: left;\r\n  width: 100%;\r\n  position: relative;\r\n  padding: 34px 25px 25px 25px;\r\n  height: 100%;\r\n  overflow: auto;\r\n  border-right: 1px solid #ccc;\r\n}\r\n\r\n\r\n.content-header {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n}\r\n\r\n.content-box h1.text-light.title-top {\r\n    margin-top: 50px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.content-box h1.text-light {\r\n    padding: 0 30px;\r\n    margin: 30px 0;\r\n}\r\n\r\n.content-left .thin.bg-grayLighter {\r\n    margin:0;\r\n}\r\n\r\n\r\n.content-header hr {\r\n    margin: 0 30px;\r\n}\r\n\r\n.bg-grayLighter {\r\n    background-color: #eeeeee !important;\r\n}\r\n\r\n.content-box-main {\r\n    overflow: auto;\r\n    height: 100%;\r\n    margin: 0;\r\n}\r\n\r\n.dl-horizontal {\r\n    font-size: 14px;\r\n    margin: 20px 0;\r\n}\r\n\r\n.dl-horizontal dt {\r\n  font-weight: 600;\r\n}\r\n\r\n.content-box h2.text-light {\r\n    padding: 10px 0 0;\r\n}\r\n\r\n.content-box p {\r\n    padding: 20px 0;\r\n    line-height: 22px;\r\n    font-size: 16 px;\r\n}\r\n\r\n.content-box .img-wr {\r\n    padding: 20px 0;\r\n}\r\n\r\n.bt-bar {\r\n    border-bottom: 1px solid #eee;\r\n    width: 100%;\r\n    float: left;\r\n    padding: 0 25px;\r\n}\r\n\r\n.bt-bar .bt-features:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.bt-bar .bt-features .icon {\r\n    font-size: 18px;\r\n    position: absolute;\r\n    top: 7px;\r\n    left: 10px;\r\n}\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n.bt-close {\r\n  background: none;\r\n  position: absolute;\r\n  top:0;\r\n  right:0;\r\n  padding: 3px 6px;\r\n  border: none;\r\n  box-shadow: none;\r\n  transition: all 0.3s ease 0s;\r\n}\r\n\r\n.bt-close:hover {\r\n  background: #ce352c;\r\n}\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n\r\n/*  buttons */\r\n.bt-features {\r\n  padding: 8px 10px 8px 33px;\r\n  float: left;\r\n  color: #333;\r\n  font-size: 12px;\r\n  font-weight: 600;\r\n  position: relative;\r\n}\r\n\r\n.bt-features:hover, .bt-features:focus {\r\n  color: #333;\r\n  background: #f5f5f5;\r\n}\r\n\r\n.bt-features .glyphicon {\r\n  font-size: 18px;\r\n  position: absolute;\r\n  top: 7px;\r\n  left: 10px;\r\n}\r\n\r\n/* share button */\r\n/* share button */\r\n.bt-social {\r\n    width: 40px;\r\n    height: 40px;\r\n    line-height: 40px;\r\n    position: relative;\r\n    float: left;\r\n    border-radius: 50%;\r\n    color: #fff;\r\n    transition: .25s;\r\n}\r\n\r\n.bt-social button {\r\n   background: none;\r\n}\r\n\r\n.bt-social.facebook  {\r\n  background: #3b5998;\r\n\r\n}\r\n.bt-social.google  {\r\n    background: #DC4E41;\r\n}\r\nshare-button button:active {\r\n    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
+exports.push([module.i, "/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n.content-box {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    padding-bottom: 40px;\r\n    background: #fff;\r\n}\r\n\r\n.title-col {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 30px;\r\n}\r\n\r\n.title-col .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 9px 0 0 0;\r\n  line-height: 13px;\r\n}\r\n\r\n.title-col .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n.content-wr {\r\n    position: relative;\r\n    height: calc(100vh - 85px);\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 380px;\r\n    background: #fff;\r\n}\r\n\r\n.content-left {\r\n  float: left;\r\n  width: 100%;\r\n  position: relative;\r\n  padding: 34px 25px 25px 25px;\r\n  height: 100%;\r\n  overflow: auto;\r\n  border-right: 1px solid #ccc;\r\n}\r\n\r\n\r\n.content-header {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n}\r\n\r\n.content-box h1.text-light.title-top {\r\n    margin-top: 50px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.content-box h1.text-light {\r\n    padding: 0 30px;\r\n    margin: 30px 0;\r\n}\r\n\r\n.content-left .thin.bg-grayLighter {\r\n    margin:0;\r\n}\r\n\r\n\r\n.content-header hr {\r\n    margin: 0 30px;\r\n}\r\n\r\n.bg-grayLighter {\r\n    background-color: #eeeeee !important;\r\n}\r\n\r\n.content-box-main {\r\n    overflow: auto;\r\n    height: 100%;\r\n    margin: 0;\r\n}\r\n\r\n.dl-horizontal {\r\n    font-size: 14px;\r\n    margin: 20px 0;\r\n}\r\n\r\n.dl-horizontal dt {\r\n  font-weight: 600;\r\n}\r\n\r\n.content-box h2.text-light {\r\n    padding: 10px 0 0;\r\n}\r\n\r\n.content-box p {\r\n    padding: 20px 0;\r\n    line-height: 22px;\r\n    font-size: 16 px;\r\n}\r\n\r\n.content-box .img-wr {\r\n    padding: 20px 0;\r\n}\r\n\r\n.bt-bar {\r\n    border-bottom: 1px solid #eee;\r\n    width: 100%;\r\n    float: left;\r\n    padding: 0 25px;\r\n}\r\n\r\n.bt-bar .bt-features:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.bt-bar .bt-features .icon {\r\n    font-size: 18px;\r\n    position: absolute;\r\n    top: 7px;\r\n    left: 10px;\r\n}\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n.bt-close {\r\n  background: none;\r\n  position: absolute;\r\n  top:0;\r\n  right:0;\r\n  padding: 3px 6px;\r\n  border: none;\r\n  box-shadow: none;\r\n  transition: all 0.3s ease 0s;\r\n}\r\n\r\n.bt-close:hover {\r\n  background: #ce352c;\r\n}\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n\r\n/*  buttons */\r\n.bt-features {\r\n  padding: 8px 10px 8px 33px;\r\n  float: left;\r\n  color: #333;\r\n  font-size: 12px;\r\n  font-weight: 600;\r\n  position: relative;\r\n}\r\n\r\n.bt-features:hover, .bt-features:focus {\r\n  color: #333;\r\n  background: #f5f5f5;\r\n}\r\n\r\n.bt-features .glyphicon {\r\n  font-size: 18px;\r\n  position: absolute;\r\n  top: 7px;\r\n  left: 10px;\r\n}\r\n\r\n/* share button */\r\n/* share button */\r\n.bt-social {\r\n    width: 40px;\r\n    height: 40px;\r\n    line-height: 40px;\r\n    position: relative;\r\n    float: left;\r\n    border-radius: 50%;\r\n    color: #fff;\r\n    transition: .25s;\r\n}\r\n\r\n.bt-social button {\r\n   background: none;\r\n}\r\n\r\n.bt-social.facebook  {\r\n  background: #3b5998;\r\n\r\n}\r\n.bt-social.google  {\r\n    background: #DC4E41;\r\n}\r\nshare-button button:active {\r\n    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
 
 // exports
 
@@ -764,7 +767,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".col-right {\r\n    height: 100%;\r\n    width: 320px;\r\n    padding:0 0 40px 0;\r\n    margin:25px;\r\n    float: left;\r\n    position: absolute;\r\n    top: 44px;\r\n    right: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.col-right-main {\r\n  overflow: auto;\r\n  height: 100%;\r\n  padding: 0 0 25px 0;\r\n  float: left;\r\n}\r\n\r\n.box-2 {\r\n    position: relative;\r\n    border-radius: 0;\r\n    background: #ffffff;\r\n    border-top: 3px solid #d2d6de;\r\n    width: 100%;\r\n    border-top-color: #0fa5bd;\r\n}\r\n\r\n.box-header.with-border {\r\n    border-bottom: 1px solid #f4f4f4;\r\n}\r\n\r\n.box-header {\r\n    color: #444;\r\n    display: block;\r\n    padding: 10px 0;\r\n    position: relative;\r\n}\r\n\r\n.user-block img {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.user-block .username {\r\n    font-size: 16px;\r\n}\r\n\r\n.user-block .username a {\r\n    color: #0072c6;\r\n}\r\n\r\n.user-block .description {\r\n    color: #999;\r\n    font-size: 12px;\r\n    padding-top: 5px;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.box-body {\r\n    padding:10px 0;\r\n}\r\n", ""]);
+exports.push([module.i, ".col-right {\r\n    height: 100%;\r\n    width: 340px;\r\n    padding:0 0 40px 0;\r\n    margin:0 25px 25px 25px;\r\n    float: left;\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.col-right-main {\r\n  overflow: auto;\r\n  height: 100%;\r\n  padding: 0 0 25px 0;\r\n  float: left;\r\n}\r\n\r\n.box-2 {\r\n    position: relative;\r\n    border-radius: 0;\r\n    background: #ffffff;\r\n    border-top: 3px solid #d2d6de;\r\n    width: 100%;\r\n    border-top-color: #0fa5bd;\r\n}\r\n\r\n.box-header.with-border {\r\n    border-bottom: 1px solid #f4f4f4;\r\n}\r\n\r\n.box-header {\r\n    color: #444;\r\n    display: block;\r\n    padding: 10px 0;\r\n    position: relative;\r\n}\r\n\r\n.user-block img {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.user-block .username {\r\n    font-size: 16px;\r\n}\r\n\r\n.user-block .username a {\r\n    color: #0072c6;\r\n}\r\n\r\n.user-block .description {\r\n    color: #999;\r\n    font-size: 12px;\r\n    padding-top: 5px;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.box-body {\r\n    padding:10px 0;\r\n}\r\n\r\n.forum-fb {\r\n    width:100%;\r\n    height:100%;\r\n    float:left;\r\n    overflow:auto;\r\n}", ""]);
 
 // exports
 
@@ -777,7 +780,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Start content right -->\r\n<div class=\"col-right\">\r\n    <div class=\"col-right-main scrollbar-custom\">\r\n        <div class=\"box-2 \" *ngFor=\"let baiviet of forumBarContent\">\r\n            <div class=\"box-header with-border\">\r\n                <div class=\"user-block\">\r\n                    <span class=\"username\">\r\n                  <a href=\"#\">{{baiviet.TieuDe}}</a>\r\n                </span>\r\n                    <span class=\"description\">Tác giả: {{baiviet.NguoiViet.Name}}\r\n                </span>\r\n                </div>\r\n            </div>\r\n            <div class=\"box-body\">\r\n                <p class=\"t-13px\"> {{baiviet.TomTat}}\r\n                </p>\r\n\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-share\">\r\n                </i> Chia sẻ\r\n              </button>\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-thumbs-up\">\r\n                </i> Thích\r\n              </button>\r\n                <span class=\"pull-right text-muted\">45 thích - 2 bình luận\r\n              </span>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End content right -->\r\n"
+module.exports = "<!-- Start content right -->\r\n<div class=\"col-right\">\r\n    <!-- <div class=\"col-right-main scrollbar-custom\"> -->\r\n        <!-- <div class=\"box-2 \" *ngFor=\"let baiviet of forumBarContent\">\r\n            <div class=\"box-header with-border\">\r\n                <div class=\"user-block\">\r\n                    <span class=\"username\">\r\n                  <a href=\"#\">{{baiviet.TieuDe}}</a>\r\n                </span>\r\n                    <span class=\"description\">Tác giả: {{baiviet.NguoiViet.Name}}\r\n                </span>\r\n                </div>\r\n            </div>\r\n            <div class=\"box-body\">\r\n                <p class=\"t-13px\"> {{baiviet.TomTat}}\r\n                </p>\r\n\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-share\">\r\n                </i> Chia sẻ\r\n              </button>\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-thumbs-up\">\r\n                </i> Thích\r\n              </button>\r\n                <span class=\"pull-right text-muted\">45 thích - 2 bình luận\r\n              </span>\r\n            </div>\r\n\r\n        </div> -->\r\n        <fb-comments class=\"forum-fb\" width=\"50\" numposts=\"5\" href=\"http://idea.truongkhoa.com/Home/Index?Id=0\"></fb-comments>\r\n    <!-- </div> -->\r\n</div>\r\n<!-- End content right -->\r\n"
 
 /***/ }),
 
@@ -787,6 +790,7 @@ module.exports = "<!-- Start content right -->\r\n<div class=\"col-right\">\r\n 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForumBarComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -800,9 +804,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 // services
 
+
 var ForumBarComponent = (function () {
-    function ForumBarComponent(forumService) {
+    function ForumBarComponent(forumService, fb) {
         this.forumService = forumService;
+        this.fb = fb;
+        // tslint:disable-next-line:prefer-const
+        var initParams = {
+            appId: '123454808277990',
+            xfbml: true,
+            version: 'v2.8'
+        };
+        fb.init(initParams);
     }
     ForumBarComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -818,10 +831,10 @@ ForumBarComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__["a" /* ForumService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__["a" /* ForumService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__["a" /* ForumService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__["a" /* ForumService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ngx_facebook__["b" /* FacebookService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ngx_facebook__["b" /* FacebookService */]) === "function" && _b || Object])
 ], ForumBarComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=forum-bar.component.js.map
 
 /***/ }),
@@ -1388,6 +1401,1640 @@ var ScrollResolver = (function () {
 }());
 exports.ScrollResolver = ScrollResolver;
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2Nyb2xsLXJlc29sdmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsic2Nyb2xsLXJlc29sdmVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxxQkFBMkIsZUFBZSxDQUFDLENBQUE7QUFHM0M7SUFBQTtRQUNTLHVCQUFrQixHQUFXLENBQUMsQ0FBQztJQWlDeEMsQ0FBQztJQS9CQyxxQ0FBWSxHQUFaLFVBQWMsU0FBd0IsRUFBRSxNQUFzQixFQUFFLGFBQXNCO1FBQ3BGLElBQU0sUUFBUSxHQUFHLE1BQU0sQ0FBQyxRQUFRLENBQUM7UUFDakMsSUFBSSxTQUFpQixDQUFDO1FBQ3RCLElBQUksbUJBQTJCLENBQUM7UUFDaEMsRUFBRSxDQUFDLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQztZQUNsQixTQUFTLEdBQUcsU0FBUyxDQUFDLGFBQWEsR0FBRyxTQUFTLENBQUMsZ0JBQWdCLENBQUM7WUFDakUsbUJBQW1CLEdBQUcsU0FBUyxDQUFDLE1BQU0sR0FBRyxRQUFRLENBQUMsSUFBSSxHQUFHLENBQUMsQ0FBQztRQUM3RCxDQUFDO1FBQUMsSUFBSSxDQUFDLENBQUM7WUFDTixTQUFTLEdBQUcsU0FBUyxDQUFDLGdCQUFnQixDQUFDO1lBQ3ZDLG1CQUFtQixHQUFHLFNBQVMsQ0FBQyxNQUFNLEdBQUcsUUFBUSxDQUFDLEVBQUUsR0FBRyxDQUFDLENBQUM7UUFDM0QsQ0FBQztRQUNELElBQU0sWUFBWSxHQUFZLFNBQVMsSUFBSSxtQkFBbUIsQ0FBQztRQUMvRCxJQUFJLENBQUMsa0JBQWtCLEdBQUcsU0FBUyxDQUFDLGdCQUFnQixDQUFDO1FBQ3JELE1BQU0sQ0FBQyxZQUFZLENBQUM7SUFDdEIsQ0FBQztJQUVELHdDQUFlLEdBQWYsVUFBaUIsU0FBd0I7UUFDdkMsTUFBTSxDQUFDLElBQUksQ0FBQyxrQkFBa0IsR0FBRyxTQUFTLENBQUMsZ0JBQWdCLENBQUM7SUFDOUQsQ0FBQztJQUVELHVDQUFjLEdBQWQsVUFBZ0IsU0FBd0IsRUFBRSxNQUFzQjtRQUM5RCxJQUFNLGVBQWUsR0FBRyxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1FBQ3hELElBQU0sWUFBWSxHQUFHLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxFQUFFLE1BQU0sRUFBRSxlQUFlLENBQUMsQ0FBQztRQUMzRSxNQUFNLENBQUMsRUFBRSxnQ0FBZSxFQUFFLDBCQUFZLEVBQUUsQ0FBQztJQUMzQyxDQUFDO0lBQ0kseUJBQVUsR0FBMEI7UUFDM0MsRUFBRSxJQUFJLEVBQUUsaUJBQVUsRUFBRTtLQUNuQixDQUFDO0lBQ0Ysa0JBQWtCO0lBQ1gsNkJBQWMsR0FBbUUsY0FBTSxPQUFBLEVBQzdGLEVBRDZGLENBQzdGLENBQUM7SUFDRixxQkFBQztBQUFELENBQUMsQUFsQ0QsSUFrQ0M7QUFsQ1ksc0JBQWMsaUJBa0MxQixDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUG9zaXRpb25TdGF0cywgU2Nyb2xsZXJDb25maWcgfSBmcm9tICcuL21vZGVscyc7XG5pbXBvcnQgeyBJbmplY3RhYmxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cblxuZXhwb3J0IGNsYXNzIFNjcm9sbFJlc29sdmVyIHtcbiAgcHVibGljIGxhc3RTY3JvbGxQb3NpdGlvbjogbnVtYmVyID0gMDtcblxuICBzaG91bGRTY3JvbGwgKGNvbnRhaW5lcjogUG9zaXRpb25TdGF0cywgY29uZmlnOiBTY3JvbGxlckNvbmZpZywgc2Nyb2xsaW5nRG93bjogYm9vbGVhbikge1xuICAgIGNvbnN0IGRpc3RhbmNlID0gY29uZmlnLmRpc3RhbmNlO1xuICAgIGxldCByZW1haW5pbmc6IG51bWJlcjtcbiAgICBsZXQgY29udGFpbmVyQnJlYWtwb2ludDogbnVtYmVyO1xuICAgIGlmIChzY3JvbGxpbmdEb3duKSB7XG4gICAgICByZW1haW5pbmcgPSBjb250YWluZXIudG90YWxUb1Njcm9sbCAtIGNvbnRhaW5lci5zY3JvbGxlZFVudGlsTm93O1xuICAgICAgY29udGFpbmVyQnJlYWtwb2ludCA9IGNvbnRhaW5lci5oZWlnaHQgKiBkaXN0YW5jZS5kb3duICsgMTtcbiAgICB9IGVsc2Uge1xuICAgICAgcmVtYWluaW5nID0gY29udGFpbmVyLnNjcm9sbGVkVW50aWxOb3c7XG4gICAgICBjb250YWluZXJCcmVha3BvaW50ID0gY29udGFpbmVyLmhlaWdodCAqIGRpc3RhbmNlLnVwICsgMTtcbiAgICB9XG4gICAgY29uc3Qgc2hvdWxkU2Nyb2xsOiBib29sZWFuID0gcmVtYWluaW5nIDw9IGNvbnRhaW5lckJyZWFrcG9pbnQ7XG4gICAgdGhpcy5sYXN0U2Nyb2xsUG9zaXRpb24gPSBjb250YWluZXIuc2Nyb2xsZWRVbnRpbE5vdztcbiAgICByZXR1cm4gc2hvdWxkU2Nyb2xsO1xuICB9XG5cbiAgaXNTY3JvbGxpbmdEb3duIChjb250YWluZXI6IFBvc2l0aW9uU3RhdHMpIHtcbiAgICByZXR1cm4gdGhpcy5sYXN0U2Nyb2xsUG9zaXRpb24gPCBjb250YWluZXIuc2Nyb2xsZWRVbnRpbE5vdztcbiAgfVxuXG4gIGdldFNjcm9sbFN0YXRzIChjb250YWluZXI6IFBvc2l0aW9uU3RhdHMsIGNvbmZpZzogU2Nyb2xsZXJDb25maWcpIHtcbiAgICBjb25zdCBpc1Njcm9sbGluZ0Rvd24gPSB0aGlzLmlzU2Nyb2xsaW5nRG93bihjb250YWluZXIpO1xuICAgIGNvbnN0IHNob3VsZFNjcm9sbCA9IHRoaXMuc2hvdWxkU2Nyb2xsKGNvbnRhaW5lciwgY29uZmlnLCBpc1Njcm9sbGluZ0Rvd24pO1xuICAgIHJldHVybiB7IGlzU2Nyb2xsaW5nRG93biwgc2hvdWxkU2Nyb2xsIH07XG4gIH1cbnN0YXRpYyBkZWNvcmF0b3JzOiBEZWNvcmF0b3JJbnZvY2F0aW9uW10gPSBbXG57IHR5cGU6IEluamVjdGFibGUgfSxcbl07XG4vKiogQG5vY29sbGFwc2UgKi9cbnN0YXRpYyBjdG9yUGFyYW1ldGVyczogKCkgPT4gKHt0eXBlOiBhbnksIGRlY29yYXRvcnM/OiBEZWNvcmF0b3JJbnZvY2F0aW9uW119fG51bGwpW10gPSAoKSA9PiBbXG5dO1xufVxuXG5pbnRlcmZhY2UgRGVjb3JhdG9ySW52b2NhdGlvbiB7XG4gIHR5cGU6IEZ1bmN0aW9uO1xuICBhcmdzPzogYW55W107XG59XG4iXX0=
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-comment-embed/fb-comment-embed.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBCommentEmbedComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Embedded Comments
+ * @shortdesc Embedded comments component
+ * @fbdoc https://developers.facebook.com/docs/plugins/embedded-comments
+ * @description
+ * Embedded comments are a simple way to put public post comments - by a Page or a person on Facebook - into the content of your web site or web page.
+ * Only public comments from Facebook Pages and profiles can be embedded.
+ * @usage
+ * ```html
+ * <fb-comment-embed href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185" width="500"></fb-comment-embed>
+ * ```
+ */
+var FBCommentEmbedComponent = (function (_super) {
+    __extends(FBCommentEmbedComponent, _super);
+    function FBCommentEmbedComponent(el, rnd) {
+        return _super.call(this, el, rnd, 'fb-comment-embed') || this;
+    }
+    return FBCommentEmbedComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBCommentEmbedComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-comment-embed',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBCommentEmbedComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBCommentEmbedComponent.propDecorators = {
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'includeParent': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBCommentEmbedComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBCommentEmbedComponent.prototype, "width", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBCommentEmbedComponent.prototype, "includeParent", void 0);
+//# sourceMappingURL=fb-comment-embed.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-comments/fb-comments.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBCommentsComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Comments
+ * @shortdesc Comments component
+ * @fbdoc https://developers.facebook.com/docs/plugins/comments
+ * @description
+ * The comments plugin lets people comment on content on your site using their Facebook account.
+ * People can choose to share their comment activity with their friends (and friends of their friends) on Facebook as well.
+ * The comments plugin also includes built-in moderation tools and social relevance ranking.
+ *
+ * @usage
+ * ```html
+ * <fb-comments></fb-comments>
+ * ```
+ */
+var FBCommentsComponent = (function (_super) {
+    __extends(FBCommentsComponent, _super);
+    function FBCommentsComponent(el, rnd) {
+        var _this = _super.call(this, el, rnd, 'fb-comments') || this;
+        /**
+         * The absolute URL that comments posted in the plugin will be permanently associated with.
+         * All stories shared on Facebook about comments posted using the comments plugin will link to this URL.
+         * Defaults to current URL.
+         */
+        _this.href = window.location.href;
+        return _this;
+    }
+    return FBCommentsComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBCommentsComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-comments',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBCommentsComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBCommentsComponent.propDecorators = {
+    'colorscheme': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'mobile': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'numposts': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'orderBy': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBCommentsComponent.prototype, "colorscheme", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBCommentsComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBCommentsComponent.prototype, "mobile", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Number)
+], FBCommentsComponent.prototype, "numposts", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBCommentsComponent.prototype, "orderBy", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBCommentsComponent.prototype, "width", void 0);
+//# sourceMappingURL=fb-comments.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-follow/fb-follow.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBFollowComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Follow Button
+ * @shortdesc Follow button component
+ * @fbdoc https://developers.facebook.com/docs/plugins/follow-button
+ * @description The Follow button lets people subscribe to the public updates of others on Facebook.
+ * @usage
+ * ```html
+ * <fb-follow href="https://www.facebook.com/zuck"></fb-follow>
+ * ```
+ */
+var FBFollowComponent = (function (_super) {
+    __extends(FBFollowComponent, _super);
+    function FBFollowComponent(el, rnd) {
+        return _super.call(this, el, rnd, 'fb-follow') || this;
+    }
+    return FBFollowComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBFollowComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-follow',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBFollowComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBFollowComponent.propDecorators = {
+    'colorScheme': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'kidDirectedSite': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'layout': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showFaces': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'size': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBFollowComponent.prototype, "colorScheme", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBFollowComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBFollowComponent.prototype, "kidDirectedSite", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBFollowComponent.prototype, "layout", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBFollowComponent.prototype, "showFaces", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBFollowComponent.prototype, "size", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBFollowComponent.prototype, "width", void 0);
+//# sourceMappingURL=fb-follow.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-like/fb-like.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBLikeComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Like Button
+ * @shortdesc Like button component
+ * @fbdoc https://developers.facebook.com/docs/plugins/like-button
+ * @description
+ * A single click on the Like button will 'like' pieces of content on the web and share them on Facebook.
+ * You can also display a Share button next to the Like button to let people add a personal message and customize who they share with.
+ * @usage
+ * ```html
+ * <fb-like href="https://www.facebook.com/zuck"></fb-like>
+ * ```
+ */
+var FBLikeComponent = (function (_super) {
+    __extends(FBLikeComponent, _super);
+    function FBLikeComponent(el, rnd) {
+        var _this = _super.call(this, el, rnd, 'fb-like') || this;
+        /**
+         * The absolute URL of the page that will be liked.
+         * Defaults to the current URL.
+         */
+        _this.href = window.location.href;
+        return _this;
+    }
+    return FBLikeComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBLikeComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-like',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBLikeComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBLikeComponent.propDecorators = {
+    'action': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'colorScheme': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'kidDirectedSite': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'layout': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'ref': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'share': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showFaces': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'size': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "action", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "colorScheme", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBLikeComponent.prototype, "kidDirectedSite", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "layout", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "ref", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBLikeComponent.prototype, "share", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBLikeComponent.prototype, "showFaces", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "size", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBLikeComponent.prototype, "width", void 0);
+//# sourceMappingURL=fb-like.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-page/fb-page.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBPageComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Page Plugin
+ * @shortdesc Page plugin component
+ * @fbdoc https://developers.facebook.com/docs/plugins/page-plugin
+ * @description
+ * The Page plugin lets you easily embed and promote any Facebook Page on your website. Just like on Facebook, your visitors can like and share the Page without leaving your site.
+ * @usage
+ * ```html
+ * <fb-page href="https://facebook.com/facebook"></fb-page>
+ * ```
+ */
+var FBPageComponent = (function (_super) {
+    __extends(FBPageComponent, _super);
+    function FBPageComponent(el, rnd) {
+        return _super.call(this, el, rnd, 'fb-page') || this;
+    }
+    return FBPageComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBPageComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-page',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBPageComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBPageComponent.propDecorators = {
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'height': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'tabs': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'hideCover': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showFacepile': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'hideCTA': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'smallHeader': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'adaptContainerWidth': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBPageComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Number)
+], FBPageComponent.prototype, "width", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Number)
+], FBPageComponent.prototype, "height", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBPageComponent.prototype, "tabs", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBPageComponent.prototype, "hideCover", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBPageComponent.prototype, "showFacepile", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBPageComponent.prototype, "hideCTA", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBPageComponent.prototype, "smallHeader", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBPageComponent.prototype, "adaptContainerWidth", void 0);
+//# sourceMappingURL=fb-page.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-post/fb-post.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBPostComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Embedded Posts
+ * @shortdesc Embedded post component
+ * @fbdoc https://developers.facebook.com/docs/plugins/embedded-posts
+ * @description
+ * Embedded Posts are a simple way to put public posts - by a Page or a person on Facebook - into the content of your web site or web page.
+ * Only public posts from Facebook Pages and profiles can be embedded.
+ * @usage
+ * ```html
+ * <fb-post href="https://www.facebook.com/20531316728/posts/10154009990506729/"></fb-post>
+ * ```
+ */
+var FBPostComponent = (function (_super) {
+    __extends(FBPostComponent, _super);
+    function FBPostComponent(el, rnd) {
+        return _super.call(this, el, rnd, 'fb-post') || this;
+    }
+    return FBPostComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBPostComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-post',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBPostComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBPostComponent.propDecorators = {
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showText': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBPostComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBPostComponent.prototype, "width", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBPostComponent.prototype, "showText", void 0);
+//# sourceMappingURL=fb-post.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-quote/fb-quote.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBQuoteComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Quote Plugin
+ * @shortdesc Quote plugin component
+ * @fbdoc https://developers.facebook.com/docs/plugins/quote
+ * @description
+ * The quote plugin lets people select text on your page and add it to their share, so they can tell a more expressive story.
+ * Note that you do not need to implement Facebook login or request any additional permissions through app review in order to use this plugin.
+ * @usage
+ * ```html
+ * <fb-quote></fb-quote>
+ * ```
+ */
+var FBQuoteComponent = (function (_super) {
+    __extends(FBQuoteComponent, _super);
+    function FBQuoteComponent(el, rnd) {
+        return _super.call(this, el, rnd, 'fb-quote') || this;
+    }
+    return FBQuoteComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBQuoteComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-quote',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBQuoteComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBQuoteComponent.propDecorators = {
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'layout': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBQuoteComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBQuoteComponent.prototype, "layout", void 0);
+//# sourceMappingURL=fb-quote.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-save/fb-save.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBSaveComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Save Button
+ * @shortdesc Save button component.
+ * @fbdoc https://developers.facebook.com/docs/plugins/save
+ * @description
+ * The Save button lets people save items or services to a private list on Facebook, share it with friends, and receive relevant notifications.
+ * @usage
+ * ```html
+ * <fb-save uri="https://github.com/zyra/ng2-facebook-sdk/"></fb-save>
+ * ```
+ */
+var FBSaveComponent = (function (_super) {
+    __extends(FBSaveComponent, _super);
+    function FBSaveComponent(el, rnd) {
+        var _this = _super.call(this, el, rnd, 'fb-save') || this;
+        /**
+         * The absolute link of the page that will be saved.
+         * Current Link/Address
+         */
+        _this.uri = window.location.href;
+        return _this;
+    }
+    return FBSaveComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBSaveComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-save',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBSaveComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBSaveComponent.propDecorators = {
+    'uri': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBSaveComponent.prototype, "uri", void 0);
+//# sourceMappingURL=fb-save.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-send/fb-send.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBSendComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Send Button
+ * @shortdesc Send button component
+ * @fbdoc https://developers.facebook.com/docs/plugins/send-button
+ * @description
+ * The Send button lets people privately send content on your site to one or more friends in a Facebook message.
+ * @usage
+ * ```html
+ * <fb-send href="https://github.com/zyra/ng2-facebook-sdk/"></fb-send>
+ * ```
+ */
+var FBSendComponent = (function (_super) {
+    __extends(FBSendComponent, _super);
+    function FBSendComponent(el, rnd) {
+        var _this = _super.call(this, el, rnd, 'fb-send') || this;
+        /**
+         * The absolute URL of the page that will be sent. Defaults to the current URL.
+         */
+        _this.href = window.location.href;
+        return _this;
+    }
+    return FBSendComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBSendComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-send',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBSendComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBSendComponent.propDecorators = {
+    'colorScheme': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'kidDirectedSite': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'ref': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'size': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBSendComponent.prototype, "colorScheme", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBSendComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBSendComponent.prototype, "kidDirectedSite", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBSendComponent.prototype, "ref", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBSendComponent.prototype, "size", void 0);
+//# sourceMappingURL=fb-send.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-share/fb-share.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBShareComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Share Button
+ * @shortdesc Share button component
+ * @fbdoc https://developers.facebook.com/docs/plugins/share-button
+ * @description
+ * The Share button lets people add a personalized message to links before sharing on their timeline, in groups, or to their friends via a Facebook Message.
+ * @usage
+ * ```html
+ * <fb-share href="https://github.com/zyra/ng2-facebook-sdk/"></fb-share>
+ * ```
+ */
+var FBShareComponent = (function (_super) {
+    __extends(FBShareComponent, _super);
+    function FBShareComponent(el, rnd) {
+        return _super.call(this, el, rnd, 'fb-share-button') || this;
+    }
+    return FBShareComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBShareComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-share',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBShareComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBShareComponent.propDecorators = {
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'layout': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'mobileIframe': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'size': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBShareComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBShareComponent.prototype, "layout", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBShareComponent.prototype, "mobileIframe", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBShareComponent.prototype, "size", void 0);
+//# sourceMappingURL=fb-share.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fb-video/fb-video.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fbml_component__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fbml-component.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBVideoComponent; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Embedded Video
+ * @shortdesc Component to embed Facebook videos
+ * @fbdoc https://developers.facebook.com/docs/plugins/embedded-video-player
+ * @description Component to embed Facebook videos and control them.
+ * @usage
+ * ```html
+ * <!-- basic usage -->
+ * <fb-video href="https://www.facebook.com/facebook/videos/10153231379946729/"></fb-video>
+ *
+ * <!-- event emitters -->
+ * <fb-video href="https://www.facebook.com/facebook/videos/10153231379946729/" (paused)="onVideoPaused($event)"></fb-video>
+ * ```
+ *
+ * To manually interact with the video player, fetch it using `ViewChild`.
+ *
+ * ```ts
+ * import { Component, ViewChild } from '@angular/core';
+ * import { FBVideoComponent } from 'ng2-facebook-sdk';
+ *
+ * @Component(...)
+ * export class MyComponent {
+ *
+ *   @ViewChild(FBVideoComponent) video: FBVideoComponent;
+ *
+ *   ngAfterViewInit() {
+ *     this.video.play();
+ *     this.video.pause();
+ *     this.video.getVolume();
+ *   }
+ *
+ * }
+ *
+ * ```
+ */
+var FBVideoComponent = (function (_super) {
+    __extends(FBVideoComponent, _super);
+    function FBVideoComponent(el, rnd) {
+        var _this = _super.call(this, el, rnd, 'fb-video') || this;
+        /**
+         * Fired when video starts to play.
+         */
+        _this.startedPlaying = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * Fired when video pauses.
+         */
+        _this.paused = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         *
+         Fired when video finishes playing.
+         */
+        _this.finishedPlaying = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * Fired when video starts to buffer.
+         */
+        _this.startedBuffering = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * Fired when video recovers from buffering.
+         */
+        _this.finishedBuffering = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * Fired when an error occurs on the video.
+         */
+        _this.error = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        _this._listeners = [];
+        _this.nativeElement.id = _this._id = 'video-' + String(Math.floor((Math.random() * 10000) + 1));
+        return _this;
+    }
+    /**
+     * @hidden
+     */
+    FBVideoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        FB.Event.subscribe('xfbml.ready', function (msg) {
+            if (msg.type === 'video' && msg.id === _this._id) {
+                _this._instance = msg.instance;
+                _this._listeners.push(_this._instance.subscribe('startedPlaying', function (e) { return _this.startedPlaying.emit(e); }), _this._instance.subscribe('paused', function (e) { return _this.paused.emit(e); }), _this._instance.subscribe('finishedPlaying', function (e) { return _this.finishedPlaying.emit(e); }), _this._instance.subscribe('startedBuffering', function (e) { return _this.startedBuffering.emit(e); }), _this._instance.subscribe('finishedBuffering', function (e) { return _this.finishedBuffering.emit(e); }), _this._instance.subscribe('error', function (e) { return _this.error.emit(e); }));
+            }
+        });
+    };
+    /**
+     * @hidden
+     */
+    FBVideoComponent.prototype.ngOnDestroy = function () {
+        this._listeners.forEach(function (l) {
+            if (typeof l.release === 'function') {
+                l.release();
+            }
+        });
+    };
+    /**
+     * Plays the video.
+     */
+    FBVideoComponent.prototype.play = function () { };
+    /**
+     * Pauses the video.
+     */
+    FBVideoComponent.prototype.pause = function () { };
+    /**
+     * Seeks to specified position.
+     * @param seconds {number}
+     */
+    FBVideoComponent.prototype.seek = function (seconds) { };
+    /**
+     * Mute the video.
+     */
+    FBVideoComponent.prototype.mute = function () { };
+    /**
+     * Unmute the video.
+     */
+    FBVideoComponent.prototype.unmute = function () { };
+    /**
+     * Returns true if video is muted, false if not.
+     */
+    FBVideoComponent.prototype.isMuted = function () { return; };
+    /**
+     * Set the volume
+     * @param volume
+     */
+    FBVideoComponent.prototype.setVolume = function (volume) { };
+    /**
+     * Get the volume
+     */
+    FBVideoComponent.prototype.getVolume = function () { return; };
+    /**
+     * Returns the current video time position in seconds
+     */
+    FBVideoComponent.prototype.getCurrentPosition = function () { };
+    /**
+     * Returns the video duration in seconds
+     */
+    FBVideoComponent.prototype.getDuration = function () { };
+    return FBVideoComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__fbml_component__["a" /* FBMLComponent */]));
+
+FBVideoComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'fb-video',
+                template: ''
+            },] },
+];
+/** @nocollapse */
+FBVideoComponent.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+]; };
+FBVideoComponent.propDecorators = {
+    'href': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'allowfullscreen': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'autoplay': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'width': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showText': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'showCaptions': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'startedPlaying': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'paused': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'finishedPlaying': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'startedBuffering': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'finishedBuffering': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    'error': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+};
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBVideoComponent.prototype, "href", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBVideoComponent.prototype, "allowfullscreen", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBVideoComponent.prototype, "autoplay", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", String)
+], FBVideoComponent.prototype, "width", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBVideoComponent.prototype, "showText", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["b" /* FBMLAttribute */],
+    __metadata("design:type", Boolean)
+], FBVideoComponent.prototype, "showCaptions", void 0);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "play", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "pause", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "seek", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "mute", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "unmute", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Boolean)
+], FBVideoComponent.prototype, "isMuted", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "setVolume", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Number)
+], FBVideoComponent.prototype, "getVolume", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "getCurrentPosition", null);
+__decorate([
+    __WEBPACK_IMPORTED_MODULE_1__fbml_component__["c" /* FBMLInstanceMethod */],
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], FBVideoComponent.prototype, "getDuration", null);
+//# sourceMappingURL=fb-video.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/components/fbml-component.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = FBMLAttribute;
+/* harmony export (immutable) */ __webpack_exports__["c"] = FBMLInstanceMethod;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBMLComponent; });
+/**
+ * @hidden
+ */
+function FBMLAttribute(target, key) {
+    var processKey = function (_k) { return 'data-' + _k.toString().replace(/([a-z\d])([A-Z])/g, '$1-$2').toLowerCase(); };
+    Object.defineProperty(target, key, {
+        set: function (value) {
+            value = value.toString();
+            this.setAttribute(processKey(key), value);
+        },
+        get: function () {
+            return this.getAttribute(processKey(key));
+        },
+        enumerable: true
+    });
+}
+/**
+ * @hidden
+ */
+function FBMLInstanceMethod(target, key) {
+    return {
+        enumerable: true,
+        value: function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            if (this._instance) {
+                return this._instance[key].apply(this._instance, args);
+            }
+            else {
+                console.warn('ng2-facebook-sdk: tried calling instance method before component is ready.');
+                return null;
+            }
+        }
+    };
+}
+/**
+ * @hidden
+ */
+var FBMLComponent = (function () {
+    function FBMLComponent(el, rnd, fbClass) {
+        this.el = el;
+        this.rnd = rnd;
+        this.fbClass = fbClass;
+        this.nativeElement = this.el.nativeElement;
+        this.rnd.setElementClass(this.nativeElement, this.fbClass, true);
+    }
+    FBMLComponent.prototype.setAttribute = function (name, value) {
+        if (!name || !value)
+            return;
+        this.rnd.setElementAttribute(this.nativeElement, name, value);
+    };
+    FBMLComponent.prototype.getAttribute = function (name) {
+        if (!name)
+            return;
+        return this.nativeElement.getAttribute(name);
+    };
+    return FBMLComponent;
+}());
+
+//# sourceMappingURL=fbml-component.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/facebook.module.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/providers/facebook.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_fb_comment_embed_fb_comment_embed__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-comment-embed/fb-comment-embed.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_fb_comments_fb_comments__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-comments/fb-comments.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_fb_follow_fb_follow__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-follow/fb-follow.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_fb_like_fb_like__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-like/fb-like.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_fb_page_fb_page__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-page/fb-page.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_fb_post_fb_post__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-post/fb-post.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_fb_quote_fb_quote__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-quote/fb-quote.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_fb_save_fb_save__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-save/fb-save.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_fb_send_fb_send__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-send/fb-send.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_fb_share_fb_share__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-share/fb-share.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_fb_video_fb_video__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-video/fb-video.js");
+/* unused harmony export getComponents */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FacebookModule; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+var components = [
+    __WEBPACK_IMPORTED_MODULE_2__components_fb_comment_embed_fb_comment_embed__["a" /* FBCommentEmbedComponent */],
+    __WEBPACK_IMPORTED_MODULE_3__components_fb_comments_fb_comments__["a" /* FBCommentsComponent */],
+    __WEBPACK_IMPORTED_MODULE_4__components_fb_follow_fb_follow__["a" /* FBFollowComponent */],
+    __WEBPACK_IMPORTED_MODULE_5__components_fb_like_fb_like__["a" /* FBLikeComponent */],
+    __WEBPACK_IMPORTED_MODULE_6__components_fb_page_fb_page__["a" /* FBPageComponent */],
+    __WEBPACK_IMPORTED_MODULE_7__components_fb_post_fb_post__["a" /* FBPostComponent */],
+    __WEBPACK_IMPORTED_MODULE_8__components_fb_quote_fb_quote__["a" /* FBQuoteComponent */],
+    __WEBPACK_IMPORTED_MODULE_9__components_fb_save_fb_save__["a" /* FBSaveComponent */],
+    __WEBPACK_IMPORTED_MODULE_10__components_fb_send_fb_send__["a" /* FBSendComponent */],
+    __WEBPACK_IMPORTED_MODULE_11__components_fb_share_fb_share__["a" /* FBShareComponent */],
+    __WEBPACK_IMPORTED_MODULE_12__components_fb_video_fb_video__["a" /* FBVideoComponent */]
+];
+function getComponents() {
+    return components;
+}
+/**
+ * @shortdesc The module to import to add this library
+ * @description
+ * The main module to import into your application.
+ * You only need to import this module if you wish to use the components in this library; otherwise, you could just import [FacebookService](../facebook-service) into your module instead.
+ * This module will make all components and providers available in your application.
+ *
+ * @usage
+ * In order to use this library, you need to import `FacebookModule` into your app's main `NgModule`.
+ *
+ * ```typescript
+ * import { FacebookModule } from 'ng2-facebook-sdk';
+ *
+ * @NgModule({
+ *   ...
+ *   imports: [
+ *     ...
+ *     FacebookModule.forRoot()
+ *   ],
+ *   ...
+ * })
+ * export class AppModule { }
+ * ```
+ */
+var FacebookModule = (function () {
+    function FacebookModule() {
+    }
+    FacebookModule.forRoot = function () {
+        return {
+            ngModule: FacebookModule,
+            providers: [__WEBPACK_IMPORTED_MODULE_1__providers_facebook__["a" /* FacebookService */]]
+        };
+    };
+    return FacebookModule;
+}());
+
+FacebookModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                declarations: getComponents(),
+                exports: getComponents()
+            },] },
+];
+/** @nocollapse */
+FacebookModule.ctorParameters = function () { return []; };
+//# sourceMappingURL=facebook.module.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_fb_comment_embed_fb_comment_embed__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-comment-embed/fb-comment-embed.js");
+/* unused harmony reexport FBCommentEmbedComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_fb_comments_fb_comments__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-comments/fb-comments.js");
+/* unused harmony reexport FBCommentsComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_fb_follow_fb_follow__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-follow/fb-follow.js");
+/* unused harmony reexport FBFollowComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_fb_like_fb_like__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-like/fb-like.js");
+/* unused harmony reexport FBLikeComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_fb_page_fb_page__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-page/fb-page.js");
+/* unused harmony reexport FBPageComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_fb_post_fb_post__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-post/fb-post.js");
+/* unused harmony reexport FBPostComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_fb_quote_fb_quote__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-quote/fb-quote.js");
+/* unused harmony reexport FBQuoteComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_fb_save_fb_save__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-save/fb-save.js");
+/* unused harmony reexport FBSaveComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_fb_send_fb_send__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-send/fb-send.js");
+/* unused harmony reexport FBSendComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_fb_share_fb_share__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-share/fb-share.js");
+/* unused harmony reexport FBShareComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_fb_video_fb_video__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-video/fb-video.js");
+/* unused harmony reexport FBVideoComponent */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/providers/facebook.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_11__providers_facebook__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__facebook_module__ = __webpack_require__("../../../../ngx-facebook/dist/esm/facebook.module.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_12__facebook_module__["a"]; });
+// components
+
+
+
+
+
+
+
+
+
+
+
+// providers
+
+// modules
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../ngx-facebook/dist/esm/providers/facebook.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FacebookService; });
+
+/**
+ * @shortdesc
+ * Angular 2 service to inject to use Facebook's SDK
+ * @description
+ * You only need to inject this service in your application if you aren't using [`FacebookModule`](../facebook-module).
+ * @usage
+ * ```typescript
+ * import { FacebookService, InitParams } from 'ng2-facebook-sdk';
+ *
+ * constructor(private fb: FacebookService) {
+ *
+ *   const params: InitParams = {
+ *
+ *   };
+ *
+ *   fb.init(params);
+ *
+ * }
+ * ```
+ */
+var FacebookService = (function () {
+    function FacebookService() {
+    }
+    /**
+     * This method is used to initialize and setup the SDK.
+     * @param params {InitParams} Initialization parameters
+     * @returns {Promise<any>}
+     */
+    FacebookService.prototype.init = function (params) {
+        try {
+            return Promise.resolve(FB.init(params));
+        }
+        catch (e) {
+            return Promise.reject(e);
+        }
+    };
+    /**
+     * This method lets you make calls to the Graph API
+     * @usage
+     * ```typescript
+     * this.fb.api('somepath')
+     *   .then(res => console.log(res))
+     *   .catch(e => console.log(e));
+     * ```
+     * @param path {string} The Graph API endpoint path that you want to call.
+     * @param [method=get] {string} The HTTP method that you want to use for the API request.
+     * @param [params] {Object} An object consisting of any parameters that you want to pass into your Graph API call.
+     * @returns {Promise<any>}
+     */
+    FacebookService.prototype.api = function (path, method, params) {
+        if (method === void 0) { method = 'get'; }
+        if (params === void 0) { params = {}; }
+        return new Promise(function (resolve, reject) {
+            try {
+                FB.api(path, method, params, function (response) {
+                    if (!response) {
+                        reject();
+                    }
+                    else if (response.error) {
+                        reject(response.error);
+                    }
+                    else {
+                        resolve(response);
+                    }
+                });
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    };
+    /**
+     * This method is used to trigger different forms of Facebook created UI dialogs.
+     * These dialogs include:
+     * - Share dialog
+     * - Login dialog
+     * - Add page tab dialog
+     * - Requests dialog
+     * - Send dialog
+     * - Payments dialog
+     * - Go Live dialog
+     * @param params {UIParams} A collection of parameters that control which dialog is loaded, and relevant settings.
+     * @returns {Promise<UIResponse>}
+     */
+    FacebookService.prototype.ui = function (params) {
+        return new Promise(function (resolve, reject) {
+            try {
+                FB.ui(params, function (response) {
+                    if (!response)
+                        reject();
+                    else if (response.error)
+                        reject(response.error);
+                    else
+                        resolve(response);
+                });
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    };
+    /**
+     * This method allows you to determine if a user is logged in to Facebook and has authenticated your app.
+     * @returns {Promise<LoginStatus>}
+     */
+    FacebookService.prototype.getLoginStatus = function () {
+        return new Promise(function (resolve, reject) {
+            try {
+                FB.getLoginStatus(function (response) {
+                    if (!response) {
+                        reject();
+                    }
+                    else {
+                        resolve(response);
+                    }
+                });
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    };
+    /**
+     * Login the user
+     * @usage
+     * ```typescript
+     * // login without options
+     * this.fb.login()
+     *   .then((response: LoginResponse) => console.log('Logged in', response))
+     *   .catch(e => console.error('Error logging in'));
+     *
+     * // login with options
+     * const options: LoginOptions = {
+     *   scope: 'public_profile,user_friends,email,pages_show_list',
+     *   return_scopes: true,
+     *   enable_profile_selector: true
+     * };
+     * this.fb.login(options)
+     *   .then(...)
+     *   .catch(...);
+     * ```
+     * @param [options] {LoginOptions} Login options
+     * @returns {Promise<LoginResponse>} returns a promise that resolves with [LoginResponse](../login-response) object, or rejects with an error
+     */
+    FacebookService.prototype.login = function (options) {
+        return new Promise(function (resolve, reject) {
+            try {
+                FB.login(function (response) {
+                    if (response.authResponse) {
+                        resolve(response);
+                    }
+                    else {
+                        reject();
+                    }
+                }, options);
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    };
+    /**
+     * Logout the user
+     * @usage
+     * ```typescript
+     * this.fb.logout().then(() => console.log('Logged out!'));
+     * ```
+     * @returns {Promise<any>} returns a promise that resolves when the user is logged out
+     */
+    FacebookService.prototype.logout = function () {
+        return new Promise(function (resolve, reject) {
+            try {
+                FB.logout(function (response) {
+                    resolve(response);
+                });
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    };
+    /**
+     * This synchronous function returns back the current authResponse.
+     * @usage
+     * ```typescript
+     * import { AuthResponse, FacebookService } from 'ng2-facebook-sdk';
+     *
+     * ...
+     *
+     * const authResponse: AuthResponse = this.fb.getAuthResponse();
+     * ```
+     * @returns {AuthResponse} returns an [AuthResponse](../auth-response) object
+     */
+    FacebookService.prototype.getAuthResponse = function () {
+        try {
+            return FB.getAuthResponse();
+        }
+        catch (e) {
+            console.error('ng2-facebook-sdk: ', e);
+        }
+    };
+    return FacebookService;
+}());
+
+FacebookService.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+FacebookService.ctorParameters = function () { return []; };
+//# sourceMappingURL=facebook.js.map
 
 /***/ }),
 
