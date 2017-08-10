@@ -1,9 +1,9 @@
-<app-window [idea]="idea" [urlIdea]="urlIdea" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
+<app-window [idea]="idea" [urlIdea]="urlIdea" [url]="url" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
     <!-- searchbox -->
     <div class="search-box-top">
         <div class="input-control text full-size" data-role="input">
             <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-            <input type="text" placeholder="Nhập tên thuốc...">
+            <input type="text" placeholder="Nhập tên thuốc..." [formControl]="searchKey">
         </div>
 
         <!-- đếm số thuốc -->
@@ -43,9 +43,15 @@
         </div>
 
         <div class="drugs-list">
-            <div *ngIf="!empty">
+            <div *ngIf="!loading">
+                <div class="text-center" *ngIf="empty">
+                    <p>
+                        <a> Không kết quả nào phù hợp</a>
+                    </p>
+                </div>
+                <div *ngIf="!empty">
 
-                <a *ngFor="let thuoc of DsThuoc" class="row-l">
+                    <a *ngFor="let thuoc of DsThuoc" class="row-l">
 
 
                         <div class="col w25">
@@ -76,7 +82,8 @@
                             <span class="title">{{thuoc.HamLuong}}</span>
                         </div>
 
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

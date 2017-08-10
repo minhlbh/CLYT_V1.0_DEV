@@ -16,8 +16,18 @@ export class ThuocService {
             // ...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
+    getSearchThuoc(key: String) {
+        const searchUrl = `${this.thuocUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
+        return this.http.get(searchUrl)
+            // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
+            // ...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+
+    }
 
 }
+
 
 export class Thuoc {
 
