@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
 
         });
         this.auth = this.userService.getAuth();
+        console.log(this.auth);
 
     }
 

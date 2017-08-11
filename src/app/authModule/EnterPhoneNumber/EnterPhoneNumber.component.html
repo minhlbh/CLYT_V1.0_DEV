@@ -14,7 +14,7 @@
         <form #f="ngForm" class="form-group">
             <input [formControl]="phone" type="text" placeholder="Nhập số điện thoại...">
         </form>
-        <button>Hoàn tất</button>
+        <button (click) = "SocialAddPhone()" >Hoàn tất</button>
         <div class="form-group">
             <a [routerLink]="['/auth/signIn']">
            Thoát
