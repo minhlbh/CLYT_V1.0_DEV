@@ -106,7 +106,7 @@ export class DanhSachThuocComponent implements OnInit {
                     this.DsThuoc = data.DsThuoc.DsThuoc;
                     this.TongSoLuong = data.DsThuoc.TongSoLuong;
                     this.startThuoc = 0;
-                    this.endThuoc = data.TongSoLuong;
+                    this.endThuoc = data.DsThuoc.TongSoLuong;
                     if (this.DsThuoc.length === 0 && this.TongSoLuong === 0) {
                         this.empty = true;
                     } else {
@@ -132,17 +132,17 @@ export class DanhSachThuocComponent implements OnInit {
             this.loadMore = true;
             this.page++;
             this.thuocService.getThuoc(this.page).subscribe(data => {
-                for (let i = 0; i < data.DsThuoc.length; i++) {
-                    this.DsThuoc.push(data.DsThuoc[i]);
+                for (let i = 0; i < data.DsThuoc.DsThuoc.length; i++) {
+                    this.DsThuoc.push(data.DsThuoc.DsThuoc[i]);
 
                 }
-                this.endBenh = this.page * 50;
+                this.endThuoc = this.page * 50;
                 this.loadMore = false;
                 this.loading = false;
-                if (this.endThuoc > this.DsThuoc.length) {
-                    this.endThuoc = this.DsThuoc.length;
+                // if (this.endThuoc > this.DsThuoc.length) {
+                //     this.endThuoc = this.DsThuoc.length;
 
-                }
+                // }
 
             });
 
