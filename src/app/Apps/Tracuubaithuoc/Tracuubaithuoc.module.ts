@@ -27,7 +27,9 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         Routing,
         ShareModule
     ],
-    declarations: [TracuubaithuocComponent],
+    declarations: [
+        TracuubaithuocComponent
+    ],
     providers: [
         BaithuocService,
     ]

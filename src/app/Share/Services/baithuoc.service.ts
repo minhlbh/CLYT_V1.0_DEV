@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
 export class BaithuocService {
     constructor(private http: Http) { }
     private thuocUrl = `${environment.apiUrl}/CSDLYT/DongY_BaiThuoc_List`;
-    getThuoc(page): Observable<any> {
+    getBaithuoc(page): Observable<any> {
         // ...using get request
         return this.http.get(`${this.thuocUrl}?Trang=${page}&soluongmoitrang=50`)
             // ...and calling .json() on the response to return data

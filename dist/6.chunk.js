@@ -30,6 +30,8 @@ module.exports = "<p>\n  Tracuubaithuoc works!\n</p>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TracuubaithuocComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,8 +43,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var TracuubaithuocComponent = (function () {
-    function TracuubaithuocComponent() {
+    function TracuubaithuocComponent(settingService, router, activatedroute) {
+        this.settingService = settingService;
+        this.router = router;
+        this.activatedroute = activatedroute;
     }
     TracuubaithuocComponent.prototype.ngOnInit = function () {
     };
@@ -50,13 +57,14 @@ var TracuubaithuocComponent = (function () {
 }());
 TracuubaithuocComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-Tracuubaithuoc',
+        selector: 'app-tracuubaithuoc',
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object])
 ], TracuubaithuocComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=Tracuubaithuoc.component.js.map
 
 /***/ }),
@@ -110,7 +118,9 @@ TracuubaithuocModule = __decorate([
             Routing,
             __WEBPACK_IMPORTED_MODULE_6__Share_Components_share_module__["a" /* ShareModule */]
         ],
-        declarations: [__WEBPACK_IMPORTED_MODULE_5__Tracuubaithuoc_component__["a" /* TracuubaithuocComponent */]],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_5__Tracuubaithuoc_component__["a" /* TracuubaithuocComponent */]
+        ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_7__Share_Services_baithuoc_service__["a" /* BaithuocService */],
         ]
@@ -151,6 +161,9 @@ module.exports = "<p>\n  danh-sach-bai-thuoc works!\n</p>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_baithuoc_service__ = __webpack_require__("../../../../../src/app/Share/Services/baithuoc.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DanhSachBaiThuocComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -162,10 +175,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var DanhSachBaiThuocComponent = (function () {
-    function DanhSachBaiThuocComponent() {
+    function DanhSachBaiThuocComponent(
+        // nhớ khai báo service
+        baithuocService, router, activedroute, settingService) {
+        this.baithuocService = baithuocService;
+        this.router = router;
+        this.activedroute = activedroute;
+        this.settingService = settingService;
+        this.empty = false;
+        this.page = 1;
     }
     DanhSachBaiThuocComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // Hàm lấy dữ liệu bệnh
+        this.baithuocService.getBaithuoc(1).subscribe(function (data) {
+            _this.DsBaithuoc = data.DsBaithuoc;
+            _this.TongSoLuong = data.TongSoLuong;
+            _this.startBaithuoc = 0;
+            _this.endBaithuoc = 50;
+        });
+        this.menu = this.settingService.getMenu();
+        for (var i = 0; i < this.menu.length; i++) {
+            for (var x = 0; x < this.menu[i].items.length; x++) {
+                if (this.menu[i].items[x].url === 'tracuubaithuoc') {
+                    this.name = this.menu[i].items[x].Ten;
+                    this.iconText = this.menu[i].items[x].IconText;
+                    this.idIdea = this.menu[i].items[x].Id;
+                }
+            }
+        }
+        this.url = 'apps';
+        this.idea = true;
+        this.urlIdea = 'tracuubaithuoc';
     };
     return DanhSachBaiThuocComponent;
 }());
@@ -175,9 +220,10 @@ DanhSachBaiThuocComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_baithuoc_service__["a" /* BaithuocService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_baithuoc_service__["a" /* BaithuocService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _d || Object])
 ], DanhSachBaiThuocComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=danh-sach-bai-thuoc.component.js.map
 
 /***/ }),
@@ -211,7 +257,7 @@ var BaithuocService = (function () {
         this.http = http;
         this.thuocUrl = __WEBPACK_IMPORTED_MODULE_1__environments_environment_prod__["a" /* environment */].apiUrl + "/CSDLYT/DongY_BaiThuoc_List";
     }
-    BaithuocService.prototype.getThuoc = function (page) {
+    BaithuocService.prototype.getBaithuoc = function (page) {
         // ...using get request
         return this.http.get(this.thuocUrl + "?Trang=" + page + "&soluongmoitrang=50")
             .map(function (res) { return res.json(); })

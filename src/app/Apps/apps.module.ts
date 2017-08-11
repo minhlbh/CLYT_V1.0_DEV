@@ -23,7 +23,7 @@ const routing: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
-            { path: 'tracuubaithuoc', loadChildren: './Tracuubaithuoc/Tracuubaithuoc.module#TracuubaithuocModule' },
+            { path: 'baithuocvithuoc', loadChildren: './Tracuubaithuoc/Tracuubaithuoc.module#TracuubaithuocModule' },
             { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
             { path: '**', component: EmptyComponent },
         ],
