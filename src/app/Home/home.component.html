@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="idea">
-                <a target = "blank" href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
+                <a target="blank" href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
                 <img src="../../assets/idea.png">
               </a>
             </div>
@@ -54,14 +54,27 @@
 
                             <section class="grid" [ngClass]="{'g-holiz': blocks?.full}">
                                 <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
-                                    <div class="grid-item" [ngClass]="
+                                    <div class="grid-item" (click)="goToApp(item)" [ngClass]="
                                 {
                                     'grid-item-w2': item.chieuRong==2,
                                     'grid-item-w3': item.chieuRong==3,
                                     'grid-item-h3': item.chieuCao==3,
                                     'grid-item-h2': item.chieuCao==2
                                 }">
-                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]">
+                                        <div class="status" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
+                                            <!-- xanh hoat dong 30%: status -->
+                                            <!-- Demo %: status -->
+                                            <!-- Dang phat trien %: status -->
+                                            <span>
+                                                <span *ngIf="item.TrangThaiHoatDong == 2">Hoạt động</span>
+                                                <span *ngIf="item.TrangThaiHoatDong == 1">Demo</span>
+                                                <span *ngIf="item.TrangThaiHoatDong == 0">Đang phát triển</span>
+                                                ...{{item.PhanTramTrangThai}}%
+                                                <span *ngIf="item.Status">: {{item.Status}}</span>
+                                            </span>
+                                        </div>
+                                        <!-- Loại ô 1 -->
+                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" >
                                             <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
                                                 <img src="{{item?.IconText}}">
                                             </div>
@@ -70,20 +83,36 @@
                                                         <img src="{{item?.IconText}}" aria-hidden="true">
                                                     </span> {{item.Ten}}
                                             </h4>
+                                            <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
+                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item?.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
+                                                    [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
+                                                </div>
+                                            </div>
                                         </a>
-                                        <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                        <!-- Loại ô 2 -->
+                                        <a class="child" *ngIf="item?.style == 'Image'" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
                                             <h4 class="title-label">
                                                 <span class="icon">
                                                         <img src="{{item?.IconText}}" aria-hidden="true">
                                                     </span> {{item.Ten}}
                                             </h4>
+                                            <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
+                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
+                                                    [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
+                                                </div>
+                                            </div>
 
                                         </a>
-
+                                        <!-- Loại ô 3 -->
                                         <div class="child" *ngIf="item?.style == 'Slide'">
                                             <h4 class="title-label">
                                                 <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                {{item.Ten}}
                                             </h4>
+                                            <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
+                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
+                                                    [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </ng-container>
@@ -128,33 +157,33 @@
                                 <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
                                 Đăng nhập
                             </a>
-                        </li>
+                </li>
 
-                        <li role="separator" class="divider"></li>
+                <li role="separator" class="divider"></li>
 
-                        <li>
-                            <a *ngIf="!this.auth" [routerLink]="['/auth/register']">
+                <li>
+                    <a *ngIf="!this.auth" [routerLink]="['/auth/register']">
                                 <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
                                 Đăng ký
                             </a>
-                        </li>
+                </li>
 
-                        <li>
-                            <a *ngIf="this.auth" class="name-user bt-sign-up">
+                <li>
+                    <a *ngIf="this.auth" class="name-user bt-sign-up">
                                 <span class="avt fa fa-fw fa-user" aria-hidden="true"></span>
                                 {{this.auth.HoVaTen}}
                             </a>
-                        </li>
+                </li>
 
-                        <li role="separator" class="divider"></li>
+                <li role="separator" class="divider"></li>
 
-                        <li>
-                            <a *ngIf="this.auth" [routerLink]="['/auth/signOut']" class="name-user bt-sign-up">
+                <li>
+                    <a *ngIf="this.auth" [routerLink]="['/auth/signOut']" class="name-user bt-sign-up">
                                 <span class="settings fa fa-fw fa-power-off" aria-hidden="true"></span>
                                 Đăng xuất
                             </a>
-                        </li>
-                    </ul>
+                </li>
+                </ul>
                 </a>
                 <div class="search-mb">
                     <span (click)="searchState=!searchState" class="glyphicon glyphicon-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -167,10 +196,14 @@
                 <div class="m-categories">
                     <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
                     <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
-                        <a [routerLink]="['/apps',item?.url]" class="m-item" fxLayout="row" fxLayoutAlign="start center">
+                        <a [routerLink]="['/apps',item?.url]" class="m-item mb" fxLayout="row" fxLayoutAlign="start center">
                             <div class="m-cover active" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
                             <div class="title-services">
                                 {{item?.Ten}}
+                            </div>
+                            <div class="progress mb active">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="height: 80%;">
+                                </div>
                             </div>
                         </a>
                     </ng-container>

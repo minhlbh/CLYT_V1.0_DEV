@@ -23,7 +23,11 @@ const routing: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+            { path: 'baithuocvithuoc', loadChildren: './Tracuubaithuoc/Tracuubaithuoc.module#TracuubaithuocModule' },
+            { path: 'chandoanhinhanh', loadChildren: './Chandoanhinhanh/Chandoanhinhanh.module#ChandoanhinhanhModule' },
             { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
+            { path: 'bantinhl7', loadChildren: './Bantinhl7/Bantinhl7.module#Bantinhl7Module' },
+
             { path: '**', component: EmptyComponent },
         ],
     },
@@ -45,7 +49,6 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         NavComponent,
         EmptyComponent,
         LeftMenuComponent,
-        // WindowComponent
     ],
     providers: [
         SettingService

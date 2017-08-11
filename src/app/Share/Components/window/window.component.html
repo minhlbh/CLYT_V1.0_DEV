@@ -2,7 +2,7 @@
     <div class="title-window" [ngStyle]="{'background': menuElements?.MauNhat}">
         <div style="display:flex; flex-direction: row;">
             <div *ngIf="idea">
-                <span class="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>
+                <span class="icon" *ngIf="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>
                 <div class="idea">
                     <a target="blank" href="http://idea.truongkhoa.com/Home/Index?Id={{idIdea}}&Ma={{urlIdea}}" title="Đóng góp ý tưởng">
                              <img src="../../assets/idea.png">
@@ -16,7 +16,6 @@
             <div>
                 <button (click)="back()" class="bt-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
             </div>
-
         </div>
     </div>
     <div class="body">
