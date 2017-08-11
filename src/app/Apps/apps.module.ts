@@ -16,6 +16,7 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 import { SettingService } from '../Share/Services/setting.service';
 // import { WindowComponent } from '../Share/Components/window/window.component';
 import { ShareModule } from '../Share/Components/share.module';
+import { BaithuocComponent } from './Baithuoc/Baithuoc.component';
 
 
 const routing: Routes = [
@@ -23,6 +24,7 @@ const routing: Routes = [
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+
             { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
             { path: '**', component: EmptyComponent },
         ],
@@ -46,6 +48,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         EmptyComponent,
         LeftMenuComponent,
         // WindowComponent
+        BaithuocComponent,
     ],
     providers: [
         SettingService
