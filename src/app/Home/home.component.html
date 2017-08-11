@@ -65,7 +65,12 @@
                                             <!-- xanh hoat dong 30%: status -->
                                             <!-- Demo %: status -->
                                             <!-- Dang phat trien %: status -->
-                                            <span> Hoạt động {{item.PhanTramTrangThai}}% <span *ngIf="item.Status">: {{item.Status}}</span></span>
+                                            <span>
+                                                <span *ngIf="item.TrangThaiHoatDong == 2">Hoạt động</span>
+                                                <span *ngIf="item.TrangThaiHoatDong == 1">Demo</span>
+                                                <span *ngIf="item.TrangThaiHoatDong == 0">Đang phát triển</span>...{{item.PhanTramTrangThai}}%
+                                                <span *ngIf="item.Status">: {{item.Status}}</span>
+                                            </span>
                                         </div>
                                         <!-- Loại ô 1 -->
                                         <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" >

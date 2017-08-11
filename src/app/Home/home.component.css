@@ -379,8 +379,6 @@
     position: relative;
 }
 
-
-
 .m-item:hover {
     text-decoration: none;
 }
@@ -398,7 +396,6 @@
 .m-cover.improving {
     border-color: #FFCC00;
 }
-
 
 .m-categories {
     margin-bottom: 20px;
@@ -539,7 +536,6 @@
     z-index: 10000;
 }
 
-
 .progress.improving .progress-bar {
     background-color: #FFFC00;
 }
@@ -600,24 +596,30 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    right:10px;
+    right: 10px;
     z-index: 1;
     font-size: 12px;
     padding: 0 5px;
-    background-color: rgba(0, 0, 0, .5)
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
 }
+
 .status.active {
     color: #00CDAC;
 }
-.status.inactive{
+
+.status.inactive {
     color: #F94E4E;
 }
-.status.improving{
+
+.status.improving {
     color: #FFCC00;
 }
-.grid-item:hover .status{
+
+.grid-item:hover .status {
     display: block;
 }
+
 .m-item:nth-child(n+2) .progress.mb .progress-bar {
     background-color: #FFCC00;
     height: 60% !important;
