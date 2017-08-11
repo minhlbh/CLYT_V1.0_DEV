@@ -376,32 +376,10 @@
     padding: 7px 10px;
     margin: 0;
     border-bottom: rgba(0, 0, 0, .1) 1px solid;
-    border-left: 4px solid;
+    position: relative;
 }
 
-.m-item:nth-child(n+2) {
-    border-left-color: #FFCC00;
-}
 
-.m-item:nth-child(n+3) {
-    border-left-color: #A80000;
-}
-
-.m-item:nth-child(n+4) {
-    border-left-color: #00CDAC;
-}
-
-.m-item:nth-child(n+5) {
-    border-left-color: #FFCC00;
-}
-
-.m-item:nth-child(n+6) {
-    border-left-color: #A80000;
-}
-
-.m-item:nth-child(n+7) {
-    border-left-color: #00CDAC;
-}
 
 .m-item:hover {
     text-decoration: none;
@@ -417,17 +395,7 @@
     background-size: cover;
 }
 
-.m-cover.improving {
-    border-color: #FFCC00; 
-}
 
-.m-cover.active {
-    border-color: #00CDAC;
-}
-
-.m-cover.inactive {
-    border-color: #A80000;
-}
 
 .m-categories {
     margin-bottom: 20px;
@@ -555,7 +523,7 @@
     padding: 0;
     border-radius: 0;
     box-shadow: none;
-    height: 5px;
+    height: 2px;
     z-index: 10000;
 }
 
@@ -565,11 +533,11 @@
 }
 
 .progress.active .progress-bar {
-    background-color: #00CDAC;
+    background-color: #7FFF24;
 }
 
 .progress.inactive .progress-bar {
-    background-color: #A80000; 
+    background-color: #FF8080; 
 }
 
 .show-all {
@@ -578,4 +546,69 @@
 
 .show-all:hover {
     text-decoration: none;
+}
+
+.progress.mb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%;
+    z-index: 10000;
+    width: 3px;
+    background: #e5e5e5;
+    transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+
+.progress.mb .progress-bar {
+    width: 3px;
+}
+
+.progress.mb.improving .progress-bar {
+    background-color: #FFCC00; 
+}
+
+.progress.mb.active .progress-bar {
+    background-color: #00CDAC;
+}
+
+.progress.mb.inactive .progress-bar {
+    background-color: #A80000; 
+}
+
+
+.m-item:nth-child(n+2) .progress.mb .progress-bar {
+    background-color: #FFCC00;
+    height: 60% !important;
+}
+
+.m-item:nth-child(n+3) .progress.mb .progress-bar {
+    background-color: #A80000;
+    height: 50% !important;
+}
+
+.m-item:nth-child(n+4) .progress.mb .progress-bar {
+    background-color: #00CDAC;
+    height: 90% !important;
+}
+
+.m-item:nth-child(n+5) .progress.mb .progress-bar {
+    background-color: #FFCC00;
+    height: 55% !important;
+}
+
+.m-item:nth-child(n+6) .progress.mb .progress-bar {
+    background-color: #A80000;
+    height: 30% !important;
+}
+
+.m-item:nth-child(n+7) .progress.mb .progress-bar {
+    background-color: #00CDAC;
 }
