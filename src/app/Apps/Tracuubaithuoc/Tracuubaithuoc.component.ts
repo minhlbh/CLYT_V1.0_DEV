@@ -8,6 +8,9 @@ import { SettingService } from '../../Share/Services/setting.service';
     styleUrls: ['./Tracuubaithuoc.component.css']
 })
 export class TracuubaithuocComponent implements OnInit {
+        menu: any;
+        iconText: any;
+        name: any;
 
     constructor(
         private settingService: SettingService,

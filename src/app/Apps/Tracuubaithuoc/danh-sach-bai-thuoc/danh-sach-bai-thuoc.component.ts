@@ -19,17 +19,27 @@ export class DanhSachBaiThuocComponent implements OnInit {
     urlIdea: any;
     idIdea: any;
 
-    DsBaithuoc: Baithuoc[];
+    DsBaiThuoc: Baithuoc[];
+    DsViThuoc: Baithuoc[];
+    DsChePhamThuoc: Baithuoc[];
+    DsDuocThien: Baithuoc[];
     TongSoLuong: number;
     startBaithuoc: number;
     endBaithuoc: number;
+    startVithuoc: number;
+    endVithuoc: number;
+    startChephamthuoc: number;
+    endChephamthuoc: number;
+    startDuocthien: number;
+    endDuocthien: number;
+
     public id: any;
     public empty = false;
     public page = 1;
     public url: any;
 
     constructor(
-        // nhớ khai báo service
+
         private baithuocService: BaithuocService,
         private router: Router,
         private activedroute: ActivatedRoute,
@@ -39,12 +49,35 @@ export class DanhSachBaiThuocComponent implements OnInit {
     }
 
     ngOnInit() {
-        // Hàm lấy dữ liệu bệnh
+
+
+        // Hàm lấy dữ liệu bài thuốc
         this.baithuocService.getBaithuoc(1).subscribe(data => {
-            this.DsBaithuoc = data.DsBaithuoc;
+
+            this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
             this.TongSoLuong = data.TongSoLuong;
             this.startBaithuoc = 0;
             this.endBaithuoc = 50;
+
+
+            this.DsViThuoc = data.DsViThuoc.DsViThuoc;
+            this.TongSoLuong = data.TongSoLuong;
+            this.startVithuoc = 0;
+            this.endVithuoc = 50;
+
+
+            this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
+            this.TongSoLuong = data.TongSoLuong;
+            this.startChephamthuoc = 0;
+            this.endChephamthuoc = 50;
+
+
+            this.DsDuocThien = data.DsDuocThien.DsDuocThien;
+            this.TongSoLuong = data.TongSoLuong;
+            this.startDuocthien = 0;
+            this.endDuocthien = 50;
+
+
         });
         this.menu = this.settingService.getMenu();
         for (let i = 0; i < this.menu.length; i++) {

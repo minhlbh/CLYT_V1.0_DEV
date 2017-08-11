@@ -14,8 +14,8 @@ import { DanhSachBaiThuocComponent } from './danh-sach-bai-thuoc/danh-sach-bai-t
 
 
 const routing: Routes = [
-    { path: '', component: TracuubaithuocComponent },
-    // { path: ':id', component: DanhSachBaiThuocComponent },
+    { path: '', component: DanhSachBaiThuocComponent },
+
 ];
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 
@@ -28,7 +28,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ShareModule
     ],
     declarations: [
-        TracuubaithuocComponent
+        TracuubaithuocComponent,
+        DanhSachBaiThuocComponent
     ],
     providers: [
         BaithuocService,

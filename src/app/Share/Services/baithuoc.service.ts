@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class BaithuocService {
     constructor(private http: Http) { }
-    private thuocUrl = `${environment.apiUrl}/CSDLYT/DongY_BaiThuoc_List`;
+    private thuocUrl = `${environment.apiUrl}/CSDLYT/DongY_FirstList`;
     getBaithuoc(page): Observable<any> {
         // ...using get request
         return this.http.get(`${this.thuocUrl}?Trang=${page}&soluongmoitrang=50`)
@@ -29,5 +29,6 @@ export class Baithuoc {
     ) {
 
     }
+
 
 }
