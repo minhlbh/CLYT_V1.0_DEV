@@ -3701,7 +3701,7 @@ var root_1 = __webpack_require__("../../../../rxjs/util/root.js");
 var toSubscriber_1 = __webpack_require__("../../../../rxjs/util/toSubscriber.js");
 var observable_1 = __webpack_require__("../../../../rxjs/symbol/observable.js");
 /**
- * A representation of any set of values over any amount of time. This the most basic building block
+ * A representation of any set of values over any amount of time. This is the most basic building block
  * of RxJS.
  *
  * @class Observable<T>
@@ -3709,7 +3709,7 @@ var observable_1 = __webpack_require__("../../../../rxjs/symbol/observable.js");
 var Observable = (function () {
     /**
      * @constructor
-     * @param {Function} subscribe the function that is  called when the Observable is
+     * @param {Function} subscribe the function that is called when the Observable is
      * initially subscribed to. This function is given a Subscriber, to which new values
      * can be `next`ed, or an `error` method can be called to raise an error, or
      * `complete` can be called to notify of a successful completion.
@@ -3738,7 +3738,7 @@ var Observable = (function () {
      *
      * <span class="informal">Use it when you have all these Observables, but still nothing is happening.</span>
      *
-     * `subscribe` is not a regular operator, but a method that calls Observables internal `subscribe` function. It
+     * `subscribe` is not a regular operator, but a method that calls Observable's internal `subscribe` function. It
      * might be for example a function that you passed to a {@link create} static factory, but most of the time it is
      * a library implementation, which defines what and when will be emitted by an Observable. This means that calling
      * `subscribe` is actually the moment when Observable starts its work, not when it is created, as it is often
@@ -3780,7 +3780,7 @@ var Observable = (function () {
      *     console.log('Adding: ' + value);
      *     this.sum = this.sum + value;
      *   },
-     *   error() { // We actually could just remote this method,
+     *   error() { // We actually could just remove this method,
      *   },        // since we do not really care about errors right now.
      *   complete() {
      *     console.log('Sum equals: ' + this.sum);
@@ -3835,7 +3835,7 @@ var Observable = (function () {
      * // Logs:
      * // 0 after 1s
      * // 1 after 2s
-     * // "unsubscribed!" after 2,5s
+     * // "unsubscribed!" after 2.5s
      *
      *
      * @param {Observer|Function} observerOrNext (optional) Either an observer with methods to be called,
@@ -5263,8 +5263,8 @@ Observable_1.Observable.fromPromise = fromPromise_1.fromPromise;
 "use strict";
 
 var Observable_1 = __webpack_require__("../../../../rxjs/Observable.js");
-var GenerateObservable_1 = __webpack_require__("../../../../rxjs/observable/GenerateObservable.js");
-Observable_1.Observable.generate = GenerateObservable_1.GenerateObservable.create;
+var generate_1 = __webpack_require__("../../../../rxjs/observable/generate.js");
+Observable_1.Observable.generate = generate_1.generate;
 //# sourceMappingURL=generate.js.map
 
 /***/ }),
@@ -5335,8 +5335,8 @@ Observable_1.Observable.of = of_1.of;
 "use strict";
 
 var Observable_1 = __webpack_require__("../../../../rxjs/Observable.js");
-var onErrorResumeNext_1 = __webpack_require__("../../../../rxjs/operator/onErrorResumeNext.js");
-Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
+var onErrorResumeNext_1 = __webpack_require__("../../../../rxjs/observable/onErrorResumeNext.js");
+Observable_1.Observable.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNext;
 //# sourceMappingURL=onErrorResumeNext.js.map
 
 /***/ }),
@@ -5359,8 +5359,8 @@ Observable_1.Observable.pairs = pairs_1.pairs;
 "use strict";
 
 var Observable_1 = __webpack_require__("../../../../rxjs/Observable.js");
-var race_1 = __webpack_require__("../../../../rxjs/operator/race.js");
-Observable_1.Observable.race = race_1.raceStatic;
+var race_1 = __webpack_require__("../../../../rxjs/observable/race.js");
+Observable_1.Observable.race = race_1.race;
 //# sourceMappingURL=race.js.map
 
 /***/ }),
@@ -10505,6 +10505,17 @@ exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 
 /***/ }),
 
+/***/ "../../../../rxjs/observable/generate.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var GenerateObservable_1 = __webpack_require__("../../../../rxjs/observable/GenerateObservable.js");
+exports.generate = GenerateObservable_1.GenerateObservable.create;
+//# sourceMappingURL=generate.js.map
+
+/***/ }),
+
 /***/ "../../../../rxjs/observable/if.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10560,6 +10571,17 @@ exports.of = ArrayObservable_1.ArrayObservable.of;
 
 /***/ }),
 
+/***/ "../../../../rxjs/observable/onErrorResumeNext.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var onErrorResumeNext_1 = __webpack_require__("../../../../rxjs/operator/onErrorResumeNext.js");
+exports.onErrorResumeNext = onErrorResumeNext_1.onErrorResumeNextStatic;
+//# sourceMappingURL=onErrorResumeNext.js.map
+
+/***/ }),
+
 /***/ "../../../../rxjs/observable/pairs.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10568,6 +10590,17 @@ exports.of = ArrayObservable_1.ArrayObservable.of;
 var PairsObservable_1 = __webpack_require__("../../../../rxjs/observable/PairsObservable.js");
 exports.pairs = PairsObservable_1.PairsObservable.create;
 //# sourceMappingURL=pairs.js.map
+
+/***/ }),
+
+/***/ "../../../../rxjs/observable/race.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var race_1 = __webpack_require__("../../../../rxjs/operator/race.js");
+exports.race = race_1.raceStatic;
+//# sourceMappingURL=race.js.map
 
 /***/ }),
 
@@ -14294,7 +14327,6 @@ var FilterSubscriber = (function (_super) {
         this.predicate = predicate;
         this.thisArg = thisArg;
         this.count = 0;
-        this.predicate = predicate;
     }
     // the try catch block below is left specifically for
     // optimization and perf reasons. a tryCatcher is not necessary here.
@@ -16543,7 +16575,7 @@ var subscribeToResult_1 = __webpack_require__("../../../../rxjs/util/subscribeTo
  * be happening until there is no more Observables left in the series, at which point returned Observable will
  * complete - even if the last subscribed stream ended with an error.
  *
- * `onErrorResumeNext` can be therefore though of as version of {@link concat} operator, which is more permissive
+ * `onErrorResumeNext` can be therefore thought of as version of {@link concat} operator, which is more permissive
  * when it comes to the errors emitted by its input Observables. While `concat` subscribes to the next Observable
  * in series only if previous one successfully completed, `onErrorResumeNext` subscribes even if it ended with
  * an error.
@@ -19764,9 +19796,67 @@ var isDate_1 = __webpack_require__("../../../../rxjs/util/isDate.js");
 var Subscriber_1 = __webpack_require__("../../../../rxjs/Subscriber.js");
 var TimeoutError_1 = __webpack_require__("../../../../rxjs/util/TimeoutError.js");
 /**
- * @param {number} due
- * @param {Scheduler} [scheduler]
- * @return {Observable<R>|WebSocketSubject<T>|Observable<T>}
+ *
+ * Errors if Observable does not emit a value in given time span.
+ *
+ * <span class="informal">Timeouts on Observable that doesn't emit values fast enough.</span>
+ *
+ * <img src="./img/timeout.png" width="100%">
+ *
+ * `timeout` operator accepts as an argument either a number or a Date.
+ *
+ * If number was provided, it returns an Observable that behaves like a source
+ * Observable, unless there is a period of time where there is no value emitted.
+ * So if you provide `100` as argument and first value comes after 50ms from
+ * the moment of subscription, this value will be simply re-emitted by the resulting
+ * Observable. If however after that 100ms passes without a second value being emitted,
+ * stream will end with an error and source Observable will be unsubscribed.
+ * These checks are performed throughout whole lifecycle of Observable - from the moment
+ * it was subscribed to, until it completes or errors itself. Thus every value must be
+ * emitted within specified period since previous value.
+ *
+ * If provided argument was Date, returned Observable behaves differently. It throws
+ * if Observable did not complete before provided Date. This means that periods between
+ * emission of particular values do not matter in this case. If Observable did not complete
+ * before provided Date, source Observable will be unsubscribed. Other than that, resulting
+ * stream behaves just as source Observable.
+ *
+ * `timeout` accepts also a Scheduler as a second parameter. It is used to schedule moment (or moments)
+ * when returned Observable will check if source stream emitted value or completed.
+ *
+ * @example <caption>Check if ticks are emitted within certain timespan</caption>
+ * const seconds = Rx.Observable.interval(1000);
+ *
+ * seconds.timeout(1100) // Let's use bigger timespan to be safe,
+ *                       // since `interval` might fire a bit later then scheduled.
+ * .subscribe(
+ *     value => console.log(value), // Will emit numbers just as regular `interval` would.
+ *     err => console.log(err) // Will never be called.
+ * );
+ *
+ * seconds.timeout(900).subscribe(
+ *     value => console.log(value), // Will never be called.
+ *     err => console.log(err) // Will emit error before even first value is emitted,
+ *                             // since it did not arrive within 900ms period.
+ * );
+ *
+ * @example <caption>Use Date to check if Observable completed</caption>
+ * const seconds = Rx.Observable.interval(1000);
+ *
+ * seconds.timeout(new Date("December 17, 2020 03:24:00"))
+ * .subscribe(
+ *     value => console.log(value), // Will emit values as regular `interval` would
+ *                                  // until December 17, 2020 at 03:24:00.
+ *     err => console.log(err) // On December 17, 2020 at 03:24:00 it will emit an error,
+ *                             // since Observable did not complete by then.
+ * );
+ *
+ * @see {@link timeoutWith}
+ *
+ * @param {number|Date} due Number specifying period within which Observable must emit values
+ *                          or Date specifying before when Observable should complete
+ * @param {Scheduler} [scheduler] Scheduler controlling when timeout checks occur.
+ * @return {Observable<T>} Observable that mirrors behaviour of source, unless timeout checks fail.
  * @method timeout
  * @owner Observable
  */
@@ -23837,7 +23927,7 @@ module.exports = g;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return AnimationGroupPlayer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ɵPRE_STYLE; });
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -24263,10 +24353,11 @@ function style(tokens) {
  * \@experimental Animation support is experimental.
  * @param {?} name
  * @param {?} styles
+ * @param {?=} options
  * @return {?}
  */
-function state(name, styles) {
-    return { type: 0 /* State */, name: name, styles: styles };
+function state(name, styles, options) {
+    return { type: 0 /* State */, name: name, styles: styles, options: options };
 }
 /**
  * `keyframes` is an animation-specific function that is designed to be used inside of Angular's
@@ -25152,7 +25243,7 @@ var ɵPRE_STYLE = '!';
 /* unused harmony export ɵWebAnimationsPlayer */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -25347,6 +25438,8 @@ AnimationDriver.NOOP = new NoopAnimationDriver();
  * found in the LICENSE file at https://angular.io/license
  */
 var ONE_SECOND = 1000;
+var SUBSTITUTION_EXPR_START = '{{';
+var SUBSTITUTION_EXPR_END = '}}';
 var ENTER_CLASSNAME = 'ng-enter';
 var LEAVE_CLASSNAME = 'ng-leave';
 var ENTER_SELECTOR = '.ng-enter';
@@ -25473,10 +25566,8 @@ function normalizeAnimationEntry(steps) {
 }
 function validateStyleParams(value, options, errors) {
     var params = options.params || {};
-    if (typeof value !== 'string')
-        return;
-    var matches = value.toString().match(PARAM_REGEX);
-    if (matches) {
+    var matches = extractStyleParams(value);
+    if (matches.length) {
         matches.forEach(function (varName) {
             if (!params.hasOwnProperty(varName)) {
                 errors.push("Unable to resolve the local animation param " + varName + " in the given list of values");
@@ -25484,7 +25575,19 @@ function validateStyleParams(value, options, errors) {
         });
     }
 }
-var PARAM_REGEX = /\{\{\s*(.+?)\s*\}\}/g;
+var PARAM_REGEX = new RegExp(SUBSTITUTION_EXPR_START + "\\s*(.+?)\\s*" + SUBSTITUTION_EXPR_END, 'g');
+function extractStyleParams(value) {
+    var params = [];
+    if (typeof value === 'string') {
+        var val = value.toString();
+        var match = void 0;
+        while (match = PARAM_REGEX.exec(val)) {
+            params.push(match[1]);
+        }
+        PARAM_REGEX.lastIndex = 0;
+    }
+    return params;
+}
 function interpolateParams(value, params, errors) {
     var original = value.toString();
     var str = original.replace(PARAM_REGEX, function (_, varName) {
@@ -25507,21 +25610,6 @@ function iteratorToArray(iterator) {
         item = iterator.next();
     }
     return arr;
-}
-function mergeAnimationOptions(source, destination) {
-    if (source.params) {
-        var p0_1 = source.params;
-        if (!destination.params) {
-            destination.params = {};
-        }
-        var p1_1 = destination.params;
-        Object.keys(p0_1).forEach(function (param) {
-            if (!p1_1.hasOwnProperty(param)) {
-                p1_1[param] = p0_1[param];
-            }
-        });
-    }
-    return destination;
 }
 var DASH_CASE_REGEXP = /-+([a-z0-9])/g;
 function dashCaseToCamelCase(input) {
@@ -25703,6 +25791,7 @@ var StyleAst = (function (_super) {
         _this.easing = easing;
         _this.offset = offset;
         _this.isEmptyStep = false;
+        _this.containsDynamicStyles = false;
         return _this;
     }
     /**
@@ -26085,7 +26174,33 @@ var AnimationAstBuilderVisitor = (function () {
      * @return {?}
      */
     AnimationAstBuilderVisitor.prototype.visitState = function (metadata, context) {
-        return new StateAst(metadata.name, this.visitStyle(metadata.styles, context));
+        var /** @type {?} */ styleAst = this.visitStyle(metadata.styles, context);
+        var /** @type {?} */ astParams = (metadata.options && metadata.options.params) || null;
+        if (styleAst.containsDynamicStyles) {
+            var /** @type {?} */ missingSubs_1 = new Set();
+            var /** @type {?} */ params_1 = astParams || {};
+            styleAst.styles.forEach(function (value) {
+                if (isObject(value)) {
+                    var /** @type {?} */ stylesObj_1 = (value);
+                    Object.keys(stylesObj_1).forEach(function (prop) {
+                        extractStyleParams(stylesObj_1[prop]).forEach(function (sub) {
+                            if (!params_1.hasOwnProperty(sub)) {
+                                missingSubs_1.add(sub);
+                            }
+                        });
+                    });
+                }
+            });
+            if (missingSubs_1.size) {
+                var /** @type {?} */ missingSubsArr = iteratorToArray(missingSubs_1.values());
+                context.errors.push("state(\"" + metadata.name + "\", ...) must define default values for all the following style substitutions: " + missingSubsArr.join(', '));
+            }
+        }
+        var /** @type {?} */ stateAst = new StateAst(metadata.name, styleAst);
+        if (astParams) {
+            stateAst.options = { params: astParams };
+        }
+        return stateAst;
     };
     /**
      * @param {?} metadata
@@ -26201,6 +26316,7 @@ var AnimationAstBuilderVisitor = (function () {
         else {
             styles.push(metadata.styles);
         }
+        var /** @type {?} */ containsDynamicStyles = false;
         var /** @type {?} */ collectedEasing = null;
         styles.forEach(function (styleData) {
             if (isObject(styleData)) {
@@ -26210,9 +26326,20 @@ var AnimationAstBuilderVisitor = (function () {
                     collectedEasing = (easing);
                     delete styleMap['easing'];
                 }
+                if (!containsDynamicStyles) {
+                    for (var /** @type {?} */ prop in styleMap) {
+                        var /** @type {?} */ value = styleMap[prop];
+                        if (value.toString().indexOf(SUBSTITUTION_EXPR_START) >= 0) {
+                            containsDynamicStyles = true;
+                            break;
+                        }
+                    }
+                }
             }
         });
-        return new StyleAst(styles, collectedEasing, metadata.offset);
+        var /** @type {?} */ ast = new StyleAst(styles, collectedEasing, metadata.offset);
+        ast.containsDynamicStyles = containsDynamicStyles;
+        return ast;
     };
     /**
      * @param {?} ast
@@ -27025,8 +27152,8 @@ var AnimationTimelineContext = (function () {
         if (this.options) {
             var /** @type {?} */ oldParams_1 = this.options.params;
             if (oldParams_1) {
-                var /** @type {?} */ params_1 = options['params'] = {};
-                Object.keys(this.options.params).forEach(function (name) { params_1[name] = oldParams_1[name]; });
+                var /** @type {?} */ params_2 = options['params'] = {};
+                Object.keys(this.options.params).forEach(function (name) { params_2[name] = oldParams_1[name]; });
             }
         }
         return options;
@@ -27677,6 +27804,7 @@ function createTransitionInstruction(element, triggerName, fromState, toState, i
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
+var EMPTY_OBJECT = {};
 var AnimationTransitionFactory = (function () {
     /**
      * @param {?} _triggerName
@@ -27697,24 +27825,39 @@ var AnimationTransitionFactory = (function () {
         return oneOrMoreTransitionsMatch(this.ast.matchers, currentState, nextState);
     };
     /**
+     * @param {?} stateName
+     * @param {?} params
+     * @param {?} errors
+     * @return {?}
+     */
+    AnimationTransitionFactory.prototype.buildStyles = function (stateName, params, errors) {
+        var /** @type {?} */ backupStateStyler = this._stateStyles['*'];
+        var /** @type {?} */ stateStyler = this._stateStyles[stateName];
+        var /** @type {?} */ backupStyles = backupStateStyler ? backupStateStyler.buildStyles(params, errors) : {};
+        return stateStyler ? stateStyler.buildStyles(params, errors) : backupStyles;
+    };
+    /**
      * @param {?} driver
      * @param {?} element
      * @param {?} currentState
      * @param {?} nextState
-     * @param {?=} options
+     * @param {?=} currentOptions
+     * @param {?=} nextOptions
      * @param {?=} subInstructions
      * @return {?}
      */
-    AnimationTransitionFactory.prototype.build = function (driver, element, currentState, nextState, options, subInstructions) {
-        var /** @type {?} */ animationOptions = mergeAnimationOptions(this.ast.options || {}, options || {});
-        var /** @type {?} */ backupStateStyles = this._stateStyles['*'] || {};
-        var /** @type {?} */ currentStateStyles = this._stateStyles[currentState] || backupStateStyles;
-        var /** @type {?} */ nextStateStyles = this._stateStyles[nextState] || backupStateStyles;
+    AnimationTransitionFactory.prototype.build = function (driver, element, currentState, nextState, currentOptions, nextOptions, subInstructions) {
+        var /** @type {?} */ errors = [];
+        var /** @type {?} */ transitionAnimationParams = this.ast.options && this.ast.options.params || EMPTY_OBJECT;
+        var /** @type {?} */ currentAnimationParams = currentOptions && currentOptions.params || EMPTY_OBJECT;
+        var /** @type {?} */ currentStateStyles = this.buildStyles(currentState, currentAnimationParams, errors);
+        var /** @type {?} */ nextAnimationParams = nextOptions && nextOptions.params || EMPTY_OBJECT;
+        var /** @type {?} */ nextStateStyles = this.buildStyles(nextState, nextAnimationParams, errors);
         var /** @type {?} */ queriedElements = new Set();
         var /** @type {?} */ preStyleMap = new Map();
         var /** @type {?} */ postStyleMap = new Map();
         var /** @type {?} */ isRemoval = nextState === 'void';
-        var /** @type {?} */ errors = [];
+        var /** @type {?} */ animationOptions = { params: Object.assign({}, transitionAnimationParams, nextAnimationParams) };
         var /** @type {?} */ timelines = buildAnimationTimelines(driver, element, this.ast.animation, currentStateStyles, nextStateStyles, animationOptions, subInstructions, errors);
         if (errors.length) {
             return createTransitionInstruction(element, this._triggerName, currentState, nextState, isRemoval, currentStateStyles, nextStateStyles, [], [], preStyleMap, postStyleMap, errors);
@@ -27743,6 +27886,45 @@ var AnimationTransitionFactory = (function () {
 function oneOrMoreTransitionsMatch(matchFns, currentState, nextState) {
     return matchFns.some(function (fn) { return fn(currentState, nextState); });
 }
+var AnimationStateStyles = (function () {
+    /**
+     * @param {?} styles
+     * @param {?} defaultParams
+     */
+    function AnimationStateStyles(styles, defaultParams) {
+        this.styles = styles;
+        this.defaultParams = defaultParams;
+    }
+    /**
+     * @param {?} params
+     * @param {?} errors
+     * @return {?}
+     */
+    AnimationStateStyles.prototype.buildStyles = function (params, errors) {
+        var /** @type {?} */ finalStyles = {};
+        var /** @type {?} */ combinedParams = copyObj(this.defaultParams);
+        Object.keys(params).forEach(function (key) {
+            var /** @type {?} */ value = params[key];
+            if (value != null) {
+                combinedParams[key] = value;
+            }
+        });
+        this.styles.styles.forEach(function (value) {
+            if (typeof value !== 'string') {
+                var /** @type {?} */ styleObj_1 = (value);
+                Object.keys(styleObj_1).forEach(function (prop) {
+                    var /** @type {?} */ val = styleObj_1[prop];
+                    if (val.length > 1) {
+                        val = interpolateParams(val, combinedParams, errors);
+                    }
+                    finalStyles[prop] = val;
+                });
+            }
+        });
+        return finalStyles;
+    };
+    return AnimationStateStyles;
+}());
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -27774,12 +27956,8 @@ var AnimationTrigger = (function () {
         this.transitionFactories = [];
         this.states = {};
         ast.states.forEach(function (ast) {
-            var obj = _this.states[ast.name] = {};
-            ast.style.styles.forEach(function (styleTuple) {
-                if (typeof styleTuple == 'object') {
-                    copyStyles(styleTuple, false, obj);
-                }
-            });
+            var defaultParams = (ast.options && ast.options.params) || {};
+            _this.states[ast.name] = new AnimationStateStyles(ast.style, defaultParams);
         });
         balanceProperties(this.states, 'true', '1');
         balanceProperties(this.states, 'false', '0');
@@ -27804,6 +27982,15 @@ var AnimationTrigger = (function () {
     AnimationTrigger.prototype.matchTransition = function (currentState, nextState) {
         var /** @type {?} */ entry = this.transitionFactories.find(function (f) { return f.match(currentState, nextState); });
         return entry || null;
+    };
+    /**
+     * @param {?} currentState
+     * @param {?} params
+     * @param {?} errors
+     * @return {?}
+     */
+    AnimationTrigger.prototype.matchStyles = function (currentState, params, errors) {
+        return this.fallbackTransition.buildStyles(currentState, params, errors);
     };
     return AnimationTrigger;
 }());
@@ -28049,6 +28236,14 @@ var StateValue = (function () {
             this.options.params = {};
         }
     }
+    Object.defineProperty(StateValue.prototype, "params", {
+        /**
+         * @return {?}
+         */
+        get: function () { return (this.options.params); },
+        enumerable: true,
+        configurable: true
+    });
     /**
      * @param {?} options
      * @return {?}
@@ -28192,8 +28387,25 @@ var AnimationTransitionNamespace = (function () {
         // The removal arc here is special cased because the same element is triggered
         // twice in the event that it contains animations on the outer/inner portions
         // of the host container
-        if (!isRemoval && fromState.value === toState.value)
+        if (!isRemoval && fromState.value === toState.value) {
+            // this means that despite the value not changing, some inner params
+            // have changed which means that the animation final styles need to be applied
+            if (!objEquals(fromState.params, toState.params)) {
+                var /** @type {?} */ errors = [];
+                var /** @type {?} */ fromStyles_1 = trigger.matchStyles(fromState.value, fromState.params, errors);
+                var /** @type {?} */ toStyles_1 = trigger.matchStyles(toState.value, toState.params, errors);
+                if (errors.length) {
+                    this._engine.reportError(errors);
+                }
+                else {
+                    this._engine.afterFlush(function () {
+                        eraseStyles(element, fromStyles_1);
+                        setStyles(element, toStyles_1);
+                    });
+                }
+            }
             return;
+        }
         var /** @type {?} */ playersOnElement = getOrSetAsInMap(this._engine.playersByElement, element, []);
         playersOnElement.forEach(function (player) {
             // only remove the player if it is queued on the EXACT same trigger/namespace
@@ -28720,7 +28932,7 @@ var TransitionAnimationEngine = (function () {
      * @return {?}
      */
     TransitionAnimationEngine.prototype._buildInstruction = function (entry, subTimelines) {
-        return entry.transition.build(this.driver, entry.element, entry.fromState.value, entry.toState.value, entry.toState.options, subTimelines);
+        return entry.transition.build(this.driver, entry.element, entry.fromState.value, entry.toState.value, entry.fromState.options, entry.toState.options, subTimelines);
     };
     /**
      * @param {?} containerElement
@@ -28851,6 +29063,13 @@ var TransitionAnimationEngine = (function () {
         }
     };
     /**
+     * @param {?} errors
+     * @return {?}
+     */
+    TransitionAnimationEngine.prototype.reportError = function (errors) {
+        throw new Error("Unable to process animations due to the following failed trigger transitions\n " + errors.join("\n"));
+    };
+    /**
      * @param {?} cleanupFns
      * @param {?} microtaskId
      * @return {?}
@@ -28957,13 +29176,13 @@ var TransitionAnimationEngine = (function () {
             });
         }
         if (erroneousTransitions.length) {
-            var /** @type {?} */ msg_1 = "Unable to process animations due to the following failed trigger transitions\n";
+            var /** @type {?} */ errors_1 = [];
             erroneousTransitions.forEach(function (instruction) {
-                msg_1 += "@" + instruction.triggerName + " has failed due to:\n"; /** @type {?} */
-                ((instruction.errors)).forEach(function (error) { msg_1 += "- " + error + "\n"; });
+                errors_1.push("@" + instruction.triggerName + " has failed due to:\n"); /** @type {?} */
+                ((instruction.errors)).forEach(function (error) { return errors_1.push("- " + error + "\n"); });
             });
             allPlayers.forEach(function (player) { return player.destroy(); });
-            throw new Error(msg_1);
+            this.reportError(errors_1);
         }
         // these can only be detected here since we have a map of all the elements
         // that have animations attached to them...
@@ -29227,7 +29446,16 @@ var TransitionAnimationEngine = (function () {
             if (details && details.removedBeforeQueried)
                 return new __WEBPACK_IMPORTED_MODULE_1__angular_animations__["d" /* NoopAnimationPlayer */]();
             var /** @type {?} */ isQueriedElement = element !== rootElement;
-            var /** @type {?} */ previousPlayers = flattenGroupPlayers((allPreviousPlayersMap.get(element) || EMPTY_PLAYER_ARRAY).map(function (p) { return p.getRealPlayer(); }));
+            var /** @type {?} */ previousPlayers = flattenGroupPlayers((allPreviousPlayersMap.get(element) || EMPTY_PLAYER_ARRAY)
+                .map(function (p) { return p.getRealPlayer(); }))
+                .filter(function (p) {
+                // the `element` is not apart of the AnimationPlayer definition, but
+                // Mock/WebAnimations
+                // use the element within their implementation. This will be added in Angular5 to
+                // AnimationPlayer
+                var /** @type {?} */ pp = (p);
+                return pp.element ? pp.element === element : false;
+            });
             var /** @type {?} */ preStyles = preStylesMap.get(element);
             var /** @type {?} */ postStyles = postStylesMap.get(element);
             var /** @type {?} */ keyframes = normalizeKeyframes(_this.driver, _this._normalizer, element, timelineInstruction.keyframes, preStyles, postStyles);
@@ -29632,6 +29860,23 @@ function _flattenGroupPlayersRecur(players, finalPlayers) {
     }
 }
 /**
+ * @param {?} a
+ * @param {?} b
+ * @return {?}
+ */
+function objEquals(a, b) {
+    var /** @type {?} */ k1 = Object.keys(a);
+    var /** @type {?} */ k2 = Object.keys(b);
+    if (k1.length != k2.length)
+        return false;
+    for (var /** @type {?} */ i = 0; i < k1.length; i++) {
+        var /** @type {?} */ prop = k1[i];
+        if (!b.hasOwnProperty(prop) || a[prop] !== b[prop])
+            return false;
+    }
+    return true;
+}
+/**
  * @license
  * Copyright Google Inc. All Rights Reserved.
  *
@@ -29649,8 +29894,7 @@ var AnimationEngine = (function () {
         this.onRemovalComplete = function (element, context) { };
         this._transitionEngine = new TransitionAnimationEngine(driver, normalizer);
         this._timelineEngine = new TimelineAnimationEngine(driver, normalizer);
-        this._transitionEngine.onRemovalComplete =
-            function (element, context) { _this.onRemovalComplete(element, context); };
+        this._transitionEngine.onRemovalComplete = function (element, context) { return _this.onRemovalComplete(element, context); };
     }
     /**
      * @param {?} componentId
@@ -30196,7 +30440,7 @@ function supportsWebAnimations() {
 /* unused harmony export ɵb */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -33610,8 +33854,8 @@ var ISO8601_DATE_REGEX = /^(\d{4})-?(\d\d)-?(\d\d)(?:T(\d\d)(?::?(\d\d)(?::?(\d\
  *  | month     |   M    | L (S)  | MMM (Sep)    | MMMM (September)  | M (9)     | MM (09)   |
  *  | day       |   d    | -      | -            | -                 | d (3)     | dd (03)   |
  *  | weekday   |   E    | E (S)  | EEE (Sun)    | EEEE (Sunday)     | -         | -         |
- *  | hour      |   j    | -      | -            | -                 | j (13)    | jj (13)   |
- *  | hour12    |   h    | -      | -            | -                 | h (1 PM)  | hh (01 PM)|
+ *  | hour      |   j    | -      | -            | -                 | j (1 PM)  | jj (1 PM) |
+ *  | hour12    |   h    | -      | -            | -                 | h (1)     | hh (01)   |
  *  | hour24    |   H    | -      | -            | -                 | H (13)    | HH (13)   |
  *  | minute    |   m    | -      | -            | -                 | m (5)     | mm (05)   |
  *  | second    |   s    | -      | -            | -                 | s (9)     | ss (09)   |
@@ -34139,7 +34383,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -34408,7 +34652,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3'
 /* unused harmony export removeSummaryDuplicates */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -34428,7 +34672,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3'
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -46449,7 +46693,7 @@ function extractStyleUrls(resolver, baseUrl, cssText) {
     return new StyleWithImports(modifiedCssText, foundUrls);
 }
 var CSS_IMPORT_REGEXP = /@import\s+(?:url\()?\s*(?:(?:['"]([^'"]*))|([^;\)\s]*))[^;]*;?/g;
-var CSS_COMMENT_REGEXP = /\/\*.+?\*\//g;
+var CSS_COMMENT_REGEXP = /\/\*[\s\S]+?\*\//g;
 var URL_WITH_SCHEMA_REGEXP = /^([^:/?#]+):/;
 /**
  * @license
@@ -62256,7 +62500,7 @@ function _mergeArrays(parts) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵu", function() { return DebugContext; });
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -63052,7 +63296,7 @@ var Version = (function () {
 /**
  * \@stable
  */
-var VERSION = new Version('4.3.3');
+var VERSION = new Version('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -76443,10 +76687,11 @@ function style$1(tokens) {
  * \@experimental Animation support is experimental.
  * @param {?} name
  * @param {?} styles
+ * @param {?=} options
  * @return {?}
  */
-function state$1(name, styles) {
-    return { type: 0 /* State */, name: name, styles: styles };
+function state$1(name, styles, options) {
+    return { type: 0 /* State */, name: name, styles: styles, options: options };
 }
 /**
  * `keyframes` is an animation-specific function that is designed to be used inside of Angular's
@@ -77137,7 +77382,7 @@ function transition$$1(stateChangeExpr, steps) {
 /* unused harmony export ɵr */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -77767,6 +78012,7 @@ var DefaultValueAccessor = (function () {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
     };
     /**
+     * \@internal
      * @param {?} value
      * @return {?}
      */
@@ -77776,10 +78022,12 @@ var DefaultValueAccessor = (function () {
         }
     };
     /**
+     * \@internal
      * @return {?}
      */
     DefaultValueAccessor.prototype._compositionStart = function () { this._composing = true; };
     /**
+     * \@internal
      * @param {?} value
      * @return {?}
      */
@@ -79233,7 +79481,16 @@ var ngControlStatusHost = {
 };
 /**
  * Directive automatically applied to Angular form controls that sets CSS classes
- * based on control status (valid/invalid/dirty/etc).
+ * based on control status. The following classes are applied as the properties
+ * become true:
+ *
+ * * ng-valid
+ * * ng-invalid
+ * * ng-pending
+ * * ng-pristine
+ * * ng-dirty
+ * * ng-untouched
+ * * ng-touched
  *
  * \@stable
  */
@@ -82986,7 +83243,7 @@ FormBuilder.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -83199,7 +83456,7 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 /* unused harmony export ɵd */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -85354,7 +85611,7 @@ JsonpModule.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -85400,7 +85657,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.3'
 /* unused harmony export ɵResourceLoaderImpl */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -85533,7 +85790,7 @@ var CachedResourceLoader = (function (_super) {
 /**
  * @stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -85621,7 +85878,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 /* unused harmony export ɵe */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -90028,7 +90285,7 @@ var By = (function () {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -90082,7 +90339,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3'
 /* unused harmony export ɵc */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -90923,7 +91180,7 @@ NoopAnimationsModule.ctorParameters = function () { return []; };
 /* unused harmony export ɵl */
 
 /**
- * @license Angular v4.3.3
+ * @license Angular v4.3.4
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -91566,7 +91823,7 @@ function wrapIntoObservable(value) {
         // change detection.
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(Promise.resolve(value));
     }
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(value);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(/** @type {?} */ (value));
 }
 /**
  * @license
@@ -92758,7 +93015,10 @@ function match(segmentGroup, route, segments) {
     var /** @type {?} */ res = matcher(segments, segmentGroup, route);
     if (!res) {
         return {
-            matched: false, consumedSegments: /** @type {?} */ ([]), lastChild: 0, positionalParamSegments: {},
+            matched: false,
+            consumedSegments: /** @type {?} */ ([]),
+            lastChild: 0,
+            positionalParamSegments: {},
         };
     }
     return {
@@ -95599,7 +95859,7 @@ var ActivateRoutes = (function () {
         if (context) {
             var /** @type {?} */ children = nodeChildrenAsMap(route);
             var /** @type {?} */ contexts_1 = route.value.component ? context.children : parentContexts;
-            forEach(children, function (v, k) { _this.deactivateRouteAndItsChildren(v, contexts_1); });
+            forEach(children, function (v, k) { return _this.deactivateRouteAndItsChildren(v, contexts_1); });
             if (context.outlet) {
                 // Destroy the component
                 context.outlet.deactivate();
@@ -95800,7 +96060,7 @@ function validateCommands(commands) {
  *
  * You can tell the directive to how to handle queryParams, available options are:
  *  - 'merge' merge the queryParams into the current queryParams
- *  - 'preserve' prserve the current queryParams
+ *  - 'preserve' preserve the current queryParams
  *  - default / '' use the queryParams only
  *  same options for {\@link NavigationExtras#queryParamsHandling}
  *
@@ -97173,7 +97433,7 @@ function provideRouterInitializer() {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.4');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
