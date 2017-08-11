@@ -1,4 +1,4 @@
-webpackJsonp([11],{
+webpackJsonp([12],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -7,6 +7,11 @@ var map = {
 	"./Apps/apps.module": [
 		"../../../../../src/app/Apps/apps.module.ts",
 		3,
+		0
+	],
+	"./Bantinhl7/Bantinhl7.module": [
+		"../../../../../src/app/Apps/Bantinhl7/Bantinhl7.module.ts",
+		9,
 		0
 	],
 	"./Chandoanhinhanh/Chandoanhinhanh.module": [
