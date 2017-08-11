@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ "../../../../../src/app/Home/home.component.css":
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -8,7 +8,11 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, ".block {\r\n    -webkit-box-flex: 0;\r\n        -ms-flex: 0 0 auto;\r\n            flex: 0 0 auto;\r\n    height: 100%;\r\n    overflow-y: hidden;\r\n    margin: 10px;\r\n    margin-left: 80px;\r\n}\r\n\r\n.block.fixwidth {\r\n    width: 435px;\r\n}\r\n\r\n.grid {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    width: 100%;\r\n    -ms-grid-columns: (145px)[3];\r\n        grid-template-columns: repeat(3, 145px);\r\n    grid-auto-rows: 145px;\r\n    grid-auto-columns: 145px;\r\n    grid-auto-flow: row dense;\r\n}\r\n\r\n@media screen and (max-height: 700px) {\r\n    .grid {\r\n        max-height: 435px;\r\n        overflow: hidden;\r\n    }\r\n    .g-holiz {\r\n        -ms-grid-rows: (145px)[3];\r\n            grid-template-rows: repeat(3, 145px);\r\n        grid-auto-flow: column dense;\r\n    }\r\n}\r\n\r\n@media screen and (min-height: 701px) {\r\n    .g-holiz {\r\n        -ms-grid-rows: (145px)[4];\r\n            grid-template-rows: repeat(4, 145px);\r\n        grid-auto-flow: column dense;\r\n    }\r\n}\r\n\r\n.grid-item-w2 {\r\n    -ms-grid-column: span 2;\r\n        grid-column: span 2;\r\n}\r\n\r\n.grid-item-w3 {\r\n    -ms-grid-column: span 3;\r\n        grid-column: span 3;\r\n}\r\n\r\n.grid-item-h2 {\r\n    -ms-grid-row: span 2;\r\n        grid-row: span 2;\r\n}\r\n\r\n.grid-item-h3 {\r\n    -ms-grid-row: span 3;\r\n        grid-row: span 3;\r\n}\r\n\r\n.grid-item {\r\n    padding: 5px;\r\n    float: left;\r\n    -webkit-animation: scale .25s ease-out;\r\n            animation: scale .25s ease-out;\r\n}\r\n\r\n.grid-item-w2 .title-label {\r\n    font-size: 18px;\r\n    font-weight: 600;\r\n}\r\n\r\n.grid-item-w2 .title-label-icon {\r\n    font-size: 18px;\r\n    font-weight: 600;\r\n}\r\n\r\n.icon-background img {\r\n    width: 58px;\r\n    padding-top: 10px;\r\n}\r\n\r\n.child {\r\n    padding: 5px;\r\n    background-color: gold;\r\n    width: 100%;\r\n    height: 100%;\r\n    position: relative;\r\n    float: left;\r\n    cursor: pointer;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n}\r\n\r\n.child:hover {\r\n    outline: #fff solid 3px;\r\n}\r\n\r\n@-webkit-keyframes scale {\r\n    0% {\r\n        -webkit-transform: scale(0.0);\r\n                transform: scale(0.0);\r\n    }\r\n    100% {\r\n        -webkit-transform: scale(1.0);\r\n                transform: scale(1.0);\r\n    }\r\n}\r\n\r\n@keyframes scale {\r\n    0% {\r\n        -webkit-transform: scale(0.0);\r\n                transform: scale(0.0);\r\n    }\r\n    100% {\r\n        -webkit-transform: scale(1.0);\r\n                transform: scale(1.0);\r\n    }\r\n}\r\n\r\n.title {\r\n    color: #ffffff;\r\n    font-size: 18px;\r\n    line-height: 20px;\r\n    float: left;\r\n    position: relative;\r\n    margin: 0;\r\n    width: 100%;\r\n    padding: 10px 60px 10px 5px;\r\n}\r\n\r\n.title-item {\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    width: 100%;\r\n}\r\n\r\n.count-apps {\r\n    margin-left: 5px;\r\n    color: #fff;\r\n    font-size: 12px;\r\n}\r\n\r\n.screen {\r\n    background: linear-gradient(to bottom, #10b2e1 0%, #26ceeb 31%, #b9e8fa 100%);\r\n    min-width: 100%;\r\n    height: 100%;\r\n    position: relative;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n}\r\n\r\n.title-label {\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    margin: 0;\r\n    width: 100%;\r\n    padding: 13px 10px 10px 10px;\r\n    z-index: 9999;\r\n    color: #fff;\r\n    background: linear-gradient(to top, rgba(0, 0, 0, .60) 0, rgba(255, 255, 255, .05) 100%);\r\n    font-size: 15px;\r\n}\r\n\r\n.title-label .icon img {\r\n    width: 20px;\r\n}\r\n\r\n.title-label-icon .icon img {\r\n    width: 20px;\r\n}\r\n\r\n.title-label-icon {\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    margin: 0;\r\n    width: 100%;\r\n    padding: 13px 10px 10px 10px;\r\n    z-index: 9999;\r\n    color: #fff;\r\n    font-size: 15px;\r\n}\r\n\r\n.body .grid .grid-item .child .title-label .icon img {\r\n    width: 20px;\r\n}\r\n\r\n.wrapper {\r\n    background: linear-gradient(to bottom, #10b2e1 0%, #26ceeb 31%, #b9e8fa 100%);\r\n    min-width: 100%;\r\n    height: 100%;\r\n    min-height: 100%;\r\n    position: absolute;\r\n    padding-top: 100px;\r\n    background-size: cover;\r\n}\r\n\r\n.header {\r\n    height: 100px;\r\n    width: 100%;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    margin-top: 30px;\r\n    margin-left: 80px;\r\n}\r\n\r\n.logo img {\r\n    float: left;\r\n    width: 70px;\r\n    height: 70px;\r\n}\r\n\r\n.logo span {\r\n    float: left;\r\n    margin: 15px 0 15px 5px;\r\n    font-size: 28px;\r\n    color: #fff;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.search-home {\r\n    padding: 45px 5px 45px 5px;\r\n    width: 300px;\r\n    float: right;\r\n}\r\n\r\n.input-control {\r\n    display: inline-block;\r\n    min-height: 34px;\r\n    height: 35px;\r\n    width: 100%;\r\n    position: relative;\r\n    vertical-align: middle;\r\n    margin: 0;\r\n    line-height: 1;\r\n    position: relative;\r\n}\r\n\r\n.input-control .icon-search {\r\n    position: absolute;\r\n    top: 11px;\r\n    left: 10px;\r\n    color: #777;\r\n    display: inline-block;\r\n    font-family: 'Glyphicons Halflings';\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    line-height: 1;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n.input-control input {\r\n    padding: 9px 10px 9px 30px;\r\n    border: none;\r\n    height: 35px;\r\n    line-height: 35px;\r\n    width: 100%;\r\n    color: #323232;\r\n}\r\n\r\n.controls {\r\n    float: right;\r\n    margin-top: 45px;\r\n    margin-right: 50px;\r\n}\r\n\r\n.controls .user {\r\n    float: left;\r\n    margin-right: 2px;\r\n}\r\n\r\n.controls .user .name-user {\r\n    background: #fff;\r\n    padding: 7px 10px;\r\n    height: 35px;\r\n    line-height: 22px;\r\n    float: left;\r\n    margin-right: 4px;\r\n    color: #323232;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    margin-top: 30px;\r\n    margin-left: 80px;\r\n}\r\n\r\n.input-control .icon-search {\r\n    position: absolute;\r\n    top: 11px;\r\n    left: 10px;\r\n    color: #777;\r\n    display: inline-block;\r\n    font-family: 'Glyphicons Halflings';\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    line-height: 1;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n.input-control input {\r\n    padding: 9px 10px 9px 30px;\r\n    border: none;\r\n    height: 35px;\r\n    line-height: 35px;\r\n    width: 100%;\r\n    color: #323232;\r\n}\r\n\r\n.controls {\r\n    float: right;\r\n    margin-top: 45px;\r\n    margin-right: 50px;\r\n}\r\n\r\n.controls .user {\r\n    float: left;\r\n    margin-right: 2px;\r\n}\r\n\r\n.controls .user .name-user {\r\n    background: #fff;\r\n    padding: 7px 10px;\r\n    height: 35px;\r\n    line-height: 22px;\r\n    float: left;\r\n    margin-right: 4px;\r\n    color: #323232;\r\n}\r\n\r\n.controls .user .sign-up-now {\r\n    background: #0f9cb3;\r\n    color: #fff;\r\n    padding: 7px 10px;\r\n    height: 35px;\r\n    line-height: 22px;\r\n    float: left;\r\n    margin-right: 2px;\r\n    text-transform: uppercase;\r\n}\r\n\r\n\r\n/* Mobile css */\r\n\r\n.m-nav {\r\n    height: 60px;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    color: white;\r\n    z-index: 1000;\r\n}\r\n\r\n.m-brand {\r\n    padding: 0 10px;\r\n}\r\n\r\n.m-brand-logo {\r\n    margin-right: 10px;\r\n    width: 42px;\r\n    height: 42px;\r\n}\r\n\r\n.m-header-title {\r\n    margin: 0;\r\n    padding: 15px 10px 5px;\r\n    font-size: 16px;\r\n    color: #555;\r\n}\r\n\r\n.m-body {\r\n    /* background: url(https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg) no-repeat center center fixed;    */\r\n    background: #333;\r\n}\r\n\r\n.m-content {\r\n    padding-top: 60px;\r\n    float: left;\r\n    background: #eee;\r\n}\r\n\r\n.m-item {\r\n    padding: 7px 10px;\r\n    margin: 0;\r\n    border-bottom: rgba(0, 0, 0, .1) 1px solid;\r\n    position: relative;\r\n}\r\n\r\n\r\n\r\n.m-item:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.m-cover {\r\n    min-width: 55px;\r\n    min-height: 55px;\r\n    /* border: 2px solid; */\r\n    border-radius: 30px;\r\n    background-position: center center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n}\r\n\r\n.m-cover.improving {\r\n    border-color: #FFCC00;\r\n}\r\n\r\n\r\n.m-categories {\r\n    margin-bottom: 20px;\r\n    background: #fff;\r\n    width: 100%;\r\n    float: left;\r\n    overflow: auto;\r\n    -webkit-overflow-scrolling: touch;\r\n}\r\n\r\n.m-categories .m-item:last-child {\r\n    border-bottom: none;\r\n}\r\n\r\n.title-services {\r\n    padding: 0 10px;\r\n    color: #555;\r\n}\r\n\r\n.account {\r\n    color: #fff;\r\n    padding: 0 15px;\r\n    font-size: 18px;\r\n    position: relative;\r\n    float: right;\r\n}\r\n\r\n.dropdown-menu {\r\n    top: 42px;\r\n    right: -1px;\r\n    left: auto !important;\r\n    min-width: 120px;\r\n    border-radius: 0;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n.dropdown-menu .divider {\r\n    margin: 0;\r\n}\r\n\r\n.dropdown-menu>li>a {\r\n    padding: 7px 10px;\r\n}\r\n\r\n.dropdown-menu>li>a .icon {\r\n    margin-right: 5px;\r\n}\r\n\r\n.search-mb {\r\n    font-size: 18px;\r\n    float: right;\r\n    position: relative;\r\n    padding: 0 5px;\r\n}\r\n\r\n.search-mb:hover,\r\n.search-mb:focus {\r\n    border: none;\r\n}\r\n\r\n.input-control.mb-home {\r\n    height: 35px;\r\n    display: block;\r\n    vertical-align: middle;\r\n    margin: 0 0 0 10px;\r\n    position: relative;\r\n    -ms-flex-preferred-size: calc(100% - 100px);\r\n        flex-basis: calc(100% - 100px);\r\n    background: #fff;\r\n}\r\n\r\n.input-control.mb-home .icon-search {\r\n    position: absolute;\r\n    top: 11px;\r\n    left: 10px;\r\n    color: #777;\r\n    display: inline-block;\r\n    font-family: 'Glyphicons Halflings';\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    line-height: 1;\r\n    -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n.input-control.mb-home input {\r\n    margin: 5px 0 5px 0;\r\n    padding: 0 10px 0 30px;\r\n    border: none;\r\n    height: 25px;\r\n    line-height: 25px;\r\n    width: 100%;\r\n    color: #323232;\r\n}\r\n\r\n.fxs-panorama.home {\r\n    height: calc(100vh - 100px);\r\n}\r\n\r\n.idea {\r\n    margin: 41px 5px 45px 5px;\r\n    width: 35px;\r\n    float: right;\r\n}\r\n\r\n.idea a {\r\n    width: 40px;\r\n    height: 40px;\r\n    line-height: 35px;\r\n    text-align: center;\r\n    font-size: 20px;\r\n    float: left;\r\n}\r\n\r\n.idea a img {\r\n    width: 100%;\r\n    height: 100%;\r\n    float: left;\r\n}\r\n\r\n.idea a img:hover {\r\n    -webkit-transform: scale(1.2);\r\n            transform: scale(1.2);\r\n}\r\n\r\n.idea a .icon-idea {\r\n    color: #00CDAC;\r\n}\r\n\r\n.progress {\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    border-radius: 0;\r\n    box-shadow: none;\r\n    height: 2px;\r\n    z-index: 10000;\r\n}\r\n\r\n\r\n.progress.improving .progress-bar {\r\n    background-color: #FFFC00;\r\n}\r\n\r\n.progress.active .progress-bar {\r\n    background-color: #41FF21;\r\n}\r\n\r\n.progress.inactive .progress-bar {\r\n    background-color: #F92626;\r\n}\r\n\r\n.show-all {\r\n    margin: 0 5px;\r\n}\r\n\r\n.show-all:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.progress.mb {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    border-radius: 0;\r\n    box-shadow: none;\r\n    height: 100%;\r\n    width: 3px;\r\n    background: #e5e5e5;\r\n    transform: rotate(-180deg);\r\n    -moz-transform: rotate(-180deg);\r\n    -webkit-transform: rotate(-180deg);\r\n    -o-transform: rotate(-180deg);\r\n    z-index: 10;\r\n}\r\n\r\n.progress.mb .progress-bar {\r\n    width: 3px;\r\n}\r\n\r\n.progress.mb.improving .progress-bar {\r\n    background-color: #FFCC00;\r\n}\r\n\r\n.progress.mb.active .progress-bar {\r\n    background-color: #00CDAC;\r\n}\r\n\r\n.progress.mb.inactive .progress-bar {\r\n    background-color: #A80000;\r\n}\r\n\r\n\r\n.m-item:nth-child(n+2) .progress.mb .progress-bar {\r\n    background-color: #FFCC00;\r\n    height: 60% !important;\r\n}\r\n\r\n.m-item:nth-child(n+3) .progress.mb .progress-bar {\r\n    background-color: #A80000;\r\n    height: 50% !important;\r\n}\r\n\r\n.m-item:nth-child(n+4) .progress.mb .progress-bar {\r\n    background-color: #00CDAC;\r\n    height: 90% !important;\r\n}\r\n\r\n.m-item:nth-child(n+5) .progress.mb .progress-bar {\r\n    background-color: #FFCC00;\r\n    height: 55% !important;\r\n}\r\n\r\n.m-item:nth-child(n+6) .progress.mb .progress-bar {\r\n    background-color: #A80000;\r\n    height: 30% !important;\r\n}\r\n\r\n.m-item:nth-child(n+7) .progress.mb .progress-bar {\r\n    background-color: #00CDAC;\r\n}\r\n", ""]);
+=======
+exports.push([module.i, "", ""]);
+>>>>>>> origin/son
 
 // exports
 
@@ -18,21 +22,23 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/Home/home.component.html":
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.html":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<ng-container *showItDevice=\"['desktop', 'tablet']\">\r\n\r\n    <div class=\"fxs-portal wrapper\" fxLayoutAlign=\"start stretch\" fxLayout=\"column\" [ngStyle]=\"{'background-image': 'url('+ config?.Background +')'}\">\r\n\r\n        <div class=\"fxs-topbar header\" [ngStyle]=\"{'background-color': (menus?.MauDam | async)} \">\r\n            <div class=\"logo\">\r\n                <img *ngIf=\"config?.Logo\" width=\"50px\" [src]=\"config?.Logo\">\r\n                <span>{{config?.ThuongHieu}}</span>\r\n            </div>\r\n            <div class=\"controls\">\r\n                <div class=\"user\">\r\n                    <a *ngIf=\"!this.auth\" [routerLink]=\"['/auth/signIn']\" class=\"name-user bt-sign-up\">\r\n                        <span class=\"fa fa-fw fa-sign-in icon\" aria-hidden=\"true\"></span>\r\n                        Đăng nhập\r\n                    </a>\r\n                    <a *ngIf=\"!this.auth\" [routerLink]=\"['/auth/register']\" class=\"sign-up-now bt-sign-up\">\r\n                        <span class=\"fa fa-fw fa-user-plus icon\" aria-hidden=\"true\"></span>\r\n                        Đăng ký ngay\r\n                    </a>\r\n                    <a *ngIf=\"this.auth\" class=\"name-user bt-sign-up\">\r\n                        <span class=\"avt fa fa-fw fa-user\" aria-hidden=\"true\"></span>\r\n                        {{this.auth.HoVaTen}}\r\n                    </a>\r\n                    <a *ngIf=\"this.auth\" [routerLink]=\"['/auth/signOut']\" class=\"name-user bt-sign-up\">\r\n                        <span class=\"settings fa fa-fw fa-power-off\" aria-hidden=\"true\"></span>\r\n                        Đăng xuất\r\n                    </a>\r\n                </div>\r\n            </div>\r\n            <div class=\"search-home\">\r\n                <div class=\"input-control text full-size\">\r\n                    <span class=\"glyphicon glyphicon-search icon-search\" aria-hidden=\"true\"></span>\r\n                    <input type=\"text\" placeholder=\"Tìm dịch vụ...\" [(ngModel)]=\"searchKey\">\r\n                </div>\r\n            </div>\r\n            <div class=\"idea\">\r\n                <a target = \"blank\" href=\"http://idea.truongkhoa.com/\" title=\"Đóng góp ý tưởng\">\r\n                <img src=\"../../assets/idea.png\">\r\n              </a>\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start stretch\" class=\"fxs-portal-main\">\r\n            <main class=\"fxs-panorama home\">\r\n                <div class=\"fxs-blade-content-container\" *ngIf=\"menus\">\r\n                    <ng-container *ngFor=\"let blocks of menus; let bl_i = index\">\r\n                        <div class=\"block\" [id]=\"blocks?.Id\" [ngClass]=\"{'fixwidth': !blocks?.full}\">\r\n                            <div class=\"title\">\r\n                                {{blocks.Ten}}\r\n                                <span class=\"count-apps\">({{blocks?.items.length}} mục)</span>\r\n                            </div>\r\n\r\n\r\n                            <section class=\"grid\" [ngClass]=\"{'g-holiz': blocks?.full}\">\r\n                                <ng-container *ngFor=\"let item of blocks?.items | homeFilter:searchKey\">\r\n                                    <div class=\"grid-item\" [ngClass]=\"\r\n                                {\r\n                                    'grid-item-w2': item.chieuRong==2,\r\n                                    'grid-item-w3': item.chieuRong==3,\r\n                                    'grid-item-h3': item.chieuCao==3,\r\n                                    'grid-item-h2': item.chieuCao==2\r\n                                }\">\r\n                                        <a class=\"child\" *ngIf=\"item?.style == 'Icon'\" [style.background-color]=\"item?.mauNen\" [routerLink]=\"['/apps', item?.url]\">\r\n                                            <div class=\"icon-background\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n                                                <img src=\"{{item?.IconText}}\">\r\n                                            </div>\r\n                                            <h4 class=\"title-label-icon\">\r\n                                                <span class=\"icon\">\r\n                                                        <img src=\"{{item?.IconText}}\" aria-hidden=\"true\">\r\n                                                    </span> {{item.Ten}}\r\n                                            </h4>\r\n                                            <div class=\"progress improving\">\r\n                                                <div class=\"progress-bar\" role=\"progressbar\" [attr.aria-valuenow]=\"item?.PhanTramTrangThai\" aria-valuemin=\"0\" aria-valuemax=\"100\" [ngStyle]=\"{ 'width': item.PhanTramTrangThai+'%' }\">\r\n                                                </div>\r\n                                            </div>\r\n                                        </a>\r\n                                        <a class=\"child\" *ngIf=\"item?.style == 'Image'\" [routerLink]=\"['/apps', item?.url]\" [ngStyle]=\"{'background-image': 'url('+ item?.Images[0] +')'}\">\r\n                                            <h4 class=\"title-label\">\r\n                                                <span class=\"icon\">\r\n                                                        <img src=\"{{item?.IconText}}\" aria-hidden=\"true\">\r\n                                                    </span> {{item.Ten}}\r\n                                            </h4>\r\n                                            <div class=\"progress\" [ngClass]=\"{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}\">\r\n                                                <div class=\"progress-bar\" role=\"progressbar\" [attr.aria-valuenow]=\"item.PhanTramTrangThai\" aria-valuemin=\"0\" aria-valuemax=\"100\" [ngStyle]=\"{ 'width': item.PhanTramTrangThai+'%' }\">\r\n                                                </div>\r\n                                            </div>\r\n\r\n                                        </a>\r\n\r\n                                        <div class=\"child\" *ngIf=\"item?.style == 'Slide'\">\r\n                                            <h4 class=\"title-label\">\r\n                                                <span class=\"icon\"><img src=\"{{item.IconText}}\" aria-hidden=\"true\"></span>                                                {{item.Ten}}\r\n                                            </h4>\r\n                                            <div class=\"progress\" [ngClass]=\"{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}\">\r\n                                                <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%;\">\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </ng-container>\r\n                            </section>\r\n                            <div class=\"bottom\">\r\n                                <a *ngIf=\"!blocks?.full\" (click)=\"showMore(bl_i)\" class=\"show-all\" style=\"color: #fff\">\r\n                                  <span style=\"cursor: pointer\">Xem tất cả</span>\r\n                                  <i class=\"fa fa-fw fa-arrow-circle-o-right\"></i>\r\n                                </a>\r\n                                <a *ngIf=\"blocks?.full\" (click)=\"showLess(bl_i)\" class=\"show-all\" style=\"color: #fff\">\r\n                                  <span style=\"cursor: pointer\">Thu gọn</span>\r\n                                  <i class=\"fa fa-fw fa-arrow-circle-o-left\"></i>\r\n                                </a>\r\n                            </div>\r\n                        </div>\r\n\r\n                    </ng-container>\r\n                    <!-- thêm khoảng cách vào cuối cùng -->\r\n                    <div style=\"padding:40px\"> </div>\r\n                </div>\r\n            </main>\r\n        </div>\r\n    </div>\r\n</ng-container>\r\n<ng-container *showItDevice=\"['mobile']\">\r\n    <div class=\"m-body\">\r\n        <nav class=\"m-nav\" fxLayout=\"row\" [ngStyle]=\"{'background-color': config?.MauDam}\" fxLayoutAlign=\"space-between center\">\r\n            <div *ngIf=\"!searchState\" class=\"m-brand\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                <img class=\"m-brand-logo\" [src]=\"config?.Logo\">\r\n                <div>{{config?.ThuongHieu | uppercase}}</div>\r\n            </div>\r\n            <div *ngIf=\"searchState\" class=\"input-control mb-home\">\r\n                <span class=\"glyphicon glyphicon-search icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Tìm dịch vụ...\" [(ngModel)]=\"searchKey\">\r\n            </div>\r\n            <div>\r\n                <a href=\"#\" class=\"account\">\r\n                    <span class=\"glyphicon glyphicon-user dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-hidden=\"true\"></span>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li>\r\n                            <a *ngIf=\"!this.auth\" [routerLink]= \"['/auth/signIn']\">\r\n                                <span class=\"fa fa-fw fa-sign-in icon\" aria-hidden=\"true\"></span>\r\n                                Đăng nhập\r\n                            </a>\r\n                </li>\r\n\r\n                <li role=\"separator\" class=\"divider\"></li>\r\n\r\n                <li>\r\n                    <a *ngIf=\"!this.auth\" [routerLink]=\"['/auth/register']\">\r\n                                <span class=\"fa fa-fw fa-user-plus icon\" aria-hidden=\"true\"></span>\r\n                                Đăng ký\r\n                            </a>\r\n                </li>\r\n\r\n                <li>\r\n                    <a *ngIf=\"this.auth\" class=\"name-user bt-sign-up\">\r\n                                <span class=\"avt fa fa-fw fa-user\" aria-hidden=\"true\"></span>\r\n                                {{this.auth.HoVaTen}}\r\n                            </a>\r\n                </li>\r\n\r\n                <li role=\"separator\" class=\"divider\"></li>\r\n\r\n                <li>\r\n                    <a *ngIf=\"this.auth\" [routerLink]=\"['/auth/signOut']\" class=\"name-user bt-sign-up\">\r\n                                <span class=\"settings fa fa-fw fa-power-off\" aria-hidden=\"true\"></span>\r\n                                Đăng xuất\r\n                            </a>\r\n                </li>\r\n                </ul>\r\n                </a>\r\n                <div class=\"search-mb\">\r\n                    <span (click)=\"searchState=!searchState\" class=\"glyphicon glyphicon-search dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\"\r\n                        aria-expanded=\"false\" aria-hidden=\"true\"></span>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n        <div class=\"m-content\">\r\n            <ng-container *ngFor=\"let blocks of menus\">\r\n                <div class=\"m-categories\">\r\n                    <div class=\"m-header-title\">{{blocks?.Ten | uppercase}}</div>\r\n                    <ng-container *ngFor=\"let item of blocks?.items | homeFilter:searchKey\">\r\n                        <a [routerLink]=\"['/apps',item?.url]\" class=\"m-item mb\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                            <div class=\"m-cover active\" [ngStyle]=\"{'background-image': 'url('+ item?.Images[0] +')'}\"></div>\r\n                            <div class=\"title-services\">\r\n                                {{item?.Ten}}\r\n                            </div>\r\n                            <div class=\"progress mb active\">\r\n                                <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: 80%;\">\r\n                                </div>\r\n                            </div>\r\n                        </a>\r\n                    </ng-container>\r\n                </div>\r\n            </ng-container>\r\n        </div>\r\n    </div>\r\n</ng-container>\r\n"
+=======
+module.exports = "<p>\n  Tracuubaithuoc works!\n</p>"
+>>>>>>> origin/son
 
 /***/ }),
 
-/***/ "../../../../../src/app/Home/home.component.ts":
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TracuubaithuocComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -43,19 +49,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-var HomeComponent = (function () {
-    function HomeComponent(settingService, userService) {
-        this.settingService = settingService;
-        this.userService = userService;
-        this.runAnimation = false;
-        this.searchState = false;
-        this.state = 'show';
-        // this.settingService.itemValue.subscribe((data) => {
-        //     console.log('abc', data);
-        // });
+var TracuubaithuocComponent = (function () {
+    function TracuubaithuocComponent() {
     }
+<<<<<<< HEAD
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.settingService.getFirstConfig().subscribe(function () {
@@ -72,46 +69,40 @@ var HomeComponent = (function () {
         // this.menus[i].items = [...this.menus[i].items, ...this.menus[i].items];
         this.menus[i].full = true;
         this.state = 'show';
+=======
+    TracuubaithuocComponent.prototype.ngOnInit = function () {
+>>>>>>> origin/son
     };
-    HomeComponent.prototype.showLess = function (i) {
-        this.menus[i].full = false;
-    };
-    HomeComponent.prototype.getRandomInt = function (min, max) {
-        return (Math.floor(Math.random() * (max - min + 1)) + min) * 0.01;
-    };
-    return HomeComponent;
+    return TracuubaithuocComponent;
 }());
-HomeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-        selector: 'app-home',
-        template: __webpack_require__("../../../../../src/app/Home/home.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Home/home.component.css")]
+TracuubaithuocComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-Tracuubaithuoc',
+        template: __webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _b || Object])
-], HomeComponent);
+    __metadata("design:paramtypes", [])
+], TracuubaithuocComponent);
 
-var _a, _b;
-//# sourceMappingURL=home.component.js.map
+//# sourceMappingURL=Tracuubaithuoc.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/Home/home.module.ts":
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__ = __webpack_require__("../../../flex-layout/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_responsive__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_component__ = __webpack_require__("../../../../../src/app/Home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Pipes_homeFilter_pipe__ = __webpack_require__("../../../../../src/app/Share/Pipes/homeFilter.pipe.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_sharebuttons__ = __webpack_require__("../../../../ngx-sharebuttons/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Tracuubaithuoc_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/Tracuubaithuoc.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Share_Components_share_module__ = __webpack_require__("../../../../../src/app/Share/Components/share.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Share_Services_baithuoc_service__ = __webpack_require__("../../../../../src/app/Share/Services/baithuoc.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__danh_sach_bai_thuoc_danh_sach_bai_thuoc_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TracuubaithuocModule", function() { return TracuubaithuocModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,57 +118,84 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-// Định nghĩa router riêng cho module này
 var routing = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__home_component__["a" /* HomeComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__Tracuubaithuoc_component__["a" /* TracuubaithuocComponent */] },
+    { path: ':id', component: __WEBPACK_IMPORTED_MODULE_8__danh_sach_bai_thuoc_danh_sach_bai_thuoc_component__["a" /* DanhSachBaiThuocComponent */] },
 ];
-// forChild -> Router này sẽ được load như một router con
-var Routing = __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forChild(routing);
-var HomeModule = (function () {
-    function HomeModule() {
+var Routing = __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forChild(routing);
+var TracuubaithuocModule = (function () {
+    function TracuubaithuocModule() {
     }
-    return HomeModule;
+    return TracuubaithuocModule;
 }());
-HomeModule = __decorate([
+TracuubaithuocModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_4_ngx_sharebuttons__["a" /* ShareButtonsModule */].forRoot(),
             Routing,
-            __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
-            __WEBPACK_IMPORTED_MODULE_4_ng2_responsive__["ResponsiveModule"]
+            __WEBPACK_IMPORTED_MODULE_6__Share_Components_share_module__["a" /* ShareModule */]
         ],
+        declarations: [__WEBPACK_IMPORTED_MODULE_5__Tracuubaithuoc_component__["a" /* TracuubaithuocComponent */]],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_7__Share_Services_setting_service__["a" /* SettingService */],
-            __WEBPACK_IMPORTED_MODULE_8__Share_Services_user_service__["a" /* UserService */]
-        ],
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_9__Share_Pipes_homeFilter_pipe__["a" /* HomeFilterPipe */],
-            __WEBPACK_IMPORTED_MODULE_6__home_component__["a" /* HomeComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__Share_Services_baithuoc_service__["a" /* BaithuocService */],
         ]
     })
-], HomeModule);
+], TracuubaithuocModule);
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=Tracuubaithuoc.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/Share/Pipes/homeFilter.pipe.ts":
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  danh-sach-bai-thuoc works!\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_slugify__ = __webpack_require__("../../../../ng2-slugify/ng2-slugify.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_slugify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_slugify__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeFilterPipe; });
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DanhSachBaiThuocComponent; });
+>>>>>>> origin/son
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
+<<<<<<< HEAD
 
 var HomeFilterPipe = (function () {
     function HomeFilterPipe() {
@@ -193,17 +211,80 @@ var HomeFilterPipe = (function () {
         return items.filter(function (item) {
             return _this.slug.slugify(item.Ten.toLowerCase()).indexOf(searchKey) !== -1;
         });
+=======
+var DanhSachBaiThuocComponent = (function () {
+    function DanhSachBaiThuocComponent() {
+    }
+    DanhSachBaiThuocComponent.prototype.ngOnInit = function () {
+>>>>>>> origin/son
     };
-    return HomeFilterPipe;
+    return DanhSachBaiThuocComponent;
 }());
-HomeFilterPipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
-        name: 'homeFilter',
-        pure: false
-    })
-], HomeFilterPipe);
+DanhSachBaiThuocComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-danh-sach-bai-thuoc',
+        template: __webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubaithuoc/danh-sach-bai-thuoc/danh-sach-bai-thuoc.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], DanhSachBaiThuocComponent);
 
-//# sourceMappingURL=homeFilter.pipe.js.map
+//# sourceMappingURL=danh-sach-bai-thuoc.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/Share/Services/baithuoc.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment_prod__ = __webpack_require__("../../../../../src/environments/environment.prod.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaithuocService; });
+/* unused harmony export Baithuoc */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var BaithuocService = (function () {
+    function BaithuocService(http) {
+        this.http = http;
+        this.thuocUrl = __WEBPACK_IMPORTED_MODULE_1__environments_environment_prod__["a" /* environment */].apiUrl + "/CSDLYT/DongY_BaiThuoc_List";
+    }
+    BaithuocService.prototype.getThuoc = function (page) {
+        // ...using get request
+        return this.http.get(this.thuocUrl + "?Trang=" + page + "&soluongmoitrang=50")
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    };
+    return BaithuocService;
+}());
+BaithuocService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], BaithuocService);
+
+var Baithuoc = (function () {
+    function Baithuoc(id, Name) {
+        this.id = id;
+        this.Name = Name;
+    }
+    return Baithuoc;
+}());
+
+var _a;
+//# sourceMappingURL=baithuoc.service.js.map
 
 /***/ }),
 

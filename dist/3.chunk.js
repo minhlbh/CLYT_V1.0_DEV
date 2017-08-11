@@ -252,6 +252,7 @@ var routing = [
         path: '', component: __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+            { path: 'tracuubaithuoc', loadChildren: './Tracuubaithuoc/Tracuubaithuoc.module#TracuubaithuocModule' },
             { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
             { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__["a" /* EmptyComponent */] },
         ],
