@@ -1,74 +1,5 @@
 webpackJsonp([3],{
 
-/***/ "../../../../../src/app/Apps/Baithuoc/Baithuoc.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaithuocComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var BaithuocComponent = (function () {
-    function BaithuocComponent(settingService, router, activatedroute) {
-        this.settingService = settingService;
-        this.router = router;
-        this.activatedroute = activatedroute;
-    }
-    BaithuocComponent.prototype.ngOnInit = function () {
-    };
-    return BaithuocComponent;
-}());
-BaithuocComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-baithuoc',
-        template: __webpack_require__("../../../../../src/app/Apps/Baithuoc/baithuoc.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Baithuoc/baithuoc.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object])
-], BaithuocComponent);
-
-var _a, _b, _c;
-//# sourceMappingURL=Baithuoc.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Baithuoc/baithuoc.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Baithuoc/baithuoc.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  baithuoc works!\n</p>"
-
-/***/ }),
-
 /***/ "../../../../../src/app/Apps/Layout/Layout.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -294,7 +225,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__ = __webpack_require__("../../../../../src/app/Share/Components/empty/empty.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Share_Components_share_module__ = __webpack_require__("../../../../../src/app/Share/Components/share.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Baithuoc_Baithuoc_component__ = __webpack_require__("../../../../../src/app/Apps/Baithuoc/Baithuoc.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppsModule", function() { return AppsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -317,12 +247,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 // import { WindowComponent } from '../Share/Components/window/window.component';
 
-
 var routing = [
     {
         path: '', component: __WEBPACK_IMPORTED_MODULE_6__Layout_Layout_component__["a" /* LayoutComponent */],
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+            { path: 'tracuubaithuoc', loadChildren: './Tracuubaithuoc/Tracuubaithuoc.module#TracuubaithuocModule' },
             { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
             { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__["a" /* EmptyComponent */] },
         ],
@@ -349,8 +279,6 @@ AppsModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__Layout_nav_nav_component__["a" /* NavComponent */],
             __WEBPACK_IMPORTED_MODULE_9__Share_Components_empty_empty_component__["a" /* EmptyComponent */],
             __WEBPACK_IMPORTED_MODULE_8__Layout_left_menu_left_menu_component__["a" /* LeftMenuComponent */],
-            // WindowComponent
-            __WEBPACK_IMPORTED_MODULE_12__Baithuoc_Baithuoc_component__["a" /* BaithuocComponent */],
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_10__Share_Services_setting_service__["a" /* SettingService */]

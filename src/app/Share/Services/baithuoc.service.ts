@@ -2,7 +2,6 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { environment } from '../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { BaithuocComponent } from '../../Apps/Baithuoc/Baithuoc.component';
 
 @Injectable()
 export class BaithuocService {
@@ -23,8 +22,12 @@ export class BaithuocService {
 export class Baithuoc {
 
     constructor(
+        public id: number,
+        public Name: string,
 
 
-    ) { }
+    ) {
+
+    }
 
 }
