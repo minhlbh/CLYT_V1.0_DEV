@@ -57,6 +57,7 @@
     padding: 5px;
     float: left;
     animation: scale .25s ease-out;
+    position: relative;
 }
 
 .grid-item-w2 .title-label {
@@ -594,7 +595,29 @@
     background-color: #A80000;
 }
 
-
+.status {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right:10px;
+    z-index: 1;
+    font-size: 12px;
+    padding: 0 5px;
+    background-color: rgba(0, 0, 0, .5)
+}
+.status.active {
+    color: #00CDAC;
+}
+.status.inactive{
+    color: #F94E4E;
+}
+.status.improving{
+    color: #FFCC00;
+}
+.grid-item:hover .status{
+    display: block;
+}
 .m-item:nth-child(n+2) .progress.mb .progress-bar {
     background-color: #FFCC00;
     height: 60% !important;

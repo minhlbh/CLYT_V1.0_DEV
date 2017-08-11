@@ -1,7 +1,9 @@
-import {UserService} from '../Share/Services/user.service';
+import { UserService } from '../Share/Services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { SettingService } from '../Share/Services/setting.service';
 import { group, state, query, stagger, animate, style, transition, trigger } from '@angular/animations';
+// [routerLink]="['/apps', item?.url]"
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -19,6 +21,7 @@ export class HomeComponent implements OnInit {
     constructor(
         private settingService: SettingService,
         private userService: UserService,
+        private router: Router
     ) {
         // this.settingService.itemValue.subscribe((data) => {
         //     console.log('abc', data);
@@ -29,8 +32,7 @@ export class HomeComponent implements OnInit {
         this.settingService.getFirstConfig().subscribe(() => {
             this.menus = this.settingService.getMenu();
             this.config = this.settingService.getConfig();
-            console.log(this.menus)
-            
+            // console.log(this.menus)
 
         });
         this.auth = this.userService.getAuth();
@@ -51,5 +53,12 @@ export class HomeComponent implements OnInit {
         return (Math.floor(Math.random() * (max - min + 1)) + min) * 0.01;
     }
 
+    goToApp(item) {
+        // this.ro
+        if (item.TrangThaiHoatDong !== 0) {
+            this.router.navigate(['/apps', item.url]);
+        }
+
+    }
 
 }

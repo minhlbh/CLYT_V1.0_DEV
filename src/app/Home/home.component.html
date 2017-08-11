@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="idea">
-                <a target = "blank" href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
+                <a target="blank" href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
                 <img src="../../assets/idea.png">
               </a>
             </div>
@@ -54,14 +54,21 @@
 
                             <section class="grid" [ngClass]="{'g-holiz': blocks?.full}">
                                 <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
-                                    <div class="grid-item" [ngClass]="
+                                    <div class="grid-item" (click)="goToApp(item)" [ngClass]="
                                 {
                                     'grid-item-w2': item.chieuRong==2,
                                     'grid-item-w3': item.chieuRong==3,
                                     'grid-item-h3': item.chieuCao==3,
                                     'grid-item-h2': item.chieuCao==2
                                 }">
-                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" [routerLink]="['/apps', item?.url]">
+                                        <div class="status" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
+                                            <!-- xanh hoat dong 30%: status -->
+                                            <!-- Demo %: status -->
+                                            <!-- Dang phat trien %: status -->
+                                            <span> Hoạt động {{item.PhanTramTrangThai}}% <span *ngIf="item.Status">: {{item.Status}}</span></span>
+                                        </div>
+                                        <!-- Loại ô 1 -->
+                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" >
                                             <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
                                                 <img src="{{item?.IconText}}">
                                             </div>
@@ -71,29 +78,33 @@
                                                     </span> {{item.Ten}}
                                             </h4>
                                             <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
-                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item?.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
+                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item?.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
+                                                    [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
                                                 </div>
                                             </div>
                                         </a>
-                                        <a class="child" *ngIf="item?.style == 'Image'" [routerLink]="['/apps', item?.url]" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
+                                        <!-- Loại ô 2 -->
+                                        <a class="child" *ngIf="item?.style == 'Image'" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}">
                                             <h4 class="title-label">
                                                 <span class="icon">
                                                         <img src="{{item?.IconText}}" aria-hidden="true">
                                                     </span> {{item.Ten}}
                                             </h4>
                                             <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
-                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
+                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
+                                                    [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
                                                 </div>
                                             </div>
 
                                         </a>
-
+                                        <!-- Loại ô 3 -->
                                         <div class="child" *ngIf="item?.style == 'Slide'">
                                             <h4 class="title-label">
                                                 <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                {{item.Ten}}
                                             </h4>
                                             <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
-                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
+                                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
+                                                    [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
                                                 </div>
                                             </div>
                                         </div>
