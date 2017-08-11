@@ -1,21 +1,25 @@
-<app-window [idea]="idea" [urlIdea]="urlIdea" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
+<app-window [idea]="idea" [urlIdea]="urlIdea" [url]="url" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
     <!-- searchbox -->
     <div class="search-box-top">
         <div class="input-control text full-size" data-role="input">
             <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-            <input type="text" placeholder="Nhập tên thuốc...">
+            <input type="text" placeholder="Nhập tên thuốc..." [formControl]="searchKey">
         </div>
 
         <!-- đếm số thuốc -->
         <div style="padding: 5px 0 0 0;">
             <span style="font-size: 11px; color: #888; float: right;">
-                   50/435 thuốc
+                {{ endThuoc }}/{{ TongSoLuong }} thuốc
                 </span>
         </div>
 
+
         <hr class="thin bg-grayLighter">
     </div>
-    <!-- Danh sách thuốc -->
+
+
+    <!-- list thuốc -->
+
     <div class="drugs-list-wr">
         <div class="row-l head">
             <div class="col w25">
@@ -40,43 +44,64 @@
                 Hàm lượng
             </div>
         </div>
-        <div *ngIf="!empty">
-            <a *ngFor="let thuoc of DsThuoc">
-            <div class="drugs-list">
-                <div href="#" class="row-l">
-
-                        <div class="col w25">
-                <span class="title" >{{thuoc.Name}}</span>
 
 
-                        </div>
+        <div class="text-center">
+            <p class="lead" *ngIf="loading">
+                <img src="assets/66.gif">
+            </p>
+        </div>
 
-                <div class="col w20">
-                    <span class="title">{{thuoc.Hang}}</span>
+
+
+
+        <div class="drugs-list" infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="200" (scrolled)="onScroll()"
+            [scrollWindow]="false">
+            <div class="scrollbar-custom list">
+                <div *ngIf="!loading">
+                    <div class="text-center" *ngIf="empty">
+                        <p>
+                            <a> Không kết quả nào phù hợp</a>
+                        </p>
+                    </div>
+
+                    <div *ngIf="!empty">
+
+                        <a *ngFor="let thuoc of DsThuoc" class="row-l">
+
+
+                            <div class="col w25">
+                                <span class="title">{{thuoc.Name}}</span>
+                            </div>
+
+                            <div class="col w20">
+                                <span class="title">{{thuoc.Hang}}</span>
+                            </div>
+
+                            <div class="col w10">
+                                <span class="title">{{thuoc.Nuoc}}</span>
+                            </div>
+
+                            <div class="col w10">
+                                <span class="title">{{thuoc.DongGoi}}</span>
+                            </div>
+
+                            <div class="col w15">
+                                <span class="title">{{thuoc.HoatChat}}</span>
+                            </div>
+
+                            <div class="col w10">
+                                <span class="title">{{thuoc.DuongDung}}</span>
+                            </div>
+
+                            <div class="col w10">
+                                <span class="title">{{thuoc.HamLuong}}</span>
+                            </div>
+
+                        </a>
+                    </div>
                 </div>
-
-                <div class="col w10">
-                    <span class="title">{{thuoc.Nuoc}}</span>
-                </div>
-
-                <div class="col w10">
-                    <span class="title">{{thuoc.DongGoi}}</span>
-                </div>
-
-                <div class="col w15">
-                    <span class="title">{{thuoc.HoatChat}}</span>
-                </div>
-
-                <div class="col w10">
-                    <span class="title">{{thuoc.DuongDung}}</span>
-                </div>
-
-                <div class="col w10">
-                    <span class="title">{{thuoc.HamLuong}}</span>
-                </div>
-
             </div>
-            </div></a>
         </div>
     </div>
 </app-window>
