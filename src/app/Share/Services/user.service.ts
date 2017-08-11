@@ -97,7 +97,7 @@ export class UserService {
         body.set('id', _acc.id);
         body.set('email', _acc.email);
         body.set('token', _acc.token);
-        return this.http.post(`http://localhost:5001/api/Account/CheckFacebookLogin`, body).map((response: Response) => response.json());
+        return this.http.post(`${this.baseUrl}Account/CheckFacebookLogin`, body).map((response: Response) => response.json());
     }
 
     SocialRegister(data: SocialData) {
@@ -107,7 +107,7 @@ export class UserService {
         body.set('id', data.id);
         body.set('phone', data.phone);
         body.set('token', data.token);
-        return this.http.post(`http://localhost:5001/api/Account/SocialRegister`, body).map((response: Response) => response.json());
+        return this.http.post(`${this.baseUrl}Account/SocialRegister`, body).map((response: Response) => response.json());
     }
 
     // get set localStorage social login

@@ -249,7 +249,7 @@ var UserService = (function () {
         body.set('id', _acc.id);
         body.set('email', _acc.email);
         body.set('token', _acc.token);
-        return this.http.post("http://localhost:5001/api/Account/CheckFacebookLogin", body).map(function (response) { return response.json(); });
+        return this.http.post(this.baseUrl + "Account/CheckFacebookLogin", body).map(function (response) { return response.json(); });
     };
     UserService.prototype.SocialRegister = function (data) {
         // tslint:disable-next-line:prefer-const
@@ -258,7 +258,7 @@ var UserService = (function () {
         body.set('id', data.id);
         body.set('phone', data.phone);
         body.set('token', data.token);
-        return this.http.post("http://localhost:5001/api/Account/SocialRegister", body).map(function (response) { return response.json(); });
+        return this.http.post(this.baseUrl + "Account/SocialRegister", body).map(function (response) { return response.json(); });
     };
     // get set localStorage social login
     UserService.prototype.set_UserInfoFB = function (data) {
