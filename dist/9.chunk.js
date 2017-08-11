@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".hl7 {\r\n    width: 100%;\r\n    height: 100%;\r\n    border: none;\r\n}\r\n", ""]);
+exports.push([module.i, ".hl7 {\r\n    width: 100%;\r\n    height: 100%;\r\n    border: none;\r\n}\r\n\r\n.windows-size {\r\n    width: 900px;\r\n    height: 100%\r\n}\r\n", ""]);
 
 // exports
 
@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Apps/Bantinhl7/Bantinhl7.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-window [idea]=\"true\" name=\"Bản tin HL7\" url=\"apps\">\r\n\r\n    <iframe class=\"hl7\" src=\"http://api.truongkhoa.com/hl7/hl7\"></iframe>\r\n\r\n</app-window>\r\n"
+module.exports = "<div class=\"windows-size\">\r\n<app-window [idea]=\"true\" name=\"Bản tin HL7\" url=\"apps\">\r\n\r\n    <iframe class=\"hl7\" src=\"http://api.truongkhoa.com/hl7/hl7\"></iframe>\r\n\r\n</app-window>\r\n\r\n\r\n</div>\r\n"
 
 /***/ }),
 
