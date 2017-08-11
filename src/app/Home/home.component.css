@@ -342,6 +342,7 @@
     left: 0;
     right: 0;
     color: white;
+    z-index: 1000;
 }
 
 .m-brand {
@@ -558,13 +559,13 @@
     border-radius: 0;
     box-shadow: none;
     height: 100%;
-    z-index: 10000;
     width: 3px;
     background: #e5e5e5;
     transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
+    z-index: 10;
 }
 
 .progress.mb .progress-bar {
