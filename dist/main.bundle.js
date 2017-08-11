@@ -20,7 +20,7 @@ var map = {
 	],
 	"./Tracuubenh/Tracuubenh.module": [
 		"../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts",
-		2,
+		1,
 		0
 	],
 	"./Tracuuthuoc/Tracuuthuoc.module": [
@@ -30,7 +30,7 @@ var map = {
 	],
 	"./authModule/Auth.module": [
 		"../../../../../src/app/authModule/Auth.module.ts",
-		1,
+		2,
 		0
 	]
 };

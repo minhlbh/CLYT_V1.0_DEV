@@ -1,268 +1,6 @@
 webpackJsonp([2],{
 
-/***/ "../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "@media only screen and (max-width: 768px) {\r\n    .fxs-block {\r\n    width: 100%;\r\n    }\r\n}\r\n\r\n\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"fxs-blade-content-container\">\r\n    <div class=\"fxs-block\">\r\n        <app-danh-sach-benh>\r\n        </app-danh-sach-benh>\r\n    </div>\r\n\r\n    <div *ngIf=\"showChiTiet\" class=\"fxs-block large\">\r\n        <app-chi-tiet-benh [idBenh]=\"detailBenhId\"></app-chi-tiet-benh>\r\n    </div>\r\n\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TracuubenhComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var TracuubenhComponent = (function () {
-    function TracuubenhComponent(settingService, router, benhService, activatedroute) {
-        this.settingService = settingService;
-        this.router = router;
-        this.benhService = benhService;
-        this.activatedroute = activatedroute;
-        this.showChiTiet = false;
-        this.detailBenhId = 0;
-    }
-    TracuubenhComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.activatedroute.params.subscribe(function (pars) {
-            _this.idBenh(pars['id']);
-        });
-    };
-    TracuubenhComponent.prototype.idBenh = function (id) {
-        if (id == null) {
-            this.showChiTiet = false;
-        }
-        else {
-            this.detailBenhId = id;
-            this.showChiTiet = true;
-        }
-    };
-    return TracuubenhComponent;
-}());
-TracuubenhComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-        // tslint:disable-next-line:component-selector
-        selector: 'app-Tracuubenh',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* ActivatedRoute */]) === "function" && _d || Object])
-], TracuubenhComponent);
-
-var _a, _b, _c, _d;
-//# sourceMappingURL=Tracuubenh.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/Tracuubenh.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_infinite_scroll__ = __webpack_require__("../../../../angular2-infinite-scroll/angular2-infinite-scroll.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_infinite_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_infinite_scroll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_sharebuttons__ = __webpack_require__("../../../../ngx-sharebuttons/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_responsive__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/Tracuubenh.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__danh_sach_benh_danh_sach_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__chi_tiet_benh_chi_tiet_benh_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__ = __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Share_Components_share_module__ = __webpack_require__("../../../../../src/app/Share/Components/share.module.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TracuubenhModule", function() { return TracuubenhModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-// module
-
-
-
-
-
-
-
-
-// components
-
-
-
-
-// import { WindowComponent } from '../../Share/Components/window/window.component';
-
-
-
-
-// services
-
-
-
-var routing = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] },
-    { path: ':id', component: __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */] },
-];
-var Routing = __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forChild(routing);
-var TracuubenhModule = (function () {
-    function TracuubenhModule() {
-    }
-    return TracuubenhModule;
-}());
-TracuubenhModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_4_angular2_infinite_scroll__["InfiniteScrollModule"],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_7_ng2_responsive__["ResponsiveModule"],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6_ngx_sharebuttons__["a" /* ShareButtonsModule */].forRoot(),
-            Routing,
-            __WEBPACK_IMPORTED_MODULE_18__Share_Components_share_module__["a" /* ShareModule */]
-        ],
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_8__Tracuubenh_component__["a" /* TracuubenhComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__danh_sach_benh_danh_sach_benh_component__["a" /* DanhSachBenhComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__chi_tiet_benh_chi_tiet_benh_component__["a" /* ChiTietBenhComponent */],
-            // WindowComponent,
-            __WEBPACK_IMPORTED_MODULE_12__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_img_load_du_lieu_img_component__["a" /* LoadDuLieuImgComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_text_load_du_lieu_text_component__["a" /* LoadDuLieuTextComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_link_load_du_lieu_link_component__["a" /* LoadDuLieuLinkComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__Tracuubenh_chi_tiet_benh_Load_items_load_du_lieu_youtube_load_du_lieu_youtube_component__["a" /* LoadDuLieuYoutubeComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__forum_bar_forum_bar_component__["a" /* ForumBarComponent */],
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_16__Share_Services_benh_service__["a" /* BenhService */],
-            __WEBPACK_IMPORTED_MODULE_17__Share_Services_forum_service__["a" /* ForumService */]
-        ]
-    })
-], TracuubenhModule);
-
-//# sourceMappingURL=Tracuubenh.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".title-img {\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #eee;\r\n    padding: 5px;\r\n    font-weight: 400;\r\n    font-size: 13px;\r\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"img-wr\">\r\n  <img width=\"100%\" src=\"{{duLieuLinkAnh}}{{dulieuImg}}\">\r\n  <div class=\"title-img\">{{dulieuImgTieuDe}}</div>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadDuLieuImgComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var LoadDuLieuImgComponent = (function () {
-    function LoadDuLieuImgComponent() {
-    }
-    LoadDuLieuImgComponent.prototype.ngOnInit = function () {
-    };
-    return LoadDuLieuImgComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuImgComponent.prototype, "dulieuImg", void 0);
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuImgComponent.prototype, "duLieuLinkAnh", void 0);
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuImgComponent.prototype, "dulieuImgTieuDe", void 0);
-LoadDuLieuImgComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-load-du-lieu-img',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], LoadDuLieuImgComponent);
-
-//# sourceMappingURL=load-du-lieu-img.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.css":
+/***/ "../../../../../src/app/authModule/Auth.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -280,19 +18,19 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.html":
+/***/ "../../../../../src/app/authModule/Auth.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a href=\"{{dulieuLink}}\">{{dulieuLinkTieuDe}}</a>\r\n\r\n"
+module.exports = "<p>\r\n  authModule works!\r\n</p>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.ts":
+/***/ "../../../../../src/app/authModule/Auth.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadDuLieuLinkComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -303,321 +41,54 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var LoadDuLieuLinkComponent = (function () {
-    function LoadDuLieuLinkComponent() {
+var AuthComponent = (function () {
+    function AuthComponent() {
     }
-    LoadDuLieuLinkComponent.prototype.ngOnInit = function () {
+    AuthComponent.prototype.ngOnInit = function () {
     };
-    return LoadDuLieuLinkComponent;
+    return AuthComponent;
 }());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuLinkComponent.prototype, "dulieuLink", void 0);
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuLinkComponent.prototype, "dulieuLinkTieuDe", void 0);
-LoadDuLieuLinkComponent = __decorate([
+AuthComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-load-du-lieu-link',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component.css")]
+        selector: 'app-auth',
+        template: __webpack_require__("../../../../../src/app/authModule/Auth.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/Auth.component.css")]
     }),
     __metadata("design:paramtypes", [])
-], LoadDuLieuLinkComponent);
+], AuthComponent);
 
-//# sourceMappingURL=load-du-lieu-link.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "p {\r\n    padding: 20px 0;\r\n    line-height: 22px;\r\n    font-size: 16 px;\r\n    margin: 0;\r\n}\r\n\r\np p {\r\n    margin: 0;\r\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+//# sourceMappingURL=Auth.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p [innerHTML]=\"dulieuText\"></p>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.ts":
+/***/ "../../../../../src/app/authModule/Auth.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadDuLieuTextComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var LoadDuLieuTextComponent = (function () {
-    function LoadDuLieuTextComponent() {
-    }
-    LoadDuLieuTextComponent.prototype.ngOnInit = function () {
-    };
-    return LoadDuLieuTextComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuTextComponent.prototype, "dulieuText", void 0);
-LoadDuLieuTextComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-load-du-lieu-text',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], LoadDuLieuTextComponent);
-
-//# sourceMappingURL=load-du-lieu-text.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".title-video {\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #eee;\r\n    padding: 5px;\r\n    font-weight: 400;\r\n    font-size: 13px;\r\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"embed-responsive embed-responsive-16by9\">\r\n    <iframe style=\"width:100%; max-width:100%;\" [src]=\"url\" frameborder=\"0\" allowfullscreen></iframe>\r\n\r\n</div>\r\n<div class=\"title-video\">{{dulieuYoutubeTieuDe}}</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadDuLieuYoutubeComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var LoadDuLieuYoutubeComponent = (function () {
-    function LoadDuLieuYoutubeComponent(sanitizer) {
-        this.sanitizer = sanitizer;
-    }
-    LoadDuLieuYoutubeComponent.prototype.ngOnInit = function () {
-        this.dulieuYoutube = this.dulieuYoutube.replace('youtu.be', 'www.youtube.com/embed');
-        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(this.dulieuYoutube);
-    };
-    return LoadDuLieuYoutubeComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuYoutubeComponent.prototype, "dulieuYoutube", void 0);
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], LoadDuLieuYoutubeComponent.prototype, "dulieuYoutubeTieuDe", void 0);
-LoadDuLieuYoutubeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-load-du-lieu-youtube',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */]) === "function" && _a || Object])
-], LoadDuLieuYoutubeComponent);
-
-var _a;
-//# sourceMappingURL=load-du-lieu-youtube.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n.content-box {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    padding-bottom: 40px;\r\n    background: #fff;\r\n}\r\n\r\n.title-col {\r\n  width: 100%;\r\n  height: 44px;\r\n  background: #0f9cb3;\r\n  color: #fff;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  padding:0 30px;\r\n}\r\n\r\n.title-col .big-title {\r\n  font-size: 16px;\r\n  margin: 0;\r\n  font-weight: 600;\r\n  padding: 9px 0 0 0;\r\n  line-height: 13px;\r\n}\r\n\r\n.title-col .sub-title {\r\n  font-size: 11px;\r\n  color: #ccc;\r\n}\r\n/* box chứa */\r\n/* box chứa */\r\n/* box chứa */\r\n\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n.content-wr {\r\n    position: relative;\r\n    height: calc(100vh - 85px);\r\n    overflow: hidden;\r\n    width: 1020px;\r\n    float: left;\r\n    border-right: 1px solid #ccc;\r\n    padding-right: 370px;\r\n    background: #fff;\r\n}\r\n\r\n.content-left {\r\n  float: left;\r\n  width: 100%;\r\n  position: relative;\r\n  padding: 34px 25px 25px 25px;\r\n  height: 100%;\r\n  overflow: auto;\r\n  border-right: 1px solid #ccc;\r\n}\r\n\r\n\r\n.content-header {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n}\r\n\r\n.content-box h1.text-light.title-top {\r\n    margin-top: 50px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.content-box h1.text-light {\r\n    padding: 0 30px;\r\n    margin: 30px 0;\r\n}\r\n\r\n.content-left .thin.bg-grayLighter {\r\n    margin:0;\r\n}\r\n\r\n\r\n.content-header hr {\r\n    margin: 0 30px;\r\n}\r\n\r\n.bg-grayLighter {\r\n    background-color: #eeeeee !important;\r\n}\r\n\r\n.content-box-main {\r\n    overflow: auto;\r\n    height: 100%;\r\n    margin: 0;\r\n}\r\n\r\n.dl-horizontal {\r\n    font-size: 14px;\r\n    margin: 20px 0;\r\n}\r\n\r\n.dl-horizontal dt {\r\n  font-weight: 600;\r\n}\r\n\r\n.content-box h2.text-light {\r\n    padding: 10px 0 0;\r\n}\r\n\r\n.content-box p {\r\n    padding: 20px 0;\r\n    line-height: 22px;\r\n    font-size: 16 px;\r\n}\r\n\r\n.content-box .img-wr {\r\n    padding: 20px 0;\r\n}\r\n\r\n.bt-bar {\r\n    border-bottom: 1px solid #eee;\r\n    width: 100%;\r\n    float: left;\r\n    padding: 0 25px;\r\n}\r\n\r\n.bt-bar .bt-features:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.bt-bar .bt-features .icon {\r\n    font-size: 18px;\r\n    position: absolute;\r\n    top: 7px;\r\n    left: 10px;\r\n}\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n/* nội dung chi tiết bệnh */\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n.bt-close {\r\n  background: none;\r\n  position: absolute;\r\n  top:0;\r\n  right:0;\r\n  padding: 3px 6px;\r\n  border: none;\r\n  box-shadow: none;\r\n  transition: all 0.3s ease 0s;\r\n}\r\n\r\n.bt-close:hover {\r\n  background: #ce352c;\r\n}\r\n\r\n/* close button */\r\n/* close button */\r\n/* close button */\r\n\r\n/*  buttons */\r\n.bt-features {\r\n  padding: 8px 10px 8px 33px;\r\n  float: left;\r\n  color: #333;\r\n  font-size: 12px;\r\n  font-weight: 600;\r\n  position: relative;\r\n}\r\n\r\n.bt-features:hover, .bt-features:focus {\r\n  color: #333;\r\n  background: #f5f5f5;\r\n}\r\n\r\n.bt-features .glyphicon {\r\n  font-size: 18px;\r\n  position: absolute;\r\n  top: 7px;\r\n  left: 10px;\r\n}\r\n\r\n/* share button */\r\n/* share button */\r\n.bt-social {\r\n    width: 40px;\r\n    height: 40px;\r\n    line-height: 40px;\r\n    position: relative;\r\n    float: left;\r\n    border-radius: 50%;\r\n    color: #fff;\r\n    transition: .25s;\r\n}\r\n\r\n.bt-social button {\r\n   background: none;\r\n}\r\n\r\n.bt-social.facebook  {\r\n  background: #3b5998;\r\n\r\n}\r\n.bt-social.google  {\r\n    background: #DC4E41;\r\n}\r\nshare-button button:active {\r\n    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-window [name]=\"ChiTietBenh?.TenBenh\" [url]=\"url\">\r\n    <!-- loading -->\r\n    <div class=\"content-wr\">\r\n        <p class=\"lead\" *ngIf=\"loading\">\r\n            <img src=\"assets/66.gif\">\r\n        </p>\r\n        <!-- Start content left -->\r\n        <div class=\"content-left\" *ngIf=\"!loading\">\r\n\r\n            <div class=\"content-header\">\r\n                <div class=\"bt-bar\">\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-calendar-check-o icon \"></span>Đặt lịch khám</a>\r\n                    <a href=\"#\" class=\"bt-features\"><span class=\"fa fa-fw fa-user-md icon\"></span>Phương pháp điều trị</a>\r\n                    <!-- <share-button class=\"bt-social facebook\" [button]=\"fbButton\"></share-button>\r\n                    <share-button class=\"bt-social google\" [button]=\"gPlusButton\"></share-button> -->\r\n                </div>\r\n\r\n                <hr class=\"thin bg-grayLighter\">\r\n            </div>\r\n            <!-- load mô tả chi tiết bệnh -->\r\n            <div class=\"content-box-main scrollbar-custom\">\r\n                <dl class=\"dl-horizontal\">\r\n                    <dt>\r\n                        Chuyên khoa\r\n                    </dt>\r\n                    <dd>\r\n                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}\r\n                    </dd>\r\n                    <dt>\r\n                        Tóm tắt\r\n                    </dt>\r\n                    <dd [innerHTML]=\"ChiTietBenh?.TomTat\"></dd>\r\n                </dl>\r\n                <hr class=\"thin bg-grayLighter\">\r\n\r\n                <!-- load phần tử danh mục trong chi tiết bệnh -->\r\n                <div *ngFor=\"let phantu of ChiTietBenh?.DsPhanTu\">\r\n                    <h2 class=\"text-light\">\r\n                        {{phantu?.Ten}}\r\n                    </h2>\r\n                    <hr class=\"thin bg-grayLighter\">\r\n                    <!-- load dữ liệu chi tiết bệnh -->\r\n                    <div *ngFor=\"let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung\">\r\n\r\n                        <!-- load dữ liệu text -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 1\">\r\n                            <app-load-du-lieu-text [dulieuText]=\"dulieu?.Dulieu\">\r\n                            </app-load-du-lieu-text>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu ảnh -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 2\">\r\n                            <app-load-du-lieu-img [dulieuImg]=\"dulieu?.Dulieu\" [duLieuLinkAnh]=\"ChiTietBenh?.LinkAnh\" [dulieuImgTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-img>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu clip Youtube -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 5\">\r\n                            <app-load-du-lieu-youtube [dulieuYoutube]=\"dulieu?.Dulieu\" [dulieuYoutubeTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-youtube>\r\n                            <br/>\r\n                            <br/>\r\n                        </div>\r\n\r\n                        <!-- load dữ liệu link -->\r\n                        <div *ngIf=\"dulieu?.LoaiDuLieu == 10\">\r\n                            <app-load-du-lieu-link [dulieuLink]=\"dulieu?.Dulieu\" [dulieuLinkTieuDe]=\"dulieu?.TieuDe\">\r\n                            </app-load-du-lieu-link>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <!-- end content left -->\r\n        <app-forum-bar></app-forum-bar>\r\n    </div>\r\n</app-window>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__ = __webpack_require__("../../../../ngx-sharebuttons/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChiTietBenhComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_social_login__ = __webpack_require__("../../../../angular2-social-login/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__ = __webpack_require__("../../../../ng2-responsive/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_responsive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_responsive__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Auth_component__ = __webpack_require__("../../../../../src/app/authModule/Auth.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SignIn_SignIn_component__ = __webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SignOut_SignOut_component__ = __webpack_require__("../../../../../src/app/authModule/SignOut/SignOut.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Register_Register_component__ = __webpack_require__("../../../../../src/app/authModule/Register/Register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Verify_Verify_component__ = __webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ForgotPassword_ForgotPassword_component__ = __webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChangePass_ChangePass_component__ = __webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__EnterPhoneNumber_EnterPhoneNumber_component__ = __webpack_require__("../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthModule", function() { return AuthModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var ChiTietBenhComponent = (function () {
-    function ChiTietBenhComponent(benhService, router) {
-        this.benhService = benhService;
-        this.router = router;
-        this.loading = true;
-    }
-    Object.defineProperty(ChiTietBenhComponent.prototype, "idBenh", {
-        set: function (idBenh) {
-            this.show(idBenh);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ChiTietBenhComponent.prototype.ngOnInit = function () {
-        // ShareButton(button name [provider], template, classes)
-        this.fbButton = new __WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["b" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["c" /* ShareProvider */].FACEBOOK, '<i class="fa fa-facebook"></i>', 'facebook');
-        this.gPlusButton = new __WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["b" /* ShareButton */](__WEBPACK_IMPORTED_MODULE_2_ngx_sharebuttons__["c" /* ShareProvider */].GOOGLEPLUS, '<i class="fa fa-google-plus"></i>', 'google');
-        this.url = 'apps/tracuubenh'; // (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
-    };
-    ChiTietBenhComponent.prototype.show = function (id) {
-        var _this = this;
-        this.loading = true;
-        if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
-            this.benhService.getChiTietBenh(id.toString()).subscribe(function (data) {
-                _this.ChiTietBenh = data;
-                _this.loading = false;
-            });
-        }
-    };
-    return ChiTietBenhComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", Number),
-    __metadata("design:paramtypes", [Number])
-], ChiTietBenhComponent.prototype, "idBenh", null);
-ChiTietBenhComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-chi-tiet-benh',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _b || Object])
-], ChiTietBenhComponent);
-
-var _a, _b;
-//# sourceMappingURL=chi-tiet-benh.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\r\n\r\n.search-box-top {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    padding: 10px 20px 0 20px ;\r\n    width: 100%;\r\n    background: #fff;\r\n    z-index: 100;\r\n}\r\n\r\n\r\n\r\n.search-box-top .text-light {\r\n    margin-top: 5px;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.search-box-top hr {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.text-light {\r\n    font-weight: 600;\r\n}\r\n\r\n.input-control {\r\n    display: inline-block;\r\n    min-height: 27px;\r\n    height: 27px;\r\n    position: relative;\r\n    vertical-align: middle;\r\n    margin: 0;\r\n    line-height: 1;\r\n    position: relative;\r\n}\r\n\r\n.input-control .icon-search {\r\n  position: absolute;\r\n  top: 5px;\r\n  left: 5px;\r\n  color: #777;\r\n}\r\n\r\n.input-control input {\r\n  width: 100%;\r\n  padding:3px 5px;\r\n  font-size: 13px;\r\n  padding-left:25px;\r\n  border: solid 1px #ccc;\r\n  height: 25px;\r\n}\r\n\r\n.full-size {\r\n    width: 100% !important;\r\n}\r\n\r\n.ul {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding:0;\r\n    margin: 0 25px;\r\n}\r\n\r\n.ul li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n\r\n}\r\n\r\n.ul li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom:1px solid #eee;\r\n}\r\n\r\n\r\n\r\n.ul li a .title {\r\n    display: block;\r\n}\r\n\r\n.ul li a:hover, .ul li a:focus {\r\n  background: #f5f5f5;\r\n  text-decoration:none;\r\n}\r\n\r\n.no-mg-top {\r\n  top:0;\r\n  padding-top: 67px;\r\n}\r\n\r\n.ul li a .icon {\r\n    width: 20px;\r\n    top: 13px;\r\n    right: 10px;\r\n    color: #888;\r\n    position: absolute;\r\n}\r\n\r\n\r\n\r\n.toggled ul li a .title {\r\n  display: block\r\n}\r\n\r\n.toggled ul li a {\r\npadding: 12px 10px 12px 40px;\r\n}\r\n\r\n.toggled {\r\n  width: 50px;\r\n  left: 0;\r\n}\r\n\r\n.list {\r\n    height: 100%;\r\n    overflow: auto;\r\n    padding: 0;\r\n    margin: 0 20px;\r\n}\r\n\r\n.list li {\r\n    display: list-item;\r\n    list-style-type: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.list li a {\r\n    color: #323232;\r\n    padding: 8px 5px;\r\n    font-size: 14px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 40px;\r\n    line-height: 25px;\r\n    border-bottom: 1px solid #eee;\r\n}\r\n\r\n\r\n\r\n.list li a:hover, .list li a:focus {\r\n    background: #f5f5f5;\r\n    text-decoration:none;\r\n}\r\n\r\n.list-left-wr {\r\n    width: 100%;\r\n    padding: 64px 0 25px 0;\r\n    background: #fff;\r\n    border-right: 1px solid #ccc;\r\n    position: relative !important;\r\n    display: block;\r\n    height: calc(100vh - 85px);\r\n    float: left;\r\n    overflow: hidden;\r\n}\r\n\r\n.list-left-wr.mobile {\r\n    border:none;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [idea]=\"true\" [idIdea]=\"idIdea\" [urlIdea]=\"urlIdea\" [name]=\"name\" [url]=\"url\" *showItDevice=\"['desktop', 'tablet']\">\r\n    <div class=\"list-left-wr\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n                {{endBenh}}/{{TongSoLuong}} bệnh\r\n                </span>\r\n            </div>\r\n\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"2\" [infiniteScrollThrottle]=\"500\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]=\"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n                    </a>\r\n                    <!-- <a *ngIf=\"scrollLoading\"><img src=\"assets/66.gif\"></a> -->\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n\r\n\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- danh sacsh benh for mobile -->\r\n<!-- Start col left 2 -->\r\n<app-window [icon]=\"iconText\" [name]=\"name\" [url]=\"url\" *showItDevice=\"['mobile']\">\r\n    <div class=\"list-left-wr mobile\">\r\n        <!-- searchbox -->\r\n        <div class=\"search-box-top\">\r\n            <div class=\"input-control text full-size\" data-role=\"input\">\r\n                <span class=\"fa fa-fw fa-search icon icon-search\" aria-hidden=\"true\"></span>\r\n                <input type=\"text\" placeholder=\"Nhập tên bệnh...\" [formControl]=\"searchKey\">\r\n            </div>\r\n            <!-- đếm số bệnh -->\r\n            <div style=\"padding: 5px 0 0 0;\">\r\n                <span style=\"font-size: 11px; color: #888; float: right;\">\r\n          {{endBenh}}/{{TongSoLuong}} bệnh\r\n        </span>\r\n            </div>\r\n            <hr class=\"thin bg-grayLighter\">\r\n        </div>\r\n        <!-- loading gif -->\r\n        <div class=\"text-center\">\r\n            <p class=\"lead\" *ngIf=\"loading\">\r\n                <img src=\"assets/66.gif\">\r\n            </p>\r\n        </div>\r\n        <!-- list bệnh -->\r\n        <ul class=\"scrollbar-custom list\" infinite-scroll [infiniteScrollDistance]=\"1\" [infiniteScrollThrottle]=\"200\" (scrolled)=\"onScroll()\"\r\n            [scrollWindow]=\"false\">\r\n            <li *ngIf=\"!loading\">\r\n                <div class=\"text-center\" *ngIf=\"empty\">\r\n                    <p>\r\n                        <a> Không kết quả nào phù hợp</a>\r\n                    </p>\r\n                </div>\r\n                <div *ngIf=\"!empty\">\r\n                    <a *ngFor=\"let benh of DsBenh\" style=\"cursor: pointer;\" [routerLink]=\"['/apps/tracuubenh', benh.Id]\">\r\n                <span class=\"title\" >{{benh.Name}}</span>\r\n            </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n        <!-- end col left 2 -->\r\n    </div>\r\n</app-window>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__ = __webpack_require__("../../../../../src/app/Share/Services/benh.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/add/operator/debounceTime.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__("../../../../rxjs/add/operator/distinctUntilChanged.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DanhSachBenhComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 
 
@@ -625,217 +96,109 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var DanhSachBenhComponent = (function () {
-    function DanhSachBenhComponent(
-        // nhớ khai báo service
-        benhService, router, activedroute, settingService) {
-        var _this = this;
-        this.benhService = benhService;
-        this.router = router;
-        this.activedroute = activedroute;
-        this.settingService = settingService;
-        this.searchUpdate = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
-        this.searchKey = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormControl */]('');
-        this.loading = false;
-        this.scrollLoading = false;
-        this.empty = false;
-        this.showChiTiet = false;
-        this.loadMore = false;
-        this.isSearch = false;
-        this.page = 1;
-        this.searchKey.valueChanges
-            .debounceTime(1000)
-            .subscribe(function (event) {
-            _this.doSearch(event);
-            // this.clickBenh(null);
-        });
-    }
-    DanhSachBenhComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        // Hàm lấy dữ liệu bệnh
-        this.benhService.getBenh(1).subscribe(function (data) {
-            _this.DsBenh = data.DsBenh;
-            _this.TongSoLuong = data.TongSoLuong;
-            _this.startBenh = 0;
-            _this.endBenh = 50;
-        });
-        this.menu = this.settingService.getMenu();
-        for (var i = 0; i < this.menu.length; i++) {
-            for (var x = 0; x < this.menu[i].items.length; x++) {
-                if (this.menu[i].items[x].url === 'tracuubenh') {
-                    this.name = this.menu[i].items[x].Ten;
-                    this.iconText = this.menu[i].items[x].IconText;
-                    this.idIdea = this.menu[i].items[x].Id;
-                }
-            }
-        }
-        this.url = 'apps';
-        this.idea = true;
-        this.urlIdea = 'tracuubenh';
-    };
-    // search bệnh
-    DanhSachBenhComponent.prototype.doSearch = function (text) {
-        var _this = this;
-        // no keyword catched => return all
-        if (text === '') {
-            this.isSearch = false;
-            this.benhService.getBenh(1).subscribe(function (data) {
-                _this.DsBenh = data.DsBenh;
-                _this.TongSoLuong = data.TongSoLuong;
-                _this.startBenh = (_this.page - 1) * 50;
-                _this.endBenh = _this.page * 50;
-            });
-            // return search results
-        }
-        else {
-            this.isSearch = true;
-            this.loading = true;
-            this.searchUpdate.next(text);
-            setTimeout(function () {
-                _this.benhService.getSearchBenh(text).subscribe(function (data) {
-                    _this.DsBenh = data.DsBenh;
-                    _this.TongSoLuong = data.TongSoLuong;
-                    _this.startBenh = 0;
-                    _this.endBenh = data.TongSoLuong;
-                    if (_this.DsBenh.length === 0 && _this.TongSoLuong === 0) {
-                        _this.empty = true;
-                    }
-                    else {
-                        _this.empty = false;
-                    }
-                    _this.loading = false;
-                });
-            }, 1500);
-        }
-    };
-    // navigate to chi-tiet-benh url with id
-    DanhSachBenhComponent.prototype.clickBenh = function (id) {
-        this.router.navigate(['tracuubenh/', id]);
-    };
-    // load more onscroll
-    DanhSachBenhComponent.prototype.onScroll = function () {
-        var _this = this;
-        this.scrollLoading = true;
-        if (this.isSearch || this.page > this.TongSoLuong / 50) {
-            return;
-        }
-        else {
-            this.loadMore = true;
-            this.page++;
-            this.benhService.getBenh(this.page).subscribe(function (data) {
-                for (var i = 0; i < data.DsBenh.length; i++) {
-                    _this.DsBenh.push(data.DsBenh[i]);
-                }
-                _this.endBenh = _this.page * 50;
-                _this.loadMore = false;
-                _this.loading = false;
-                if (_this.endBenh > _this.DsBenh.length) {
-                    _this.endBenh = _this.DsBenh.length;
-                }
-            });
-        }
-        if (this.endBenh === this.DsBenh.length) {
-            this.scrollLoading = false;
-        }
-    };
-    return DanhSachBenhComponent;
-}());
-DanhSachBenhComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-        selector: 'app-danh-sach-benh',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/danh-sach-benh/danh-sach-benh.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_benh_service__["a" /* BenhService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _d || Object])
-], DanhSachBenhComponent);
-
-var _a, _b, _c, _d;
-//# sourceMappingURL=danh-sach-benh.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
+// component
 
 
-// module
-exports.push([module.i, ".col-right {\r\n    height: 100%;\r\n    width: 320px;\r\n    padding:0 0 40px 0;\r\n    margin:25px;\r\n    float: left;\r\n    position: absolute;\r\n    top: 44px;\r\n    right: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.col-right-main {\r\n  overflow: auto;\r\n  height: 100%;\r\n  padding: 0 0 25px 0;\r\n  float: left;\r\n}\r\n\r\n.box-2 {\r\n    position: relative;\r\n    border-radius: 0;\r\n    background: #ffffff;\r\n    border-top: 3px solid #d2d6de;\r\n    width: 100%;\r\n    border-top-color: #0fa5bd;\r\n}\r\n\r\n.box-header.with-border {\r\n    border-bottom: 1px solid #f4f4f4;\r\n}\r\n\r\n.box-header {\r\n    color: #444;\r\n    display: block;\r\n    padding: 10px 0;\r\n    position: relative;\r\n}\r\n\r\n.user-block img {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.user-block .username {\r\n    font-size: 16px;\r\n}\r\n\r\n.user-block .username a {\r\n    color: #0072c6;\r\n}\r\n\r\n.user-block .description {\r\n    color: #999;\r\n    font-size: 12px;\r\n    padding-top: 5px;\r\n}\r\n\r\n.user-block .username, .user-block .description, .user-block .comment {\r\n    display: block;\r\n    margin-left: 50px;\r\n}\r\n\r\n.box-body {\r\n    padding:10px 0;\r\n}\r\n", ""]);
-
-// exports
 
 
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
-/***/ }),
 
-/***/ "../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.html":
-/***/ (function(module, exports) {
 
-module.exports = "<!-- Start content right -->\r\n<div class=\"col-right\">\r\n    <div class=\"col-right-main scrollbar-custom\">\r\n        <div class=\"box-2 \" *ngFor=\"let baiviet of forumBarContent\">\r\n            <div class=\"box-header with-border\">\r\n                <div class=\"user-block\">\r\n                    <span class=\"username\">\r\n                  <a href=\"#\">{{baiviet.TieuDe}}</a>\r\n                </span>\r\n                    <span class=\"description\">Tác giả: {{baiviet.NguoiViet.Name}}\r\n                </span>\r\n                </div>\r\n            </div>\r\n            <div class=\"box-body\">\r\n                <p class=\"t-13px\"> {{baiviet.TomTat}}\r\n                </p>\r\n\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-share\">\r\n                </i> Chia sẻ\r\n              </button>\r\n                <button type=\"button\" class=\"btn btn-default btn-xs\">\r\n                <i class=\"glyphicon glyphicon-thumbs-up\">\r\n                </i> Thích\r\n              </button>\r\n                <span class=\"pull-right text-muted\">45 thích - 2 bình luận\r\n              </span>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End content right -->\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__ = __webpack_require__("../../../../../src/app/Share/Services/forum.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForumBarComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 // services
 
-var ForumBarComponent = (function () {
-    function ForumBarComponent(forumService) {
-        this.forumService = forumService;
+var routing = [
+    { path: 'signIn', component: __WEBPACK_IMPORTED_MODULE_7__SignIn_SignIn_component__["a" /* SignInComponent */] },
+    { path: 'signOut', component: __WEBPACK_IMPORTED_MODULE_8__SignOut_SignOut_component__["a" /* SignOutComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_9__Register_Register_component__["a" /* RegisterComponent */] },
+    { path: 'verify/:IdU/:phone/:code', component: __WEBPACK_IMPORTED_MODULE_10__Verify_Verify_component__["a" /* VerifyComponent */] },
+    { path: 'forgotPass', component: __WEBPACK_IMPORTED_MODULE_11__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */] },
+    { path: 'changePass/:IdU/:phone', component: __WEBPACK_IMPORTED_MODULE_12__ChangePass_ChangePass_component__["a" /* ChangePassComponent */] },
+    { path: 'phone', component: __WEBPACK_IMPORTED_MODULE_13__EnterPhoneNumber_EnterPhoneNumber_component__["a" /* EnterPhoneNumberComponent */] },
+];
+var Routing = __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forChild(routing);
+// tslint:disable-next-line:prefer-const
+var providers = {
+    'google': {
+        'clientId': '442448415974-lvusnqsttcup9dd79fa2en47car1793k.apps.googleusercontent.com'
+        // client secret: jQN-Mm7lJw78IrM6HTnYahxs
+    },
+    'facebook': {
+        // 'clientId': '123454808277990',
+        'clientId': '1914775922118244',
+        'apiVersion': 'v2.10'
     }
-    ForumBarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.forumService.getForumBar().subscribe(function (data) {
-            _this.forumBarContent = data;
-        });
-    };
-    return ForumBarComponent;
+};
+var AuthModule = (function () {
+    function AuthModule() {
+    }
+    return AuthModule;
 }());
-ForumBarComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-forum-bar',
-        template: __webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/Apps/Tracuubenh/forum-bar/forum-bar.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__["a" /* ForumService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__Share_Services_forum_service__["a" /* ForumService */]) === "function" && _a || Object])
-], ForumBarComponent);
+AuthModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_4_angular2_social_login__["a" /* Angular2SocialLoginModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_5_ng2_responsive__["ResponsiveModule"],
+            Routing
+        ],
+        declarations: [__WEBPACK_IMPORTED_MODULE_6__Auth_component__["a" /* AuthComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__SignIn_SignIn_component__["a" /* SignInComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__SignOut_SignOut_component__["a" /* SignOutComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__Register_Register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__Verify_Verify_component__["a" /* VerifyComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__ForgotPassword_ForgotPassword_component__["a" /* ForgotPasswordComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__ChangePass_ChangePass_component__["a" /* ChangePassComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__EnterPhoneNumber_EnterPhoneNumber_component__["a" /* EnterPhoneNumberComponent */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_14__Share_Services_user_service__["a" /* UserService */]
+        ]
+    })
+], AuthModule);
 
-var _a;
-//# sourceMappingURL=forum-bar.component.js.map
+__WEBPACK_IMPORTED_MODULE_4_angular2_social_login__["a" /* Angular2SocialLoginModule */].loadProvidersScripts(providers);
+//# sourceMappingURL=Auth.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/Share/Services/benh.service.ts":
+/***/ "../../../../../src/app/authModule/ChangePass/ChangePass.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: relative;\r\n    right: 0;\r\n    float: right;\r\n    height: 100%;\r\n    min-height: 640px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 40px 50px 0;\r\n    z-index: 1;\r\n    overflow: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 25px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 64px;\r\n    height: 64px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 13px 10px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 20px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n.sign-in .icon-error {\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 29px;\r\n    font-size: 20px;\r\n    color: #ff4a68;\r\n    display: none;\r\n    z-index: 10;\r\n}\r\n\r\n.sign-in .form-group.warning .icon-error {\r\n    display: block\r\n}\r\n\r\n.sign-in .form-group.warning input {\r\n    border: solid 1px #ff4a68;\r\n    padding-right: 30px;\r\n}\r\n\r\n.sign-in .form-group.warning .alert-text {\r\n    padding: 0;\r\n    margin: 0 0 5px 0;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group .success-text {\r\n    color: green;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n    cursor: pointer;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n}\r\n\r\n\r\n/* button close */\r\n\r\n\r\n/* button close */\r\n\r\n.bt-close {\r\n    transition: all 0.3s ease 0s;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    z-index: 10000;\r\n}\r\n\r\n.bt-close:hover {\r\n    background: #ce352c;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/ChangePass/ChangePass.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Đặt lại mật khẩu</h3>\r\n        <span _ngcontent-c2=\"\" class=\"or\">\r\n            Chúng tôi đã gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu mới.\r\n        </span>\r\n        <div class=\"form-group\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\"> {{error}}\r\n          </span>\r\n        </div>\r\n        <form #f=\"ngForm\">\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"verifyCode\" type=\"text\" placeholder=\"Nhập mã xác thực\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"newPassword\" type=\"password\" placeholder=\"Nhập mật khẩu mới\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"confirmPassword\" type=\"password\" placeholder=\"Nhập lại mật khẩu mới\">\r\n            </div>\r\n        </form>\r\n        <div class=\"form-group\" *ngIf=\"!success\">\r\n            <a [routerLink]=\"['/auth/forgotPass']\" class=\"alert-text\">Thiếp lập mật khẩu mới thất bại! Click để quay lại</a>\r\n        </div>\r\n\r\n        <div class=\"form-group\" *ngIf=\"success\">\r\n            <a [routerLink]=\"['/auth/signIn']\" class=\"success-text\">Thiếp lập mật khẩu mới thành công! Click để về trang đăng nhập</a>\r\n        </div>\r\n        <button (click)=\"changePassword()\">Hoàn tất</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/forgotPass']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n\r\n    </div>\r\n\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/ChangePass/ChangePass.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment_prod__ = __webpack_require__("../../../../../src/environments/environment.prod.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BenhService; });
-/* unused harmony export Benh */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangePassComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -849,101 +212,879 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var BenhService = (function () {
-    function BenhService(http) {
-        this.http = http;
-        this.benhUrl = __WEBPACK_IMPORTED_MODULE_1__environments_environment_prod__["a" /* environment */].apiUrl + "/CSDLYT/Benh_List";
-    }
-    BenhService.prototype.getBenh = function (page) {
-        // ...using get request
-        return this.http.get(this.benhUrl + "?Trang=" + page + "&soluongmoitrang=50")
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    BenhService.prototype.getSearchBenh = function (key) {
-        var searchUrl = this.benhUrl + "?Trang=1&searchTerm=" + key + "&soluongmoitrang=15";
-        return this.http.get(searchUrl)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    BenhService.prototype.getChiTietBenh = function (id) {
-        var chiTietBenhUrl = __WEBPACK_IMPORTED_MODULE_1__environments_environment_prod__["a" /* environment */].apiUrl + "CSDLYT/Benh_Detail?Id=" + id;
-        // ...using get request
-        return this.http.get(chiTietBenhUrl)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
-    };
-    return BenhService;
-}());
-BenhService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], BenhService);
 
-var Benh = (function () {
-    function Benh(id, Name) {
-        this.id = id;
-        this.Name = Name;
+var ChangePassComponent = (function () {
+    function ChangePassComponent(settingService, router, activedroute, userService) {
+        this.settingService = settingService;
+        this.router = router;
+        this.activedroute = activedroute;
+        this.userService = userService;
+        this.verifyCode = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.newPassword = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.confirmPassword = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.IdU = null;
+        this.phone = null;
+        this.elements = this.settingService.getConfig();
     }
-    return Benh;
+    ChangePassComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activedroute.params.subscribe(function (pars) {
+            console.log(pars['IdU']);
+            _this.IdU = pars['IdU'];
+            _this.phone = pars['phone'];
+        });
+    };
+    ChangePassComponent.prototype.changePassword = function () {
+        var _this = this;
+        if (this.newPassword.value !== this.confirmPassword.value) {
+            this.error = 'Mật khẩu không phù hợp!';
+        }
+        else {
+            this.userService.changePass(this.newPassword.value, this.verifyCode.value, this.phone, this.IdU).subscribe(function (data) {
+                console.log(data);
+                if (data.Mes === 'Thiếp lập mật khẩu mới thành công!') {
+                    _this.success = true;
+                    // this.router.navigate(['auth/signIn']);
+                }
+            });
+        }
+    };
+    return ChangePassComponent;
 }());
+ChangePassComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        selector: 'app-changepass',
+        template: __webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/ChangePass/ChangePass.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+], ChangePassComponent);
 
-var _a;
-//# sourceMappingURL=benh.service.js.map
+var _a, _b, _c, _d;
+//# sourceMappingURL=ChangePass.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/Share/Services/forum.service.ts":
+/***/ "../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: relative;\r\n    right: 0;\r\n    float: right;\r\n    height: 100%;\r\n    min-height: 640px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 40px 50px 0;\r\n    z-index: 1;\r\n    overflow: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 25px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 64px;\r\n    height: 64px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 13px 10px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 20px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n.sign-in .icon-error {\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 29px;\r\n    font-size: 20px;\r\n    color: #ff4a68;\r\n    display: none;\r\n    z-index: 10;\r\n}\r\n\r\n.sign-in .form-group.warning .icon-error {\r\n    display: block\r\n}\r\n\r\n.sign-in .form-group.warning input {\r\n    border: solid 1px #ff4a68;\r\n    padding-right: 30px;\r\n}\r\n\r\n.sign-in .form-group.warning .alert-text {\r\n    padding: 0;\r\n    margin: 0 0 5px 0;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n}\r\n\r\n\r\n/* button close */\r\n\r\n\r\n/* button close */\r\n\r\n.bt-close {\r\n    transition: all 0.3s ease 0s;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    z-index: 10000;\r\n}\r\n\r\n.bt-close:hover {\r\n    background: #ce352c;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span  class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Nhập số điện thoại của bạn</h3>\r\n\r\n        <form #f=\"ngForm\" class=\"form-group\">\r\n            <input [formControl]=\"phone\" type=\"text\" placeholder=\"Nhập số điện thoại...\">\r\n        </form>\r\n        <button>Hoàn tất</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/signIn']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnterPhoneNumberComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var EnterPhoneNumberComponent = (function () {
+    function EnterPhoneNumberComponent(settingService, router, activedroute, userService) {
+        this.settingService = settingService;
+        this.router = router;
+        this.activedroute = activedroute;
+        this.userService = userService;
+        this.phone = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
+    }
+    EnterPhoneNumberComponent.prototype.ngOnInit = function () {
+    };
+    return EnterPhoneNumberComponent;
+}());
+EnterPhoneNumberComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        selector: 'app-enterphonenumber',
+        template: __webpack_require__("../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+], EnterPhoneNumberComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=EnterPhoneNumber.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: relative;\r\n    right: 0;\r\n    float: right;\r\n    height: 100%;\r\n    min-height: 640px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 40px 50px 0;\r\n    z-index: 1;\r\n    overflow: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 25px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 64px;\r\n    height: 64px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 13px 10px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 20px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n.sign-in .icon-error {\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 29px;\r\n    font-size: 20px;\r\n    color: #ff4a68;\r\n    display: none;\r\n    z-index: 10;\r\n}\r\n\r\n.sign-in .form-group.warning .icon-error {\r\n    display: block\r\n}\r\n\r\n.sign-in .form-group.warning input {\r\n    border: solid 1px #ff4a68;\r\n    padding-right: 30px;\r\n}\r\n\r\n.sign-in .form-group.warning .alert-text {\r\n    padding: 0;\r\n    margin: 0 0 5px 0;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n}\r\n\r\n\r\n/* button close */\r\n\r\n\r\n/* button close */\r\n\r\n.bt-close {\r\n    transition: all 0.3s ease 0s;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    z-index: 10000;\r\n}\r\n\r\n.bt-close:hover {\r\n    background: #ce352c;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span  class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Quên mật khẩu</h3>\r\n        <span _ngcontent-c2=\"\" class=\"or\">\r\n      Chúng tôi sẽ gửi tới điện thoại của bạn một mã xác thực để giúp bạn cài đặt lại mật khẩu.\r\n    </span>\r\n        <div class=\"form-group\">\r\n            <input [formControl]=\"phone\" type=\"text\" placeholder=\"Nhập số điện thoại\">\r\n        </div>\r\n\r\n        <button (click)=\"forgotPass()\">Tiếp tục</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/signIn']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n\r\n    </div>\r\n\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotPasswordComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ForgotPasswordComponent = (function () {
+    function ForgotPasswordComponent(settingService, router, activedroute, userService) {
+        this.settingService = settingService;
+        this.router = router;
+        this.activedroute = activedroute;
+        this.userService = userService;
+        this.phone = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
+    }
+    ForgotPasswordComponent.prototype.ngOnInit = function () {
+    };
+    ForgotPasswordComponent.prototype.forgotPass = function () {
+        var _this = this;
+        console.log(this.phone.value);
+        this.userService.forgotPassword(this.phone.value).subscribe(function (data) {
+            console.log(data.mess);
+            _this.router.navigate(['auth/changePass', data.IdU, _this.phone.value]);
+        }, function (err) {
+            // tslint:disable-next-line:no-unused-expression
+            _this;
+            // alert("so dien thoai loi")
+        });
+    };
+    return ForgotPasswordComponent;
+}());
+ForgotPasswordComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'app-forgotpassword',
+        template: __webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/ForgotPassword/ForgotPassword.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+], ForgotPasswordComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=ForgotPassword.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/Register/Register.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "        .sign-in.wr {\r\n            background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n            position: absolute;\r\n            width: 100%;\r\n            height: 100%;\r\n            display: table;\r\n        }\r\n\r\n        .inner {\r\n            background: #fff;\r\n            position: relative;\r\n            right: 0;\r\n            float: right;\r\n            height: 100%;\r\n            min-height: 640px;\r\n            width: 450px;\r\n            margin: 0;\r\n            padding: 40px 50px 0;\r\n            z-index: 1;\r\n            overflow: hidden;\r\n            text-align: center;\r\n        }\r\n\r\n        .middle {\r\n            display: table-cell;\r\n            vertical-align: middle;\r\n        }\r\n\r\n        .sign-in .logo {\r\n            font-size: 25px;\r\n            width: 100%;\r\n            float: left;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .sign-in .logo a {\r\n            color: #555;\r\n        }\r\n\r\n        .sign-in .logo img {\r\n            width: 64px;\r\n            height: 64px;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .logo span {\r\n            margin: 13px 10px;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .social {\r\n            width: 100%;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .social a {\r\n            width: 40px;\r\n            height: 40px;\r\n            float: left;\r\n            margin-right: 5px;\r\n            text-align: center;\r\n        }\r\n\r\n        .sign-in .social a:hover,\r\n        .sign-in .social a:focus {\r\n            opacity: .9;\r\n        }\r\n\r\n        .sign-in .social a i {\r\n            font-size: 17px;\r\n            color: #fff;\r\n            padding: 12px 0 0 0;\r\n        }\r\n\r\n        .sign-in .social a.fb {\r\n            background: #467cbd;\r\n        }\r\n\r\n        .sign-in .social a.google {\r\n            background: #dc4e41;\r\n        }\r\n\r\n        .sign-in .social a.linkedin {\r\n            background: #0077b5;\r\n        }\r\n\r\n        .sign-in .title {\r\n            padding: 0;\r\n            margin-top: 16px;\r\n            margin-bottom: 16px;\r\n            font-weight: 300;\r\n            font-size: 25px;\r\n            float: left;\r\n            color: #0f9cb3;\r\n        }\r\n\r\n        .sign-in input {\r\n            padding: 6px 10px;\r\n            border-width: 1px;\r\n            border-color: #666;\r\n            border-color: rgba(0, 0, 0, 0.6);\r\n            height: 36px;\r\n            outline: none;\r\n            width: 100%;\r\n        }\r\n\r\n        .sign-in button {\r\n            background-color: #0f9cb3;\r\n            width: auto;\r\n            color: #fff;\r\n            text-align: center;\r\n            height: 36px;\r\n            padding: 4px 12px 4px 12px;\r\n            display: inline-block;\r\n            white-space: nowrap;\r\n            overflow: hidden;\r\n            vertical-align: middle;\r\n            text-overflow: ellipsis;\r\n            -ms-touch-action: manipulation;\r\n                touch-action: manipulation;\r\n            cursor: pointer;\r\n            margin-bottom: 16px;\r\n            box-shadow: none;\r\n            outline: none;\r\n            border: none;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in button:hover,\r\n        .sign-in button:focus {\r\n            opacity: .8;\r\n        }\r\n\r\n        .sign-in .form-group {\r\n            margin-bottom: 20px;\r\n            font-size: 12px;\r\n            width: 100%;\r\n            float: left;\r\n            position: relative;\r\n        }\r\n\r\n        .sign-in .icon-error {\r\n            position: absolute;\r\n            right: 5px;\r\n            top: 29px;\r\n            font-size: 20px;\r\n            color: #ff4a68;\r\n            display: none;\r\n            z-index: 10;\r\n        }\r\n\r\n        .sign-in .form-group.warning .icon-error {\r\n            display: block\r\n        }\r\n\r\n        .sign-in .form-group.warning input {\r\n            border: solid 1px #ff4a68;\r\n            padding-right: 30px;\r\n        }\r\n\r\n        .sign-in .form-group.warning .alert-text {\r\n            padding: 0;\r\n            margin: 0 0 5px 0;\r\n        }\r\n\r\n        .sign-in .or {\r\n            width: 100%;\r\n            float: left;\r\n            font-size: 13px;\r\n            color: #666;\r\n            text-align: left;\r\n            margin-top: 12px;\r\n            font-weight: 400;\r\n            margin-bottom: 10px;\r\n        }\r\n\r\n        .sign-in .form-group .alert-text {\r\n            color: red;\r\n            text-align: left !important;\r\n            width: 100%;\r\n            float: left;\r\n            font-weight: 400;\r\n            line-height: 16px;\r\n            margin-top: 10px;\r\n            display: block;\r\n        }\r\n\r\n        .sign-in .form-group a {\r\n            font-size: 13px;\r\n            color: #0f9cb3;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .form-group a:hover {\r\n            text-decoration: none;\r\n            color: #777;\r\n        }\r\n\r\n        .sign-in .form-group .checkbox {\r\n            cursor: pointer;\r\n            float: left;\r\n            margin: 0;\r\n            padding: 0;\r\n            position: relative\r\n        }\r\n\r\n        .sign-in .form-group .checkbox input {\r\n            width: 20px;\r\n            height: 20px;\r\n            margin: 3px 3px 0 0;\r\n            padding: 0;\r\n            float: left;\r\n            cursor: pointer;\r\n            color: #0f9cb3;\r\n            position: absolute;\r\n            left: 0;\r\n        }\r\n\r\n        .sign-in .form-group .checkbox span {\r\n            margin-left: 22px;\r\n            font-size: 12px;\r\n            font-weight: 400;\r\n            margin: 0 0 0 20px;\r\n            padding: 0;\r\n            text-align: left;\r\n            float: left\r\n        }\r\n\r\n        .sign-in .form-group .checkbox a {\r\n            float: none;\r\n        }\r\n\r\n        .sign-in .footer {\r\n            width: 100%;\r\n            position: absolute;\r\n            bottom: 0;\r\n            left: 0;\r\n            padding: 0 50px 5px;\r\n            background: rgba(255, 255, 255, 0.3)\r\n        }\r\n\r\n        .sign-in .footer a {\r\n            color: #0f9cb3;\r\n        }\r\n\r\n        .sign-in .footer .form-group {\r\n            margin: 0;\r\n        }\r\n\r\n        .sign-in .footer a,\r\n        .footer span {\r\n            padding: 0 15px 5px 0;\r\n            font-size: 12px;\r\n            float: left;\r\n        }\r\n\r\n        .sign-in .footer a:hover,\r\n        .sign-in .footer a:focus {\r\n            text-decoration: none;\r\n        }\r\n\r\n        @media only screen and (max-width: 768px) {\r\n            .inner {\r\n                width: 100%;\r\n                padding: 20px 50px 0 20px;\r\n            }\r\n            .sign-in .logo {\r\n                margin-bottom: 0;\r\n            }\r\n            .sign-in .footer {\r\n                padding: 0 20px 5px;\r\n            }\r\n            .sign-in .form-group .checkbox input {\r\n                margin-top: 0;\r\n            }\r\n        }\r\n        /* button close */\r\n        /* button close */\r\n\r\n        .bt-close {\r\n            transition: all 0.3s ease 0s;\r\n            position: absolute;\r\n            right: 0;\r\n            top: 0;\r\n            z-index: 10000;\r\n        }\r\n\r\n        .bt-close:hover {\r\n            background: #ce352c;\r\n        }\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/Register/Register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Đăng ký tài khoản</h3>\r\n        <div class=\"social\">\r\n            <a (click)=\"signIn('facebook')\" class=\"fb\">\r\n        <i class=\"fa fa-fw fa-facebook\"></i>\r\n      </a>\r\n            <a (click)=\"signIn('google')\" class=\"google\">\r\n        <i class=\"fa fa-fw fa-google-plus\"></i>\r\n      </a>\r\n            <!-- <a (click) = \"signIn('linkedin')\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a> -->\r\n        </div>\r\n        <span class=\"or\">Hoặc</span>\r\n        <form #f=\"ngForm\" (ngSubmit)=\"registerSubmit()\">\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"name\" type=\"text\" placeholder=\"Họ & tên\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"email\" type=\"text\" placeholder=\"Email\">\r\n            </div>\r\n            <!-- <div class=\"form-group warning\" *ngIf=\"error != null\">\r\n        <span class=\"alert-text\">Số điện thoại không hợp lệ!</span>\r\n        <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n        <span class=\"glyphicon glyphicon-exclamation-sign icon-error\" data-toggle=\"tooltip\" title=\"\" data-original-title=\"Email không hợp lệ. Vui lòng nhập lại.\"></span>\r\n      </div> -->\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"phone\" type=\"text\" placeholder=\"Số điện thoại\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"password\" type=\"password\" placeholder=\"Mật khẩu\">\r\n            </div>\r\n        </form>\r\n        <div class=\"form-group\">\r\n            <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Tôi đồng ý với <a [routerLink]=\"['/policies/terms']\">điều khoản sử dụng</a> và <a [routerLink]=\"['/policies/privacy']\">chính sách bảo mật.</a></span>\r\n        </label>\r\n        </div>\r\n        <button (click)=\"registerSubmit()\">Tạo tài khoản</button>\r\n\r\n        <div class=\"footer\">\r\n            <div class=\"form-group\">\r\n                <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/Register/Register.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__ = __webpack_require__("../../../../angular2-social-login/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var RegisterComponent = (function () {
+    function RegisterComponent(settingService, router, _auth, userService) {
+        this.settingService = settingService;
+        this.router = router;
+        this._auth = _auth;
+        this.userService = userService;
+        this.error = null;
+        this.name = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.phone = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.email = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.password = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    // login social network
+    RegisterComponent.prototype.signIn = function (provider) {
+        var _this = this;
+        this.sub = this._auth.login(provider).subscribe(function (data) {
+            console.log(data);
+            _this.user = data;
+            if (_this.user !== null) {
+                _this.socialLogin = true;
+                _this.router.navigate(['auth/phone']);
+            }
+            else {
+                _this.socialLogin = false;
+            }
+        });
+    };
+    RegisterComponent.prototype.registerSubmit = function () {
+        var _this = this;
+        this.userService.register(this.name.value, this.email.value, this.phone.value, this.password.value).subscribe(function (data) {
+            console.log(data);
+            _this.router.navigate(['auth/verify', data.Id, data.Phone, data.Code]);
+        }, function (err) {
+            var errOb = JSON.parse(err.text());
+            console.log('error:', errOb.error_description);
+            _this.error = errOb.error_description;
+        });
+    };
+    return RegisterComponent;
+}());
+RegisterComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'app-register',
+        template: __webpack_require__("../../../../../src/app/authModule/Register/Register.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/Register/Register.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+], RegisterComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=Register.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/SignIn/SignIn.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: relative;\r\n    right: 0;\r\n    float: right;\r\n    height: 100vh;\r\n    min-height: 640px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 40px 50px 0;\r\n    z-index: 1;\r\n    overflow: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 25px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 64px;\r\n    height: 64px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 13px 10px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n}\r\n\r\n.sign-in .input-button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 20px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n.sign-in .icon-error {\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 29px;\r\n    font-size: 20px;\r\n    color: #ff4a68;\r\n    display: none;\r\n    z-index: 10;\r\n}\r\n\r\n.sign-in .form-group.warning .icon-error {\r\n    display: block\r\n}\r\n\r\n.sign-in .form-group.warning input {\r\n    border: solid 1px #ff4a68;\r\n    padding-right: 30px;\r\n}\r\n\r\n.sign-in .form-group.warning .alert-text {\r\n    padding: 0;\r\n    margin: 0 0 5px 0;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n.sign-in .form-group .checkbox {\r\n    cursor: pointer;\r\n    float: left;\r\n    margin: 0;\r\n    padding: 0;\r\n    position: relative\r\n}\r\n\r\n.sign-in .form-group .checkbox input {\r\n    width: 20px;\r\n    height: 20px;\r\n    margin: 3px 3px 0 0;\r\n    padding: 0;\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #0f9cb3;\r\n    position: absolute;\r\n    left: 0;\r\n}\r\n\r\n.sign-in .form-group .checkbox span {\r\n    float: left;\r\n    margin-left: 22px;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n}\r\n\r\n.sign-in .footer {\r\n    width: 100%;\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    padding: 0 50px 5px;\r\n    background: rgba(255, 255, 255, 0.3)\r\n}\r\n\r\n.sign-in .footer a {\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in .footer .form-group {\r\n    margin: 0;\r\n}\r\n\r\n.sign-in .footer a,\r\n.footer span {\r\n    padding: 0 15px 5px 0;\r\n    font-size: 12px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .footer a:hover,\r\n.sign-in .footer a:focus {\r\n    text-decoration: none;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n    .sign-in .footer {\r\n        padding: 0 20px 5px;\r\n    }\r\n    .sign-in .form-group .checkbox input {\r\n        margin-top: 0;\r\n    }\r\n}\r\n\r\n\r\n/* button close */\r\n\r\n\r\n/* button close */\r\n\r\n.bt-close {\r\n    transition: all 0.3s ease 0s;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    z-index: 10000;\r\n}\r\n\r\n.bt-close:hover {\r\n    background: #ce352c;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/SignIn/SignIn.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n\r\n        <h3 class=\"title\">Đăng nhập</h3>\r\n        <div class=\"social\">\r\n            <a (click)=\"signIn('facebook')\" class=\"fb\" style=\"cursor: pointer\">\r\n                <i class=\"fa fa-fw fa-facebook\"></i>\r\n            </a>\r\n            <a (click)=\"signIn('google')\" class=\"google\" style=\"cursor: pointer\">\r\n                <i class=\"fa fa-fw fa-google-plus\"></i>\r\n            </a>\r\n            <!-- <a (click)=\"signIn('linkedin')\" class=\"linkedin\">\r\n        <i class=\"fa fa-fw fa-linkedin\"></i>\r\n      </a> -->\r\n\r\n        </div>\r\n        <span class=\"or\">Hoặc</span>\r\n        <div class=\"form-group\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\"> {{error}}\r\n          </span>\r\n        </div>\r\n        <!-- <div class=\"form-group warning\" *ngIf=\"error != null\">\r\n            <span class=\"alert-text\">Số điện thoại không hợp lệ!</span>\r\n            <input type=\"text\" placeholder=\"Nhập email hoặc số điện thoại\">\r\n            <span class=\"glyphicon glyphicon-exclamation-sign icon-error\" data-toggle=\"tooltip\" title=\"\" data-original-title=\"Email không hợp lệ. Vui lòng nhập lại.\"></span>\r\n        </div> -->\r\n        <form #f=\"ngForm\" (ngSubmit)=\"onLoginSubmit()\">\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"username\" type=\"text\" placeholder=\"Nhập email hoặc số điện thoại\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <input [formControl]=\"password\" type=\"password\" placeholder=\"Nhập mật khẩu\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label class=\"checkbox\">\r\n          <input type=\"checkbox\" checked>\r\n          <span>Giữ tôi luôn đăng nhập</span>\r\n        </label>\r\n            </div>\r\n            <input class=\"input-button\" (click)=\"onLoginSubmit()\" type=\"submit\" value=\"Đăng nhập\">\r\n        </form>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/forgotPass']\">\r\n           Quên mật khẩu\r\n         </a>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/register']\">\r\n           Tạo tài khoản mới\r\n         </a>\r\n        </div>\r\n        <div class=\"footer\">\r\n            <div class=\"form-group\">\r\n                <span>\r\n               ©2017 {{elements.ThuongHieu}}\r\n          </span>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <a [routerLink]=\"['/policies/privacy']\">\r\n          Chính sách bảo mật\r\n        </a>\r\n                <a [routerLink]=\"['/policies/terms']\">\r\n          Điều khoản sử dụng\r\n        </a>\r\n                <div class=\"form-group\">\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/SignIn/SignIn.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__ = __webpack_require__("../../../../angular2-social-login/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SignInComponent = (function () {
+    function SignInComponent(router, settingService, _auth, userService) {
+        this.router = router;
+        this.settingService = settingService;
+        this._auth = _auth;
+        this.userService = userService;
+        this.error = null;
+        this.username = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.password = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
+        this.user = {
+            token: '',
+            id: '',
+            email: ''
+        };
+    }
+    SignInComponent.prototype.ngOnInit = function () {
+    };
+    // login social network
+    SignInComponent.prototype.signIn = function (provider) {
+        var _this = this;
+        this.sub = this._auth.login(provider).subscribe(function (data) {
+            // tslint:disable-next-line:prefer-const
+            var _fbdata = JSON.parse(JSON.stringify(data));
+            console.log(_fbdata);
+            _this.user.email = _fbdata.email;
+            _this.user.id = _fbdata.uid;
+            _this.user.token = _fbdata.token;
+            _this.userService.checkLoginFacebook(_this.user).subscribe(function (dataReturn) {
+                console.log(dataReturn.access_token);
+                _this.userService.setAuthToken(dataReturn.access_token);
+                _this.userService.setTokenType(dataReturn.token_type);
+                _this.userService.setAuth(dataReturn);
+                _this.router.navigate(['apps']);
+            }, function (err) {
+                console.log(err.json());
+                if (err.json() === 'Email chưa được dùng đăng kí tài khoản nào!') {
+                    _this.userService.set_UserInfoFB(_this.user);
+                    _this.router.navigate(['apps']);
+                }
+            });
+        });
+        // if (this.user !== null) {
+        //     this.socialLogin = true;
+        //     this.router.navigate(['auth/phone']);
+        // } else {
+        //     this.socialLogin = false;
+        // }
+    };
+    // login function
+    SignInComponent.prototype.onLoginSubmit = function () {
+        var _this = this;
+        console.log(this.username.value, this.password.value);
+        this.userService.login(this.username.value, this.password.value).subscribe(function (data) {
+            console.log(data.access_token);
+            console.log(data.token_type);
+            _this.userService.setAuthToken(data.access_token);
+            _this.userService.setTokenType(data.token_type);
+            _this.userService.setAuth(data);
+            _this.router.navigate(['']);
+        }, function (err) {
+            var errOb = JSON.parse(err.text());
+            console.log('error:', errOb.error_description);
+            _this.error = errOb.error_description;
+        });
+    };
+    return SignInComponent;
+}());
+SignInComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'app-signin',
+        template: __webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+], SignInComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=SignIn.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/SignOut/SignOut.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/SignOut/SignOut.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  Signing out...\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/SignOut/SignOut.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignOutComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SignOutComponent = (function () {
+    function SignOutComponent(router, userService) {
+        this.router = router;
+        this.userService = userService;
+    }
+    SignOutComponent.prototype.ngOnInit = function () {
+        this.userService.refreshToken();
+        this.router.navigate(['']);
+    };
+    return SignOutComponent;
+}());
+SignOutComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'app-signout',
+        template: __webpack_require__("../../../../../src/app/authModule/SignOut/SignOut.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/SignOut/SignOut.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_user_service__["a" /* UserService */]) === "function" && _b || Object])
+], SignOutComponent);
+
+var _a, _b;
+//# sourceMappingURL=SignOut.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/Verify/Verify.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sign-in.wr {\r\n    background-image: url(\"https://sharinglife.blob.core.windows.net/images/file_d442c622-9f49-4165-a35a-32e302e9fbf8.svg\");\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: table;\r\n}\r\n\r\n.inner {\r\n    background: #fff;\r\n    position: relative;\r\n    right: 0;\r\n    float: right;\r\n    height: 100%;\r\n    min-height: 640px;\r\n    width: 450px;\r\n    margin: 0;\r\n    padding: 40px 50px 0;\r\n    z-index: 1;\r\n    overflow: hidden;\r\n    text-align: center;\r\n}\r\n\r\n.middle {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.sign-in .logo {\r\n    font-size: 25px;\r\n    width: 100%;\r\n    float: left;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .logo a {\r\n    color: #555;\r\n}\r\n\r\n.sign-in .logo img {\r\n    width: 64px;\r\n    height: 64px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .logo span {\r\n    margin: 13px 10px;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social {\r\n    width: 100%;\r\n    float: left;\r\n}\r\n\r\n.sign-in .social a {\r\n    width: 40px;\r\n    height: 40px;\r\n    float: left;\r\n    margin-right: 5px;\r\n    text-align: center;\r\n}\r\n\r\n.sign-in .social a:hover,\r\n.sign-in .social a:focus {\r\n    opacity: .9;\r\n}\r\n\r\n.sign-in .social a i {\r\n    font-size: 17px;\r\n    color: #fff;\r\n    padding: 12px 0 0 0;\r\n}\r\n\r\n.sign-in .social a.fb {\r\n    background: #467cbd;\r\n}\r\n\r\n.sign-in .social a.google {\r\n    background: #dc4e41;\r\n}\r\n\r\n.sign-in .social a.linkedin {\r\n    background: #0077b5;\r\n}\r\n\r\n.sign-in .title {\r\n    padding: 0;\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    float: left;\r\n    color: #0f9cb3;\r\n}\r\n\r\n.sign-in input {\r\n    padding: 6px 10px;\r\n    border-width: 1px;\r\n    border-color: #666;\r\n    border-color: rgba(0, 0, 0, 0.6);\r\n    height: 36px;\r\n    outline: none;\r\n    width: 100%;\r\n}\r\n\r\n.sign-in button {\r\n    background-color: #0f9cb3;\r\n    width: auto;\r\n    color: #fff;\r\n    text-align: center;\r\n    height: 36px;\r\n    padding: 4px 12px 4px 12px;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    vertical-align: middle;\r\n    text-overflow: ellipsis;\r\n    -ms-touch-action: manipulation;\r\n        touch-action: manipulation;\r\n    cursor: pointer;\r\n    margin-bottom: 16px;\r\n    box-shadow: none;\r\n    outline: none;\r\n    border: none;\r\n    float: left;\r\n}\r\n\r\n.sign-in button:hover,\r\n.sign-in button:focus {\r\n    opacity: .8;\r\n}\r\n\r\n.sign-in .form-group {\r\n    margin-bottom: 20px;\r\n    font-size: 12px;\r\n    width: 100%;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n.sign-in .icon-error {\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 29px;\r\n    font-size: 20px;\r\n    color: #ff4a68;\r\n    display: none;\r\n    z-index: 10;\r\n}\r\n\r\n.sign-in .form-group.warning .icon-error {\r\n    display: block\r\n}\r\n\r\n.sign-in .form-group.warning input {\r\n    border: solid 1px #ff4a68;\r\n    padding-right: 30px;\r\n}\r\n\r\n.sign-in .form-group.warning .alert-text {\r\n    padding: 0;\r\n    margin: 0 0 5px 0;\r\n}\r\n\r\n.sign-in .or {\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 13px;\r\n    color: #666;\r\n    text-align: left;\r\n    margin-top: 12px;\r\n    font-weight: 400;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sign-in .form-group .alert-text {\r\n    color: red;\r\n    text-align: left !important;\r\n    width: 100%;\r\n    float: left;\r\n    font-weight: 400;\r\n    line-height: 16px;\r\n    margin-top: 10px;\r\n    display: block;\r\n}\r\n\r\n.sign-in .form-group a {\r\n    font-size: 13px;\r\n    color: #0f9cb3;\r\n    float: left;\r\n}\r\n\r\n.sign-in .form-group a:hover {\r\n    text-decoration: none;\r\n    color: #777;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .inner {\r\n        width: 100%;\r\n        padding: 30px 50px 0 20px;\r\n    }\r\n}\r\n\r\n\r\n/* button close */\r\n\r\n\r\n/* button close */\r\n\r\n.bt-close {\r\n    transition: all 0.3s ease 0s;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    z-index: 10000;\r\n}\r\n\r\n.bt-close:hover {\r\n    background: #ce352c;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/Verify/Verify.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Xác thực tài khoản</h3>\r\n        <span _ngcontent-c2=\"\" class=\"or\">\r\n      Một tin nhắn chứa mã xác thực đã được gửi đến số điện thoại của bạn. Vui lòng kiểm tra và nhập mã xác thực.\r\n    </span>\r\n        <div class=\"form-group\">\r\n            <input [formControl]=\"verifyCode\" type=\"text\" placeholder=\"Nhập mã xác thực\">\r\n        </div>\r\n        <button (click)=\"verification()\">Hoàn tất</button>\r\n        <div class=\"form-group\">\r\n            <a href=\"#\">\r\n           Gửi lại mã xác thực\r\n         </a>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/register']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/authModule/Verify/Verify.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__ = __webpack_require__("../../../../../src/app/Share/Services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__ = __webpack_require__("../../../../../src/app/Share/Services/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerifyComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var VerifyComponent = (function () {
+    function VerifyComponent(router, activedroute, userService, settingService) {
+        this.router = router;
+        this.activedroute = activedroute;
+        this.userService = userService;
+        this.settingService = settingService;
+        this.error = null;
+        this.IdU = null;
+        this.Phone = null;
+        this.verifyCode = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
+        this.elements = this.settingService.getConfig();
+    }
+    VerifyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activedroute.params.subscribe(function (pars) {
+            _this.IdU = pars['IdU'];
+            _this.Phone = pars['phone'];
+        });
+    };
+    VerifyComponent.prototype.verification = function () {
+        var _this = this;
+        this.userService.verifyCode(this.verifyCode.value, this.Phone, this.IdU).subscribe(function (data) {
+            console.log(data);
+            _this.error = data;
+            if (data === 'Xác nhận Phone thành công') {
+                _this.router.navigate(['auth/signIn']);
+            }
+        });
+    };
+    return VerifyComponent;
+}());
+VerifyComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        selector: 'app-verify',
+        template: __webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _d || Object])
+], VerifyComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=Verify.component.js.map
+
+/***/ }),
+
+/***/ "../../../../angular2-social-login/dist/angular2-social-login.module.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForumService; });
-/* unused harmony export BaiViet */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("../../../../angular2-social-login/dist/auth.service.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular2SocialLoginModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+
+
+var Angular2SocialLoginModule = (function () {
+    function Angular2SocialLoginModule() {
+    }
+    Angular2SocialLoginModule.loadProvidersScripts = function (config) {
+        var loadProvidersScripts = {
+            google: function (info) {
+                var d = document, gJs, ref = d.getElementsByTagName('script')[0];
+                gJs = d.createElement('script');
+                gJs.async = true;
+                gJs.src = "//apis.google.com/js/platform.js";
+                gJs.onload = function () {
+                    gapi.load('auth2', function () {
+                        gapi.auth2.init({
+                            client_id: info["clientId"],
+                            scope: 'email'
+                        });
+                    });
+                };
+                ref.parentNode.insertBefore(gJs, ref);
+            },
+            linkedin: function (info) {
+                var lIN, d = document, ref = d.getElementsByTagName('script')[0];
+                lIN = d.createElement('script');
+                lIN.async = false;
+                lIN.src = "//platform.linkedin.com/in.js";
+                lIN.text = ("api_key: " + info["clientId"]).replace("\"", "");
+                ref.parentNode.insertBefore(lIN, ref);
+            },
+            facebook: function (info) {
+                var d = document, fbJs, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                fbJs = d.createElement('script');
+                fbJs.id = id;
+                fbJs.async = true;
+                fbJs.src = "//connect.facebook.net/en_US/sdk.js";
+                fbJs.onload = function () {
+                    FB.init({
+                        appId: info["clientId"],
+                        status: true,
+                        cookie: true,
+                        xfbml: true,
+                        version: info["apiVersion"]
+                    });
+                };
+                ref.parentNode.insertBefore(fbJs, ref);
+            }
+        };
+        Object.keys(config).forEach(function (provider) {
+            loadProvidersScripts[provider](config[provider]);
+        });
+    };
+    Angular2SocialLoginModule = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            providers: [__WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */]]
+        })
+    ], Angular2SocialLoginModule);
+    return Angular2SocialLoginModule;
+}());
+
+//# sourceMappingURL=angular2-social-login.module.js.map
+
+/***/ }),
+
+/***/ "../../../../angular2-social-login/dist/auth.service.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
 
-
-var ForumService = (function () {
-    function ForumService(http) {
-        this.http = http;
+var AuthService = (function () {
+    function AuthService() {
     }
-    ForumService.prototype.getForumBar = function () {
-        // ...using get request
-        return this.http.get("http://api.truongkhoa.com/api/Forum")
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error.json().error || 'Server error'); });
+    AuthService.prototype.login = function (provider) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            switch (provider) {
+                case "google":
+                    if (typeof (_this.gauth) == "undefined") {
+                        _this.gauth = gapi.auth2.getAuthInstance();
+                    }
+                    if (!_this.gauth.isSignedIn.get()) {
+                        _this.gauth.signIn().then(function () {
+                            localStorage.setItem('_login_provider', 'google');
+                            observer.next(_this._fetchGoogleUserDetails());
+                            observer.complete();
+                        });
+                    }
+                    else {
+                        localStorage.setItem('_login_provider', 'google');
+                        observer.next(_this._fetchGoogleUserDetails());
+                        observer.complete();
+                    }
+                    break;
+                case "facebook":
+                    FB.getLoginStatus(function (response) {
+                        if (response.status === "connected") {
+                            FB.api('/me?fields=name,email,picture', function (res) {
+                                if (!res || res.error) {
+                                    observer.error(res.error);
+                                }
+                                else {
+                                    var userDetails = {
+                                        name: res.name,
+                                        email: res.email,
+                                        uid: res.id,
+                                        provider: "facebook",
+                                        image: res.picture.data.url,
+                                        token: response.authResponse.accessToken
+                                    };
+                                    localStorage.setItem('_login_provider', 'facebook');
+                                    observer.next(userDetails);
+                                    observer.complete();
+                                }
+                            });
+                        }
+                        else {
+                            FB.login(function (response) {
+                                if (response.status === "connected") {
+                                    FB.api('/me?fields=name,email,picture', function (res) {
+                                        if (!res || res.error) {
+                                            observer.error(res.error);
+                                        }
+                                        else {
+                                            var userDetails = {
+                                                name: res.name,
+                                                email: res.email,
+                                                uid: res.id,
+                                                provider: "facebook",
+                                                image: res.picture.data.url,
+                                                token: response.authResponse.accessToken
+                                            };
+                                            localStorage.setItem('_login_provider', 'facebook');
+                                            observer.next(userDetails);
+                                            observer.complete();
+                                        }
+                                    });
+                                }
+                            }, { scope: 'email', auth_type: "rerequest" });
+                        }
+                    });
+                    break;
+                case "linkedin":
+                    IN.User.authorize(function () {
+                        IN.API.Raw("/people/~:(id,first-name,last-name,email-address,picture-url)").result(function (res) {
+                            var userDetails = { name: res.firstName + " " + res.lastName, email: res.emailAddress, uid: res.id, provider: "linkedIN", image: res.pictureUrl };
+                            localStorage.setItem('_login_provider', 'linkedin');
+                            observer.next(userDetails);
+                            observer.complete();
+                        });
+                    });
+                    break;
+            }
+        });
     };
-    return ForumService;
+    AuthService.prototype.logout = function () {
+        var provider = localStorage.getItem("_login_provider");
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            switch (provider) {
+                case "google":
+                    var gElement = document.getElementById("gSignout");
+                    if (typeof (gElement) != 'undefined' && gElement != null) {
+                        gElement.remove();
+                    }
+                    var d = document, gSignout = void 0;
+                    var ref = d.getElementsByTagName('script')[0];
+                    gSignout = d.createElement('script');
+                    gSignout.src = "https://accounts.google.com/Logout";
+                    gSignout.type = "text/html";
+                    gSignout.id = "gSignout";
+                    localStorage.removeItem('_login_provider');
+                    observer.next(true);
+                    observer.complete();
+                    ref.parentNode.insertBefore(gSignout, ref);
+                    break;
+                case "facebook":
+                    FB.logout(function (res) {
+                        localStorage.removeItem('_login_provider');
+                        observer.next(true);
+                        observer.complete();
+                    });
+                    break;
+                case "linkedin":
+                    IN.User.logout(function () {
+                        localStorage.removeItem('_login_provider');
+                        observer.next(true);
+                        observer.complete();
+                    }, {});
+                    break;
+            }
+        });
+    };
+    AuthService.prototype._fetchGoogleUserDetails = function () {
+        var currentUser = this.gauth.currentUser.get();
+        var profile = currentUser.getBasicProfile();
+        var idToken = currentUser.getAuthResponse().id_token;
+        var accessToken = currentUser.getAuthResponse().access_token;
+        return {
+            token: accessToken,
+            idToken: idToken,
+            uid: profile.getId(),
+            name: profile.getName(),
+            email: profile.getEmail(),
+            image: profile.getImageUrl(),
+            provider: "google"
+        };
+    };
+    AuthService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+    ], AuthService);
+    return AuthService;
 }());
-ForumService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], ForumService);
 
-var BaiViet = (function () {
-    function BaiViet(TieuDe, ChuDe, TomTat, NguoiViet) {
-        this.TieuDe = TieuDe;
-        this.ChuDe = ChuDe;
-        this.TomTat = TomTat;
-        this.NguoiViet = NguoiViet;
-    }
-    return BaiViet;
-}());
+//# sourceMappingURL=auth.service.js.map
 
-var _a;
-//# sourceMappingURL=forum.service.js.map
+/***/ }),
+
+/***/ "../../../../angular2-social-login/dist/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular2_social_login_module__ = __webpack_require__("../../../../angular2-social-login/dist/angular2-social-login.module.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__angular2_social_login_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("../../../../angular2-social-login/dist/auth.service.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__auth_service__["a"]; });
+
+
+//# sourceMappingURL=index.js.map
 
 /***/ })
 
