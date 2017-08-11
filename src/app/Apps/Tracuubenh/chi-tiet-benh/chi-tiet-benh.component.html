@@ -75,6 +75,7 @@
 
         </div>
         <!-- end content left -->
-        <app-forum-bar></app-forum-bar>
+         <app-forum-bar *ngIf="!loading">
+        </app-forum-bar>
     </div>
 </app-window>

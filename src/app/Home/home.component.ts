@@ -29,10 +29,11 @@ export class HomeComponent implements OnInit {
         this.settingService.getFirstConfig().subscribe(() => {
             this.menus = this.settingService.getMenu();
             this.config = this.settingService.getConfig();
+            console.log(this.menus)
+            
 
         });
         this.auth = this.userService.getAuth();
-
     }
 
     showMore(i) {

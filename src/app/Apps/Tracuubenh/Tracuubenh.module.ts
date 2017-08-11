@@ -7,6 +7,7 @@ import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { Routes, RouterModule } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { ResponsiveModule } from 'ng2-responsive';
+import { FacebookModule } from 'ngx-facebook';
 
 
 // components
@@ -40,6 +41,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ReactiveFormsModule,
         ResponsiveModule,
         HttpModule,
+        FacebookModule.forRoot(),
         ShareButtonsModule.forRoot(),
         Routing,
         ShareModule

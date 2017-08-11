@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BenhService } from '../../../Share/Services/benh.service';
 import { ShareButton, ShareProvider } from 'ngx-sharebuttons';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-chi-tiet-benh',
@@ -21,7 +21,7 @@ export class ChiTietBenhComponent implements OnInit {
     constructor(
         private benhService: BenhService,
         private router: Router
-    ) { }
+    ) {}
 
     ngOnInit() {
         // ShareButton(button name [provider], template, classes)
