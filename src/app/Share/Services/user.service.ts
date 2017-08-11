@@ -38,7 +38,8 @@ export class UserService {
         let body = new URLSearchParams();
         body.set('Code', code);
         body.set('PhoneNumber', phone);
-        return this.http.post(`${this.baseUrl}Account/XacNhanPhone?IdU=` + idUser, body).map((response: Response) => response.json());
+        return this.http.post(`http://localhost:5001/api/Account/XacNhanPhone?IdU=` + idUser, body)
+            .map((response: Response) => response.json());
     }
 
     // forgot pass
@@ -90,16 +91,24 @@ export class UserService {
 
 
     // social login
-    checkLoginFacebook(_acc: SocialLogin) {
+    checkLoginFacebook(_acc: SocialData) {
         // tslint:disable-next-line:prefer-const
         let body = new URLSearchParams();
         body.set('id', _acc.id);
         body.set('email', _acc.email);
         body.set('token', _acc.token);
-        return this.http.post(`${this.baseUrl}Account/CheckFacebookLogin`, body).map((response: Response) => response.json());
+        return this.http.post(`http://localhost:5001/api/Account/CheckFacebookLogin`, body).map((response: Response) => response.json());
     }
 
-
+    SocialRegister(data: SocialData) {
+        // tslint:disable-next-line:prefer-const
+        let body = new URLSearchParams();
+        body.set('email', data.email);
+        body.set('id', data.id);
+        body.set('phone', data.phone);
+        body.set('token', data.token);
+        return this.http.post(`http://localhost:5001/api/Account/SocialRegister`, body).map((response: Response) => response.json());
+    }
 
     // get set localStorage social login
     set_UserInfoFB(data) {
@@ -109,11 +118,12 @@ export class UserService {
         return localStorage.getItem('_fbData') ? localStorage.getItem('_fbData') : null;
     }
 }
-export class SocialLogin {
-    constructor(
-        public id: string,
-        public email: string,
-        public token: string,
-    ) { }
 
+export interface SocialData {
+    email: string;
+    id: string;
+    token: string;
+    phone: string;
+    isFacebook: boolean;
 }
+

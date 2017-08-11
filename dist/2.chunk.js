@@ -286,7 +286,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/authModule/EnterPhoneNumber/EnterPhoneNumber.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span  class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Nhập số điện thoại của bạn</h3>\r\n\r\n        <form #f=\"ngForm\" class=\"form-group\">\r\n            <input [formControl]=\"phone\" type=\"text\" placeholder=\"Nhập số điện thoại...\">\r\n        </form>\r\n        <button>Hoàn tất</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/signIn']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"sign-in wr\">\r\n    <button class=\"bt-close\" [routerLink] = \"['']\">\r\n        <span  class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n    </button>\r\n    <div class=\"inner\">\r\n        <div class=\"logo\">\r\n            <a [routerLink]=\"['']\">\r\n\t         \t<img src=\"{{elements.Logo}}\">\r\n\t         \t<span>{{elements.ThuongHieu}}</span>\r\n\t         </a>\r\n        </div>\r\n        <h3 class=\"title\">Nhập số điện thoại của bạn</h3>\r\n\r\n        <form #f=\"ngForm\" class=\"form-group\">\r\n            <input [formControl]=\"phone\" type=\"text\" placeholder=\"Nhập số điện thoại...\">\r\n        </form>\r\n        <button (click) = \"SocialAddPhone()\" >Hoàn tất</button>\r\n        <div class=\"form-group\">\r\n            <a [routerLink]=\"['/auth/signIn']\">\r\n           Thoát\r\n         </a>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -322,8 +322,35 @@ var EnterPhoneNumberComponent = (function () {
         this.userService = userService;
         this.phone = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormControl */]();
         this.elements = this.settingService.getConfig();
+        this._regInfo = {
+            phone: '',
+            id: '',
+            email: '',
+            token: '',
+            isFacebook: true
+        };
     }
     EnterPhoneNumberComponent.prototype.ngOnInit = function () {
+    };
+    EnterPhoneNumberComponent.prototype.SocialAddPhone = function () {
+        var _this = this;
+        // tslint:disable-next-line:prefer-const
+        var _local = JSON.parse(this.userService.get_UserInfoFB());
+        console.log(_local);
+        this._regInfo = {
+            email: _local.email,
+            id: _local.id,
+            token: _local.token,
+            phone: this.phone.value,
+            isFacebook: true
+        };
+        this.userService.SocialRegister(this._regInfo).subscribe(function (data) {
+            console.log(data);
+            console.log(data.Id);
+            console.log(data.Code);
+            console.log(data.Phone);
+            _this.router.navigate(['auth/verify', data.Id, data.Phone, data.Code]);
+        });
     };
     return EnterPhoneNumberComponent;
 }());
@@ -589,10 +616,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var SignInComponent = (function () {
-    function SignInComponent(router, settingService, _auth, userService) {
+    function SignInComponent(router, settingService, _auth, zone, userService) {
         this.router = router;
         this.settingService = settingService;
         this._auth = _auth;
+        this.zone = zone;
         this.userService = userService;
         this.error = null;
         this.username = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */]();
@@ -601,7 +629,9 @@ var SignInComponent = (function () {
         this.user = {
             token: '',
             id: '',
-            email: ''
+            email: '',
+            phone: '',
+            isFacebook: true
         };
     }
     SignInComponent.prototype.ngOnInit = function () {
@@ -613,6 +643,13 @@ var SignInComponent = (function () {
             // tslint:disable-next-line:prefer-const
             var _fbdata = JSON.parse(JSON.stringify(data));
             console.log(_fbdata);
+            // this.user = {
+            //     email: _fbdata.email,
+            //     id: _fbdata.id,
+            //     token: _fbdata.token,
+            //     phone: '',
+            //     isFacebook: true
+            // };
             _this.user.email = _fbdata.email;
             _this.user.id = _fbdata.uid;
             _this.user.token = _fbdata.token;
@@ -621,36 +658,32 @@ var SignInComponent = (function () {
                 _this.userService.setAuthToken(dataReturn.access_token);
                 _this.userService.setTokenType(dataReturn.token_type);
                 _this.userService.setAuth(dataReturn);
-                _this.router.navigate(['apps']);
+                _this.zone.run(function () { return _this.router.navigate(['']); });
             }, function (err) {
                 console.log(err.json());
                 if (err.json() === 'Email chưa được dùng đăng kí tài khoản nào!') {
+                    alert('Email chưa được dùng đăng kí tài khoản nào!');
                     _this.userService.set_UserInfoFB(_this.user);
-                    _this.router.navigate(['apps']);
+                    _this.zone.run(function () { return _this.router.navigate(['/auth/phone']); });
+                }
+                if (err.json() === 'Tài khoản đã được đăng ký trước đây bằng địa chỉ email này, bạn có muốn đặt lại mật khẩu????') {
+                    alert('Tài khoản đã được đăng ký trước đây bằng địa chỉ email này, bạn có muốn đặt lại mật khẩu????');
+                    _this.userService.set_UserInfoFB(_this.user);
+                    _this.zone.run(function () { return _this.router.navigate(['/auth/forgotPass']); });
                 }
             });
         });
-        // if (this.user !== null) {
-        //     this.socialLogin = true;
-        //     this.router.navigate(['auth/phone']);
-        // } else {
-        //     this.socialLogin = false;
-        // }
     };
     // login function
     SignInComponent.prototype.onLoginSubmit = function () {
         var _this = this;
-        console.log(this.username.value, this.password.value);
         this.userService.login(this.username.value, this.password.value).subscribe(function (data) {
-            console.log(data.access_token);
-            console.log(data.token_type);
             _this.userService.setAuthToken(data.access_token);
             _this.userService.setTokenType(data.token_type);
             _this.userService.setAuth(data);
             _this.router.navigate(['']);
         }, function (err) {
             var errOb = JSON.parse(err.text());
-            console.log('error:', errOb.error_description);
             _this.error = errOb.error_description;
         });
     };
@@ -662,10 +695,10 @@ SignInComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/SignIn/SignIn.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_angular2_social_login__["b" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__Share_Services_user_service__["a" /* UserService */]) === "function" && _e || Object])
 ], SignInComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=SignIn.component.js.map
 
 /***/ }),
@@ -790,10 +823,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var VerifyComponent = (function () {
-    function VerifyComponent(router, activedroute, userService, settingService) {
+    function VerifyComponent(router, activedroute, userService, zone, settingService) {
         this.router = router;
         this.activedroute = activedroute;
         this.userService = userService;
+        this.zone = zone;
         this.settingService = settingService;
         this.error = null;
         this.IdU = null;
@@ -810,11 +844,24 @@ var VerifyComponent = (function () {
     };
     VerifyComponent.prototype.verification = function () {
         var _this = this;
+        // tslint:disable-next-line:prefer-const
+        var _local = JSON.parse(this.userService.get_UserInfoFB());
         this.userService.verifyCode(this.verifyCode.value, this.Phone, this.IdU).subscribe(function (data) {
             console.log(data);
             _this.error = data;
             if (data === 'Xác nhận Phone thành công') {
-                _this.router.navigate(['auth/signIn']);
+                if (_local.isFacebook) {
+                    _this.userService.checkLoginFacebook(_local).subscribe(function (dataReturn) {
+                        console.log(dataReturn.access_token);
+                        _this.userService.setAuthToken(dataReturn.access_token);
+                        _this.userService.setTokenType(dataReturn.token_type);
+                        _this.userService.setAuth(dataReturn);
+                        _this.zone.run(function () { return _this.router.navigate(['']); });
+                    });
+                }
+                else {
+                    _this.router.navigate(['auth/signIn']);
+                }
             }
         });
     };
@@ -826,10 +873,10 @@ VerifyComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.html"),
         styles: [__webpack_require__("../../../../../src/app/authModule/Verify/Verify.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__Share_Services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_core__["NgZone"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Share_Services_setting_service__["a" /* SettingService */]) === "function" && _e || Object])
 ], VerifyComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=Verify.component.js.map
 
 /***/ }),
