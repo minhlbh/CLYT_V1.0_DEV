@@ -426,7 +426,7 @@
 }
 
 .m-cover.inactive {
-    border-color: #919999;
+    border-color: #A80000;
 }
 
 .m-categories {
@@ -544,4 +544,38 @@
 
 .idea a .icon-idea {
     color: #00CDAC;
+}
+
+.progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 5px;
+    z-index: 10000;
+}
+
+
+.progress.improving .progress-bar {
+    background-color: #FFCC00; 
+}
+
+.progress.active .progress-bar {
+    background-color: #00CDAC;
+}
+
+.progress.inactive .progress-bar {
+    background-color: #A80000; 
+}
+
+.show-all {
+    margin: 0 5px;
+}
+
+.show-all:hover {
+    text-decoration: none;
 }
