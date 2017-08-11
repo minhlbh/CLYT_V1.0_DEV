@@ -1,0 +1,71 @@
+<app-window [idea]="idea" [urlIdea]="urlIdea" [url]="url" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
+    <!-- searchbox -->
+    <div class="search-box-top">
+        <div class="input-control text full-size" data-role="input">
+            <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+            <input type="text" placeholder="Nhập tên nghiên cứu..." >
+        </div>
+
+        <!-- đếm số thuốc -->
+        <div style="padding: 5px 0 0 0;">
+            <span style="font-size: 11px; color: #888; float: right;">
+                0/{{ TongSoNghienCuu }} nghiên cứu
+                </span>
+        </div>
+        <hr class="thin bg-grayLighter">
+    </div>
+
+
+    <!-- list thuốc -->
+
+    <div class="drugs-list-wr">
+        <div class="row-l head">
+            <div class="col w25">
+                Nghiên cứu
+            </div>
+            <div class="col w20">
+                Chủ nhiệm
+            </div>
+            <div class="col w10">
+                Đơn vị
+            </div>
+        </div>
+
+        <div class="text-center">
+            <p class="lead" *ngIf="loading">
+                <img src="assets/66.gif">
+            </p>
+        </div>
+
+        <div class="drugs-list">
+            <div class="scrollbar-custom list">
+                <div *ngIf="!loading">
+                    <div class="text-center" *ngIf="empty">
+                        <p>
+                            <a> Không kết quả nào phù hợp</a>
+                        </p>
+                    </div>
+
+                    <div *ngIf="!empty">
+
+                        <a *ngFor="let nghiencuu of DsNghienCuu" class="row-l">
+
+
+                            <div class="col w25">
+                                <span class="title">{{nghiencuu.Name}}</span>
+                            </div>
+
+                            <div class="col w20">
+                                <span class="title">{{nghiencuu.ChuNhiem}}</span>
+                            </div>
+
+                            <div class="col w10">
+                                <span class="title">{{nghiencuu.DonVi}}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-window>

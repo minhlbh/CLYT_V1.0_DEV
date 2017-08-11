@@ -1,4 +1,4 @@
-webpackJsonp([12],{
+webpackJsonp([13],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -11,16 +11,21 @@ var map = {
 	],
 	"./Bantinhl7/Bantinhl7.module": [
 		"../../../../../src/app/Apps/Bantinhl7/Bantinhl7.module.ts",
-		9,
+		10,
 		0
 	],
 	"./Chandoanhinhanh/Chandoanhinhanh.module": [
 		"../../../../../src/app/Apps/Chandoanhinhanh/Chandoanhinhanh.module.ts",
-		8,
+		9,
 		0
 	],
 	"./Home/home.module": [
 		"../../../../../src/app/Home/home.module.ts",
+		8,
+		0
+	],
+	"./NghiencuuYhoc/NghiencuuYhoc.module": [
+		"../../../../../src/app/Apps/NghiencuuYhoc/NghiencuuYhoc.module.ts",
 		7,
 		0
 	],

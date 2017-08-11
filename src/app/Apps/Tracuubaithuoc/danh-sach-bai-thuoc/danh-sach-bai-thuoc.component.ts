@@ -23,15 +23,10 @@ export class DanhSachBaiThuocComponent implements OnInit {
     DsViThuoc: Baithuoc[];
     DsChePhamThuoc: Baithuoc[];
     DsDuocThien: Baithuoc[];
-    TongSoLuong: number;
-    startBaithuoc: number;
-    endBaithuoc: number;
-    startVithuoc: number;
-    endVithuoc: number;
-    startChephamthuoc: number;
-    endChephamthuoc: number;
-    startDuocthien: number;
-    endDuocthien: number;
+    TongSoLuongBaiThuoc: number;
+    TongSoLuongViThuoc: number;
+    TongSoLuongDuocThien: number;
+    TongSoLuongChePhamThuoc: number;
 
     public id: any;
     public empty = false;
@@ -55,28 +50,17 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.baithuocService.getBaithuoc(1).subscribe(data => {
 
             this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-            this.TongSoLuong = data.TongSoLuong;
-            this.startBaithuoc = 0;
-            this.endBaithuoc = 50;
-
+            console.log(this.DsBaiThuoc);
+            this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuong;
 
             this.DsViThuoc = data.DsViThuoc.DsViThuoc;
-            this.TongSoLuong = data.TongSoLuong;
-            this.startVithuoc = 0;
-            this.endVithuoc = 50;
-
+            this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuong;
 
             this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
-            this.TongSoLuong = data.TongSoLuong;
-            this.startChephamthuoc = 0;
-            this.endChephamthuoc = 50;
-
+            this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuong;
 
             this.DsDuocThien = data.DsDuocThien.DsDuocThien;
-            this.TongSoLuong = data.TongSoLuong;
-            this.startDuocthien = 0;
-            this.endDuocthien = 50;
-
+            this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuong;
 
         });
         this.menu = this.settingService.getMenu();

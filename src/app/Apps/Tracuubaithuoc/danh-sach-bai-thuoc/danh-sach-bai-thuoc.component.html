@@ -1,5 +1,5 @@
 <div class="window-baithuoc-wr">
-    <app-window [name] = "name" [icon]="iconText" [url]="url" [idea]="idea" [urlIdea]="urlIdea" style="width:950px;">
+    <app-window [name]="name" [icon]="iconText" [url]="url" [idea]="idea" [urlIdea]="urlIdea" style="width:950px;">
         <div class="col">
             <div class="search-box-top">
                 <div class="input-control text full-size">
@@ -8,96 +8,16 @@
                 </div>
                 <div style="padding: 5px 0 0 0;">
                     <span style="font-size: 11px; color: #888; float: right;">
-                50/452 <b class="title-xs">bài thuốc</b>
+                0/{{TongSoLuongBaiThuoc}} <b class="title-xs">bài thuốc</b>
                 </span>
                 </div>
                 <hr class="thin bg-grayLighter">
             </div>
-            <ul class="list">
+            <ul class="list" *ngFor="let baithuoc of DsBaiThuoc">
                 <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Lục vị địa hoàng hoàn</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Độc hoạt ký sinh thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Thân thống trục ứ thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Thiên ma câu đằng ẩm</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Đào hồng tứ vật thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Kiện tỳ ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Huyết phủ trục ứ thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Hữu quy hoàn</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Hết - Bổ trung ích khí thang</span>
-         </a>
+                    <a>
+                        <span class="title">{{baithuoc.Name}}</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -111,71 +31,16 @@
                 </div>
                 <div style="padding: 5px 0 0 0;">
                     <span style="font-size: 11px; color: #888; float: right;">
-                50/452 <b class="title-xs">vị thuốc</b>
+                0/{{TongSoLuongViThuoc}} <b class="title-xs">vị thuốc</b>
                 </span>
                 </div>
                 <hr class="thin bg-grayLighter">
             </div>
-            <ul class="list">
+            <ul class="list" *ngFor="let vithuoc of DsViThuoc">
                 <li>
                     <a href="#">
-           <span class="title">Bạch chỉ</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Cảo bản</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Đại bi</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Kinh giới</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Ma hoàng</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Quế chi</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Sinh khương</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Tân di</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Tế tân</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Thông bạch</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Tô diệp</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Trầu không</span>
-         </a>
+                        <span class="title">{{vithuoc.Name}}</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -189,96 +54,16 @@
                 </div>
                 <div style="padding: 5px 0 0 0;">
                     <span style="font-size: 11px; color: #888; float: right;">
-                50/452 <b class="title-xs">chế phẩm thuốc</b>
+                0/{{TongSoLuongChePhamThuoc}} <b class="title-xs">chế phẩm thuốc</b>
                 </span>
                 </div>
                 <hr class="thin bg-grayLighter">
             </div>
-            <ul class="list">
+            <ul class="list" *ngFor = "let chepham of DsChePhamThuoc">
                 <li>
                     <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Hết - Bổ trung ích khí thang</span>
-         </a>
+                        <span class="title">{{chepham.Name}}</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -292,96 +77,16 @@
                 </div>
                 <div style="padding: 5px 0 0 0;">
                     <span style="font-size: 11px; color: #888; float: right;">
-                50/452 <b class="title-xs">dược thiện</b>
+                0/{{TongSoLuongDuocThien}} <b class="title-xs">dược thiện</b>
                 </span>
                 </div>
                 <hr class="thin bg-grayLighter">
             </div>
-            <ul class="list">
+            <ul class="list" *ngFor = "let duocthien of DsDuocThien">
                 <li>
                     <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Bổ trung ích khí thang</span>
-         </a>
-                </li>
-                <li>
-                    <a href="#">
-           <span class="title">Hết - Bổ trung ích khí thang</span>
-         </a>
+                        <span class="title">{{duocthien.Name}}</span>
+                    </a>
                 </li>
             </ul>
         </div>

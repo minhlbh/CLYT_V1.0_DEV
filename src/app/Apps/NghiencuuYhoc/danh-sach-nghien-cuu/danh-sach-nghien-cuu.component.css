@@ -1,0 +1,130 @@
+.search-box-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px 0 20px ;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+
+
+
+.search-box-top .text-light {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.search-box-top hr {
+    margin-bottom: 0;
+}
+
+.text-light {
+    font-weight: 600;
+}
+
+.input-control {
+    display: inline-block;
+    min-height: 27px;
+    height: 27px;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+}
+
+.input-control .icon-search {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #777;
+}
+
+.input-control input {
+  width: 100%;
+  padding:3px 5px;
+  font-size: 13px;
+  padding-left:25px;
+  border: solid 1px #ccc;
+  height: 25px;
+}
+
+.drugs-list-wr {
+    width: 100%;
+    height: calc(100vh - 85px);
+    float: left;
+    padding: 63px 20px 20px 20px;
+    overflow: hidden;
+}
+
+.drugs-list {
+    width: 100%;
+    height: calc(95% - 40px);
+    overflow: auto;
+    position: relative;
+    float: left;
+}
+
+
+.col {
+    float: left;
+    padding: 5px;
+}
+
+.col.w10 {
+   width: 10%;
+}
+
+.col.w15 {
+   width: 15%;
+}
+
+.col.w20 {
+   width: 20%;
+}
+
+.col.w25 {
+   width: 25%;
+}
+
+.col.w30 {
+   width: 30%;
+}
+
+.col.w40 {
+   width: 40%;
+}
+
+.col.w50 {
+   width: 50%;
+}
+
+.row-l.head {
+    background: #e1e1e1 !important;
+    font-size: 15px;
+    border: 1px solid #e1e1e1 !important;
+}
+
+.row-l {
+    width: 100%;
+    float: left;
+    border-bottom: solid 1px #eee;
+    border: 1px solid #fff;
+}
+
+.row-l:hover, .row-l:nth-child(2n+1):hover {
+    border: 1px solid rgb(16, 165, 189);
+}
+
+.row-l:nth-child(1n+1) {
+    background: #f1f1f1;
+    border: 1px solid #f1f1f1;
+}
+
+.drugs-list-wr a {
+    color: #323232;
+    font-size: 13px;
+    font-weight: 400;
+}
