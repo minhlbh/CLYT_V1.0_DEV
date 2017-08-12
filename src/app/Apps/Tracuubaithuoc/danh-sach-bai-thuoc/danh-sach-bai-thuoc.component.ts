@@ -177,8 +177,8 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.loadMore = true;
             this.page++;
             this.baithuocService.getBaithuoc(this.page).subscribe(data => {
-                for (let i = 0; i < data.DsBaithuoc.DsBaithuoc.length; i++) {
-                    this.DsBaiThuoc.push(data.DsBaithuoc.DsBaithuoc[i]);
+                for (let i = 0; i < data.DsBaiThuoc.DsBaiThuoc.length; i++) {
+                    this.DsBaiThuoc.push(data.DsBaiThuoc.DsBaiThuoc[i]);
 
                 }
                 this.endBaithuoc = this.page * 50;
@@ -194,7 +194,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
 
         }
-        if (this.endBaithuoc === this.DsBaiThuoc.length) {
+        if (this.endBaiThuoc === this.DsBaiThuoc.length) {
             this.scrollLoading = false;
         }
 
@@ -248,8 +248,8 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.loadMore = true;
             this.page++;
             this.vithuocService.getVithuoc(this.page).subscribe(data => {
-                for (let i = 0; i < data.DsVithuoc.DsThuocVithuoc.length; i++) {
-                    this.DsViThuoc.push(data.DsVithuoc.DsVithuoc[i]);
+                for (let i = 0; i < data.DsViThuoc.DsThuocViThuoc.length; i++) {
+                    this.DsViThuoc.push(data.DsViThuoc.DsViThuoc[i]);
 
                 }
                 this.endVithuoc = this.page * 50;
@@ -292,7 +292,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             setTimeout(() => {
                 this.chephamthuocService.getSearchChephamthuoc(text).subscribe(data => {
-                    this.DsChePhamThuoc = data.DsChePhamThuoc.DsChephamThuoc;
+                    this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
                     this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuongChePhamThuoc;
                     this.startChephamthuoc = 0;
                     this.endChephamthuoc = data.TongSoLuongChePhamThuoc;
@@ -317,8 +317,8 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.loadMore = true;
             this.page++;
             this.vithuocService.getChephamthuoc(this.page).subscribe(data => {
-                for (let i = 0; i < data.DsChephamthuoc.DsChephamthuoc.length; i++) {
-                    this.DsChePhamThuoc.push(data.DsChephamthuoc.DsChephamthuoc[i]);
+                for (let i = 0; i < data.DsChePhamThuoc.DsChePhamThuoc.length; i++) {
+                    this.DsChePhamThuoc.push(data.DsChePhamThuoc.DsChePhamThuoc[i]);
 
                 }
                 this.endChephamthuoc = this.page * 50;
@@ -337,7 +337,6 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (this.endChephamthuoc === this.DsChePhamThuoc.length) {
             this.scrollLoading = false;
         }
-        console.log(this.scrollLoading);
 
 
     }
@@ -364,7 +363,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
             setTimeout(() => {
                 this.duocthienService.getSearchDuocthien(text).subscribe(data => {
                     this.DsDuocThien = data.DsDuocThien .DsDuocThien;
-                    this.TongSoLuongDuocThien = data.DsDuocthien.TongSoLuongDuocThien;
+                    this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuongDuocThien;
                     this.startDuocthien = 0;
                     this.endDuocthien = data.TongSoLuongDuocThien;
                     if (this.DsDuocThien.length === 0 && this.TongSoLuongDuocThien === 0) {
