@@ -28,6 +28,7 @@ const routing: Routes = [
             { path: 'tracuuthuoc', loadChildren: './Tracuuthuoc/Tracuuthuoc.module#TracuuthuocModule' },
             { path: 'bantinhl7', loadChildren: './Bantinhl7/Bantinhl7.module#Bantinhl7Module' },
             { path: 'nghiencuuyhoc', loadChildren: './NghiencuuYhoc/NghiencuuYhoc.module#NghiencuuYhocModule' },
+            { path: 'tracuuthietbiyte', loadChildren: './ThietbiYte/ThietbiYte.module#ThietbiYteModule' },
 
             { path: '**', component: EmptyComponent },
         ],

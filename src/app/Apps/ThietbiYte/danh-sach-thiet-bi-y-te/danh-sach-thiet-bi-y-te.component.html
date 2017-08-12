@@ -1,0 +1,31 @@
+<!-- Start col left 2 -->
+<app-window [icon]="iconText" [idea]="true" [idIdea]="idIdea" [urlIdea]="urlIdea" [name]="name" [url]="url">
+    <div class="list-left-wr">
+        <!-- searchbox -->
+        <div class="search-box-top">
+            <div class="input-control text full-size" data-role="input">
+                <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Nhập tên thiết bị...">
+            </div>
+
+            <!-- đếm số thiết bị -->
+            <div style="padding: 5px 0 0 0;">
+                <span style="font-size: 11px; color: #888; float: right;">
+                0/{{TongSoThietBi}} thiết bị
+                </span>
+            </div>
+
+            <hr class="thin bg-grayLighter">
+        </div>
+
+        <!-- list thiết bị -->
+        <ul class="scrollbar-custom list" >
+            <li *ngFor="let thietbi of DsThietbi">
+                <a style="cursor: pointer;">
+                        <span class="title" >{{thietbi.Name}}</span>
+                </a>
+            </li>
+        </ul>
+        <!-- end col left 2 -->
+    </div>
+</app-window>
