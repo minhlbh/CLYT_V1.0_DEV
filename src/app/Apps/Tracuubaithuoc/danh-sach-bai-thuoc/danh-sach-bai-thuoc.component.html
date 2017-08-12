@@ -29,14 +29,14 @@
                     <span class="fa fa-fw fa-search icon icon-search"></span>
                     <input placeholder="Nhập tên vị thuốc..." type="text" class="ng-untouched ng-pristine ng-valid">
                 </div>
-                <div style="padding: 5px 0 0 0;">
+                <div style="padding: 5px 0 0 0;" >
                     <span style="font-size: 11px; color: #888; float: right;">
                 0/{{TongSoLuongViThuoc}} <b class="title-xs">vị thuốc</b>
                 </span>
                 </div>
                 <hr class="thin bg-grayLighter">
             </div>
-            <ul class="list" *ngFor="let vithuoc of DsViThuoc">
+            <ul class="list" *ngFor="let vithuoc of DsViThuoc" >
                 <li>
                     <a href="#">
                         <span class="title">{{vithuoc.Name}}</span>

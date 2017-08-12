@@ -31,21 +31,24 @@ export class DanhSachBaiThuocComponent implements OnInit {
     startBaithuoc: number;
     endBaithuoc: number;
     TongSoLuongBaiThuoc: number;
-    searchUpdate: Subject<string> = new Subject<string>();
-    searchKey = new FormControl('');
 
     DsViThuoc: Baithuoc[];
-
+    startVithuoc: number;
+    endVithuoc: number;
+    TongSoLuongViThuoc: number;
 
     DsChePhamThuoc: Baithuoc[];
-
+    startChephamthuoc: number;
+    endChephamthuoc: number;
+    TongSoLuongChePhamThuoc: number;
 
     DsDuocThien: Baithuoc[];
-
-
-    TongSoLuongViThuoc: number;
+    startDuocthien: number;
+    endDuocthien: number;
     TongSoLuongDuocThien: number;
-    TongSoLuongChePhamThuoc: number;
+
+    searchUpdate: Subject<string> = new Subject<string>();
+    searchKey = new FormControl('');
 
     public id: any;
     public url: any;
@@ -68,10 +71,10 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
-                this.doSearch(event);
-                console.log(this.searchKey.value);
-                console.log(event);
-
+                this.doSearchBaiThuoc(event);
+                this.doSearchViThuoc(event);
+                this.doSearchChePhamThuoc(event);
+                this.doSearchDuocThien(event);
 
                 // this.clickThuoc(null);
             });
@@ -88,18 +91,32 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
             this.startBaithuoc = 0;
             this.endBaithuoc = 50;
+        });
 
+        this.baithuocService.getVithuoc(1).subscribe(data => {
 
             this.DsViThuoc = data.DsViThuoc.DsViThuoc;
             this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuong;
+            this.startVithuoc = 0;
+            this.endVithuoc = 50;
+        });
+
+        this.baithuocService.getChephamthuoc(1).subscribe(data => {
 
             this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
             this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuong;
+            this.startChephamthuoc = 0;
+            this.endChephamthuoc = 50;
+        });
+
+        this.baithuocService.getDuocthien(1).subscribe(data => {
 
             this.DsDuocThien = data.DsDuocThien.DsDuocThien;
             this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuong;
-
+            this.startDuocthien = 0;
+            this.endDuocthien = 50;
         });
+
         this.menu = this.settingService.getMenu();
         for (let i = 0; i < this.menu.length; i++) {
             for (let x = 0; x < this.menu[i].items.length; x++) {
@@ -115,7 +132,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.urlIdea = 'baithuocvithuoc';
 
     }
-    doSearch(text: string) {
+    doSearchBaiThuoc(text: string) {
         // no keyword catched => return all
         if (text === '') {
             this.isSearch = false;
@@ -125,7 +142,6 @@ export class DanhSachBaiThuocComponent implements OnInit {
                 this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
                 this.startBaithuoc = (this.page - 1) * 50;
                 this.endBaithuoc = this.page * 50;
-                console.log(this.isSearch);
 
             });
             // return search results
@@ -133,7 +149,6 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.isSearch = true;
             this.loading = true;
             this.searchUpdate.next(text);
-
 
             setTimeout(() => {
                 this.baithuocService.getSearchBaithuoc(text).subscribe(data => {
@@ -152,7 +167,8 @@ export class DanhSachBaiThuocComponent implements OnInit {
             }, 1500);
         }
     }
-    onScroll() {
+
+    onScrollBaiThuoc() {
         this.scrollLoading = true;
 
         if (this.isSearch || this.page > this.TongSoLuongBaiThuoc / 50) {
@@ -161,7 +177,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.loadMore = true;
             this.page++;
             this.baithuocService.getBaithuoc(this.page).subscribe(data => {
-                for (let i = 0; i < data.DsThuoc.DsThuoc.length; i++) {
+                for (let i = 0; i < data.DsBaithuoc.DsBaithuoc.length; i++) {
                     this.DsBaiThuoc.push(data.DsBaithuoc.DsBaithuoc[i]);
 
                 }
@@ -181,10 +197,222 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (this.endBaithuoc === this.DsBaiThuoc.length) {
             this.scrollLoading = false;
         }
+
+
+
+    }
+    doSearchViThuoc(text: string) {
+        // no keyword catched => return all
+        if (text === '') {
+            this.isSearch = false;
+
+            this.vithuocService.getVithuoc(1).subscribe(data => {
+                this.DsViThuoc = data.DsViThuoc.DsViThuoc;
+                this.TongSoLuongViThuoc = data.TongSoLuongViThuoc;
+                this.startVithuoc = (this.page - 1) * 50;
+                this.endVithuoc = this.page * 50;
+
+            });
+            // return search results
+        } else {
+            this.isSearch = true;
+            this.loading = true;
+            this.searchUpdate.next(text);
+
+            console.log(this.isSearch);
+
+            setTimeout(() => {
+                this.vithuocService.getSearchVithuoc(text).subscribe(data => {
+                    this.DsViThuoc = data.DsViThuoc.DsViThuoc;
+                    this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuongViThuoc;
+                    this.startVithuoc = 0;
+                    this.endVithuoc = data.TongSoLuongViThuoc;
+                    if (this.DsViThuoc.length === 0 && this.TongSoLuongViThuoc === 0) {
+                        this.empty = true;
+                    } else {
+                        this.empty = false;
+                    }
+                    this.loading = false;
+
+                });
+            }, 1500);
+        }
+    }
+
+    onScrollViThuoc() {
+        this.scrollLoading = true;
+
+        if (this.isSearch || this.page > this.TongSoLuongViThuoc / 50) {
+            return;
+        } else {
+            this.loadMore = true;
+            this.page++;
+            this.vithuocService.getVithuoc(this.page).subscribe(data => {
+                for (let i = 0; i < data.DsVithuoc.DsThuocVithuoc.length; i++) {
+                    this.DsViThuoc.push(data.DsVithuoc.DsVithuoc[i]);
+
+                }
+                this.endVithuoc = this.page * 50;
+                this.loadMore = false;
+                this.loading = false;
+                // if (this.endThuoc > this.DsThuoc.length) {
+                //     this.endThuoc = this.DsThuoc.length;
+
+                // }
+
+            });
+
+
+
+        }
+        if (this.endVithuoc === this.DsViThuoc.length) {
+            this.scrollLoading = false;
+        }
         console.log(this.scrollLoading);
 
 
     }
+    doSearchChePhamThuoc(text: string) {
+        // no keyword catched => return all
+        if (text === '') {
+            this.isSearch = false;
+
+            this.chephamthuocService.getChephamthuoc(1).subscribe(data => {
+                this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
+                this.TongSoLuongChePhamThuoc = data.TongSoLuongChePhamThuoc;
+                this.startChephamthuoc = (this.page - 1) * 50;
+                this.endChephamthuoc = this.page * 50;
+
+            });
+            // return search results
+        } else {
+            this.isSearch = true;
+            this.loading = true;
+            this.searchUpdate.next(text);
+
+            setTimeout(() => {
+                this.chephamthuocService.getSearchChephamthuoc(text).subscribe(data => {
+                    this.DsChePhamThuoc = data.DsChePhamThuoc.DsChephamThuoc;
+                    this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuongChePhamThuoc;
+                    this.startChephamthuoc = 0;
+                    this.endChephamthuoc = data.TongSoLuongChePhamThuoc;
+                    if (this.DsChePhamThuoc.length === 0 && this.TongSoLuongChePhamThuoc === 0) {
+                        this.empty = true;
+                    } else {
+                        this.empty = false;
+                    }
+                    this.loading = false;
+
+                });
+            }, 1500);
+        }
+    }
+
+    onScrollChePhamThuoc() {
+        this.scrollLoading = true;
+
+        if (this.isSearch || this.page > this.TongSoLuongChePhamThuoc / 50) {
+            return;
+        } else {
+            this.loadMore = true;
+            this.page++;
+            this.vithuocService.getChephamthuoc(this.page).subscribe(data => {
+                for (let i = 0; i < data.DsChephamthuoc.DsChephamthuoc.length; i++) {
+                    this.DsChePhamThuoc.push(data.DsChephamthuoc.DsChephamthuoc[i]);
+
+                }
+                this.endChephamthuoc = this.page * 50;
+                this.loadMore = false;
+                this.loading = false;
+                // if (this.endThuoc > this.DsThuoc.length) {
+                //     this.endThuoc = this.DsThuoc.length;
+
+                // }
+
+            });
+
+
+
+        }
+        if (this.endChephamthuoc === this.DsChePhamThuoc.length) {
+            this.scrollLoading = false;
+        }
+        console.log(this.scrollLoading);
+
+
+    }
+
+
+    doSearchDuocThien(text: string) {
+        // no keyword catched => return all
+        if (text === '') {
+            this.isSearch = false;
+
+            this.DuocthienService.getDuocthien(1).subscribe(data => {
+                this.DsDuocThien = data.DsDuocThien.DsDuocThien;
+                this.TongSoLuongDuocThien = data.TongSoLuongDuocThien;
+                this.startDuocthien = (this.page - 1) * 50;
+                this.endDuocthien = this.page * 50;
+
+            });
+            // return search results
+        } else {
+            this.isSearch = true;
+            this.loading = true;
+            this.searchUpdate.next(text);
+
+            setTimeout(() => {
+                this.duocthienService.getSearchDuocthien(text).subscribe(data => {
+                    this.DsDuocThien = data.DsDuocThien .DsDuocThien;
+                    this.TongSoLuongDuocThien = data.DsDuocthien.TongSoLuongDuocThien;
+                    this.startDuocthien = 0;
+                    this.endDuocthien = data.TongSoLuongDuocThien;
+                    if (this.DsDuocThien.length === 0 && this.TongSoLuongDuocThien === 0) {
+                        this.empty = true;
+                    } else {
+                        this.empty = false;
+                    }
+                    this.loading = false;
+
+                });
+            }, 1500);
+        }
+    }
+
+    onScrollDuocThien() {
+        this.scrollLoading = true;
+
+        if (this.isSearch || this.page > this.TongSoLuongDuocThien / 50) {
+            return;
+        } else {
+            this.loadMore = true;
+            this.page++;
+            this.duocthienService.getDuocthien(this.page).subscribe(data => {
+                for (let i = 0; i < data.DsDuocthien.DsDuocThien.length; i++) {
+                    this.DsDuocThien.push(data.DsDuocthien.DsDuocThien[i]);
+
+                }
+                this.endDuocthien = this.page * 50;
+                this.loadMore = false;
+                this.loading = false;
+                // if (this.endThuoc > this.DsThuoc.length) {
+                //     this.endThuoc = this.DsThuoc.length;
+
+                // }
+
+            });
+
+
+
+        }
+        if (this.endDuocthien === this.DsDuocThien.length) {
+            this.scrollLoading = false;
+        }
+        console.log(this.scrollLoading);
+
+
+    }
+
 
 
 }
