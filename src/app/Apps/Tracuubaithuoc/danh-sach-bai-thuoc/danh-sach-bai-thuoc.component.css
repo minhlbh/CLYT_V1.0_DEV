@@ -1,5 +1,7 @@
 .window-baithuoc-wr {
     width: 950px;
+    height: 100%;
+    float: left;
 }
 
 .col {
