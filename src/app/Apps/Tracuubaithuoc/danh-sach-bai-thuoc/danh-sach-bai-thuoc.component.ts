@@ -88,7 +88,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.baithuocService.getBaithuoc(1).subscribe(data => {
 
             this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-            this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
+            this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuong;
             this.startBaithuoc = 0;
             this.endBaithuoc = 50;
         });
