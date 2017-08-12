@@ -6,14 +6,23 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class BaithuocService {
     constructor(private http: Http) { }
-    private thuocUrl = `${environment.apiUrl}/CSDLYT/DongY_FirstList`;
+    private baithuocUrl = `${environment.apiUrl}/CSDLYT/DongY_FirstList`;
     getBaithuoc(page): Observable<any> {
         // ...using get request
-        return this.http.get(`${this.thuocUrl}?Trang=${page}&soluongmoitrang=50`)
+        return this.http.get(`${this.baithuocUrl}?Trang=${page}&soluongmoitrang=50`)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
             // ...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+    getSearchBaithuoc(key: String) {
+        const searchUrl = `${this.baithuocUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
+        return this.http.get(searchUrl)
+            // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
+            // ...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+
     }
 
 

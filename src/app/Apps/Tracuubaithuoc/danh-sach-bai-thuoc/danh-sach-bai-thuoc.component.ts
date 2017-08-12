@@ -1,8 +1,15 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { SettingService } from '../../../Share/Services/setting.service';
 import { BaithuocService } from '../../../Share/Services/baithuoc.service';
 import { Baithuoc } from '../../../Share/Services/baithuoc.service';
-import { SettingService } from '../../../Share/Services/setting.service';
-import { ActivatedRoute, Router } from '@angular/router';
+
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+
 
 
 @Component({
@@ -20,10 +27,20 @@ export class DanhSachBaiThuocComponent implements OnInit {
     idIdea: any;
 
     DsBaiThuoc: Baithuoc[];
-    DsViThuoc: Baithuoc[];
-    DsChePhamThuoc: Baithuoc[];
-    DsDuocThien: Baithuoc[];
+    startBaithuoc: number;
+    endBaithuoc: number;
     TongSoLuongBaiThuoc: number;
+    searchUpdate: Subject<string> = new Subject<string>();
+    searchKey = new FormControl('');
+    DsViThuoc: Baithuoc[];
+
+
+    DsChePhamThuoc: Baithuoc[];
+
+
+    DsDuocThien: Baithuoc[];
+
+
     TongSoLuongViThuoc: number;
     TongSoLuongDuocThien: number;
     TongSoLuongChePhamThuoc: number;
@@ -32,6 +49,8 @@ export class DanhSachBaiThuocComponent implements OnInit {
     public empty = false;
     public page = 1;
     public url: any;
+    public isSearch = false;
+    public loading = false;
 
     constructor(
 
@@ -50,8 +69,10 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.baithuocService.getBaithuoc(1).subscribe(data => {
 
             this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-            console.log(this.DsBaiThuoc);
-            this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuong;
+            this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
+            this.startBaithuoc = 0;
+            this.endBaithuoc = 50;
+
 
             this.DsViThuoc = data.DsViThuoc.DsViThuoc;
             this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuong;
@@ -69,8 +90,6 @@ export class DanhSachBaiThuocComponent implements OnInit {
                 if (this.menu[i].items[x].url === 'baithuocvithuoc') {
                     this.name = this.menu[i].items[x].Ten;
                     this.iconText = this.menu[i].items[x].IconText;
-                    console.log(this.iconText);
-
                     this.idIdea = this.menu[i].items[x].Id;
                 }
             }
@@ -79,5 +98,36 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.idea = true;
         this.urlIdea = 'baithuocvithuoc';
 
+    }
+    doSearch(text: string) {
+        // no keyword catched => return all
+        if (text === '') {
+            this.isSearch = false;
+            this.baithuocService.getBaithuoc(1).subscribe(data => {
+                this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
+                this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
+                this.startBaithuoc = (this.page - 1) * 50;
+                this.endBaithuoc = this.page * 50;
+            });
+            // return search results
+        } else {
+            this.isSearch = true;
+            this.loading = true;
+            this.searchUpdate.next(text);
+            setTimeout(() => {
+                this.baithuocService.getSearchBaithuoc(text).subscribe(data => {
+                    this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
+                    this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
+                    this.startBaithuoc = 0;
+                    this.endBaithuoc = data.TongSoLuongBaiThuoc;
+                    if (this.DsBaiThuoc.length === 0 && this.TongSoLuongBaiThuoc === 0) {
+                        this.empty = true;
+                    } else {
+                        this.empty = false;
+                    }
+                    this.loading = false;
+                });
+            }, 1500);
+        }
     }
 }
