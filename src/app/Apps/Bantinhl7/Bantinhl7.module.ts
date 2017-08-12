@@ -19,4 +19,5 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     ],
     declarations: [Bantinhl7Component]
 })
+
 export class Bantinhl7Module { }
