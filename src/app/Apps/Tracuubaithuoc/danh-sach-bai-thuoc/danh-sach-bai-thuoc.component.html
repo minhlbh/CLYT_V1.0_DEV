@@ -4,7 +4,7 @@
             <div class="search-box-top">
                 <div class="input-control text full-size">
                     <span class="fa fa-fw fa-search icon icon-search"></span>
-                    <input placeholder="Nhập tên bài thuốc..." type="text" class="ng-untouched ng-pristine ng-valid">
+                    <input placeholder="Nhập tên bài thuốc..." [formControl]="searchKey" type="text" class="ng-untouched ng-pristine ng-valid">
                 </div>
                 <div style="padding: 5px 0 0 0;">
                     <span style="font-size: 11px; color: #888; float: right;">

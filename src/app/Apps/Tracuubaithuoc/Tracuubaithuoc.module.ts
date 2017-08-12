@@ -23,6 +23,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     imports: [
         CommonModule,
         HttpModule,
+        ReactiveFormsModule ,
         FormsModule,
         ShareButtonsModule.forRoot(),
         Routing,
