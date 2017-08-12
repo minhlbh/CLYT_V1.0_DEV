@@ -31,22 +31,22 @@
             </div>
         </div>
 
-        <div class="text-center">
-            <p class="lead" *ngIf="loading">
+        <!-- <div class="text-center">
+            <p class="lead" >
                 <img src="assets/66.gif">
             </p>
-        </div>
+        </div> -->
 
         <div class="drugs-list">
             <div class="scrollbar-custom list">
-                <div *ngIf="!loading">
-                    <div class="text-center" *ngIf="empty">
+                <div>
+                    <!-- <div class="text-center" *ngIf="empty">
                         <p>
                             <a> Không kết quả nào phù hợp</a>
                         </p>
-                    </div>
+                    </div> -->
 
-                    <div *ngIf="!empty">
+                    <div>
 
                         <a *ngFor="let nghiencuu of DsNghienCuu" class="row-l">
 

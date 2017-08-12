@@ -1,26 +1,26 @@
 @font-face {
-    font-family: 'Segoe UI Web (Vietnamese)';
+    font-family: 'Segoe UI Web';
     src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-light.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-light.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Segoe UI Web (Vietnamese)';
+    font-family: 'Segoe UI Web';
     src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semilight.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semilight.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Segoe UI Web (Vietnamese)';
+    font-family: 'Segoe UI Web';
     src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-regular.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Segoe UI Web (Vietnamese)';
+    font-family: 'Segoe UI Web';
     src: url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semibold.woff2') format('woff2'), url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-vietnamese/segoeui-semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
@@ -28,7 +28,7 @@
 
 body {
     height: 100%;
-    font-family: 'Segoe UI Web (Vietnamese)', "Segoe UI";
+    font-family: 'Segoe UI Web', "Segoe UI";
     font-weight: 600;
 }
 

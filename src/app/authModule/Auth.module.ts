@@ -39,8 +39,8 @@ let providers = {
         // client secret: jQN-Mm7lJw78IrM6HTnYahxs
     },
     'facebook': {
-        // 'clientId': '123454808277990',
-        'clientId': '1914775922118244',
+        'clientId': '123454808277990',
+        // 'clientId': '1914775922118244',
         'apiVersion': 'v2.10'
     }
 };
