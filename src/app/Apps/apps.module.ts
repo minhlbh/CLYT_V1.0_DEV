@@ -14,7 +14,6 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
 // service
 import { SettingService } from '../Share/Services/setting.service';
-// import { WindowComponent } from '../Share/Components/window/window.component';
 import { ShareModule } from '../Share/Components/share.module';
 
 
@@ -30,7 +29,7 @@ const routing: Routes = [
             { path: 'bantinhl7', loadChildren: './Bantinhl7/Bantinhl7.module#Bantinhl7Module' },
             { path: 'nghiencuuyhoc', loadChildren: './NghiencuuYhoc/NghiencuuYhoc.module#NghiencuuYhocModule' },
             { path: 'tracuuthietbiyte', loadChildren: './ThietbiYte/ThietbiYte.module#ThietbiYteModule' },
-
+            { path: 'f/:route', loadChildren: './Frame/Frame.module#FrameModule' },
             { path: '**', component: EmptyComponent },
         ],
     },

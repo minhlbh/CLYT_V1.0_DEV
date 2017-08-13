@@ -29,7 +29,7 @@ export class SettingService {
         this.itemValue.next(data);
         localStorage.setItem('app_menu', JSON.stringify(data));
     }
-    getMenu() {
+    getMenu(): any {
         return JSON.parse(localStorage.getItem('app_menu'));
     }
     setConfig(data) {

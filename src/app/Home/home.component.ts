@@ -49,13 +49,17 @@ export class HomeComponent implements OnInit {
     showLess(i) {
         this.menus[i].full = false;
     }
+
     getRandomInt(min, max) {
         return (Math.floor(Math.random() * (max - min + 1)) + min) * 0.01;
     }
 
     goToApp(item) {
         // this.ro
-        if (item.TrangThaiHoatDong !== 0) {
+        if (item.LinkIFrame) {
+            // console.log('frame');
+            this.router.navigate(['/apps/f', item.url]);
+        }else if (item.TrangThaiHoatDong !== 0) {
             this.router.navigate(['/apps', item.url]);
         }
 

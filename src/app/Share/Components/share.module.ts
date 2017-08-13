@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WindowComponent } from './window/window.component';
+import { SafePipe } from '../../Share/Pipes/safe.pipe';
 
 @NgModule({
     imports: [
         CommonModule
     ],
     declarations: [
-        WindowComponent
+        WindowComponent,
+        SafePipe
     ],
     exports: [
-        WindowComponent
+        WindowComponent,
+        SafePipe
     ]
 })
 export class ShareModule { }
