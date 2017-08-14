@@ -1,0 +1,63 @@
+
+<app-window [idea]="idea" [urlIdea]="urlIdea" [url]="url" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
+    <!-- searchbox -->
+    <div class="search-box-top">
+        <div class="input-control text full-size" data-role="input">
+            <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+            <input type="text" placeholder="Nhập tên phương pháp..." >
+        </div>
+        <!-- đếm số thuốc -->
+        <div style="padding: 5px 0 0 0;">
+            <span style="font-size: 11px; color: #888; float: right;">
+                0/{{ TongSoLuong }} phương pháp
+                </span>
+        </div>
+        <hr class="thin bg-grayLighter">
+    </div>
+    <!-- list phương pháp -->
+
+    <div class="drugs-list-wr">
+        <div class="row-l head">
+            <div class="col w25">
+                Phương pháp
+            </div>
+            <div class="col w20">
+                Trạng thái
+            </div>
+
+        </div>
+        <div class="text-center">
+            <p class="lead" *ngIf="loading">
+                <img src="assets/66.gif">
+            </p>
+        </div>
+
+        <div class="drugs-list">
+            <div class="scrollbar-custom list">
+                <div *ngIf="!loading">
+                    <div class="text-center" *ngIf="empty">
+                        <p>
+                            <a> Không kết quả nào phù hợp</a>
+                        </p>
+                    </div>
+
+                    <div *ngIf="!empty">
+
+                        <a *ngFor="let phuongphap of DsPhuongPhap" class="row-l">
+
+
+                            <div class="col w25">
+                                <span class="title">{{phuongphap.Name}}</span>
+                            </div>
+
+                            <div class="col w20">
+                                <span class="title">{{phuongphap.TrangThai}}</span>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-window>
