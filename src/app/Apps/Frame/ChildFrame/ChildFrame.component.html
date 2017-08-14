@@ -1,0 +1,7 @@
+<ng-container *ngIf="Prop">
+<div class="fxs-block" id="child" [style.width]="Prop.Width+'px'" style="height:100%">
+    <app-window [name]="Prop.Title" >
+        <iframe style="border:none" width="100%" height="100%"  [src]="Prop.Link | safe: 'resourceUrl'" frameborder="0"></iframe>
+    </app-window>
+</div>
+</ng-container>

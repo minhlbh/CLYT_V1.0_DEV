@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
     selector: 'app-bantinhl7',
@@ -19,5 +19,9 @@ export class Bantinhl7Component implements OnInit {
 
     receiveMessage(event: any) {
         // console.log(JSON.parse(event.data));
+    }
+
+    frameClick() {
+        console.log('frClick');
     }
 }
