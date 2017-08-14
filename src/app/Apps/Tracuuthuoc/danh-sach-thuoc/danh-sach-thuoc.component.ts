@@ -152,7 +152,6 @@ export class DanhSachThuocComponent implements OnInit {
         if (this.endThuoc === this.DsThuoc.length) {
             this.scrollLoading = false;
         }
-        console.log(this.scrollLoading);
 
     }
 
