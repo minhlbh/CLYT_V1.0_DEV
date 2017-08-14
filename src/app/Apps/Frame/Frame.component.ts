@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild , ElementRef, TemplateRef} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SettingService } from '../../Share/Services/setting.service';
 
@@ -7,12 +7,12 @@ import { SettingService } from '../../Share/Services/setting.service';
     templateUrl: './Frame.component.html',
     styleUrls: ['./Frame.component.css']
 })
-export class FrameComponent implements OnInit {
-
+export class FrameComponent implements OnInit, AfterViewInit {
+    @ViewChild('iframe') iframe: ElementRef;
     winInfo: any;
-    // frameUrl: string;
-    // frameWidth: any;
     url: string;
+    screens: any;
+
     constructor(
         private router: Router,
         private activatedroute: ActivatedRoute,
@@ -25,9 +25,6 @@ export class FrameComponent implements OnInit {
                 m.items.forEach(e => {
                     if (e.url === this.url) {
                         this.winInfo = e;
-                        console.log(this.winInfo);
-                        // this.frameUrl = e.LinkIFrame;
-                        // this.frameWidth = e.DoRong;
                     }
                 });
             });
@@ -39,6 +36,22 @@ export class FrameComponent implements OnInit {
 
     ngOnInit() {
     }
+    ngAfterViewInit() {
+        console.log('frame');
+        const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentWindow;
+        if (typeof doc.addEventListener !== 'undefined') {
+            doc.addEventListener('click', this.iframeClickHandler, false);
+        } else if (typeof doc.attachEvent !== 'undefined') {
+            doc.attachEvent('onclick', this.iframeClickHandler);
+        }
+        console.log(doc);
+
+    }
+
+    iframeClickHandler() {
+        alert('Iframe clicked');
+    }
+
 
     receiveMessage(event: any) {
         if (event.origin === 'http://api.truongkhoa.com') {
