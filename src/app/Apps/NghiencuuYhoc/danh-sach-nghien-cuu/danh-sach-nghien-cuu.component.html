@@ -1,3 +1,4 @@
+
 <app-window [idea]="idea" [urlIdea]="urlIdea" [url]="url" [name]="name" [icon]=" iconText " [idIdea]="idIdea">
     <!-- searchbox -->
     <div class="search-box-top">
@@ -20,13 +21,13 @@
 
     <div class="drugs-list-wr">
         <div class="row-l head">
-            <div class="col w25">
+            <div class="col w40">
                 Nghiên cứu
             </div>
-            <div class="col w20">
+            <div class="col w30">
                 Chủ nhiệm
             </div>
-            <div class="col w10">
+            <div class="col w30">
                 Đơn vị
             </div>
         </div>
@@ -51,15 +52,15 @@
                         <a *ngFor="let nghiencuu of DsNghienCuu" class="row-l">
 
 
-                            <div class="col w25">
+                            <div class="col w40">
                                 <span class="title">{{nghiencuu.Name}}</span>
                             </div>
 
-                            <div class="col w20">
+                            <div class="col w30">
                                 <span class="title">{{nghiencuu.ChuNhiem}}</span>
                             </div>
 
-                            <div class="col w10">
+                            <div class="col w30">
                                 <span class="title">{{nghiencuu.DonVi}}</span>
                             </div>
                         </a>

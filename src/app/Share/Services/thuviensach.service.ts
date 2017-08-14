@@ -19,6 +19,18 @@ export class ThuviensachService {
             // ...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
+    getSearchSach(key: String) {
+        const searchUrl = `${this.sachUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
+        return this.http.get(searchUrl)
+            // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
+            // ...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+
+
+    }
+
+
     getTailieu(page): Observable<any> {
         // ...using get request
         return this.http.get(`${this.tailieuUrl}?Trang=${page}&soluongmoitrang=50`)
@@ -27,6 +39,16 @@ export class ThuviensachService {
             // ...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
+    getSearchTailieu(key: String) {
+        const searchUrl = `${this.tailieuUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
+        return this.http.get(searchUrl)
+            // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
+            // ...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
+
     getGhichep(page): Observable<any> {
         // ...using get request
         return this.http.get(`${this.ghichepUrl}?Trang=${page}&soluongmoitrang=50`)
@@ -35,5 +57,14 @@ export class ThuviensachService {
             // ...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
+    getSearchGhichep(key: String) {
+        const searchUrl = `${this.ghichepUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
+        return this.http.get(searchUrl)
+            // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
+            // ...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
 
 }
+

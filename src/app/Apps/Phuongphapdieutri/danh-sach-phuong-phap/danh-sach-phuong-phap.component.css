@@ -86,12 +86,12 @@
     width: 25%;
 }
 
-.col.w30 {
-    width: 30%;
-}
-
 .col.w40 {
     width: 40%;
+}
+
+.col.w60 {
+    width: 60%;
 }
 
 
