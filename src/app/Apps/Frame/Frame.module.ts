@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FrameComponent } from './Frame.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ShareModule } from '../../Share/Components/share.module';
+import { ChildFrameComponent } from './ChildFrame/ChildFrame.component';
 
 const routing: Routes = [
     {
@@ -20,7 +21,11 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
             ShareModule
         ],
         declarations: [
-            FrameComponent
+            FrameComponent,
+            ChildFrameComponent
+        ],
+        entryComponents: [
+            ChildFrameComponent
         ]
     }
 )
