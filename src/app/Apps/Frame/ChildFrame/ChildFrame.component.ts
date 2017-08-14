@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-ChildFrame',
-  templateUrl: './ChildFrame.component.html',
-  styleUrls: ['./ChildFrame.component.css']
+    selector: 'app-childframe',
+    templateUrl: './ChildFrame.component.html',
+    styleUrls: ['./ChildFrame.component.css']
 })
 export class ChildFrameComponent implements OnInit {
+    @Input('Prop') Prop;
+    constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

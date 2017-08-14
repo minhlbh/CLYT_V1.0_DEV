@@ -22,8 +22,11 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ],
         declarations: [
             FrameComponent,
-    ChildFrameComponent
-]
+            ChildFrameComponent
+        ],
+        entryComponents: [
+            ChildFrameComponent
+        ]
     }
 )
 export class FrameModule { }
