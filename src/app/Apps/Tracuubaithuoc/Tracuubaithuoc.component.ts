@@ -8,18 +8,20 @@ import { SettingService } from '../../Share/Services/setting.service';
     styleUrls: ['./Tracuubaithuoc.component.css']
 })
 export class TracuubaithuocComponent implements OnInit {
-        menu: any;
-        iconText: any;
-        name: any;
+    menu: any;
+    iconText: any;
+    name: any;
 
     constructor(
         private settingService: SettingService,
         private router: Router,
-        private activatedroute: ActivatedRoute) { }
+        private activatedroute: ActivatedRoute) {
+
+    }
 
 
 
-ngOnInit() {
-}
+    ngOnInit() {
+    }
 
 }

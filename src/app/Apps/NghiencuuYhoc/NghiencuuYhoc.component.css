@@ -1,0 +1,9 @@
+.fxs-block.nghien-cuu-y-hoc {
+    min-width: 700px;
+}
+
+@media only screen and (max-width: 768px) {
+    .fxs-block {
+        width: 50%;
+    }
+}
