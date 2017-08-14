@@ -29,6 +29,6 @@ export class PhuongphapService {
 
 export interface Phuongphap {
     id: number;
-    name: string;
+    Name: string;
     TrangThai: string;
 }

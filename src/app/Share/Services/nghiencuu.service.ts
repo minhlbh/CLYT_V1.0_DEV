@@ -31,7 +31,7 @@ export class NghiencuuService {
 
 export interface Nghiencuu {
     id: number;
-    name: string;
+    Name: string;
     ChuNhiem: string;
     DonVi: string;
 }
