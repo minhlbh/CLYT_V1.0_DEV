@@ -31,18 +31,22 @@ export class DanhSachBaiThuocComponent implements OnInit {
     DsBaiThuoc: Baithuoc[];
     startBaithuoc: number;
     endBaithuoc: number;
+    TongSoLuongBaiThuoc: number;
 
     DsViThuoc: Baithuoc[];
     startVithuoc: number;
     endVithuoc: number;
+    TongSoLuongViThuoc: number;
 
     DsChePhamThuoc: Baithuoc[];
     startChephamthuoc: number;
     endChephamthuoc: number;
+    TongSoLuongChePhamThuoc: number;
 
     DsDuocThien: Baithuoc[];
     startDuocthien: number;
     endDuocthien: number;
+    TongSoLuongDuocThien: number;
 
     searchUpdate: Subject<string> = new Subject<string>();
     searchKey = new FormControl('');
@@ -85,7 +89,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.baithuocService.getBaithuoc(1).subscribe(data => {
 
             this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-            this.TongSoLuong = data.DsBaiThuoc.TongSoLuong;
+            this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuong;
             this.startBaithuoc = 0;
             this.endBaithuoc = 50;
         });
@@ -93,7 +97,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         this.baithuocService.getVithuoc(1).subscribe(data => {
 
             this.DsViThuoc = data.DsViThuoc.DsViThuoc;
-            this.TongSoLuong = data.DsViThuoc.TongSoLuong;
+            this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuong;
             this.startVithuoc = 0;
             this.endVithuoc = 50;
         });
@@ -136,7 +140,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             this.baithuocService.getBaithuoc(1).subscribe(data => {
                 this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-                this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
+                this.TongSoLuongBaiThuoc = data.TongSoLuong;
                 this.startBaithuoc = (this.page - 1) * 50;
                 this.endBaithuoc = this.page * 50;
 
@@ -150,9 +154,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
             setTimeout(() => {
                 this.baithuocService.getSearchBaithuoc(text).subscribe(data => {
                     this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-                    this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuongBaiThuoc;
+                    this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuong;
                     this.startBaithuoc = 0;
-                    this.endBaithuoc = data.TongSoLuongBaiThuoc;
+                    this.endBaithuoc = data.TongSoLuong;
                     if (this.DsBaiThuoc.length === 0 && this.TongSoLuongBaiThuoc === 0) {
                         this.empty = true;
                     } else {
@@ -205,7 +209,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             this.baithuocService.getVithuoc(1).subscribe(data => {
                 this.DsViThuoc = data.DsViThuoc.DsViThuoc;
-                this.TongSoLuongViThuoc = data.TongSoLuongViThuoc;
+                this.TongSoLuongViThuoc = data.TongSoLuong;
                 this.startVithuoc = (this.page - 1) * 50;
                 this.endVithuoc = this.page * 50;
 
@@ -221,9 +225,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
             setTimeout(() => {
                 this.baithuocService.getSearchVithuoc(text).subscribe(data => {
                     this.DsViThuoc = data.DsViThuoc.DsViThuoc;
-                    this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuongViThuoc;
+                    this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuong;
                     this.startVithuoc = 0;
-                    this.endVithuoc = data.TongSoLuongViThuoc;
+                    this.endVithuoc = data.TongSoLuong;
                     if (this.DsViThuoc.length === 0 && this.TongSoLuongViThuoc === 0) {
                         this.empty = true;
                     } else {
@@ -276,7 +280,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             this.baithuocService.getChephamthuoc(1).subscribe(data => {
                 this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
-                this.TongSoLuongChePhamThuoc = data.TongSoLuongChePhamThuoc;
+                this.TongSoLuongChePhamThuoc = data.TongSoLuong;
                 this.startChephamthuoc = (this.page - 1) * 50;
                 this.endChephamthuoc = this.page * 50;
 
@@ -290,9 +294,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
             setTimeout(() => {
                 this.baithuocService.getSearchChephamthuoc(text).subscribe(data => {
                     this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
-                    this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuongChePhamThuoc;
+                    this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuong;
                     this.startChephamthuoc = 0;
-                    this.endChephamthuoc = data.TongSoLuongChePhamThuoc;
+                    this.endChephamthuoc = data.TongSoLuong;
                     if (this.DsChePhamThuoc.length === 0 && this.TongSoLuongChePhamThuoc === 0) {
                         this.empty = true;
                     } else {
@@ -346,7 +350,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             this.baithuocService.getDuocthien(1).subscribe(data => {
                 this.DsDuocThien = data.DsDuocThien.DsDuocThien;
-                this.TongSoLuongDuocThien = data.TongSoLuongDuocThien;
+                this.TongSoLuongDuocThien = data.TongSoLuong;
                 this.startDuocthien = (this.page - 1) * 50;
                 this.endDuocthien = this.page * 50;
 
@@ -360,9 +364,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
             setTimeout(() => {
                 this.baithuocService.getSearchDuocthien(text).subscribe(data => {
                     this.DsDuocThien = data.DsDuocThien .DsDuocThien;
-                    this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuongDuocThien;
+                    this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuong;
                     this.startDuocthien = 0;
-                    this.endDuocthien = data.TongSoLuongDuocThien;
+                    this.endDuocthien = data.TongSoLuong;
                     if (this.DsDuocThien.length === 0 && this.TongSoLuongDuocThien === 0) {
                         this.empty = true;
                     } else {
@@ -404,7 +408,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (this.endDuocthien === this.DsDuocThien.length) {
             this.scrollLoading = false;
         }
-        console.log(this.scrollLoading);
+
 
 
     }
