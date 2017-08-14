@@ -11,9 +11,6 @@ import { SettingService } from './Share/Services/setting.service';
 
 import { AppComponent } from './app.component';
 
-// Pipes
-import { SafeHtmlPipe } from './Share/Pipes/safeHtml.pipe';
-import { SafeStylePipe } from './Share/Pipes/safeStyle.pipe';
 
 const routes: Routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
@@ -27,9 +24,7 @@ const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingSt
 
 @NgModule({
     declarations: [
-        AppComponent,
-        SafeHtmlPipe,
-        SafeStylePipe
+        AppComponent
     ],
     imports: [
         BrowserModule,

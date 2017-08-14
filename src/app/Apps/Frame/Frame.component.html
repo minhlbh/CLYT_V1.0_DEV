@@ -1,0 +1,7 @@
+<ng-container *ngIf="winInfo">
+    <div style="height:100%" [style.width]="winInfo.DoRong+'px'">
+        <app-window [name]="winInfo.Ten" [icon]="winInfo.IconText" url="/apps">
+            <iframe class="fstyle" style="border:none" width="100%" height="100%" [src]="winInfo.LinkIFrame | safe: 'resourceUrl'"></iframe>
+        </app-window>
+    </div>
+</ng-container>
