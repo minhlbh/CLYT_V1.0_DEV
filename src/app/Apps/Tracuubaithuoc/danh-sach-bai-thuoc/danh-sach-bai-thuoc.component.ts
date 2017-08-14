@@ -26,6 +26,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
     idea: any;
     urlIdea: any;
     idIdea: any;
+    TongSoLuong: number;
 
     DsBaiThuoc: Baithuoc[];
     startBaithuoc: number;
@@ -139,7 +140,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             this.baithuocService.getBaithuoc(1).subscribe(data => {
                 this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-                this.TongSoLuongBaiThuoc = data.TongSoLuongBaiThuoc;
+                this.TongSoLuongBaiThuoc = data.TongSoLuong;
                 this.startBaithuoc = (this.page - 1) * 50;
                 this.endBaithuoc = this.page * 50;
 
@@ -153,9 +154,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
             setTimeout(() => {
                 this.baithuocService.getSearchBaithuoc(text).subscribe(data => {
                     this.DsBaiThuoc = data.DsBaiThuoc.DsBaiThuoc;
-                    this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuongBaiThuoc;
+                    this.TongSoLuongBaiThuoc = data.DsBaiThuoc.TongSoLuong;
                     this.startBaithuoc = 0;
-                    this.endBaithuoc = data.TongSoLuongBaiThuoc;
+                    this.endBaithuoc = data.TongSoLuong;
                     if (this.DsBaiThuoc.length === 0 && this.TongSoLuongBaiThuoc === 0) {
                         this.empty = true;
                     } else {
@@ -206,9 +207,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (text === '') {
             this.isSearch = false;
 
-            this.vithuocService.getVithuoc(1).subscribe(data => {
+            this.baithuocService.getVithuoc(1).subscribe(data => {
                 this.DsViThuoc = data.DsViThuoc.DsViThuoc;
-                this.TongSoLuongViThuoc = data.TongSoLuongViThuoc;
+                this.TongSoLuongViThuoc = data.TongSoLuong;
                 this.startVithuoc = (this.page - 1) * 50;
                 this.endVithuoc = this.page * 50;
 
@@ -222,11 +223,11 @@ export class DanhSachBaiThuocComponent implements OnInit {
             console.log(this.isSearch);
 
             setTimeout(() => {
-                this.vithuocService.getSearchVithuoc(text).subscribe(data => {
+                this.baithuocService.getSearchVithuoc(text).subscribe(data => {
                     this.DsViThuoc = data.DsViThuoc.DsViThuoc;
-                    this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuongViThuoc;
+                    this.TongSoLuongViThuoc = data.DsViThuoc.TongSoLuong;
                     this.startVithuoc = 0;
-                    this.endVithuoc = data.TongSoLuongViThuoc;
+                    this.endVithuoc = data.TongSoLuong;
                     if (this.DsViThuoc.length === 0 && this.TongSoLuongViThuoc === 0) {
                         this.empty = true;
                     } else {
@@ -247,7 +248,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         } else {
             this.loadMore = true;
             this.page++;
-            this.vithuocService.getVithuoc(this.page).subscribe(data => {
+            this.baithuocService.getVithuoc(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsViThuoc.DsThuocViThuoc.length; i++) {
                     this.DsViThuoc.push(data.DsViThuoc.DsViThuoc[i]);
 
@@ -277,9 +278,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (text === '') {
             this.isSearch = false;
 
-            this.chephamthuocService.getChephamthuoc(1).subscribe(data => {
+            this.baithuocService.getChephamthuoc(1).subscribe(data => {
                 this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
-                this.TongSoLuongChePhamThuoc = data.TongSoLuongChePhamThuoc;
+                this.TongSoLuongChePhamThuoc = data.TongSoLuong;
                 this.startChephamthuoc = (this.page - 1) * 50;
                 this.endChephamthuoc = this.page * 50;
 
@@ -291,11 +292,11 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.searchUpdate.next(text);
 
             setTimeout(() => {
-                this.chephamthuocService.getSearchChephamthuoc(text).subscribe(data => {
+                this.baithuocService.getSearchChephamthuoc(text).subscribe(data => {
                     this.DsChePhamThuoc = data.DsChePhamThuoc.DsChePhamThuoc;
-                    this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuongChePhamThuoc;
+                    this.TongSoLuongChePhamThuoc = data.DsChePhamThuoc.TongSoLuong;
                     this.startChephamthuoc = 0;
-                    this.endChephamthuoc = data.TongSoLuongChePhamThuoc;
+                    this.endChephamthuoc = data.TongSoLuong;
                     if (this.DsChePhamThuoc.length === 0 && this.TongSoLuongChePhamThuoc === 0) {
                         this.empty = true;
                     } else {
@@ -316,7 +317,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         } else {
             this.loadMore = true;
             this.page++;
-            this.vithuocService.getChephamthuoc(this.page).subscribe(data => {
+            this.baithuocService.getChephamthuoc(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsChePhamThuoc.DsChePhamThuoc.length; i++) {
                     this.DsChePhamThuoc.push(data.DsChePhamThuoc.DsChePhamThuoc[i]);
 
@@ -347,9 +348,9 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (text === '') {
             this.isSearch = false;
 
-            this.DuocthienService.getDuocthien(1).subscribe(data => {
+            this.baithuocService.getDuocthien(1).subscribe(data => {
                 this.DsDuocThien = data.DsDuocThien.DsDuocThien;
-                this.TongSoLuongDuocThien = data.TongSoLuongDuocThien;
+                this.TongSoLuongDuocThien = data.TongSoLuong;
                 this.startDuocthien = (this.page - 1) * 50;
                 this.endDuocthien = this.page * 50;
 
@@ -361,11 +362,11 @@ export class DanhSachBaiThuocComponent implements OnInit {
             this.searchUpdate.next(text);
 
             setTimeout(() => {
-                this.duocthienService.getSearchDuocthien(text).subscribe(data => {
+                this.baithuocService.getSearchDuocthien(text).subscribe(data => {
                     this.DsDuocThien = data.DsDuocThien .DsDuocThien;
-                    this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuongDuocThien;
+                    this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuong;
                     this.startDuocthien = 0;
-                    this.endDuocthien = data.TongSoLuongDuocThien;
+                    this.endDuocthien = data.TongSoLuong;
                     if (this.DsDuocThien.length === 0 && this.TongSoLuongDuocThien === 0) {
                         this.empty = true;
                     } else {
@@ -386,7 +387,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         } else {
             this.loadMore = true;
             this.page++;
-            this.duocthienService.getDuocthien(this.page).subscribe(data => {
+            this.baithuocService.getDuocthien(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsDuocthien.DsDuocThien.length; i++) {
                     this.DsDuocThien.push(data.DsDuocthien.DsDuocThien[i]);
 
@@ -407,7 +408,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
         if (this.endDuocthien === this.DsDuocThien.length) {
             this.scrollLoading = false;
         }
-        console.log(this.scrollLoading);
+
 
 
     }
