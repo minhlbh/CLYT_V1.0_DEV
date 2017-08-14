@@ -363,7 +363,7 @@ export class DanhSachBaiThuocComponent implements OnInit {
 
             setTimeout(() => {
                 this.baithuocService.getSearchDuocthien(text).subscribe(data => {
-                    this.DsDuocThien = data.DsDuocThien .DsDuocThien;
+                    this.DsDuocThien = data.DsDuocThien.DsDuocThien;
                     this.TongSoLuongDuocThien = data.DsDuocThien.TongSoLuong;
                     this.startDuocthien = 0;
                     this.endDuocthien = data.TongSoLuong;
