@@ -4,7 +4,6 @@ import { Ng2CompleterModule } from 'ng2-completer';
 import { FormsModule } from '@angular/forms';
 
 import { WindowComponent } from './window/window.component';
-import { AutoCompleteComponent } from './AutoComplete/AutoComplete.component';
 
 import { SafePipe } from '../../Share/Pipes/safe.pipe';
 
@@ -18,11 +17,9 @@ import { SafePipe } from '../../Share/Pipes/safe.pipe';
     declarations: [
         WindowComponent,
         SafePipe,
-        AutoCompleteComponent
     ],
     exports: [
         WindowComponent,
-        AutoCompleteComponent,
         SafePipe
     ]
 })
