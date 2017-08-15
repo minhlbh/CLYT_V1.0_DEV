@@ -157,7 +157,6 @@ padding: 12px 10px 12px 40px;
     width: 100%;
     padding: 64px 0 25px 0;
     background: #fff;
-    border-right: 1px solid #ccc;
     position: relative !important;
     display: block;
     height: calc(100vh - 85px);
