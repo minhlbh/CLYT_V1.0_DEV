@@ -49,13 +49,13 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     declarations: [
         TracuubenhComponent,
         DanhSachBenhComponent,
-        ChiTietBenhComponent,
+        // ChiTietBenhComponent,
         // WindowComponent,
-        LoadDuLieuImgComponent,
-        LoadDuLieuTextComponent,
-        LoadDuLieuLinkComponent,
-        LoadDuLieuYoutubeComponent,
-        ForumBarComponent,
+        // LoadDuLieuImgComponent,
+        // LoadDuLieuTextComponent,
+        // LoadDuLieuLinkComponent,
+        // LoadDuLieuYoutubeComponent,
+        // ForumBarComponent,
 
     ],
     providers: [

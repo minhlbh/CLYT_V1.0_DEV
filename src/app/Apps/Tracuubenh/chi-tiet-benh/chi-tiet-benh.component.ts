@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
     styleUrls: ['./chi-tiet-benh.component.css']
 })
 export class ChiTietBenhComponent implements OnInit {
-    @Input() set idBenh(idBenh: number) {
+    @Input() set idBenh(idBenh: any) {
         this.show(idBenh);
     }
+    // @Input() set tenBenh(tenBenh: string){
+
+    // }
     gPlusButton;
     fbButton;
     loading = true;
@@ -40,8 +43,10 @@ export class ChiTietBenhComponent implements OnInit {
 
     show(id) {
         this.loading = true;
+        // if()
+        // id = 'Adenovirus';
         if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
-            this.benhService.getChiTietBenh(id.toString()).subscribe(data => {
+            this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
                 this.loading = false;
             });

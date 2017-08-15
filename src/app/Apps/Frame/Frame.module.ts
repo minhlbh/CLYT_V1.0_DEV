@@ -4,6 +4,9 @@ import { FrameComponent } from './Frame.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ShareModule } from '../../Share/Components/share.module';
 import { ChildFrameComponent } from './ChildFrame/ChildFrame.component';
+import { ChiTietBenhComponent} from '../Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
+import { BenhService } from '../../Share/Services/benh.service';
+import { ForumService } from '../../Share/Services/forum.service';
 
 const routing: Routes = [
     {
@@ -22,10 +25,16 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ],
         declarations: [
             FrameComponent,
-            ChildFrameComponent
+            ChildFrameComponent,
+            // ChiTietBenhComponent
+        ],
+        providers: [
+            BenhService,
+            ForumService
         ],
         entryComponents: [
-            ChildFrameComponent
+            ChildFrameComponent,
+            ChiTietBenhComponent
         ]
     }
 )

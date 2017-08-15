@@ -1,12 +1,12 @@
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import {environment} from '../../../environments/environment.prod';
+import { environment } from '../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class BenhService {
 
-constructor(private http: Http) { }
+    constructor(private http: Http) { }
     private benhUrl = `${environment.apiUrl}/CSDLYT/Benh_List`;
     getBenh(page): Observable<any> {
         // ...using get request
@@ -27,8 +27,14 @@ constructor(private http: Http) { }
 
     }
 
-    getChiTietBenh(id: number): Observable<any> {
-        const chiTietBenhUrl = `${environment.apiUrl}CSDLYT/Benh_Detail?Id=${id}`;
+    getChiTietBenh(id: any): Observable<any> {
+        let chiTietBenhUrl: string;
+        if (isNaN(id)) {
+            chiTietBenhUrl = `${environment.apiUrl}CSDLYT/Benh_Detail?ten=${id}`;
+        } else {
+            chiTietBenhUrl = `${environment.apiUrl}CSDLYT/Benh_Detail?Id=${id}`;
+        }
+
         // ...using get request
         return this.http.get(chiTietBenhUrl)
             // ...and calling .json() on the response to return data

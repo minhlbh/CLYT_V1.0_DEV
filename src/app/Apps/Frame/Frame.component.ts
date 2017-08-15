@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { SettingService } from '../../Share/Services/setting.service';
 import { ChildFrameComponent } from './ChildFrame/ChildFrame.component';
 import { DOCUMENT } from '@angular/common';
-
+import { ChiTietBenhComponent } from '../Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 
 
 @Component({
@@ -62,11 +62,27 @@ export class FrameComponent implements OnInit, AfterViewInit {
             this.container.clear();
             // console.log(event);
             console.log(JSON.parse(event.data));
-            const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChildFrameComponent);
+            const messData = JSON.parse(event.data);
+            let componentFactory = null;
+            let dyynamicComponent = null;
+            // idBenh
+            if (messData.LoaiLenh === 'Chi tiết bệnh') {
+                componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChiTietBenhComponent);
+                dyynamicComponent = <ChiTietBenhComponent>this.container.createComponent(componentFactory).instance;
+                dyynamicComponent.idBenh = messData.IdBenh;
+                if (!messData.IdBenh) {
+                    dyynamicComponent.idBenh = messData.TenBenh;
+                }
+            } else {
+                componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChildFrameComponent);
+                dyynamicComponent = <ChildFrameComponent>this.container.createComponent(componentFactory).instance;
+                dyynamicComponent.Prop = messData;
+            }
+
             // this.container.remo;
             // this.container.createComponent(componentFactory);
-            const dyynamicComponent = <ChildFrameComponent>this.container.createComponent(componentFactory).instance;
-            dyynamicComponent.Prop = JSON.parse(event.data);
+
+
             // this.components = [...this.components, dyynamicComponent];
             // this.myScrollContainer.nativeElement.scrollLeft = -10000;
             // window.document.body.scrollLeft = 1000;
