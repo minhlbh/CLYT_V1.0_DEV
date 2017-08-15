@@ -1,0 +1,139 @@
+.window-baithuoc-wr {
+    width: 950px;
+    height: 100%;
+    float: left;
+}
+
+.col {
+    width: 250px;
+    padding:64px 20px 25px 20px;
+    height: 100%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-right:1px solid #ccc;
+}
+
+.col:last-child {
+    border: none;
+}
+
+.col:nth-child(2) {
+    width: 199px;
+}
+
+.search-box-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px 0 20px ;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+
+
+
+.search-box-top .text-light {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.search-box-top hr {
+    margin-bottom: 0;
+}
+
+.text-light {
+    font-weight: 600;
+}
+
+.input-control {
+    display: inline-block;
+    min-height: 27px;
+    height: 27px;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+}
+
+.input-control .icon-search {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #777;
+}
+
+.input-control input {
+  width: 100%;
+  padding:3px 5px;
+  font-size: 13px;
+  padding-left:25px;
+  border: solid 1px #ccc;
+  height: 25px;
+}
+
+.ul {
+    height: 100%;
+    overflow: auto;
+    padding:0;
+    margin: 0 25px;
+}
+
+.ul li {
+    display: list-item;
+    list-style-type: none;
+
+}
+
+.ul li a {
+    color: #323232;
+    padding: 8px 5px;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 40px;
+    line-height: 25px;
+    border-bottom:1px solid #eee;
+}
+
+.list {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    display: list-item;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.list li a {
+    color: #323232;
+    padding: 8px 5px;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 40px;
+    line-height: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.list li a:hover, .list li a:focus {
+    background: #f5f5f5;
+    text-decoration:none;
+}
+
+.title-xs {
+    color: rgb(16, 165, 189) !important;
+    font-size: 12px;
+}

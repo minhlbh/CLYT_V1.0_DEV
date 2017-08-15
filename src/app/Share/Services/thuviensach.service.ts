@@ -67,4 +67,25 @@ export class ThuviensachService {
     }
 
 }
+export class Thuviensach {
 
+    constructor(
+        public id: number,
+        public Name: string,
+        public DanhGia: number,
+        public Anh: string,
+        public LinkDownload: string,
+        public TomTat: string,
+        public NhaXuatBan: string,
+        public ChungLoai: string,
+        public NguoiGhiChep: string,
+        public IdNguoiGhiChep: string,
+        public AvatarNguoiGhiChep: string,
+        public NguoiChiaSe: string,
+        public IdNguoiChiaSe: string,
+        public AvatarNguoiChiaSe: string,
+
+
+    ) { }
+
+}
