@@ -8,6 +8,7 @@ import { SettingService } from '../../Share/Services/setting.service';
 import { ChildFrameComponent } from './ChildFrame/ChildFrame.component';
 import { DOCUMENT } from '@angular/common';
 import { ChiTietBenhComponent } from '../Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
+import { element } from 'protractor';
 
 
 @Component({
@@ -65,6 +66,9 @@ export class FrameComponent implements OnInit, AfterViewInit {
             const messData = JSON.parse(event.data);
             let componentFactory = null;
             let dyynamicComponent = null;
+            // console.log(messData);
+            this.removeComponent(messData.ManHinh);
+
             // idBenh
             if (messData.LoaiLenh === 'Chi tiết bệnh') {
                 componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChiTietBenhComponent);
@@ -97,8 +101,16 @@ export class FrameComponent implements OnInit, AfterViewInit {
         }
     }
 
-    removeComponent() {
-        this.container.clear();
+    removeComponent(i: number) {
+        for (i; i <= this.container.length; i++) {
+            this.container.detach(i);
+        }
+        // console.log(this.container);
+        // this.container.forEach(element => {
+        //     console.log(element);
+        // });
+        // this.container.length
+        // this.container.clear();
         // const i = 3;
         // this.container.detach(i);
         // this.components.splice(i, 1);
