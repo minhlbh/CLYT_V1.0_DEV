@@ -1,11 +1,11 @@
-.window-baithuoc-wr {
-    width: 950px;
+.window-thuvien-wr {
+    width: 420x;
     height: 100%;
     float: left;
 }
 
 .col {
-    width: 250px;
+    width: 420px;
     padding:64px 20px 25px 20px;
     height: 100%;
     position: relative;
@@ -74,7 +74,9 @@
   border: solid 1px #ccc;
   height: 25px;
 }
-
+.full-size {
+    width: 100% !important;
+}
 .ul {
     height: 100%;
     overflow: auto;
