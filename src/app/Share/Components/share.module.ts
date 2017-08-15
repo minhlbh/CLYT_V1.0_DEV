@@ -15,6 +15,7 @@ import { LoadDuLieuYoutubeComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/
 import { ForumBarComponent } from '../../Apps/Tracuubenh/forum-bar/forum-bar.component';
 import { FacebookService } from 'ngx-facebook';
 import { FacebookModule } from 'ngx-facebook';
+import { AutoCompleteComponent } from './autoComplete/autoComplete.component';
 
 
 
@@ -34,8 +35,9 @@ import { FacebookModule } from 'ngx-facebook';
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
-
-    ],
+,
+    AutoCompleteComponent
+],
     exports: [
         WindowComponent,
         SafePipe,

@@ -1,0 +1,6 @@
+<div class="input-control text full-size" data-role="input">
+    <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+    <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
+    <ng2-completer [(ngModel)]="searchKey" [datasource]="dataService" [minSearchLength]="0">
+    </ng2-completer>
+</div>
