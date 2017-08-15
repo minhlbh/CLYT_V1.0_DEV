@@ -47,10 +47,10 @@
     position: relative;
     height: calc(100vh - 85px);
     overflow: hidden;
-    width: 1410px;
+    width: 1380px;
     float: left;
     border-right: 1px solid #ccc;
-    padding-right: 400px;
+    padding-right: 410px;
     background: #fff;
     padding-top: 34px;
 }
@@ -59,7 +59,7 @@
   float: left;
   width: 100%;
   position: relative;
-  padding: 0 25px 25px 25px;
+  padding: 0 20px 25px 20px;
   height: 100%;
   overflow: auto;
   border-right: 1px solid #ccc;
@@ -127,7 +127,7 @@
 }
 
 .bt-bar {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     width: 100%;
     float: left;
     padding: 0 20px;
@@ -252,6 +252,7 @@ share-button button:active {
 .title a{
     float: right;
     margin-top: 30px;
+    font-weight: 400;
 }
 .title h2{
     float: left;
@@ -281,12 +282,12 @@ share-button button:active {
 }
 
 .content-right{
-    width: 350px;
+    width: 325px;
     float: right;
-    padding-top: 12px;
+    padding-top: 13px;
      position: absolute;
     top: 0;
-    right: 10px; 
+    right: 20px; 
 }
 
 .title-row {
@@ -307,6 +308,7 @@ share-button button:active {
     margin-left: 0;
     padding: 0;
     line-height: 27px;
+    font-weight: 400;
 }
 
 a:hover {
@@ -344,9 +346,18 @@ border: none;
     padding: 0 5px ;
     margin: 3px 0;
     float: left;
+    font-weight: 400;
 }
 
 .content-right .title h2{
     max-width: 245px;
     margin-top:18px;
+}
+
+.content-wr p {
+    font-weight: 400;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
 }
