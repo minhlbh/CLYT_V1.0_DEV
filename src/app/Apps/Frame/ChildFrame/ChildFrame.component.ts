@@ -11,5 +11,7 @@ export class ChildFrameComponent implements OnInit {
 
     ngOnInit() {
     }
-
+    onLoadFrame() {
+        console.log('load frame');
+    }
 }

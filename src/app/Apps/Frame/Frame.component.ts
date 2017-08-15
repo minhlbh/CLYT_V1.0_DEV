@@ -59,7 +59,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
 
     receiveMessage(event: any) {
         if (event.origin === 'http://api.truongkhoa.com') {
-            this.container.clear();
+            // this.container.clear();
             // console.log(event);
             console.log(JSON.parse(event.data));
             const messData = JSON.parse(event.data);
@@ -104,5 +104,8 @@ export class FrameComponent implements OnInit, AfterViewInit {
         // this.components.splice(i, 1);
 
         // console.log(this.container);
+    }
+    onLoadFrame() {
+        console.log('load');
     }
 }
