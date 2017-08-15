@@ -14,7 +14,7 @@ export class LeftMenuComponent implements OnInit {
 
     menuElements: any;
     settings: any;
-    isToggled = false;
+    isToggled = true;
     constructor(
         private settingService: SettingService,
         private router: Router

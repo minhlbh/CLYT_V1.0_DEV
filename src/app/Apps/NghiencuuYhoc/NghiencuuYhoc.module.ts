@@ -1,8 +1,11 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { ShareModule } from '../../Share/Components/share.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { Routes, RouterModule } from '@angular/router';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { ResponsiveModule } from 'ng2-responsive';
 
 // components
 import { NghiencuuYhocComponent } from './NghiencuuYhoc.component';
@@ -10,7 +13,7 @@ import { DanhSachNghienCuuComponent } from './danh-sach-nghien-cuu/danh-sach-ngh
 
 // services
 import { NghiencuuService } from '../../Share/Services/nghiencuu.service';
-
+import { ShareModule } from '../../Share/Components/share.module';
 
 const routing: Routes = [
     { path: '', component: NghiencuuYhocComponent },

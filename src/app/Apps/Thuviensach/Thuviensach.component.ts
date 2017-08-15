@@ -3,14 +3,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { SettingService } from '../../Share/Services/setting.service';
 
 @Component({
-    selector: 'app-tracuubaithuoc',
-    templateUrl: './Tracuubaithuoc.component.html',
-    styleUrls: ['./Tracuubaithuoc.component.css']
+    selector: 'app-thuviensach',
+    templateUrl: './Thuviensach.component.html',
+    styleUrls: ['./Thuviensach.component.css']
 })
-export class TracuubaithuocComponent implements OnInit {
+export class ThuviensachComponent implements OnInit {
     menu: any;
     iconText: any;
     name: any;
+
 
     constructor(
         private settingService: SettingService,
@@ -18,8 +19,6 @@ export class TracuubaithuocComponent implements OnInit {
         private activatedroute: ActivatedRoute) {
 
     }
-
-
 
     ngOnInit() {
     }
