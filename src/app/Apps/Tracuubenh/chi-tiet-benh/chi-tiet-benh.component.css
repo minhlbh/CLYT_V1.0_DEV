@@ -247,15 +247,15 @@ share-button button:active {
     width: 100%;
     float: left;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 25px;;
 }
 .title a{
     float: right;
-    margin-top: 30px;
+    margin-top: 26px;
     font-weight: 400;
 }
 .title h2{
     float: left;
+    margin-top:10px;
 }
 .text-light{
     float: left;
@@ -325,17 +325,32 @@ a:hover {
     font-size: 15px;
     line-height: 22px;
     font-weight: 600;
+    max-width: 225px;
+    margin-top:10px;
 }
+
+
 .theodoisua{
     float: right;
 }
-.theodoisua a:last-child{
+.theodoisua a:first-child {
     border-right: 1px solid #ccc;
-
 } 
+
+.theodoisua a:last-child {
+   padding-right:0;
+}
+
 .theodoisua a{
-    margin: 20px 0 10px 0;
+    margin: 12px 0 10px 0;
     padding: 0 5px; 
+    float: left;
+}
+
+.folder {
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
 }
 
 .folder a:last-child {
@@ -344,16 +359,13 @@ border: none;
 
 .folder a{
     border-right: 1px solid #ccc;
-    padding: 0 5px ;
+    padding: 0 7px ;
     margin: 3px 0;
     float: left;
     font-weight: 400;
 }
 
-.content-right .title h2{
-    max-width: 245px;
-    margin-top:18px;
-}
+
 
 .content-wr p {
     font-weight: 400;
