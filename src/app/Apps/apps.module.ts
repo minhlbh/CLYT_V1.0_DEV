@@ -30,6 +30,8 @@ const routing: Routes = [
             { path: 'nghiencuuyhoc', loadChildren: './NghiencuuYhoc/NghiencuuYhoc.module#NghiencuuYhocModule' },
             { path: 'tracuuthietbiyte', loadChildren: './ThietbiYte/ThietbiYte.module#ThietbiYteModule' },
             { path: 'f/:route', loadChildren: './Frame/Frame.module#FrameModule' },
+            { path: 'phuongphapdieutri', loadChildren: './Phuongphapdieutri/phuongphapdieutri.module#PhuongphapdieutriModule' },
+            { path: 'thuvientailieu', loadChildren: './Thuviensach/Thuviensach.module#ThuviensachModule' },
             { path: '**', component: EmptyComponent },
         ],
     },

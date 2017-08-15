@@ -1,7 +1,25 @@
 <ng-container *ngIf="winInfo">
-    <div style="height:100%" [style.width]="winInfo.DoRong+'px'">
-        <app-window [name]="winInfo.Ten" [icon]="winInfo.IconText" url="/apps">
-            <iframe class="fstyle" style="border:none" width="100%" height="100%" [src]="winInfo.LinkIFrame | safe: 'resourceUrl'"></iframe>
-        </app-window>
+    <div class="fxs-blade-content-container" #scrollE>
+        <div class="fxs-block" [style.width]="winInfo.DoRong+'px'">
+            <!-- <button (click)="removeComponent()">xoa</button> -->
+            <app-window [name]="winInfo.Ten" [icon]="winInfo.IconText" url="/apps">
+                <iframe (load)="onLoadFrame()"  class="fstyle" style="border:none" width="100%" height="100%" [src]="winInfo.LinkIFrame | safe: 'resourceUrl'"
+                    #iframe></iframe>
+            </app-window>
+        </div>
+<!--
+        <ng-container>
+            <div class="fxs-block" [style.width]="winInfo.DoRong+'px'">
+                <app-window [name]="winInfo.Ten" [icon]="winInfo.IconText" url="/apps">
+                    <app-ChildFrame></app-ChildFrame>
+                </app-window>
+            </div>
+            <div class="fxs-block" [style.width]="winInfo.DoRong+'px'">
+                <app-window [name]="winInfo.Ten" [icon]="winInfo.IconText" url="/apps">
+                    <app-ChildFrame></app-ChildFrame>
+                </app-window>
+            </div>
+        </ng-container> -->
+        <ng-template #alertContainer></ng-template>
     </div>
 </ng-container>

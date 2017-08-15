@@ -1,5 +1,5 @@
-import { ThuocService } from '../../../Share/Services/thuoc.service';
-import { Thuoc } from '../../../Share/Services/thuoc.service';
+import { PhuongphapService } from '../../../Share/Services/phuongphap.service';
+import { Phuongphap } from '../../../Share/Services/phuongphap.service';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
@@ -11,11 +11,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
-    selector: 'app-danh-sach-thuoc',
-    templateUrl: './danh-sach-thuoc.component.html',
-    styleUrls: ['./danh-sach-thuoc.component.css']
+    selector: 'app-danh-sach-phuong-phap',
+    templateUrl: './danh-sach-phuong-phap.component.html',
+    styleUrls: ['./danh-sach-phuong-phap.component.css']
 })
-export class DanhSachThuocComponent implements OnInit {
+export class DanhSachPhuongPhapComponent implements OnInit {
     [x: string]: any;
     menu: any;
     idea: any;
@@ -24,10 +24,10 @@ export class DanhSachThuocComponent implements OnInit {
     iconText: any;
     name: any;
 
-    DsThuoc: Thuoc[];
+    DsPhuongPhap: Phuongphap[];
     TongSoLuong: number;
-    startThuoc: number;
-    endThuoc: number;
+    startPhuongphap: number;
+    endPhuongphap: number;
     searchUpdate: Subject<string> = new Subject<string>();
     searchKey = new FormControl('');
     public id: any;
@@ -36,15 +36,13 @@ export class DanhSachThuocComponent implements OnInit {
     public loading = false;
     public scrollLoading = false;
     public empty = false;
-    public showChiTiet = false;
     public loadMore = false;
     public isSearch = false;
     public page = 1;
 
-
-
     constructor(
-        private thuocService: ThuocService,
+
+        private phuongphapService: PhuongphapService,
         private router: Router,
         private settingService: SettingService,
         private activedroute: ActivatedRoute,
@@ -58,20 +56,19 @@ export class DanhSachThuocComponent implements OnInit {
             });
     }
 
-
     ngOnInit() {
-        // Hàm lấy dữ liệu thuốc
-        this.thuocService.getThuoc(1).subscribe(data => {
-            this.DsThuoc = data.DsThuoc.DsThuoc;
-            this.TongSoLuong = data.DsThuoc.TongSoLuong;
+        // Hàm lấy dữ liệu
+        this.phuongphapService.getPhuongphap(1).subscribe(data => {
+            this.DsPhuongPhap = data.DsPhuongPhap.DsPhuongPhap;
+            this.TongSoLuong = data.DsPhuongPhap.TongSoLuong;
 
-            this.startThuoc = 0;
-            this.endThuoc = 50;
+            this.startPhuongphap = 0;
+            this.endPhuongphap = 50;
         });
         this.menu = this.settingService.getMenu();
         for (let i = 0; i < this.menu.length; i++) {
             for (let x = 0; x < this.menu[i].items.length; x++) {
-                if (this.menu[i].items[x].url === 'tracuuthuoc') {
+                if (this.menu[i].items[x].url === 'phuongphapdieutri') {
                     this.name = this.menu[i].items[x].Ten;
                     this.iconText = this.menu[i].items[x].IconText;
                     this.idIdea = this.menu[i].items[x].Id;
@@ -80,20 +77,20 @@ export class DanhSachThuocComponent implements OnInit {
         }
         this.url = 'apps';
         this.idea = true;
-        this.urlIdea = 'tracuuthuoc';
+        this.urlIdea = 'phuongphapdieutri';
 
 
     }
-    // search thuốc
+    // search phương pháp
     doSearch(text: string) {
         // no keyword catched => return all
         if (text === '') {
             this.isSearch = false;
-            this.thuocService.getThuoc(1).subscribe(data => {
-                this.DsThuoc = data.DsThuoc.DsThuoc;
-                this.TongSoLuong = data.DsThuoc.TongSoLuong;
-                this.startThuoc = (this.page - 1) * 50;
-                this.endThuoc = this.page * 50;
+            this.phuongphapService.getPhuongphap(1).subscribe(data => {
+                this.DsPhuongPhap = data.DsPhuongPhap.DsPhuongPhap;
+                this.TongSoLuong = data.DsPhuongPhap.TongSoLuong;
+                this.startPhuongphap = (this.page - 1) * 50;
+                this.endPhuongphap = this.page * 50;
             });
             // return search results
         } else {
@@ -101,13 +98,12 @@ export class DanhSachThuocComponent implements OnInit {
             this.loading = true;
             this.searchUpdate.next(text);
             setTimeout(() => {
-                this.thuocService.getSearchThuoc(text).subscribe(data => {
-                    console.log(data);
-                    this.DsThuoc = data.DsThuoc.DsThuoc;
-                    this.TongSoLuong = data.DsThuoc.TongSoLuong;
-                    this.startThuoc = 0;
-                    this.endThuoc = data.DsThuoc.TongSoLuong;
-                    if (this.DsThuoc.length === 0 && this.TongSoLuong === 0) {
+                this.phuongphapService.getSearchPhuongphap(text).subscribe(data => {
+                    this.DsPhuongPhap = data.DsPhuongPhap.DsPhuongPhap;
+                    this.TongSoLuong = data.DsPhuongPhap.TongSoLuong;
+                    this.startPhuongphap = 0;
+                    this.endPhuongphap = data.DsPhuongPhap.TongSoLuong;
+                    if (this.DsPhuongPhap.length === 0 && this.TongSoLuong === 0) {
                         this.empty = true;
                     } else {
                         this.empty = false;
@@ -118,8 +114,8 @@ export class DanhSachThuocComponent implements OnInit {
         }
     }
     // navigate to chi-tiet-thuoc url with id
-    clickThuoc(id) {
-        this.router.navigate(['tracuuthuoc/', id]);
+    clickPhuongPhap(id) {
+        this.router.navigate(['phuongphapdieutri/', id]);
 
     }
     // load more onscroll
@@ -131,12 +127,12 @@ export class DanhSachThuocComponent implements OnInit {
         } else {
             this.loadMore = true;
             this.page++;
-            this.thuocService.getThuoc(this.page).subscribe(data => {
-                for (let i = 0; i < data.DsThuoc.DsThuoc.length; i++) {
-                    this.DsThuoc.push(data.DsThuoc.DsThuoc[i]);
+            this.phuongphapService.getPhuongphap(this.page).subscribe(data => {
+                for (let i = 0; i < data.DsPhuongPhap.DsPhuongPhap.length; i++) {
+                    this.DsPhuongPhap.push(data.DsPhuongPhap.DsPhuongPhap[i]);
 
                 }
-                this.endThuoc = this.page * 50;
+                this.endPhuongphap = this.page * 50;
                 this.loadMore = false;
                 this.loading = false;
                 // if (this.endThuoc > this.DsThuoc.length) {
@@ -149,12 +145,12 @@ export class DanhSachThuocComponent implements OnInit {
 
 
         }
-        if (this.endThuoc === this.DsThuoc.length) {
+        if (this.endPhuongphap === this.DsPhuongPhap.length) {
             this.scrollLoading = false;
         }
+
 
     }
 
 
 }
-
