@@ -102,9 +102,14 @@ export class FrameComponent implements OnInit, AfterViewInit {
     }
 
     removeComponent(i: number) {
-        for (i; i <= this.container.length; i++) {
-            this.container.detach(i);
+        if (i === 1) {
+            this.container.clear();
+        } else {
+            for (i; i <= this.container.length; i++) {
+                this.container.detach(i);
+            }
         }
+
         // console.log(this.container);
         // this.container.forEach(element => {
         //     console.log(element);
