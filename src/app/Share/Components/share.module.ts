@@ -35,9 +35,8 @@ import { AutoCompleteComponent } from './autoComplete/autoComplete.component';
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
-,
-    AutoCompleteComponent
-],
+        AutoCompleteComponent
+    ],
     exports: [
         WindowComponent,
         SafePipe,
