@@ -1,3 +1,97 @@
-<p>
-Danh sách thư viện works!
-</p>
+<div class="window-thuvien-wr">
+    <app-window [name]="name" [icon]="iconText" [url]="url" [idea]="idea" [urlIdea]="urlIdea" style="width:950px;">
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#Sach" aria-controls="profile" role="tab" data-toggle="tab">Thư viện Sách</a></li>
+                <li role="presentation"><a href="#Ghichep" aria-controls="messages" role="tab" data-toggle="tab">Ghi chép</a></li>
+                <li role="presentation"><a href="#Tailieu" aria-controls="settings" role="tab" data-toggle="tab">Tài liệu y khoa</a></li>
+            </ul>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="Sach" class="tab-pane active" id="Sach">
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên sách..." [formControl]="searchKey" type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số sách -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
+                0/{{TongSoLuongSach}} <b class="title-xs">sách</b>
+                </span>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let sach of DsSach">
+                            <a>
+                        <span class="title">{{sach.Name}}</span>
+                    </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div role="Ghichep" class="tab-pane" id="Ghichep">
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên ghi chép..." [formControl]="searchKey" type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số ghi chép -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
+                0/{{TongSoLuongGhiChep}} <b class="title-xs">ghi chép</b>
+                </span>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let ghichep of DsGhiChep">
+                            <a>
+                        <span class="title">{{ghichep.Name}}</span>
+                    </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+            <div role="Tailieu" class="tab-pane" id="Tailieu">
+
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên tài liệu..." [formControl]="searchKey" type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số tài liệu -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
+                0/{{TongSoLuongTaiLieu}} <b class="title-xs">tài liệu</b>
+                </span>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let tailieu of DsTaiLieu">
+                            <a>
+                        <span class="title">{{tailieu.Name}}</span>
+                    </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </app-window>
+</div>

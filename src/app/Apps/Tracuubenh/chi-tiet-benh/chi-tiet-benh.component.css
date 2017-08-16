@@ -47,20 +47,21 @@
     position: relative;
     height: calc(100vh - 85px);
     overflow: hidden;
-    width: 1020px;
+    width: 1380px;
     float: left;
     border-right: 1px solid #ccc;
-    padding-right: 390px;
+    padding-right: 410px;
     background: #fff;
+    padding-top: 34px;
 }
 
 .content-left {
   float: left;
   width: 100%;
   position: relative;
-  padding: 34px 25px 25px 25px;
+  padding: 0 20px 25px 20px;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   border-right: 1px solid #ccc;
 }
 
@@ -99,6 +100,7 @@
     overflow: auto;
     height: 100%;
     margin: 0;
+    padding-right:20px; 
 }
 
 .dl-horizontal {
@@ -128,11 +130,17 @@
     border-bottom: 1px solid #eee;
     width: 100%;
     float: left;
-    padding: 0 25px;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10000;
 }
 
 .bt-bar .bt-features:hover {
     text-decoration: none;
+    background: #f5f5f5;
 }
 
 .bt-bar .bt-features .icon {
@@ -183,7 +191,7 @@
 
 .bt-features:hover, .bt-features:focus {
   color: #333;
-  background: #f5f5f5;
+  background: #000;
 }
 
 .bt-features .glyphicon {
@@ -220,4 +228,149 @@
 }
 share-button button:active {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+/**************************************/
+
+.content-main {
+    width: 600px;
+    float: left;
+}
+.title{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #ccc;
+}
+.title a{
+    float: right;
+    margin-top: 26px;
+    font-weight: 400;
+}
+.title h2{
+    float: left;
+    margin-top:10px;
+}
+.text-light{
+    float: left;
+    width: 100%;
+}
+.tomtat{
+    float: left;
+    width: 100%;
+    height: 20px;
+    padding-bottom: 100px;
+}
+
+
+.common{
+    float: left;
+    width: 600px;
+}
+ .suatheodoi{
+    float: left;
+}
+.text-light{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-right{
+    width: 325px;
+    float: right;
+    padding-top: 13px;
+     position: relative;
+    top: 0;
+    right: 0; 
+}
+
+.title-row {
+    width: 100%;
+    float: left;
+    padding: 20px 0 10px 0;
+}
+
+.title-row .text-light {
+    width: auto;
+    padding: 0;
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-row .suatheodoi {
+    margin-left: 0;
+    padding: 0;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+
+.title-row .suatheodoi a:first-child {
+    border-right: 2px solid #ccc;
+    padding-right: 5px;
+}
+.content-right .title h2{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    max-width: 225px;
+    margin-top:10px;
+}
+
+
+.theodoisua{
+    float: right;
+}
+.theodoisua a:first-child {
+    border-right: 1px solid #ccc;
+} 
+
+.theodoisua a:last-child {
+   padding-right:0;
+}
+
+.theodoisua a{
+    margin: 12px 0 10px 0;
+    padding: 0 5px; 
+    float: left;
+}
+
+.folder {
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+}
+
+.folder a:last-child {
+border: none;
+}
+
+.folder a{
+    border-right: 1px solid #ccc;
+    padding: 0 7px ;
+    margin: 3px 0;
+    float: left;
+    font-weight: 400;
+}
+
+
+
+.content-wr p {
+    font-weight: 400;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
 }

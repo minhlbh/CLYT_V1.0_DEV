@@ -114,10 +114,10 @@ export class DanhSachPhuongPhapComponent implements OnInit {
         }
     }
     // navigate to chi-tiet-thuoc url with id
-    clickPhuongPhap(id) {
-        this.router.navigate(['phuongphapdieutri/', id]);
+    // clickPhuongPhap(id) {
+    //     this.router.navigate(['phuongphapdieutri/', id]);
 
-    }
+    // }
     // load more onscroll
     onScroll() {
         this.scrollLoading = true;
