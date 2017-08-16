@@ -36,11 +36,18 @@ export class FrameComponent implements OnInit, AfterViewInit {
         this.activatedroute.params.subscribe(pars => {
             this.url = pars['route'];
             const menus = this.settingService.getMenu();
+            // xoá khi các frame có đủ mess truyền lên
+            if (this.url !== 'quantricloudyte') {
+                this.loadding = false;
+            }
+
             menus.forEach(m => {
                 m.items.forEach(e => {
+                    console.log(e);
                     if (e.url === this.url) {
                         this.winInfo = e;
                     }
+
                 });
             });
         });
@@ -72,7 +79,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
 
             // idBenh
             if (messData.LoaiLenh === 'LoadFrame') {
-                if (messData.TrangThai === 'EndLoad'){
+                if (messData.TrangThai === 'EndLoad') {
                     this.loadding = false;
                 }
             } else if (messData.LoaiLenh === 'Chi tiết bệnh') {
