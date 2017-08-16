@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Ng2CompleterModule } from 'ng2-completer';
+import { FormsModule } from '@angular/forms';
+
 import { WindowComponent } from './window/window.component';
+
 import { SafePipe } from '../../Share/Pipes/safe.pipe';
 import { ChiTietBenhComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { LoadDuLieuImgComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
@@ -11,11 +15,15 @@ import { LoadDuLieuYoutubeComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/
 import { ForumBarComponent } from '../../Apps/Tracuubenh/forum-bar/forum-bar.component';
 import { FacebookService } from 'ngx-facebook';
 import { FacebookModule } from 'ngx-facebook';
+import { AutoCompleteComponent } from './autoComplete/autoComplete.component';
+
 
 
 @NgModule({
     imports: [
         CommonModule,
+        FormsModule,
+        Ng2CompleterModule,
         FacebookModule.forRoot()
     ],
     declarations: [
@@ -27,7 +35,7 @@ import { FacebookModule } from 'ngx-facebook';
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
-
+        AutoCompleteComponent
     ],
     exports: [
         WindowComponent,
