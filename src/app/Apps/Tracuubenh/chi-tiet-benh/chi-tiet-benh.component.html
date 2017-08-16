@@ -26,21 +26,18 @@
                 <div class="content-main">
                     <div class="content-box-main scrollbar-custom">
                         <div class="title">
-                            <h2>Bệnh Amip</h2>
-                            <a href="#">Sửa</a>
+                            <h2>{{ChiTietBenh?.TenBenh}}</h2>
+                            <a href="#" class="glyphicon glyphicon-pencil"></a>
 
                         </div>
                         <hr class="thin bg-grayLighter">
 
                         <div class="title-row">
                             <h2 class="text-light">Tóm tắt</h2>
-                            <div class="suatheodoi">
-                                <a href="#">Sửa</a>
-                                <a href="#">Theo dõi</a>
-                            </div>
+
                         </div>
 
-                        <p>Nguồn: Sổ tay lâm sàng chẩn đoán và điều trị (Tập 1 – Trang 807)</p>
+                        <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
 
                         <!-- load phần tử danh mục trong chi tiết bệnh -->
                         <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
@@ -48,10 +45,6 @@
                                 <h2 class="text-light">
                                     {{phantu?.Ten}}
                                 </h2>
-                                <div class="suatheodoi">
-                                    <a href="#">Sửa</a>
-                                    <a href="#">Theo dõi</a>
-                                </div>
                             </div>
                             <hr class="thin bg-grayLighter">
                             <!-- load dữ liệu chi tiết bệnh -->
@@ -92,10 +85,7 @@
                 <div class="content-right">
                     <div class="title">
                         <h2>Phương pháp chữa trị</h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
+
                     </div>
                     <div class="folder">
                         <a href="#">Cấy tế bào gốc</a>
@@ -108,73 +98,42 @@
                         <a href="#">Phương pháp điều trị 2</a>
                         <a href="#">Phương pháp điều trị 3</a>
                     </div>
-                    <div class="title">
+                    <div class="title" *ngIf="ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa">
                         <h2>Chuyên khoa</h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
                     </div>
                     <div class="folder">
-                        <a href="#">Chuyên khoa 1</a>
-                        <a href="#">Chuyên khoa 2</a>
-                        <a href="#">Chuyên khoa 3</a>
+                        <a> {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}} </a>
+
                     </div>
                     <div class="title">
                         <h2>Các chương trình y tế liên quan... (nghiên cứu, khám chữa)</h2>
                         <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
+
                         </div>
                     </div>
                     <div class="title">
                         <h2>Các trường hợp cụ thể (n case)</h2>
                         <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
+
                         </div>
                     </div>
                     <div class="title">
                         <h2>Trang thiết bị và dụng cụ y tế liên quan </h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
                     </div>
                     <div class="title">
                         <h2>Triệu chứng chính...</h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
                     </div>
                     <div class="title">
-                        <h2>Bệnh ICD10 liên quan</h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
+                        <h2>Các bệnh liên quan</h2>
                     </div>
                     <div class="title">
                         <h2>Các thuốc liên quan </h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
                     </div>
                     <div class="title">
                         <h2>Các sai lầm hay gặp... </h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
                     </div>
                     <div class="title">
                         <h2>Các bài thuốc vị thuốc liên quan </h2>
-                        <div class="theodoisua">
-                            <a href="#">Sửa</a>
-                            <a href="#">Theo dõi</a>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -49,6 +49,11 @@ export class Benh {
     constructor(
         public id: number,
         public Name: string,
+        public Ten: string,
+        public Loai: number,
+        public LoaiDuLieu: number,
+        public Dulieu: string,
+        public TieuDe: any,
 
     ) { }
 
