@@ -67,14 +67,13 @@
                                             <!-- Dang phat trien %: status -->
                                             <span>
                                                 <span *ngIf="item.TrangThaiHoatDong == 2">Hoạt động</span>
-                                                <span *ngIf="item.TrangThaiHoatDong == 1">Demo</span>
-                                                <span *ngIf="item.TrangThaiHoatDong == 0">Đang phát triển</span>
-                                                ...{{item.PhanTramTrangThai}}%
-                                                <span *ngIf="item.Status">: {{item.Status}}</span>
+                                            <span *ngIf="item.TrangThaiHoatDong == 1">Demo</span>
+                                            <span *ngIf="item.TrangThaiHoatDong == 0">Đang phát triển</span> ...{{item.PhanTramTrangThai}}%
+                                            <span *ngIf="item.Status">: {{item.Status}}</span>
                                             </span>
                                         </div>
                                         <!-- Loại ô 1 -->
-                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" >
+                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen">
                                             <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
                                                 <img src="{{item?.IconText}}">
                                             </div>
@@ -108,6 +107,19 @@
                                             <h4 class="title-label">
                                                 <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                {{item.Ten}}
                                             </h4>
+                                            <div class="carousel">
+                                                <ul class="slides">
+                                                    <li *ngFor="let image of item?.Images">
+                                                        <img src="{{image}}" alt="">
+                                                    </li>
+                                                    <li *ngFor="let image of item?.Images">
+                                                        <img src="{{image}}" alt="">
+                                                    </li>
+                                                    <li *ngFor="let image of item?.Images">
+                                                        <img src="{{image}}" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
                                                 <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
                                                     [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">

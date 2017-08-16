@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { environment } from '../../../environments/environment';
 import { DOCUMENT } from '@angular/platform-browser';
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class SettingService {
@@ -18,7 +18,9 @@ export class SettingService {
     ) { }
     getFirstConfig(): Observable<any> {
         // ...using get request
-        return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`)
+        // return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`)
+        return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=vienphoi.com`)
+
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
             // ...errors if any
