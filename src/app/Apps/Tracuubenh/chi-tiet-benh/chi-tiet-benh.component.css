@@ -100,7 +100,7 @@
     overflow: auto;
     height: 100%;
     margin: 0;
-    padding-right:20px; 
+    padding-right:20px;
 }
 
 .dl-horizontal {
@@ -282,12 +282,12 @@ share-button button:active {
 }
 
 .content-right{
-    width: 325px;
+    width: 310px;
     float: right;
-    padding-top: 13px;
+    padding-top: 11px;
      position: relative;
     top: 0;
-    right: 0; 
+    right: 0;
 }
 
 .title-row {
@@ -335,7 +335,7 @@ a:hover {
 }
 .theodoisua a:first-child {
     border-right: 1px solid #ccc;
-} 
+}
 
 .theodoisua a:last-child {
    padding-right:0;
@@ -343,7 +343,7 @@ a:hover {
 
 .theodoisua a{
     margin: 12px 0 10px 0;
-    padding: 0 5px; 
+    padding: 0 5px;
     float: left;
 }
 
