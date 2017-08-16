@@ -110,13 +110,16 @@
                                             <div class="carousel">
                                                 <ul class="slides">
                                                     <li *ngFor="let image of item?.Images">
-                                                        <img src="{{image}}" alt="">
+                                                        <div class="child" [ngStyle]="{'background-image': 'url('+ image +')'}"></div>
+
                                                     </li>
                                                     <li *ngFor="let image of item?.Images">
-                                                        <img src="{{image}}" alt="">
+                                                        <div class="child" [ngStyle]="{'background-image': 'url('+ image +')'}"></div>
+
                                                     </li>
                                                     <li *ngFor="let image of item?.Images">
-                                                        <img src="{{image}}" alt="">
+                                                        <div class="child" [ngStyle]="{'background-image': 'url('+ image +')'}"></div>
+
                                                     </li>
                                                 </ul>
                                             </div>

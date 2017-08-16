@@ -31,6 +31,14 @@ export class LeftMenuComponent implements OnInit {
         // this.toggled.emit(this.isToggled);
     }
 
+    goToApp(item) {
+        if (item.LinkIFrame) {
+            this.router.navigate(['/apps/f', item.url]);
+        }else if (item.TrangThaiHoatDong !== 0) {
+            this.router.navigate(['/apps', item.url]);
+        }
+    }
+
     // navigation(url: string) {
     //     console.log(url);
     //     this.router.navigate(['/apps', url]);

@@ -5,77 +5,141 @@
             <img src="assets/66.gif">
         </p>
         <!-- Start content left -->
+        <div class="bt-bar">
+            <a href="#" class="bt-features"><span class="fa fa-plus icon"></span>Tạo mới</a>
+            <a href="#" class="bt-features"><span class="fa fa-flag icon"></span>Report</a>
+            <a href="#" class="bt-features"><span class="fa fa-pencil-square icon"></span>Set trạng thái</a>
+            <a href="#" class="bt-features"><span class="fa fa-history icon"></span>Lịch sử sửa đổi</a>
+            <a href="#" class="bt-features"><span class="fa fa-book icon"></span>Bài viết</a>
+            <a href="#" class="bt-features"><span class="fa fa-star icon"></span>Theo dõi</a>
+            <!-- <share-button class="bt-social facebook" [button]="fbButton"></share-button>
+                    <share-button class="bt-social google" [button]="gPlusButton"></share-button> -->
+        </div>
         <div class="content-left" *ngIf="!loading">
 
-            <div class="content-header">
-                <div class="bt-bar">
-                    <a href="#" class="bt-features"><span class="fa fa-fw fa-calendar-check-o icon "></span>Đặt lịch khám</a>
-                    <a href="#" class="bt-features"><span class="fa fa-fw fa-user-md icon"></span>Phương pháp điều trị</a>
-                    <!-- <share-button class="bt-social facebook" [button]="fbButton"></share-button>
-                    <share-button class="bt-social google" [button]="gPlusButton"></share-button> -->
+
+
+
+
+            <div style="width:100%; float:left; overflow:auto; height:100%;">
+                <!-- load mô tả chi tiết bệnh -->
+                <div class="content-main">
+                    <div class="content-box-main scrollbar-custom">
+                        <div class="title">
+                            <h2>{{ChiTietBenh?.TenBenh}}</h2>
+                            <a href="#" class="glyphicon glyphicon-pencil"></a>
+
+                        </div>
+                        <hr class="thin bg-grayLighter">
+
+                        <div class="title-row">
+                            <h2 class="text-light">Tóm tắt</h2>
+
+                        </div>
+
+                        <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
+
+                        <!-- load phần tử danh mục trong chi tiết bệnh -->
+                        <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
+                            <div class="title-row">
+                                <h2 class="text-light">
+                                    {{phantu?.Ten}}
+                                </h2>
+                            </div>
+                            <hr class="thin bg-grayLighter">
+                            <!-- load dữ liệu chi tiết bệnh -->
+                            <div *ngFor="let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung">
+
+                                <!-- load dữ liệu text -->
+                                <div *ngIf="dulieu?.LoaiDuLieu == 1">
+                                    <app-load-du-lieu-text [dulieuText]="dulieu?.Dulieu">
+                                    </app-load-du-lieu-text>
+                                </div>
+
+                                <!-- load dữ liệu ảnh -->
+                                <div *ngIf="dulieu?.LoaiDuLieu == 2">
+                                    <app-load-du-lieu-img [dulieuImg]="dulieu?.Dulieu" [duLieuLinkAnh]="ChiTietBenh?.LinkAnh" [dulieuImgTieuDe]="dulieu?.TieuDe">
+                                    </app-load-du-lieu-img>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <!-- load dữ liệu clip Youtube -->
+                                <div *ngIf="dulieu?.LoaiDuLieu == 5">
+                                    <app-load-du-lieu-youtube [dulieuYoutube]="dulieu?.Dulieu" [dulieuYoutubeTieuDe]="dulieu?.TieuDe">
+                                    </app-load-du-lieu-youtube>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <!-- load dữ liệu link -->
+                                <div *ngIf="dulieu?.LoaiDuLieu == 10">
+                                    <app-load-du-lieu-link [dulieuLink]="dulieu?.Dulieu" [dulieuLinkTieuDe]="dulieu?.TieuDe">
+                                    </app-load-du-lieu-link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <div class="content-right">
+                    <div class="title">
+                        <h2>Phương pháp chữa trị</h2>
 
-                <hr class="thin bg-grayLighter">
-            </div>
-            <!-- load mô tả chi tiết bệnh -->
-            <div class="content-box-main scrollbar-custom">
-                <dl class="dl-horizontal">
-                    <dt>
-                        Chuyên khoa
-                    </dt>
-                    <dd>
-                        {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}}
-                    </dd>
-                    <dt>
-                        Tóm tắt
-                    </dt>
-                    <dd [innerHTML]="ChiTietBenh?.TomTat"></dd>
-                </dl>
-                <hr class="thin bg-grayLighter">
+                    </div>
+                    <div class="folder">
+                        <a href="#">Cấy tế bào gốc</a>
+                        <a href="#">Phương pháp điều trị 2</a>
+                        <a href="#">Phương pháp điều trị 3</a>
+                        <a href="#">Cấy tế bào gốc</a>
+                        <a href="#">Phương pháp điều trị 2</a>
+                        <a href="#">Phương pháp điều trị 3</a>
+                        <a href="#">Cấy tế bào gốc</a>
+                        <a href="#">Phương pháp điều trị 2</a>
+                        <a href="#">Phương pháp điều trị 3</a>
+                    </div>
+                    <div class="title" *ngIf="ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa">
+                        <h2>Chuyên khoa</h2>
+                    </div>
+                    <div class="folder">
+                        <a> {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}} </a>
 
-                <!-- load phần tử danh mục trong chi tiết bệnh -->
-                <div *ngFor="let phantu of ChiTietBenh?.DsPhanTu">
-                    <h2 class="text-light">
-                        {{phantu?.Ten}}
-                    </h2>
-                    <hr class="thin bg-grayLighter">
-                    <!-- load dữ liệu chi tiết bệnh -->
-                    <div *ngFor="let dulieu of phantu?.NoiDung?.DsDuLieuNoiDung">
+                    </div>
+                    <div class="title">
+                        <h2>Các chương trình y tế liên quan... (nghiên cứu, khám chữa)</h2>
+                        <div class="theodoisua">
 
-                        <!-- load dữ liệu text -->
-                        <div *ngIf="dulieu?.LoaiDuLieu == 1">
-                            <app-load-du-lieu-text [dulieuText]="dulieu?.Dulieu">
-                            </app-load-du-lieu-text>
                         </div>
+                    </div>
+                    <div class="title">
+                        <h2>Các trường hợp cụ thể (n case)</h2>
+                        <div class="theodoisua">
 
-                        <!-- load dữ liệu ảnh -->
-                        <div *ngIf="dulieu?.LoaiDuLieu == 2">
-                            <app-load-du-lieu-img [dulieuImg]="dulieu?.Dulieu" [duLieuLinkAnh]="ChiTietBenh?.LinkAnh" [dulieuImgTieuDe]="dulieu?.TieuDe">
-                            </app-load-du-lieu-img>
-                            <br/>
-                            <br/>
                         </div>
-
-                        <!-- load dữ liệu clip Youtube -->
-                        <div *ngIf="dulieu?.LoaiDuLieu == 5">
-                            <app-load-du-lieu-youtube [dulieuYoutube]="dulieu?.Dulieu" [dulieuYoutubeTieuDe]="dulieu?.TieuDe">
-                            </app-load-du-lieu-youtube>
-                            <br/>
-                            <br/>
-                        </div>
-
-                        <!-- load dữ liệu link -->
-                        <div *ngIf="dulieu?.LoaiDuLieu == 10">
-                            <app-load-du-lieu-link [dulieuLink]="dulieu?.Dulieu" [dulieuLinkTieuDe]="dulieu?.TieuDe">
-                            </app-load-du-lieu-link>
-                        </div>
+                    </div>
+                    <div class="title">
+                        <h2>Trang thiết bị và dụng cụ y tế liên quan </h2>
+                    </div>
+                    <div class="title">
+                        <h2>Triệu chứng chính...</h2>
+                    </div>
+                    <div class="title">
+                        <h2>Các bệnh liên quan</h2>
+                    </div>
+                    <div class="title">
+                        <h2>Các thuốc liên quan </h2>
+                    </div>
+                    <div class="title">
+                        <h2>Các sai lầm hay gặp... </h2>
+                    </div>
+                    <div class="title">
+                        <h2>Các bài thuốc vị thuốc liên quan </h2>
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- end content left -->
-         <app-forum-bar *ngIf="!loading">
+        <app-forum-bar *ngIf="!loading">
         </app-forum-bar>
     </div>
 </app-window>
