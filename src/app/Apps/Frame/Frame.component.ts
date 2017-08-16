@@ -24,6 +24,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
     components = [];
     url: string;
     screens: any;
+    loadding = true;
 
     constructor(
         private router: Router,
@@ -59,7 +60,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
 
 
     receiveMessage(event: any) {
-        if (event.origin === 'http://api.truongkhoa.com') {
+        if (event.origin === 'http://api.truongkhoa.com' || event.origin === 'http://admincloud.truongkhoa.com') {
             // this.container.clear();
             // console.log(event);
             console.log(JSON.parse(event.data));
@@ -67,10 +68,15 @@ export class FrameComponent implements OnInit, AfterViewInit {
             let componentFactory = null;
             let dyynamicComponent = null;
             // console.log(messData);
-            this.removeComponent(messData.ManHinh);
+
 
             // idBenh
-            if (messData.LoaiLenh === 'Chi tiết bệnh') {
+            if (messData.LoaiLenh === 'LoadFrame') {
+                if (messData.TrangThai === 'EndLoad'){
+                    this.loadding = false;
+                }
+            } else if (messData.LoaiLenh === 'Chi tiết bệnh') {
+                this.removeComponent(messData.ManHinh);
                 componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChiTietBenhComponent);
                 dyynamicComponent = <ChiTietBenhComponent>this.container.createComponent(componentFactory).instance;
                 dyynamicComponent.idBenh = messData.IdBenh;
@@ -78,6 +84,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
                     dyynamicComponent.idBenh = messData.TenBenh;
                 }
             } else {
+                this.removeComponent(messData.ManHinh);
                 componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChildFrameComponent);
                 dyynamicComponent = <ChildFrameComponent>this.container.createComponent(componentFactory).instance;
                 dyynamicComponent.Prop = messData;
