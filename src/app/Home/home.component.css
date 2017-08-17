@@ -23,8 +23,11 @@
 }
 
 @media screen and (max-height: 700px) {
+    .block {
+      height: 500px;
+    }
     .grid {
-        max-height: 435px;
+        /* max-height: 435px; */
         overflow: hidden;
     }
     .g-holiz {
