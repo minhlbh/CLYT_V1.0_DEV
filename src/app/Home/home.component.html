@@ -1,10 +1,10 @@
 <ng-container *showItDevice="['desktop', 'tablet']">
 
-    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
+    <div  class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
-                <img *ngIf="config?.Logo" width="50px" [src]="config?.Logo">
+                <img  *ngIf="config" width="50px" src="{{config?.Logo}}">
                 <span>{{config?.ThuongHieu}}</span>
             </div>
             <div class="controls">
@@ -41,7 +41,7 @@
         </div>
 
 
-        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+        <div *ngIf="config" fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
             <main class="fxs-panorama home">
                 <div class="fxs-blade-content-container" *ngIf="menus">
                     <ng-container *ngFor="let blocks of menus; let bl_i = index">
@@ -156,7 +156,7 @@
     <div class="m-body">
         <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
             <div *ngIf="!searchState" class="m-brand" fxLayout="row" fxLayoutAlign="start center">
-                <img class="m-brand-logo" [src]="config?.Logo">
+                <img class="m-brand-logo" src="{{config?.Logo}}">
                 <div>{{config?.ThuongHieu | uppercase}}</div>
             </div>
             <div *ngIf="searchState" class="input-control mb-home">
