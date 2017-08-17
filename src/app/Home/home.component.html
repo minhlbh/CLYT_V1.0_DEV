@@ -1,10 +1,10 @@
 <ng-container *showItDevice="['desktop', 'tablet']">
 
-    <div  class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
+    <div *ngIf="config" class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
-                <img  *ngIf="config" width="50px" src="{{config?.Logo}}">
+                <img   width="50px" src="{{config?.Logo}}">
                 <span>{{config?.ThuongHieu}}</span>
             </div>
             <div class="controls">
@@ -41,7 +41,7 @@
         </div>
 
 
-        <div *ngIf="config" fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
+        <div fxLayout="row" fxLayoutAlign="start stretch" class="fxs-portal-main">
             <main class="fxs-panorama home">
                 <div class="fxs-blade-content-container" *ngIf="menus">
                     <ng-container *ngFor="let blocks of menus; let bl_i = index">
