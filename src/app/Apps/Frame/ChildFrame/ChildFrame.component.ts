@@ -16,7 +16,7 @@ export class ChildFrameComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        this.loadding = true;
     }
     receiveMessage(event: any) {
         // console.log(event.origin);

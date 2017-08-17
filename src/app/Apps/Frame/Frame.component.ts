@@ -53,6 +53,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+        this.loadding = true;
     }
 
     ngAfterViewInit() {
