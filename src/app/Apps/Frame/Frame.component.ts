@@ -36,10 +36,6 @@ export class FrameComponent implements OnInit, AfterViewInit {
         this.activatedroute.params.subscribe(pars => {
             this.url = pars['route'];
             const menus = this.settingService.getMenu();
-            // xoá khi các frame có đủ mess truyền lên
-            // if (this.url !== 'quantricloudyte') {
-            //     this.loadding = false;
-            // }
 
             menus.forEach(m => {
                 m.items.forEach(e => {
@@ -64,17 +60,22 @@ export class FrameComponent implements OnInit, AfterViewInit {
 
     }
 
-
-
     receiveMessage(event: any) {
+        // console.log(event.origin);
+        try {
+            const messData = JSON.parse(event.data);
+            if (messData.LoaiLenh === 'CloseFrame') {
+                this.removeComponent(messData.ManHinh);
+            }
+        } catch (e) {
+
+        }
+
         if (event.origin === 'http://api.truongkhoa.com' || event.origin === 'http://admincloud.truongkhoa.com') {
-            // this.container.clear();
-            // console.log(event);
-            console.log(JSON.parse(event.data));
+
             const messData = JSON.parse(event.data);
             let componentFactory = null;
             let dyynamicComponent = null;
-            // console.log(messData);
 
 
             // idBenh
@@ -124,19 +125,6 @@ export class FrameComponent implements OnInit, AfterViewInit {
             }
         }
 
-        // console.log(this.container);
-        // this.container.forEach(element => {
-        //     console.log(element);
-        // });
-        // this.container.length
-        // this.container.clear();
-        // const i = 3;
-        // this.container.detach(i);
-        // this.components.splice(i, 1);
+    }
 
-        // console.log(this.container);
-    }
-    onLoadFrame() {
-        console.log('load');
-    }
 }
