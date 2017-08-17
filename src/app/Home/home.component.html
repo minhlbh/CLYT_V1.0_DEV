@@ -211,7 +211,7 @@
                 <div class="m-categories">
                     <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
                     <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
-                        <a [routerLink]="['/apps',item?.url]" class="m-item mb" fxLayout="row" fxLayoutAlign="start center">
+                        <a (click)="goToApp(item)" class="m-item mb" fxLayout="row" fxLayoutAlign="start center">
                             <div class="m-cover active" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
                             <div class="title-services">
                                 {{item?.Ten}}
