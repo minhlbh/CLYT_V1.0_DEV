@@ -509,7 +509,6 @@ a:hover {
 .input-control.mb-home {
     height: 35px;
     display: block;
-    vertical-align: middle;
     margin: 0 0 0 10px;
     position: relative;
     flex-basis: calc(100% - 100px);
