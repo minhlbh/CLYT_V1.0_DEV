@@ -39,7 +39,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
 
             menus.forEach(m => {
                 m.items.forEach(e => {
-                    console.log(e);
+                    // console.log(e);
                     if (e.url === this.url) {
                         this.winInfo = e;
                     }
@@ -77,7 +77,6 @@ export class FrameComponent implements OnInit, AfterViewInit {
             const messData = JSON.parse(event.data);
             let componentFactory = null;
             let dyynamicComponent = null;
-
 
             // idBenh
             if (messData.LoaiLenh === 'LoadFrame') {
