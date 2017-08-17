@@ -37,9 +37,9 @@ export class FrameComponent implements OnInit, AfterViewInit {
             this.url = pars['route'];
             const menus = this.settingService.getMenu();
             // xoá khi các frame có đủ mess truyền lên
-            if (this.url !== 'quantricloudyte') {
-                this.loadding = false;
-            }
+            // if (this.url !== 'quantricloudyte') {
+            //     this.loadding = false;
+            // }
 
             menus.forEach(m => {
                 m.items.forEach(e => {
