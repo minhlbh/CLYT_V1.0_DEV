@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/Rx';
@@ -10,7 +10,6 @@ export class AutoCompleteService {
         private http: Http
     ) { }
     private baseUrl = `${environment.apiUrl}`;
-
     autoComplete(key: String, apiUrl: string) {
         const autoCompleteUrl = `${this.baseUrl}${apiUrl}?Trang=1&searchTerm=${key}&soluongmoitrang=15`;
         return this.http.get(autoCompleteUrl)

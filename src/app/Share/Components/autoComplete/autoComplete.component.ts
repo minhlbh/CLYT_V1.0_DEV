@@ -1,5 +1,7 @@
 import {CompleterData, CompleterService} from 'ng2-completer';
 import { Component, OnInit } from '@angular/core';
+import { AutoCompleteService } from '../../Services/autoComplete.service';
+
 
 @Component({
     selector: 'app-autocomplete',
@@ -14,6 +16,10 @@ export class AutoCompleteComponent implements OnInit {
         this.dataService = completerService.local(this.searchData, 'color', 'color');
     }
 
-    ngOnInit() { }
+    ngOnInit() {
 
-}
+
+        }
+
+        }
+
