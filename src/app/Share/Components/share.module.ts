@@ -20,7 +20,8 @@ import { SettingService } from '../Services/setting.service';
 
 import { AutoCompleteComponent } from './autoComplete/autoComplete.component';
 import { AutoCompleteService } from '../Services/autoComplete.service';
-
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/Rx';
 
 
 @NgModule({

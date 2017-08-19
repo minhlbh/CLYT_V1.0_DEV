@@ -18,6 +18,7 @@ export class AutoCompleteComponent implements OnInit {
     @Input() apiUrl;
 
     protected dataService: CompleterData;
+    protected dataSource;
     public isSearch = false;
     public empty = false;
     public loading = false;
@@ -37,10 +38,13 @@ export class AutoCompleteComponent implements OnInit {
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
-                this.doSearchAuto(event);
+                this.doSearchAuto(event).subscribe((data) => {
+                    console.log(data);
+                });
+
                 // this.clickThuoc(null);
             });
-            this.dataService = completerService.local(this.DsBenh, 'Name', 'Name');
+        this.dataService = completerService.local(this.DsBenh, 'Name', 'Name');
     }
 
     ngOnInit() {
@@ -56,11 +60,7 @@ export class AutoCompleteComponent implements OnInit {
             this.isSearch = true;
             this.loading = true;
             this.searchUpdate.next(text);
-            console.log(text);
-
             this.AutoCompleteService.autoComplete(text, this.apiUrl).subscribe(data => {
-                console.log(data);
-
                 this.DsBenh = data.DsBenh;
                 this.TongSoLuong = data.TongSoLuong;
                 this.endBenh = data.TongSoLuong;
@@ -72,6 +72,8 @@ export class AutoCompleteComponent implements OnInit {
                 this.loading = false;
             });
         }
+        const returnData = JSON.parse(this.DsBenh.toString());
+        return returnData;
     }
 }
 
