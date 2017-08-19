@@ -1,5 +1,4 @@
-import { ThuocService } from '../../../Share/Services/thuoc.service';
-import { Thuoc } from '../../../Share/Services/thuoc.service';
+import { ThuocService, Thuoc } from '../../../Share/Services/thuoc.service';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';

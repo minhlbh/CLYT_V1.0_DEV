@@ -26,6 +26,7 @@ export class DanhSachBenhComponent implements OnInit {
     elements: any;
     idea: any;
     urlIdea: any;
+    apiUrl: any;
     idIdea: any;
     autoComplete: any;
     // lấy từ benh.service
@@ -75,6 +76,7 @@ export class DanhSachBenhComponent implements OnInit {
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuubenh';
+        this.apiUrl = 'Benh_List';
 
     }
     // navigate to chi-tiet-benh url with id
