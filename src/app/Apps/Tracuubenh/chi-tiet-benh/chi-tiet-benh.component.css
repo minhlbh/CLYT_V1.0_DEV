@@ -247,12 +247,21 @@ share-button button:active {
     width: 100%;
     float: left;
     border-bottom: 1px solid #ccc;
+    position: relative;
+    padding-right:30px;
 }
 .title a{
     float: right;
     margin-top: 26px;
     font-weight: 400;
 }
+
+.title a.glyphicon {
+    position: absolute;
+    right:0;
+    top: 0;
+}
+
 .title h2{
     float: left;
     margin-top:10px;
