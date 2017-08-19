@@ -2,21 +2,31 @@
 <app-window [icon]="iconText" [idea]="true" [idIdea]="idIdea" [urlIdea]="urlIdea" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']">
     <div class="list-left-wr">
         <!-- searchbox -->
-        <div class="search-box-top">
-            <div class="input-control text full-size" data-role="input">
+        <!-- <div class="search-box-top">
+            <div class="input-control text full-size" data-role="input"  >
+
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
                 <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
-            </div>
 
-            <!-- đếm số bệnh -->
-            <div style="padding: 5px 0 0 0;">
-                <span style="font-size: 11px; color: #888; float: right;">
+
+            </div> -->
+        <!-- Ô search -->
+        <div  class="search-box-top">
+            <app-autocomplete>
+                <div class="input-control text full-size" data-role="input">
+
+                </div>
+            </app-autocomplete>
+        </div>
+        <!-- đếm số bệnh -->
+        <div style="padding: 0px 20px 0 0;margin-top: -20px;">
+            <span style="font-size: 11px; color: #888; float: right;">
                 {{endBenh}}/{{TongSoLuong}} bệnh
                 </span>
-            </div>
-
-            <hr class="thin bg-grayLighter">
         </div>
+
+        <hr class="thin bg-grayLighter">
+
         <!-- loading gif -->
         <div class="text-center">
             <p class="lead" *ngIf="loading">

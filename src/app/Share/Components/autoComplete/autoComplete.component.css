@@ -1,3 +1,28 @@
+.search-box-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px 0 20px ;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+
+
+
+.search-box-top .text-light {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.search-box-top hr {
+    margin-bottom: 0;
+}
+
+.text-light {
+    font-weight: 600;
+}
+
 .input-control {
     display: inline-block;
     min-height: 27px;

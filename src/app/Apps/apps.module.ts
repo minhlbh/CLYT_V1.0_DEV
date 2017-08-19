@@ -2,9 +2,8 @@ import { NgModule, ModuleWithProviders, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgControl } from '@angular/forms';
 import { ResponsiveModule } from 'ng2-responsive';
-
 
 // components
 import { LayoutComponent } from './Layout/Layout.component';
@@ -15,7 +14,6 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 // service
 import { SettingService } from '../Share/Services/setting.service';
 import { ShareModule } from '../Share/Components/share.module';
-
 
 const routing: Routes = [
     {
@@ -46,16 +44,19 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         Routing,
         FormsModule,
         FlexLayoutModule,
-        ShareModule
+        ShareModule,
+
     ],
     declarations: [
         LayoutComponent,
         NavComponent,
         EmptyComponent,
         LeftMenuComponent,
+
     ],
     providers: [
-        SettingService
+        SettingService,
+
     ]
 })
 export class AppsModule { }

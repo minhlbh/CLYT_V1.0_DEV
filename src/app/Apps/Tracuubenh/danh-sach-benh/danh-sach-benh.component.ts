@@ -11,6 +11,8 @@ import 'rxjs/add/operator/distinctUntilChanged';
 
 
 import { ActivatedRoute, Router } from '@angular/router';
+import { AutoCompleteComponent } from '../../../Share/Components/autoComplete/autoComplete.component';
+import { AutoCompleteService } from '../../../Share/Services/autoComplete.service';
 
 @Component({
     selector: 'app-danh-sach-benh',
@@ -25,6 +27,7 @@ export class DanhSachBenhComponent implements OnInit {
     idea: any;
     urlIdea: any;
     idIdea: any;
+    autoComplete: any;
     // lấy từ benh.service
     DsBenh: Benh[];
     TongSoLuong: number;
@@ -46,14 +49,9 @@ export class DanhSachBenhComponent implements OnInit {
         private benhService: BenhService,
         private router: Router,
         private activedroute: ActivatedRoute,
-        private settingService: SettingService
+        private settingService: SettingService,
+        private AutoCompleteService: AutoCompleteService,
     ) {
-        this.searchKey.valueChanges
-            .debounceTime(1000)
-            .subscribe((event) => {
-                this.doSearch(event);
-                // this.clickBenh(null);
-            });
     }
 
     ngOnInit() {
@@ -77,38 +75,7 @@ export class DanhSachBenhComponent implements OnInit {
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuubenh';
-    }
-    // search bệnh
-    doSearch(text: string) {
-        // no keyword catched => return all
-        if (text === '') {
-            this.isSearch = false;
-            this.benhService.getBenh(1).subscribe(data => {
-                this.DsBenh = data.DsBenh;
-                this.TongSoLuong = data.TongSoLuong;
-                this.startBenh = (this.page - 1) * 50;
-                this.endBenh = this.page * 50;
-            });
-            // return search results
-        } else {
-            this.isSearch = true;
-            this.loading = true;
-            this.searchUpdate.next(text);
-            setTimeout(() => {
-                this.benhService.getSearchBenh(text).subscribe(data => {
-                    this.DsBenh = data.DsBenh;
-                    this.TongSoLuong = data.TongSoLuong;
-                    this.startBenh = 0;
-                    this.endBenh = data.TongSoLuong;
-                    if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
-                        this.empty = true;
-                    } else {
-                        this.empty = false;
-                    }
-                    this.loading = false;
-                });
-            }, 1500);
-        }
+
     }
     // navigate to chi-tiet-benh url with id
     clickBenh(id) {
