@@ -7,6 +7,7 @@ import { ChildFrameComponent } from './ChildFrame/ChildFrame.component';
 import { ChiTietBenhComponent} from '../Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { BenhService } from '../../Share/Services/benh.service';
 import { ForumService } from '../../Share/Services/forum.service';
+import { WinframeComponent } from './winframe/winframe.component';
 
 const routing: Routes = [
     {
@@ -26,8 +27,9 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         declarations: [
             FrameComponent,
             ChildFrameComponent,
-            // ChiTietBenhComponent
-        ],
+            // ChiTietBenhComponent,
+    WinframeComponent
+],
         providers: [
             BenhService,
             ForumService

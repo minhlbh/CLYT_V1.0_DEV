@@ -1,9 +1,10 @@
+a:hover {
+    text-decoration: none;
+}
+
 .block {
-    flex: 0 0 auto;
-    height: 100%;
-    overflow-y: hidden;
-    margin: 10px;
-    margin-left: 80px;
+    margin: 0 0 0 80px;
+    animation: fade-in-right 1s ease-out forwards;
 }
 
 .block.fixwidth {
@@ -17,6 +18,7 @@
     grid-auto-rows: 145px;
     grid-auto-columns: 145px;
     grid-auto-flow: row dense;
+
 }
 
 @media screen and (max-height: 700px) {
@@ -27,6 +29,8 @@
     .g-holiz {
         grid-template-rows: repeat(3, 145px);
         grid-auto-flow: column dense;
+        width: auto;
+        float: left;
     }
 }
 
@@ -34,6 +38,8 @@
     .g-holiz {
         grid-template-rows: repeat(4, 145px);
         grid-auto-flow: column dense;
+        width: auto;
+        float: left;
     }
 }
 
@@ -56,9 +62,39 @@
 .grid-item {
     padding: 5px;
     float: left;
-    animation: scale .25s ease-out;
+    animation: scale .25s ease-out forwards;
     position: relative;
+    transform: scale(0.0);
+    opacity: 0;
+    animation-delay: 0.1s;
 }
+.grid-item:nth-child(2){
+    animation-delay: 0.3s;
+}
+.grid-item:nth-child(1){
+    animation-delay: 0.5s;
+}
+.grid-item:nth-child(3){
+    animation-delay: 0.2s;
+}
+.grid-item:nth-child(4){
+    animation-delay: 0.35s;
+}
+.grid-item:nth-child(5){
+    animation-delay: 0.6s;
+}
+.grid-item:nth-child(6){
+    animation-delay: 0.7s;
+}
+.grid-item:nth-child(8){
+    animation-delay: 0.267s;
+}
+.grid-item:nth-child(9){
+    animation-delay: 0.387s;
+}
+
+
+
 
 .grid-item-w2 .title-label {
     font-size: 18px;
@@ -92,11 +128,25 @@
     outline: #fff solid 3px;
 }
 
+@keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
 @keyframes scale {
     0% {
         transform: scale(0.0);
+        opacity: 0;
     }
     100% {
+        opacity: 1;
         transform: scale(1.0);
     }
 }
@@ -460,7 +510,6 @@
 .input-control.mb-home {
     height: 35px;
     display: block;
-    vertical-align: middle;
     margin: 0 0 0 10px;
     position: relative;
     flex-basis: calc(100% - 100px);
@@ -715,4 +764,20 @@
     87.5% { left:-100%; }
     98.5% { left:-100%; }
     100%  { left:-0%; }
+}
+
+.bottom {
+    float: left;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+.header {
+    width: 1000px;
+    position: absolute;
+}
+
+.search-home {
+    width: 200px;
+}
 }

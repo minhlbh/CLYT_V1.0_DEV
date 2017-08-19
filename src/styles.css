@@ -116,10 +116,12 @@ body {
     flex: 0 0 auto;
     background-color: #eee;
     width: 320px;
+    height: 100%;
 }
 
 .fxs-block.large {
     flex: 0 0 auto;
     background-color: #eee;
+    height: 100%;
     width: 1350px;
 }

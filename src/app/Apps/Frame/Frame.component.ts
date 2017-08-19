@@ -24,6 +24,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
     components = [];
     url: string;
     screens: any;
+    loadding = true;
 
     constructor(
         private router: Router,
@@ -35,11 +36,14 @@ export class FrameComponent implements OnInit, AfterViewInit {
         this.activatedroute.params.subscribe(pars => {
             this.url = pars['route'];
             const menus = this.settingService.getMenu();
+
             menus.forEach(m => {
                 m.items.forEach(e => {
+                    console.log(e);
                     if (e.url === this.url) {
                         this.winInfo = e;
                     }
+
                 });
             });
         });
@@ -49,6 +53,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+        this.loadding = true;
     }
 
     ngAfterViewInit() {
@@ -56,21 +61,31 @@ export class FrameComponent implements OnInit, AfterViewInit {
 
     }
 
-
-
     receiveMessage(event: any) {
-        if (event.origin === 'http://api.truongkhoa.com') {
-            // this.container.clear();
-            // console.log(event);
-            console.log(JSON.parse(event.data));
+        // console.log(event.origin);
+        try {
+            const messData = JSON.parse(event.data);
+            if (messData.LoaiLenh === 'CloseFrame') {
+                this.removeComponent(messData.ManHinh);
+            }
+        } catch (e) {
+
+        }
+
+        if (event.origin === 'http://api.truongkhoa.com' || event.origin === 'http://admincloud.truongkhoa.com') {
+
             const messData = JSON.parse(event.data);
             let componentFactory = null;
             let dyynamicComponent = null;
-            // console.log(messData);
-            this.removeComponent(messData.ManHinh);
+
 
             // idBenh
-            if (messData.LoaiLenh === 'Chi tiết bệnh') {
+            if (messData.LoaiLenh === 'LoadFrame') {
+                if (messData.TrangThai === 'EndLoad') {
+                    this.loadding = false;
+                }
+            } else if (messData.LoaiLenh === 'Chi tiết bệnh') {
+                this.removeComponent(messData.ManHinh);
                 componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChiTietBenhComponent);
                 dyynamicComponent = <ChiTietBenhComponent>this.container.createComponent(componentFactory).instance;
                 dyynamicComponent.idBenh = messData.IdBenh;
@@ -78,6 +93,7 @@ export class FrameComponent implements OnInit, AfterViewInit {
                     dyynamicComponent.idBenh = messData.TenBenh;
                 }
             } else {
+                this.removeComponent(messData.ManHinh);
                 componentFactory = this.componentFactoryResolver.resolveComponentFactory(ChildFrameComponent);
                 dyynamicComponent = <ChildFrameComponent>this.container.createComponent(componentFactory).instance;
                 dyynamicComponent.Prop = messData;
@@ -110,19 +126,6 @@ export class FrameComponent implements OnInit, AfterViewInit {
             }
         }
 
-        // console.log(this.container);
-        // this.container.forEach(element => {
-        //     console.log(element);
-        // });
-        // this.container.length
-        // this.container.clear();
-        // const i = 3;
-        // this.container.detach(i);
-        // this.components.splice(i, 1);
+    }
 
-        // console.log(this.container);
-    }
-    onLoadFrame() {
-        console.log('load');
-    }
 }
