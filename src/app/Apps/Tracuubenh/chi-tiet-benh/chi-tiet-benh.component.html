@@ -10,10 +10,10 @@
             <a class="bt-features disable"><span class="fa fa-flag icon"></span>Report</a>
             <a class="bt-features disable"><span class="fa fa-pencil-square icon"></span>Set trạng thái</a>
             <a class="bt-features disable"><span class="fa fa-history icon"></span>Lịch sử sửa đổi</a>
-            <!-- <a href="#" class="bt-features"><span class="fa fa-book icon"></span>Bài viết</a> -->
+            <a href="#" class="bt-features"><span class="fa fa-book icon"></span>Bài viết</a>
             <a class="bt-features disable"><span class="fa fa-star icon"></span>Theo dõi</a>
-            <!-- <share-button class="bt-social facebook" [button]="fbButton"></share-button>
-                    <share-button class="bt-social google" [button]="gPlusButton"></share-button> -->
+            <share-button class="bt-social facebook" [button]="fbButton"></share-button>
+            <share-button class="bt-social google" [button]="gPlusButton"></share-button>
         </div>
         <div class="content-left" *ngIf="!loading">
 
@@ -85,25 +85,12 @@
                 <div class="content-right">
                     <div class="title">
                         <h2>Phương pháp chữa trị</h2>
-
-                    </div>
-                    <div class="folder">
-                        <a href="#">Cấy tế bào gốc</a>
-                        <a href="#">Phương pháp điều trị 2</a>
-                        <a href="#">Phương pháp điều trị 3</a>
-                        <a href="#">Cấy tế bào gốc</a>
-                        <a href="#">Phương pháp điều trị 2</a>
-                        <a href="#">Phương pháp điều trị 3</a>
-                        <a href="#">Cấy tế bào gốc</a>
-                        <a href="#">Phương pháp điều trị 2</a>
-                        <a href="#">Phương pháp điều trị 3</a>
                     </div>
                     <div class="title" *ngIf="ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa">
                         <h2>Chuyên khoa</h2>
                     </div>
                     <div class="folder">
                         <a> {{ChiTietBenh?.DsChuyenKhoa[0]?.TenChuyenKhoa}} </a>
-
                     </div>
                     <div class="title">
                         <h2>Các chương trình y tế liên quan... (nghiên cứu, khám chữa)</h2>

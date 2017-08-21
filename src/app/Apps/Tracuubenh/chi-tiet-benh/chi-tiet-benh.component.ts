@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BenhService } from '../../../Share/Services/benh.service';
-import { ShareButton, ShareProvider } from 'ngx-sharebuttons';
+import { ShareButton, ShareProvider, ShareButtonsModule } from 'ngx-sharebuttons';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,8 +15,8 @@ export class ChiTietBenhComponent implements OnInit {
     // @Input() set tenBenh(tenBenh: string){
 
     // }
-    gPlusButton;
-    fbButton;
+    gPlusButton: any;
+    fbButton: any;
     loading = true;
     id: string;
     ChiTietBenh: any;
