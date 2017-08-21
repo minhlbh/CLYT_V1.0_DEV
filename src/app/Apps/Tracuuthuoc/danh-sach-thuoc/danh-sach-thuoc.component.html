@@ -57,7 +57,7 @@
 
         <div class="drugs-list" infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="200" (scrolled)="onScroll()"
             [scrollWindow]="false">
-            <div class="scrollbar-custom list" >
+            <div class="scrollbar-custom list">
                 <div *ngIf="!loading">
                     <div class="text-center" *ngIf="empty">
                         <p>
@@ -98,7 +98,7 @@
                             </div>
 
                         </a>
-
+                        <a style="text-align: center; width: 100%; float: left;" *ngIf="loadingGif"><img src="assets/66.gif"></a>
                     </div>
                 </div>
             </div>

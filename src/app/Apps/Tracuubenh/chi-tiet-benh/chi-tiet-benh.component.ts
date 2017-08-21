@@ -27,7 +27,6 @@ export class ChiTietBenhComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        // ShareButton(button name [provider], template, classes)
         this.fbButton = new ShareButton(
             ShareProvider.FACEBOOK,
             '<i class="fa fa-facebook"></i>',

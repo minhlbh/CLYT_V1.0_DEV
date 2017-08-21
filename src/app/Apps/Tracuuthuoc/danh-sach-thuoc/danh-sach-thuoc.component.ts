@@ -32,7 +32,7 @@ export class DanhSachThuocComponent implements OnInit {
     searchKey = new FormControl('');
     public id: any;
     public url: any;
-
+    public loadingGif = false;
     public loading = false;
     public scrollLoading = false;
     public empty = false;
@@ -125,11 +125,13 @@ export class DanhSachThuocComponent implements OnInit {
     // load more onscroll
     onScroll() {
         this.scrollLoading = true;
+        this.loadingGif = true;
 
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
         } else {
             this.loadMore = true;
+            this.loadingGif = true;
             this.page++;
             this.thuocService.getThuoc(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsThuoc.DsThuoc.length; i++) {
