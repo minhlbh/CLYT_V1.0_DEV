@@ -38,13 +38,12 @@ export class AutoCompleteComponent implements OnInit {
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
-                this.doSearchAuto(event).subscribe((data) => {
-                    console.log(data);
-                });
+                this.doSearchAuto(event);
+                console.log(this.doSearchAuto(event));
 
-                // this.clickThuoc(null);
             });
-        this.dataService = completerService.local(this.DsBenh, 'Name', 'Name');
+
+
     }
 
     ngOnInit() {
@@ -62,8 +61,11 @@ export class AutoCompleteComponent implements OnInit {
             this.searchUpdate.next(text);
             this.AutoCompleteService.autoComplete(text, this.apiUrl).subscribe(data => {
                 this.DsBenh = data.DsBenh;
+                console.log(this.DsBenh);
                 this.TongSoLuong = data.TongSoLuong;
                 this.endBenh = data.TongSoLuong;
+                this.dataService = this.completerService.local(this.DsBenh, 'Name', 'Name');
+                console.log(this.dataService);
                 if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
                     this.empty = true;
                 } else {
@@ -72,7 +74,7 @@ export class AutoCompleteComponent implements OnInit {
                 this.loading = false;
             });
         }
-        const returnData = JSON.parse(this.DsBenh.toString());
+        const returnData = JSON.stringify(this.dataService);
         return returnData;
     }
 }
