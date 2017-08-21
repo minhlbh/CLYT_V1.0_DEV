@@ -146,7 +146,7 @@
 .bt-bar .bt-features .icon {
     font-size: 18px;
     position: absolute;
-    top: 7px;
+    top: 8px;
     left: 10px;
 }
 /* nội dung chi tiết bệnh */
@@ -189,6 +189,11 @@
   position: relative;
 }
 
+.bt-features.share {
+    border:none;
+    background: none;
+}
+
 .bt-features:hover, .bt-features:focus {
   color: #333;
   background: #000;
@@ -197,7 +202,7 @@
 .bt-features .glyphicon {
   font-size: 18px;
   position: absolute;
-  top: 7px;
+  top: 8px;
   left: 10px;
 }
 

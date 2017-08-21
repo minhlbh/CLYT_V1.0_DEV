@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { WindowComponent } from './window/window.component';
 
+
 import { SafePipe } from '../../Share/Pipes/safe.pipe';
 import { ChiTietBenhComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { LoadDuLieuImgComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
@@ -15,13 +16,16 @@ import { LoadDuLieuYoutubeComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/
 import { ForumBarComponent } from '../../Apps/Tracuubenh/forum-bar/forum-bar.component';
 import { FacebookService } from 'ngx-facebook';
 import { FacebookModule } from 'ngx-facebook';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+
 
 
 
 @NgModule({
     imports: [
         CommonModule,
-        FacebookModule.forRoot()
+        FacebookModule.forRoot(),
+        ShareButtonsModule,
     ],
     declarations: [
         WindowComponent,

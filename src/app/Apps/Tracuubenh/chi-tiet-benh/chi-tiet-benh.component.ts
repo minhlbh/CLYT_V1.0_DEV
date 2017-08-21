@@ -28,16 +28,16 @@ export class ChiTietBenhComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.fbButton = new ShareButton(
-            ShareProvider.FACEBOOK,
-            '<i class="fa fa-facebook"></i>',
-            'facebook'
-        );
-        this.gPlusButton = new ShareButton(
-            ShareProvider.GOOGLEPLUS,
-            '<i class="fa fa-google-plus"></i>',
-            'google'
-        );
+        // this.fbButton = new ShareButton(
+        //     ShareProvider.FACEBOOK,
+        //     '<i class="fa fa-facebook"></i>',
+        //     'facebook'
+        // );
+        // this.gPlusButton = new ShareButton(
+        //     ShareProvider.GOOGLEPLUS,
+        //     '<i class="fa fa-google-plus"></i>',
+        //     'google'
+        // );
         this.url = 'apps/tracuubenh'; // (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
     }
 
