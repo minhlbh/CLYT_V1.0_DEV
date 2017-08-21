@@ -41,6 +41,7 @@ export class DanhSachBenhComponent implements OnInit {
     public isSearch = false;
     public page = 1;
     public url: any;
+    public loadingGif = false;
     constructor(
         // nhớ khai báo service
         private benhService: BenhService,
@@ -118,10 +119,12 @@ export class DanhSachBenhComponent implements OnInit {
     // load more onscroll
     onScroll() {
         this.scrollLoading = true;
+        this.loadingGif = false;
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
         } else {
             this.loadMore = true;
+            this.loadingGif = true;
             this.page++;
             this.benhService.getBenh(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsBenh.length; i++) {
