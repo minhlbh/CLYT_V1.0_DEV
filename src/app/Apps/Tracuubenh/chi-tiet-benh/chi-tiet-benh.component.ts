@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
     styleUrls: ['./chi-tiet-benh.component.css']
 })
 export class ChiTietBenhComponent implements OnInit {
-    @Input() set idBenh(idBenh: any) {
+    @Input()
+    set idBenh(idBenh: any) {
         this.show(idBenh);
     }
     // @Input() set tenBenh(tenBenh: string){
@@ -24,7 +25,7 @@ export class ChiTietBenhComponent implements OnInit {
     constructor(
         private benhService: BenhService,
         private router: Router
-    ) {}
+    ) { }
 
     ngOnInit() {
         this.fbButton = new ShareButton(
@@ -49,6 +50,7 @@ export class ChiTietBenhComponent implements OnInit {
             });
         }
     }
+
 
 
 }

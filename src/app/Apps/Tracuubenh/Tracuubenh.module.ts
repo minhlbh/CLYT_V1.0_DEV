@@ -15,6 +15,7 @@ import { TracuubenhComponent } from './Tracuubenh.component';
 import { DanhSachBenhComponent } from './danh-sach-benh/danh-sach-benh.component';
 import { ChiTietBenhComponent } from './chi-tiet-benh/chi-tiet-benh.component';
 import { ForumBarComponent } from './forum-bar/forum-bar.component';
+import { TaomoiComponent } from './Taomoi/Taomoi.component';
 // import { WindowComponent } from '../../Share/Components/window/window.component';
 import { LoadDuLieuImgComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
 import { LoadDuLieuTextComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component';
@@ -24,11 +25,14 @@ import { LoadDuLieuYoutubeComponent } from '../Tracuubenh/chi-tiet-benh/Load-ite
 // services
 import { BenhService } from '../../Share/Services/benh.service';
 import { ForumService } from '../../Share/Services/forum.service';
+
 import { ShareModule } from '../../Share/Components/share.module';
+
 
 const routing: Routes = [
     { path: '', component: TracuubenhComponent },
     { path: ':id', component: TracuubenhComponent },
+    { path: 'taomoi', component: TaomoiComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
@@ -49,6 +53,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     declarations: [
         TracuubenhComponent,
         DanhSachBenhComponent,
+        TaomoiComponent,
         // ChiTietBenhComponent,
         // WindowComponent,
         // LoadDuLieuImgComponent,
