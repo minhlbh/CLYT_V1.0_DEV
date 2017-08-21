@@ -32,7 +32,7 @@ import { ShareModule } from '../../Share/Components/share.module';
 const routing: Routes = [
     { path: '', component: TracuubenhComponent },
     { path: ':id', component: TracuubenhComponent },
-    { path: 'taomoi', component: TaomoiComponent },
+    { path: 'tracuubenh/taomoi', component: TaomoiComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
