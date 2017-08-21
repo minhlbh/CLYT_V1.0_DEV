@@ -42,8 +42,6 @@ export class ChiTietBenhComponent implements OnInit {
 
     show(id) {
         this.loading = true;
-        // if()
-        // id = 'Adenovirus';
         if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
             this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
