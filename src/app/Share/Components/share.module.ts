@@ -17,7 +17,8 @@ import { ForumBarComponent } from '../../Apps/Tracuubenh/forum-bar/forum-bar.com
 import { FacebookService } from 'ngx-facebook';
 import { FacebookModule } from 'ngx-facebook';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
-
+import { WinframeComponent } from '../../Apps/Frame/winframe/winframe.component';
+import { ChildFrameComponent } from '../../Apps/Frame/ChildFrame/ChildFrame.component';
 
 
 
@@ -36,7 +37,8 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
-
+        WinframeComponent,
+        ChildFrameComponent
     ],
     exports: [
         WindowComponent,
@@ -46,7 +48,9 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
         LoadDuLieuLinkComponent,
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
-        ForumBarComponent
+        ForumBarComponent,
+        WinframeComponent,
+        ChildFrameComponent
     ]
 })
 export class ShareModule { }

@@ -26,9 +26,9 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         ],
         declarations: [
             FrameComponent,
-            ChildFrameComponent,
+            // ChildFrameComponent,
             // ChiTietBenhComponent,
-    WinframeComponent
+    // WinframeComponent
 ],
         providers: [
             BenhService,

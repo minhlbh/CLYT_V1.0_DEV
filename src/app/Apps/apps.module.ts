@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { ResponsiveModule } from 'ng2-responsive';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
 
+import { ChildFrameComponent } from './Frame/ChildFrame/ChildFrame.component';
+import { ChiTietBenhComponent } from './Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
+import { BenhService } from '../Share/Services/benh.service';
 
 
 // components
@@ -60,9 +63,16 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         NavComponent,
         EmptyComponent,
         LeftMenuComponent,
+        // ChildFrameComponent
+
     ],
     providers: [
-        SettingService
+        SettingService,
+        BenhService
+    ],
+    entryComponents: [
+        ChildFrameComponent,
+        ChiTietBenhComponent
     ]
 })
 export class AppsModule { }
