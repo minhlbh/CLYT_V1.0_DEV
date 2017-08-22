@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Layout.component.css']
 })
 export class LayoutComponent implements OnInit {
-
+    loadding = true;
+    LinkIFrame = 'http://admincloud.truongkhoa.com/Home/Dashboard';
   constructor() { }
 
   ngOnInit() {
