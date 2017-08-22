@@ -9,22 +9,22 @@
             </div>
             <div class="controls">
                 <div class="user">
-                    <a *ngIf="!this.auth" [routerLink]="['/auth/signIn']" class="name-user bt-sign-up">
+                    <!-- <a *ngIf="!this.auth" [routerLink]="['/auth/signIn']" class="name-user bt-sign-up">
                         <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
                         Đăng nhập
+                    </a> -->
+                    <a [routerLink]="['/apps/dashboard']" class="sign-up-now bt-sign-up">
+                        <span class="fa fa-fw fa-user icon" aria-hidden="true"></span>
+                        Trang cá nhân
                     </a>
-                    <a *ngIf="!this.auth" [routerLink]="['/auth/register']" class="sign-up-now bt-sign-up">
-                        <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
-                        Đăng ký ngay
-                    </a>
-                    <a *ngIf="this.auth" class="name-user bt-sign-up">
+                    <!-- <a *ngIf="this.auth" class="name-user bt-sign-up">
                         <span class="avt fa fa-fw fa-user" aria-hidden="true"></span>
                         {{this.auth.HoVaTen}}
                     </a>
                     <a *ngIf="this.auth" [routerLink]="['/auth/signOut']" class="name-user bt-sign-up">
                         <span class="settings fa fa-fw fa-power-off" aria-hidden="true"></span>
                         Đăng xuất
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <div class="search-home">

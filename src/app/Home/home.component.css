@@ -703,6 +703,7 @@ a:hover {
 /* slider trang home */
 /* slider trang home */
 
+
 .carousel{
     overflow:hidden;
     width:100%;
@@ -719,6 +720,9 @@ a:hover {
     animation:carousel 30s infinite;
     padding: 0;
     height: 100%;
+}
+.slides:nth-child(2){
+    animation-delay: 2s;
 }
 .slides > li{
     position:relative;

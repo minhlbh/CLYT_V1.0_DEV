@@ -1,7 +1,9 @@
 import { UserService } from '../Share/Services/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer, ElementRef } from '@angular/core';
 import { SettingService } from '../Share/Services/setting.service';
 import { Router } from '@angular/router';
+declare var $: any;
+
 
 @Component({
     selector: 'app-home',
@@ -19,7 +21,8 @@ export class HomeComponent implements OnInit {
     constructor(
         private settingService: SettingService,
         private userService: UserService,
-        private router: Router
+        private router: Router,
+        private renderer: Renderer
     ) {
 
     }
@@ -33,11 +36,13 @@ export class HomeComponent implements OnInit {
     }
 
     showMore(i) {
-        this.menus.forEach(block => {
-            block.full = false;
-        });
-        this.menus[i].full = true;
-        this.state = 'show';
+        console.log($('.grid').getHeight());
+        // this.menus.forEach(block => {
+        //     block.full = false;
+        // });
+        // this.menus[i].full = true;
+        // this.state = 'show';
+        // console.log(this.renderer.selectRootElement('.grid')) ;
     }
     showLess(i) {
         this.menus[i].full = false;
@@ -46,7 +51,7 @@ export class HomeComponent implements OnInit {
     goToApp(item) {
         if (item.LinkIFrame) {
             this.router.navigate(['/apps/f', item.url]);
-        }else if (item.TrangThaiHoatDong !== 0) {
+        } else if (item.TrangThaiHoatDong !== 0) {
             this.router.navigate(['/apps', item.url]);
         }
 

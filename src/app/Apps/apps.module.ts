@@ -35,7 +35,9 @@ const routing: Routes = [
             { path: 'f/:route', loadChildren: './Frame/Frame.module#FrameModule' },
             { path: 'phuongphapdieutri', loadChildren: './Phuongphapdieutri/phuongphapdieutri.module#PhuongphapdieutriModule' },
             { path: 'thuvientailieu', loadChildren: './Thuviensach/Thuviensach.module#ThuviensachModule' },
-            { path: '**', component: EmptyComponent },
+            { path: 'dashboard', loadChildren: './Dashboard/Dashboard.module#DashboardModule' },
+            { path: '', loadChildren: './Dashboard/Dashboard.module#DashboardModule' },
+            { path: '**', loadChildren: './Dashboard/Dashboard.module#DashboardModule' },
         ],
     },
 ];
