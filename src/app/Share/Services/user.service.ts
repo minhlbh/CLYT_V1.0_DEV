@@ -38,7 +38,7 @@ export class UserService {
         let body = new URLSearchParams();
         body.set('Code', code);
         body.set('PhoneNumber', phone);
-        return this.http.post(`http://localhost:5001/api/Account/XacNhanPhone?IdU=` + idUser, body)
+        return this.http.post(`${this.baseUrl}Account/XacNhanPhone?IdU=` + idUser, body)
             .map((response: Response) => response.json());
     }
 
