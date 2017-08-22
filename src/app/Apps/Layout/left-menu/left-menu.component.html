@@ -8,7 +8,16 @@
             </li>
         </ul>
         <div class="list-services" [ngStyle]="{'background': settings?.MauNhat}">
+            <ul>
+                <li>
+                    <a [routerLink]="['/apps/dashboard']" style="cursor: pointer">
+                                    <span class="icon"><img src="assets/canhan-ic.svg" aria-hidden="true"></span>
+                                    <span class="title" style="text-overflow: ellipsis;">Trang cá nhân</span>
+                            </a>
+                </li>
+            </ul>
             <ul *ngFor="let element of menuElements">
+
                 <li *ngFor="let item of element?.items">
                     <a (click)="goToApp(item)">
                         <span class="icon"><img src="{{item.IconText}}" aria-hidden="true" style="width: 20px;"></span>
@@ -39,8 +48,18 @@
             </li>
         </ul>
         <div class="list-services" [ngStyle]="{'background': settings.MauNhat}">
+            <!-- <ul>
+                <li>
+                    <a>
+                            <span class="icon"><img src="" aria-hidden="true"></span>
+                            <span class="title">Trang ca nhan</span>
+                    </a>
+                </li>
+            </ul> -->
             <ul *ngFor="let element of menuElements">
+
                 <li *ngFor="let item of element?.items">
+
                     <a [routerLink]="['/apps', item.url]" style="cursor: pointer">
                               <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
