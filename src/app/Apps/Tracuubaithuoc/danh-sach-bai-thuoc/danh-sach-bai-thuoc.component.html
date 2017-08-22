@@ -1,100 +1,104 @@
-<div class="window-baithuoc-wr">
-    <app-window [name]="name" [icon]="iconText" [url]="url" [idea]="idea" [urlIdea]="urlIdea" style="width:950px;">
+<div class="fxs-blade-content-container">
+    <div class="fxs-block">
+        <div class="window-baithuoc-wr">
+            <app-window [name]="name" [icon]="iconText" [url]="url" [idea]="idea" [urlIdea]="urlIdea" style="width:950px;">
 
-        <div class="col">
-            <div class="search-box-top">
-                <div class="input-control text full-size">
-                    <span class="fa fa-fw fa-search icon icon-search"></span>
-                    <input placeholder="Nhập tên bài thuốc..." [formControl]="searchKey" type="text" class="ng-untouched ng-pristine ng-valid">
-                </div>
-                <!-- đếm số bài thuốc -->
-                <div style="padding: 5px 0 0 0;">
-                    <span style="font-size: 11px; color: #888; float: right;">
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên bài thuốc..." [formControl]="searchKey" type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số bài thuốc -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
                 0/{{TongSoLuongBaiThuoc}} <b class="title-xs">bài thuốc</b>
                 </span>
-                </div>
-                <hr class="thin bg-grayLighter">
-            </div>
-            <ul class="list">
-                <li *ngFor="let baithuoc of DsBaiThuoc">
-                    <a>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let baithuoc of DsBaiThuoc">
+                            <a>
                         <span class="title">{{baithuoc.Name}}</span>
                     </a>
-                </li>
-            </ul>
-        </div>
-        <!-- Hết cột 1 -->
-
-        <div class="col">
-            <div class="search-box-top">
-                <div class="input-control text full-size">
-                    <span class="fa fa-fw fa-search icon icon-search"></span>
-                    <input placeholder="Nhập tên vị thuốc..." type="text" class="ng-untouched ng-pristine ng-valid">
+                        </li>
+                    </ul>
                 </div>
-                <!-- đếm số vị thuốc -->
-                <div style="padding: 5px 0 0 0;">
-                    <span style="font-size: 11px; color: #888; float: right;">
+                <!-- Hết cột 1 -->
+
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên vị thuốc..." type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số vị thuốc -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
                 0/{{TongSoLuongViThuoc}} <b class="title-xs">vị thuốc</b>
                 </span>
-                </div>
-                <hr class="thin bg-grayLighter">
-            </div>
-            <ul class="list">
-                <li *ngFor="let vithuoc of DsViThuoc">
-                    <a>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let vithuoc of DsViThuoc">
+                            <a>
                         <span class="title">{{vithuoc.Name}}</span>
                      </a>
-                </li>
-            </ul>
-        </div>
-        <!-- Hết cột 2 -->
-
-        <div class="col">
-            <div class="search-box-top">
-                <div class="input-control text full-size">
-                    <span class="fa fa-fw fa-search icon icon-search"></span>
-                    <input placeholder="Nhập tên chế phẩm thuốc..." type="text" class="ng-untouched ng-pristine ng-valid">
+                        </li>
+                    </ul>
                 </div>
-                <!-- đếm số chế phẩm thuốc -->
-                <div style="padding: 5px 0 0 0;">
-                    <span style="font-size: 11px; color: #888; float: right;">
+                <!-- Hết cột 2 -->
+
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên chế phẩm thuốc..." type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số chế phẩm thuốc -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
                 0/{{TongSoLuongChePhamThuoc}} <b class="title-xs">chế phẩm thuốc</b>
                 </span>
-                </div>
-                <hr class="thin bg-grayLighter">
-            </div>
-            <ul class="list">
-                <li *ngFor="let chephamthuoc of DsChePhamThuoc">
-                    <a>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let chephamthuoc of DsChePhamThuoc">
+                            <a>
                         <span class="title">{{chephamthuoc.Name}}</span>
                     </a>
-                </li>
-            </ul>
-        </div>
-        <!-- Hết cột 3 -->
-
-        <div class="col">
-            <div class="search-box-top">
-                <div class="input-control text full-size">
-                    <span class="fa fa-fw fa-search icon icon-search"></span>
-                    <input placeholder="Nhập tên dược thiện..." type="text" class="ng-untouched ng-pristine ng-valid">
+                        </li>
+                    </ul>
                 </div>
-                <!-- đếm số dược thiện -->
-                <div style="padding: 5px 0 0 0;">
-                    <span style="font-size: 11px; color: #888; float: right;">
+                <!-- Hết cột 3 -->
+
+                <div class="col">
+                    <div class="search-box-top">
+                        <div class="input-control text full-size">
+                            <span class="fa fa-fw fa-search icon icon-search"></span>
+                            <input placeholder="Nhập tên dược thiện..." type="text" class="ng-untouched ng-pristine ng-valid">
+                        </div>
+                        <!-- đếm số dược thiện -->
+                        <div style="padding: 5px 0 0 0;">
+                            <span style="font-size: 11px; color: #888; float: right;">
                 0/{{TongSoLuongDuocThien}} <b class="title-xs">dược thiện</b>
                 </span>
+                        </div>
+                        <hr class="thin bg-grayLighter">
+                    </div>
+                    <ul class="list">
+                        <li *ngFor="let duocthien of DsDuocThien">
+                            <a>
+                                <span class="title">{{duocthien.Name}}</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <hr class="thin bg-grayLighter">
-            </div>
-            <ul class="list">
-                <li *ngFor="let duocthien of DsDuocThien">
-<a>
-                    <span class="title">{{duocthien.Name}}</span>
-</a>
-                </li>
-            </ul>
+                <!-- Hết cột 4 -->
+            </app-window>
         </div>
-        <!-- Hết cột 4 -->
-    </app-window>
+    </div>
 </div>
