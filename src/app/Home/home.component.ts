@@ -32,6 +32,8 @@ export class HomeComponent implements OnInit {
             this.menus = this.settingService.getMenu();
             this.config = this.settingService.getConfig();
         });
+        // this.menus = this.settingService.getMenu();
+        // this.config = this.settingService.getConfig();
         this.auth = this.userService.getAuth();
     }
 

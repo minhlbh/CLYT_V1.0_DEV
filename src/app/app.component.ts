@@ -14,10 +14,10 @@ export class AppComponent {
         private settingService: SettingService,
         private titleService: Title
     ) {
-        this.settingService.getFirstConfig().subscribe(data => {
-            this.settingService.setConfig(data.setting);
-            this.settingService.setMenu(data.home);
-        });
+        // this.settingService.getFirstConfig().subscribe(data => {
+        //     this.settingService.setConfig(data.setting);
+        //     this.settingService.setMenu(data.home);
+        // });
         this.elements = this.settingService.getConfig();
         this.titleService.setTitle( 'Cloud Y Tế - ' + this.elements.ThuongHieu);
     }
