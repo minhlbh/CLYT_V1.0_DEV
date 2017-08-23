@@ -46,8 +46,9 @@ export function getAppModule(conf) {
         ],
         bootstrap: ([AppComponent])
     })
-    class AppModule {
-    }
+
+    class AppModule { }
+
     return AppModule;
 }
 // export class AppModule { }
