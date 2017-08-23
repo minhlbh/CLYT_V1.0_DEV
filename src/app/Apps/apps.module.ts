@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ResponsiveModule } from 'ng2-responsive';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+
 
 
 // components
@@ -14,7 +16,7 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
 // service
 import { SettingService } from '../Share/Services/setting.service';
-import { ShareModule } from '../Share/Components/share.module';
+import { ShareModule, } from '../Share/Components/share.module';
 
 
 const routing: Routes = [
@@ -47,7 +49,9 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         Routing,
         FormsModule,
         FlexLayoutModule,
-        ShareModule
+        ShareModule,
+        ShareButtonsModule.forRoot()
+
     ],
     declarations: [
         LayoutComponent,
