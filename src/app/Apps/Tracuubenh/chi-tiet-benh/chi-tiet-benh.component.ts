@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BenhService } from '../../../Share/Services/benh.service';
+import { BenhService, Benh } from '../../../Share/Services/benh.service';
 import { ShareButton, ShareProvider, ShareButtonsModule } from 'ngx-sharebuttons';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-chi-tiet-benh',
@@ -22,10 +23,16 @@ export class ChiTietBenhComponent implements OnInit {
     id: string;
     ChiTietBenh: any;
     url: string;
+    name: any;
     constructor(
         private benhService: BenhService,
-        private router: Router
-    ) { }
+        private router: Router,
+        private titleService: Title,
+    ) {
+
+
+    }
+
 
     ngOnInit() {
         // this.fbButton = new ShareButton(
@@ -46,6 +53,9 @@ export class ChiTietBenhComponent implements OnInit {
         if (this.ChiTietBenh == null || this.ChiTietBenh.id !== id) {
             this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
+                this.name = data.TenBenh;
+                this.titleService.setTitle('Cloud Y Tế - ' + this.name);
+
                 this.loading = false;
             });
         }
