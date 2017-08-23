@@ -76,7 +76,7 @@ export class DanhSachBenhComponent implements OnInit {
         this.url = 'apps';
         this.idea = true;
         this.urlIdea = 'tracuubenh';
-        this.apiUrl = 'Benh_List';
+        this.apiUrl = 'Benh_Search';
 
     }
     // navigate to chi-tiet-benh url with id

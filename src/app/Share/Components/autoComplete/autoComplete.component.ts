@@ -23,7 +23,7 @@ export class AutoCompleteComponent implements OnInit {
     public empty = false;
     public loading = false;
 
-    DsBenh: Benh[];
+    DsBenh: any;
     searchKey = new FormControl('');
     searchUpdate: Subject<string> = new Subject<string>();
     searchData: any;
@@ -38,12 +38,10 @@ export class AutoCompleteComponent implements OnInit {
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
+                // tslint:disable-next-line:prefer-const
+                let searchterms = this.searchKey.value;
                 this.doSearchAuto(event);
-                console.log(this.doSearchAuto(event));
-
             });
-
-
     }
 
     ngOnInit() {
@@ -60,22 +58,18 @@ export class AutoCompleteComponent implements OnInit {
             this.loading = true;
             this.searchUpdate.next(text);
             this.AutoCompleteService.autoComplete(text, this.apiUrl).subscribe(data => {
-                this.DsBenh = data.DsBenh;
+                this.DsBenh = data;
                 console.log(this.DsBenh);
-                this.TongSoLuong = data.TongSoLuong;
-                this.endBenh = data.TongSoLuong;
-                this.dataService = this.completerService.local(this.DsBenh, 'Name', 'Name');
+                this.dataService = this.completerService.local(this.DsBenh, 'kq', 'kq');
                 console.log(this.dataService);
-                if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
-                    this.empty = true;
-                } else {
-                    this.empty = false;
-                }
-                this.loading = false;
+                // if (this.DsBenh.length === 0 ) {
+                //     this.empty = true;
+                // } else {
+                //     this.empty = false;
+                // }
+                // this.loading = false;
             });
         }
-        const returnData = JSON.stringify(this.dataService);
-        return returnData;
     }
 }
 
