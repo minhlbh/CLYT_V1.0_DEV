@@ -64,3 +64,38 @@
 .nav-top .nav-right-mb>li>a.menu-toggle:hover {
     background: rgba(255,255,255,.3);
 }
+
+.fb-like {
+    float: right;
+    margin:6px 0 0 0;  
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1;
+  
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #354c8c;
+    vertical-align: top;
+    white-space: nowrap;
+  
+    color: #fff;
+    background: linear-gradient(#4c69ba, #3b55a0);
+  
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 8px 7px 30px;
+  
+    border: 0;
+    border-radius: 2px;
+  }
+  
+ 
+  .fb-like .ico {
+    display: inline-block;
+    font-size: 18px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+  }
