@@ -137,12 +137,8 @@ export class DanhSachBenhComponent implements OnInit {
                 this.loading = false;
                 if (this.endBenh > this.DsBenh.length) {
                     this.endBenh = this.DsBenh.length;
-
                 }
-
             });
-
-
         }
         if (this.endBenh === this.DsBenh.length) {
             this.scrollLoading = false;
