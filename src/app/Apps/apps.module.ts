@@ -10,7 +10,6 @@ import { ChildFrameComponent } from './Frame/ChildFrame/ChildFrame.component';
 import { ChiTietBenhComponent } from './Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { BenhService } from '../Share/Services/benh.service';
 
-
 // components
 import { LayoutComponent } from './Layout/Layout.component';
 import { NavComponent } from './Layout/nav/nav.component';
