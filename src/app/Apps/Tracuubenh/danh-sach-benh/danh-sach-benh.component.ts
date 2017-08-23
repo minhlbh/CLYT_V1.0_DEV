@@ -4,7 +4,7 @@ import { SettingService } from '../../../Share/Services/setting.service';
 
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
-
+import { Title } from '@angular/platform-browser';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -46,7 +46,8 @@ export class DanhSachBenhComponent implements OnInit {
         private benhService: BenhService,
         private router: Router,
         private activedroute: ActivatedRoute,
-        private settingService: SettingService
+        private settingService: SettingService,
+        private titleService: Title
     ) {
         this.searchKey.valueChanges
             .debounceTime(1000)

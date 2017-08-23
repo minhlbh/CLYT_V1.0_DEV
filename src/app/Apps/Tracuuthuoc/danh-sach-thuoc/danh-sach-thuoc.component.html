@@ -70,7 +70,9 @@
                         <a *ngFor="let thuoc of DsThuoc" class="row-l">
 
                             <div class="col w25">
+                                    <a style="cursor: pointer;" [routerLink]="['/apps/tracuuthuoc', thuoc.Id]">
                                 <span class="title">{{thuoc.Name}}</span>
+                                    </a>
                             </div>
 
                             <div class="col w20">
