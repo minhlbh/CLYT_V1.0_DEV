@@ -1,10 +1,11 @@
 <app-window [name]="ChiTietBenh?.TenBenh" [url]="url" >
     <!-- loading -->
     <div class="content-wr">
-        <p class="lead" *ngIf="loading">
-            <img src="assets/66.gif">
-        </p>
-        <title>'Cloud Y Tế - ' +{{this.name}}</title>
+        <div style="text-align: center">
+            <p class="lead" *ngIf="loading">
+                <img src="assets/66.gif">
+            </p>
+        </div>
         <!-- Start content left -->
         <div class="bt-bar">
             <a href="#" class="bt-features"><span class="fa fa-plus icon"></span>Tạo mới</a>
