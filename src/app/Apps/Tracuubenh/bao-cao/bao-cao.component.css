@@ -1,0 +1,232 @@
+.window {
+    width: 1140px;
+    padding: 45px 0 0 0;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    position: relative !important;
+    display: block;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.title-window {
+    width: 100%;
+    height: 44px;
+    background: #0f9cb3;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 25px 0 55px;
+}
+
+.big-title {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    padding: 0;
+    cursor: default;
+    line-height: 43px;
+}
+
+.body {
+    position: relative;
+    height: 100%;
+}
+
+.content-wr {
+    position: relative;
+    height: calc(100vh - 85px);
+    overflow: hidden;
+    width: 1170px;
+    float: left;
+    border-right: 1px solid #ccc;
+    padding-right: 410px;
+    background: #fff;
+    padding-top: 34px;
+}
+
+.bt-bar {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    float: left;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10000;
+}
+
+.bt-features {
+    padding: 8px 10px 8px 33px;
+    float: left;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+}
+
+.bt-features:hover, .bt-features.share:hover {
+    text-decoration: none;
+    background: #f5f5f5;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.bt-bar .bt-features .icon {
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+.bt-features.share {
+    border: none;
+    background: none;
+}
+
+.content-left {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 0 20px 25px 20px;
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+}
+
+.content-main {
+    width: 100%;
+    float: left;
+}
+
+.content-right {
+    width: 310px;
+    float: right;
+    padding-top: 11px;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.title {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-right .title h2 {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    max-width: 225px;
+    margin-top: 10px;
+    float: left;
+}
+
+.folder a {
+    border-right: 1px solid #ccc;
+    padding: 0 7px;
+    margin: 3px 0;
+    float: left;
+    font-weight: 400;
+    border: none;
+}
+
+.bt-close {
+    background: none;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 3px 6px;
+    border: none;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+  }
+  
+  .bt-close:hover {
+    background: #ce352c;
+  }
+
+  .col-right {
+    height: 100%;
+    width: 350px;
+    padding: 35px 0 40px 0;
+    margin: 0 15px 20px 15px;
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    overflow: hidden;
+}
+  
+.form-check {
+    position: relative;
+    display: block;
+    margin: 10px 0 0 0;
+    width: 100%;
+    float: left;
+}
+
+.form-check-label {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.form-check-sub {
+    margin-left: 50px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.form-check-sub .form-check-label {
+    font-size: 16px;
+}
+
+.form-check-input:only-child {
+    position: absolute;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-left: -1.25rem;
+    position: absolute;
+    left: 13px;
+    top: 0px;
+}
+
+textarea.report {
+    width: calc(100% - 25px);
+    margin: 5px 0 5px 20px;
+    float: left;
+    padding: 5px;
+    height: 100px;
+    font-weight: 400;
+}
+
+.bt-report {
+    background: #FF9900;
+    padding: 7px 10px;
+    float: left;
+    margin: 5px 0 50px 20px;
+    color: #fff; 
+}
