@@ -1,7 +1,7 @@
 import { enableProdMode, OnInit } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { getAppModule } from './app/app.module';
+import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { SettingService } from './app/Share/Services/setting.service';
 import { ReflectiveInjector, Injectable, OpaqueToken, Injector } from '@angular/core';
@@ -49,6 +49,6 @@ getHttp().get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.lo
     const conf = res.json();
     localStorage.setItem('app_menu', JSON.stringify(conf.home));
     localStorage.setItem('app_config', JSON.stringify(conf.setting));
-    platformBrowserDynamic().bootstrapModule(getAppModule(conf));
+    platformBrowserDynamic().bootstrapModule(AppModule);
 })
 .catch(error => { console.error(error); });
