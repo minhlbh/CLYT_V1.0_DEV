@@ -15,7 +15,6 @@ export class ChiTietBenhComponent implements OnInit {
         this.show(idBenh);
     }
     // @Input() set tenBenh(tenBenh: string){
-
     // }
     gPlusButton: any;
     fbButton: any;
@@ -29,11 +28,7 @@ export class ChiTietBenhComponent implements OnInit {
         private router: Router,
         private titleService: Title,
     ) {
-
-
     }
-
-
     ngOnInit() {
         // this.fbButton = new ShareButton(
         //     ShareProvider.FACEBOOK,
@@ -54,13 +49,9 @@ export class ChiTietBenhComponent implements OnInit {
             this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
                 this.name = data.TenBenh;
-                this.titleService.setTitle('Cloud Y Tế - ' + this.name);
-
+                this.titleService.setTitle('Cloud Y Tế- ' + this.name);
                 this.loading = false;
             });
         }
     }
-
-
-
 }

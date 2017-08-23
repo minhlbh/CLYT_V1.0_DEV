@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./load-du-lieu-img.component.css']
 })
 export class LoadDuLieuImgComponent implements OnInit {
-  @Input() dulieuImg: string;
+    @Input() dulieuImg: string;
     @Input() duLieuLinkAnh: string;
     @Input() dulieuImgTieuDe: string;
   constructor() { }

@@ -27,13 +27,15 @@ import { BenhService } from '../../Share/Services/benh.service';
 import { ForumService } from '../../Share/Services/forum.service';
 
 import { ShareModule } from '../../Share/Components/share.module';
+import { TaoMoiComponent } from './tao-moi/tao-moi.component';
+import { BaoCaoComponent } from './bao-cao/bao-cao.component';
 
 
 const routing: Routes = [
     { path: '', component: TracuubenhComponent },
     { path: 'taomoi', component: TaomoiComponent },
+    { path: 'baocao', component: BaoCaoComponent },
     { path: ':id', component: TracuubenhComponent },
-
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
@@ -62,8 +64,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         // LoadDuLieuLinkComponent,
         // LoadDuLieuYoutubeComponent,
         // ForumBarComponent,
-
-    ],
+         BaoCaoComponent
+],
     providers: [
         BenhService,
         ForumService

@@ -120,7 +120,7 @@ export class DanhSachThuocComponent implements OnInit {
     // navigate to chi-tiet-thuoc url with id
     clickThuoc(id) {
         this.router.navigate(['tracuuthuoc/', id]);
-
+        this.router.navigate(['tracuuthuoc/', id]);
     }
     // load more onscroll
     onScroll() {
