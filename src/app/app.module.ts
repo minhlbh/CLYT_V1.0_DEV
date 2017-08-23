@@ -1,10 +1,13 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
-import { HttpModule, Http } from '@angular/http';
+import { HttpModule , Http} from '@angular/http';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResponsiveModule } from 'ng2-responsive';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { environment } from '../environments/environment';
 
 // Services
 import { SettingService } from './Share/Services/setting.service';
@@ -12,34 +15,44 @@ import { SettingService } from './Share/Services/setting.service';
 import { AppComponent } from './app.component';
 
 
-const routes: Routes = [
-    { path: '', loadChildren: './Home/home.module#HomeModule' },
-    { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
-    { path: 'policies', loadChildren: './Policy/policy.module#PolicyModule' },
-    { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
-];
 
-const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, useHash: true });
+export function getAppModule(conf) {
 
+    const routes: Routes = [
+        { path: '', loadChildren: './Home/home.module#HomeModule' },
+        { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
+        { path: 'policies', loadChildren: './Policy/policy.module#PolicyModule' },
+        { path: 'apps', loadChildren: './Apps/apps.module#AppsModule' }
+    ];
 
-@NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        Routing,
-        FormsModule,
-        HttpModule,
-        BrowserAnimationsModule,
-        ResponsiveModule
-    ],
-    providers: [
-        SettingService,
-        Title
-    ],
-    bootstrap: ([AppComponent])
-})
+    const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, useHash: true });
 
-export class AppModule { }
+    @NgModule({
+        declarations: [
+            AppComponent
+        ],
+        imports: [
+            BrowserModule,
+            Routing,
+            FormsModule,
+            HttpModule,
+            BrowserAnimationsModule,
+            ResponsiveModule
+        ],
+        providers: [
+            // SettingService,
+            { provide: SettingService, useValue: conf },
+            Title
+        ],
+        bootstrap: ([AppComponent])
+    })
+    class AppModule {
+    }
+    return AppModule;
+}
+// export class AppModule { }
 
+// export function appST() {
+
+//         // return 'a';
+// }

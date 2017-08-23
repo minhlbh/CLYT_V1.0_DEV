@@ -28,12 +28,12 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.settingService.getFirstConfig().subscribe(() => {
-            this.menus = this.settingService.getMenu();
-            this.config = this.settingService.getConfig();
-        });
-        // this.menus = this.settingService.getMenu();
-        // this.config = this.settingService.getConfig();
+        // this.settingService.getFirstConfig().subscribe(() => {
+        //     this.menus = this.settingService.getMenu();
+        //     this.config = this.settingService.getConfig();
+        // });
+        this.menus = this.settingService.getMenu();
+        this.config = this.settingService.getConfig();
         this.auth = this.userService.getAuth();
     }
 
