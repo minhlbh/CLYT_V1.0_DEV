@@ -1,9 +1,9 @@
 import { UserService } from '../Share/Services/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer, ElementRef } from '@angular/core';
 import { SettingService } from '../Share/Services/setting.service';
-import { group, state, query, stagger, animate, style, transition, trigger } from '@angular/animations';
-// [routerLink]="['/apps', item?.url]"
 import { Router } from '@angular/router';
+declare var $: any;
+
 
 @Component({
     selector: 'app-home',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    public runAnimation = false;
+
     menus: any;
     config: any;
     searchKey: any;
@@ -21,45 +21,39 @@ export class HomeComponent implements OnInit {
     constructor(
         private settingService: SettingService,
         private userService: UserService,
-        private router: Router
+        private router: Router,
+        private renderer: Renderer
     ) {
-        // this.settingService.itemValue.subscribe((data) => {
-        //     console.log('abc', data);
-        // });
+
     }
 
     ngOnInit() {
-        this.settingService.getFirstConfig().subscribe(() => {
-            this.menus = this.settingService.getMenu();
-            this.config = this.settingService.getConfig();
-            // console.log(this.menus)
-
-        });
+        // this.settingService.getFirstConfig().subscribe(() => {
+        //     this.menus = this.settingService.getMenu();
+        //     this.config = this.settingService.getConfig();
+        // });
+        this.menus = this.settingService.getMenu();
+        this.config = this.settingService.getConfig();
         this.auth = this.userService.getAuth();
     }
 
     showMore(i) {
+        // console.log($('.grid').getHeight());
         this.menus.forEach(block => {
             block.full = false;
         });
-        // this.menus[i].items = [...this.menus[i].items, ...this.menus[i].items];
         this.menus[i].full = true;
         this.state = 'show';
+        // console.log(this.renderer.selectRootElement('.grid')) ;
     }
     showLess(i) {
         this.menus[i].full = false;
     }
 
-    getRandomInt(min, max) {
-        return (Math.floor(Math.random() * (max - min + 1)) + min) * 0.01;
-    }
-
     goToApp(item) {
-        // this.ro
         if (item.LinkIFrame) {
-            // console.log('frame');
             this.router.navigate(['/apps/f', item.url]);
-        }else if (item.TrangThaiHoatDong !== 0) {
+        } else if (item.TrangThaiHoatDong !== 0) {
             this.router.navigate(['/apps', item.url]);
         }
 

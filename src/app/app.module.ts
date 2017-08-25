@@ -1,5 +1,6 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
@@ -12,6 +13,9 @@ import { SettingService } from './Share/Services/setting.service';
 import { AppComponent } from './app.component';
 
 
+
+// export function getAppModule(conf) {
+
 const routes: Routes = [
     { path: '', loadChildren: './Home/home.module#HomeModule' },
     { path: 'auth', loadChildren: './authModule/Auth.module#AuthModule' },
@@ -20,7 +24,6 @@ const routes: Routes = [
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, useHash: true });
-
 
 @NgModule({
     declarations: [
@@ -36,10 +39,19 @@ const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingSt
     ],
     providers: [
         SettingService,
+        // { provide: SettingService, useValue: conf },
         Title
     ],
     bootstrap: ([AppComponent])
 })
 
+//     class AppModule { }
+
+//     return AppModule;
+// }
 export class AppModule { }
 
+// export function appST() {
+
+//         // return 'a';
+// }

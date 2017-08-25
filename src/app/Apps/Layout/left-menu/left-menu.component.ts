@@ -15,6 +15,7 @@ export class LeftMenuComponent implements OnInit {
     menuElements: any;
     settings: any;
     isToggled = true;
+    isActive = false;
     constructor(
         private settingService: SettingService,
         private router: Router
@@ -29,6 +30,15 @@ export class LeftMenuComponent implements OnInit {
     toggledLeft() {
         this.isToggled = !this.isToggled;
         // this.toggled.emit(this.isToggled);
+    }
+
+    goToApp(item) {
+        this.isActive = true;
+        if (item.LinkIFrame) {
+            this.router.navigate(['/apps/f', item.url]);
+        } else if (item.TrangThaiHoatDong !== 0) {
+            this.router.navigate(['/apps', item.url]);
+        }
     }
 
     // navigation(url: string) {

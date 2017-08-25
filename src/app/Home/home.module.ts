@@ -37,6 +37,6 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     declarations: [
         HomeFilterPipe,
         HomeComponent
-    ]
+]
 })
 export class HomeModule { }

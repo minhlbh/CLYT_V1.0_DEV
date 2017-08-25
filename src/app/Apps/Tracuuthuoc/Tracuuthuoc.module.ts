@@ -9,6 +9,7 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { ResponsiveModule } from 'ng2-responsive';
 
 // import component
+import { ChiTietThuocComponent } from './chi-tiet-thuoc/chi-tiet-thuoc.component';
 
 import { TracuuthuocComponent } from './Tracuuthuoc.component';
 import { DanhSachThuocComponent } from './danh-sach-thuoc/danh-sach-thuoc.component';
@@ -23,7 +24,7 @@ import { ShareModule } from '../../Share/Components/share.module';
 
 const routing: Routes = [
     { path: '', component: TracuuthuocComponent },
-    { path: ':id', component: TracuuthuocComponent },
+    { path: 'chitiet', component: ChiTietThuocComponent },
 ];
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
 
@@ -42,10 +43,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
     declarations: [
         TracuuthuocComponent,
         DanhSachThuocComponent,
-
         // WindowComponent,
-
-
+        ChiTietThuocComponent
     ],
     providers: [
         ThuocService,

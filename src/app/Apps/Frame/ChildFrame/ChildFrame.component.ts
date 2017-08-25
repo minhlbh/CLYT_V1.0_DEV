@@ -7,11 +7,28 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildFrameComponent implements OnInit {
     @Input('Prop') Prop;
-    constructor() { }
+    loadding = true;
+
+    constructor() {
+        window.addEventListener('message', (e) => {
+            this.receiveMessage(e);
+        }, false);
+    }
 
     ngOnInit() {
+        this.loadding = true;
     }
-    onLoadFrame() {
-        console.log('load frame');
+    receiveMessage(event: any) {
+        // console.log(event.origin);
+        try {
+            const messData = JSON.parse(event.data);
+            if (messData.LoaiLenh === 'LoadFrame') {
+                if (messData.TrangThai === 'EndLoad') {
+                    this.loadding = false;
+                }
+            }
+        } catch (e) { }
     }
+
+
 }

@@ -1,9 +1,10 @@
+a:hover {
+    text-decoration: none;
+}
+
 .block {
-    flex: 0 0 auto;
-    height: 100%;
-    overflow-y: hidden;
-    margin: 10px;
-    margin-left: 80px;
+    margin: 0 0 0 80px;
+    animation: fade-in-right 1s ease-out forwards;
 }
 
 .block.fixwidth {
@@ -17,6 +18,7 @@
     grid-auto-rows: 145px;
     grid-auto-columns: 145px;
     grid-auto-flow: row dense;
+
 }
 
 @media screen and (max-height: 700px) {
@@ -27,6 +29,8 @@
     .g-holiz {
         grid-template-rows: repeat(3, 145px);
         grid-auto-flow: column dense;
+        width: auto;
+        float: left;
     }
 }
 
@@ -34,6 +38,8 @@
     .g-holiz {
         grid-template-rows: repeat(4, 145px);
         grid-auto-flow: column dense;
+        width: auto;
+        float: left;
     }
 }
 
@@ -56,9 +62,39 @@
 .grid-item {
     padding: 5px;
     float: left;
-    animation: scale .25s ease-out;
+    animation: scale .25s ease-out forwards;
     position: relative;
+    transform: scale(0.0);
+    opacity: 0;
+    animation-delay: 0.1s;
 }
+.grid-item:nth-child(2){
+    animation-delay: 0.3s;
+}
+.grid-item:nth-child(1){
+    animation-delay: 0.5s;
+}
+.grid-item:nth-child(3){
+    animation-delay: 0.2s;
+}
+.grid-item:nth-child(4){
+    animation-delay: 0.35s;
+}
+.grid-item:nth-child(5){
+    animation-delay: 0.6s;
+}
+.grid-item:nth-child(6){
+    animation-delay: 0.7s;
+}
+.grid-item:nth-child(8){
+    animation-delay: 0.267s;
+}
+.grid-item:nth-child(9){
+    animation-delay: 0.387s;
+}
+
+
+
 
 .grid-item-w2 .title-label {
     font-size: 18px;
@@ -76,7 +112,7 @@
 }
 
 .child {
-    padding: 5px;
+
     background-color: gold;
     width: 100%;
     height: 100%;
@@ -92,11 +128,25 @@
     outline: #fff solid 3px;
 }
 
+@keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
 @keyframes scale {
     0% {
         transform: scale(0.0);
+        opacity: 0;
     }
     100% {
+        opacity: 1;
         transform: scale(1.0);
     }
 }
@@ -460,7 +510,6 @@
 .input-control.mb-home {
     height: 35px;
     display: block;
-    vertical-align: middle;
     margin: 0 0 0 10px;
     position: relative;
     flex-basis: calc(100% - 100px);
@@ -647,4 +696,97 @@
 
 .m-item:nth-child(n+7) .progress.mb .progress-bar {
     background-color: #00CDAC;
+}
+
+
+/* slider trang home */
+/* slider trang home */
+/* slider trang home */
+
+
+.carousel{
+    overflow:hidden;
+    width:100%;
+    height: 100%;
+}
+.slides{
+    list-style:none;
+    position:relative;
+    width:500%; /* Number of panes * 100% */
+    overflow:hidden; /* Clear floats */
+        /* Slide effect Animations*/
+    -moz-animation:carousel 30s infinite;
+    -webkit-animation:carousel 30s infinite;
+    animation:carousel 30s infinite;
+    padding: 0;
+    height: 100%;
+}
+.slides:nth-child(2){
+    animation-delay: 2s;
+}
+.slides > li{
+    position:relative;
+    float:left;
+    width: 20%; /* 100 / number of panes */
+    height: 100%;
+}
+.carousel img{
+    display:block;
+    width:100%;
+    max-width:100%;
+    height: 100%;
+}
+.carousel h2{
+    margin-bottom: 0;
+    font-size:1em;
+    padding:1.5em 0.5em 1.5em 0.5em;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    text-align:center;
+    color:#fff;
+    background-color:rgba(0,0,0,0.75);
+    text-transform: uppercase;
+}
+
+ @keyframes carousel{
+    0%    { left:-0%; }
+    11%   { left:-0%; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:-0%; }
+}
+
+.bottom {
+    float: left;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+.header {
+    width: 1000px;
+    position: absolute;
+}
+
+.search-home {
+    width: 200px;
+}
+}
+
+.icon-user {
+    float: left;
+    margin: 4px 5px 0 0;
 }

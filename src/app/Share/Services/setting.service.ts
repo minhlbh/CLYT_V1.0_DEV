@@ -5,36 +5,40 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { environment } from '../../../environments/environment';
 import { DOCUMENT } from '@angular/platform-browser';
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class SettingService {
 
     public itemValue = new Subject();
-
+    public useValue;
     constructor(
         private http: Http,
         @Inject(DOCUMENT) private document
-    ) { }
-    getFirstConfig(): Observable<any> {
-        // ...using get request
-        return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`)
-            // ...and calling .json() on the response to return data
-            .map((res: Response) => res.json())
-            // ...errors if any
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    ) {
+        console.log(this.useValue);
     }
+    // getFirstConfig(): Observable<any> {
+    //     // ...using get request
+    //     return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`)
+    //     // return this.http.get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=vienphoi.com`)
 
-    setMenu(data) {
-        this.itemValue.next(data);
-        localStorage.setItem('app_menu', JSON.stringify(data));
-    }
+    //         // ...and calling .json() on the response to return data
+    //         .map((res: Response) => res.json())
+    //         // ...errors if any
+    //         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    // }
+
+    // setMenu(data) {
+    //     this.itemValue.next(data);
+    //     localStorage.setItem('app_menu', JSON.stringify(data));
+    // }
     getMenu(): any {
         return JSON.parse(localStorage.getItem('app_menu'));
     }
-    setConfig(data) {
-        localStorage.setItem('app_config', JSON.stringify(data));
-    }
+    // setConfig(data) {
+    //     localStorage.setItem('app_config', JSON.stringify(data));
+    // }
     getConfig() {
         return JSON.parse(localStorage.getItem('app_config'));
     }

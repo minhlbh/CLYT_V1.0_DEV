@@ -1,12 +1,16 @@
+// module
 import { NgModule } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
 import { Ng2CompleterModule } from 'ng2-completer';
-import { FormsModule, FormControlDirective, FormGroupDirective, NgControl, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FacebookService } from 'ngx-facebook';
+import { FacebookModule } from 'ngx-facebook';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/Rx';
 
+// component
 import { WindowComponent } from './window/window.component';
-
-import { SafePipe } from '../../Share/Pipes/safe.pipe';
 import { ChiTietBenhComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { LoadDuLieuImgComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
 import { LoadDuLieuLinkComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component';
@@ -14,25 +18,25 @@ import { LoadDuLieuTextComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Loa
 // tslint:disable-next-line:max-line-length
 import { LoadDuLieuYoutubeComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component';
 import { ForumBarComponent } from '../../Apps/Tracuubenh/forum-bar/forum-bar.component';
-import { FacebookService } from 'ngx-facebook';
-import { FacebookModule } from 'ngx-facebook';
-import { SettingService } from '../Services/setting.service';
-
+import { WinframeComponent } from '../../Apps/Frame/winframe/winframe.component';
+import { ChildFrameComponent } from '../../Apps/Frame/ChildFrame/ChildFrame.component';
 import { AutoCompleteComponent } from './autoComplete/autoComplete.component';
+
+// pipe and services
+import { SafePipe } from '../../Share/Pipes/safe.pipe';
+import { SettingService } from '../Services/setting.service';
 import { AutoCompleteService } from '../Services/autoComplete.service';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/Rx';
+
 
 
 @NgModule({
     imports: [
         CommonModule,
+        ReactiveFormsModule,
         FormsModule,
         Ng2CompleterModule,
         FacebookModule.forRoot(),
-        ReactiveFormsModule,
-
-
+        ShareButtonsModule,
     ],
     declarations: [
         WindowComponent,
@@ -43,23 +47,26 @@ import 'rxjs/Rx';
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
-        AutoCompleteComponent,
+        WinframeComponent,
+        ChildFrameComponent,
+        AutoCompleteComponent
     ],
     exports: [
         WindowComponent,
         SafePipe,
-        AutoCompleteComponent,
         ChiTietBenhComponent,
         LoadDuLieuImgComponent,
         LoadDuLieuLinkComponent,
         LoadDuLieuTextComponent,
         LoadDuLieuYoutubeComponent,
         ForumBarComponent,
+        AutoCompleteComponent,
+        WinframeComponent,
+        ChildFrameComponent
     ],
     providers: [
-        SettingService,
         AutoCompleteService,
+        SettingService
     ]
-
 })
 export class ShareModule { }

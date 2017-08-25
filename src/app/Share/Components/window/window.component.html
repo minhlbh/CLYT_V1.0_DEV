@@ -1,18 +1,17 @@
-<div class="window">
+<div class="window" style="height:100%">
     <div class="title-window" [ngStyle]="{'background': menuElements?.MauNhat}">
         <div style="display:flex; flex-direction: row;">
-            <div *ngIf="idea">
-                <span class="icon" *ngIf="icon"><img src="{{icon}}" aria-hidden="true" style="width: 20px;"></span>
-                <div class="idea">
-                    <a target="blank" href="http://idea.truongkhoa.com/Home/Index?Id={{idIdea}}&Ma={{urlIdea}}" title="Đóng góp ý tưởng">
-                             <img src="../../assets/idea.png">
-              </a>
-                </div>
-            </div>
+            <span class="icon" *ngIf="icon">
+                    <img src="{{icon}}" aria-hidden="true" style="width: 20px;">
+            </span>
             <div>
                 <h3 class="big-title" style="cursor: default">{{name}}</h3>
             </div>
-
+            <div class="idea" *ngIf="idea">
+                <a target="blank" href="http://idea.truongkhoa.com/Home/Index?Id={{idIdea}}&Ma={{urlIdea}}" title="Đóng góp ý tưởng">
+                             <img src="../../assets/idea.png">
+                </a>
+            </div>
             <div>
                 <button (click)="back()" class="bt-close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
             </div>

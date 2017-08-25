@@ -57,7 +57,7 @@
 
         <div class="drugs-list" infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="200" (scrolled)="onScroll()"
             [scrollWindow]="false">
-            <div class="scrollbar-custom list" >
+            <div class="scrollbar-custom list">
                 <div *ngIf="!loading">
                     <div class="text-center" *ngIf="empty">
                         <p>
@@ -70,7 +70,9 @@
                         <a *ngFor="let thuoc of DsThuoc" class="row-l">
 
                             <div class="col w25">
+                                    <a style="cursor: pointer;" [routerLink]="['/apps/tracuuthuoc', thuoc.Id]">
                                 <span class="title">{{thuoc.Name}}</span>
+                                    </a>
                             </div>
 
                             <div class="col w20">
@@ -98,7 +100,7 @@
                             </div>
 
                         </a>
-
+                        <a style="text-align: center; width: 100%; float: left;" *ngIf="loadingGif"><img src="assets/66.gif"></a>
                     </div>
                 </div>
             </div>

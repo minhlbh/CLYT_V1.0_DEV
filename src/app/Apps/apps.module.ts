@@ -4,6 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, NgControl } from '@angular/forms';
 import { ResponsiveModule } from 'ng2-responsive';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
+
+import { ChildFrameComponent } from './Frame/ChildFrame/ChildFrame.component';
+import { ChiTietBenhComponent } from './Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
+import { BenhService } from '../Share/Services/benh.service';
 
 // components
 import { LayoutComponent } from './Layout/Layout.component';
@@ -13,13 +18,14 @@ import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
 // service
 import { SettingService } from '../Share/Services/setting.service';
-import { ShareModule } from '../Share/Components/share.module';
+import { ShareModule, } from '../Share/Components/share.module';
 
 const routing: Routes = [
     {
         path: '', component: LayoutComponent,
         children: [
             { path: 'tracuubenh', loadChildren: './Tracuubenh/Tracuubenh.module#TracuubenhModule' },
+            { path: 'chuyenkhoa', loadChildren: './Chuyenkhoa/Chuyenkhoa.module#ChuyenkhoaModule' },
             { path: 'baithuocvithuoc', loadChildren: './Tracuubaithuoc/Tracuubaithuoc.module#TracuubaithuocModule' },
             { path: 'chandoanhinhanh', loadChildren: './Chandoanhinhanh/Chandoanhinhanh.module#ChandoanhinhanhModule' },
             { path: 'hoichantructuyen', loadChildren: './Hoichantructuyen/Hoichantructuyen.module#HoichantructuyenModule' },
@@ -30,7 +36,7 @@ const routing: Routes = [
             { path: 'f/:route', loadChildren: './Frame/Frame.module#FrameModule' },
             { path: 'phuongphapdieutri', loadChildren: './Phuongphapdieutri/phuongphapdieutri.module#PhuongphapdieutriModule' },
             { path: 'thuvientailieu', loadChildren: './Thuviensach/Thuviensach.module#ThuviensachModule' },
-            { path: '**', component: EmptyComponent },
+            // { path: '**', loadChildren: './Dashboard/Dashboard.module#DashboardModule' },
         ],
     },
 ];
@@ -45,6 +51,10 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         FormsModule,
         FlexLayoutModule,
         ShareModule,
+<<<<<<< HEAD
+=======
+        ShareButtonsModule.forRoot()
+>>>>>>> master
 
     ],
     declarations: [
@@ -52,11 +62,23 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         NavComponent,
         EmptyComponent,
         LeftMenuComponent,
+<<<<<<< HEAD
+=======
+        // ChildFrameComponent
+>>>>>>> master
 
     ],
     providers: [
         SettingService,
+<<<<<<< HEAD
 
+=======
+        BenhService
+    ],
+    entryComponents: [
+        ChildFrameComponent,
+        ChiTietBenhComponent
+>>>>>>> master
     ]
 })
 export class AppsModule { }

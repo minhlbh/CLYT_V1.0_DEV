@@ -1,30 +1,30 @@
 <ng-container *showItDevice="['desktop', 'tablet']">
 
-    <div class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
+    <div *ngIf="config" class="fxs-portal wrapper" fxLayoutAlign="start stretch" fxLayout="column" [ngStyle]="{'background-image': 'url('+ config?.Background +')'}">
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
-                <img *ngIf="config?.Logo" width="50px" [src]="config?.Logo">
+                <img   width="50px" src="{{config?.Logo}}">
                 <span>{{config?.ThuongHieu}}</span>
             </div>
             <div class="controls">
                 <div class="user">
-                    <a *ngIf="!this.auth" [routerLink]="['/auth/signIn']" class="name-user bt-sign-up">
+                    <!-- <a *ngIf="!this.auth" [routerLink]="['/auth/signIn']" class="name-user bt-sign-up">
                         <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
                         Đăng nhập
+                    </a> -->
+                    <a [routerLink]="['/apps']" class="sign-up-now bt-sign-up">
+                            <img class="icon-user" src="assets/canhan-ic.svg">
+                        Trang cá nhân
                     </a>
-                    <a *ngIf="!this.auth" [routerLink]="['/auth/register']" class="sign-up-now bt-sign-up">
-                        <span class="fa fa-fw fa-user-plus icon" aria-hidden="true"></span>
-                        Đăng ký ngay
-                    </a>
-                    <a *ngIf="this.auth" class="name-user bt-sign-up">
+                    <!-- <a *ngIf="this.auth" class="name-user bt-sign-up">
                         <span class="avt fa fa-fw fa-user" aria-hidden="true"></span>
                         {{this.auth.HoVaTen}}
                     </a>
                     <a *ngIf="this.auth" [routerLink]="['/auth/signOut']" class="name-user bt-sign-up">
                         <span class="settings fa fa-fw fa-power-off" aria-hidden="true"></span>
                         Đăng xuất
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <div class="search-home">
@@ -67,14 +67,13 @@
                                             <!-- Dang phat trien %: status -->
                                             <span>
                                                 <span *ngIf="item.TrangThaiHoatDong == 2">Hoạt động</span>
-                                                <span *ngIf="item.TrangThaiHoatDong == 1">Demo</span>
-                                                <span *ngIf="item.TrangThaiHoatDong == 0">Đang phát triển</span>
-                                                ...{{item.PhanTramTrangThai}}%
-                                                <span *ngIf="item.Status">: {{item.Status}}</span>
+                                            <span *ngIf="item.TrangThaiHoatDong == 1">Demo</span>
+                                            <span *ngIf="item.TrangThaiHoatDong == 0">Đang phát triển</span> ...{{item.PhanTramTrangThai}}%
+                                            <span *ngIf="item.Status">: {{item.Status}}</span>
                                             </span>
                                         </div>
                                         <!-- Loại ô 1 -->
-                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen" >
+                                        <a class="child" *ngIf="item?.style == 'Icon'" [style.background-color]="item?.mauNen">
                                             <div class="icon-background" fxLayout="column" fxLayoutAlign="start center">
                                                 <img src="{{item?.IconText}}">
                                             </div>
@@ -106,8 +105,24 @@
                                         <!-- Loại ô 3 -->
                                         <div class="child" *ngIf="item?.style == 'Slide'">
                                             <h4 class="title-label">
-                                                <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>                                                {{item.Ten}}
+                                                <span class="icon"><img src="{{item?.IconText}}" aria-hidden="true"></span>                                                {{item.Ten}}
                                             </h4>
+                                            <div class="carousel">
+                                                <ul class="slides">
+                                                    <li *ngFor="let image of item?.Images">
+                                                        <div class="child" [ngStyle]="{'background-image': 'url('+ image +')'}"></div>
+
+                                                    </li>
+                                                    <li *ngFor="let image of item?.Images">
+                                                        <div class="child" [ngStyle]="{'background-image': 'url('+ image +')'}"></div>
+
+                                                    </li>
+                                                    <li *ngFor="let image of item?.Images">
+                                                        <div class="child" [ngStyle]="{'background-image': 'url('+ image +')'}"></div>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <div class="progress" [ngClass]="{'inactive':item.TrangThaiHoatDong==0, 'improving':item.TrangThaiHoatDong==1 , 'active':item.TrangThaiHoatDong==2}">
                                                 <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.PhanTramTrangThai" aria-valuemin="0" aria-valuemax="100"
                                                     [ngStyle]="{ 'width': item.PhanTramTrangThai+'%' }">
@@ -141,7 +156,7 @@
     <div class="m-body">
         <nav class="m-nav" fxLayout="row" [ngStyle]="{'background-color': config?.MauDam}" fxLayoutAlign="space-between center">
             <div *ngIf="!searchState" class="m-brand" fxLayout="row" fxLayoutAlign="start center">
-                <img class="m-brand-logo" [src]="config?.Logo">
+                <img class="m-brand-logo" src="{{config?.Logo}}">
                 <div>{{config?.ThuongHieu | uppercase}}</div>
             </div>
             <div *ngIf="searchState" class="input-control mb-home">
@@ -196,7 +211,7 @@
                 <div class="m-categories">
                     <div class="m-header-title">{{blocks?.Ten | uppercase}}</div>
                     <ng-container *ngFor="let item of blocks?.items | homeFilter:searchKey">
-                        <a [routerLink]="['/apps',item?.url]" class="m-item mb" fxLayout="row" fxLayoutAlign="start center">
+                        <a (click)="goToApp(item)" class="m-item mb" fxLayout="row" fxLayoutAlign="start center">
                             <div class="m-cover active" [ngStyle]="{'background-image': 'url('+ item?.Images[0] +')'}"></div>
                             <div class="title-services">
                                 {{item?.Ten}}

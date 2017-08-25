@@ -4,7 +4,7 @@ import { SettingService } from '../../../Share/Services/setting.service';
 
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
-
+import { Title } from '@angular/platform-browser';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -45,6 +45,7 @@ export class DanhSachBenhComponent implements OnInit {
     public isSearch = false;
     public page = 1;
     public url: any;
+    public loadingGif = false;
     constructor(
         // nhớ khai báo service
         private benhService: BenhService,
@@ -52,6 +53,7 @@ export class DanhSachBenhComponent implements OnInit {
         private activedroute: ActivatedRoute,
         private settingService: SettingService,
         private AutoCompleteService: AutoCompleteService,
+        private titleService: Title
     ) {
     }
 
@@ -87,10 +89,12 @@ export class DanhSachBenhComponent implements OnInit {
     // load more onscroll
     onScroll() {
         this.scrollLoading = true;
+        this.loadingGif = false;
         if (this.isSearch || this.page > this.TongSoLuong / 50) {
             return;
         } else {
             this.loadMore = true;
+            this.loadingGif = true;
             this.page++;
             this.benhService.getBenh(this.page).subscribe(data => {
                 for (let i = 0; i < data.DsBenh.length; i++) {
@@ -102,12 +106,8 @@ export class DanhSachBenhComponent implements OnInit {
                 this.loading = false;
                 if (this.endBenh > this.DsBenh.length) {
                     this.endBenh = this.DsBenh.length;
-
                 }
-
             });
-
-
         }
         if (this.endBenh === this.DsBenh.length) {
             this.scrollLoading = false;

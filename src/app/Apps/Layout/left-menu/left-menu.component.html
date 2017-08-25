@@ -2,18 +2,27 @@
     <div class="col-left-fixed" [ngStyle]="{'background': settings?.MauNhat}">
         <ul class="bt-collapsed">
             <li>{{menuElements?.MauNhat}}
-                 <a id="menu-toggle" (click)="toggledLeft()"  [ngStyle]="{'background': settings?.MauNhat}">
+                <a id="menu-toggle" (click)="toggledLeft()" [ngStyle]="{'background': settings?.MauNhat}">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-                        </a>
+                </a>
             </li>
         </ul>
-        <div class="list-services" [ngStyle]="{'background': settings?.MauNhat}" >
+        <div class="list-services" [ngStyle]="{'background': settings?.MauNhat}">
+            <ul>
+                <li>
+                    <a [routerLink]="['/apps']" style="cursor: pointer">
+                                    <span class="icon"><img src="assets/canhan-ic.svg" aria-hidden="true"></span>
+                                    <span class="title" style="text-overflow: ellipsis;">Trang cá nhân</span>
+                            </a>
+                </li>
+            </ul>
             <ul *ngFor="let element of menuElements">
+
                 <li *ngFor="let item of element?.items">
-                    <a [routerLink]="['/apps', item.url]">
-                              <span class="icon"><img src="{{item.IconText}}" aria-hidden="true" style="width: 20px;"></span>
-                              <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
-                        </a>
+                    <a (click)="goToApp(item)">
+                        <span class="icon"><img src="{{item.IconText}}" aria-hidden="true" style="width: 20px;"></span>
+                        <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -31,7 +40,7 @@
         </li>
     </ul>
     <div class="col-left-fixed" [ngStyle]="{'background': settings.MauNhat}">
-         <ul class="bt-collapsed">
+        <ul class="bt-collapsed">
             <li>
                 <a id="menu-toggle" (click)="toggledLeft()">
                               <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
@@ -39,8 +48,18 @@
             </li>
         </ul>
         <div class="list-services" [ngStyle]="{'background': settings.MauNhat}">
+            <!-- <ul>
+                <li>
+                    <a>
+                            <span class="icon"><img src="" aria-hidden="true"></span>
+                            <span class="title">Trang ca nhan</span>
+                    </a>
+                </li>
+            </ul> -->
             <ul *ngFor="let element of menuElements">
+
                 <li *ngFor="let item of element?.items">
+
                     <a [routerLink]="['/apps', item.url]" style="cursor: pointer">
                               <span class="icon"><img src="{{item.IconText}}" aria-hidden="true"></span>
                               <span class="title" style="text-overflow: ellipsis;">{{item.Ten}}</span>

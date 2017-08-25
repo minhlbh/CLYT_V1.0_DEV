@@ -1,9 +1,15 @@
+
 <ng-container *ngIf="winInfo">
     <div class="fxs-blade-content-container" #scrollE>
         <div class="fxs-block" [style.width]="winInfo.DoRong+'px'">
             <!-- <button (click)="removeComponent()">xoa</button> -->
             <app-window [name]="winInfo.Ten" [icon]="winInfo.IconText" url="/apps">
-                <iframe (load)="onLoadFrame()"  class="fstyle" style="border:none" width="100%" height="100%" [src]="winInfo.LinkIFrame | safe: 'resourceUrl'"
+                <div style="position:relative; width:100%; height:100%" *ngIf="loadding">
+                    <div style="position:absolute; width:160px; height:30px; left: calc(50% - 80px); top:calc(50% - 30px);">
+                        <img src="assets/66.gif">
+                    </div>
+                </div>
+                <iframe  class="fstyle" style="border:none" width="100%" height="100%" [src]="winInfo.LinkIFrame | safe: 'resourceUrl'"
                     #iframe></iframe>
             </app-window>
         </div>
