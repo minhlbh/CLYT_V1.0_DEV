@@ -23,6 +23,8 @@ export class ChiTietBenhComponent implements OnInit {
     ChiTietBenh: any;
     url: string;
     name: any;
+    title: any;
+    description: any;
     constructor(
         private benhService: BenhService,
         private router: Router,
@@ -49,6 +51,7 @@ export class ChiTietBenhComponent implements OnInit {
             this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
                 this.name = data.TenBenh;
+                this.description = data.TomTat;
                 this.titleService.setTitle('Cloud Y Tế- ' + this.name);
                 this.loading = false;
             });
