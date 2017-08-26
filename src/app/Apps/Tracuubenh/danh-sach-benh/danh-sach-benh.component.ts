@@ -62,7 +62,6 @@ export class DanhSachBenhComponent implements OnInit {
         this.benhService.getBenh(1).subscribe(data => {
             this.DsBenh = data.DsBenh;
             this.TongSoLuong = data.TongSoLuong;
-            this.startBenh = 0;
             this.endBenh = 50;
         });
         this.menu = this.settingService.getMenu();
@@ -112,8 +111,12 @@ export class DanhSachBenhComponent implements OnInit {
         if (this.endBenh === this.DsBenh.length) {
             this.scrollLoading = false;
         }
+    }
 
-
+    // search bệnh
+    getSearch(data) {
+        console.log(data);
+        this.DsBenh = data;
     }
 }
 

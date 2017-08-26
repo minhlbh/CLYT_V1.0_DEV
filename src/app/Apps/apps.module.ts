@@ -51,10 +51,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         FormsModule,
         FlexLayoutModule,
         ShareModule,
-<<<<<<< HEAD
-=======
         ShareButtonsModule.forRoot()
->>>>>>> master
 
     ],
     declarations: [
@@ -62,23 +59,16 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         NavComponent,
         EmptyComponent,
         LeftMenuComponent,
-<<<<<<< HEAD
-=======
         // ChildFrameComponent
->>>>>>> master
 
     ],
     providers: [
         SettingService,
-<<<<<<< HEAD
-
-=======
         BenhService
     ],
     entryComponents: [
         ChildFrameComponent,
         ChiTietBenhComponent
->>>>>>> master
     ]
 })
 export class AppsModule { }

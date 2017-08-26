@@ -1,46 +1,47 @@
 import { FormControl, NgControl, FormControlDirective, FormGroupDirective } from '@angular/forms';
-import { Component, OnInit, Injectable, Input } from '@angular/core';
-
+import { Component, OnInit, Injectable, Input, ElementRef, Output, EventEmitter } from '@angular/core';
 import { AutoCompleteService } from '../../Services/autoComplete.service';
-import { CompleterData, CompleterService } from 'ng2-completer';
-import { Subject } from 'rxjs/Subject';
 import { Benh } from '../../Services/benh.service';
+import { element } from 'protractor';
 
 
 
 @Component({
     selector: 'app-autocomplete',
     templateUrl: './autoComplete.component.html',
+    // tslint:disable-next-line:use-host-property-decorator
+    host: {
+        '(document:click)': 'handleClick($event)',
+    },
     styleUrls: ['./autoComplete.component.css']
 })
 
 export class AutoCompleteComponent implements OnInit {
     @Input() apiUrl;
+    @Output() ReturnData = new EventEmitter();
 
-    protected dataService: CompleterData;
-    protected dataSource;
     public isSearch = false;
     public empty = false;
     public loading = false;
-
-    DsBenh: any;
     searchKey = new FormControl('');
-    searchUpdate: Subject<string> = new Subject<string>();
-    searchData: any;
+    public filteredList = [];
+    public elementRef;
+    public NameList = [];
+    ReturnDataList: any;
     TongSoLuong: number;
-    startBenh: number;
     endBenh: number;
-
 
     constructor(
         private AutoCompleteService: AutoCompleteService,
-        private completerService: CompleterService) {
+        myElement: ElementRef
+    ) {
+        this.elementRef = myElement;
         this.searchKey.valueChanges
             .debounceTime(1000)
             .subscribe((event) => {
-                // tslint:disable-next-line:prefer-const
-                let searchterms = this.searchKey.value;
                 this.doSearchAuto(event);
+                // this.filter();
+                // this.clickThuoc(null);
             });
     }
 
@@ -51,17 +52,23 @@ export class AutoCompleteComponent implements OnInit {
         // no keyword catched => return all
         if (text === '') {
             this.isSearch = false;
-            this.AutoCompleteService.autoComplete('', this.apiUrl);
+            this.AutoCompleteService.autoComplete('', this.apiUrl).subscribe(data => {
+                console.log(data);
+                this.ReturnDataList = data;
+                this.ReturnDataList.forEach(element => {
+                    this.NameList.push(element.Name);
+                });
+            });
             // return search results
         } else {
             this.isSearch = true;
             this.loading = true;
-            this.searchUpdate.next(text);
             this.AutoCompleteService.autoComplete(text, this.apiUrl).subscribe(data => {
-                this.DsBenh = data;
-                console.log(this.DsBenh);
-                this.dataService = this.completerService.local(this.DsBenh, 'kq', 'kq');
-                console.log(this.dataService);
+                this.ReturnDataList = data;
+                this.ReturnDataList.forEach(element => {
+                    this.NameList.push(element.Name);
+                });
+
                 // if (this.DsBenh.length === 0 ) {
                 //     this.empty = true;
                 // } else {
@@ -69,6 +76,38 @@ export class AutoCompleteComponent implements OnInit {
                 // }
                 // this.loading = false;
             });
+        }
+    }
+
+    // filter() {
+    //     if (this.searchKey.value !== '') {
+    //         console.log(this.NameList);
+    //         this.filteredList = this.NameList.filter(function (el) {
+    //             return el.toLowerCase().indexOf((this.searchKey.value).toLowerCase()) > -1;
+    //         }.bind(this));
+    //         console.log(this.filteredList);
+    //     } else {
+    //         this.filteredList = [];
+    //     }
+    // }
+
+    select(item) {
+        this.searchKey.setValidators = item;
+        this.NameList = [];
+        this.ReturnData.emit(this.ReturnDataList);
+    }
+
+    handleClick(event) {
+        let clickedComponent = event.target;
+        let inside = false;
+        do {
+            if (clickedComponent === this.elementRef.nativeElement) {
+                inside = true;
+            }
+            clickedComponent = clickedComponent.parentNode;
+        } while (clickedComponent);
+        if (!inside) {
+            this.NameList = [];
         }
     }
 }

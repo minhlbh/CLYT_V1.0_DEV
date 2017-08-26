@@ -1,5 +1,5 @@
 <!-- Start col left 2 -->
-<app-window [icon]="iconText"  [idea]="true" [idIdea]="idIdea" [urlIdea]="urlIdea" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']">
+<app-window [icon]="iconText" [idea]="true" [idIdea]="idIdea" [urlIdea]="urlIdea" [name]="name" [url]="url" *showItDevice="['desktop', 'tablet']">
     <div class="list-left-wr">
         <!-- searchbox -->
         <!-- <div class="search-box-top">
@@ -11,12 +11,8 @@
 
             </div> -->
         <!-- Ô search -->
-        <div  class="search-box-top" >
-            <app-autocomplete [apiUrl]="apiUrl" >
-                <div class="input-control text full-size" data-role="input">
-
-                </div>
-            </app-autocomplete>
+        <div class="search-box-top">
+            <app-autocomplete (ReturnData)="getSearch($event)" [apiUrl]="apiUrl"></app-autocomplete>
         </div>
         <!-- đếm số bệnh -->
         <div style="padding: 0px 20px 0 0;margin-top: -20px;">
@@ -46,7 +42,7 @@
                     <a *ngFor="let benh of DsBenh" style="cursor: pointer;" [routerLink]="['/apps/tracuubenh', benh.Id]">
                 <span class="title" >{{benh.Name}}</span>
                     </a>
-                     <a style="text-align: center;" *ngIf="loadingGif"><img src="assets/66.gif"></a>
+                    <a style="text-align: center;" *ngIf="loadingGif"><img src="assets/66.gif"></a>
                 </div>
             </li>
         </ul>
