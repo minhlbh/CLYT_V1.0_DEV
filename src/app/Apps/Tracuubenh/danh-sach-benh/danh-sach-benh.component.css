@@ -167,3 +167,28 @@ padding: 12px 10px 12px 40px;
 .list-left-wr.mobile {
     border:none;
 }
+.suggestions {
+    border: solid 1px #ccc;
+    float:left;
+    width: 279px;
+}
+
+.suggestions ul {
+    padding: 0;
+}
+
+.suggestions ul li {
+    list-style-type: none;
+}
+
+.suggestions ul li a {
+    color:#323232;
+    cursor: pointer;
+    padding:5px;
+    width: 100%;
+    float:left;
+}
+
+.suggestions ul li a:hover {
+    background: #eee;
+}

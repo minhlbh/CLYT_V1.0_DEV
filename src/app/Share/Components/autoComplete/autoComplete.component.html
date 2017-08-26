@@ -1,11 +1,6 @@
-<!-- searchbox benh-->
-<div class="input-control text full-size" data-role="input">
-    <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-    <input type="text" placeholder="Nhập tên bệnh..." [formControl] = "searchKey">
-</div>
-<div class="suggestions" *ngIf="NameList.length > 0">
+<div class="suggestions" *ngIf="term">
     <ul *ngFor="let item of NameList">
-        <li>
+        <li [class.active]="isActive(item)">
             <a (click)="select(item)">{{item}}</a>
         </li>
     </ul>

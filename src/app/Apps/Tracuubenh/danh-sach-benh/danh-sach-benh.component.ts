@@ -46,6 +46,7 @@ export class DanhSachBenhComponent implements OnInit {
     public page = 1;
     public url: any;
     public loadingGif = false;
+    term: any;
     constructor(
         // nhớ khai báo service
         private benhService: BenhService,
@@ -55,6 +56,13 @@ export class DanhSachBenhComponent implements OnInit {
         private AutoCompleteService: AutoCompleteService,
         private titleService: Title
     ) {
+        this.searchKey.valueChanges
+        .debounceTime(1000)
+        .subscribe((event) => {
+            this.term = this.searchKey.value;
+            console.log(this.term);
+            this.doSearch(event);
+        });
     }
 
     ngOnInit() {
@@ -113,10 +121,41 @@ export class DanhSachBenhComponent implements OnInit {
         }
     }
 
-    // search bệnh
-    getSearch(data) {
+    // get autocomplete bệnh
+    getAutoComplete(data) {
         console.log(data);
         this.DsBenh = data;
+    }
+
+    // do search bệnh
+    doSearch(text: string) {
+        // no keyword catched => return all
+        if (text === '') {
+            this.isSearch = false;
+            this.benhService.getBenh(1).subscribe(data => {
+                this.DsBenh = data.DsBenh;
+                this.TongSoLuong = data.TongSoLuong;
+                this.endBenh = this.page * 50;
+            });
+            // return search results
+        } else {
+            this.isSearch = true;
+            this.loading = true;
+            this.searchUpdate.next(text);
+            setTimeout(() => {
+                this.benhService.getSearchBenh(text).subscribe(data => {
+                    this.DsBenh = data.DsBenh;
+                    this.TongSoLuong = data.TongSoLuong;
+                    this.endBenh = data.TongSoLuong;
+                    if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
+                        this.empty = true;
+                    } else {
+                        this.empty = false;
+                    }
+                    this.loading = false;
+                });
+            }, 1500);
+        }
     }
 }
 
