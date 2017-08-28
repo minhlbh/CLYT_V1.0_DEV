@@ -29,6 +29,7 @@ import { ForumService } from '../../Share/Services/forum.service';
 import { ShareModule } from '../../Share/Components/share.module';
 
 import { BaoCaoComponent } from './bao-cao/bao-cao.component';
+import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 
 const routing: Routes = [
@@ -51,7 +52,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         FacebookModule.forRoot(),
         ShareButtonsModule.forRoot(),
         Routing,
-        ShareModule
+        ShareModule,
+        NguiAutoCompleteModule
     ],
     declarations: [
         TracuubenhComponent,
