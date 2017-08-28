@@ -1,8 +1,9 @@
 import { FormControl, NgControl, FormControlDirective, FormGroupDirective } from '@angular/forms';
-import { Component, OnInit, Injectable, Input, ElementRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Injectable, Input, ElementRef, Output, EventEmitter, HostListener } from '@angular/core';
 import { AutoCompleteService } from '../../Services/autoComplete.service';
 import { Benh } from '../../Services/benh.service';
 import { element } from 'protractor';
+import { Observable } from 'rxjs/Rx';
 
 
 
@@ -18,15 +19,16 @@ import { element } from 'protractor';
 
 export class AutoCompleteComponent implements OnInit {
     @Input() apiUrl;
+    @Input() term;
     @Output() ReturnData = new EventEmitter();
 
     public isSearch = false;
+    private _matches: Array<any> = [];
+    private _active: any;
     public empty = false;
     public loading = false;
-    searchKey = new FormControl('');
-    public filteredList = [];
     public elementRef;
-    public NameList = [];
+    public NameList: Array<any> = [];
     ReturnDataList: any;
     TongSoLuong: number;
     endBenh: number;
@@ -36,16 +38,62 @@ export class AutoCompleteComponent implements OnInit {
         myElement: ElementRef
     ) {
         this.elementRef = myElement;
-        this.searchKey.valueChanges
-            .debounceTime(1000)
-            .subscribe((event) => {
-                this.doSearchAuto(event);
-                // this.filter();
-                // this.clickThuoc(null);
-            });
+
     }
 
-    ngOnInit() {
+    ngOnInit() { }
+
+    // tslint:disable-next-line:use-life-cycle-interface
+    ngOnChanges() {
+        console.log(this.term);
+        this.doSearchAuto(this.term);
+        this.setActive(this.NameList[0]);
+        this.hide();
+    }
+
+    // catch keyboard event
+    @HostListener('keyup', ['$event'])
+    onChange(e: KeyboardEvent) {
+        console.log(e.keyCode);
+
+        // esc
+        if (e.keyCode === 27) {
+            this.hide();
+        }
+
+        // up
+        if (e.keyCode === 38) {
+            this.prevActiveMatch();
+        }
+
+        // down
+        if (e.keyCode === 40) {
+            this.nextActiveMatch();
+            return;
+        }
+
+    }
+
+    private isActive(value: any): boolean {
+        return this._active === value;
+    }
+
+    private setActive(value: any) {
+        this._active = value;
+    }
+
+    private hide() {
+        this.NameList = [];
+    }
+
+    public prevActiveMatch() {
+        const index = this.NameList.indexOf(this._active);
+        this._active = this.NameList[index - 1 < 0 ? this.NameList.length - 1 : index - 1];
+    }
+
+    public nextActiveMatch() {
+        const index = this.NameList.indexOf(this._active);
+        this._active = this.NameList[index + 1 > this.NameList.length - 1 ? 0 : index + 1];
     }
 
     doSearchAuto(text: string) {
@@ -58,17 +106,22 @@ export class AutoCompleteComponent implements OnInit {
                 this.ReturnDataList.forEach(element => {
                     this.NameList.push(element.Name);
                 });
+                this.setActive(this.NameList[0]);
             });
             // return search results
         } else {
             this.isSearch = true;
             this.loading = true;
             this.AutoCompleteService.autoComplete(text, this.apiUrl).subscribe(data => {
-                this.ReturnDataList = data;
-                this.ReturnDataList.forEach(element => {
-                    this.NameList.push(element.Name);
-                });
-
+                if (data === []) {
+                    this.NameList.push('Không có kết quả');
+                } else {
+                    this.ReturnDataList = data;
+                    this.ReturnDataList.forEach(element => {
+                        this.NameList.push(element.Name);
+                    });
+                    this.setActive(this.NameList[0]);
+                }
                 // if (this.DsBenh.length === 0 ) {
                 //     this.empty = true;
                 // } else {
@@ -92,9 +145,8 @@ export class AutoCompleteComponent implements OnInit {
     // }
 
     select(item) {
-        this.searchKey.setValidators = item;
+        this._active = item;
         this.NameList = [];
-        this.ReturnData.emit(this.ReturnDataList);
     }
 
     handleClick(event) {

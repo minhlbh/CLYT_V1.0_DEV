@@ -196,7 +196,6 @@
 
 .bt-features:hover, .bt-features:focus {
   color: #333;
-  background: #000;
 }
 
 .bt-features .glyphicon {
@@ -231,9 +230,9 @@
 .bt-social.google  {
     background: #DC4E41;
 }
-share-button button:active {
+/* share-button button:active {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-}
+} */
 
 
 

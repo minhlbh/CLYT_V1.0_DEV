@@ -76,6 +76,10 @@
     float:left;
 }
 
+.suggestions ul.active {
+    background: #eee;
+}
+
 .suggestions ul li a:hover {
     background: #eee;
 }

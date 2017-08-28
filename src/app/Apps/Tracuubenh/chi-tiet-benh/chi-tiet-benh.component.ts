@@ -23,6 +23,9 @@ export class ChiTietBenhComponent implements OnInit {
     ChiTietBenh: any;
     url: string;
     name: any;
+    link: any;
+    title: any;
+    description: any;
     constructor(
         private benhService: BenhService,
         private router: Router,

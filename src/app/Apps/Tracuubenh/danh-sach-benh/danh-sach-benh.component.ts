@@ -8,11 +8,16 @@ import { Title } from '@angular/platform-browser';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { AutoCompleteComponent } from '../../../Share/Components/autoComplete/autoComplete.component';
 import { AutoCompleteService } from '../../../Share/Services/autoComplete.service';
+
+import { Observable } from 'rxjs/Observable';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import 'rxjs/add/observable/of';
 
 @Component({
     selector: 'app-danh-sach-benh',
@@ -46,7 +51,33 @@ export class DanhSachBenhComponent implements OnInit {
     public page = 1;
     public url: any;
     public loadingGif = false;
+    term: any;
+    public selected;
+
+    observableSource = (keyword: any): Observable<any[]> => {
+        this.searchKey.valueChanges
+        .debounceTime(1000)
+        .subscribe((event) => {
+            this.term = this.searchKey.value;
+            this.doSearch(event);
+        });
+        const url = `http://api.truongkhoa.com/api/CSDLYT/Benh_Search?term=${keyword}`;
+        if (keyword) {
+            return this.http.get(url)
+                .map(res => {
+                    const json = res.json();
+                    console.log(json);
+                    return json;
+                });
+        } else {
+            return Observable.of([]);
+        }
+    }
+
+
     constructor(
+        public http: Http,
+        private _sanitizer: DomSanitizer,
         // nhớ khai báo service
         private benhService: BenhService,
         private router: Router,
@@ -55,15 +86,15 @@ export class DanhSachBenhComponent implements OnInit {
         private AutoCompleteService: AutoCompleteService,
         private titleService: Title
     ) {
-    }
 
-    ngOnInit() {
-        // Hàm lấy dữ liệu bệnh
         this.benhService.getBenh(1).subscribe(data => {
             this.DsBenh = data.DsBenh;
             this.TongSoLuong = data.TongSoLuong;
             this.endBenh = 50;
         });
+    }
+
+    ngOnInit() {
         this.menu = this.settingService.getMenu();
         for (let i = 0; i < this.menu.length; i++) {
             for (let x = 0; x < this.menu[i].items.length; x++) {
@@ -113,10 +144,35 @@ export class DanhSachBenhComponent implements OnInit {
         }
     }
 
-    // search bệnh
-    getSearch(data) {
-        console.log(data);
-        this.DsBenh = data;
+    // do search bệnh
+    doSearch(text: string) {
+        // no keyword catched => return all
+        if (text === '') {
+            this.isSearch = false;
+            this.benhService.getBenh(1).subscribe(data => {
+                this.DsBenh = data.DsBenh;
+                this.TongSoLuong = data.TongSoLuong;
+                this.endBenh = this.page * 50;
+            });
+            // return search results
+        } else {
+            this.isSearch = true;
+            this.loading = true;
+            this.searchUpdate.next(text);
+            setTimeout(() => {
+                this.benhService.getSearchBenh(text).subscribe(data => {
+                    this.DsBenh = data.DsBenh;
+                    this.TongSoLuong = data.TongSoLuong;
+                    this.endBenh = data.TongSoLuong;
+                    if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
+                        this.empty = true;
+                    } else {
+                        this.empty = false;
+                    }
+                    this.loading = false;
+                });
+            }, 1500);
+        }
     }
 }
 
