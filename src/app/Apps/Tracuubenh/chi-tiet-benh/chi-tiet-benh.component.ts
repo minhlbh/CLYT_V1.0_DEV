@@ -46,6 +46,9 @@ export class ChiTietBenhComponent implements OnInit {
         //     'google'
         // );
         this.url = 'apps/tracuubenh'; // (this.router.url).substring(0, (this.router.url).lastIndexOf('/'));
+        this.metadataService.setTitle('Cloud Y Tế - ' + this.name);
+        this.metadataService.setTag('og:title ', this.name);
+        this.metadataService.setTag('og:description ', this.description);
     }
 
     show(id) {
@@ -57,11 +60,6 @@ export class ChiTietBenhComponent implements OnInit {
                 this.description = data.TomTat;
                 this.titleService.setTitle('Cloud Y Tế - ' + this.name);
                 this.loading = false;
-                console.log(this.description);
-                this.metadataService.setTitle('Cloud Y Tế - ' + this.name);
-                this.metadataService.setTag('og:title ', this.name);
-                this.metadataService.setTag('og:description ', this.description);
-
 
             });
         }
