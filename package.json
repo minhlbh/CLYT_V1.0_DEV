@@ -31,6 +31,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "ng2-completer": "^1.6.1",
+    "ng2-metadata": "^1.4.2-final",
     "ng2-responsive": "^0.8.4",
     "ng2-slugify": "^0.1.0",
     "ngx-facebook": "^2.4.0",
