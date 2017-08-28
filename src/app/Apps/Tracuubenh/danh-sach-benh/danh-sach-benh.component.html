@@ -5,7 +5,15 @@
         <div class="search-box-top">
             <div class="input-control text full-size" data-role="input">
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-                <input ngui-auto-complete [formControl]="searchKey" [(ngModel)]="selected" [source]="observableSource.bind(this)" list-formatter="Name">
+                <input #searchKey placeholder="Tìm kiếm theo tên bệnh" (keyup.enter) = "doSearch(searchKey.value)"
+                 ngui-auto-complete [(ngModel)]="selected"
+                 [source]="observableSource.bind(this)"
+                 min-chars = "2"
+                 (valueChanged)="doSearch($event)"
+                 no-match-found-text = "Không có kết quả"
+                 loading-text = "Đang tải..."
+                 auto-select-first-item = true
+                 list-formatter="Name">
                 <!-- <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey"> -->
             </div>
             <!-- <app-autocomplete *ngIf="isSearch" (ReturnData)="getAutoComplete($event)" [apiUrl]="apiUrl" [term]="term"></app-autocomplete> -->
