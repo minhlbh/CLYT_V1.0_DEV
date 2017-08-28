@@ -55,6 +55,12 @@ export class DanhSachBenhComponent implements OnInit {
     public selected;
 
     observableSource = (keyword: any): Observable<any[]> => {
+        this.searchKey.valueChanges
+        .debounceTime(1000)
+        .subscribe((event) => {
+            this.term = this.searchKey.value;
+            this.doSearch(event);
+        });
         const url = `http://api.truongkhoa.com/api/CSDLYT/Benh_Search?term=${keyword}`;
         if (keyword) {
             return this.http.get(url)
@@ -71,7 +77,7 @@ export class DanhSachBenhComponent implements OnInit {
 
     constructor(
         public http: Http,
-         private _sanitizer: DomSanitizer,
+        private _sanitizer: DomSanitizer,
         // nhớ khai báo service
         private benhService: BenhService,
         private router: Router,
@@ -80,22 +86,15 @@ export class DanhSachBenhComponent implements OnInit {
         private AutoCompleteService: AutoCompleteService,
         private titleService: Title
     ) {
-        this.searchKey.valueChanges
-            .debounceTime(1000)
-            .subscribe((event) => {
-                this.term = this.searchKey.value;
-                console.log(this.term);
-                this.doSearch(event);
-            });
-    }
 
-    ngOnInit() {
-        // Hàm lấy dữ liệu bệnh
         this.benhService.getBenh(1).subscribe(data => {
             this.DsBenh = data.DsBenh;
             this.TongSoLuong = data.TongSoLuong;
             this.endBenh = 50;
         });
+    }
+
+    ngOnInit() {
         this.menu = this.settingService.getMenu();
         for (let i = 0; i < this.menu.length; i++) {
             for (let x = 0; x < this.menu[i].items.length; x++) {
@@ -143,12 +142,6 @@ export class DanhSachBenhComponent implements OnInit {
         if (this.endBenh === this.DsBenh.length) {
             this.scrollLoading = false;
         }
-    }
-
-    // get autocomplete bệnh
-    getAutoComplete(data) {
-        console.log(data);
-        this.DsBenh = data;
     }
 
     // do search bệnh

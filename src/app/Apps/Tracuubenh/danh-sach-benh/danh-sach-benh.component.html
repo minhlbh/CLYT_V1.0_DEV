@@ -5,11 +5,10 @@
         <div class="search-box-top">
             <div class="input-control text full-size" data-role="input">
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
+                <input ngui-auto-complete [formControl]="searchKey" [(ngModel)]="selected" [source]="observableSource.bind(this)" list-formatter="Name">
                 <!-- <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey"> -->
             </div>
             <!-- <app-autocomplete *ngIf="isSearch" (ReturnData)="getAutoComplete($event)" [apiUrl]="apiUrl" [term]="term"></app-autocomplete> -->
-            <input ngui-auto-complete [(ngModel)]="selected" [source]="observableSource.bind(this)" list-formatter="Name"
-            />
             <!-- <br/>selected model: {{selected | json}}<br/><br/> -->
         </div>
         <!-- đếm số bệnh -->
