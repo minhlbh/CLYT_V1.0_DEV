@@ -8,6 +8,7 @@ import { FacebookService } from 'ngx-facebook';
 import { FacebookModule } from 'ngx-facebook';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { Observable } from 'rxjs/Observable';
+import { RouterModule } from '@angular/router';
 import 'rxjs/Rx';
 
 // component
@@ -30,6 +31,7 @@ import { AutoCompleteService } from '../Services/autoComplete.service';
 
 
 
+
 @NgModule({
     imports: [
         CommonModule,
@@ -39,6 +41,7 @@ import { AutoCompleteService } from '../Services/autoComplete.service';
         ShareButtonsModule,
         FacebookModule.forRoot(),
         MetadataModule.forRoot(),
+        RouterModule
     ],
     declarations: [
         WindowComponent,
