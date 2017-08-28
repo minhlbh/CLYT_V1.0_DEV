@@ -59,7 +59,10 @@ export class ChiTietBenhComponent implements OnInit {
                 this.loading = false;
                 console.log(this.description);
                 this.metadataService.setTitle('Cloud Y Tế - ' + this.name);
-                this.metadataService.setTag('Tóm tắt: ', this.description);
+                this.metadataService.setTag('og:title ', this.name);
+                this.metadataService.setTag('og:description ', this.description);
+
+
             });
         }
     }
