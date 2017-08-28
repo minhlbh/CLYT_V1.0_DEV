@@ -3,6 +3,7 @@ import { BenhService, Benh } from '../../../Share/Services/benh.service';
 import { ShareButton, ShareProvider, ShareButtonsModule } from 'ngx-sharebuttons';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { MetadataService } from 'ng2-metadata';
 
 @Component({
     selector: 'app-chi-tiet-benh',
@@ -29,6 +30,7 @@ export class ChiTietBenhComponent implements OnInit {
     constructor(
         private benhService: BenhService,
         private router: Router,
+        private metadataService: MetadataService,
         private titleService: Title,
     ) {
     }
@@ -52,9 +54,14 @@ export class ChiTietBenhComponent implements OnInit {
             this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
                 this.name = data.TenBenh;
+                this.description = data.TomTat;
                 this.titleService.setTitle('Cloud Y Tế - ' + this.name);
                 this.loading = false;
+                console.log(this.description);
+
             });
+            this.metadataService.setTitle('Cloud Y Tế - ' + this.name);
+            this.metadataService.setTag('Tóm tắt: ', this.description);
         }
     }
 }

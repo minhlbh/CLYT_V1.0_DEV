@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Ng2CompleterModule } from 'ng2-completer';
+import { MetadataModule } from 'ng2-metadata';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FacebookService } from 'ngx-facebook';
 import { FacebookModule } from 'ngx-facebook';
@@ -35,8 +36,9 @@ import { AutoCompleteService } from '../Services/autoComplete.service';
         ReactiveFormsModule,
         FormsModule,
         Ng2CompleterModule,
-        FacebookModule.forRoot(),
         ShareButtonsModule,
+        FacebookModule.forRoot(),
+        MetadataModule.forRoot(),
     ],
     declarations: [
         WindowComponent,
