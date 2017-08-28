@@ -194,3 +194,20 @@ padding: 12px 10px 12px 40px;
 .suggestions ul li a:hover {
     background: #eee;
 }
+
+.ngui-auto-complete ul {
+    overflow: hidden;
+}
+
+.ngui-auto-complete ul li {
+    border-bottom: 1px solid #eee;
+    padding: 8px 10px;
+    line-height: 17px;
+}
+
+.ngui-auto-complete ul li.selected {
+    background-color: #ccc;
+    padding: 8px 10px;
+    line-height: 17px;
+
+}

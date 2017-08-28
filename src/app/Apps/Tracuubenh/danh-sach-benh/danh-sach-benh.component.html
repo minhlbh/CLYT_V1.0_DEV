@@ -7,7 +7,8 @@
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
                 <input #searchKey placeholder="Tìm kiếm bệnh theo tên"
                 (keyup.enter)="doSearch(searchKey.value)"
-                ngui-auto-complete [(ngModel)]="selected"
+                ngui-auto-complete
+                    [(ngModel)]="selected"
                     [source]="observableSource.bind(this)"
                     min-chars="2"
                     no-match-found-text="Không có kết quả"
