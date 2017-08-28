@@ -32,7 +32,8 @@
     position: relative;
     vertical-align: middle;
     margin: 0;
-    line-height: 1;
+    line-height: 1.5;
+    cursor: pointer;
     position: relative;
 
 }
@@ -195,19 +196,21 @@ padding: 12px 10px 12px 40px;
     background: #eee;
 }
 
-.ngui-auto-complete ul {
-    overflow: hidden;
+.ngui-auto-complete-wrapper ngui-auto-complete .ngui-auto-complete ul {
+    overflow: hidden !important;
+    cursor: pointer !important;
 }
 
-.ngui-auto-complete ul li {
+.ngui-auto-complete-wrapper ngui-auto-complete  .ngui-auto-complete ul li {
     border-bottom: 1px solid #eee;
     padding: 8px 10px;
     line-height: 17px;
+    cursor: pointer !important;
 }
 
-.ngui-auto-complete ul li.selected {
+.ngui-auto-complete-wrapper ngui-auto-complete .ngui-auto-complete ul li.selected {
     background-color: #ccc;
     padding: 8px 10px;
     line-height: 17px;
-
+    cursor: pointer !important;
 }

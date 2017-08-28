@@ -10,10 +10,11 @@
                 ngui-auto-complete
                     [(ngModel)]="selected"
                     [source]="observableSource.bind(this)"
+                    (valueChanged)="doSearch($event.Name)"
                     min-chars="2"
                     no-match-found-text="Không có kết quả"
-                    (valueChanged)="doSearch($event)"
-                    loading-text="Đang tải..." auto-select-first-item="true"
+                    loading-text="Đang tải..."
+                    auto-select-first-item="true"
                     list-formatter="Name">
                 <!-- <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey"> -->
             </div>
