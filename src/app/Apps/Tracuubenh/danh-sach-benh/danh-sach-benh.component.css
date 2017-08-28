@@ -34,6 +34,7 @@
     margin: 0;
     line-height: 1;
     position: relative;
+
 }
 
 .input-control .icon-search {
@@ -41,6 +42,7 @@
   top: 5px;
   left: 5px;
   color: #777;
+  z-index: 1000;
 }
 
 .input-control input {

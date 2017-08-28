@@ -52,9 +52,7 @@ export class ChiTietBenhComponent implements OnInit {
             this.benhService.getChiTietBenh(id).subscribe(data => {
                 this.ChiTietBenh = data;
                 this.name = data.TenBenh;
-                this.description = data.TomTat;
-                this.link = this.url + id;
-                this.titleService.setTitle('Cloud Y Tế- ' + this.name);
+                this.titleService.setTitle('Cloud Y Tế - ' + this.name);
                 this.loading = false;
             });
         }

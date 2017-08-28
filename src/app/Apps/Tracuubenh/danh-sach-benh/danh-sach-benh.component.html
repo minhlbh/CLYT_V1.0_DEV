@@ -3,11 +3,13 @@
     <div class="list-left-wr">
         <!-- searchbox -->
         <div class="search-box-top">
-            <div class="input-control text full-size" data-role="input"  >
+            <div class="input-control text full-size" data-role="input">
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-                <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey">
+                <input ngui-auto-complete [formControl]="searchKey" [(ngModel)]="selected" [source]="observableSource.bind(this)" list-formatter="Name">
+                <!-- <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey"> -->
             </div>
-            <app-autocomplete *ngIf="isSearch" (ReturnData)="getAutoComplete($event)" [apiUrl]="apiUrl" [term]="term"></app-autocomplete>
+            <!-- <app-autocomplete *ngIf="isSearch" (ReturnData)="getAutoComplete($event)" [apiUrl]="apiUrl" [term]="term"></app-autocomplete> -->
+            <!-- <br/>selected model: {{selected | json}}<br/><br/> -->
         </div>
         <!-- đếm số bệnh -->
         <div style="padding: 0px 20px 0 0;margin-top: -20px;">
