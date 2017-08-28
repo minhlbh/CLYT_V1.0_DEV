@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { BenhService } from '../../Share/Services/benh.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
+
 @Component({
     // tslint:disable-next-line:component-selector
     selector: 'app-Tracuubenh',
@@ -17,6 +18,10 @@ export class TracuubenhComponent implements OnInit {
     showChiTiet = false;
     ChiTietBenh: any;
     detailBenhId = 0;
+
+
+
+
     constructor(
         private settingService: SettingService,
         private router: Router,
@@ -33,7 +38,7 @@ export class TracuubenhComponent implements OnInit {
     idBenh(id: number) {
         if (id == null) {
             this.showChiTiet = false;
-        }else {
+        } else {
             this.detailBenhId = id;
             this.showChiTiet = true;
         }
