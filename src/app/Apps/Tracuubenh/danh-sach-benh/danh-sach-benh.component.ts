@@ -55,18 +55,11 @@ export class DanhSachBenhComponent implements OnInit {
     public selected;
 
     observableSource = (keyword: any): Observable<any[]> => {
-        this.searchKey.valueChanges
-        .debounceTime(1000)
-        .subscribe((event) => {
-            this.term = this.searchKey.value;
-            this.doSearch(event);
-        });
         const url = `http://api.truongkhoa.com/api/CSDLYT/Benh_Search?term=${keyword}`;
         if (keyword) {
             return this.http.get(url)
                 .map(res => {
                     const json = res.json();
-                    console.log(json);
                     return json;
                 });
         } else {
@@ -86,7 +79,6 @@ export class DanhSachBenhComponent implements OnInit {
         private AutoCompleteService: AutoCompleteService,
         private titleService: Title
     ) {
-
         this.benhService.getBenh(1).subscribe(data => {
             this.DsBenh = data.DsBenh;
             this.TongSoLuong = data.TongSoLuong;
@@ -146,32 +138,36 @@ export class DanhSachBenhComponent implements OnInit {
 
     // do search bệnh
     doSearch(text: string) {
-        // no keyword catched => return all
-        if (text === '') {
-            this.isSearch = false;
-            this.benhService.getBenh(1).subscribe(data => {
-                this.DsBenh = data.DsBenh;
-                this.TongSoLuong = data.TongSoLuong;
-                this.endBenh = this.page * 50;
-            });
-            // return search results
-        } else {
-            this.isSearch = true;
-            this.loading = true;
-            this.searchUpdate.next(text);
-            setTimeout(() => {
-                this.benhService.getSearchBenh(text).subscribe(data => {
+        if (text.length >= 2 || text === '') {
+            // no keyword catched => return all
+            if (text === '') {
+                this.isSearch = false;
+                this.benhService.getBenh(1).subscribe(data => {
                     this.DsBenh = data.DsBenh;
                     this.TongSoLuong = data.TongSoLuong;
-                    this.endBenh = data.TongSoLuong;
-                    if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
-                        this.empty = true;
-                    } else {
-                        this.empty = false;
-                    }
-                    this.loading = false;
+                    this.endBenh = this.page * 50;
                 });
-            }, 1500);
+                // return search results
+            } else {
+                this.isSearch = true;
+                this.loading = true;
+                this.searchUpdate.next(text);
+                setTimeout(() => {
+                    this.benhService.getSearchBenh(text).subscribe(data => {
+                        this.DsBenh = data.DsBenh;
+                        this.TongSoLuong = data.TongSoLuong;
+                        this.endBenh = data.TongSoLuong;
+                        if (this.DsBenh.length === 0 && this.TongSoLuong === 0) {
+                            this.empty = true;
+                        } else {
+                            this.empty = false;
+                        }
+                        this.loading = false;
+                    });
+                }, 1500);
+            }
+        } else {
+            return;
         }
     }
 }
