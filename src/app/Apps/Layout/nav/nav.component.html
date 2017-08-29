@@ -2,7 +2,7 @@
     <!-- <div>
     <a [routerLink]="['/']">header</a>
   </div> -->
-    <nav  class="navbar navbar-default navbar-fixed-top nav-top"  [ngStyle]="{'background': menuElements?.MauDam}">
+    <nav class="navbar navbar-default navbar-fixed-top nav-top" [ngStyle]="{'background': menuElements?.MauDam}">
         <div class="navbar-header">
             <a class="navbar-brand logo" [routerLink]="['/']">
               <img src="{{menuElements?.Logo}}">
@@ -13,16 +13,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">
-                  Giới thiệu
-                </a>
+                <li style="cursor: pointer;">
+                    <a (click)="tollogeGioiThieu()">
+                    Giới thiệu
+                    </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">
                   Liên hệ
                 </a>
-                </li>
+                </li> -->
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -38,4 +38,11 @@
             </ul> -->
         </div>
     </nav>
+</div>
+
+<div class="gioithieu" (click)="closeGioiThieu()" *ngIf="gioithieu">
+
+    <div class="popup">
+        <iframe src="http://admincloud.truongkhoa.com/Home/About"></iframe>
+    </div>
 </div>
