@@ -4,10 +4,27 @@
 
         <div class="fxs-topbar header" [ngStyle]="{'background-color': (menus?.MauDam | async)} ">
             <div class="logo">
-                <img   width="50px" src="{{config?.Logo}}">
+                <img width="50px" src="{{config?.Logo}}">
                 <span>{{config?.ThuongHieu}}</span>
             </div>
+            <div class="idea">
+                <a target="blank" href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
+                    <img src="../../assets/idea.png">
+                  </a>
+            </div>
+            <div class="search-home">
+                <div class="input-control text full-size">
+                    <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+                    <input type="text" placeholder="Tìm dịch vụ..." [(ngModel)]="searchKey">
+                </div>
+            </div>
             <div class="controls">
+                <div class="user">
+                    <a href="http://nguoidung.truongkhoa.com" target="_blank" class="sign-up-now bt-sign-up">
+                                <img class="icon-international" src="assets/international-connection (1).svg">
+                                Trang người dùng
+                            </a>
+                </div>
                 <div class="user">
                     <!-- <a *ngIf="!this.auth" [routerLink]="['/auth/signIn']" class="name-user bt-sign-up">
                         <span class="fa fa-fw fa-sign-in icon" aria-hidden="true"></span>
@@ -26,18 +43,10 @@
                         Đăng xuất
                     </a> -->
                 </div>
+
             </div>
-            <div class="search-home">
-                <div class="input-control text full-size">
-                    <span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
-                    <input type="text" placeholder="Tìm dịch vụ..." [(ngModel)]="searchKey">
-                </div>
-            </div>
-            <div class="idea">
-                <a target="blank" href="http://idea.truongkhoa.com/" title="Đóng góp ý tưởng">
-                <img src="../../assets/idea.png">
-              </a>
-            </div>
+
+
         </div>
 
 
