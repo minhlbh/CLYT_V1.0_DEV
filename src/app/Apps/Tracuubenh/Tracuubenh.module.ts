@@ -34,9 +34,9 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 const routing: Routes = [
     { path: '', component: TracuubenhComponent },
-    { path: 'taomoi', component: TaomoiComponent },
-    { path: 'baocao', component: BaoCaoComponent },
     { path: ':id', component: TracuubenhComponent },
+    { path: ':id/taomoi', component: TaomoiComponent },
+    { path: ':id/baocao', component: BaoCaoComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
