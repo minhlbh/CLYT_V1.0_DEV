@@ -12,17 +12,23 @@
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li style="cursor: pointer;">
+            <ul class="nav navbar-nav navbar-right" style="cursor: pointer;">
+                <li>
+                    <a href="http://nguoidung.truongkhoa.com" target="_blank">
+                          Trang người dùng
+                        </a>
+                </li>
+                <li>
+                    <a (click)="tollogeTaiKhoan()">
+                              Tài khoản
+                            </a>
+                </li>
+                <li>
                     <a (click)="tollogeGioiThieu()">
                     Giới thiệu
                     </a>
                 </li>
-                <!-- <li>
-                    <a href="#">
-                  Liên hệ
-                </a>
-                </li> -->
+
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -46,3 +52,10 @@
         <iframe src="http://admincloud.truongkhoa.com/Home/About"></iframe>
     </div>
 </div>
+
+<div class="gioithieu" (click)="closeTaiKhoan()" *ngIf="taikhoan">
+
+            <div class="popup">
+                <iframe src="http://admincloud.truongkhoa.com/Manage/Index"></iframe>
+            </div>
+        </div>
