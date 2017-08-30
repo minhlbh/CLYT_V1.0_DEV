@@ -17,12 +17,12 @@
     border-top: solid 1px #eee;
 }
 .content-wr{
-    
+
     height: calc(100vh - 85px);
     width: 800px;
-   
+
     background: #fff;
-    
+
 }
 #container{
     font-family: Helvetica;
@@ -51,7 +51,7 @@
     margin: 0;
     font-weight: 600;
     padding: 0;
-    
+
     line-height: 43px;;
 }
 
@@ -64,26 +64,26 @@ input{
     width: 100%;
     border-bottom: 1px solid white;
     position: relative;
-   
+
 }
 .header{
     float: left;
-    width: calc(100% - 60px); 
+    width: calc(100% - 60px);
     border-bottom: 1px solid #ccc;
     margin: 20px 20px 0 20px;
-    
+
 }
 .header p{
     font-size: 30px;
     float: left;
     margin: 10px 0 10px 0;
-    
-   
+
+
 }
 
 
 .done{
-    float: right;   
+    float: right;
     background-color: #4386fc;
     color: white;
     padding: 10px;
@@ -91,6 +91,16 @@ input{
     margin:10px;
     position: absolute;
     right:20px;
+}
+.cancel{
+    float: right;
+    background-color: #ccc;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    margin:10px;
+    position: absolute;
+    right:130px;
 }
 
 .benh{
@@ -105,7 +115,7 @@ h3{
     margin: 0 10px 10px 0;
     font-size: 20px;
     font-weight: 700;
-    
+
 }
 .tenbenh{
     float: left;
@@ -124,7 +134,7 @@ padding-top: 20px;
     height: 150px;
     border: 1px solid #ccc;
     padding: 10px;
-    
+
 
 }
 .info{
@@ -133,12 +143,12 @@ padding-top: 20px;
     padding-bottom: 20px;
 }
 
-    
+
 .content{
     padding-left: 20px;
 }
 .button{
-  
+
     background-color: orange;
     text-align: center;
     float: left;
@@ -150,7 +160,7 @@ padding-top: 20px;
 .foot{
     float: left;
     width: 100%;
-   
+
 }
 span{
     padding-right: 6px;
