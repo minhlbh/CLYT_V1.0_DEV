@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { ResponsiveModule } from 'ng2-responsive';
 import { FacebookModule } from 'ngx-facebook';
-
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
@@ -51,6 +51,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         HttpModule,
         FacebookModule.forRoot(),
         ShareButtonsModule.forRoot(),
+        FroalaEditorModule.forRoot(),
+        FroalaViewModule.forRoot(),
         Routing,
         ShareModule,
         NguiAutoCompleteModule
@@ -66,8 +68,8 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         // LoadDuLieuLinkComponent,
         // LoadDuLieuYoutubeComponent,
         // ForumBarComponent,
-         BaoCaoComponent
-],
+        BaoCaoComponent
+    ],
     providers: [
         BenhService,
         ForumService
