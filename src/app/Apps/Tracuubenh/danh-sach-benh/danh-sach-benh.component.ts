@@ -166,8 +166,6 @@ export class DanhSachBenhComponent implements OnInit {
                     });
                 }, 1500);
             }
-        } else {
-            return;
         }
     }
 }

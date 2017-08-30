@@ -261,7 +261,7 @@ a:hover {
 }
 
 .search-home {
-    padding: 45px 5px 45px 5px;
+    padding: 45px 5px 5px 0px;
     width: 300px;
     float: right;
 }
@@ -303,7 +303,6 @@ a:hover {
 .controls {
     float: right;
     margin-top: 45px;
-    margin-right: 50px;
 }
 
 .controls .user {
@@ -352,7 +351,7 @@ a:hover {
 .controls {
     float: right;
     margin-top: 45px;
-    margin-right: 50px;
+    margin-right: 0px;
 }
 
 .controls .user {
@@ -544,7 +543,7 @@ a:hover {
 }
 
 .idea {
-    margin: 41px 5px 45px 5px;
+    margin: 41px 45px 45px 5px;
     width: 35px;
     float: right;
 }
@@ -789,4 +788,10 @@ a:hover {
 .icon-user {
     float: left;
     margin: 4px 5px 0 0;
+}
+
+.icon-international {
+    float: left;
+    margin: 4px 5px 0 0;
+    width: 17px;
 }

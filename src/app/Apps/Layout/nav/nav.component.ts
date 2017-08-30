@@ -11,10 +11,27 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
 })
 export class NavComponent implements OnInit {
     public menuElements: any;
+    public gioithieu = false;
+    public taikhoan = false;
     constructor(private settingService: SettingService) {
         this.menuElements = this.settingService.getConfig();
     }
+
     ngOnInit() {
     }
 
+    closeGioiThieu() {
+        this.gioithieu = false;
+    }
+    tollogeGioiThieu() {
+        console.log(this.gioithieu);
+
+        this.gioithieu = !this.gioithieu;
+    }
+    closeTaiKhoan() {
+        this.taikhoan = false;
+    }
+    tollogeTaiKhoan() {
+        this.taikhoan = !this.taikhoan;
+    }
 }

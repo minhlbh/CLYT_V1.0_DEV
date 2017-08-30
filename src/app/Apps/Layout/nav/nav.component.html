@@ -2,7 +2,7 @@
     <!-- <div>
     <a [routerLink]="['/']">header</a>
   </div> -->
-    <nav  class="navbar navbar-default navbar-fixed-top nav-top"  [ngStyle]="{'background': menuElements?.MauDam}">
+    <nav class="navbar navbar-default navbar-fixed-top nav-top" [ngStyle]="{'background': menuElements?.MauDam}">
         <div class="navbar-header">
             <a class="navbar-brand logo" [routerLink]="['/']">
               <img src="{{menuElements?.Logo}}">
@@ -12,17 +12,23 @@
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="nav navbar-nav navbar-right" style="cursor: pointer;">
                 <li>
-                    <a href="#">
-                  Giới thiệu
-                </a>
+                    <a href="http://nguoidung.truongkhoa.com">
+                          Trang người dùng
+                        </a>
                 </li>
                 <li>
-                    <a href="#">
-                  Liên hệ
-                </a>
+                    <a (click)="tollogeTaiKhoan()">
+                              Tài khoản
+                            </a>
                 </li>
+                <li>
+                    <a (click)="tollogeGioiThieu()">
+                    Giới thiệu
+                    </a>
+                </li>
+
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -39,3 +45,17 @@
         </div>
     </nav>
 </div>
+
+<div class="gioithieu" (click)="closeGioiThieu()" *ngIf="gioithieu">
+
+    <div class="popup">
+        <iframe src="http://admincloud.truongkhoa.com/Home/About"></iframe>
+    </div>
+</div>
+
+<div class="gioithieu" (click)="closeTaiKhoan()" *ngIf="taikhoan">
+
+            <div class="popup">
+                <iframe src="http://admincloud.truongkhoa.com/Manage/Index"></iframe>
+            </div>
+        </div>
