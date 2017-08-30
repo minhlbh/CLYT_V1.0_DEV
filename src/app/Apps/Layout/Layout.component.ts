@@ -3,6 +3,7 @@ import {
     ComponentFactory, ComponentFactoryResolver, ViewChild, ElementRef, TemplateRef,
     ViewContainerRef, Inject
 } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ChiTietBenhComponent } from '../Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { ChildFrameComponent } from '../Frame/ChildFrame/ChildFrame.component';
 
@@ -17,13 +18,24 @@ export class LayoutComponent implements OnInit {
     @ViewChild('alertContainer', { read: ViewContainerRef }) container;
     constructor(
         private componentFactoryResolver: ComponentFactoryResolver,
+        private router: Router,
+        private activatedroute: ActivatedRoute
     ) {
         window.addEventListener('message', (e) => {
             this.receiveMessage(e);
         }, false);
-     }
+    }
 
     ngOnInit() {
+        this.activatedroute.params.subscribe(pars => {
+            console.log(this.router.url);
+            if (this.router.url.includes('/apps/share') && pars['key']) {
+                this.LinkIFrame = `http://admincloud.truongkhoa.com/Home/Dashboard?share=${pars['key']}`;
+            }
+            if (this.router.url.includes('/apps/data') && pars['key']) {
+                this.LinkIFrame = `http://admincloud.truongkhoa.com/Home/Dashboard?data=${pars['key']}`;
+            }
+        });
     }
 
 

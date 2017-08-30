@@ -21,6 +21,8 @@ import { SettingService } from '../Share/Services/setting.service';
 import { ShareModule, } from '../Share/Components/share.module';
 
 const routing: Routes = [
+    { path: 'data/:key', component: LayoutComponent },
+    { path: 'share/:key', component: LayoutComponent },
     {
         path: '', component: LayoutComponent,
         children: [

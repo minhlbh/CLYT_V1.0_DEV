@@ -18,7 +18,8 @@ export class TracuuthuocComponent implements OnInit {
     constructor(
         private settingService: SettingService,
         private router: Router,
-        private activatedroute: ActivatedRoute) { }
+        private activatedroute: ActivatedRoute
+    ) { }
 
     ngOnInit() {
         this.activatedroute.params.subscribe(pars => {
