@@ -9,12 +9,14 @@
     float: left;
     overflow: hidden;
 }
-.button{
+
+.button {
     text-decoration: none;
     border: none;
     display: inline-block;
     cursor: pointer;
 }
+
 .body {
     position: relative;
     height: calc(100% - 60px);
@@ -76,7 +78,7 @@ input {
 
 .header {
     float: left;
-    width:100%;
+    width: 100%;
     border-bottom: 1px solid #ccc;
     margin: 20px 20px 0 20px;
 }
@@ -99,7 +101,6 @@ input {
     bottom: -150px;
     border-radius: 3px;
 }
-
 
 .cancel {
     float: right;
@@ -138,7 +139,7 @@ h3 {
 
 .tomtat {
     float: left;
-    width: 100%;
+    width: calc(100% - 31px);
     margin-bottom: 10px;
     padding-top: 20px;
 }
@@ -179,6 +180,7 @@ h3 {
 span {
     padding-right: 6px;
 }
+
 
 /* .fr-box fr-basic fr-top {
     height: 300px;

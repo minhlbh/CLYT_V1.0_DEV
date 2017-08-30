@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { group } from '@angular/animations';
+import { TaomoiService } from '../../../Share/Services/taomoi.service';
 
 
 @Component({
@@ -11,19 +12,22 @@ import { group } from '@angular/animations';
 export class TaomoiComponent implements OnInit {
     public form = new FormGroup({
         Sql_Id: new FormControl(),
-        TenBenh: new FormControl(),
+        Ten: new FormControl(),
         TomTat: new FormControl(),
         ThongTin: new FormControl()
     });
     fb: FormBuilder;
-    constructor() {
-    }
-
+    constructor(
+        private taomoiService: TaomoiService
+    ) {}
     ngOnInit() {
     }
-
     create() {
-       console.log(this.form.value);
+        this.form.controls['Sql_Id'].setValue('49200');
+        this.form.controls['TomTat'].setValue('rat nguy hiem');
+        console.log(this.form.value);
+        this.taomoiService.create(this.form).subscribe(data => {
+            console.log(data);
+        });
     }
-
 }
