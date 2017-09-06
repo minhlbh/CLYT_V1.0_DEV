@@ -5,20 +5,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, NgControl } from '@angular/forms';
 import { ResponsiveModule } from 'ng2-responsive';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { ShareModule, } from '../Share/Components/share.module';
 
-import { ChildFrameComponent } from './Frame/ChildFrame/ChildFrame.component';
-import { ChiTietBenhComponent } from './Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
-import { BenhService } from '../Share/Services/benh.service';
 
 // components
 import { LayoutComponent } from './Layout/Layout.component';
 import { NavComponent } from './Layout/nav/nav.component';
 import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
+import { ChildFrameComponent } from './Frame/ChildFrame/ChildFrame.component';
+import { ChiTietBenhComponent } from './Tracuubenh/chi-tiet-benh/chi-tiet-benh.component';
 import { EmptyComponent } from '../Share/Components/empty/empty.component';
 
 // service
 import { SettingService } from '../Share/Services/setting.service';
-import { ShareModule, } from '../Share/Components/share.module';
+import { BenhService } from '../Share/Services/benh.service';
+
 
 const routing: Routes = [
     { path: 'data/:key', component: LayoutComponent },
@@ -53,7 +54,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         FormsModule,
         FlexLayoutModule,
         ShareModule,
-        ShareButtonsModule.forRoot()
+        ShareButtonsModule.forRoot(),
 
     ],
     declarations: [

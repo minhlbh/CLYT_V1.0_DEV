@@ -2,50 +2,55 @@
     <div class="title-window">
         <h3 class="big-title " style="cursor: default ">Thêm bệnh</h3>
     </div>
-    <a href="#" class="cancel">
-        <span class="glyphicon glyphicon-remove"></span>
-        Hủy
-      </a>
-    <a href="#" class="done">
-            <span class="glyphicon glyphicon-ok"></span>
-            Hoàn tất
-          </a>
-    <div class="body">
 
-        <div class="content-wr">
-            <!-- <form [formGroup]="loginForm" (ngSubmit)="doLogin($event)"> -->
-            <div class="add">
-                <div class="content">
+    <div class="body">
+        <form [formGroup]="form" (ngSubmit)="create($event)">
+            <!-- content wrapper -->
+            <div class="content-wr">
+
+                <!-- thanh phan benh -->
+                <div class="add">
+                    <div class="content">
                         <div class="tenbenh">
-                                <h3>Id Bệnh</h3>
-                                <input type="text" disabled="disabled" name="" value="" size="30" class="form-control input-sm" />
-                            </div>
+                            <h3>Id Bệnh</h3>
+                            <input type="text" disabled="disabled" [formControl]="form.controls['Sql_Id']" value="" size="30" class="form-control input-sm"
+                            />
+                        </div>
                         <div class="tenbenh">
                             <h3>Tên bệnh</h3>
-                            <input type="text" name="" value="" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm" />
+                            <input type="text" [formControl]="form.controls['TenBenh']" value="" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm"
+                            />
                         </div>
+                    </div>
+                </div>
+
+                <!-- info -->
+                <div class="info">
+                    <div class="header">
+                        <h2> Thông tin</h2>
+                    </div>
+                    <div class="content">
                         <div class="tomtat">
-                            <h3>Tóm tắt</h3>
-                            <textarea type="text" name="" placeholder="Tóm tắt cho bệnh" class="text-box"></textarea>
+                            <textarea [froalaEditor] type="text" [formControl]="form.controls['ThongTin']" placeholder="Tóm tắt cho bệnh" class="text-box"></textarea>
+                            <!-- <a class="button" href="#"><span class="glyphicon glyphicon-plus"></span>Thêm thông tin</a> -->
                         </div>
-                </div>
-            </div>
-            <div class="info">
-                <div class="header">
-                    <h2> Thông tin</h2>
-                </div>
-                <div class="content">
-                    <div class="tenbenh">
-                        <h3>Tiêu đề</h3>
-                        <input type="text" name="" value="" size="30" class="form-control input-sm" />
-                    </div>
-                    <div class="tomtat">
-                        <h3>Nội dung</h3>
-                        <textarea type="text" name="" placeholder="Tóm tắt cho bệnh" class="text-box"></textarea>
-                        <a class="button" href="#"><span class="glyphicon glyphicon-plus"></span>Thêm thông tin</a>
                     </div>
                 </div>
+                <!-- cancel button -->
+            <a href="#" class="cancel">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Hủy
+            </a>
+
+            <!-- submit button -->
+            <button type="submit" class="done">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    Hoàn tất
+            </button>
             </div>
-            <!-- </form> -->
-        </div>
+
+
+        </form>
     </div>
+
+</div>

@@ -1,4 +1,4 @@
-.window{
+.window {
     width: 800px;
     padding: 45px 0 0 0;
     background: #fff;
@@ -9,26 +9,34 @@
     float: left;
     overflow: hidden;
 }
-.body{
-        position: relative;
+
+.button {
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.body {
+    position: relative;
     height: calc(100% - 60px);
-        overflow: auto;
-        margin-top: 60px;
+    overflow: auto;
+    margin-top: 60px;
     border-top: solid 1px #eee;
 }
-.content-wr{
 
+.content-wr {
     height: calc(100vh - 85px);
     width: 800px;
-
     background: #fff;
-
 }
-#container{
+
+#container {
     font-family: Helvetica;
     font-weight: 100;
 }
-.title-window{
+
+.title-window {
     float: left;
     width: 100%;
     height: 44px;
@@ -38,117 +46,123 @@
     top: 0;
     left: 0;
     padding: 0 0 0 55px;
-
 }
-.title-window h3{
+
+.title-window h3 {
     display: block;
     font-size: 1.17em;
     width: 100px;
     font-weight: bold;
 }
-.big-title{
+
+.big-title {
     font-size: 16px;
     margin: 0;
     font-weight: 600;
     padding: 0;
-
-    line-height: 43px;;
+    line-height: 43px;
+    ;
 }
 
-input{
+input {
     border-radius: 3px;
     width: 300px;
 }
+
 .add {
     float: left;
     width: 100%;
     border-bottom: 1px solid white;
     position: relative;
-
 }
-.header{
+
+.header {
     float: left;
-    width: calc(100% - 60px);
+    width: 100%;
     border-bottom: 1px solid #ccc;
     margin: 20px 20px 0 20px;
-
 }
-.header p{
+
+.header p {
     font-size: 30px;
     float: left;
     margin: 10px 0 10px 0;
-
-
 }
 
-
-.done{
+.done {
     float: right;
     background-color: #4386fc;
     color: white;
     padding: 10px;
     font-size: 15px;
-    margin:10px;
+    margin: 10px;
     position: absolute;
-    right:20px;
+    right: 10px;
+    bottom: -150px;
+    border-radius: 3px;
 }
-.cancel{
+
+.cancel {
     float: right;
     background-color: #ccc;
     color: white;
     padding: 10px;
     font-size: 15px;
-    margin:10px;
+    margin: 10px;
     position: absolute;
-    right:130px;
+    right: 125px;
+    bottom: -150px;
+    border-radius: 3px;
 }
 
-.benh{
+.benh {
     float: left;
     width: 100%;
     border-bottom: 1px solid #dedede;
     margin-bottom: 20px;
 }
-h3{
+
+h3 {
     width: auto;
     padding: 0;
     margin: 0 10px 10px 0;
     font-size: 20px;
     font-weight: 700;
-
 }
-.tenbenh{
+
+.tenbenh {
     float: left;
     width: 100%;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
 
-margin-bottom: 10px;
-padding-top: 20px;
-}
-.tomtat{
+.tomtat {
     float: left;
-    width: 100%;
+    width: calc(100% - 31px);
+    margin-bottom: 10px;
+    padding-top: 20px;
 }
-.text-box{
+
+.text-box {
     float: left;
     width: calc(100% - 40px);
-    height: 150px;
+    height: 170px;
     border: 1px solid #ccc;
     padding: 10px;
-
-
 }
-.info{
+
+.info {
     float: left;
     width: 100%;
     padding-bottom: 20px;
 }
 
-
-.content{
+.content {
     padding-left: 20px;
 }
-.button{
 
+.button {
     background-color: orange;
     text-align: center;
     float: left;
@@ -157,12 +171,18 @@ padding-top: 20px;
     font-size: 15px;
     margin: 10px 0 50px 0;
 }
-.foot{
+
+.foot {
     float: left;
     width: 100%;
-
 }
-span{
+
+span {
     padding-right: 6px;
 }
 
+
+/* .fr-box fr-basic fr-top {
+    height: 300px;
+    width: 300px;
+} */

@@ -41,7 +41,7 @@ import { AutoCompleteService } from '../Services/autoComplete.service';
         ShareButtonsModule,
         FacebookModule.forRoot(),
         MetadataModule.forRoot(),
-        RouterModule
+        RouterModule,
     ],
     declarations: [
         WindowComponent,
