@@ -214,3 +214,6 @@ padding: 12px 10px 12px 40px;
     line-height: 17px;
     cursor: pointer !important;
 }
+.bt-features:hover {
+    color: #337ab7;
+}

@@ -5,28 +5,25 @@
         <div class="search-box-top">
             <div class="input-control text full-size" data-role="input">
                 <span class="fa fa-fw fa-search icon icon-search" aria-hidden="true"></span>
-                <input #searchKey placeholder="Tìm kiếm bệnh theo tên"
-                (keyup.enter)="doSearch(searchKey.value)"
-                ngui-auto-complete
-                    [(ngModel)]="selected"
-                    [source]="observableSource.bind(this)"
-                    (valueChanged)="doSearch($event.Name)"
-                    min-chars="2"
-                    no-match-found-text="Không có kết quả"
-                    loading-text="Đang tải..."
-                    auto-select-first-item="true"
-                    list-formatter="Name">
+                <input #searchKey placeholder="Tìm kiếm bệnh theo tên" (keyup.enter)="doSearch(searchKey.value)" ngui-auto-complete [(ngModel)]="selected"
+                    [source]="observableSource.bind(this)" (valueChanged)="doSearch($event.Name)" min-chars="2" no-match-found-text="Không có kết quả"
+                    loading-text="Đang tải..." auto-select-first-item="true" list-formatter="Name">
                 <!-- <input type="text" placeholder="Nhập tên bệnh..." [formControl]="searchKey"> -->
             </div>
             <!-- <app-autocomplete *ngIf="isSearch" (ReturnData)="getAutoComplete($event)" [apiUrl]="apiUrl" [term]="term"></app-autocomplete> -->
             <!-- <br/>selected model: {{selected | json}}<br/><br/> -->
         </div>
         <!-- đếm số bệnh -->
-        <div style="padding: 0px 20px 0 0;margin-top: -20px;">
+        <div style="padding: 0px 20px;margin-top: -20px;">
+            <a [routerLink]="['taomoi']" href="#" class="bt-features">
+                        <span class="fa fa-plus icon"></span>
+                        Tạo mới
+                    </a>
             <span style="font-size: 11px; color: #888; float: right;">
                 {{endBenh}}/{{TongSoLuong}} bệnh
                 </span>
         </div>
+
 
         <hr class="thin bg-grayLighter">
 
