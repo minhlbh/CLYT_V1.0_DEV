@@ -14,7 +14,8 @@ export class TaomoiComponent implements OnInit {
         Sql_Id: new FormControl(),
         Ten: new FormControl(),
         TomTat: new FormControl(),
-        ThongTin: new FormControl()
+        ThongTin: new FormControl(),
+        TenBenh: new FormControl(),
     });
     fb: FormBuilder;
     constructor(
