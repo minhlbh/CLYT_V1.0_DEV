@@ -18,6 +18,8 @@ export class TaomoiComponent implements OnInit {
         TenBenh: new FormControl(),
     });
     fb: FormBuilder;
+    public icon: any;
+
     constructor(
         private taomoiService: TaomoiService
     ) {}
