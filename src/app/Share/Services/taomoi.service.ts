@@ -7,15 +7,13 @@ export class TaomoiService {
 
 constructor(private http: Http) { }
 create(form: FormGroup) {
-    let body = new URLSearchParams();
+    const body = new URLSearchParams();
+    console.log(form.value);
+
     // tslint:disable-next-line:prefer-const
     let data = JSON.parse(form.value);
-    console.log(form.value);
     body.set('Ten', data.TenBenh);
-    body.set('Sql_Id', data.Sql_Id);
     body.set('ThongTin', data.ThongTin);
-    body.set('TomTat', data.TomTat);
-
 
     return this.http.post(`http://api.truongkhoa.com/api/CSDLYT/Benh_Create`, data).map((response: Response) => response.json());
 }

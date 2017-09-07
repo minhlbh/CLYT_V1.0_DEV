@@ -14,12 +14,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TaomoiComponent implements OnInit {
     public form = new FormGroup({
         Sql_Id: new FormControl(),
-        Ten: new FormControl(),
-        TomTat: new FormControl(),
         ThongTin: new FormControl(),
         TenBenh: new FormControl(),
     });
-    fb: FormBuilder;
     public icon: any;
     public name: string;
     public url: any;
@@ -35,12 +32,12 @@ export class TaomoiComponent implements OnInit {
         this.url = 'apps/tracuubenh';
 
     }
-    create() {
-        this.form.controls['Sql_Id'].setValue('49200');
-        this.form.controls['TomTat'].setValue('rat nguy hiem');
-        console.log(this.form.value);
-        this.taomoiService.create(this.form).subscribe(data => {
+    create(form: FormGroup) {
+        console.log(form.value);
+        
+        this.taomoiService.create(form).subscribe(data => {
             console.log(data);
+
         });
     }
     back() {
