@@ -1,7 +1,4 @@
-<div class="window">
-    <div class="title-window">
-        <h3 class="big-title " style="cursor: default ">Thêm bệnh</h3>
-    </div>
+<app-window [name]="name" [icon]="icon">
 
     <div class="body">
         <form [formGroup]="form" (ngSubmit)="create($event)">
@@ -37,13 +34,13 @@
                     </div>
                 </div>
                 <!-- cancel button -->
-            <a href="#" class="cancel">
+                <a href="#" class="cancel">
                     <span class="glyphicon glyphicon-remove"></span>
                     Hủy
             </a>
 
-            <!-- submit button -->
-            <button type="submit" class="done">
+                <!-- submit button -->
+                <button type="submit" class="done">
                     <span class="glyphicon glyphicon-ok"></span>
                     Hoàn tất
             </button>
@@ -52,5 +49,4 @@
 
         </form>
     </div>
-
-</div>
+</app-window>

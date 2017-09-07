@@ -19,11 +19,15 @@ export class TaomoiComponent implements OnInit {
     });
     fb: FormBuilder;
     public icon: any;
+    public name: string;
 
     constructor(
         private taomoiService: TaomoiService
     ) {}
     ngOnInit() {
+        this.name = 'Tạo mới bệnh';
+        this.icon = '../../../../assets/images/plus-black-symbol.svg';
+
     }
     create() {
         this.form.controls['Sql_Id'].setValue('49200');
