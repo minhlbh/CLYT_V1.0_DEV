@@ -32,6 +32,7 @@ export class TaomoiComponent implements OnInit {
     ngOnInit() {
         this.name = 'Tạo mới bệnh';
         this.icon = '../../../../assets/images/plus-black-symbol.svg';
+        this.url = 'apps/tracuubenh';
 
     }
     create() {
