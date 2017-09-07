@@ -34,7 +34,6 @@ export class WindowComponent implements OnInit {
     }
 
     back() {
-        console.log(this.url);
         this.router.navigate([this.url]);
     }
 }
