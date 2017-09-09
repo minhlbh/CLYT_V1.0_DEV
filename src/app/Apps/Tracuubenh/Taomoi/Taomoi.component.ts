@@ -13,7 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TaomoiComponent implements OnInit {
     public form = new FormGroup({
-        Sql_Id: new FormControl(),
         ThongTin: new FormControl(),
         TenBenh: new FormControl(),
     });
@@ -33,11 +32,7 @@ export class TaomoiComponent implements OnInit {
 
     }
     create(form: FormGroup) {
-        console.log(form.value);
-        
         this.taomoiService.create(form).subscribe(data => {
-            console.log(data);
-
         });
     }
     back() {

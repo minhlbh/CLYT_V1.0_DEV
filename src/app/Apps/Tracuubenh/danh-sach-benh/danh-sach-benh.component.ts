@@ -103,6 +103,9 @@ export class DanhSachBenhComponent implements OnInit {
         this.apiUrl = 'Benh_Search';
 
     }
+    back() {
+        this.router.navigate(['apps/tracuubenh/taomoi']);
+    }
     // navigate to chi-tiet-benh url with id
     clickBenh(id) {
         this.router.navigate(['tracuubenh/', id]);

@@ -1,6 +1,6 @@
-<app-window [name]="name" [icon]="icon" [url]="url" >
+<div class="window">
+    <app-window [name]="name" [icon]="icon" [url]="url">
 
-    <div class="body">
         <form [formGroup]="form" (ngSubmit)="create($event)">
             <!-- content wrapper -->
             <div class="content-wr">
@@ -8,11 +8,6 @@
                 <!-- thanh phan benh -->
                 <div class="add">
                     <div class="content">
-                        <div class="tenbenh">
-                            <h3>Id Bệnh</h3>
-                            <input type="text" disabled="disabled" [formControl]="form.controls['Sql_Id']" value="" size="30" class="form-control input-sm"
-                            />
-                        </div>
                         <div class="tenbenh">
                             <h3>Tên bệnh</h3>
                             <input type="text" [formControl]="form.controls['TenBenh']" value="" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm"
@@ -45,8 +40,6 @@
                     Hoàn tất
             </button>
             </div>
-
-
         </form>
-    </div>
 </app-window>
+</div>
