@@ -16,6 +16,7 @@ export class TracuubenhComponent implements OnInit {
     iconText: any;
     name: any;
     showChiTiet = false;
+    showTaoMoi = false;
     ChiTietBenh: any;
     detailBenhId = 0;
 
@@ -41,6 +42,14 @@ export class TracuubenhComponent implements OnInit {
         } else {
             this.detailBenhId = id;
             this.showChiTiet = true;
+        }
+    }
+
+    showTaomoi(showTaomoi: boolean ) {
+        if (showTaomoi === true) {
+            this.showTaoMoi = true;
+        } else {
+            this.showTaoMoi = false;
         }
     }
 

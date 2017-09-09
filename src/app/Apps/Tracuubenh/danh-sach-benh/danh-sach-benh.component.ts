@@ -25,6 +25,7 @@ import 'rxjs/add/observable/of';
     styleUrls: ['./danh-sach-benh.component.css']
 })
 export class DanhSachBenhComponent implements OnInit {
+    @Output() open: EventEmitter<any> = new EventEmitter();
     menu: any;
     iconText: any;
     name: any;
@@ -103,9 +104,12 @@ export class DanhSachBenhComponent implements OnInit {
         this.apiUrl = 'Benh_Search';
 
     }
-    back() {
+    // show and nav to taomoi
+    showtaomoi() {
+        this.open.emit(true);
         this.router.navigate(['apps/tracuubenh/taomoi']);
     }
+
     // navigate to chi-tiet-benh url with id
     clickBenh(id) {
         this.router.navigate(['tracuubenh/', id]);
