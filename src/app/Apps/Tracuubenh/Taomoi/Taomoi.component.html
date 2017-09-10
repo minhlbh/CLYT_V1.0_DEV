@@ -1,7 +1,7 @@
 <div class="window">
     <app-window [name]="name" [icon]="icon" [url]="url">
 
-        <form [formGroup]="form" (ngSubmit)="create($event)">
+        <form [formGroup]="form" (ngSubmit)="create()">
             <!-- content wrapper -->
             <div class="content-wr">
 
@@ -20,8 +20,7 @@
                 <div class="info">
                     <div class="content">
                         <div class="tomtat">
-                            <textarea type="text" [formControl]="form.controls['ThongTin']" placeholder="Tóm tắt cho bệnh" class="text-box"></textarea>
-                            <!-- <a class="button" href="#"><span class="glyphicon glyphicon-plus"></span>Thêm thông tin</a> -->
+                            <app-tinymce [elementId]="'my-editor-id'" (onEditorKeyup)="log($event)"></app-tinymce>
                         </div>
                     </div>
                 </div>

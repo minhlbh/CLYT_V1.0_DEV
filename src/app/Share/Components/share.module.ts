@@ -17,6 +17,7 @@ import { ChiTietBenhComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/chi-ti
 import { LoadDuLieuImgComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
 import { LoadDuLieuLinkComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component';
 import { LoadDuLieuTextComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component';
+import { AutoCompleteService } from '../Services/autoComplete.service';
 // tslint:disable-next-line:max-line-length
 import { LoadDuLieuYoutubeComponent } from '../../Apps/Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-youtube/load-du-lieu-youtube.component';
 import { ForumBarComponent } from '../../Apps/Tracuubenh/forum-bar/forum-bar.component';
@@ -27,7 +28,7 @@ import { AutoCompleteComponent } from './autoComplete/autoComplete.component';
 // pipe and services
 import { SafePipe } from '../../Share/Pipes/safe.pipe';
 import { SettingService } from '../Services/setting.service';
-import { AutoCompleteService } from '../Services/autoComplete.service';
+import { TinymceComponent } from './TextEditor/tinymce.component';
 
 
 
@@ -54,11 +55,13 @@ import { AutoCompleteService } from '../Services/autoComplete.service';
         ForumBarComponent,
         WinframeComponent,
         ChildFrameComponent,
+        TinymceComponent,
         AutoCompleteComponent
     ],
     exports: [
         WindowComponent,
         SafePipe,
+        TinymceComponent,
         ChiTietBenhComponent,
         LoadDuLieuImgComponent,
         LoadDuLieuLinkComponent,

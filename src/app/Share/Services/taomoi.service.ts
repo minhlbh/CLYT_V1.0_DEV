@@ -8,13 +8,9 @@ export class TaomoiService {
 constructor(private http: Http) { }
 create(form: FormGroup) {
     const body = new URLSearchParams();
-    console.log(form.value);
+    body.set('Ten', form.controls['TenBenh'].value);
+    body.set('ThongTin', form.controls['ThongTin'].value);
 
-    // tslint:disable-next-line:prefer-const
-    let data = JSON.parse(form.value);
-    body.set('Ten', data.TenBenh);
-    body.set('ThongTin', data.ThongTin);
-
-    return this.http.post(`http://api.truongkhoa.com/api/CSDLYT/Benh_Create`, data).map((response: Response) => response.json());
+    return this.http.post(`http://api.truongkhoa.com/api/CSDLYT/Benh_Create`, body).map((response: Response) => response.json());
 }
 }

@@ -8,15 +8,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { ResponsiveModule } from 'ng2-responsive';
 import { FacebookModule } from 'ngx-facebook';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { ShareModule } from '../../Share/Components/share.module';
+import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
 import { DanhSachBenhComponent } from './danh-sach-benh/danh-sach-benh.component';
 import { ChiTietBenhComponent } from './chi-tiet-benh/chi-tiet-benh.component';
 import { ForumBarComponent } from './forum-bar/forum-bar.component';
+import { BaoCaoComponent } from './bao-cao/bao-cao.component';
 import { TaomoiComponent } from './Taomoi/Taomoi.component';
-// import { WindowComponent } from '../../Share/Components/window/window.component';
 import { LoadDuLieuImgComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
 import { LoadDuLieuTextComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component';
 import { LoadDuLieuLinkComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component';
@@ -27,10 +28,7 @@ import { BenhService } from '../../Share/Services/benh.service';
 import { ForumService } from '../../Share/Services/forum.service';
 import { TaomoiService } from '../../Share/Services/taomoi.service';
 
-import { ShareModule } from '../../Share/Components/share.module';
 
-import { BaoCaoComponent } from './bao-cao/bao-cao.component';
-import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 
 const routing: Routes = [
@@ -52,8 +50,6 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         HttpModule,
         FacebookModule.forRoot(),
         ShareButtonsModule.forRoot(),
-        FroalaEditorModule.forRoot(),
-        FroalaViewModule.forRoot(),
         Routing,
         ShareModule,
         NguiAutoCompleteModule

@@ -143,14 +143,6 @@ h3 {
     padding-top: 20px;
 }
 
-.text-box {
-    float: left;
-    width: calc(100% - 40px);
-    height: 170px;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
 .info {
     float: left;
     width: 100%;
