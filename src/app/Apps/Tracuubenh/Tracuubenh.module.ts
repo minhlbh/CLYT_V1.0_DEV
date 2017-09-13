@@ -18,6 +18,7 @@ import { ChiTietBenhComponent } from './chi-tiet-benh/chi-tiet-benh.component';
 import { ForumBarComponent } from './forum-bar/forum-bar.component';
 import { BaoCaoComponent } from './bao-cao/bao-cao.component';
 import { TaomoiComponent } from './Taomoi/Taomoi.component';
+import { ChinhsuaComponent } from './chinh-sua/chinhsua/chinhsua.component';
 import { LoadDuLieuImgComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
 import { LoadDuLieuTextComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component';
 import { LoadDuLieuLinkComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component';
@@ -58,6 +59,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         TracuubenhComponent,
         DanhSachBenhComponent,
         TaomoiComponent,
+        ChinhsuaComponent,
         // ChiTietBenhComponent,
         // WindowComponent,
         // LoadDuLieuImgComponent,

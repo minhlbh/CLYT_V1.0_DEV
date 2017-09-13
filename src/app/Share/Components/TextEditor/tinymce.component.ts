@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, AfterViewInit, OnDestroy, Input } from '@angular/core';
-
+import { element } from 'protractor';
+import { Http } from '@angular/http';
+import { Location } from '@angular/common';
 declare var tinymce: any;
 
 @Component({
@@ -11,9 +13,12 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
     @Input() elementId: String;
     @Output() onEditorKeyup = new EventEmitter<any>();
     public editor: any;
-    constructor() { }
+    constructor(
+        public http: Http
+    ) { }
 
     ngAfterViewInit() {
+        localStorage.setItem('textEditor.imgData', '');
         tinymce.init({
             selector: '#' + this.elementId,
             plugins: [
@@ -23,7 +28,7 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
                 'emoticons template paste textcolor colorpicker textpattern'
             ],
             // tslint:disable-next-line:max-line-length
-            toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar1: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
             toolbar2: 'print preview media | forecolor backcolor emoticons',
             // enable title field in the Image dialog
             image_title: true,
@@ -71,7 +76,7 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
 
                 xhr = new XMLHttpRequest();
                 xhr.withCredentials = false;
-                xhr.open('POST', 'http://localhost:5001/api/DD/UploadImg');
+                xhr.open('POST', 'http://api.truongkhoa.com/api/DD/UploadImg');
 
                 xhr.onload = function () {
                     let json;
@@ -87,8 +92,20 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
                         failure('Invalid JSON: ' + xhr.responseText);
                         return;
                     }
+                    if (xhr.status === 200) {
+                        success(json.location);
+                        const _images = localStorage.getItem('textEditor.imgData');
+                        try {
+                            let images = JSON.parse(_images);
+                            images = [...images, json.location];
+                            localStorage.setItem('textEditor.imgData', JSON.stringify(images));
+                        } catch (e) {
+                            let images = [];
+                            images = [...images, json.location];
+                            localStorage.setItem('textEditor.imgData', JSON.stringify(images));
+                        }
+                    }
 
-                    success(json.location);
                 };
 
                 formData = new FormData();
@@ -101,9 +118,17 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
                 editor.on('keyup', () => {
                     const content = editor.getContent();
                     this.onEditorKeyup.emit(content);
+
                 });
+                // editor.on('NodeChange', function (e) {
+                //     // console.log('blockCache', e.element);
+                //     if (e.element.nodeName === 'IMG') {
+                //         console.log(e.element.currentSrc);
+                //     }
+                // });
             }
         });
+
     }
 
     ngOnDestroy() {
