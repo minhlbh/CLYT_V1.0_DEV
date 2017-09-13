@@ -27,6 +27,8 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
                 'insertdatetime media nonbreaking save table contextmenu directionality',
                 'emoticons template paste textcolor colorpicker textpattern'
             ],
+            height : '500',
+            menubar: 'false',
             // tslint:disable-next-line:max-line-length
             toolbar1: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
             toolbar2: 'print preview media | forecolor backcolor emoticons',

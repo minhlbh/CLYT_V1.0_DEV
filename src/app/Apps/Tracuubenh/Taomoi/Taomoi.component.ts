@@ -65,6 +65,9 @@ export class TaomoiComponent implements OnInit {
         }
         this.taomoiService.create(this.form).subscribe(data => {
             console.log(data);
+            this.taomoiService.loadChiTietBenhMongo(data).subscribe(rs => {
+                console.log(rs);
+            });
         });
     }
 
