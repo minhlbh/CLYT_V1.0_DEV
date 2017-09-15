@@ -16,12 +16,10 @@ export class TracuubenhComponent implements OnInit {
     iconText: any;
     name: any;
     showChiTiet = false;
+    showChiTietMongo = false;
     showTaoMoi = false;
     ChiTietBenh: any;
     detailBenhId = 0;
-
-
-
 
     constructor(
         private settingService: SettingService,
@@ -32,7 +30,11 @@ export class TracuubenhComponent implements OnInit {
 
     ngOnInit() {
         this.activatedroute.params.subscribe(pars => {
-            this.idBenh(pars['id']);
+            if (pars['id'] && pars['id'].length >= 6) {
+                this.idBenhMongo(pars['id']);
+            } else {
+                this.idBenh(pars['id']);
+            }
         });
     }
 
@@ -45,7 +47,16 @@ export class TracuubenhComponent implements OnInit {
         }
     }
 
-    showTaomoi(showTaomoi: boolean ) {
+    idBenhMongo(id: number) {
+        if (id == null) {
+            this.showChiTietMongo = false;
+        } else {
+            this.detailBenhId = id;
+            this.showChiTietMongo = true;
+        }
+    }
+
+    showTaomoi(showTaomoi: boolean) {
         if (showTaomoi === true) {
             this.showTaoMoi = true;
         } else {

@@ -1,5 +1,5 @@
-<app-window [name]="name" [icon]="icon" [url]="url">
-    <form [formGroup]="form" (ngSubmit)="create()">
+<app-window [name]="name" [url]="url">
+    <form [formGroup]="form" (ngSubmit)="edit()">
         <!-- content wrapper -->
         <div class="content-wr">
             <!-- thanh phan benh -->
@@ -7,7 +7,7 @@
                 <div class="content">
                     <div class="tenbenh">
                         <h3>Tên bệnh</h3>
-                        <input type="text" [formControl]="form.controls['TenBenh']" value="" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm"
+                        <input type="text" [formControl]="form.controls['TenBenh']" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm"
                         />
                     </div>
                 </div>
@@ -17,7 +17,7 @@
             <div class="info">
                 <div class="content">
                     <div class="tomtat">
-                        <app-tinymce [initValue]="" [elementId]="'my-editor-id'" (onEditorKeyup)="setValue($event)"></app-tinymce>
+                        <app-tinymce [initValue]="ThongTin" [elementId]="'my-editor-id'" (onEditorKeyup)="setValue($event)"></app-tinymce>
                     </div>
                 </div>
             </div>

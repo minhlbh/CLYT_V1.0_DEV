@@ -42,6 +42,16 @@ export class BenhService {
             // ...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
+
+    getChiTietBenhMongo(id: any): Observable<any> {
+        const chiTietBenhUrl = `${environment.apiUrl}DD/ChiTietBenhMongo?id=${id}`;
+        // ...using get request
+        return this.http.get(chiTietBenhUrl)
+            // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
+            // ...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
 }
 
 export class Benh {

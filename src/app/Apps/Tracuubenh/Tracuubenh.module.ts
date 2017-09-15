@@ -13,12 +13,13 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 // components
 import { TracuubenhComponent } from './Tracuubenh.component';
+import { BaoCaoComponent } from './bao-cao/bao-cao.component';
 import { DanhSachBenhComponent } from './danh-sach-benh/danh-sach-benh.component';
 import { ChiTietBenhComponent } from './chi-tiet-benh/chi-tiet-benh.component';
+import { ChiTietBenhMongoComponent } from './chi-tiet-benh/chi-tiet-benh-mongo/chi-tiet-benh-mongo.component';
 import { ForumBarComponent } from './forum-bar/forum-bar.component';
-import { BaoCaoComponent } from './bao-cao/bao-cao.component';
 import { TaomoiComponent } from './Taomoi/Taomoi.component';
-import { ChinhsuaComponent } from './chinh-sua/chinhsua/chinhsua.component';
+import { ChinhsuaComponent } from './chinh-sua/chinhsua.component';
 import { LoadDuLieuImgComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-img/load-du-lieu-img.component';
 import { LoadDuLieuTextComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-text/load-du-lieu-text.component';
 import { LoadDuLieuLinkComponent } from '../Tracuubenh/chi-tiet-benh/Load-items/load-du-lieu-link/load-du-lieu-link.component';
@@ -37,6 +38,7 @@ const routing: Routes = [
     { path: 'taomoi', component: TracuubenhComponent },
     { path: ':id', component: TracuubenhComponent },
     { path: ':id/baocao', component: BaoCaoComponent },
+    { path: ':id/chinhsua', component: ChinhsuaComponent },
 ];
 
 const Routing: ModuleWithProviders = RouterModule.forChild(routing);
@@ -60,6 +62,7 @@ const Routing: ModuleWithProviders = RouterModule.forChild(routing);
         DanhSachBenhComponent,
         TaomoiComponent,
         ChinhsuaComponent,
+        ChiTietBenhMongoComponent,
         // ChiTietBenhComponent,
         // WindowComponent,
         // LoadDuLieuImgComponent,

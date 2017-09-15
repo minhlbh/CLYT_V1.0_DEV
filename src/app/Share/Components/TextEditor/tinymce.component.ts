@@ -10,12 +10,15 @@ declare var tinymce: any;
     styleUrls: ['./tinymce.component.css']
 })
 export class TinymceComponent implements AfterViewInit, OnDestroy {
+    @Input() initValue: string;
     @Input() elementId: String;
     @Output() onEditorKeyup = new EventEmitter<any>();
     public editor: any;
     constructor(
         public http: Http
     ) { }
+
+
 
     ngAfterViewInit() {
         localStorage.setItem('textEditor.imgData', '');
@@ -27,7 +30,7 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
                 'insertdatetime media nonbreaking save table contextmenu directionality',
                 'emoticons template paste textcolor colorpicker textpattern'
             ],
-            height : '500',
+            height : '300',
             menubar: 'false',
             // tslint:disable-next-line:max-line-length
             toolbar1: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
@@ -115,19 +118,17 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
 
                 xhr.send(formData);
             },
+
             setup: editor => {
                 this.editor = editor;
+                editor.on('init', () => {
+                    editor.setContent(this.initValue);
+                  });
                 editor.on('keyup', () => {
                     const content = editor.getContent();
                     this.onEditorKeyup.emit(content);
 
                 });
-                // editor.on('NodeChange', function (e) {
-                //     // console.log('blockCache', e.element);
-                //     if (e.element.nodeName === 'IMG') {
-                //         console.log(e.element.currentSrc);
-                //     }
-                // });
             }
         });
 
