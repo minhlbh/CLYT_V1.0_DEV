@@ -62,7 +62,6 @@ export class ChinhsuaComponent implements OnInit {
             imgArr.forEach(element => {
                 if (thong_tin.indexOf(element) === -1) {
                     imgDeleted = [...imgDeleted, element];
-                    console.log('xoa', imgDeleted);
                 }
             });
             if (imgDeleted.length > 0) {

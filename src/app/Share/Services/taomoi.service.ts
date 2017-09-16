@@ -30,6 +30,6 @@ export class TaomoiService {
         body.set('Ten', form.controls['TenBenh'].value);
         body.set('ThongTin', form.controls['ThongTin'].value);
 
-        return this.http.post(`http://localhost:5001/api/DD/EditBenh`, body).map((response: Response) => response.json());
+        return this.http.post(`http://api.truongkhoa.com/api/DD/EditBenh`, body).map((response: Response) => response.json());
     }
 }
