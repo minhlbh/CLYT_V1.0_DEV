@@ -122,12 +122,13 @@ export class TinymceComponent implements AfterViewInit, OnDestroy {
             setup: editor => {
                 this.editor = editor;
                 editor.on('init', () => {
-                    editor.setContent(this.initValue);
+                    if (this.initValue){
+                        editor.setContent(this.initValue);
+                    }
                   });
                 editor.on('keyup', () => {
                     const content = editor.getContent();
                     this.onEditorKeyup.emit(content);
-
                 });
             }
         });

@@ -43,33 +43,36 @@ export class TaomoiComponent implements OnInit {
 
     create() {
         const _imgArr = localStorage.getItem('textEditor.imgData') ? localStorage.getItem('textEditor.imgData') : null;
-        console.log(_imgArr);
-        const imgArr = JSON.parse(_imgArr);
-        const thong_tin = this.form.controls['ThongTin'].value;
-        let imgDeleted = [];
-        imgArr.forEach(element => {
-            if (thong_tin.indexOf(element) === -1) {
-                imgDeleted = [...imgDeleted, element];
-                console.log('xoa', imgDeleted);
+        if (_imgArr) {
+            const imgArr = JSON.parse(_imgArr);
+            const thong_tin = this.form.controls['ThongTin'].value;
+            let imgDeleted = [];
+            imgArr.forEach(element => {
+                if (thong_tin.indexOf(element) === -1) {
+                    imgDeleted = [...imgDeleted, element];
+                }
+            });
+            if (imgDeleted.length > 0) {
+                this.http.post('http://api.truongkhoa.com/api/DD/DeleteImg', imgDeleted).subscribe(
+                    rs => {
+                        rs.json();
+                    },
+                    err => {
+                        console.log(err);
+                    });
             }
-        });
-        if (imgDeleted.length > 0) {
-
-            this.http.post('http://api.truongkhoa.com/api/DD/DeleteImg', imgDeleted).subscribe(
-            rs => {
-                rs.json();
-            },
-            err => {
-                    console.log(err);
+            this.taomoiService.create(this.form).subscribe(data => {
+                this.taomoiService.loadChiTietBenhMongo(data).subscribe(rs => {
+                    this.router.navigate([`apps/tracuubenh/${rs._id}`]);
+                });
+            });
+        } else {
+            this.taomoiService.create(this.form).subscribe(data => {
+                this.taomoiService.loadChiTietBenhMongo(data).subscribe(rs => {
+                    this.router.navigate([`apps/tracuubenh/${rs._id}`]);
+                });
             });
         }
-        this.taomoiService.create(this.form).subscribe(data => {
-            console.log(data);
-            this.taomoiService.loadChiTietBenhMongo(data).subscribe(rs => {
-                console.log(rs._id);
-                this.router.navigate([`apps/tracuubenh/${rs._id}`]);
-            });
-        });
     }
 
     back() {

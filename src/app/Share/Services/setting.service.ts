@@ -16,7 +16,6 @@ export class SettingService {
         private http: Http,
         @Inject(DOCUMENT) private document
     ) {
-        console.log(this.useValue);
     }
     // getFirstConfig(): Observable<any> {
     //     // ...using get request

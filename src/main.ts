@@ -45,7 +45,6 @@ function getHttp(): Http {
 
 getHttp().get(`${environment.apiUrl}Center/Home_Detail?i=0&tenmien=${document.location.hostname}`).toPromise()
 .then((res: Response) => {
-    console.log(res.json());
     const conf = res.json();
     localStorage.setItem('app_menu', JSON.stringify(conf.home));
     localStorage.setItem('app_config', JSON.stringify(conf.setting));

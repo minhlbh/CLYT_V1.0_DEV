@@ -29,9 +29,12 @@ export class TracuubenhComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        console.log(this.router.url);
         this.activatedroute.params.subscribe(pars => {
             if (pars['id'] && pars['id'].length >= 6) {
                 this.idBenhMongo(pars['id']);
+            } else if(this.router.url.includes('tracuubenh/taomoi')) {
+                this.showTaoMoi = true;
             } else {
                 this.idBenh(pars['id']);
             }

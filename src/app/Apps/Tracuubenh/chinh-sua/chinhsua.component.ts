@@ -74,12 +74,8 @@ export class ChinhsuaComponent implements OnInit {
                     });
             }
         }
-        console.log(this.form.value);
-
         this.taomoiService.editBenh(this.form).subscribe(data => {
-            console.log(data);
             this.taomoiService.loadChiTietBenhMongo(data).subscribe(rs => {
-                console.log(rs._id);
                 this.router.navigate([`apps/tracuubenh/${rs._id}`]);
             });
         });

@@ -37,7 +37,6 @@ export class ChiTietBenhMongoComponent implements OnInit {
             this.benhService.getChiTietBenhMongo(id).subscribe(data => {
                 this.ChiTietBenh = data;
                 this.id = data._id;
-                console.log(data);
                 this.loading = false;
                 this.metadataService.setTitle('Cloud Y Tế - ' + data.TenBenh);
                 // this.metadataService.setTag('description', data.TomTat);

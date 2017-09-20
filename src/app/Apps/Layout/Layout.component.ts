@@ -28,7 +28,6 @@ export class LayoutComponent implements OnInit {
 
     ngOnInit() {
         this.activatedroute.params.subscribe(pars => {
-            console.log(this.router.url);
             if (this.router.url.includes('/apps/share') && pars['key']) {
                 this.LinkIFrame = `http://admincloud.truongkhoa.com/Home/Dashboard?share=${pars['key']}`;
             }
@@ -40,7 +39,6 @@ export class LayoutComponent implements OnInit {
 
 
     receiveMessage(event: any) {
-        // console.log(event.origin);
         try {
             const messData = JSON.parse(event.data);
             if (messData.LoaiLenh === 'CloseFrame') {

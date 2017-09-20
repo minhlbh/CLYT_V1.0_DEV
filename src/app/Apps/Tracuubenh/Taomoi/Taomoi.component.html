@@ -1,38 +1,39 @@
 <app-window [name]="name" [icon]="icon" [url]="url">
-    <form [formGroup]="form" (ngSubmit)="create()">
-        <!-- content wrapper -->
-        <div class="content-wr">
-            <!-- thanh phan benh -->
-            <div class="add">
-                <div class="content">
-                    <div class="tenbenh">
-                        <h3>Tên bệnh</h3>
-                        <input type="text" [formControl]="form.controls['TenBenh']" value="" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm"
-                        />
+    <div class="body-content">
+        <form [formGroup]="form" (ngSubmit)="create()">
+            <!-- content wrapper -->
+            <div class="content-wr">
+                <!-- thanh phan benh -->
+                <div class="add">
+                    <div class="content">
+                        <div class="tenbenh">
+                            <h3>Tên bệnh</h3>
+                            <input type="text" [formControl]="form.controls['TenBenh']" value="" size="30" placeholder="Nhập tên bệnh" class="form-control input-sm"
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- info -->
-            <div class="info">
-                <div class="content">
-                    <div class="tomtat">
-                        <app-tinymce [initValue]="" [elementId]="'my-editor-id'" (onEditorKeyup)="setValue($event)"></app-tinymce>
+                <!-- info -->
+                <div class="info">
+                    <div class="content">
+                        <div class="tomtat">
+                            <app-tinymce [initValue]="" [elementId]="'my-editor-id'" (onEditorKeyup)="setValue($event)"></app-tinymce>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- cancel button -->
-            <a (click)="back()" style="cursor: pointer;" class="cancel">
+                <!-- cancel button -->
+                <a (click)="back()" style="cursor: pointer;" class="cancel">
                     <span class="glyphicon glyphicon-remove"></span>
                     Hủy
                 </a>
 
-            <!-- submit button -->
-            <button type="submit" class="done">
+                <!-- submit button -->
+                <button type="submit" class="done">
                     <span class="glyphicon glyphicon-ok"></span>
                     Hoàn tất
                 </button>
-        </div>
-    </form>
+            </div>
+        </form>
+    </div>
 </app-window>
-
